@@ -1,0 +1,15 @@
+{
+  "name": "miranj/craft-boilerplate",
+  "description": "A Craft CMS 3 start project by Miranj",
+  "version": "1.0.0-dev",
+  "keywords": [
+    "craft",
+    "cms",
+    "craftcms",
+    "project",
+    "miranj"
+  ],
+  "license": "MIT",
+  "homepage": "https://miranj.in/",
+  "type": "project"
+}
