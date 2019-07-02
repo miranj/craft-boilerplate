@@ -1,0 +1,11 @@
+{% spaceless %}
+  {#
+    Detail Router
+  #}
+  
+  {%- include [
+    '_views/details/' ~ entry.section.handle ~ '-' ~ entry.type.handle,
+    '_views/details/' ~ entry.section.handle,
+    '_views/details/default',
+  ] -%}
+{% endspaceless %}

@@ -1,0 +1,28 @@
+# OS Cruft
+\.DS_Store$
+
+# Package Managers
+vendor
+node_modules/
+
+# Craft CMS
+^config/license.key
+^web/cpresources/
+^storage
+
+# Environment specific config
+^\.env$
+assets/\.env$
+^web/\.htaccess$
+^\.tm_properties$
+\.sublime-project$
+\.sublime-workspace$
+^scripts/
+.idea/
+
+# User data
+^web/media
+^web/imager
+
+# Licensed content
+^assets/fonts

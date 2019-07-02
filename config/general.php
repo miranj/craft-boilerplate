@@ -11,38 +11,51 @@
 return [
     // Global settings
     '*' => [
-        // Default Week Start Day (0 = Sunday, 1 = Monday...)
-        'defaultWeekStartDay' => 1,
-
-        // Whether generated URLs should omit "index.php"
-        'omitScriptNameInUrls' => true,
-
-        // Control Panel trigger word
-        'cpTrigger' => 'admin',
-
-        // The secure key Craft will use for hashing and encrypting data
-        'securityKey' => getenv('SECURITY_KEY'),
-
-        // Whether to save the project config out to config/project.yaml
-        // (see https://docs.craftcms.com/v3/project-config.html)
-        'useProjectConfigFile' => false,
+      'useProjectConfigFile' => true,
+      'omitScriptNameInUrls' => true,
+      'usePathInfo' => true,
+      'sendPoweredByHeader' => false,
+      'phpSessionName' => getenv('SITE_SLUG').'CraftSessionId',
+      'csrfTokenName' => getenv('SITE_SLUG').'_CSRF',
+      'securityKey' => getenv('SECURITY_KEY'),
+      'requireMatchingUserAgentForSession' => false,
+      'rememberedUserSessionDuration' => 'P1M',
+      'userSessionDuration' => 'P1M',
+      'defaultImageQuality' => 85,
+      'maxUploadFileSize' => '100M',
+      'defaultSearchTermOptions' => [
+        'subLeft' => true,
+        'subRight' => true,
+      ],
+      
+      // region
+      'timezone' => 'Asia/Kolkata',
+      'defaultWeekStartDay' => '1',
+      'defaultCpLanguage' => 'en-GB',
+      
+      'aliases' => [
+        '@assetBaseUrl' => getenv('ASSET_BASE_URL'),
+        '@assetBasePath' => getenv('ASSET_BASE_PATH'),
+      ],
     ],
-
+    
     // Dev environment settings
     'dev' => [
-        // Dev Mode (see https://craftcms.com/guides/what-dev-mode-does)
-        'devMode' => true,
+      'devMode' => true,
+      'enableTemplateCaching' => false,
     ],
-
+    
     // Staging environment settings
     'staging' => [
-        // Set this to `false` to prevent administrative changes from being made on staging
-        'allowAdminChanges' => true,
+      'devMode' => false,
+      'allowAdminChanges' => false,
+      'disabledPlugins' => ['inventory'],
     ],
-
+    
     // Production environment settings
     'production' => [
-        // Set this to `false` to prevent administrative changes from being made on production
-        'allowAdminChanges' => true,
+      'devMode' => false,
+      'allowAdminChanges' => false,
+      'disabledPlugins' => ['inventory', 'environment-label'],
     ],
 ];

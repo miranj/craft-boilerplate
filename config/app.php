@@ -18,8 +18,20 @@
  */
 
 return [
-    'modules' => [
-        'my-module' => \modules\Module::class,
+    // Global settings
+    '*' => [
+        'modules' => [
+            'boilerplate' => \boilerplate\Module::class,
+        ],
+        'bootstrap' => ['boilerplate'],
     ],
-    //'bootstrap' => ['my-module'],
+    
+    // Dev environment settings
+    'dev' => [
+        'components' => [
+            'deprecator' => [
+                'throwExceptions' => true,
+            ],
+        ],
+    ],
 ];

@@ -1,0 +1,28 @@
+{% extends '_layouts/html' %}
+{% import _self as self %}
+
+{% block page %}
+  <div id="pjax-page">
+    {{ block('page_header') }}
+    {{ block('page_main') }}
+    {{ block('page_footer') }}
+  </div>
+{% endblock %}
+
+
+
+{% block page_main %}
+  <main class="{% block main_class %}{% endblock %}">
+    {% block main %}{% endblock %}
+  </main>
+{% endblock %}
+
+
+
+{% block page_header %}
+{% endblock %}
+
+
+
+{% block page_footer %}
+{% endblock %}

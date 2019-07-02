@@ -12,16 +12,27 @@
   "license": "MIT",
   "homepage": "https://miranj.in/",
   "type": "project",
-  "support": {
-    "issues": "https://github.com/craftcms/cms/issues",
-    "source": "https://github.com/craftcms/cms",
-    "docs": "https://craftcms.com/docs",
-  },
   "require": {
-    "craftcms/cms": "^3.0.0",
+    "aelvan/imager": "^2.1",
+    "craftcms/cms": "^3.1",
+    "craftcms/redactor": "^2.3",
+    "doublesecretagency/craft-inventory": "^2.0",
+    "glue-agency/craft-fingerprint-assets": "^1.0",
+    "mmikkel/cache-flag": "^1.0.3",
+    "nystudio107/craft-minify": "^1.2",
+    "nystudio107/craft-typogrify": "^1.1",
+    "topshelfcraft/environment-label": "^3.1",
+    "verbb/element-index-defaults": "^1.0.3",
+    "verbb/expanded-singles": "^1.0.7",
     "vlucas/phpdotenv": "^2.4.0"
   },
+  "autoload": {
+    "psr-4": {
+      "boilerplate\\": "src/"
+    }
+  },
   "config": {
+    "sort-packages": true,
     "optimize-autoloader": true,
     "platform": {
       "php": "7.0"
@@ -31,8 +42,9 @@
     "post-create-project-cmd": [
       "@php -r \"copy('.env.example', '.env');\"",
       "@php -r \"unlink('composer.json');\"",
-      "@php -r \"unlink('LICENSE.md');\"",
+      "@php -r \"unlink('LICENSE');\"",
       "@php -r \"unlink('README.md');\"",
+      "@php -r \"unlink('.gitignore');\"",
       "@php -r \"rename('composer.json.default', 'composer.json');\"",
       "@composer dump-autoload -o",
       "@php craft setup/welcome"

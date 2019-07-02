@@ -1,0 +1,183 @@
+{# _components/_image #}
+
+{#
+  Image
+  
+  Generate image transforms and render images
+  
+  @param   asset        {AssetFileModel}    Image asset to be rendered
+  @param   preset       {string}            Image usage preset
+  @param   class        {string}            Class names to apply to the img tag
+  @param   alt          {string}            Value of the alt attribute for the img tag
+  @param   lazyload     {bool}              Lazyload image or not
+#}
+
+
+
+{# Parameters #}
+{% set imageAsset = params.asset ?? false %}
+{% set imagePreset = params.preset ?? false %}
+{% set imageClass = params.class ?? '' %}
+{% set imageAlt = params.alt ?? false %}
+{% set imageLazyload = params.lazyload ?? true %}
+{% set imageIsCss = not not (params.background ?? false) %}
+{% set imageCssClass = params.background ?? '' %}
+
+
+
+{# Variables #}
+{% set queries = {
+  '--xs-plus':  '(min-width:' ~  448 ~ 'px)',
+  '--sm-plus':  '(min-width:' ~  900 ~ 'px)',
+  '--md-plus':  '(min-width:' ~ 1188 ~ 'px)',
+  '--lg-plus':  '(min-width:' ~ 1920 ~ 'px)',
+  '--retina':   '(min-resolution: 192dpi)',
+} %}
+{% set presets = {} %}
+{% if imageAsset %}
+  {% set imageIsSvg = imageAsset.mimeType in ['image/svg+xml'] or imageAsset.extension in ['svg'] %}
+  {% set imageAlt = imageAlt ?: imageAsset.title %}
+  {% set imageScaleFactor = imageIsSvg ? 100 : 1 %}
+  
+  
+  {% set imageDefault = null %}
+  {% set imageSizesGuide = false %}
+  {% set imageTransforms = [] %}
+  {% set imageSources = [] %}
+  {% set imageColour = 'transparent' %}
+  {% if (not imageIsSvg) and presets[imagePreset] is defined %}
+    {% set breakpoints = presets[imagePreset]['breakpoints'] is defined ? presets[imagePreset].breakpoints : [presets[imagePreset]] %}
+    {% for imagePreset in breakpoints %}
+      {% set imageTransformParams = {
+        position: imageAsset.getFocalPoint(),
+      } | merge(imagePreset.transform ?? {}) %}
+      {% set imageTransforms = craft.imager.transformImage(
+        imageAsset,
+        imagePreset.sizes,
+        imageTransformParams
+        ) %}
+      {% set imageDefault = imageTransforms|last %}
+      {% set imageSizesGuide = (imagePreset.guide ?? '')|replace(queries) ?: false %}
+      {% set imageSourcesMedia = (imagePreset.media ?? '(min-width: 0)')|replace(queries) %}
+      
+      {# Generate WebP versions and put them before regular ones #}
+      {% if craft.imager.serverSupportsWebp %}
+        {% set imageTransformsWebP = craft.imager.transformImage(
+          imageAsset,
+          imagePreset.sizes,
+          imageTransformParams|merge({ format: 'webp' })
+          ) %}
+        {% set imageSources = imageSources|merge([{
+          type: 'image/webp',
+          media: imageSourcesMedia,
+          transforms: imageTransformsWebP,
+        }]) %}
+      {% endif %}
+      
+      {% if imagePreset.media is defined %}
+        {% set imageSources = imageSources|merge([{
+          media: imageSourcesMedia,
+          transforms: imageTransforms,
+        }]) %}
+      {% endif %}
+    {% endfor %}
+  {% else %}
+    {% set imageDefault = imageAsset %}
+  {% endif %}
+  {% set imageIsResponsive = imageSources|length - (craft.imager.serverSupportsWebp ? 1 : 0) > 0 %}
+  {# {% set imageColour = not imageIsSvg and imageDefault ? craft.imager.getDominantColor(imageDefault, 1000) : imageColour %} #}
+{% endif %}
+
+
+
+{# Output #}
+{% macro renderTag(tag, attributes) %}
+  {% for attr, value in attributes %}
+    {%- if loop.first %}<{{ tag }}{% endif -%}
+    {%- if value %} {{ attr }}="{{ value|raw }}"{% endif -%}
+    {%- if loop.last %}>{% endif -%}
+  {% endfor %}
+{% endmacro %}
+{% from _self import renderTag %}
+
+{% if imageAsset and not imageIsCss %}
+  {% if imageSources|length %}
+    <picture>
+  {% endif %}
+  
+  {% if imageLazyload %}
+    {# Non JS fallback #}
+    <noscript>
+      {{ renderTag('img', {
+        class: imageClass,
+        src: imageDefault.url,
+        alt: imageAlt|e('html_attr'),
+        width: imageDefault.width * imageScaleFactor,
+        height: imageDefault.height * imageScaleFactor,
+      }) }}
+    </noscript>
+  {% endif %}
+  
+  {% for source in imageSources %}
+    {% set lastTransform = source.transforms|last %}
+    <!--[if IE 9]><audio><![endif]-->
+    {{ renderTag('source', {
+      media: source.media,
+      type: source.type ?? false,
+      width: lastTransform.width,
+      height: lastTransform.height,
+      srcset: craft.imager.srcset(source.transforms),
+      
+    } | merge(imageLazyload ? {
+      srcset: craft.imager.placeholder({
+        width: lastTransform.width,
+        height: lastTransform.height,
+        color: imageColour
+      }),
+      'data-srcset': craft.imager.srcset(source.transforms),
+    }:{})) }}
+    <!--[if IE 9]></audio><![endif]-->
+  {% endfor %}
+  
+  {{ renderTag('img', {
+    class: imageClass ~ ' ' ~ (imageLazyload ? 'lazyload nonjs-hidden' : 'lazyloaded'),
+    src: imageDefault.url,
+    alt: imageAlt|e('html_attr'),
+    width:  not imageIsResponsive ? imageDefault.width * imageScaleFactor,
+    height: not imageIsResponsive ? imageDefault.height * imageScaleFactor,
+    style: not imageIsResponsive ? [
+      'max-width:' ~ imageDefault.width * imageScaleFactor ~ 'px',
+      'max-height:' ~ imageDefault.height * imageScaleFactor ~ 'px',
+    ]|join(';'),
+    
+  } | merge(imageLazyload ? {
+    src: craft.imager.base64Pixel(imageDefault.width, imageDefault.height, imageColour),
+    'data-src': imageDefault.url,
+    
+  }:{}) | merge(imageTransforms is defined and imageTransforms|length > 1 ? {
+    sizes: imageSizesGuide ?? false,
+    srcset: not imageLazyload ? craft.imager.srcset(imageTransforms),
+    'data-sizes': imageLazyload and not (imageSizesGuide ?? true) ? 'auto',
+    'data-srcset': imageLazyload ? craft.imager.srcset(imageTransforms),
+  }:{})) }}
+  
+  {% if imageSources|length %}
+    </picture>
+  {% endif %}
+{% elseif imageAsset and imageIsCss %}
+  {% minify css %}
+    <style>
+      .{{ imageCssClass }} {
+        background-image: url('{{ imageDefault.url }}');
+      }
+      {% for source in imageSources|reverse %}
+      @media {{ source.media }} {
+        {{ (source.type ?? '') == 'image/webp' ? '.has-webp ' -}}
+        .{{ imageCssClass }} {
+          background-image: url('{{ (source.transforms|last).url }}');
+        }
+      }
+      {% endfor %}
+    </style>
+  {% endminify %}
+{% endif %}

@@ -1,0 +1,82 @@
+{% spaceless %}
+
+{#
+  Initialize Global Env
+#}
+
+{% set cacheableEnv = (not craft.app.request.isLivePreview) and craft.app.request.getParam('token') == NULL %}
+{% set cacheableEnv = cacheableEnv and craft.app.request.getParam('nocache') is same as(NULL) %}
+{% set cacheableEnv = cacheableEnv and not craft.app.request.isPost %}
+{% set cacheableEnv = cacheableEnv and not (doNotCache ?? false) %}
+{% set cacheableEnv = cacheableEnv and not craft.app.session.hasFlash('error') %}
+{% set cacheableEnv = cacheableEnv and not craft.app.session.hasFlash('notice') %}
+
+{% set cacheflags = cacheflags ?? 'entries|assets|globals|categories|users' %}
+{% set cacheKeyPrefix = getenv('SITE_SLUG') ~ ':v1' %}
+
+
+
+{% set base_asset_url = alias('@assetBaseUrl') ~ '/' %}
+{% set queries = {} %}
+{% set themes = {} %}
+{% set eagerload = {} %}
+
+{% set assetManifest = source('_manifest.json')|json_decode %}
+{% set styles = [
+  devMode
+  ? (base_asset_url ~ 'build/style.' ~ assetManifest['style.css'] ~ '.css')
+  : (base_asset_url ~ 'build/style.purged.min.' ~ assetManifest['style.purged.min.css'] ~ '.css'),
+] %}
+{% set scripts = [
+  base_asset_url ~ 'build/urgent.min.' ~ assetManifest['urgent.min.js'] ~ '.js',
+  base_asset_url ~ 'build/deferred.min.' ~ assetManifest['deferred.min.js'] ~ '.js',
+] %}
+
+
+
+{%- set html_wrapper -%}
+  
+  {% set htmlCacheKey = cacheKeyPrefix
+    ~ '-css:' ~ assetManifest['style.purged.min.css']
+    ~ '-js:' ~ assetManifest['urgent.min.js'] ~ assetManifest['deferred.min.js']
+    ~ '-html:v1' %}
+  
+  {# Figure out if page should be cached #}
+  {%- if cacheableEnv %}
+    
+    {# If a cacheKey is set, use that to globally cache the rendered page #}
+    {% if cacheKey ?? false %}
+      {% cacheflag flagged cacheflags globally using key (htmlCacheKey ~ ':' ~ cacheKey) for 1 month %}
+        {%- minify html %}
+          {{ block('html') }}
+        {% endminify -%}
+      {% endcacheflag %}
+      
+    {% else %}
+      
+      {# No cacheKey set, cache the rendered page by url (not globally) #}
+      {% cacheflag flagged cacheflags using key htmlCacheKey for 1 month %}
+        {%- minify html %}
+          {{ block('html') }}
+        {% endminify -%}
+      {% endcacheflag %}
+    {% endif %}
+    
+  {% else %}
+    {%- minify html %}
+      {% block html %}{% endblock %}
+    {% endminify -%}
+  {% endif %}
+{%- endset -%}
+
+{# Replace CSRF placeholder if needed #}
+{% set CSRF_TOKEN = '%%csrfInput%%' %}
+{% if CSRF_TOKEN in ('' ~ html_wrapper) %}
+  {% set formSecurity = csrfInput() %}
+  {% set html_wrapper = html_wrapper|replace({ (CSRF_TOKEN): formSecurity }) %}
+{% endif %}
+
+{# Render HTML #}
+{{ html_wrapper|raw }}
+
+{% endspaceless %}
