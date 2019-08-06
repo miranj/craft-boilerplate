@@ -8,8 +8,8 @@ Requirements
 - PHP 7+
 - composer
 - MySQL / MariaDB / PostgreSQL
-- Node.js (dev)
-- Gulp (dev)
+- [Dev] Node.js (version in ./assets/.nvmrc)
+- [Dev] Gulp
 
 
 
