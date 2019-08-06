@@ -22,7 +22,10 @@ Object.entries(paths.tasks.css).forEach(([task_name, task_config]) => {
       .pipe(postcss([
         require('postcss-import'),
         require('tailwindcss')(task_config.tailwind_config),
+        require('postcss-nested'),
+        require('postcss-calc')({ preserve: true }),
         require('autoprefixer'),
+        require('postcss-inline-svg'),
       ]))
       .pipe(gulp.dest(paths.directories.build, { sourcemaps: '.' }))
       ;
@@ -40,7 +43,7 @@ Object.entries(paths.tasks.purge).forEach(([task_name, task_config]) => {
   purge_tasks.push(task_name);
   watch_files.push([task_name, task_config.watch, task_config.watch_config || {}]);
   exports[task_name] = () => {
-    return gulp.src(task_config.source, { sourcemaps: true })
+    return gulp.src(task_config.source, { sourcemaps: true, allowEmpty: true })
       .pipe(rename(task_config.destination))
       .pipe(purgecss(task_config.config))
       .pipe(gulp.dest(paths.directories.build))
