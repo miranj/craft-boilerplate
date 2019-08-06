@@ -17,6 +17,13 @@ return [
     'uri',
     'dateUpdated',
   ],
+  'Asset' => [
+    'title',
+    'filename',
+    'size',
+    'dateModified',
+    'link',
+  ],
 ];
 
 ?>
