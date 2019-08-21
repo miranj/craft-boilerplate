@@ -27,6 +27,15 @@ Install
 
 
 
+Production
+----------
+
+1.  Set up a runner for the Craft queue:
+    - Supervisor `/usr/bin/nice -n 10 </path/to/php> </path/to/craft> queue/listen --verbose`
+    - Or, via CRON `/1 * * * * </path/to/php> </path/to/craft> queue/run`
+
+
+
 Development
 -----------
 

@@ -57,5 +57,6 @@ return [
       'devMode' => false,
       'allowAdminChanges' => false,
       'disabledPlugins' => ['inventory', 'environment-label'],
+      'runQueueAutomatically' => false,
     ],
 ];
