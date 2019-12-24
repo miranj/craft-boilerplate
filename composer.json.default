@@ -32,6 +32,11 @@
   "scripts": {
     "post-root-package-install": [
       "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+    ],
+    "post-install-cmd": [
+      "./craft migrate/all",
+      "./craft project-config/sync",
+      "./craft clear-caches/template-caches"
     ]
   }
 }
