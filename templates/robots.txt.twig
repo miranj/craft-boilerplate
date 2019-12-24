@@ -1,0 +1,20 @@
+{% header "Content-Type: text/plain; charset=utf-8" -%}
+
+# robots.txt
+# {{ siteUrl }}
+
+Sitemap: {{ url('sitemap.xml') }}
+
+{# FIXME #}
+{% if siteUrl != 'https://example.com' -%}
+
+User-agent: *
+Disallow: /
+
+{% else -%}
+
+User-agent: *
+Disallow: /cpresources/
+Disallow: /admin/
+
+{% endif %}
