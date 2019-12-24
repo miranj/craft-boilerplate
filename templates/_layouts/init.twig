@@ -33,7 +33,7 @@
 
 
 
-{%- set html_wrapper -%}
+{%- block html_wrapper -%}
   
   {% set htmlCacheKey = cacheKeyPrefix
     ~ '-css:' ~ assetManifest['style.purged.min.css']
@@ -66,16 +66,6 @@
       {% block html %}{% endblock %}
     {% endminify -%}
   {% endif %}
-{%- endset -%}
+{%- endblock -%}
 
-{# Replace CSRF placeholder if needed #}
-{% set CSRF_TOKEN = '%%csrfInput%%' %}
-{% if CSRF_TOKEN in ('' ~ html_wrapper) %}
-  {% set formSecurity = csrfInput() %}
-  {% set html_wrapper = html_wrapper|replace({ (CSRF_TOKEN): formSecurity }) %}
-{% endif %}
-
-{# Render HTML #}
-{{ html_wrapper|raw }}
-
-{% endspaceless %}
+{% endspaceless -%}
