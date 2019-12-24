@@ -15,19 +15,19 @@
 
 
 return [
-  '*' => [
-    'suffixText' => ' environment',
-  ],
-
-  'production' => [
-    'showLabel' => false,
-  ],
-
-  'staging' => [
-    'labelColor' => 'orange',
-  ],
-
-  'dev' => [
-    'labelColor' => 'skyblue',
-  ],
+    '*' => [
+        'suffixText' => ' environment',
+    ],
+    
+    'production' => [
+        'showLabel' => false,
+    ],
+    
+    'staging' => [
+        'labelColor' => 'orange',
+    ],
+    
+    'dev' => [
+        'labelColor' => 'skyblue',
+    ],
 ];

@@ -11,16 +11,16 @@ return [
     '*' => [
         'imagerSystemPath' => '@assetBasePath/imager/',
         'imagerUrl' => '@assetBaseUrl/imager/',
-
+        
         'jpegQuality' => 85,
         'allowUpscale' => false,
         'interlace' => 'plane',
         'removeMetadata' => true,
         'cacheDuration' => 60*60*24*365*10, // 10 years
-
+        
         'useCwebp' => true,
         'cwebpPath' => '/usr/bin/cwebp',
-
+        
         'optimizerConfig' => [
             'jpegoptim' => [
                 'optionString' => '-s -m85 -T1',
@@ -33,21 +33,22 @@ return [
                 'optionString' => '-o2',
             ],
         ],
-
+        
     //    'clearKey' => '',
     ],
-
-
+    
+    
+    
     // Production
     'production' => [
         'optimizers' => ['jpegoptim', 'optipng'],
     ],
-
+    
     // Staging
     'staging' => [
         'optimizers' => ['jpegoptim', 'optipng'],
     ],
-
+    
     // Dev
     'dev' => [
         'hashPath' => true,
@@ -55,5 +56,4 @@ return [
         'useCwebp' => getenv('IMAGER_CWEBP_PATH') ?: false,
         'cwebpPath' => getenv('IMAGER_CWEBP_PATH'),
     ],
-
 ];

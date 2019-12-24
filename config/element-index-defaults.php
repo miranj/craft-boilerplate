@@ -7,23 +7,21 @@
  */
 
 return [
-  'Entry' => [
-    'title',
-    'uri',
-    'dateUpdated',
-  ],
-  'Category' => [
-    'title',
-    'uri',
-    'dateUpdated',
-  ],
-  'Asset' => [
-    'title',
-    'filename',
-    'size',
-    'dateModified',
-    'link',
-  ],
+    'Entry' => [
+        'title',
+        'uri',
+        'dateUpdated',
+    ],
+    'Category' => [
+        'title',
+        'uri',
+        'dateUpdated',
+    ],
+    'Asset' => [
+        'title',
+        'filename',
+        'size',
+        'dateModified',
+        'link',
+    ],
 ];
-
-?>

@@ -12,7 +12,7 @@ var watch_files = [];
 // CSS Tasks
 Object.entries(paths.tasks.css).forEach(([task_name, task_config]) => {
   const postcss = require('gulp-postcss');
-
+  
   task_name = 'css-' + task_name;
   css_tasks.push(task_name);
   watch_files.push([task_name, task_config.watch, task_config.watch_config || {}]);
@@ -38,7 +38,7 @@ Object.entries(paths.tasks.css).forEach(([task_name, task_config]) => {
 Object.entries(paths.tasks.purge).forEach(([task_name, task_config]) => {
   const purgecss = require('gulp-purgecss');
   const cleancss = require('gulp-clean-css');
-
+  
   task_name = 'purge-' + task_name;
   purge_tasks.push(task_name);
   watch_files.push([task_name, task_config.watch, task_config.watch_config || {}]);
@@ -60,7 +60,7 @@ Object.entries(paths.tasks.purge).forEach(([task_name, task_config]) => {
 Object.entries(paths.tasks.js).forEach(([task_name, task_config]) => {
   const concat = require('gulp-concat');
   const uglify = require('gulp-uglify');
-
+  
   task_name = 'js-' + task_name;
   js_tasks.push(task_name);
   watch_files.push([task_name, task_config.watch, task_config.watch_config || {}]);
