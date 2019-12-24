@@ -14,7 +14,7 @@ return [
     ],
     'Category' => [
         'title',
-        'uri',
+        'dateCreated',
         'dateUpdated',
     ],
     'Asset' => [

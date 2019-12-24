@@ -11,27 +11,40 @@
 return [
     // Global settings
     '*' => [
+        
+        // back-end
         'useProjectConfigFile' => true,
-        'omitScriptNameInUrls' => true,
+        'allowAdminChanges' => false,
         'usePathInfo' => true,
-        'sendPoweredByHeader' => false,
+        'enableGql' => false,
+        'securityKey' => getenv('SECURITY_KEY'),
+        
+        // user sessions
         'phpSessionName' => getenv('SITE_SLUG').'CraftSessionId',
         'csrfTokenName' => getenv('SITE_SLUG').'_CSRF',
-        'securityKey' => getenv('SECURITY_KEY'),
         'requireMatchingUserAgentForSession' => false,
         'rememberedUserSessionDuration' => 'P1M',
         'userSessionDuration' => 'P1M',
-        'defaultImageQuality' => 85,
-        'maxUploadFileSize' => '100M',
+        
+        // control panel
+        'timezone' => 'Asia/Kolkata',
+        'defaultWeekStartDay' => '1',
+        'defaultCpLanguage' => 'en-GB',
         'defaultSearchTermOptions' => [
             'subLeft' => true,
             'subRight' => true,
         ],
         
-        // region
-        'timezone' => 'Asia/Kolkata',
-        'defaultWeekStartDay' => '1',
-        'defaultCpLanguage' => 'en-GB',
+        // front-end
+        'omitScriptNameInUrls' => true,
+        'sendPoweredByHeader' => false,
+        'defaultImageQuality' => 85,
+        'errorTemplatePrefix' => "_errors/",
+        'pageTrigger' => 'page/',
+        
+        // content
+        'maxRevisions' => 10,
+        'maxUploadFileSize' => '100M',
         
         'aliases' => [
             '@assetBaseUrl' => getenv('ASSET_BASE_URL'),
@@ -39,23 +52,24 @@ return [
         ],
     ],
     
-    // Dev environment settings
+    
+    
+    // Dev environment
     'dev' => [
         'devMode' => true,
         'enableTemplateCaching' => false,
+        'allowAdminChanges' => true,
     ],
     
-    // Staging environment settings
+    // Staging environment
     'staging' => [
         'devMode' => false,
-        'allowAdminChanges' => false,
         'disabledPlugins' => ['inventory'],
     ],
     
-    // Production environment settings
+    // Production environment
     'production' => [
         'devMode' => false,
-        'allowAdminChanges' => false,
         'disabledPlugins' => ['inventory', 'environment-label'],
         'runQueueAutomatically' => false,
     ],

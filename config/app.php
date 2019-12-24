@@ -26,7 +26,7 @@ return [
         'bootstrap' => ['boilerplate'],
     ],
     
-    // Dev environment settings
+    // Dev environment
     'dev' => [
         'components' => [
             'deprecator' => [
