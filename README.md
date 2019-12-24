@@ -17,7 +17,6 @@ A [Craft CMS](https://craftcms.com/) 3 starter project based on [Miranj's](https
     - [CP Field Inspect](https://github.com/mmikkel/CpFieldInspect-Craft)
     - [Element Index Defaults](https://github.com/verbb/element-index-defaults)
     - [Environment Label](https://github.com/TopShelfCraft/Environment-Label)
-    - [Expanded Singles](https://github.com/verbb/expanded-singles)
     - [Imager](https://github.com/aelvan/Imager-Craft)
     - [Inventory](https://github.com/doublesecretagency/craft-inventory)
     - [Minify](https://github.com/nystudio107/craft-minify)
