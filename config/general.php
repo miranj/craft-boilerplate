@@ -64,13 +64,13 @@ return [
     // Staging environment
     'staging' => [
         'devMode' => false,
-        'disabledPlugins' => ['inventory'],
+        'disabledPlugins' => ['inventory', 'cp-field-inspect'],
     ],
     
     // Production environment
     'production' => [
         'devMode' => false,
-        'disabledPlugins' => ['inventory', 'environment-label'],
+        'disabledPlugins' => ['inventory', 'cp-field-inspect', 'environment-label'],
         'runQueueAutomatically' => false,
     ],
 ];

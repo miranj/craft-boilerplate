@@ -19,6 +19,7 @@
     "doublesecretagency/craft-inventory": "^2.0",
     "glue-agency/craft-fingerprint-assets": "^1.0",
     "mmikkel/cache-flag": "^1.0.3",
+    "mmikkel/cp-field-inspect": "^1.0",
     "nystudio107/craft-minify": "^1.2",
     "nystudio107/craft-typogrify": "^1.1",
     "topshelfcraft/environment-label": "^3.1",

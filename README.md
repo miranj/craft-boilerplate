@@ -14,6 +14,7 @@ A [Craft CMS](https://craftcms.com/) 3 starter project based on [Miranj's](https
 * Server configuration files for Apache (dev) and Nginx (staging, production).
 * A few Craft plugins, along with their config files:
     - [CacheFlag](https://github.com/mmikkel/CacheFlag-Craft3)
+    - [CP Field Inspect](https://github.com/mmikkel/CpFieldInspect-Craft)
     - [Element Index Defaults](https://github.com/verbb/element-index-defaults)
     - [Environment Label](https://github.com/TopShelfCraft/Environment-Label)
     - [Expanded Singles](https://github.com/verbb/expanded-singles)
