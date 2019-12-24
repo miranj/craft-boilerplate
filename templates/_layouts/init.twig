@@ -1,4 +1,4 @@
-{% spaceless %}
+{% minify %}
 
 {#
   Initialize Global Env
@@ -46,26 +46,20 @@
     {# If a cacheKey is set, use that to globally cache the rendered page #}
     {% if cacheKey ?? false %}
       {% cacheflag flagged cacheflags globally using key (htmlCacheKey ~ ':' ~ cacheKey) for 1 month %}
-        {%- minify html %}
-          {{ block('html') }}
-        {% endminify -%}
+        {{- block('html') -}}
       {% endcacheflag %}
       
     {% else %}
       
       {# No cacheKey set, cache the rendered page by url (not globally) #}
       {% cacheflag flagged cacheflags using key htmlCacheKey for 1 month %}
-        {%- minify html %}
-          {{ block('html') }}
-        {% endminify -%}
+        {{- block('html') -}}
       {% endcacheflag %}
     {% endif %}
     
   {% else %}
-    {%- minify html %}
-      {% block html %}{% endblock %}
-    {% endminify -%}
+    {%- block html %}{% endblock -%}
   {% endif %}
 {%- endblock -%}
 
-{% endspaceless -%}
+{% endminify -%}
