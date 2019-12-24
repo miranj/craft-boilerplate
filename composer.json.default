@@ -5,12 +5,14 @@
     "craftcms/redactor": "^2.3.3.2",
     "doublesecretagency/craft-inventory": "^2.0.2",
     "glue-agency/craft-fingerprint-assets": "^1.0",
+    "marionnewlevant/agnostic-fetch": "^2.0",
     "mmikkel/cache-flag": "^1.0.3",
     "mmikkel/cp-field-inspect": "^1.0",
     "nystudio107/craft-minify": "^1.2.9",
     "nystudio107/craft-typogrify": "^1.1.17",
     "topshelfcraft/environment-label": "^3.1.5",
     "ttempleton/craft-nocache": "^2.0",
+    "vaersaagod/seomate": "^1.0",
     "verbb/element-index-defaults": "^1.0.3",
     "vlucas/phpdotenv": "^2.4.0",
     "yiisoft/yii2-redis": "^2.0"
@@ -24,7 +26,7 @@
     "sort-packages": true,
     "optimize-autoloader": true,
     "platform": {
-      "php": "7.0"
+      "php": "7.1.19"
     }
   },
   "scripts": {

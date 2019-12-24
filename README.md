@@ -13,6 +13,7 @@ A [Craft CMS](https://craftcms.com/) 3 starter project based on [Miranj's](https
     - [Pjax](https://github.com/MoOx/pjax)
 * Server configuration files for Apache (dev) and Nginx (staging, production).
 * A few Craft plugins, along with their config files:
+    - [Agnostic Fetch](https://github.com/marionnewlevant/craft-agnostic_fetch)
     - [CacheFlag](https://github.com/mmikkel/CacheFlag-Craft3)
     - [CP Field Inspect](https://github.com/mmikkel/CpFieldInspect-Craft)
     - [Element Index Defaults](https://github.com/verbb/element-index-defaults)
@@ -23,4 +24,5 @@ A [Craft CMS](https://craftcms.com/) 3 starter project based on [Miranj's](https
     - [No Cache](https://github.com/ttempleton/craft-nocache)
     - [Redactor](https://github.com/craftcms/redactor)
     - [Relabel](https://github.com/Anubarak/craft-relabel)
+    - [SEOMate](https://github.com/vaersaagod/seomate)
     - [Typogrify](https://github.com/nystudio107/craft-typogrify)
