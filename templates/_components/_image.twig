@@ -91,15 +91,6 @@
 
 
 {# Output #}
-{% macro renderTag(tag, attributes) %}
-  {% for attr, value in attributes %}
-    {%- if loop.first %}<{{ tag }}{% endif -%}
-    {%- if value %} {{ attr }}="{{ value|raw }}"{% endif -%}
-    {%- if loop.last %}>{% endif -%}
-  {% endfor %}
-{% endmacro %}
-{% from _self import renderTag %}
-
 {% if imageAsset and not imageIsCss %}
   {% if imageSources|length %}
     <picture>
@@ -108,7 +99,7 @@
   {% if imageLazyload %}
     {# Non JS fallback #}
     <noscript>
-      {{ renderTag('img', {
+      {{ tag('img', {
         class: imageClass,
         src: imageDefault.url,
         alt: imageAlt|e('html_attr'),
@@ -121,7 +112,7 @@
   {% for source in imageSources %}
     {% set lastTransform = source.transforms|last %}
     <!--[if IE 9]><audio><![endif]-->
-    {{ renderTag('source', {
+    {{ tag('source', {
       media: source.media,
       type: source.type ?? false,
       width: lastTransform.width,
@@ -139,7 +130,7 @@
     <!--[if IE 9]></audio><![endif]-->
   {% endfor %}
   
-  {{ renderTag('img', {
+  {{ tag('img', {
     class: imageClass ~ ' ' ~ (imageLazyload ? 'lazyload nonjs-hidden' : 'lazyloaded'),
     src: imageDefault.url,
     alt: imageAlt|e('html_attr'),
