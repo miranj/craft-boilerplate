@@ -10,7 +10,7 @@ paths.config.minify_suffix = '.min';
 
 // Directories
 paths.directories = {};
-paths.directories.build = 'build/';
+paths.directories.build = '../web/build/';
 
 
 
@@ -24,7 +24,7 @@ paths.tasks = {
       destination: 'style.css',
       tailwind_config: 'tailwind.config.js',
       watch: [
-        'css/**/*.{less,css}',
+        'css/**/*.css',
         'tailwind.config.js',
       ],
     },
