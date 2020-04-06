@@ -1,5 +1,9 @@
 {
+  "name": "Boilerplate",
+  "description": "Website for Boilerplate",
   "version": "0.0.1",
+  "license": "UNLICENSED",
+  "private": true,
   "main": "gulp.js",
   "author": "Miranj",
   "dependencies": {
@@ -16,13 +20,13 @@
     "gulp-hashsum": "^1.2.0",
     "gulp-json-format": "^2.0.0",
     "gulp-postcss": "^8.0.0",
-    "gulp-purgecss": "^1.1.1",
+    "gulp-purgecss": "^2.0.5",
     "gulp-rename": "^1.4.0",
     "gulp-uglify": "^3.0.1",
     "postcss-calc": "^7.0.1",
     "postcss-import": "^12.0.1",
     "postcss-inline-svg": "^4.1.0",
     "postcss-nested": "^4.1.2",
-    "tailwindcss": "^1.0.1"
+    "tailwindcss": "^1.2.0"
   }
 }
