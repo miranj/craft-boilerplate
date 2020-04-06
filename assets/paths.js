@@ -38,14 +38,7 @@ paths.tasks = {
           '../templates/**/*.{twig,html}',
           paths.directories.build + '**/*.js',
         ],
-        extractors: [{
-          extractor: class TailwindExtractor {
-            static extract(content) {
-              return content.match(/[A-Za-z0-9-_:\/]+/g) || [];
-            }
-          },
-          extensions: ["html", "twig", "js"],
-        }],
+        defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || [],
         whitelistPatternsChildren: [
           /wf-active/,
         ],
