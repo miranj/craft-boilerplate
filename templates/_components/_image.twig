@@ -16,6 +16,7 @@
 
 {# Parameters #}
 {% set imageAsset = params.asset ?? false %}
+{% set imageBreakpointAssets = params.breakpoint_assets ?? {} %}
 {% set imagePreset = params.preset ?? false %}
 {% set imageClass = params.class ?? '' %}
 {% set imageAlt = params.alt ?? false %}
@@ -35,43 +36,51 @@
 } %}
 {% set presets = {} %}
 {% if imageAsset %}
-  {% set imageIsSvg = imageAsset.mimeType in ['image/svg+xml'] or imageAsset.extension in ['svg'] %}
-  {% set imageAlt = imageAlt ?: imageAsset.title %}
-  {% set imageScaleFactor = imageIsSvg ? 100 : 1 %}
-  
-  
   {% set imageDefault = null %}
   {% set imageSizesGuide = false %}
   {% set imageTransforms = [] %}
   {% set imageSources = [] %}
   {% set imageColour = 'transparent' %}
-  {% if (not imageIsSvg) and presets[imagePreset] is defined %}
+  {% set imageAlt = imageAlt ?: imageAsset.title %}
+  {% set imageIsSvg = imageAsset.mimeType in ['image/svg+xml'] or imageAsset.extension in ['svg'] %}
+  {% set imageScaleFactor = imageIsSvg ? 100 : 1 %}
+  
+  {% if presets[imagePreset] is defined %}
     {% set breakpoints = presets[imagePreset]['breakpoints'] is defined ? presets[imagePreset].breakpoints : [presets[imagePreset]] %}
     {% for imagePreset in breakpoints %}
-      {% set imageTransformParams = {
-        position: imageAsset.getFocalPoint(),
-      } | merge(imagePreset.transform ?? {}) %}
-      {% set imageTransforms = craft.imager.transformImage(
-        imageAsset,
-        imagePreset.sizes,
-        imageTransformParams
-        ) %}
-      {% set imageDefault = imageTransforms|last %}
+      {% set _imageAsset = imageBreakpointAssets and imagePreset.media is defined ? imageBreakpointAssets[imagePreset.media] : imageAsset %}
+      {% set imageIsSvg = _imageAsset.mimeType in ['image/svg+xml'] or _imageAsset.extension in ['svg'] %}
+      {% set imageScaleFactor = imageIsSvg ? 100 : 1 %}
       {% set imageSizesGuide = (imagePreset.guide ?? '')|replace(queries) ?: false %}
       {% set imageSourcesMedia = (imagePreset.media ?? '(min-width: 0)')|replace(queries) %}
       
-      {# Generate WebP versions and put them before regular ones #}
-      {% if craft.imager.serverSupportsWebp %}
-        {% set imageTransformsWebP = craft.imager.transformImage(
-          imageAsset,
+      {% if not imageIsSvg %}
+        {% set imageTransformParams = {
+          position: _imageAsset.getFocalPoint(),
+        } | merge(imagePreset.transform ?? {}) %}
+        {% set imageTransforms = craft.imager.transformImage(
+          _imageAsset,
           imagePreset.sizes,
-          imageTransformParams|merge({ format: 'webp' })
+          imageTransformParams
           ) %}
-        {% set imageSources = imageSources|merge([{
-          type: 'image/webp',
-          media: imageSourcesMedia,
-          transforms: imageTransformsWebP,
-        }]) %}
+        {% set imageDefault = imageTransforms|last %}
+        
+        {# Generate WebP versions and put them before regular ones #}
+        {% if craft.imager.serverSupportsWebp %}
+          {% set imageTransformsWebP = craft.imager.transformImage(
+            _imageAsset,
+            imagePreset.sizes,
+            imageTransformParams|merge({ format: 'webp' })
+            ) %}
+          {% set imageSources = imageSources|merge([{
+            type: 'image/webp',
+            media: imageSourcesMedia,
+            transforms: imageTransformsWebP,
+          }]) %}
+        {% endif %}
+      {% else %}
+        {% set imageTransforms = [_imageAsset] %}
+        {% set imageDefault = _imageAsset %}
       {% endif %}
       
       {% if imagePreset.media is defined %}
@@ -117,7 +126,7 @@
       type: source.type ?? false,
       width: lastTransform.width,
       height: lastTransform.height,
-      srcset: craft.imager.srcset(source.transforms),
+      srcset: source.transforms|length > 1 ? craft.imager.srcset(source.transforms) : lastTransform.url,
       
     } | merge(imageLazyload ? {
       srcset: craft.imager.placeholder({
@@ -125,21 +134,17 @@
         height: lastTransform.height,
         color: imageColour
       }),
-      'data-srcset': craft.imager.srcset(source.transforms),
+      'data-srcset': source.transforms|length > 1 ? craft.imager.srcset(source.transforms)  : lastTransform.url,
     }:{})) }}
     <!--[if IE 9]></audio><![endif]-->
   {% endfor %}
   
   {{ tag('img', {
-    class: imageClass ~ ' ' ~ (imageLazyload ? 'lazyload nonjs-hidden' : 'lazyloaded'),
+    class: imageClass ~ ' ' ~ (imageLazyload ? 'lazyload no-js:hidden' : 'lazyloaded'),
     src: imageDefault.url,
     alt: imageAlt|e('html_attr'),
     width:  not imageIsResponsive ? imageDefault.width * imageScaleFactor,
     height: not imageIsResponsive ? imageDefault.height * imageScaleFactor,
-    style: not imageIsResponsive ? [
-      'max-width:' ~ imageDefault.width * imageScaleFactor ~ 'px',
-      'max-height:' ~ imageDefault.height * imageScaleFactor ~ 'px',
-    ]|join(';'),
     
   } | merge(imageLazyload ? {
     src: craft.imager.base64Pixel(imageDefault.width, imageDefault.height, imageColour),
