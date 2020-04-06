@@ -28,7 +28,7 @@ Object.entries(paths.tasks.css).forEach(([task_name, task_config]) => {
         require('postcss-inline-svg'),
       ]))
       .pipe(gulp.dest(paths.directories.build, { sourcemaps: '.' }))
-      ;
+    ;
   };
 });
 
@@ -50,7 +50,7 @@ Object.entries(paths.tasks.purge).forEach(([task_name, task_config]) => {
       .pipe(cleancss())
       .pipe(rename({ suffix : paths.config.minify_suffix }))
       .pipe(gulp.dest(paths.directories.build, { sourcemaps: '.' }))
-      ;
+    ;
   };
 });
 
@@ -71,7 +71,7 @@ Object.entries(paths.tasks.js).forEach(([task_name, task_config]) => {
       .pipe(uglify())
       .pipe(rename({ suffix: paths.config.minify_suffix }))
       .pipe(gulp.dest(paths.directories.build, { sourcemaps: '.' }))
-      ;
+    ;
   };
 });
 
@@ -87,17 +87,38 @@ function generateHash() {
       filename: paths.tasks.hash.destination,
       json: true
     }))
-    ;
+  ;
 }
 function prettyHash() {
   const jsonFormat = require('gulp-json-format');
   
-  return gulp.src(paths.directories.build + '/' + paths.tasks.hash.destination)
+  return gulp.src(paths.directories.build + paths.tasks.hash.destination)
     .pipe(jsonFormat(2))
     .pipe(gulp.dest(paths.directories.build))
-    ;
+  ;
 }
-exports.hash = gulp.series(generateHash, prettyHash);
+function sizeReport() {
+  const sizereport = require('gulp-sizereport');
+  const fs = require('fs');
+  const sources = Object.entries(paths.tasks.purge)
+    .concat(Object.entries(paths.tasks.js))
+    .map(([_, task]) => paths.directories.build + task.destination)
+  ;
+  
+  return gulp.src(sources)
+    .pipe(sizereport({
+      gzip: true,
+      minifier: (contents, filepath) => {
+        return fs.readFileSync(
+          paths.directories.build +
+          filepath.replace(/\.(css|js)$/, paths.config.minify_suffix + '.$1'),
+          "utf8"
+        );
+      },
+    }))
+  ;
+}
+exports.hash = gulp.series(generateHash, gulp.parallel(prettyHash, sizeReport));
 watch_files.push(['hash', paths.tasks.hash.watch, { ignoreInitial: true }]);
 
 
