@@ -17,20 +17,32 @@ module.exports = {
       md: (1188/16) + 'em',
       lg: (1920/16) + 'em',
     },
+    colors: {
+      transparent: defaultTheme.colors.transparent,
+      black: defaultTheme.colors.black,
+      white: defaultTheme.colors.white,
+      inherit: 'inherit',
+      brand: {},
+    },
     extend: {
+      container: {
+        center: true,
+        padding: '1.5rem',
+      },
       fontFamily: {
         title: fonts.prose,
         'title-wf': fonts['title-wf'].concat(fonts.prose),
         prose: fonts.prose,
         'prose-wf': fonts['prose-wf'].concat(fonts.prose),
       },
-      colors: {
-        inherit: 'inherit',
-      },
-      container: {
-        center: true,
-      },
     },
+  },
+  variants: {
+    accessibility: ['responsive', 'focus', 'no-js'],
+    display: ['responsive', 'no-js'],
+    fontSmoothing: ['retina'],
+    margin: ['responsive', 'last'],
+    padding: ['responsive', 'last'],
   },
   plugins: [
     plugin(function({ addVariant, e }) {
