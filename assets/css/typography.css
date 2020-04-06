@@ -1,0 +1,86 @@
+/*
+ * Base
+ */
+
+/* Font Scale */
+@screen xs {
+    html { font-size: 1.4rem; }
+}
+@screen sm {
+    html { font-size: 1.333125rem; }
+}
+
+
+
+/* Typefaces */
+body { @apply font-prose; }
+h1, h2, h3, h4, h5 { @apply font-bold font-title; }
+
+.-wf-active {
+    .font-prose,
+    body {
+        @apply font-prose-wf;
+    }
+    .font-title,
+    h1, h2, h3, h4, h5 {
+        @apply font-title-wf;
+    }
+}
+
+
+
+/* Links */
+a,
+a:visited { @apply text-inherit no-underline; }
+a:hover { @apply underline; }
+a.block-link {
+    &:hover { @apply no-underline; }
+}
+
+
+
+/* Text Styles */
+.title-h1       { @apply text-xl; }
+.title-h2       { @apply text-lg; }
+.prose-body     { @apply text-base; }
+.prose-meta     { @apply text-sm; }
+
+
+
+/* Frills */
+.quo    { margin-left: -0.24em; }
+.dquo   { margin-left: -0.44em; }
+.tquo   { margin-left: -0.68em; }
+
+
+
+/* Rich Text */
+.richtext {
+    p,
+    ul,
+    ol { @apply mt-0 mb-5; }
+    p:last-child,
+    ul:last-child,
+    ol:last-child { @apply mb-0; }
+    & + & { @apply mt-5; }
+    
+    h3 { @apply mt-8; }
+    h4 { @apply mt-8; }
+    h3:first-child,
+    h4:first-child { @apply mt-0; }
+    
+    ol,
+    ul    { @apply pl-4; }
+    li    { @apply mb-2; }
+    li li { @apply ml-2; }
+    ol    { list-style-type: decimal; }
+    ul    { list-style-type: disc; }
+    li ul { list-style-type: circle; }
+    ol ol { list-style-type: lower-alpha; }
+    ol ol ol { list-style-type: lower-roman; }
+    
+    a { @apply underline; }
+    a.no-underline { @apply no-underline; }
+    
+    strong { @apply font-bold; }
+}

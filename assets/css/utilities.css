@@ -1,0 +1,20 @@
+/* Additional Utilities */
+
+
+
+/* Force an aspect ratio on an element */
+.aspect-box:before {
+    content: "";
+    width: 1px;
+    margin-left: -1px;
+    float: left;
+    height: 0;
+}
+.aspect-box:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.aspect-ratio-1-1:before  { padding-top: 100%; }
+.aspect-ratio-16-9:before { padding-top: 56.25%; }
+.aspect-ratio-3-2:before  { padding-top: 66.67%; }

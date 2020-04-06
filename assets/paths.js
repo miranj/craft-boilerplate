@@ -41,6 +41,7 @@ paths.tasks = {
         defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || [],
         whitelistPatternsChildren: [
           /wf-active/,
+          /richtext/,
         ],
       },
       watch: [
