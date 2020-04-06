@@ -1,6 +1,7 @@
 {
   "require": {
     "aelvan/imager": "^2.1",
+    "anubarak/craft-relabel": "^1.3",
     "craftcms/cms": "^3.3",
     "craftcms/redactor": "^2.3",
     "doublesecretagency/craft-inventory": "^2.0",
@@ -8,6 +9,7 @@
     "marionnewlevant/agnostic-fetch": "^2.0",
     "marionnewlevant/twig-perversion": "^2.1",
     "mmikkel/cache-flag": "^1.0.3",
+    "mmikkel/child-me": "^1.0",
     "mmikkel/cp-field-inspect": "^1.0",
     "nystudio107/craft-minify": "^1.2",
     "nystudio107/craft-typogrify": "^1.1",
