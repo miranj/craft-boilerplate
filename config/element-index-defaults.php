@@ -9,6 +9,7 @@
 return [
     'Entry' => [
         'title',
+        '_childme_addChild',
         'uri',
         'dateUpdated',
     ],

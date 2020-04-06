@@ -15,6 +15,7 @@ A [Craft CMS](https://craftcms.com/) 3 starter project based on [Miranj's](https
 * A few Craft plugins, along with their config files:
     - [Agnostic Fetch](https://github.com/marionnewlevant/craft-agnostic_fetch)
     - [CacheFlag](https://github.com/mmikkel/CacheFlag-Craft3)
+    - [Child Me](https://github.com/mmikkel/ChildMe-Craft)
     - [CP Field Inspect](https://github.com/mmikkel/CpFieldInspect-Craft)
     - [Element Index Defaults](https://github.com/verbb/element-index-defaults)
     - [Environment Label](https://github.com/TopShelfCraft/Environment-Label)
