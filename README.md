@@ -22,7 +22,6 @@ A [Craft CMS](https://craftcms.com/) 3 starter project based on [Miranj's](https
     - [Imager](https://github.com/aelvan/Imager-Craft)
     - [Inventory](https://github.com/doublesecretagency/craft-inventory)
     - [Minify](https://github.com/nystudio107/craft-minify)
-    - [No Cache](https://github.com/ttempleton/craft-nocache)
     - [Redactor](https://github.com/craftcms/redactor)
     - [Relabel](https://github.com/Anubarak/craft-relabel)
     - [SEOMate](https://github.com/vaersaagod/seomate)

@@ -33,7 +33,7 @@
 
 
 
-{%- block html_wrapper -%}
+{%- block response_buffer -%}
   
   {% set htmlCacheKey = cacheKeyPrefix
     ~ '-css:' ~ assetManifest['style.purged.min.css']
@@ -46,19 +46,19 @@
     {# If a cacheKey is set, use that to globally cache the rendered page #}
     {% if cacheKey ?? false %}
       {% cacheflag flagged cacheflags globally using key (htmlCacheKey ~ ':' ~ cacheKey) for 1 month %}
-        {{- block('html') -}}
+        {{- block('response') -}}
       {% endcacheflag %}
       
     {% else %}
       
       {# No cacheKey set, cache the rendered page by url (not globally) #}
       {% cacheflag flagged cacheflags using key htmlCacheKey for 1 month %}
-        {{- block('html') -}}
+        {{- block('response') -}}
       {% endcacheflag %}
     {% endif %}
     
   {% else %}
-    {%- block html %}{% endblock -%}
+    {%- block response %}{% endblock -%}
   {% endif %}
 {%- endblock -%}
 

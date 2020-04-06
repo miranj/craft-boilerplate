@@ -1,51 +1,80 @@
 {% extends '_layouts/init' %}
 
-{% block html %}
+
+
+{#
+  Keep <html> and <body> close tags out of template caches
+  to ensures that content triggered by END_BODY or END_PAGE
+  events are always rendered & the Debug Toolbar is never cached.
+#}
+{% block response_buffer %}
+  {{ block('html_open') }}
+    {{- parent() -}}
+  {{ block('body_close') }}
+  {{ block('html_close') }}
+{% endblock %}
+
+
+
+{% block html_open %}
+  <!DOCTYPE html>
+  <html lang="{{ craft.app.language }}" class="has-no-js">
+{% endblock %}
+{% block body_open %}
+  <body class="{% block body_class %}{% endblock %}">
+{% endblock %}
+{% block body_close %}
+  </body>
+{% endblock %}
+{% block html_close %}
+  </html>
+{% endblock %}
+
+
+
+{% block response %}
   {%- minify %}
-    <!DOCTYPE html>
-    <html lang="{{ craft.app.language }}" class="has-no-js">
-      <head>
-        {%- spaceless %}
-          <meta charset="utf-8"/>
-          
-          {% for sheet in styles %}
-            <link rel="stylesheet" href="{{ sheet }}">
-          {% endfor %}
-          
-          <meta name="viewport" content="width=device-width,initial-scale=1">
-          
-          {# <link rel="apple-touch-icon" sizes="180x180" href="{{ base_asset_url ~ 'img/favicons/apple-touch-icon.png' }}">
-          <link rel="icon" type="image/png" sizes="32x32" href="{{ base_asset_url ~ 'img/favicons/favicon-32x32.png' }}">
-          <link rel="icon" type="image/png" sizes="16x16" href="{{ base_asset_url ~ 'img/favicons/favicon-16x16.png' }}">
-          <link rel="manifest" href="{{ base_asset_url ~ 'img/favicons/site.webmanifest' }}">
-          <link rel="mask-icon" color="#2379b7" href="{{ base_asset_url ~ 'img/favicons/safari-pinned-tab.svg' }}">
-          <meta name="msapplication-TileColor" content="#2379b7">
-          <meta name="theme-color" content="#ffffff"> #}
-          
-          {% block seo %}
-            {% hook 'seomateMeta' %}
-          {% endblock %}
-          
-          <script>
-            document.documentElement.className = document.documentElement.className.replace('has-no-js', 'has-js');
-          </script>
-          {% block head_end %}{% endblock %}
-          
-          <meta name="build" content="{{ htmlCacheKey }}" data-pjax-track>
-        {% endspaceless %}
-      </head>
-      <body class="{% block body_class %}{% endblock %}">
+    <head>
+      {%- spaceless %}
+        <meta charset="utf-8"/>
         
-        {% block page %}{% endblock %}
-        
-        {% for script in scripts %}
-          <script async src="{{ script }}"></script>
+        {% for sheet in styles %}
+          <link rel="stylesheet" href="{{ sheet }}">
         {% endfor %}
         
-        {% block body_end %}
-          {% block jsonld %}{% endblock %}
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        
+        {# <link rel="apple-touch-icon" sizes="180x180" href="{{ base_asset_url ~ 'img/favicons/apple-touch-icon.png' }}">
+        <link rel="icon" type="image/png" sizes="32x32" href="{{ base_asset_url ~ 'img/favicons/favicon-32x32.png' }}">
+        <link rel="icon" type="image/png" sizes="16x16" href="{{ base_asset_url ~ 'img/favicons/favicon-16x16.png' }}">
+        <link rel="manifest" href="{{ base_asset_url ~ 'img/favicons/site.webmanifest' }}">
+        <link rel="mask-icon" color="#2379b7" href="{{ base_asset_url ~ 'img/favicons/safari-pinned-tab.svg' }}">
+        <meta name="msapplication-TileColor" content="#2379b7">
+        <meta name="theme-color" content="#ffffff"> #}
+        
+        {% block seo %}
+          {% hook 'seomateMeta' %}
         {% endblock %}
-      {% nocache %}</body>{% endnocache %}
-    </html>
+        
+        <script>
+          document.documentElement.className = document.documentElement.className.replace('has-no-js', 'has-js');
+        </script>
+        {% block head_end %}{% endblock %}
+        
+        <meta name="build" content="{{ htmlCacheKey }}" data-pjax-track>
+      {% endspaceless %}
+    </head>
+    
+    {{ block('body_open') }}
+      
+      {% block page %}{% endblock %}
+      
+      {% for script in scripts %}
+        <script async src="{{ script }}"></script>
+      {% endfor %}
+      
+      {% block body_end %}
+        {% block jsonld %}{% endblock %}
+      {% endblock %}
   {% endminify -%}
 {% endblock %}
