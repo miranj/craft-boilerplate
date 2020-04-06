@@ -1,0 +1,9 @@
+{% macro imageObject(props, schema = null) %}
+  
+  {% set schema = schema ?? craft.schema.ImageObject %}
+  {% set schema = schema
+    .url(props.url)
+  %}
+  
+  {% return schema %}
+{% endmacro %}

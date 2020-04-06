@@ -1,0 +1,9 @@
+{#
+  JSON-LD Router
+#}
+
+{%- include [
+  '_schemas/details/' ~ entry.section.handle ~ '-' ~ entry.type.handle,
+  '_schemas/details/' ~ entry.section.handle,
+  '_schemas/details/default',
+] -%}

@@ -1,0 +1,10 @@
+{% macro listItem(props, schema = null) %}
+  
+  {% set schema = schema ?? craft.schema.ListItem %}
+  {% set schema = schema
+    .position(props.listPosition)
+    .url(props.url)
+  %}
+  
+  {% return schema %}
+{% endmacro %}

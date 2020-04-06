@@ -1,0 +1,7 @@
+{% extends '_layouts/base' %}
+
+
+
+{% block jsonld %}
+  {% include '_routers/jsonld' with { entry: entry } %}
+{% endblock %}

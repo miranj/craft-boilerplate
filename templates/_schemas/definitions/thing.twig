@@ -1,0 +1,13 @@
+{% macro thing(props, schema = null) %}
+  {% from '_schemas/definitions/imageObject' import imageObject %}
+  
+  {% set schema = schema ?? craft.schema.Thing %}
+  {% set schema = schema
+    .name(props.title)
+    .url(props.url|default(null))
+    .image(props.images|default([])|map(img => imageObject(img))|default(null))
+    .description(props.description|default('')|striptags|default(null))
+  %}
+  
+  {% return schema %}
+{% endmacro %}

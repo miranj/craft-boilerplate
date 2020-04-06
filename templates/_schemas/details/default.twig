@@ -1,0 +1,30 @@
+{# Default Schema #}
+
+
+
+{% set entryImages = entryImages ?? craft.assets.relatedTo(entry).kind('image').all() %}
+
+{% set defaultSchemaProps = {
+  title: entry.title,
+  url: entry.url,
+  dateCreated: entry.postDate,
+  dateUpdated: entry.dateUpdated,
+  images: entryImages|filter|values,
+} %}
+{% set schemaProps = schemaProps ?? {} %}
+{% set schemaProps = defaultSchemaProps|merge(schemaProps) %}
+
+
+
+{% block entry_schema %}
+  {% if schema is not defined %}
+    {% from '_schemas/definitions/webpage' import webpage %}
+    {% set schemaProps = {
+      authors: { organizations: [{ title: siteName, url: url() }], },
+      creators: [{ title: 'Miranj', url: 'https://miranj.in' }],
+    }|merge(schemaProps) %}
+    {% set schema = webpage(schemaProps) %}
+  {% endif %}
+  
+  {{ schema|raw }}
+{% endblock %}

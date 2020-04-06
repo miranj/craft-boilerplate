@@ -1,0 +1,13 @@
+{% macro organization(props, schema = null) %}
+  
+  {% set schema = schema ?? craft.schema.Organization %}
+  {% if props.url ?? false %}
+    {% set schema = schema.id(props.url ~ '#identity') %}
+  {% endif %}
+  {% set schema = schema
+    .name(props.title)
+    .url(props.url|default(null))
+  %}
+  
+  {% return schema %}
+{% endmacro %}

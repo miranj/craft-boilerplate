@@ -1,0 +1,10 @@
+{% macro itemList(props, schema = null) %}
+  {% from '_schemas/definitions/listItem' import listItem %}
+  
+  {% set schema = schema ?? craft.schema.ItemList %}
+  {% set schema = schema
+    .itemListElement((props.listItems ?? [])|map(listItem => listItem(listItem))|default(null))
+  %}
+  
+  {% return schema %}
+{% endmacro %}

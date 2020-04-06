@@ -42,7 +42,9 @@
           <script async src="{{ script }}"></script>
         {% endfor %}
         
-        {% block body_end %}{% endblock %}
+        {% block body_end %}
+          {% block jsonld %}{% endblock %}
+        {% endblock %}
       {% nocache %}</body>{% endnocache %}
     </html>
   {% endminify -%}
