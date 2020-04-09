@@ -59,6 +59,7 @@ return [
         'devMode' => true,
         'enableTemplateCaching' => false,
         'allowAdminChanges' => true,
+        'maxBackups' => false,
     ],
     
     // Staging environment
