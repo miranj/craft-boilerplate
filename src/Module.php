@@ -34,18 +34,37 @@ class Module extends \yii\base\Module
         Craft::setAlias('@boilerplate', __DIR__);
         parent::init();
         
-        // Attach [P|A]jax redirect header override handler
-        Event::on(Response::class, Response::EVENT_BEFORE_SEND, function(Event $event) {
-            $response = $event->sender;
-            $headers = $response->getHeaders();
-            
-            // If the response is a redirect, and
-            // if it is a redirect with [P|A]jax but not Location, then set the Location header
-            if ($response->getIsRedirection()
-            && !$headers->has('Location')
-            && ($headers->has('X-Pjax-Url') || $headers->has('X-Redirect'))) {
-                $headers->set('Location', $headers->get('X-Pjax-Url', $headers->get('X-Redirect')));
-            }
-        });
+        $this->addEventListeners();
+    }
+    
+    /**
+     * [P|A]jax redirect header override handler
+     */
+    public function onBeforeSend(Event $event)
+    {
+        $response = $event->sender;
+        $headers = $response->getHeaders();
+        
+        // If the response is a redirect, and
+        // if it is a redirect with [P|A]jax but not Location, then set the Location header
+        if ($response->getIsRedirection()
+        && !$headers->has('Location')
+        && ($headers->has('X-Pjax-Url') || $headers->has('X-Redirect'))) {
+            $headers->set('Location', $headers->get('X-Pjax-Url', $headers->get('X-Redirect')));
+        }
+    }
+    
+    
+    
+    // Protected Methods
+    // =================
+    
+    protected function addEventListeners()
+    {
+        Event::on(
+            Response::class,
+            Response::EVENT_BEFORE_SEND,
+            [$this, 'onBeforeSend']
+        );
     }
 }
