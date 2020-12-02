@@ -82,6 +82,7 @@ Object.entries(paths.tasks.js).forEach(([task_name, task_config]) => {
 // Hash Task
 function generateHash() {
   const hashsum = require('gulp-hashsum');
+  const sri = require('gulp-sri');
   
   return gulp.src(paths.tasks.hash.source)
     .pipe(hashsum({
@@ -89,6 +90,18 @@ function generateHash() {
       filename: paths.tasks.hash.destination,
       json: true
     }))
+    .pipe(sri({
+      fileName: paths.tasks.hash.sri,
+      transform: hash => {
+        var output = {};
+        Object.entries(hash).forEach(([filepath, sri]) => {
+          output[filepath.replace(paths.directories.build, '')] = sri;
+        })
+        return output;
+      },
+      formatter: hash => JSON.stringify(hash, null, 2),
+    }))
+    .pipe(gulp.dest(paths.directories.build))
   ;
 }
 function prettyHash() {
