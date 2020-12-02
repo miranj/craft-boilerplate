@@ -23,6 +23,7 @@ Object.entries(paths.tasks.css).forEach(([task_name, task_config]) => {
         require('postcss-import'),
         require('tailwindcss')(task_config.tailwind_config),
         require('postcss-nested'),
+        require('postcss-custom-properties'),
         require('postcss-calc')({ preserve: true }),
         require('autoprefixer'),
         require('postcss-inline-svg'),
