@@ -40,6 +40,7 @@ return [
         
         // front-end
         'omitScriptNameInUrls' => true,
+        'disallowRobots' => true,
         'sendPoweredByHeader' => false,
         'defaultImageQuality' => 85,
         'errorTemplatePrefix' => "_errors/",
@@ -76,6 +77,7 @@ return [
     // Production environment
     'production' => [
         'devMode' => false,
+        'disallowRobots' => false,
         'disabledPlugins' => ['inventory', 'cp-field-inspect', 'environment-label'],
         'runQueueAutomatically' => false,
     ],
