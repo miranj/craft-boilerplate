@@ -38,7 +38,6 @@ Object.entries(paths.tasks.css).forEach(([task_name, task_config]) => {
 // Purge Tasks
 Object.entries(paths.tasks.purge).forEach(([task_name, task_config]) => {
   const purgecss = require('gulp-purgecss');
-  const cleancss = require('gulp-clean-css');
   
   task_name = 'purge-' + task_name;
   purge_tasks.push(task_name);
@@ -48,7 +47,9 @@ Object.entries(paths.tasks.purge).forEach(([task_name, task_config]) => {
       .pipe(rename(task_config.destination))
       .pipe(purgecss(task_config.config))
       .pipe(gulp.dest(paths.directories.build))
-      .pipe(cleancss())
+      .pipe(postcss([
+        require('cssnano')
+      ]))
       .pipe(rename({ suffix : paths.config.minify_suffix }))
       .pipe(gulp.dest(paths.directories.build, { sourcemaps: '.' }))
     ;
