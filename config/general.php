@@ -20,8 +20,8 @@ return [
         'securityKey' => getenv('SECURITY_KEY'),
         
         // user sessions
-        'phpSessionName' => getenv('SITE_SLUG').'CraftSessionId',
-        'csrfTokenName' => getenv('SITE_SLUG').'_CSRF',
+        'phpSessionName' => getenv('APP_ID').'CraftSessionId',
+        'csrfTokenName' => getenv('APP_ID').'_CSRF',
         'requireMatchingUserAgentForSession' => false,
         'rememberedUserSessionDuration' => 'P1M',
         'userSessionDuration' => 'P1M',

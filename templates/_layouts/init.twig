@@ -11,7 +11,7 @@
   and not craft.app.session.hasFlash('notice')
 %}
 {% set cacheflags = cacheflags ?? 'entries|assets|globals|categories|users' %}
-{% set cacheKeyPrefix = getenv('SITE_SLUG') ~ ':v1' %}
+{% set cacheKeyPrefix = getenv('APP_ID') ~ ':v1' %}
 
 
 
