@@ -17,10 +17,14 @@
  * your config/ folder, alongside this one.
  */
 
+use craft\helpers\App;
+
 return [
     
     // Global settings
     '*' => [
+        'id' => App::env('APP_ID'),
+        
         'modules' => [
             'boilerplate' => \boilerplate\Module::class,
         ],
