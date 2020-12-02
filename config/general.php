@@ -8,6 +8,8 @@
  * @see \craft\config\GeneralConfig
  */
 
+use craft\helpers\App;
+
 return [
     // Global settings
     '*' => [
@@ -17,11 +19,11 @@ return [
         'allowAdminChanges' => false,
         'usePathInfo' => true,
         'enableGql' => false,
-        'securityKey' => getenv('SECURITY_KEY'),
+        'securityKey' => App::env('SECURITY_KEY'),
         
         // user sessions
-        'phpSessionName' => getenv('APP_ID').'CraftSessionId',
-        'csrfTokenName' => getenv('APP_ID').'_CSRF',
+        'phpSessionName' => App::env('APP_ID').'CraftSessionId',
+        'csrfTokenName' => App::env('APP_ID').'_CSRF',
         'requireMatchingUserAgentForSession' => false,
         'rememberedUserSessionDuration' => 'P1M',
         'userSessionDuration' => 'P1M',
@@ -47,9 +49,9 @@ return [
         'maxUploadFileSize' => '100M',
         
         'aliases' => [
-            '@web' => getenv('DEFAULT_SITE_URL'),
-            '@assetBaseUrl' => getenv('ASSET_BASE_URL'),
-            '@assetBasePath' => getenv('ASSET_BASE_PATH'),
+            '@web' => App::env('DEFAULT_SITE_URL'),
+            '@assetBaseUrl' => App::env('ASSET_BASE_URL'),
+            '@assetBasePath' => App::env('ASSET_BASE_PATH'),
         ],
     ],
     

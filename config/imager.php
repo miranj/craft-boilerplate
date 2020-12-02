@@ -6,6 +6,8 @@
  * Multi-environment settings work in this file the same way as in general.php or db.php
  */
 
+use craft\helpers\App;
+
 return [
     // Global settings
     '*' => [
@@ -53,7 +55,7 @@ return [
     'dev' => [
         'hashPath' => true,
         'filenamePattern' => '{fullname}.{extension}',
-        'useCwebp' => getenv('IMAGER_CWEBP_PATH') ?: false,
-        'cwebpPath' => getenv('IMAGER_CWEBP_PATH'),
+        'useCwebp' => App::env('IMAGER_CWEBP_PATH') ?: false,
+        'cwebpPath' => App::env('IMAGER_CWEBP_PATH'),
     ],
 ];
