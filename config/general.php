@@ -17,6 +17,7 @@ return [
         // back-end
         'useProjectConfigFile' => true,
         'allowAdminChanges' => false,
+        'allowUpdates' => false,
         'usePathInfo' => true,
         'enableGql' => false,
         'securityKey' => App::env('SECURITY_KEY'),
@@ -62,6 +63,7 @@ return [
         'devMode' => true,
         'enableTemplateCaching' => false,
         'allowAdminChanges' => true,
+        'allowUpdates' => true,
         'maxBackups' => false,
     ],
     
