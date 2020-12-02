@@ -1,6 +1,7 @@
 const gulp = require('gulp');
 const rename = require('gulp-rename');
 const paths = require('./paths');
+const postcss = require('gulp-postcss');
 
 var css_tasks = [];
 var purge_tasks = [];
@@ -11,8 +12,6 @@ var watch_files = [];
 
 // CSS Tasks
 Object.entries(paths.tasks.css).forEach(([task_name, task_config]) => {
-  const postcss = require('gulp-postcss');
-  
   task_name = 'css-' + task_name;
   css_tasks.push(task_name);
   watch_files.push([task_name, task_config.watch, task_config.watch_config || {}]);
@@ -21,13 +20,13 @@ Object.entries(paths.tasks.css).forEach(([task_name, task_config]) => {
       .pipe(rename(task_config.destination))
       .pipe(postcss([
         require('postcss-import'),
-        require('tailwindcss')(task_config.tailwind_config),
+        task_config.tailwind_config ? require('tailwindcss')(task_config.tailwind_config) : false,
         require('postcss-nested'),
         require('postcss-custom-properties'),
         require('postcss-calc')({ preserve: true }),
         require('autoprefixer'),
         require('postcss-inline-svg'),
-      ]))
+      ].filter(plugin => !!plugin)))
       .pipe(gulp.dest(paths.directories.build, { sourcemaps: '.' }))
     ;
   };
