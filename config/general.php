@@ -43,6 +43,7 @@ return [
         'disallowRobots' => true,
         'sendPoweredByHeader' => false,
         'defaultImageQuality' => 85,
+        'defaultTemplateExtensions' => ['twig'],
         'errorTemplatePrefix' => "_errors/",
         'pageTrigger' => 'page/',
         
