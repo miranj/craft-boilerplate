@@ -60,6 +60,7 @@ Object.entries(paths.tasks.purge).forEach(([task_name, task_config]) => {
 Object.entries(paths.tasks.js).forEach(([task_name, task_config]) => {
   const concat = require('gulp-concat');
   const uglify = require('gulp-uglify');
+  const terser = require('gulp-terser-js');
   
   task_name = 'js-' + task_name;
   js_tasks.push(task_name);
@@ -68,7 +69,7 @@ Object.entries(paths.tasks.js).forEach(([task_name, task_config]) => {
     return gulp.src(task_config.source, { sourcemaps: true })
       .pipe(concat(task_config.destination))
       .pipe(gulp.dest(paths.directories.build))
-      .pipe(uglify())
+      .pipe(task_config.es6 ? terser() : uglify())
       .pipe(rename({ suffix: paths.config.minify_suffix }))
       .pipe(gulp.dest(paths.directories.build, { sourcemaps: '.' }))
     ;
