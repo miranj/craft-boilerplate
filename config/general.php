@@ -47,6 +47,7 @@ return [
         'maxUploadFileSize' => '100M',
         
         'aliases' => [
+            '@web' => getenv('DEFAULT_SITE_URL'),
             '@assetBaseUrl' => getenv('ASSET_BASE_URL'),
             '@assetBasePath' => getenv('ASSET_BASE_PATH'),
         ],
