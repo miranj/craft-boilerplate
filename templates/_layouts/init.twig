@@ -22,10 +22,13 @@
 {% set assetManifest = source('_manifest.json')|json_decode %}
 {% set sriManifest = source('_manifest-sri.json')|json_decode %}
 {% set styles = [
-  devMode
-  ? alias('@assetBaseUrl/build/style.' ~ assetManifest['style.css'] ~ '.css')
-  : alias('@assetBaseUrl/build/style.purged.min.' ~ assetManifest['style.purged.min.css'] ~ '.css'),
-] %}
+  devMode ? 'style.css' : 'style.purged.min.css',
+]|map(s => {
+  href: alias('@assetBaseUrl/build/' ~ s|replace('.css', assetManifest[s] ~ '.css')),
+  integrity: sriManifest[s],
+  crossorigin: 'anonymous',
+  rel: 'stylesheet',
+}) %}
 {% set scripts = [
   'urgent.min.js',
   'deferred.min.js',
