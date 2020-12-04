@@ -1,6 +1,7 @@
-![Miranj](https://cdn.miranj.in/mc3/img/apple-touch-icon-precomposed.png)
+<img align="right" src="https://cdn.miranj.in/mc3/img/apple-touch-icon-precomposed.png" width="57" height="57" alt="Miranj">
 
-## Miranj Craft Boilerplate
+Miranj Craft Boilerplate
+========================
 
 A [Craft CMS](https://craftcms.com/) 3 starter project based on [Miranj's](https://miranj.in) project boilerplate. It includes:
 
@@ -27,3 +28,12 @@ A [Craft CMS](https://craftcms.com/) 3 starter project based on [Miranj's](https
     - [SEOMate](https://github.com/vaersaagod/seomate)
     - [Twig Perversion](https://github.com/marionnewlevant/craft-twig_perversion)
     - [Typogrify](https://github.com/nystudio107/craft-typogrify)
+
+
+
+Usage
+-----
+
+Open your terminal and run the following command:
+
+    composer create-project miranj/craft-boilerplate /path/to/project "dev-master"
