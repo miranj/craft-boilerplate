@@ -15,7 +15,6 @@
 
 
 
-{% set base_asset_url = alias('@assetBaseUrl') ~ '/' %}
 {% set queries = {} %}
 {% set themes = {} %}
 {% set eagerload = {} %}
@@ -23,12 +22,12 @@
 {% set assetManifest = source('_manifest.json')|json_decode %}
 {% set styles = [
   devMode
-  ? (base_asset_url ~ 'build/style.' ~ assetManifest['style.css'] ~ '.css')
-  : (base_asset_url ~ 'build/style.purged.min.' ~ assetManifest['style.purged.min.css'] ~ '.css'),
+  ? alias('@assetBaseUrl/build/style.' ~ assetManifest['style.css'] ~ '.css')
+  : alias('@assetBaseUrl/build/style.purged.min.' ~ assetManifest['style.purged.min.css'] ~ '.css'),
 ] %}
 {% set scripts = [
-  base_asset_url ~ 'build/urgent.min.' ~ assetManifest['urgent.min.js'] ~ '.js',
-  base_asset_url ~ 'build/deferred.min.' ~ assetManifest['deferred.min.js'] ~ '.js',
+  alias('@assetBaseUrl/build/urgent.min.' ~ assetManifest['urgent.min.js'] ~ '.js'),
+  alias('@assetBaseUrl/build/deferred.min.' ~ assetManifest['deferred.min.js'] ~ '.js'),
 ] %}
 
 
