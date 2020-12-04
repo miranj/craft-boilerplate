@@ -70,7 +70,7 @@
       {% block page %}{% endblock %}
       
       {% for script in scripts %}
-        <script async src="{{ script }}"></script>
+        <script {{ attr(script) }}></script>
       {% endfor %}
       
       {% block body_end %}
