@@ -32,6 +32,26 @@
 
 
 
+{#
+  If the request is for <link rel=prefetch>
+  then make sure the response is micro-cacheable
+#}
+{% set requestHeaders = craft.app.request.headers %}
+{% set purposeHeaders = [
+  requestHeaders.get('Purpose'),
+  requestHeaders.get('X-Purpose'),
+  requestHeaders.get('X-moz'),
+  requestHeaders.get('Sec-Purpose'),
+] %}
+{% if 'prefetch' in purposeHeaders %}
+  {% set expireInSeconds = 5 %}
+  {% header "Cache-Control: max-age=" ~ expireInSeconds %}
+  {% header "Pragma: cache" %}
+  {% header "Expires: " ~ now|date_modify("+#{expireInSeconds} seconds")|date('D, d M Y H:i:s', 'GMT') ~ " GMT" %}
+{% endif %}
+
+
+
 {%- block response_buffer -%}
   
   {% set htmlCacheKey = cacheKeyPrefix
