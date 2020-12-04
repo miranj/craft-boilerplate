@@ -36,9 +36,9 @@
       "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
     ],
     "post-install-cmd": [
-      "./craft install/check && ./craft migrate/all || return 0",
-      "./craft install/check && ./craft project-config/apply || return 0",
-      "./craft install/check && ./craft clear-caches/data || return 0"
+      "./craft install/check && ./craft migrate/all || exit 0",
+      "./craft install/check && ./craft project-config/apply || exit 0",
+      "./craft install/check && ./craft clear-caches/data || exit 0"
     ]
   }
 }
