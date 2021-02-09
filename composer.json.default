@@ -38,7 +38,7 @@
     "post-install-cmd": [
       "./craft install/check && ./craft migrate/all || exit 0",
       "./craft install/check && ./craft project-config/apply || exit 0",
-      "./craft install/check && ./craft clear-caches/data || exit 0"
+      "./craft install/check && ./craft invalidate-tags/template || exit 0"
     ]
   }
 }
