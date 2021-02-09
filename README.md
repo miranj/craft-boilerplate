@@ -24,7 +24,6 @@ A [Craft CMS](https://craftcms.com/) 3 starter project based on [Miranj's](https
     - [Inventory](https://github.com/doublesecretagency/craft-inventory)
     - [Minify](https://github.com/nystudio107/craft-minify)
     - [Redactor](https://github.com/craftcms/redactor)
-    - [Relabel](https://github.com/Anubarak/craft-relabel)
     - [SEOMate](https://github.com/vaersaagod/seomate)
     - [Twig Perversion](https://github.com/marionnewlevant/craft-twig_perversion)
     - [Typogrify](https://github.com/nystudio107/craft-typogrify)
