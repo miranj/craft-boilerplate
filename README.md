@@ -33,6 +33,22 @@ A [Craft CMS](https://craftcms.com/) 3 starter project based on [Miranj's](https
 Usage
 -----
 
-Open your terminal and run the following command:
+1.  Open your terminal and run the following command:
+    
+        composer create-project miranj/craft-boilerplate /path/to/project "dev-master"
+    
+2.  Replace instances of "miranj/craft-boilerplate" and "boilerplate"
+    with the handle of the new project in the following locations:
+    - `composer.json`
+    - `assets/package.json`
+    - `config/app.php`
+    - `src/Module.php`
+    - `serverconfigs/envs/production/env.conf`
+    - `serverconfigs/envs/production/setup.conf`
+    - `serverconfigs/envs/staging/env.conf`
+    - `serverconfigs/envs/staging/setup.conf`
 
-    composer create-project miranj/craft-boilerplate /path/to/project "dev-master"
+3.  Replace instances of "Miranj Craft Boilerplate" / and "Boilerplate"
+    with the title of the new project.
+
+4.  Inspect all FIXME comments in the project and take necessary action.
