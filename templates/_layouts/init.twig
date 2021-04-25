@@ -11,25 +11,53 @@
   and not craft.app.session.hasFlash('notice')
 %}
 {% set cacheflags = cacheflags ?? 'entries|assets|globals|categories|users' %}
-{% set cacheKeyPrefix = getenv('SITE_SLUG') ~ ':v1' %}
+{% set cacheKeyPrefix = getenv('APP_ID') ~ ':v1' %}
 
 
 
-{% set base_asset_url = alias('@assetBaseUrl') ~ '/' %}
 {% set queries = {} %}
 {% set themes = {} %}
 {% set eagerload = {} %}
 
 {% set assetManifest = source('_manifest.json')|json_decode %}
+{% set sriManifest = source('_manifest-sri.json')|json_decode %}
 {% set styles = [
-  devMode
-  ? (base_asset_url ~ 'build/style.' ~ assetManifest['style.css'] ~ '.css')
-  : (base_asset_url ~ 'build/style.purged.min.' ~ assetManifest['style.purged.min.css'] ~ '.css'),
-] %}
+  devMode ? 'style.css' : 'style.purged.min.css',
+]|map(s => {
+  href: alias('@assetBaseUrl/build/' ~ s|replace('.css', ".#{assetManifest[s]}.css")),
+  integrity: sriManifest[s],
+  crossorigin: 'anonymous',
+  rel: 'stylesheet',
+}) %}
 {% set scripts = [
-  base_asset_url ~ 'build/urgent.min.' ~ assetManifest['urgent.min.js'] ~ '.js',
-  base_asset_url ~ 'build/deferred.min.' ~ assetManifest['deferred.min.js'] ~ '.js',
+  'urgent.min.js',
+  'deferred.min.js',
+]|map(s => {
+  src: alias('@assetBaseUrl/build/' ~ s|replace('.js', ".#{assetManifest[s]}.js")),
+  integrity: sriManifest[s],
+  crossorigin: 'anonymous',
+  async: true,
+}) %}
+
+
+
+{#
+  If the request is for <link rel=prefetch>
+  then make sure the response is micro-cacheable
+#}
+{% set requestHeaders = craft.app.request.headers %}
+{% set purposeHeaders = [
+  requestHeaders.get('Purpose'),
+  requestHeaders.get('X-Purpose'),
+  requestHeaders.get('X-moz'),
+  requestHeaders.get('Sec-Purpose'),
 ] %}
+{% if 'prefetch' in purposeHeaders %}
+  {% set expireInSeconds = 5 %}
+  {% header "Cache-Control: max-age=" ~ expireInSeconds %}
+  {% header "Pragma: cache" %}
+  {% header "Expires: " ~ now|date_modify("+#{expireInSeconds} seconds")|date('D, d M Y H:i:s', 'GMT') ~ " GMT" %}
+{% endif %}
 
 
 

@@ -50,7 +50,7 @@ paths.tasks = {
         '../templates/**/*.{twig,html}',
       ],
       watch_config: {
-        ignored: '../templates/_manifest.json',
+        ignored: '../templates/_manifest*.json',
       },
     },
   },
@@ -84,6 +84,7 @@ paths.tasks = {
   hash: {
     source: paths.directories.build + '**/*.{js,css}',
     destination: 'manifest.json',
+    sri: 'manifest-sri.json',
     watch: paths.directories.build + '**/*.{js,css}',
   }
 };

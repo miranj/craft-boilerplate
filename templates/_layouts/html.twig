@@ -39,16 +39,16 @@
         <meta charset="utf-8"/>
         
         {% for sheet in styles %}
-          <link rel="stylesheet" href="{{ sheet }}">
+          <link {{ attr(sheet) }}>
         {% endfor %}
         
         <meta name="viewport" content="width=device-width,initial-scale=1">
         
-        {# <link rel="apple-touch-icon" sizes="180x180" href="{{ base_asset_url ~ 'img/favicons/apple-touch-icon.png' }}">
-        <link rel="icon" type="image/png" sizes="32x32" href="{{ base_asset_url ~ 'img/favicons/favicon-32x32.png' }}">
-        <link rel="icon" type="image/png" sizes="16x16" href="{{ base_asset_url ~ 'img/favicons/favicon-16x16.png' }}">
-        <link rel="manifest" href="{{ base_asset_url ~ 'img/favicons/site.webmanifest' }}">
-        <link rel="mask-icon" color="#2379b7" href="{{ base_asset_url ~ 'img/favicons/safari-pinned-tab.svg' }}">
+        {# <link rel="apple-touch-icon" sizes="180x180" href="{{ alias('@assetBaseUrl/img/favicons/apple-touch-icon.png') }}">
+        <link rel="icon" type="image/png" sizes="32x32" href="{{ alias('@assetBaseUrl/img/favicons/favicon-32x32.png') }}">
+        <link rel="icon" type="image/png" sizes="16x16" href="{{ alias('@assetBaseUrl/img/favicons/favicon-16x16.png') }}">
+        <link rel="manifest" href="{{ alias('@assetBaseUrl/img/favicons/site.webmanifest') }}">
+        <link rel="mask-icon" color="#2379b7" href="{{ alias('@assetBaseUrl/img/favicons/safari-pinned-tab.svg') }}">
         <meta name="msapplication-TileColor" content="#2379b7">
         <meta name="theme-color" content="#ffffff"> #}
         
@@ -70,7 +70,7 @@
       {% block page %}{% endblock %}
       
       {% for script in scripts %}
-        <script async src="{{ script }}"></script>
+        <script {{ attr(script) }}></script>
       {% endfor %}
       
       {% block body_end %}

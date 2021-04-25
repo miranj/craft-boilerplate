@@ -8,6 +8,8 @@
  * @see \craft\config\GeneralConfig
  */
 
+use craft\helpers\App;
+
 return [
     // Global settings
     '*' => [
@@ -15,13 +17,14 @@ return [
         // back-end
         'useProjectConfigFile' => true,
         'allowAdminChanges' => false,
+        'allowUpdates' => false,
         'usePathInfo' => true,
         'enableGql' => false,
-        'securityKey' => getenv('SECURITY_KEY'),
+        'securityKey' => App::env('SECURITY_KEY'),
         
         // user sessions
-        'phpSessionName' => getenv('SITE_SLUG').'CraftSessionId',
-        'csrfTokenName' => getenv('SITE_SLUG').'_CSRF',
+        'phpSessionName' => App::env('APP_ID').'CraftSessionId',
+        'csrfTokenName' => App::env('APP_ID').'_CSRF',
         'requireMatchingUserAgentForSession' => false,
         'rememberedUserSessionDuration' => 'P1M',
         'userSessionDuration' => 'P1M',
@@ -37,8 +40,10 @@ return [
         
         // front-end
         'omitScriptNameInUrls' => true,
+        'disallowRobots' => true,
         'sendPoweredByHeader' => false,
         'defaultImageQuality' => 85,
+        'defaultTemplateExtensions' => ['twig'],
         'errorTemplatePrefix' => "_errors/",
         'pageTrigger' => 'page/',
         
@@ -47,8 +52,9 @@ return [
         'maxUploadFileSize' => '100M',
         
         'aliases' => [
-            '@assetBaseUrl' => getenv('ASSET_BASE_URL'),
-            '@assetBasePath' => getenv('ASSET_BASE_PATH'),
+            '@web' => App::env('DEFAULT_SITE_URL'),
+            '@assetBaseUrl' => App::env('ASSET_BASE_URL'),
+            '@assetBasePath' => App::env('ASSET_BASE_PATH'),
         ],
     ],
     
@@ -59,6 +65,7 @@ return [
         'devMode' => true,
         'enableTemplateCaching' => false,
         'allowAdminChanges' => true,
+        'allowUpdates' => true,
         'maxBackups' => false,
     ],
     
@@ -71,6 +78,7 @@ return [
     // Production environment
     'production' => [
         'devMode' => false,
+        'disallowRobots' => false,
         'disabledPlugins' => ['inventory', 'cp-field-inspect', 'environment-label'],
         'runQueueAutomatically' => false,
     ],

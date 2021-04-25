@@ -23,6 +23,7 @@
 {% set imageLazyload = params.lazyload ?? true %}
 {% set imageIsCss = not not (params.background ?? false) %}
 {% set imageCssClass = params.background ?? '' %}
+{% set imageGenerateWebp = (params.webp ?? true) and craft.imager.serverSupportsWebp %}
 
 
 
@@ -44,6 +45,9 @@
   {% set imageAlt = imageAlt ?: imageAsset.title %}
   {% set imageIsSvg = imageAsset.mimeType in ['image/svg+xml'] or imageAsset.extension in ['svg'] %}
   {% set imageScaleFactor = imageIsSvg ? 100 : 1 %}
+  {% set imageGenerateWebp = imageGenerateWebp and not craft.imager.isAnimated(imageAsset) %}
+  {% set imageIsCwebpSupported = imageAsset.mimeType in ['image/jpeg', 'image/png', 'image/tiff']
+    or imageAsset.extension in ['jpg', 'jpeg', 'jfif', 'pjpeg', 'pjp', 'png', 'tif', 'tiff'] %}
   
   {% if presets[imagePreset] is defined %}
     {% set breakpoints = presets[imagePreset]['breakpoints'] is defined ? presets[imagePreset].breakpoints : [presets[imagePreset]] %}
@@ -66,9 +70,11 @@
         {% set imageDefault = imageTransforms|last %}
         
         {# Generate WebP versions and put them before regular ones #}
-        {% if craft.imager.serverSupportsWebp %}
+        {% if imageGenerateWebp %}
           {% set imageTransformsWebP = craft.imager.transformImage(
-            _imageAsset,
+            imageIsCwebpSupported
+              ? _imageAsset
+              : craft.imager.transformImage(_imageAsset, { format: 'png' }),
             imagePreset.sizes,
             imageTransformParams|merge({ format: 'webp' })
             ) %}

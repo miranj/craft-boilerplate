@@ -27,3 +27,6 @@ assets/\.env$
 
 # Licensed content
 ^assets/fonts
+
+# Testing
+^templates/test.twig

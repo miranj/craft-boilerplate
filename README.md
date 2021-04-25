@@ -1,6 +1,7 @@
-![Miranj](https://cdn.miranj.in/mc3/img/apple-touch-icon-precomposed.png)
+<img align="right" src="https://cdn.miranj.in/mc3/img/apple-touch-icon-precomposed.png" width="57" height="57" alt="Miranj">
 
-## Miranj Craft Boilerplate
+Miranj Craft Boilerplate
+========================
 
 A [Craft CMS](https://craftcms.com/) 3 starter project based on [Miranj's](https://miranj.in) project boilerplate. It includes:
 
@@ -23,7 +24,31 @@ A [Craft CMS](https://craftcms.com/) 3 starter project based on [Miranj's](https
     - [Inventory](https://github.com/doublesecretagency/craft-inventory)
     - [Minify](https://github.com/nystudio107/craft-minify)
     - [Redactor](https://github.com/craftcms/redactor)
-    - [Relabel](https://github.com/Anubarak/craft-relabel)
     - [SEOMate](https://github.com/vaersaagod/seomate)
     - [Twig Perversion](https://github.com/marionnewlevant/craft-twig_perversion)
     - [Typogrify](https://github.com/nystudio107/craft-typogrify)
+
+
+
+Usage
+-----
+
+1.  Open your terminal and run the following command:
+    
+        composer create-project miranj/craft-boilerplate /path/to/project "dev-master"
+    
+2.  Replace instances of "miranj/craft-boilerplate" and "boilerplate"
+    with the handle of the new project in the following locations:
+    - `composer.json`
+    - `assets/package.json`
+    - `config/app.php`
+    - `src/Module.php`
+    - `serverconfigs/envs/production/env.conf`
+    - `serverconfigs/envs/production/setup.conf`
+    - `serverconfigs/envs/staging/env.conf`
+    - `serverconfigs/envs/staging/setup.conf`
+
+3.  Replace instances of "Miranj Craft Boilerplate" / and "Boilerplate"
+    with the title of the new project.
+
+4.  Inspect all FIXME comments in the project and take necessary action.

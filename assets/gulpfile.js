@@ -1,6 +1,7 @@
 const gulp = require('gulp');
 const rename = require('gulp-rename');
 const paths = require('./paths');
+const postcss = require('gulp-postcss');
 
 var css_tasks = [];
 var purge_tasks = [];
@@ -11,8 +12,6 @@ var watch_files = [];
 
 // CSS Tasks
 Object.entries(paths.tasks.css).forEach(([task_name, task_config]) => {
-  const postcss = require('gulp-postcss');
-  
   task_name = 'css-' + task_name;
   css_tasks.push(task_name);
   watch_files.push([task_name, task_config.watch, task_config.watch_config || {}]);
@@ -21,12 +20,13 @@ Object.entries(paths.tasks.css).forEach(([task_name, task_config]) => {
       .pipe(rename(task_config.destination))
       .pipe(postcss([
         require('postcss-import'),
-        require('tailwindcss')(task_config.tailwind_config),
+        task_config.tailwind_config ? require('tailwindcss')(task_config.tailwind_config) : false,
         require('postcss-nested'),
+        require('postcss-custom-properties'),
         require('postcss-calc')({ preserve: true }),
         require('autoprefixer'),
         require('postcss-inline-svg'),
-      ]))
+      ].filter(plugin => !!plugin)))
       .pipe(gulp.dest(paths.directories.build, { sourcemaps: '.' }))
     ;
   };
@@ -37,7 +37,6 @@ Object.entries(paths.tasks.css).forEach(([task_name, task_config]) => {
 // Purge Tasks
 Object.entries(paths.tasks.purge).forEach(([task_name, task_config]) => {
   const purgecss = require('gulp-purgecss');
-  const cleancss = require('gulp-clean-css');
   
   task_name = 'purge-' + task_name;
   purge_tasks.push(task_name);
@@ -47,7 +46,9 @@ Object.entries(paths.tasks.purge).forEach(([task_name, task_config]) => {
       .pipe(rename(task_config.destination))
       .pipe(purgecss(task_config.config))
       .pipe(gulp.dest(paths.directories.build))
-      .pipe(cleancss())
+      .pipe(postcss([
+        require('cssnano')
+      ]))
       .pipe(rename({ suffix : paths.config.minify_suffix }))
       .pipe(gulp.dest(paths.directories.build, { sourcemaps: '.' }))
     ;
@@ -60,6 +61,7 @@ Object.entries(paths.tasks.purge).forEach(([task_name, task_config]) => {
 Object.entries(paths.tasks.js).forEach(([task_name, task_config]) => {
   const concat = require('gulp-concat');
   const uglify = require('gulp-uglify');
+  const terser = require('gulp-terser-js');
   
   task_name = 'js-' + task_name;
   js_tasks.push(task_name);
@@ -68,7 +70,7 @@ Object.entries(paths.tasks.js).forEach(([task_name, task_config]) => {
     return gulp.src(task_config.source, { sourcemaps: true })
       .pipe(concat(task_config.destination))
       .pipe(gulp.dest(paths.directories.build))
-      .pipe(uglify())
+      .pipe(task_config.es6 ? terser() : uglify())
       .pipe(rename({ suffix: paths.config.minify_suffix }))
       .pipe(gulp.dest(paths.directories.build, { sourcemaps: '.' }))
     ;
@@ -80,6 +82,7 @@ Object.entries(paths.tasks.js).forEach(([task_name, task_config]) => {
 // Hash Task
 function generateHash() {
   const hashsum = require('gulp-hashsum');
+  const sri = require('gulp-sri');
   
   return gulp.src(paths.tasks.hash.source)
     .pipe(hashsum({
@@ -87,6 +90,18 @@ function generateHash() {
       filename: paths.tasks.hash.destination,
       json: true
     }))
+    .pipe(sri({
+      fileName: paths.tasks.hash.sri,
+      transform: hash => {
+        var output = {};
+        Object.entries(hash).forEach(([filepath, sri]) => {
+          output[filepath.replace(paths.directories.build, '')] = sri;
+        })
+        return output;
+      },
+      formatter: hash => JSON.stringify(hash, null, 2),
+    }))
+    .pipe(gulp.dest(paths.directories.build))
   ;
 }
 function prettyHash() {
