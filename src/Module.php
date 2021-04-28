@@ -68,6 +68,7 @@ class Module extends \yii\base\Module
                 'frame-ancestors '.
                 parse_url(Craft::$app->config->general->baseCpUrl, PHP_URL_HOST)
             );
+            $headers->set('X-Accel-Expires', '0');
         }
     }
     
