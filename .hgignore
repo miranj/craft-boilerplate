@@ -19,6 +19,7 @@ assets/\.env$
 \.sublime-workspace$
 ^scripts/
 .idea/
+.vscode/
 
 # User data
 ^web/media
