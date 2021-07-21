@@ -7,9 +7,8 @@
 APP_NAME="boilerplate-craft"
 CDN_NAME="boilerplate-cdn"
 REDIRECTS_NAME="boilerplate-redirects"
-REPO_NAME="boilerplate"
 
-REPO_DIR="/home/runcloud/webapps/$APP_NAME/$REPO_NAME"
+REPO_DIR="/home/runcloud/webapps/$APP_NAME"
 TARGET_DIR="/etc/nginx-rc/extra.d"
 
 cd $TARGET_DIR
