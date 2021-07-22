@@ -42,6 +42,7 @@ return [
         'omitScriptNameInUrls' => true,
         'disallowRobots' => true,
         'sendPoweredByHeader' => false,
+        'convertFilenamesToAscii' => true,
         'defaultImageQuality' => 85,
         'defaultTemplateExtensions' => ['twig'],
         'errorTemplatePrefix' => "_errors/",
