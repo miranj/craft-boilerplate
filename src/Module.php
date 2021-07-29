@@ -55,7 +55,7 @@ class Module extends \yii\base\Module
     }
     
     /**
-     * Allow cross-domain live preview requests by settting frame-ancestors to CP URL
+     * Allow cross-domain live preview requests by setting frame-ancestors to CP URL
      * https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors
      */
     public function onBeforeSendLivePreview(Event $event)
