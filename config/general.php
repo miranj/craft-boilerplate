@@ -33,6 +33,7 @@ return [
         'timezone' => 'Asia/Kolkata',
         'defaultWeekStartDay' => '1',
         'defaultCpLanguage' => 'en-GB',
+        'baseCpUrl' => App::env('DEFAULT_SITE_URL'),
         'defaultSearchTermOptions' => [
             'subLeft' => true,
             'subRight' => true,
