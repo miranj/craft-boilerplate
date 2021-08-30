@@ -1,7 +1,7 @@
 {
   "require": {
     "aelvan/imager": "^2.1",
-    "craftcms/cms": "~3.6.0",
+    "craftcms/cms": "~3.7.0",
     "craftcms/redactor": "^2.3",
     "doublesecretagency/craft-inventory": "^2.0",
     "glue-agency/craft-fingerprint-assets": "^1.0",
