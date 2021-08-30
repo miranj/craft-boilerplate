@@ -58,7 +58,7 @@
   {% set expireInSeconds = 5 %}
   {% header "Cache-Control: max-age=" ~ expireInSeconds %}
   {% header "Pragma: cache" %}
-  {% header "Expires: " ~ now|date_modify("+#{expireInSeconds} seconds")|date('D, d M Y H:i:s', 'GMT') ~ " GMT" %}
+  {% header "Expires: " ~ now|date_modify("+#{expireInSeconds} seconds")|httpdate('GMT') %}
 {% endif %}
 
 
