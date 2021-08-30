@@ -19,7 +19,7 @@
     "gulp-concat": "^2.6.1",
     "gulp-hashsum": "^1.2.0",
     "gulp-json-format": "^2.0.0",
-    "gulp-postcss": "^8.0.0",
+    "gulp-postcss": "^9.0.0",
     "gulp-purgecss": "^2.0.5",
     "gulp-rename": "^1.4.0",
     "gulp-sizereport": "^1.2.1",
