@@ -39,10 +39,12 @@ paths.tasks = {
           paths.directories.build + '**/*.js',
         ],
         defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || [],
-        whitelistPatternsChildren: [
-          /wf-active/,
-          /richtext/,
-        ],
+        safelist: {
+          deep: [
+            /wf-active/,
+            /richtext/,
+          ],
+        },
       },
       watch: [
         paths.directories.build + 'style.css',
