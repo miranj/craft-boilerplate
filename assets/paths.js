@@ -38,7 +38,7 @@ paths.tasks = {
           '../templates/**/*.{twig,html}',
           paths.directories.build + '**/*.js',
         ],
-        defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || [],
+        defaultExtractor: content => content.match(/[\w-/.:]+(?<!:)/g) || [],
         safelist: {
           deep: [
             /wf-active/,
