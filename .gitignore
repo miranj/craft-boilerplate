@@ -26,7 +26,7 @@ syncCraft.sh
 .vscode/
 
 # User data
-web/media/
+web/media
 web/imager/
 
 # Licensed content
