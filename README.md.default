@@ -40,12 +40,24 @@ Production
 Development
 -----------
 
-1.  Run `cd assets`
+1.  Install dev tools:
+    - Node.js http://nodejs.org
+    - Gulp http://gulpjs.com/
 
-2.  Run `npm install`
+2.  Install npm
+    
+        $ cd assets
+        $ nvm use
+        $ npm ci
 
-3.  Run `gulp`
+3.  Run Gulp
+    
+        $ gulp
 
-4.  To migrate content from the production server —
+4. Comment out instances of directives from the 'web/.htaccess' file that force redirection to https (search for 'RewriteCond %{HTTPS} !=on')
+
+5.  To migrate content from the production server —
     - Import the Craft MySQL database
     - Import the content inside `public/media` folder
+
+6.  Disable all `Expires` headers in `web/.htaccess`
