@@ -58,6 +58,6 @@ Development
 
 5.  To migrate content from the production server —
     - Import the Craft MySQL database
-    - Import the content inside `public/media` folder
+    - Import the content inside `web/media` folder
 
 6.  Disable all `Expires` headers in `web/.htaccess`
