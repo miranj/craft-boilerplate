@@ -9,6 +9,7 @@ node_modules/
 config/license.key
 web/cpresources/
 storage/*
+!storage/rebrand/
 
 # Environment specific config
 .env
@@ -19,8 +20,10 @@ web/.htaccess
 *.sublime-project
 *.sublime-workspace
 *.code-workspace
-scripts/
+syncCraft.*.cfg
+syncCraft.sh
 .idea/
+.vscode/
 
 # User data
 web/media
