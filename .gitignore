@@ -3,7 +3,7 @@
 
 # Package Managers
 vendor
-node_modules/
+node_modules
 
 # Craft CMS
 config/license.key
