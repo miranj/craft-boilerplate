@@ -1,3 +1,36 @@
-assets/node_modules
-web/build
-assets/package-lock.json
+# OS Cruft
+.DS_Store
+
+# Package Managers
+vendor/
+node_modules/
+
+# Craft CMS
+config/license.key
+web/cpresources/
+storage/*
+!storage/rebrand/
+
+# Environment specific config
+.env
+/htpasswd
+assets/.env
+web/.htaccess
+.tm_properties
+*.sublime-project
+*.sublime-workspace
+*.code-workspace
+syncCraft.*.cfg
+syncCraft.sh
+.idea/
+.vscode/
+
+# User data
+web/media/
+web/imager/
+
+# Licensed content
+assets/fonts/
+
+# Testing
+templates/test.twig
