@@ -46,9 +46,9 @@ Development
 
 2.  Install npm
     
-        $ cd assets
         $ nvm use
         $ npm ci
+        $ npm run dev
 
 3.  Run Gulp
     

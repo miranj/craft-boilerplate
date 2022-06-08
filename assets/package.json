@@ -4,8 +4,12 @@
   "version": "0.0.1",
   "license": "UNLICENSED",
   "private": true,
-  "main": "gulp.js",
+  "main": "assets/gulp.js",
   "author": "Miranj",
+  "scripts": {
+    "dev": "cd assets && gulp",
+    "build": "cd assets && gulp build"
+  },
   "dependencies": {
     "fontfaceobserver": "^2.1.0",
     "lazysizes": "^5.2.2",
