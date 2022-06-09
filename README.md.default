@@ -47,8 +47,10 @@ Development
 2.  Install npm
     
         $ nvm use
-        $ npm ci
+        $ npm install
         $ cd assets
+
+Note: Use `npm ci` if package-lock.json already exists.
 
 3.  Run Gulp
     
