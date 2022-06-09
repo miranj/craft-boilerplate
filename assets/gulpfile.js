@@ -138,6 +138,20 @@ watch_files.push(['hash', paths.tasks.hash.watch, { ignoreInitial: true }]);
 
 
 
+// Build task
+exports['build'] = gulp.series(
+  gulp.parallel(
+      gulp.series(
+          css_tasks.map(task => exports[task]),
+          js_tasks.map(task => exports[task]),
+      ),
+      purge_tasks.map(task => exports[task]),
+  ),
+  exports.hash
+)
+
+
+
 // Watch task
 function watch() {
   watch_files.forEach(([task_name, task_files, task_config = {}]) => {
