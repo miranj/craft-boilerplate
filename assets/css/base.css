@@ -13,4 +13,4 @@ p { @apply mt-0; }
 
 /* lazysizes auto width calculation */
 picture img[data-sizes="auto"] { @apply block w-full; }
-picture img.w-auto[data-sizes="auto"] { @apply w-auto; }
+picture img.w-auto[data-sizes="auto"] { width:auto; }
