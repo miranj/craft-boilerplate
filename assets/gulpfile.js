@@ -120,7 +120,7 @@ function sizeReport() {
     .map(([_, task]) => paths.directories.build + task.destination)
   ;
   
-  return gulp.src(sources)
+  return gulp.src(sources, { allowEmpty: true })
     .pipe(sizereport({
       gzip: true,
       minifier: (contents, filepath) => {
