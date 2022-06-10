@@ -48,7 +48,7 @@ Development
     
         $ nvm use
         $ npm install
-        $ cd assets
+        $ npm run dev
 
 Note: Use `npm ci` if package-lock.json already exists.
 
