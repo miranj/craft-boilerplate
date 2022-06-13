@@ -26,7 +26,12 @@ paths.tasks = {
       watch: [
         'css/**/*.css',
         'tailwind.config.js',
+        paths.directories.build + '**/*.js',
+        '../templates/**/*.{twig,html}',
       ],
+      watch_config: {
+        ignored: '../templates/_manifest*.json',
+      },
     },
   },
   purge: {
@@ -38,7 +43,7 @@ paths.tasks = {
           '../templates/**/*.{twig,html}',
           paths.directories.build + '**/*.js',
         ],
-        defaultExtractor: content => content.match(/[\w-/.:]+(?<!:)/g) || [],
+        defaultExtractor: content => content.match(/[\w-/.:\[\]]+(?<!:)/g) || [],
         safelist: {
           deep: [
             /wf-active/,
