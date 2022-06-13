@@ -20,10 +20,13 @@ Object.entries(paths.tasks.css).forEach(([task_name, task_config]) => {
       .pipe(rename(task_config.destination))
       .pipe(postcss([
         require('postcss-import'),
-        task_config.tailwind_config ? require('tailwindcss')(task_config.tailwind_config) : false,
         require('postcss-nested'),
         require('postcss-custom-properties'),
         require('postcss-calc')({ preserve: true }),
+      ].filter(plugin => !!plugin)))
+      .pipe(gulp.dest(paths.directories.build))
+      .pipe(postcss([
+        task_config.tailwind_config ? require('tailwindcss')(task_config.tailwind_config) : false,
         require('autoprefixer'),
         require('postcss-inline-svg'),
       ].filter(plugin => !!plugin)))

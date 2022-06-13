@@ -26,7 +26,12 @@ paths.tasks = {
       watch: [
         'css/**/*.css',
         'tailwind.config.js',
+        paths.directories.build + '**/*.js',
+        '../templates/**/*.{twig,html}',
       ],
+      watch_config: {
+        ignored: '../templates/_manifest*.json',
+      },
     },
   },
   purge: {

@@ -10,6 +10,10 @@ let fonts = {
 }
 
 module.exports = {
+  content: [
+    "../templates/**/*.{html,twig}",
+    "./js/**/*.js",
+  ],
   theme: {
     screens: {
       xs: ( 448/16) + 'em',
@@ -36,13 +40,6 @@ module.exports = {
         'prose-wf': fonts['prose-wf'].concat(fonts.prose),
       },
     },
-  },
-  variants: {
-    accessibility: ['responsive', 'focus', 'no-js'],
-    display: ['responsive', 'no-js'],
-    fontSmoothing: ['retina'],
-    margin: ['responsive', 'last'],
-    padding: ['responsive', 'last'],
   },
   plugins: [
     plugin(function({ addVariant, e }) {
