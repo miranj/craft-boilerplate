@@ -52,14 +52,10 @@ Development
 
 Note: Use `npm ci` if package-lock.json already exists.
 
-3.  Run Gulp
-    
-        $ gulp
+3. Comment out instances of directives from the 'web/.htaccess' file that force redirection to https (search for 'RewriteCond %{HTTPS} !=on')
 
-4. Comment out instances of directives from the 'web/.htaccess' file that force redirection to https (search for 'RewriteCond %{HTTPS} !=on')
-
-5.  To migrate content from the production server —
+4.  To migrate content from the production server —
     - Import the Craft MySQL database
     - Import the content inside `web/media` folder
 
-6.  Disable all `Expires` headers in `web/.htaccess`
+5.  Disable all `Expires` headers in `web/.htaccess`
