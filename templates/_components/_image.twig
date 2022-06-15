@@ -38,15 +38,6 @@
 {% set presets = {} %}
 {% if imageAsset %}
 
-  {# Certain assets may have a mobile override defined #}
-  {% set _mobileAsset = imageAsset.mobileMedia.kind('image')|one %}
-  {% if _mobileAsset %}
-    {% set imageBreakpointAssets = {
-      (imageDesktopBreakpoint): imageAsset,
-    }|merge(imageBreakpointAssets) %}
-    {% set imageAsset = _mobileAsset %}
-  {% endif %}
-
   {% set imageDefault = null %}
   {% set imageSizesGuide = false %}
   {% set imageTransforms = [] %}
