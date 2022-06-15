@@ -158,7 +158,7 @@
     
   }:{}) | merge(imageTransforms is defined and imageTransforms|length > 1 ? {
     sizes: imageSizesGuide ?? false,
-    srcset: not imageLazyload ? craft.imager.srcset(imageTransforms),
+    srcset: not imageLazyload ? craft.imager.srcset(imageTransforms) : false,
     'data-sizes': imageLazyload and not (imageSizesGuide ?? true) ? 'auto',
     'data-srcset': imageLazyload ? craft.imager.srcset(imageTransforms),
   }:{})) }}
