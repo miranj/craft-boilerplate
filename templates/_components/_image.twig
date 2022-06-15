@@ -96,12 +96,13 @@
     {% set imageSourcesMedia = (imagePreset.media ?? '(min-width: 0)')|replace(queries) %}
     
     {% if not (imageIsSvg or imageIsAnimatedGif) %}
+      {% set imageTransformSizes = imagePreset.sizes ?? [{ width: _imageAsset.width }] %}
       {% set imageTransformParams = {
         position: _imageAsset.getFocalPoint(),
       } | merge(imagePreset.transform ?? {}) %}
       {% set imageTransforms = craft.imager.transformImage(
         _imageAsset,
-        imagePreset.sizes,
+        imageTransformSizes,
         imageTransformParams
         ) %}
       {% set imageDefault = imageTransforms|last %}
@@ -112,7 +113,7 @@
           imageIsCwebpSupported
             ? _imageAsset
             : craft.imager.transformImage(_imageAsset, { format: 'png' }),
-          imagePreset.sizes,
+          imageTransformSizes,
           imageTransformParams|merge({ format: 'webp' })
           ) %}
         {% set imageSources = imageSources|merge([{
