@@ -37,6 +37,16 @@
 } %}
 {% set presets = {} %}
 {% if imageAsset %}
+
+  {# Certain assets may have a mobile override defined #}
+  {% set _mobileAsset = imageAsset.mobileMedia.kind('image')|one %}
+  {% if _mobileAsset %}
+    {% set imageBreakpointAssets = {
+      (imageDesktopBreakpoint): imageAsset,
+    }|merge(imageBreakpointAssets) %}
+    {% set imageAsset = _mobileAsset %}
+  {% endif %}
+
   {% set imageDefault = null %}
   {% set imageSizesGuide = false %}
   {% set imageTransforms = [] %}
@@ -46,64 +56,87 @@
   {% set imageIsSvg = imageAsset.mimeType in ['image/svg+xml'] or imageAsset.extension in ['svg'] %}
   {% set imageIsAnimatedGif = imageAsset.extension in ['gif'] and craft.imager.isAnimated(imageAsset) %}
   {% set imageScaleFactor = imageIsSvg ? 100 : 1 %}
+
+  {# Assign an empty preset, and a single breakpoint if one isn't defined #}
+  {% set preset = presets[imagePreset] ?? {} %}
+  {% set breakpoints = preset.breakpoints ?? [preset] %}
+  {% if devMode
+    and imageAsset.mimeType not in ['image/svg+xml']
+    and (imagePreset is empty or preset is empty)
+  %}
+    <span class="block bg-theme-red text-white all-caps">
+      Warning: No Image Preset
+    </span>
+  {% endif %}
+  
+  
+  {# Ensure all breakpoints which have asset overrides are present in the breakpoints array #}
+  {% if imageBreakpointAssets is not empty %}
+    {% for mediaQuery, mediaAsset in imageBreakpointAssets %}
+      {% if not breakpoints|contains('media', mediaQuery) %}
+        {% set breakpoints = [preset|merge({ media: mediaQuery })]|merge(breakpoints) %}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+
   {% set imageGenerateWebp = imageGenerateWebp and not craft.imager.isAnimated(imageAsset) %}
   {% set imageIsCwebpSupported = imageAsset.mimeType in ['image/jpeg', 'image/png', 'image/tiff']
     or imageAsset.extension in ['jpg', 'jpeg', 'jfif', 'pjpeg', 'pjp', 'png', 'tif', 'tiff'] %}
   
-  {% if presets[imagePreset] is defined %}
-    {% set breakpoints = presets[imagePreset]['breakpoints'] is defined ? presets[imagePreset].breakpoints : [presets[imagePreset]] %}
-    {% for imagePreset in breakpoints %}
-      {% set _imageAsset = imageBreakpointAssets and imagePreset.media is defined ? imageBreakpointAssets[imagePreset.media] : imageAsset %}
-      {% set imageIsSvg = _imageAsset.mimeType in ['image/svg+xml'] or _imageAsset.extension in ['svg'] %}
-      {% set imageIsAnimatedGif = _imageAsset.extension in ['gif'] and craft.imager.isAnimated(_imageAsset) %}
-      {% set imageScaleFactor = imageIsSvg ? 100 : 1 %}
-      {% set imageSizesGuide = (imagePreset.guide ?? '')|replace(queries) ?: false %}
-      {% set imageSourcesMedia = (imagePreset.media ?? '(min-width: 0)')|replace(queries) %}
+  {% for imagePreset in breakpoints %}
+  {% set _imageAsset = imageBreakpointAssets
+    and imagePreset.media is defined
+    and imageBreakpointAssets[imagePreset.media] is defined
+    ? imageBreakpointAssets[imagePreset.media]
+    : imageAsset %}
+    {% set imageIsSvg = _imageAsset.mimeType in ['image/svg+xml'] or _imageAsset.extension in ['svg'] %}
+    {% set imageIsAnimatedGif = _imageAsset.extension in ['gif'] and craft.imager.isAnimated(_imageAsset) %}
+    {% set imageScaleFactor = imageIsSvg ? 100 : 1 %}
+    {% set imageSizesGuide = (imagePreset.guide ?? '')|replace(queries) ?: false %}
+    {% set imageSourcesMedia = (imagePreset.media ?? '(min-width: 0)')|replace(queries) %}
+    
+    {% if not (imageIsSvg or imageIsAnimatedGif) %}
+      {% set imageTransformParams = {
+        position: _imageAsset.getFocalPoint(),
+      } | merge(imagePreset.transform ?? {}) %}
+      {% set imageTransforms = craft.imager.transformImage(
+        _imageAsset,
+        imagePreset.sizes,
+        imageTransformParams
+        ) %}
+      {% set imageDefault = imageTransforms|last %}
       
-      {% if not (imageIsSvg or imageIsAnimatedGif) %}
-        {% set imageTransformParams = {
-          position: _imageAsset.getFocalPoint(),
-        } | merge(imagePreset.transform ?? {}) %}
-        {% set imageTransforms = craft.imager.transformImage(
-          _imageAsset,
+      {# Generate WebP versions and put them before regular ones #}
+      {% if imageGenerateWebp %}
+        {% set imageTransformsWebP = craft.imager.transformImage(
+          imageIsCwebpSupported
+            ? _imageAsset
+            : craft.imager.transformImage(_imageAsset, { format: 'png' }),
           imagePreset.sizes,
-          imageTransformParams
+          imageTransformParams|merge({ format: 'webp' })
           ) %}
-        {% set imageDefault = imageTransforms|last %}
-        
-        {# Generate WebP versions and put them before regular ones #}
-        {% if imageGenerateWebp %}
-          {% set imageTransformsWebP = craft.imager.transformImage(
-            imageIsCwebpSupported
-              ? _imageAsset
-              : craft.imager.transformImage(_imageAsset, { format: 'png' }),
-            imagePreset.sizes,
-            imageTransformParams|merge({ format: 'webp' })
-            ) %}
-          {% set imageSources = imageSources|merge([{
-            type: 'image/webp',
-            media: imageSourcesMedia,
-            transforms: imageTransformsWebP,
-          }]) %}
-        {% endif %}
-      {% else %}
-        {% set imageTransforms = [_imageAsset] %}
-        {% set imageDefault = _imageAsset %}
-      {% endif %}
-      
-      {% if imagePreset.media is defined %}
         {% set imageSources = imageSources|merge([{
+          type: 'image/webp',
           media: imageSourcesMedia,
-          transforms: imageTransforms,
+          transforms: imageTransformsWebP,
         }]) %}
       {% endif %}
-    {% endfor %}
-  {% else %}
-    {% set imageDefault = imageAsset %}
-  {% endif %}
-  {% set imageIsResponsive = imageSources|length - (craft.imager.serverSupportsWebp ? 1 : 0) > 0 %}
-  {# {% set imageColour = not imageIsSvg and imageDefault ? craft.imager.getDominantColor(imageDefault, 1000) : imageColour %} #}
+    {% else %}
+      {% set imageTransforms = [_imageAsset] %}
+      {% set imageDefault = _imageAsset %}
+    {% endif %}
+    
+    {% if imagePreset.media is defined %}
+      {% set imageSources = imageSources|merge([{
+        media: imageSourcesMedia,
+        transforms: imageTransforms,
+      }]) %}
+    {% endif %}
+  {% endfor %}
+{% else %}
+  {% set imageDefault = imageAsset %}
 {% endif %}
+{% set imageIsResponsive = imageSources|length - (craft.imager.serverSupportsWebp ? 1 : 0) > 0 %}
 
 
 
