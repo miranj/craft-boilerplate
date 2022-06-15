@@ -44,6 +44,7 @@
   {% set imageColour = 'transparent' %}
   {% set imageAlt = imageAlt ?: imageAsset.title %}
   {% set imageIsSvg = imageAsset.mimeType in ['image/svg+xml'] or imageAsset.extension in ['svg'] %}
+  {% set imageIsAnimatedGif = imageAsset.extension in ['gif'] and craft.imager.isAnimated(imageAsset) %}
   {% set imageScaleFactor = imageIsSvg ? 100 : 1 %}
   {% set imageGenerateWebp = imageGenerateWebp and not craft.imager.isAnimated(imageAsset) %}
   {% set imageIsCwebpSupported = imageAsset.mimeType in ['image/jpeg', 'image/png', 'image/tiff']
@@ -54,11 +55,12 @@
     {% for imagePreset in breakpoints %}
       {% set _imageAsset = imageBreakpointAssets and imagePreset.media is defined ? imageBreakpointAssets[imagePreset.media] : imageAsset %}
       {% set imageIsSvg = _imageAsset.mimeType in ['image/svg+xml'] or _imageAsset.extension in ['svg'] %}
+      {% set imageIsAnimatedGif = _imageAsset.extension in ['gif'] and craft.imager.isAnimated(_imageAsset) %}
       {% set imageScaleFactor = imageIsSvg ? 100 : 1 %}
       {% set imageSizesGuide = (imagePreset.guide ?? '')|replace(queries) ?: false %}
       {% set imageSourcesMedia = (imagePreset.media ?? '(min-width: 0)')|replace(queries) %}
       
-      {% if not imageIsSvg %}
+      {% if not (imageIsSvg or imageIsAnimatedGif) %}
         {% set imageTransformParams = {
           position: _imageAsset.getFocalPoint(),
         } | merge(imagePreset.transform ?? {}) %}
