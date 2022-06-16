@@ -66,7 +66,7 @@
 
   {# Assign an empty preset, and a single breakpoint if one isn't defined #}
   {% set preset = presets[imagePreset] ?? {} %}
-  {% set breakpoints = preset.breakpoints ?? [preset] %}
+  {% set breakpoints = sortBreakpointPresets(preset.breakpoints ?? [preset], queries|keys) %}
   {% if devMode
     and imageAsset.mimeType not in ['image/svg+xml']
     and (imagePreset is empty or preset is empty)
@@ -76,11 +76,27 @@
     </span>
   {% endif %}
   
-  {# Ensure all breakpoints which have asset overrides are present in the breakpoints array #}
+  {#
+    Ensure all breakpoint asset overrides are present in the breakpoint presets
+    and that all breakpoint presets use the correct asset for their transforms
+  #}
   {% if imageBreakpointAssets is not empty %}
-    {% for mediaQuery, mediaAsset in imageBreakpointAssets %}
-      {% if not breakpoints|contains('media', mediaQuery) %}
-        {% set breakpoints = [preset|merge({ media: mediaQuery })]|merge(breakpoints) %}
+    {# Build list of used queries in order (relying on $queries to be min -> max) #}
+    {% set _usedQueries = queries|keys
+      |intersect(imageBreakpointAssets|keys
+        |merge(breakpoints|column('media'))
+        |filter
+      )
+    %}
+    {% set _currentAsset = imageAsset %}
+    {% set _currentPreset = breakpoints|last %}
+    {% for mediaQuery in _usedQueries %}
+      {% set _currentAsset = imageBreakpointAssets[mediaQuery] ?? _currentAsset %}
+      {% set _currentPreset = breakpoints|where(p => p.media ?? '' == mediaQuery)|first ?: _currentPreset %}
+      {% if imageBreakpointAssets[mediaQuery] is not defined %}
+        {% set imageBreakpointAssets = imageBreakpointAssets|merge({ (mediaQuery): _currentAsset }) %}
+      {% else %}{# this breakpoint doesn't have a preset, add one #}
+        {% set breakpoints = breakpoints|merge([_currentPreset|merge({ media: mediaQuery })]) %}
       {% endif %}
     {% endfor %}
   {% endif %}
