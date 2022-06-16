@@ -27,7 +27,7 @@
 
 
 
-{# Variables #}
+{# Config #}
 {% set queries = {
   '--xs-plus':  '(min-width:' ~  448 ~ 'px)',
   '--sm-plus':  '(min-width:' ~  900 ~ 'px)',
@@ -36,6 +36,10 @@
   '--retina':   '(min-resolution: 192dpi)',
 } %}
 {% set presets = {} %}
+
+
+
+{# Biz logic #}
 {% if imageAsset %}
   {% set imageDefault = null %}
   {% set imageSizesGuide = false %}
