@@ -39,6 +39,19 @@
 
 
 
+{# Helpers #}
+{% macro sortBreakpointPresets(presets, mediaQueryOrder) %}
+  {% return presets
+    |multisort(
+      preset => mediaQueryOrder|indexOf(preset.media ?? ''),
+      direction=SORT_DESC
+    )
+  %}
+{% endmacro %}
+{% from _self import sortBreakpointPresets %}
+
+
+
 {# Biz logic #}
 {% if imageAsset %}
   {% set imageDefault = null %}
@@ -76,7 +89,7 @@
   {% set imageIsCwebpSupported = imageAsset.mimeType in ['image/jpeg', 'image/png', 'image/tiff']
     or imageAsset.extension in ['jpg', 'jpeg', 'jfif', 'pjpeg', 'pjp', 'png', 'tif', 'tiff'] %}
   
-  {% for imagePreset in breakpoints %}
+  {% for imagePreset in sortBreakpointPresets(breakpoints, queries|keys) %}
     {% set _imageAsset = imageBreakpointAssets
       and imagePreset.media is defined
       and imageBreakpointAssets[imagePreset.media] is defined
