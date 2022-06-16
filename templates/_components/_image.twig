@@ -59,7 +59,6 @@
     </span>
   {% endif %}
   
-  
   {# Ensure all breakpoints which have asset overrides are present in the breakpoints array #}
   {% if imageBreakpointAssets is not empty %}
     {% for mediaQuery, mediaAsset in imageBreakpointAssets %}
@@ -74,11 +73,11 @@
     or imageAsset.extension in ['jpg', 'jpeg', 'jfif', 'pjpeg', 'pjp', 'png', 'tif', 'tiff'] %}
   
   {% for imagePreset in breakpoints %}
-  {% set _imageAsset = imageBreakpointAssets
-    and imagePreset.media is defined
-    and imageBreakpointAssets[imagePreset.media] is defined
-    ? imageBreakpointAssets[imagePreset.media]
-    : imageAsset %}
+    {% set _imageAsset = imageBreakpointAssets
+      and imagePreset.media is defined
+      and imageBreakpointAssets[imagePreset.media] is defined
+      ? imageBreakpointAssets[imagePreset.media]
+      : imageAsset %}
     {% set imageIsSvg = _imageAsset.mimeType in ['image/svg+xml'] or _imageAsset.extension in ['svg'] %}
     {% set imageIsAnimatedGif = _imageAsset.extension in ['gif'] and craft.imager.isAnimated(_imageAsset) %}
     {% set imageScaleFactor = imageIsSvg ? 100 : 1 %}
@@ -105,7 +104,7 @@
             : craft.imager.transformImage(_imageAsset, { format: 'png' }),
           imageTransformSizes,
           imageTransformParams|merge({ format: 'webp' })
-          ) %}
+        ) %}
         {% set imageSources = imageSources|merge([{
           type: 'image/webp',
           media: imageSourcesMedia,
