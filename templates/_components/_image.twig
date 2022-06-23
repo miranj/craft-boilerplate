@@ -5,7 +5,7 @@
   
   Generate, transform, manipulate, optimize and render images. 
 
-	What it can do:
+	What it does:
 	---------------
 	1. Auto-generates transforms and responsive images via `sizes` and `srcset` attributes 
 	2. Auto-crops images if needed/specified
@@ -22,12 +22,12 @@
 
 	Configuration parameters:
 	@param   asset                {AssetFileModel}          [Required] Image asset to be rendered
-	@param   breakpoint_assets    {array|AssetFileModel}    Array of image assets to be rendered for different breakpoints
+	@param   breakpoint_assets    {array|AssetFileModel}    Image assets to be rendered for different breakpoints
 	@param   preset               {string}                  Pre-defined image transformation configuration name
 	@param   class                {string}                  Class attribute for the <img> tag
 	@param   alt                  {string}                  Alt attribute for the <img> tag
-	@param   lazyload             {bool}                    Whether to lazyload images (default: true)
 	@param   background           {string}                  Class name for background image
+  @param   lazyload             {bool}                    Whether to lazyload images (default: true)
 	@param   webp                 {bool}                    Whether to generate WebP versions (default: true)
 
 	Example of simple usage:
@@ -63,9 +63,9 @@
 	Preset options:
 	---------------
 	@option   media          {string}      Any valid media query
-	@option   breakpoints    {array}       Array of transform values for different view breakpoints
-	@option   sizes          {array}       Array of size based transform values
-	@option   transform      {array}       Array of aspect and position related transform values
+	@option   breakpoints    {array}       Transform values for different view breakpoints
+	@option   sizes          {array}       Transform values for size that will render as the `sizes` attribute in the `<img>` tag
+	@option   transform      {array}       Aspect and position related transform values
 	@option   guide          {string}      Any valid media query with size
 	
 	Preset examples:
