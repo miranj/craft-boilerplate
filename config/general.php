@@ -50,7 +50,7 @@ return [
         'pageTrigger' => 'page/',
         
         // content
-        'maxRevisions' => 10,
+        'maxRevisions' => 50,
         'maxUploadFileSize' => '100M',
         
         'aliases' => [
