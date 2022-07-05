@@ -5,89 +5,89 @@
   
   Generate, transform, manipulate, optimize and render images. 
 
-	What it does:
-	---------------
-	1. Auto-generates transforms and responsive images via `sizes` and `srcset` attributes 
-	2. Auto-crops images if needed/specified
-	3. Auto-generates art-directed responsive images using the `<picture>` and `<source>` tags
-	4. Auto-generates WebP versions (if supported)
-	5. Lazyload images using lazysizes
-	6. Allows images to be specified as CSS class background images
-	7. Allows use of different source images for different breakpoints
-	8. And finally, renders the image
+  What it does
+  ------------
+  1. Auto-generates transforms and responsive images via `sizes` and `srcset` attributes 
+  2. Auto-crops images if needed/specified
+  3. Auto-generates art-directed responsive images using the `<picture>` and `<source>` tags
+  4. Auto-generates WebP versions (if supported)
+  5. Lazyload images using lazysizes
+  6. Allows images to be specified as CSS class background images
+  7. Allows use of different source images for different breakpoints
+  8. And finally, renders the image
 
-	How to use:
-  -----------
-	Include the `_image` component with the following parameters where you want to display the image.
+  How to use
+  ----------
+  Include the `_image` component with the following parameters where you want to display the image.
 
-	Configuration parameters:
-	@param   asset                {AssetFileModel}          [Required] Image asset to be rendered
-	@param   breakpoint_assets    {array|AssetFileModel}    Image assets to be rendered for different breakpoints
-	@param   preset               {string}                  Pre-defined image transformation configuration name
-	@param   class                {string}                  Class attribute for the <img> tag
-	@param   alt                  {string}                  Alt attribute for the <img> tag
-	@param   background           {string}                  Class name for background image
+  Configuration parameters:
+  @param   asset                {AssetFileModel}          [Required] Image asset to be rendered
+  @param   breakpoint_assets    {array|AssetFileModel}    Image assets to be rendered for different breakpoints
+  @param   preset               {string}                  Pre-defined image transformation configuration name
+  @param   class                {string}                  Class attribute for the <img> tag
+  @param   alt                  {string}                  Alt attribute for the <img> tag
+  @param   background           {string}                  Class name for background image
   @param   lazyload             {bool}                    Whether to lazyload images (default: true)
-	@param   webp                 {bool}                    Whether to generate WebP versions (default: true)
+  @param   webp                 {bool}                    Whether to generate WebP versions (default: true)
 
-	Example of simple usage:
-  --------------
-	```
+  Example of simple usage
+  -----------------------
+  ```
   <figure>
     {% include '_components/_image' with { params: {
       asset: image,
       class: 'profile-pic',
       preset: 'avatar',
     } } %}
-	</figure>
+  </figure>
   ```
 
-	Example of usage with breakpoint asset:
-	------------------------------------
-	```
-	<figure>
-	{% include '_components/_image' with { params: {
+  Example of usage with breakpoint asset
+  --------------------------------------
+  ```
+  <figure>
+  {% include '_components/_image' with { params: {
     asset: image,
     breakpoint_assets: {
-     '--lg-plus': imageLarge,
-		 '--md-plus': imageMedium,
-		 '--sm-plus': imageSmall,
-	  },
+      '--lg-plus': imageLarge,
+      '--md-plus': imageMedium,
+      '--sm-plus': imageSmall,
+    },
   } } %}
-	</figure>
-	```
-	
-	Set `presets`(a set of image transformation configurations) variable values in `_image` component.
-	Define the desired preset values in the image component as shown in the examples below.
+  </figure>
+  ```
 
-	Preset options:
-	---------------
-	@option   media          {string}      Any valid media query
-	@option   breakpoints    {array}       Transform values for different view breakpoints
-	@option   sizes          {array}       Transform values for size that will render as the `sizes` attribute in the `<img>` tag
-	@option   transform      {array}       Aspect and position related transform values
-	@option   guide          {string}      Any valid media query with size
-	
-	Preset examples:
-	---------------
+  Set `presets`(a set of image transformation configurations) variable values in `_image` component.
+  Define the desired preset values in the image component as shown in the examples below.
 
-	1) Simple size-based transforms (can be width, or height — everything that the Imager plugin supports)
-		```
-		{% set presets = {
-			  avatar: {
-			    sizes: [
-			      { width: 20 },
-			      { width: 30 },
-			      { width: 40 },
-				   ],
-				 },	
-	  } %}
-		```
+  Preset options
+  --------------
+  @option   media          {string}      Any valid media query
+  @option   breakpoints    {array}       Transform values for different view breakpoints
+  @option   sizes          {array}       Transform values for size that will render as the `sizes` attribute in the `<img>` tag
+  @option   transform      {array}       Aspect and position related transform values
+  @option   guide          {string}      Any valid media query with size
 
-		HTML Output:
-		`<img src=”small.jpg” srcset=”small.jpg 20w, medium.jpg 30w, large.jpg 40w”>`
-	
-	2) Size based transform with option to crop images
+  Preset examples
+  ---------------
+
+  1) Simple size-based transforms (can be width, or height — everything that the Imager plugin supports)
+    ```
+    {% set presets = {
+        avatar: {
+          sizes: [
+            { width: 20 },
+            { width: 30 },
+            { width: 40 },
+            ],
+          },	
+    } %}
+    ```
+
+  HTML Output:
+  `<img src=”small.jpg” srcset=”small.jpg 20w, medium.jpg 30w, large.jpg 40w”>`
+
+  2) Size based transform with option to crop images
     ```
     {% set presets = {
       blog: {
@@ -100,10 +100,10 @@
     } %}
     ```
 
-		HTML Output:
-		`<img src=”small.jpg” srcset=”small.jpg 400w, large.jpg 800w”>`
+  HTML Output:
+  `<img src=”small.jpg” srcset=”small.jpg 400w, large.jpg 800w”>`
 
-	3) Size based transform with different sizes based on render area sizes 
+  3) Size based transform with different sizes based on render area sizes 
     ```
     {% set presets = {
       logo: {
@@ -116,10 +116,10 @@
     } %}
     ```
 
-		HTML Output:
-		`<img src=”small.png” sizes=”(min-width:1188px) 5rem, (min-width:700px) 4rem, 3.55rem” srcset=”small.png 150w, medium.png 300w”>`
+  HTML Output:
+  `<img src=”small.png” sizes=”(min-width:1188px) 5rem, (min-width:700px) 4rem, 3.55rem” srcset=”small.png 150w, medium.png 300w”>`
 
-	4) Art-directed images
+  4) Art-directed images
     ```
     {% set queries = {
       '--xs-plus':  '(min-width:' ~  448 ~ 'px)',
@@ -148,9 +148,9 @@
       ]}
     } %}
     ```
-		
-		HTML Output:
-		`<img src=”small.png” sizes=”734px” srcset=”small.png 400w, medium.png 600w, large.png 900w”>`
+  
+  HTML Output:
+  `<img src=”small.png” sizes=”734px” srcset=”small.png 400w, medium.png 600w, large.png 900w”>`
 #}
 
 
