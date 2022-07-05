@@ -64,9 +64,9 @@
   --------------
   @option   media          {string}      Any valid media query
   @option   breakpoints    {array}       Transform values for different view breakpoints
-  @option   sizes          {array}       Transform values for size that will render as the `sizes` attribute in the `<img>` tag
+  @option   sizes          {array}       Image size values for different images to render in `srcset` attribute of the `<img>` tag
   @option   transform      {array}       Aspect and position related transform values
-  @option   guide          {string}      Any valid media query with size
+  @option   guide          {string}      Any valid media query that will render `sizes` attribute in the `<img>` tag
 
   Preset examples
   ---------------
@@ -85,7 +85,7 @@
     ```
 
   HTML Output:
-  `<img src=”small.jpg” srcset=”small.jpg 20w, medium.jpg 30w, large.jpg 40w”>`
+  `<img src=”large.jpg” width=”40” height=”37” srcset=”small.jpg 20w, medium.jpg 30w, large.jpg 40w”>`
 
   2) Size based transform with option to crop images
     ```
@@ -101,7 +101,7 @@
     ```
 
   HTML Output:
-  `<img src=”small.jpg” srcset=”small.jpg 400w, large.jpg 800w”>`
+  `<img src=”large.jpg” width=”800” height=”471” srcset=”small.jpg 400w, large.jpg 800w”>`
 
   3) Size based transform with different sizes based on render area sizes 
     ```
@@ -111,13 +111,13 @@
           { width: 150 },
           { width: 300 },
         ],
-        guide: '--md-plus 5rem, --lg-plus 8rem, 3.55rem',
+        guide: '(min-width:1023px) 5rem, (min-width:1920px) 8rem, 3.55rem',
       },
     } %}
     ```
 
   HTML Output:
-  `<img src=”small.png” sizes=”(min-width:1188px) 5rem, (min-width:700px) 4rem, 3.55rem” srcset=”small.png 150w, medium.png 300w”>`
+  `<img src=”medium.png” width=”300” height=”275” sizes=”(min-width:1023px) 5rem, (min-width:1920px) 8rem, 3.55rem” srcset=”small.png 150w, medium.png 300w”>`
 
   4) Art-directed images
     ```
@@ -150,7 +150,8 @@
     ```
   
   HTML Output:
-  `<img src=”small.png” sizes=”734px” srcset=”small.png 400w, medium.png 600w, large.png 900w”>`
+  `<source width=”800” height=”889” media=”(min-width:1200px)” sizes=”576px” srcset=”small.png 500w, medium.png 600w, large.png 700w, x-large.png 800w”>`
+  `<img src=”large.png” width height sizes=”576px” srcset=”small.png 400w, medium.png 600w, large.png 900w”>`
 #}
 
 
