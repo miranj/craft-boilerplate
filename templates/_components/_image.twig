@@ -62,11 +62,71 @@
 
   Preset options
   --------------
-  @option   media          {string}      Any valid media query
-  @option   breakpoints    {array}       Transform values for different view breakpoints
+  @option   media          {string}      Any valid media query that will be used in `media` attribute in the `<img>` tag
+  @option   breakpoints    {array}       Transform values for different view breakpoints that will generate `source` tags
   @option   sizes          {array}       Image size values for different images to render in `srcset` attribute of the `<img>` tag
   @option   transform      {array}       Aspect and position related transform values
-  @option   guide          {string}      Any valid media query that will render `sizes` attribute in the `<img>` tag
+  @option   guide          {string}      Any valid media query that will be used in `sizes` attribute in the `<img>` tag
+
+  Set `queries` variable to an array of valid media queries. It will be used to define different display device sizes. 
+
+  Queries examples
+  ---------------
+
+  1) Query used for `<img>` tag `media` attribute
+    ```
+    {% set queries = {
+      '--xs-plus':  '(min-width:' ~  448 ~ 'px)',
+      '--sm-plus':  '(min-width:' ~  900 ~ 'px)',
+      '--md-plus':  '(min-width:' ~ 1200 ~ 'px)',
+    } %}
+    {% set presets = {
+      blog: {
+        breakpoints: [{
+          media: '--md-plus',
+          sizes: [
+            { width: 500 },
+            { width: 600 },
+            { width: 700 },
+            { width: 800 },
+          ],
+          transform: { mode: 'crop', ratio: 0.9 },
+        },{
+          sizes: [
+            { width: 400 },
+            { width: 600 },
+            { width: 900 },
+          ],
+          transform: { mode: 'crop', ratio: 1.1 },
+        },
+      ]}
+    } %}
+    ```
+  
+  HTML Output:
+  `<source width=”800” height=”889” media=”(min-width:1200px)” sizes=”576px” srcset=”small.png 500w, medium.png 600w, large.png 700w, x-large.png 800w”>`
+  `<img src=”large.png” width height sizes=”576px” srcset=”small.png 400w, medium.png 600w, large.png 900w”>`
+
+  2) Query used for `<img>` tag `sizes` attribute
+    ```
+    {% set queries = {
+    '--xs-plus':  '(min-width:' ~ 700 ~ 'px)',
+    '--sm-plus':  '(min-width:' ~ 900 ~ 'px)',
+    '--md-plus':  '(min-width:' ~ 1188 ~ 'px)',
+    } %}
+    {% set presets = {
+      logo: {
+        sizes: [
+          { width: 150 },
+          { width: 300 },
+        ],
+        guide: '--md-plus 5rem, --xs-plus 4rem, 3.55rem',
+      },
+    } %}
+    ```
+  
+  HTML Output:
+  `<img src=”medium.png” width=”300” height=”349” sizes=”(min-width:1188px) 5rem, (min-width:700px) 4rem, 3.55rem” srcset=”small.png 150w, medium.png 300w”>`
 
   Preset examples
   ---------------
