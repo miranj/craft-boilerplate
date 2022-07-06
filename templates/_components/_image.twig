@@ -81,9 +81,9 @@
   1)  Query used for `<img>` tag `media` attribute
       ```
       {% set queries = {
-        '--xs-plus':  '(min-width:' ~  448 ~ 'px)',
-        '--sm-plus':  '(min-width:' ~  900 ~ 'px)',
-        '--md-plus':  '(min-width:' ~ 1200 ~ 'px)',
+        '--xs-plus': '(min-width: 448px)',
+        '--sm-plus': '(min-width: 900px)',
+        '--md-plus': '(min-width: 1200px)',
       } %}
       {% set presets = {
         blog: {
@@ -114,7 +114,7 @@
         <source
           width="800"
           height="889"
-          media="(min-width:1200px)"
+          media="(min-width: 1200px)"
           sizes="576px"
           srcset="small.png 500w, medium.png 600w, large.png 700w, x-large.png 800w">
         <img
@@ -129,9 +129,9 @@
   2)  Query used for `<img>` tag `sizes` attribute
       ```
       {% set queries = {
-      '--xs-plus':  '(min-width:' ~ 700 ~ 'px)',
-      '--sm-plus':  '(min-width:' ~ 900 ~ 'px)',
-      '--md-plus':  '(min-width:' ~ 1188 ~ 'px)',
+        '--xs-plus': '(min-width: 700px)',
+        '--sm-plus': '(min-width: 900px)',
+        '--md-plus': '(min-width: 1188px)',
       } %}
       {% set presets = {
         logo: {
@@ -149,7 +149,7 @@
         src="medium.png"
         width="300"
         height="349"
-        sizes="(min-width:1188px) 5rem, (min-width:700px) 4rem, 3.55rem"
+        sizes="(min-width: 1188px) 5rem, (min-width: 700px) 4rem, 3.55rem"
         srcset="small.png 150w, medium.png 300w">`
 
   Preset examples
@@ -204,7 +204,7 @@
             { width: 150 },
             { width: 300 },
           ],
-          guide: '(min-width:1023px) 5rem, (min-width:1920px) 8rem, 3.55rem',
+          guide: '(min-width: 1023px) 5rem, (min-width: 1920px) 8rem, 3.55rem',
         },
       } %}
       ```
@@ -214,16 +214,16 @@
          src="medium.png"
          width="300"
          height="275"
-         sizes="(min-width:1023px) 5rem, (min-width:1920px) 8rem, 3.55rem"
+         sizes="(min-width: 1023px) 5rem, (min-width: 1920px) 8rem, 3.55rem"
          srcset="small.png 150w, medium.png 300w">`
 
   4)  Art-directed images
       ```
       {% set queries = {
-        '--xs-plus':  '(min-width:' ~  448 ~ 'px)',
-        '--sm-plus':  '(min-width:' ~  900 ~ 'px)',
-        '--md-plus':  '(min-width:' ~ 1200 ~ 'px)',
-        } %}
+        '--xs-plus': '(min-width: 448px)',
+        '--sm-plus': '(min-width: 900px)',
+        '--md-plus': '(min-width: 1200px)',
+      } %}
       {% set presets = {
         blog: {
           breakpoints: [{
@@ -253,7 +253,7 @@
         <source
           width="800"
           height="889"
-          media="(min-width:1200px)"
+          media="(min-width: 1200px)"
           sizes="576px"
           srcset="small.png 500w, medium.png 600w, large.png 700w, x-large.png 800w">
         <img
@@ -281,11 +281,11 @@
 
 {# Config #}
 {% set queries = {
-  '--xs-plus':  '(min-width:' ~  448 ~ 'px)',
-  '--sm-plus':  '(min-width:' ~  900 ~ 'px)',
-  '--md-plus':  '(min-width:' ~ 1188 ~ 'px)',
-  '--lg-plus':  '(min-width:' ~ 1920 ~ 'px)',
-  '--retina':   '(min-resolution: 192dpi)',
+  '--xs-plus': '(min-width: 448px)',
+  '--sm-plus': '(min-width: 900px)',
+  '--md-plus': '(min-width: 1188px)',
+  '--lg-plus': '(min-width: 1920px)',
+  '--retina':  '(min-resolution: 192dpi)',
 } %}
 {% set presets = {} %}
 
