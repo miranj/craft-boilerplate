@@ -2,14 +2,16 @@
 
 {#
   Image
-  
-  Generate, transform, manipulate, optimize and render images. 
+
+  Generate, transform, manipulate, optimize and render images.
 
   What it does
   ------------
-  1. Auto-generates transforms and responsive images via `sizes` and `srcset` attributes 
+  1. Auto-generates transforms and responsive images via `sizes` and
+     `srcset` attributes 
   2. Auto-crops images if needed/specified
-  3. Auto-generates art-directed responsive images using the `<picture>` and `<source>` tags
+  3. Auto-generates art-directed responsive images using the `<picture>`
+     and `<source>` tags
   4. Auto-generates WebP versions (if supported)
   5. Lazyload images using lazysizes
   6. Allows images to be specified as CSS class background images
@@ -18,7 +20,8 @@
 
   How to use
   ----------
-  Include the `_image` component with the following parameters where you want to display the image.
+  Include the `_image` component with the following parameters where you
+  want to display the image.
 
   Configuration parameters:
   @param   asset                {AssetFileModel}          [Required] Image asset to be rendered
@@ -57,8 +60,9 @@
   </figure>
   ```
 
-  Set `presets`(a set of image transformation configurations) variable values in `_image` component.
-  Define the desired preset values in the image component as shown in the examples below.
+  Set `presets`(a set of image transformation configurations) variable
+  values in `_image` component. Define the desired preset values in the
+  image component as shown in the examples below.
 
   Preset options
   --------------
@@ -68,150 +72,196 @@
   @option   transform      {array}       Aspect and position related transform values
   @option   guide          {string}      Any valid media query that will be used in `sizes` attribute in the `<img>` tag
 
-  Set `queries` variable to an array of valid media queries. It will be used to define different display device sizes. 
+  Set `queries` variable to an array of valid media queries. It will be
+  used to define different display device sizes. 
 
   Queries examples
   ---------------
 
-  1) Query used for `<img>` tag `media` attribute
-    ```
-    {% set queries = {
-      '--xs-plus':  '(min-width:' ~  448 ~ 'px)',
-      '--sm-plus':  '(min-width:' ~  900 ~ 'px)',
-      '--md-plus':  '(min-width:' ~ 1200 ~ 'px)',
-    } %}
-    {% set presets = {
-      blog: {
-        breakpoints: [{
-          media: '--md-plus',
-          sizes: [
-            { width: 500 },
-            { width: 600 },
-            { width: 700 },
-            { width: 800 },
-          ],
-          transform: { mode: 'crop', ratio: 0.9 },
-        },{
-          sizes: [
-            { width: 400 },
-            { width: 600 },
-            { width: 900 },
-          ],
-          transform: { mode: 'crop', ratio: 1.1 },
-        },
-      ]}
-    } %}
-    ```
-  
-  HTML Output:
-  `<source width=”800” height=”889” media=”(min-width:1200px)” sizes=”576px” srcset=”small.png 500w, medium.png 600w, large.png 700w, x-large.png 800w”>`
-  `<img src=”large.png” width height sizes=”576px” srcset=”small.png 400w, medium.png 600w, large.png 900w”>`
+  1)  Query used for `<img>` tag `media` attribute
+      ```
+      {% set queries = {
+        '--xs-plus':  '(min-width:' ~  448 ~ 'px)',
+        '--sm-plus':  '(min-width:' ~  900 ~ 'px)',
+        '--md-plus':  '(min-width:' ~ 1200 ~ 'px)',
+      } %}
+      {% set presets = {
+        blog: {
+          breakpoints: [{
+            media: '--md-plus',
+            sizes: [
+              { width: 500 },
+              { width: 600 },
+              { width: 700 },
+              { width: 800 },
+            ],
+            transform: { mode: 'crop', ratio: 0.9 },
+          },{
+            sizes: [
+              { width: 400 },
+              { width: 600 },
+              { width: 900 },
+            ],
+            transform: { mode: 'crop', ratio: 1.1 },
+          },
+        ]}
+      } %}
+      ```
+      
+      HTML Output:
+      ```
+      <picture>
+        <source
+          width=”800”
+          height=”889”
+          media=”(min-width:1200px)”
+          sizes=”576px”
+          srcset=”small.png 500w, medium.png 600w, large.png 700w, x-large.png 800w”>
+        <img
+          src=”large.png”
+          width
+          height
+          sizes=”576px”
+          srcset=”small.png 400w, medium.png 600w, large.png 900w”>
+      </picture>
+      ```
 
-  2) Query used for `<img>` tag `sizes` attribute
-    ```
-    {% set queries = {
-    '--xs-plus':  '(min-width:' ~ 700 ~ 'px)',
-    '--sm-plus':  '(min-width:' ~ 900 ~ 'px)',
-    '--md-plus':  '(min-width:' ~ 1188 ~ 'px)',
-    } %}
-    {% set presets = {
-      logo: {
-        sizes: [
-          { width: 150 },
-          { width: 300 },
-        ],
-        guide: '--md-plus 5rem, --xs-plus 4rem, 3.55rem',
-      },
-    } %}
-    ```
-  
-  HTML Output:
-  `<img src=”medium.png” width=”300” height=”349” sizes=”(min-width:1188px) 5rem, (min-width:700px) 4rem, 3.55rem” srcset=”small.png 150w, medium.png 300w”>`
+  2)  Query used for `<img>` tag `sizes` attribute
+      ```
+      {% set queries = {
+      '--xs-plus':  '(min-width:' ~ 700 ~ 'px)',
+      '--sm-plus':  '(min-width:' ~ 900 ~ 'px)',
+      '--md-plus':  '(min-width:' ~ 1188 ~ 'px)',
+      } %}
+      {% set presets = {
+        logo: {
+          sizes: [
+            { width: 150 },
+            { width: 300 },
+          ],
+          guide: '--md-plus 5rem, --xs-plus 4rem, 3.55rem',
+        },
+      } %}
+      ```
+
+      HTML Output:
+      `<img
+        src=”medium.png”
+        width=”300”
+        height=”349”
+        sizes=”(min-width:1188px) 5rem, (min-width:700px) 4rem, 3.55rem”
+        srcset=”small.png 150w, medium.png 300w”>`
 
   Preset examples
   ---------------
 
-  1) Simple size-based transforms (can be width, or height — everything that the Imager plugin supports)
-    ```
-    {% set presets = {
-        avatar: {
-          sizes: [
-            { width: 20 },
-            { width: 30 },
-            { width: 40 },
-            ],
-          },	
-    } %}
-    ```
-
-  HTML Output:
-  `<img src=”large.jpg” width=”40” height=”37” srcset=”small.jpg 20w, medium.jpg 30w, large.jpg 40w”>`
-
-  2) Size based transform with option to crop images
-    ```
-    {% set presets = {
-      blog: {
-        sizes: [
-          { width: 400 },
-          { width: 800 },
-        ],
-        transform: { mode: 'crop', ratio: 1.7 },
-      },	
-    } %}
-    ```
-
-  HTML Output:
-  `<img src=”large.jpg” width=”800” height=”471” srcset=”small.jpg 400w, large.jpg 800w”>`
-
-  3) Size based transform with different sizes based on render area sizes 
-    ```
-    {% set presets = {
-      logo: {
-        sizes: [
-          { width: 150 },
-          { width: 300 },
-        ],
-        guide: '(min-width:1023px) 5rem, (min-width:1920px) 8rem, 3.55rem',
-      },
-    } %}
-    ```
-
-  HTML Output:
-  `<img src=”medium.png” width=”300” height=”275” sizes=”(min-width:1023px) 5rem, (min-width:1920px) 8rem, 3.55rem” srcset=”small.png 150w, medium.png 300w”>`
-
-  4) Art-directed images
-    ```
-    {% set queries = {
-      '--xs-plus':  '(min-width:' ~  448 ~ 'px)',
-      '--sm-plus':  '(min-width:' ~  900 ~ 'px)',
-      '--md-plus':  '(min-width:' ~ 1200 ~ 'px)',
+  1)  Simple size-based transforms (can be width, or height — everything
+      that the Imager plugin supports)
+      ```
+      {% set presets = {
+          avatar: {
+            sizes: [
+              { width: 20 },
+              { width: 30 },
+              { width: 40 },
+              ],
+            },	
       } %}
-    {% set presets = {
-      blog: {
-        breakpoints: [{
-          media: '--md-plus',
-          sizes: [
-            { width: 500 },
-            { width: 600 },
-            { width: 700 },
-            { width: 800 },
-          ],
-          transform: { mode: 'crop', ratio: 0.9 },
-        },{
+      ```
+
+      HTML Output:
+      `<img
+         src=”large.jpg”
+         width=”40”
+         height=”37”
+         srcset=”small.jpg 20w, medium.jpg 30w, large.jpg 40w”>`
+
+  2)  Size based transform with option to crop images
+      ```
+      {% set presets = {
+        blog: {
           sizes: [
             { width: 400 },
-            { width: 600 },
-            { width: 900 },
+            { width: 800 },
           ],
-          transform: { mode: 'crop', ratio: 1.1 },
+          transform: { mode: 'crop', ratio: 1.7 },
+        },	
+      } %}
+      ```
+
+      HTML Output:
+      `<img
+         src=”large.jpg”
+         width=”800”
+         height=”471”
+         srcset=”small.jpg 400w, large.jpg 800w”>`
+
+  3)  Size based transform with different sizes based on render area sizes 
+      ```
+      {% set presets = {
+        logo: {
+          sizes: [
+            { width: 150 },
+            { width: 300 },
+          ],
+          guide: '(min-width:1023px) 5rem, (min-width:1920px) 8rem, 3.55rem',
         },
-      ]}
-    } %}
-    ```
-  
-  HTML Output:
-  `<source width=”800” height=”889” media=”(min-width:1200px)” sizes=”576px” srcset=”small.png 500w, medium.png 600w, large.png 700w, x-large.png 800w”>`
-  `<img src=”large.png” width height sizes=”576px” srcset=”small.png 400w, medium.png 600w, large.png 900w”>`
+      } %}
+      ```
+
+      HTML Output:
+      `<img
+         src=”medium.png”
+         width=”300”
+         height=”275”
+         sizes=”(min-width:1023px) 5rem, (min-width:1920px) 8rem, 3.55rem”
+         srcset=”small.png 150w, medium.png 300w”>`
+
+  4)  Art-directed images
+      ```
+      {% set queries = {
+        '--xs-plus':  '(min-width:' ~  448 ~ 'px)',
+        '--sm-plus':  '(min-width:' ~  900 ~ 'px)',
+        '--md-plus':  '(min-width:' ~ 1200 ~ 'px)',
+        } %}
+      {% set presets = {
+        blog: {
+          breakpoints: [{
+            media: '--md-plus',
+            sizes: [
+              { width: 500 },
+              { width: 600 },
+              { width: 700 },
+              { width: 800 },
+            ],
+            transform: { mode: 'crop', ratio: 0.9 },
+          },{
+            sizes: [
+              { width: 400 },
+              { width: 600 },
+              { width: 900 },
+            ],
+            transform: { mode: 'crop', ratio: 1.1 },
+          },
+        ]}
+      } %}
+      ```
+
+      HTML Output:
+      ```
+      <picture>
+        <source
+          width=”800”
+          height=”889”
+          media=”(min-width:1200px)”
+          sizes=”576px”
+          srcset=”small.png 500w, medium.png 600w, large.png 700w, x-large.png 800w”>
+        <img
+          src=”large.png”
+          width height sizes=”576px”
+          srcset=”small.png 400w, medium.png 600w, large.png 900w”>
+      </picture>
+      ```
 #}
 
 
