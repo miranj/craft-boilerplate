@@ -108,9 +108,19 @@
     } %}
     ```
   
-  HTML Output:
-  `<source width=”800” height=”889” media=”(min-width:1200px)” srcset=”small.png 500w, medium.png 600w, large.png 700w, x-large.png 800w”>`
-  `<img src=”large.png” srcset=”small.png 400w, medium.png 600w, large.png 900w”>`
+    HTML Output:
+    ```
+    <picture>
+      <source
+        width="800"
+        height="889"
+        media="(min-width: 1200px)"
+        srcset="small.png 500w, medium.png 600w, large.png 700w, x-large.png 800w">
+      <img
+        src="large.png"
+        srcset="small.png 400w, medium.png 600w, large.png 900w">
+    </picture>
+    ```
 
   2)  Query used for `<img>` tag `sizes` attribute
       ```
@@ -195,20 +205,14 @@
       ]}
     } %}
     ```
-  
-  HTML Output:
-  `<source width=”800” height=”889” media=”(min-width:1200px)” srcset=”small.png 500w, medium.png 600w, large.png 700w, x-large.png 800w”>`
-  `<img src=”large.png” srcset=”small.png 400w, medium.png 600w, large.png 900w”>`
-      } %}
-      ```
 
-      HTML Output:
-      `<img
-         src="medium.png"
-         width="300"
-         height="275"
-         sizes="(min-width: 1023px) 5rem, (min-width: 1920px) 8rem, 3.55rem"
-         srcset="small.png 150w, medium.png 300w">`
+    HTML Output:
+    `<img
+        src="medium.png"
+        width="300"
+        height="275"
+        sizes="(min-width: 1023px) 5rem, (min-width: 1920px) 8rem, 3.55rem"
+        srcset="small.png 150w, medium.png 300w">`
 
   4)  Art-directed images
       ```
@@ -247,11 +251,9 @@
           width="800"
           height="889"
           media="(min-width: 1200px)"
-          sizes="576px"
           srcset="small.png 500w, medium.png 600w, large.png 700w, x-large.png 800w">
         <img
           src="large.png"
-          width height sizes="576px"
           srcset="small.png 400w, medium.png 600w, large.png 900w">
       </picture>
       ```
