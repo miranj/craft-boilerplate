@@ -36,7 +36,7 @@
   <figure>
     {% include '_components/_image' with { params: {
       asset: image,
-      class: 'profile-pic',
+      class: 'pt-v-66',
       preset: 'avatar',
     } } %}
   </figure>
@@ -104,8 +104,8 @@
     ```
   
   HTML Output:
-  `<source width=”800” height=”889” media=”(min-width:1200px)” sizes=”576px” srcset=”small.png 500w, medium.png 600w, large.png 700w, x-large.png 800w”>`
-  `<img src=”large.png” width height sizes=”576px” srcset=”small.png 400w, medium.png 600w, large.png 900w”>`
+  `<source width=”800” height=”889” media=”(min-width:1200px)” srcset=”small.png 500w, medium.png 600w, large.png 700w, x-large.png 800w”>`
+  `<img src=”large.png” srcset=”small.png 400w, medium.png 600w, large.png 900w”>`
 
   2) Query used for `<img>` tag `sizes` attribute
     ```
@@ -210,8 +210,8 @@
     ```
   
   HTML Output:
-  `<source width=”800” height=”889” media=”(min-width:1200px)” sizes=”576px” srcset=”small.png 500w, medium.png 600w, large.png 700w, x-large.png 800w”>`
-  `<img src=”large.png” width height sizes=”576px” srcset=”small.png 400w, medium.png 600w, large.png 900w”>`
+  `<source width=”800” height=”889” media=”(min-width:1200px)” srcset=”small.png 500w, medium.png 600w, large.png 700w, x-large.png 800w”>`
+  `<img src=”large.png” srcset=”small.png 400w, medium.png 600w, large.png 900w”>`
 #}
 
 
