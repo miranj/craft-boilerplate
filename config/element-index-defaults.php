@@ -12,6 +12,7 @@ return [
         '_childme_addChild',
         'uri',
         'dateUpdated',
+        'link',
     ],
     'Category' => [
         'title',
