@@ -21,6 +21,7 @@ A [Craft CMS](https://craftcms.com/) 3 starter project based on [Miranj's](https
     - [Element Index Defaults](https://github.com/verbb/element-index-defaults)
     - [Environment Label](https://github.com/TopShelfCraft/Environment-Label)
     - [Imager](https://github.com/aelvan/Imager-Craft)
+    - [Image Resizer](https://github.com/verbb/image-resizer)
     - [Inventory](https://github.com/doublesecretagency/craft-inventory)
     - [Minify](https://github.com/nystudio107/craft-minify)
     - [Redactor](https://github.com/craftcms/redactor)
