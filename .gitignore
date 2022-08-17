@@ -8,8 +8,6 @@ node_modules/
 # Craft CMS
 config/license.key
 web/cpresources/
-storage/*
-!storage/rebrand/
 
 # Environment specific config
 .env
