@@ -15,6 +15,7 @@
     "topshelfcraft/environment-label": "^3.1",
     "vaersaagod/seomate": "^1.0",
     "verbb/element-index-defaults": "^1.0.3",
+    "verbb/image-resizer": "^2.1",
     "vlucas/phpdotenv": "^3.4.0",
     "yiisoft/yii2-redis": "^2.0"
   },
