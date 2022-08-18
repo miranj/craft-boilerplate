@@ -15,7 +15,6 @@ return [
     '*' => [
         
         // back-end
-        'useProjectConfigFile' => true,
         'allowAdminChanges' => false,
         'allowUpdates' => false,
         'usePathInfo' => true,
