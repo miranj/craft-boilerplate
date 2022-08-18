@@ -19,7 +19,6 @@ return [
         'allowUpdates' => false,
         'usePathInfo' => true,
         'enableGql' => false,
-        'securityKey' => App::env('CRAFT_SECURITY_KEY'),
         
         // user sessions
         'phpSessionName' => App::env('CRAFT_APP_ID').'CraftSessionId',
