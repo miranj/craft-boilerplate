@@ -5,11 +5,11 @@ Boilerplate
 
 Requirements
 ------------
-- PHP 7+
+- PHP 8+
 - composer
 - MySQL / MariaDB / PostgreSQL
 - [Production] Redis
-- [Dev] Node.js (version in ./assets/.nvmrc)
+- [Dev] Node.js (version in ./.nvmrc)
 - [Dev] Gulp
 
 

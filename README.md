@@ -3,7 +3,7 @@
 Miranj Craft Boilerplate
 ========================
 
-A [Craft CMS](https://craftcms.com/) 3 starter project based on [Miranj's](https://miranj.in) project boilerplate. It includes:
+A [Craft CMS](https://craftcms.com/) 4 starter project based on [Miranj's](https://miranj.in) project boilerplate. It includes:
 
 * Our [modular templating architecture](https://miranj.in/blog/2019/modular-architecture-for-building-content-websites).
 * A [Gulp](https://gulpjs.com/) based build process that uses
@@ -14,7 +14,6 @@ A [Craft CMS](https://craftcms.com/) 3 starter project based on [Miranj's](https
     - [Pjax](https://github.com/MoOx/pjax)
 * Server configuration files for Apache (dev) and Nginx (staging, production).
 * A few Craft plugins, along with their config files:
-    - [Agnostic Fetch](https://github.com/marionnewlevant/craft-agnostic_fetch)
     - [CacheFlag](https://github.com/mmikkel/CacheFlag-Craft3)
     - [Child Me](https://github.com/mmikkel/ChildMe-Craft)
     - [CP Field Inspect](https://github.com/mmikkel/CpFieldInspect-Craft)
@@ -36,7 +35,7 @@ Usage
 
 1.  Open your terminal and run the following command:
     
-        composer create-project miranj/craft-boilerplate /path/to/project "dev-master"
+        composer create-project miranj/craft-boilerplate /path/to/project "dev-dev"
     
 2.  Replace instances of "miranj/craft-boilerplate" and "boilerplate"
     with the handle of the new project in the following locations:
