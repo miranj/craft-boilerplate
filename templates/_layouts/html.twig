@@ -35,7 +35,7 @@
 {% block response %}
   {%- minify %}
     <head>
-      {%- spaceless %}
+      {%- apply spaceless %}
         <meta charset="utf-8"/>
         
         {% for sheet in styles %}
@@ -62,7 +62,7 @@
         {% block head_end %}{% endblock %}
         
         <meta name="build" content="{{ htmlCacheKey }}" data-pjax-track>
-      {% endspaceless %}
+      {% endapply %}
     </head>
     
     {{ block('body_open') }}
