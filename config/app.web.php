@@ -12,6 +12,16 @@ use craft\helpers\App;
 
 return [
     
+    // Global settings
+    '*' => [],
+    
+    
+    
+    // Dev environment
+    'dev' => [],    
+    
+    
+    
     // Production environment
     'production' => [
         'components' => [
