@@ -47,20 +47,16 @@ return [
         'components' => [
             'redis' => [
                 'class' => \yii\redis\Connection::class,
-                'hostname' => 'localhost',
+                'hostname' => App::env('REDIS_HOSTNAME') ?: 'localhost',
                 'port' => 6379,
+                'password' => App::env('REDIS_PASSWORD') ?: null,
                 'database' => 0,
             ],
             'cache' => [
                 'class' => \yii\redis\Cache::class,
+                'keyPrefix' => App::env('CRAFT_APP_ID') ?: 'CraftCMS',
                 'redis' => [
                     'database' => 1,
-                ],
-            ],
-            'session' => [
-                'class' => \yii\redis\Session::class,
-                'as session' => [
-                    'class' => \craft\behaviors\SessionBehavior::class,
                 ],
             ],
         ],
