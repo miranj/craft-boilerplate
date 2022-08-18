@@ -13,23 +13,21 @@
   "homepage": "https://miranj.in/",
   "type": "project",
   "require": {
-    "aelvan/imager": "^2.1",
-    "craftcms/cms": "~3.7.0",
-    "craftcms/redactor": "^2.3",
-    "doublesecretagency/craft-inventory": "^2.0",
-    "glue-agency/craft-fingerprint-assets": "^1.0",
-    "marionnewlevant/agnostic-fetch": "^2.0",
-    "marionnewlevant/twig-perversion": "^2.1",
-    "mmikkel/cache-flag": "^1.0.3",
-    "mmikkel/child-me": "^1.0",
-    "mmikkel/cp-field-inspect": "^1.0",
-    "nystudio107/craft-minify": "^1.2",
-    "nystudio107/craft-typogrify": "^1.1",
-    "topshelfcraft/environment-label": "^3.1",
-    "vaersaagod/seomate": "^1.0",
-    "verbb/element-index-defaults": "^1.0.3",
-    "verbb/image-resizer": "^2.1",
-    "vlucas/phpdotenv": "^3.4.0",
+    "craftcms/cms": "~4.2.0",
+    "craftcms/redactor": "^3.0",
+    "doublesecretagency/craft-inventory": "^2.2",
+    "marionnewlevant/twig-perversion": "^3.0",
+    "mmikkel/cache-flag": "^1.3.1",
+    "mmikkel/child-me": "^1.3.1",
+    "mmikkel/cp-field-inspect": "^1.4.4",
+    "nystudio107/craft-minify": "^4.0.0-beta.2",
+    "nystudio107/craft-typogrify": "^4.0",
+    "spacecatninja/imager-x": "^4.1",
+    "topshelfcraft/environment-label": "^4.0",
+    "vaersaagod/seomate": "^2.0",
+    "verbb/element-index-defaults": "^3.0",
+    "verbb/image-resizer": "^3.0",
+    "vlucas/phpdotenv": "^5.4.0",
     "yiisoft/yii2-redis": "^2.0"
   },
   "require-dev": {
@@ -48,7 +46,7 @@
     "sort-packages": true,
     "optimize-autoloader": true,
     "platform": {
-      "php": "7.4"
+      "php": "8.0.2"
     }
   },
   "scripts": {
