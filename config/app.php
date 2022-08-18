@@ -23,7 +23,7 @@ return [
     
     // Global settings
     '*' => [
-        'id' => App::env('APP_ID'),
+        'id' => App::env('CRAFT_APP_ID') ?: 'CraftCMS',
         
         'modules' => [
             'boilerplate' => \boilerplate\Module::class,

@@ -55,7 +55,7 @@ return [
     'dev' => [
         'hashPath' => true,
         'filenamePattern' => '{fullname}.{extension}',
-        'useCwebp' => App::env('IMAGER_CWEBP_PATH') ?: false,
-        'cwebpPath' => App::env('IMAGER_CWEBP_PATH'),
+        'useCwebp' => App::env('CRAFT_IMAGER_CWEBP_PATH') ?: false,
+        'cwebpPath' => App::env('CRAFT_IMAGER_CWEBP_PATH'),
     ],
 ];

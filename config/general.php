@@ -19,11 +19,11 @@ return [
         'allowUpdates' => false,
         'usePathInfo' => true,
         'enableGql' => false,
-        'securityKey' => App::env('SECURITY_KEY'),
+        'securityKey' => App::env('CRAFT_SECURITY_KEY'),
         
         // user sessions
-        'phpSessionName' => App::env('APP_ID').'CraftSessionId',
-        'csrfTokenName' => App::env('APP_ID').'_CSRF',
+        'phpSessionName' => App::env('CRAFT_APP_ID').'CraftSessionId',
+        'csrfTokenName' => App::env('CRAFT_APP_ID').'_CSRF',
         'requireMatchingUserAgentForSession' => false,
         'rememberedUserSessionDuration' => 'P1M',
         'userSessionDuration' => 'P1M',
@@ -32,7 +32,7 @@ return [
         'timezone' => 'Asia/Kolkata',
         'defaultWeekStartDay' => '1',
         'defaultCpLanguage' => 'en-GB',
-        'baseCpUrl' => App::env('DEFAULT_SITE_URL'),
+        'baseCpUrl' => App::env('CRAFT_DEFAULT_SITE_URL'),
         'defaultSearchTermOptions' => [
             'subLeft' => true,
             'subRight' => true,
@@ -53,9 +53,9 @@ return [
         'maxUploadFileSize' => '100M',
         
         'aliases' => [
-            '@web' => App::env('DEFAULT_SITE_URL'),
-            '@assetBaseUrl' => App::env('ASSET_BASE_URL'),
-            '@assetBasePath' => App::env('ASSET_BASE_PATH'),
+            '@web' => App::env('CRAFT_DEFAULT_SITE_URL'),
+            '@assetBaseUrl' => App::env('CRAFT_ASSET_BASE_URL'),
+            '@assetBasePath' => App::env('CRAFT_ASSET_BASE_PATH'),
         ],
     ],
     
