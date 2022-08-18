@@ -6,24 +6,30 @@
  *
  */
 
+use craft\elements\Asset;
+use craft\elements\Category;
+use craft\elements\Entry;
+
 return [
-    'Entry' => [
-        'title',
-        '_childme_addChild',
-        'uri',
-        'dateUpdated',
-        'link',
-    ],
-    'Category' => [
-        'title',
-        'dateCreated',
-        'dateUpdated',
-    ],
-    'Asset' => [
-        'title',
-        'filename',
-        'size',
-        'dateModified',
-        'link',
+    'elementDefaults' => [
+         Entry::class => [
+            'title',
+            '_childme_addChild',
+            'uri',
+            'dateUpdated',
+            'link',
+        ],
+         Category::class => [
+            'title',
+            'dateCreated',
+            'dateUpdated',
+        ],
+         Asset::class => [
+            'title',
+            'filename',
+            'size',
+            'dateModified',
+            'link',
+        ],
     ],
 ];
