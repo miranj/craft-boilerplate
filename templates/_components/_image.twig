@@ -2,14 +2,278 @@
 
 {#
   Image
+
+  Generate, transform, manipulate, optimize and render images.
+
+
+
+  What it does
+  ============
+
+  - Auto-generates transforms and responsive images via `sizes` and `srcset` attributes
+  - Auto-crops images if needed/specified
+  - Auto-generates art-directed responsive images using the `<picture>` and `<source>` tags
+  - Auto-generates WebP versions (if supported)
+  - Lazyloads images using lazysizes
+  - Allows images to be specified as CSS class background images
+  - Allows using different source images for different breakpoints
+  - And finally, renders the image
+
+
+
+  Usage
+  =====
+
+  Include the `_image` component with the following parameters to render an image:
+
+  @param  asset             {AssetFileModel}        [Required] Image asset to be rendered
+  @param  breakpoint_assets {array|AssetFileModel}  Image assets to be rendered for different breakpoints
+  @param  preset            {string}                Pre-defined image transformation configuration name
+  @param  class             {string}                Class attribute for the <img> tag
+  @param  alt               {string}                Alt attribute for the <img> tag
+  @param  background        {string}                Class name for background image
+  @param  lazyload          {bool}                  Whether to lazyload images (default: true)
+  @param  webp              {bool}                  Whether to generate WebP versions (default: true)
+
+
+
+  Configuration
+  =============
+
+  There are two configurable options available which help save
+  some repetition when using the component for multiple use cases.
+
+  1. Queries
+  ----------
+  A list of valid media queries along with human readable keys.
+  Allows the human readable keys to be used for all responsive
+  rendering configuration instead of repeating the actual query.
+
+  Example:
+  ```
+  {% set queries = {
+    '--sm-plus': '(min-width: 640px)',
+    '--md-plus': '(min-width: 768px)',
+    '--lg-plus': '(min-width: 1024px)',
+    '--xl-plus': '(min-width: 1280px)',
+    '--2xl-plus': '(min-width: 1536px)',
+    '--retina': '(min-resolution: 192dpi)',
+  } %}
+  ```
+
+  2. Presets
+  ----------
+  A set of pre-configured image transformations. Define the desired
+  configurations in the `presets` array using the following options:
+
+  @option   sizes       {array}   Transform params for each unique image to generate for the
+                                  `srcset` attribute; typically `width` and/or `height`. See:
+                                  https://imager-x.spacecat.ninja/transform-parameters.html
+  @option   transform   {array}   Default transform params applied on all @sizes transforms;
+                                  typically crop `ratio` and `mode`. See:
+                                  https://imager-x.spacecat.ninja/transform-parameters.html
+  @option   guide       {string}  Value for the `sizes` attribute of the `<img>` tag. See:
+                                  https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-sizes
+
+  -- or --
+
+  @option   breakpoints {array}   Preset configs for different breakpoints that will generate
+            │                     unique `<source>` tags per breakpoint
+            ├─ media    {string}  Media query for the `media` attribute of the `<source>` tag
+            ├─ @sizes
+            ├─ @transform
+            └─ @guide
+
+
+
+  Examples
+  ========
+
+  Simple examples
+  ---------------
   
-  Generate image transforms and render images
+  1)  Basic (no transforms)
+      ```
+      {% include '_components/_image' with { params: {
+        asset: entry.photo.one(),
+        class: 'w-10',
+        lazyload: false,
+        webp: true,
+      } } %}
+      ```
+
+      HTML Output (simplified for clarity):
+      ```
+      <picture>
+        <source type="image/webp" srcset="photo.webp 650w" media="(min-width: 0)">
+        <img class="w-10" src="photo.jpg" width="650" alt="Asset element's Title">
+      </picture>
+      ```
+
+  2)  Lazyloaded
+      ```
+      {% include '_components/_image' with { params: {
+        asset: image,
+        lazyload: true,
+        webp: true,
+      } } %}
+      ```
+
+      HTML Output (simplified for clarity):
+      ```
+      <picture>
+        <noscript>
+          <img src="image.png">
+        </noscript>
+      
+        <source
+          type="image/webp"
+          srcset="base64placeholder.svg"
+          media="(min-width: 0)"
+          data-srcset="image.webp 650w">
+      
+        <img
+          class="lazyload no-js:hidden"
+          src="base64placeholder.svg"
+          data-src="image.png"
+          data-sizes="auto"
+          data-srcset="image.png 650w">
+      </picture>
+      ```
   
-  @param   asset        {AssetFileModel}    Image asset to be rendered
-  @param   preset       {string}            Image usage preset
-  @param   class        {string}            Class names to apply to the img tag
-  @param   alt          {string}            Value of the alt attribute for the img tag
-  @param   lazyload     {bool}              Lazyload image or not
+  3)  With different breakpoint assets
+      ```
+      {% include '_components/_image' with { params: {
+        asset: imageMobile,
+        breakpoint_assets: {
+          '--lg-plus': imageLarge,
+          '--md-plus': imageMedium,
+          '--sm-plus': imageSmall,
+        },
+      } } %}
+      ```
+
+      HTML Output (simplified for clarity):
+      ```
+      <picture>
+        <source media="(min-width: 1024px)" srcset="large.jpg 900w">
+        <source media="(min-width: 768px)" srcset="medium.jpg 600w">
+        <source media="(min-width: 640px)" srcset="small.jpg 500w">
+        <img src="mobile.jpg">
+      </picture>
+      ```
+
+  Preset examples
+  ---------------
+  These examples are skipping the common {% include %} statement with
+  the `preset` and other parameters (for brevity)
+  ```
+  {% include '_components/_image' with { params: {
+    asset: image,
+    preset: 'avatar',
+  } } %}
+  ```
+
+  1)  Simple size-based transforms (can be width, or height — everything
+      that the Imager plugin supports)
+      ```
+      {% set presets = {
+        avatar: {
+          sizes: [
+            { width: 20 },
+            { width: 30 },
+            { width: 40 },
+          ],
+        },
+      } %}
+      ```
+
+      HTML Output:
+      `<img
+         src="large.jpg"
+         width="40"
+         height="37"
+         srcset="small.jpg 20w, medium.jpg 30w, large.jpg 40w">`
+
+  2)  Size based transform with option to crop images
+      ```
+      {% set presets = {
+        blog: {
+          sizes: [
+            { width: 400 },
+            { width: 800 },
+          ],
+          transform: { mode: 'crop', ratio: 16/9 },
+        },
+      } %}
+      ```
+
+      HTML Output:
+      `<img
+         src="large.jpg"
+         width="800"
+         height="450"
+         srcset="small.jpg 400w, large.jpg 800w">`
+
+  3)  Size based transform with different sizes based on render area sizes
+      ```
+      {% set presets = {
+        logo: {
+          sizes: [
+            { width: 150 },
+            { width: 300 },
+          ],
+          guide: '--lg-plus 5rem, --md-plus 4rem, 3.55rem',
+        },
+      } %}
+      ```
+
+      HTML Output:
+      `<img
+          src="medium.png"
+          width="300"
+          height="275"
+          sizes="(min-width: 1024px) 5rem, (min-width: 768px) 4rem, 3.55rem"
+          srcset="small.png 150w, medium.png 300w">`
+
+  4)  Art-directed images
+      ```
+      {% set presets = {
+        blog: {
+          breakpoints: [{
+            media: '--md-plus',
+            sizes: [
+              { width: 500 },
+              { width: 600 },
+              { width: 700 },
+              { width: 800 },
+            ],
+            transform: { mode: 'crop', ratio: 0.9 },
+          },{
+            sizes: [
+              { width: 400 },
+              { width: 600 },
+              { width: 900 },
+            ],
+            transform: { mode: 'crop', ratio: 1.1 },
+          },
+        ]}
+      } %}
+      ```
+
+      HTML Output:
+      ```
+      <picture>
+        <source
+          width="800"
+          height="889"
+          media="(min-width: 768px)"
+          srcset="small.png 500w, medium.png 600w, large.png 700w, x-large.png 800w">
+        <img
+          src="large.png"
+          srcset="small.png 400w, medium.png 600w, large.png 900w">
+      </picture>
+      ```
 #}
 
 
@@ -29,11 +293,11 @@
 
 {# Config #}
 {% set queries = {
-  '--xs-plus':  '(min-width:' ~  448 ~ 'px)',
-  '--sm-plus':  '(min-width:' ~  900 ~ 'px)',
-  '--md-plus':  '(min-width:' ~ 1188 ~ 'px)',
-  '--lg-plus':  '(min-width:' ~ 1920 ~ 'px)',
-  '--retina':   '(min-resolution: 192dpi)',
+  '--xs-plus': '(min-width: 448px)',
+  '--sm-plus': '(min-width: 900px)',
+  '--md-plus': '(min-width: 1188px)',
+  '--lg-plus': '(min-width: 1920px)',
+  '--retina':  '(min-resolution: 192dpi)',
 } %}
 {% set presets = {} %}
 
