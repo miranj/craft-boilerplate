@@ -36,7 +36,7 @@ Usage
 
 1.  Open your terminal and run the following command:
     
-        composer create-project miranj/craft-boilerplate /path/to/project "dev-master"
+        composer create-project miranj/craft-boilerplate /path/to/project "dev-craft3"
     
 2.  Replace instances of "miranj/craft-boilerplate" and "boilerplate"
     with the handle of the new project in the following locations:
