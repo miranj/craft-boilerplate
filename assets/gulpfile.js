@@ -20,10 +20,13 @@ Object.entries(paths.tasks.css).forEach(([task_name, task_config]) => {
       .pipe(rename(task_config.destination))
       .pipe(postcss([
         require('postcss-import'),
-        task_config.tailwind_config ? require('tailwindcss')(task_config.tailwind_config) : false,
         require('postcss-nested'),
         require('postcss-custom-properties'),
         require('postcss-calc')({ preserve: true }),
+      ].filter(plugin => !!plugin)))
+      .pipe(gulp.dest(paths.directories.build))
+      .pipe(postcss([
+        task_config.tailwind_config ? require('tailwindcss')(task_config.tailwind_config) : false,
         require('autoprefixer'),
         require('postcss-inline-svg'),
       ].filter(plugin => !!plugin)))
@@ -120,7 +123,7 @@ function sizeReport() {
     .map(([_, task]) => paths.directories.build + task.destination)
   ;
   
-  return gulp.src(sources)
+  return gulp.src(sources, { allowEmpty: true })
     .pipe(sizereport({
       gzip: true,
       minifier: (contents, filepath) => {
@@ -135,6 +138,20 @@ function sizeReport() {
 }
 exports.hash = gulp.series(generateHash, gulp.parallel(prettyHash, sizeReport));
 watch_files.push(['hash', paths.tasks.hash.watch, { ignoreInitial: true }]);
+
+
+
+// Build task
+exports['build'] = gulp.series(
+  gulp.parallel(
+      gulp.series(
+          css_tasks.map(task => exports[task]),
+          js_tasks.map(task => exports[task]),
+      ),
+      purge_tasks.map(task => exports[task]),
+  ),
+  exports.hash
+)
 
 
 

@@ -40,7 +40,7 @@ class Module extends \yii\base\Module
     /**
      * [P|A]jax redirect header override handler
      */
-    public function onBeforeSend(Event $event)
+    public function onBeforeSendPjaxRedirect(Event $event)
     {
         $response = $event->sender;
         $headers = $response->getHeaders();
@@ -54,6 +54,24 @@ class Module extends \yii\base\Module
         }
     }
     
+    /**
+     * Allow cross-domain live preview requests by setting frame-ancestors to CP URL
+     * https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors
+     */
+    public function onBeforeSendLivePreview(Event $event)
+    {
+        $request = Craft::$app->request;
+        if ($request->isLivePreview || $request->isPreview) {
+            $headers = $event->sender->getHeaders();
+            $headers->set(
+                'Content-Security-Policy',
+                'frame-ancestors '.
+                parse_url(Craft::$app->config->general->baseCpUrl, PHP_URL_HOST)
+            );
+            $headers->set('X-Accel-Expires', '0');
+        }
+    }
+    
     
     
     // Protected Methods
@@ -64,7 +82,13 @@ class Module extends \yii\base\Module
         Event::on(
             Response::class,
             Response::EVENT_BEFORE_SEND,
-            [$this, 'onBeforeSend']
+            [$this, 'onBeforeSendPjaxRedirect']
+        );
+        
+        Event::on(
+            Response::class,
+            Response::EVENT_BEFORE_SEND,
+            [$this, 'onBeforeSendLivePreview']
         );
     }
 }

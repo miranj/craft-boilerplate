@@ -26,7 +26,12 @@ paths.tasks = {
       watch: [
         'css/**/*.css',
         'tailwind.config.js',
+        paths.directories.build + '**/*.js',
+        '../templates/**/*.{twig,html}',
       ],
+      watch_config: {
+        ignored: '../templates/_manifest*.json',
+      },
     },
   },
   purge: {
@@ -38,11 +43,13 @@ paths.tasks = {
           '../templates/**/*.{twig,html}',
           paths.directories.build + '**/*.js',
         ],
-        defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || [],
-        whitelistPatternsChildren: [
-          /wf-active/,
-          /richtext/,
-        ],
+        defaultExtractor: content => content.match(/[\w-/.:\[\]]+(?<!:)/g) || [],
+        safelist: {
+          deep: [
+            /wf-active/,
+            /richtext/,
+          ],
+        },
       },
       watch: [
         paths.directories.build + 'style.css',
@@ -57,9 +64,9 @@ paths.tasks = {
   js: {
     urgent: {
       source: [
-        'node_modules/fontfaceobserver/fontfaceobserver.js',
+        '../node_modules/fontfaceobserver/fontfaceobserver.js',
         'js/fontloader.js',
-        'node_modules/lazysizes/lazysizes.js',
+        '../node_modules/lazysizes/lazysizes.js',
         'js/lazyinit.js',
       ],
       destination: 'urgent.js',
@@ -70,8 +77,8 @@ paths.tasks = {
     },
     deferred: {
       source: [
-        'node_modules/pjax/pjax.min.js',
-        'node_modules/topbar/topbar.min.js',
+        '../node_modules/pjax/pjax.min.js',
+        '../node_modules/topbar/topbar.min.js',
         'js/pjaxinit.js',
       ],
       destination: 'deferred.js',

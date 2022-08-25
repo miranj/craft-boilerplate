@@ -80,7 +80,7 @@ a.block-link {
     ol ol ol { list-style-type: lower-roman; }
     
     a { @apply underline; }
-    a.no-underline { @apply no-underline; }
+    a.no-underline { text-decoration: none; }
     
     strong { @apply font-bold; }
 }

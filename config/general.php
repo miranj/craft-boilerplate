@@ -33,6 +33,7 @@ return [
         'timezone' => 'Asia/Kolkata',
         'defaultWeekStartDay' => '1',
         'defaultCpLanguage' => 'en-GB',
+        'baseCpUrl' => App::env('DEFAULT_SITE_URL'),
         'defaultSearchTermOptions' => [
             'subLeft' => true,
             'subRight' => true,
@@ -42,13 +43,14 @@ return [
         'omitScriptNameInUrls' => true,
         'disallowRobots' => true,
         'sendPoweredByHeader' => false,
+        'convertFilenamesToAscii' => true,
         'defaultImageQuality' => 85,
         'defaultTemplateExtensions' => ['twig'],
         'errorTemplatePrefix' => "_errors/",
         'pageTrigger' => 'page/',
         
         // content
-        'maxRevisions' => 10,
+        'maxRevisions' => 50,
         'maxUploadFileSize' => '100M',
         
         'aliases' => [

@@ -1,6 +1,6 @@
 {
   "name": "miranj/craft-boilerplate",
-  "description": "A Craft CMS 3 start project by Miranj",
+  "description": "A Craft CMS 3 starter project by Miranj",
   "version": "1.0.0-dev",
   "keywords": [
     "craft",
@@ -14,7 +14,7 @@
   "type": "project",
   "require": {
     "aelvan/imager": "^2.1",
-    "craftcms/cms": "~3.5.0",
+    "craftcms/cms": "~3.7.0",
     "craftcms/redactor": "^2.3",
     "doublesecretagency/craft-inventory": "^2.0",
     "glue-agency/craft-fingerprint-assets": "^1.0",
@@ -28,8 +28,12 @@
     "topshelfcraft/environment-label": "^3.1",
     "vaersaagod/seomate": "^1.0",
     "verbb/element-index-defaults": "^1.0.3",
+    "verbb/image-resizer": "^2.1",
     "vlucas/phpdotenv": "^3.4.0",
     "yiisoft/yii2-redis": "^2.0"
+  },
+  "require-dev": {
+    "yiisoft/yii2-shell": "^2.0"
   },
   "autoload": {
     "psr-4": {
@@ -37,10 +41,14 @@
     }
   },
   "config": {
+    "allow-plugins": {
+      "craftcms/plugin-installer": true,
+      "yiisoft/yii2-composer": true
+    },
     "sort-packages": true,
     "optimize-autoloader": true,
     "platform": {
-      "php": "7.1.19"
+      "php": "7.4"
     }
   },
   "scripts": {

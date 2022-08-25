@@ -1,7 +1,7 @@
 {
   "require": {
     "aelvan/imager": "^2.1",
-    "craftcms/cms": "~3.5.0",
+    "craftcms/cms": "~3.7.0",
     "craftcms/redactor": "^2.3",
     "doublesecretagency/craft-inventory": "^2.0",
     "glue-agency/craft-fingerprint-assets": "^1.0",
@@ -15,8 +15,12 @@
     "topshelfcraft/environment-label": "^3.1",
     "vaersaagod/seomate": "^1.0",
     "verbb/element-index-defaults": "^1.0.3",
+    "verbb/image-resizer": "^2.1",
     "vlucas/phpdotenv": "^3.4.0",
     "yiisoft/yii2-redis": "^2.0"
+  },
+  "require-dev": {
+    "yiisoft/yii2-shell": "^2.0"
   },
   "autoload": {
     "psr-4": {
@@ -24,10 +28,14 @@
     }
   },
   "config": {
+    "allow-plugins": {
+      "craftcms/plugin-installer": true,
+      "yiisoft/yii2-composer": true
+    },
     "sort-packages": true,
     "optimize-autoloader": true,
     "platform": {
-      "php": "7.1.19"
+      "php": "7.4"
     }
   },
   "scripts": {
@@ -35,9 +43,10 @@
       "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
     ],
     "post-install-cmd": [
-      "./craft install/check && ./craft migrate/all || exit 0",
-      "./craft install/check && ./craft project-config/apply || exit 0",
-      "./craft install/check && ./craft invalidate-tags/template || exit 0"
+      "@php craft install/check",
+      "@php craft migrate/all --interactive=0 || exit 0",
+      "@php craft project-config/apply || exit 0",
+      "@php craft invalidate-tags/template || exit 0"
     ]
   }
 }

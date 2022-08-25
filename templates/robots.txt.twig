@@ -6,7 +6,7 @@
 Sitemap: {{ url('sitemap.xml') }}
 
 {# FIXME #}
-{% if siteUrl != 'https://example.com' -%}
+{% if siteUrl|trim('/', 'right') != 'https://example.com' -%}
 
 User-agent: *
 Disallow: /
