@@ -3,7 +3,8 @@
 Miranj Craft Boilerplate
 ========================
 
-A [Craft CMS](https://craftcms.com/) 4 starter project based on [Miranj's](https://miranj.in) project boilerplate. It includes:
+A [Craft CMS](https://craftcms.com/) 4 starter project based on [Miranj’s](https://miranj.in)
+project boilerplate (see [`craft3`](https://github.com/miranj/craft-boilerplate/tree/craft3) for the older version). It includes:
 
 * Our [modular templating architecture](https://miranj.in/blog/2019/modular-architecture-for-building-content-websites).
 * A [Gulp](https://gulpjs.com/) based build process that uses
