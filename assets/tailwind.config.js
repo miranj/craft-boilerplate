@@ -1,25 +1,22 @@
-const defaultTheme = require('tailwindcss/defaultTheme')
-const plugin = require('tailwindcss/plugin')
-const postcss = require('postcss')
+const defaultTheme = require('tailwindcss/defaultTheme');
+const plugin = require('tailwindcss/plugin');
+const postcss = require('postcss');
 
 let fonts = {
   title: defaultTheme.fontFamily.sans,
   'title-wf': [],
   prose: defaultTheme.fontFamily.serif,
   'prose-wf': [],
-}
+};
 
 module.exports = {
-  content: [
-    "../templates/**/*.{html,twig}",
-    "./js/**/*.js",
-  ],
+  content: ['../templates/**/*.{html,twig}', './js/**/*.js'],
   theme: {
     screens: {
-      xs: ( 448/16) + 'em',
-      sm: ( 900/16) + 'em',
-      md: (1188/16) + 'em',
-      lg: (1920/16) + 'em',
+      xs: 448 / 16 + 'em',
+      sm: 900 / 16 + 'em',
+      md: 1188 / 16 + 'em',
+      lg: 1920 / 16 + 'em',
     },
     colors: {
       transparent: defaultTheme.colors.transparent,
@@ -42,22 +39,28 @@ module.exports = {
     },
   },
   plugins: [
-    plugin(function({ addVariant, e }) {
+    plugin(function ({ addVariant, e }) {
       addVariant('retina', ({ container, separator }) => {
-        const retinaRule = postcss.atRule({ name: 'media', params: '(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)' })
-        retinaRule.append(container.nodes)
-        container.append(retinaRule)
-        retinaRule.walkRules(rule => {
-          rule.selector = `.${e(`retina${separator}${rule.selector.slice(1)}`)}`
-        })
-      })
+        const retinaRule = postcss.atRule({
+          name: 'media',
+          params:
+            '(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)',
+        });
+        retinaRule.append(container.nodes);
+        container.append(retinaRule);
+        retinaRule.walkRules((rule) => {
+          rule.selector = `.${e(
+            `retina${separator}${rule.selector.slice(1)}`
+          )}`;
+        });
+      });
     }),
-    plugin(function({ addVariant, e }) {
+    plugin(function ({ addVariant, e }) {
       addVariant('no-js', ({ modifySelectors, separator }) => {
         modifySelectors(({ selector }) => {
-          return `.has-no-js .${e(`no-js${separator}`)}${selector.slice(1)}`
-        })
-      })
+          return `.has-no-js .${e(`no-js${separator}`)}${selector.slice(1)}`;
+        });
+      });
     }),
   ],
-}
+};

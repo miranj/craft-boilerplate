@@ -7,12 +7,9 @@ var paths = {};
 paths.config = {};
 paths.config.minify_suffix = '.min';
 
-
 // Directories
 paths.directories = {};
 paths.directories.build = '../web/build/';
-
-
 
 //
 // Tasks
@@ -43,12 +40,10 @@ paths.tasks = {
           '../templates/**/*.{twig,html}',
           paths.directories.build + '**/*.js',
         ],
-        defaultExtractor: content => content.match(/[\w-/.:\[\]]+(?<!:)/g) || [],
+        defaultExtractor: (content) =>
+          content.match(/[\w-/.:\[\]]+(?<!:)/g) || [],
         safelist: {
-          deep: [
-            /wf-active/,
-            /richtext/,
-          ],
+          deep: [/wf-active/, /richtext/],
         },
       },
       watch: [
@@ -70,10 +65,7 @@ paths.tasks = {
         'js/lazyinit.js',
       ],
       destination: 'urgent.js',
-      watch: [
-        'js/fontloader.js',
-        'js/lazyinit.js',
-      ],
+      watch: ['js/fontloader.js', 'js/lazyinit.js'],
     },
     deferred: {
       source: [
@@ -82,10 +74,7 @@ paths.tasks = {
         'js/pjaxinit.js',
       ],
       destination: 'deferred.js',
-      watch: [
-        'js/checkbox.js',
-        'js/pjaxinit.js',
-      ],
+      watch: ['js/checkbox.js', 'js/pjaxinit.js'],
     },
   },
   hash: {
@@ -93,9 +82,7 @@ paths.tasks = {
     destination: 'manifest.json',
     sri: 'manifest-sri.json',
     watch: paths.directories.build + '**/*.{js,css}',
-  }
+  },
 };
-
-
 
 module.exports = paths;

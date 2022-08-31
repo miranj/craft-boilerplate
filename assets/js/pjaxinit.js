@@ -7,11 +7,7 @@
 (function (window) {
   var pjax = new Pjax({
     elements: 'a[href]:not(.no-pjax)',
-    selectors: [
-      '[data-pjax-track]',
-      'title',
-      '#pjax-page',
-    ],
+    selectors: ['[data-pjax-track]', 'title', '#pjax-page'],
     switches: {
       '[data-pjax-track]': function (oldEl, newEl, options) {
         if (oldEl.outerHTML == newEl.outerHTML) {
@@ -25,7 +21,7 @@
     },
     cacheBust: false,
   });
-  
+
   // Override handleResponse to treat 404 responses similar to 200 responses
   pjax._handleResponse = pjax.handleResponse;
   pjax.handleResponse = function (responseText, request, href, options) {
@@ -34,21 +30,21 @@
     }
     return pjax._handleResponse(responseText, request, href, options);
   };
-  
+
   // Fire app's main() function on a new page load
   if (window.main) {
-      document.addEventListener('pjax:success', main);
+    document.addEventListener('pjax:success', main);
   }
-  
+
   // Loading progress indicator
   topbar.config({
     barThickness: 1,
     barColors: {
-      '0': '#000000',
-      '1': '#000000',
+      0: '#000000',
+      1: '#000000',
     },
     shadowBlur: 3,
   });
   document.addEventListener('pjax:send', topbar.show);
   document.addEventListener('pjax:complete', topbar.hide);
-}(this));
+})(this);

@@ -28,15 +28,16 @@
 
 (function (w) {
   'use strict';
-  
-  var fontsets = [{
-      fonts: {
+
+  var fontsets = [
+      {
+        fonts: {},
+        activeClass: 'wf-active',
+        cacheKey: 'wf-cached',
       },
-      activeClass: 'wf-active',
-      cacheKey: 'wf-cached',
-    }],
-    timeout = 5*60*1000; // give it 5 mins before timing out
-  
+    ],
+    timeout = 5 * 60 * 1000; // give it 5 mins before timing out
+
   // hasClass polyfill
   // from http://youmightnotneedjquery.com/#has_class
   function hasClass(el, className) {
@@ -45,47 +46,63 @@
     }
     return new RegExp('(^| )' + className + '( |$)', 'gi').test(el.className);
   }
-  
+
   function isSessionStorageSupported() {
     try {
       var mod = 'test';
       sessionStorage.setItem(mod, mod);
       sessionStorage.removeItem(mod);
       return true;
-    } catch(e) {
+    } catch (e) {
       return false;
     }
   }
-  
+
   function loadFonts(fontsets) {
-    
     // get the first fontset
     if (fontsets.length === 0) return;
     var config = fontsets.shift();
-    
+
     function activate() {
       // add a class to the document indicating the fonts have loaded
       w.document.documentElement.className += ' ' + config.activeClass;
-      
+
       // set a flag to optimise future visits
-      if (isSessionStorageSupported()) sessionStorage.setItem(config.cacheKey, true);
-      
+      if (isSessionStorageSupported()) {
+        sessionStorage.setItem(config.cacheKey, true);
+      }
+
       // recurse over remaining fontsets
       loadFonts(fontsets);
-      
+
       // fire resize event to trigger dimension recalculations
-      if (window.jQuery) { jQuery(window).resize(); }
+      if (window.jQuery) {
+        jQuery(window).resize();
+      }
     }
-    
+
     // if we do not have FontFaceObserver, Promise, or ECMAScript 5, activate & fail
-    if (!('FontFaceObserver' in w) || !('Promise' in w) || !('keys' in Object)) return activate();
-    
+    if (
+      !('FontFaceObserver' in w) ||
+      !('Promise' in w) ||
+      !('keys' in Object)
+    ) {
+      return activate();
+    }
+
     // if the class is already set, we're good.
-    if (hasClass(w.document.documentElement, config.activeClass)) return activate();
-    
+    if (hasClass(w.document.documentElement, config.activeClass)) {
+      return activate();
+    }
+
     // if the fonts are already cached by the browser, activate them
-    if (isSessionStorageSupported() && sessionStorage.getItem(config.cacheKey)) return activate();
-    
+    if (
+      isSessionStorageSupported() &&
+      sessionStorage.getItem(config.cacheKey)
+    ) {
+      return activate();
+    }
+
     // loop over font list and create an observer for each weight
     var observers = [];
     Object.keys(config.fonts).forEach(function (fontFamily) {
@@ -96,6 +113,6 @@
     });
     w.Promise.all(observers).then(activate);
   }
-  
+
   loadFonts(fontsets);
-}(this));
+})(this);
