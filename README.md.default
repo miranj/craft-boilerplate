@@ -1,10 +1,7 @@
-Boilerplate
-===========
+# Boilerplate
 
+## Requirements
 
-
-Requirements
-------------
 - PHP 8+
 - composer
 - MySQL / MariaDB / PostgreSQL
@@ -12,10 +9,7 @@ Requirements
 - [Dev] Node.js (version in ./.nvmrc)
 - [Dev] Gulp
 
-
-
-Install
--------
+## Install
 
 1.  Create a .env file by duplicating `.env.example` and
     filling in the appropriate environment specific values
@@ -26,21 +20,16 @@ Install
     Eg. if using Apache, duplicate `serverconfigs/apache-dev/sample.htaccess`
     into `web/.htaccess`.
 
-
-
-Production
-----------
+## Production
 
 1.  Set up a runner for the Craft queue:
     - Supervisor `/usr/bin/nice -n 10 </path/to/php> </path/to/craft> queue/listen --verbose`
     - Or, via CRON `/1 * * * * </path/to/php> </path/to/craft> queue/run`
 
-
-
-Development
------------
+## Development
 
 1.  Install dev tools:
+
     - Node.js http://nodejs.org
     - Gulp http://gulpjs.com/
 
