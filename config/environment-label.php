@@ -13,20 +13,19 @@
  *
  */
 
-
 return [
     '*' => [
         'suffixText' => ' environment',
     ],
-    
+
     'production' => [
         'showLabel' => false,
     ],
-    
+
     'staging' => [
         'labelColor' => 'orange',
     ],
-    
+
     'dev' => [
         'labelColor' => 'skyblue',
     ],

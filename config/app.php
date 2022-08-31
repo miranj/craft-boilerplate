@@ -20,19 +20,16 @@
 use craft\helpers\App;
 
 return [
-    
     // Global settings
     '*' => [
         'id' => App::env('CRAFT_APP_ID') ?: 'CraftCMS',
-        
+
         'modules' => [
             'boilerplate' => \boilerplate\Module::class,
         ],
         'bootstrap' => ['boilerplate'],
     ],
-    
-    
-    
+
     // Dev environment
     'dev' => [
         'components' => [
@@ -41,7 +38,7 @@ return [
             ],
         ],
     ],
-    
+
     // Production environment
     'production' => [
         'components' => [

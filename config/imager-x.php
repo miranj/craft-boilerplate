@@ -16,7 +16,7 @@ $defaultCustomEncoders = [
             'quality' => 80,
             'effort' => 4,
         ],
-        'paramsString' => '-q {quality} -m {effort} {src} -o {dest}'
+        'paramsString' => '-q {quality} -m {effort} {src} -o {dest}',
     ],
 ];
 
@@ -25,13 +25,13 @@ return [
     '*' => [
         'imagerSystemPath' => '@assetBasePath/imager/',
         'imagerUrl' => '@assetBaseUrl/imager/',
-        
+
         'jpegQuality' => 85,
         'allowUpscale' => false,
         'interlace' => 'plane',
         'removeMetadata' => true,
-        'cacheDuration' => 60*60*24*365*10, // 10 years
-        
+        'cacheDuration' => 60 * 60 * 24 * 365 * 10, // 10 years
+
         'optimizerConfig' => [
             'jpegoptim' => [
                 'optionString' => '-s -m85 -T1',
@@ -44,22 +44,22 @@ return [
                 'optionString' => '-o2',
             ],
         ],
-        
-       // 'clearKey' => '',
+
+        // 'clearKey' => '',
     ],
-    
+
     // Production
     'production' => [
         'optimizers' => ['jpegoptim', 'optipng'],
         'customEncoders' => $defaultCustomEncoders,
     ],
-    
+
     // Staging
     'staging' => [
         'optimizers' => ['jpegoptim', 'optipng'],
         'customEncoders' => $defaultCustomEncoders,
     ],
-    
+
     // Dev
     'dev' => [
         'hashPath' => true,
