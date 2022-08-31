@@ -11,10 +11,14 @@
     "build": "cd assets && gulp build"
   },
   "prettier": {
-    "overrides": [{
-      "files": "*.md.default",
-      "options": { "parser": "markdown" }
-    }],
+    "overrides": [
+      {
+        "files": "*.md.default",
+        "options": {
+          "parser": "markdown"
+        }
+      }
+    ],
     "phpVersion": "8.0",
     "singleQuote": true
   },
