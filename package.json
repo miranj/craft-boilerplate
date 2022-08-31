@@ -8,7 +8,8 @@
   "author": "Miranj",
   "scripts": {
     "dev": "cd assets && gulp",
-    "build": "cd assets && gulp build"
+    "build": "cd assets && gulp build",
+    "prepare": "husky install"
   },
   "prettier": {
     "overrides": [
@@ -21,6 +22,9 @@
     ],
     "phpVersion": "8.0",
     "singleQuote": true
+  },
+  "lint-staged": {
+    "*.{js,css,md,php,json,default}": "prettier --write --cache"
   },
   "dependencies": {
     "fontfaceobserver": "^2.1.0",
@@ -43,6 +47,8 @@
     "gulp-sri": "^0.3.1",
     "gulp-terser-js": "^5.2.2",
     "gulp-uglify": "^3.0.1",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
     "postcss": "^8.4.12",
     "postcss-calc": "^7.0.1",
     "postcss-custom-properties": "^9.1.1",
