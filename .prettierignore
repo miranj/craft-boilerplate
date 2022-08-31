@@ -1,0 +1,40 @@
+# OS Cruft
+.DS_Store
+
+# Package Managers
+composer.lock
+package-lock.json
+vendor
+node_modules
+
+# Craft CMS
+config/license.key
+web/index.php
+web/cpresources/
+storage/*
+
+# Environment specific config
+/htpasswd
+web/.htaccess
+.tm_properties
+.sublime-project
+.sublime-workspace
+*.code-workspace
+syncCraft.*.cfg
+syncCraft.sh
+.idea/
+.vscode/
+
+# User data
+web/media
+web/imager
+
+# Generated files
+config/project
+web/build
+templates/_manifest-sri.json
+templates/_manifest.json
+
+# Licensed content
+assets/fonts
+web/fonts

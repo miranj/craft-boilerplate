@@ -45,17 +45,27 @@ Development
     - Gulp http://gulpjs.com/
 
 2.  Install npm
-    
+
         $ nvm use
-        $ npm install
+        $ npm ci
         $ npm run dev
 
-Note: Use `npm ci` if package-lock.json already exists.
+    Note: Use `npm install` if `package-lock.json` does not exist.
 
-3. Comment out instances of directives from the 'web/.htaccess' file that force redirection to https (search for 'RewriteCond %{HTTPS} !=on')
+3.  Edit 'web/.htaccess'
+
+    - Comment out HTTPS redirection directives (search for 'RewriteCond %{HTTPS} !=on')
+    - Disable all `Expires` headers
 
 4.  To migrate content from the production server —
+
     - Import the Craft MySQL database
     - Import the content inside `web/media` folder
 
-5.  Disable all `Expires` headers in `web/.htaccess`
+5.  To use Prettier
+
+        # auto-format all files using prettier
+        npx prettier --write .
+
+        # check if there are any files that have not been formatted
+        npx prettier --check .

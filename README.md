@@ -28,6 +28,7 @@ project boilerplate (see [`craft3`](https://github.com/miranj/craft-boilerplate/
     - [SEOMate](https://github.com/vaersaagod/seomate)
     - [Twig Perversion](https://github.com/marionnewlevant/craft-twig_perversion)
     - [Typogrify](https://github.com/nystudio107/craft-typogrify)
+* [Prettier](https://prettier.io/) for auto-formatting (all non-Twig) code.
 
 
 
