@@ -60,6 +60,20 @@
           document.documentElement.className = document.documentElement.className.replace('has-no-js', 'has-js');
         </script>
         {% block head_end %}{% endblock %}
+
+        {# GA4 Google Analytics tracking #}
+        {% set googleId = '' %}
+        {% if craft.app.config.custom.enableGoogleAnalytics and googleId %}
+          <script async src="https://www.googletagmanager.com/gtag/js?id={{ googleId }}"></script>
+          <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){
+              dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+            gtag('config', '{{ googleId }}');
+          </script>
+        {% endif %}
         
         <meta name="build" content="{{ htmlCacheKey }}" data-pjax-track>
       {% endapply %}
