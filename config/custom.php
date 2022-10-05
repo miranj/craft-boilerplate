@@ -12,7 +12,7 @@ return [
     ],
 
     // Dev environment
-    'dev' => ['enableGoogleAnalytics' => true],
+    'dev' => [],
 
     // Staging environment
     'staging' => [],
