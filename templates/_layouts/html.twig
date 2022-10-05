@@ -62,6 +62,9 @@
         {% block head_end %}{% endblock %}
 
         {# GA4 Google Analytics tracking #}
+        {#
+          TODO: provide a Google Analytics 4 Property ID to enable tracking
+        #}
         {% set googleId = '' %}
         {% if craft.app.config.custom.enableGoogleAnalytics and googleId %}
           <script async src="https://www.googletagmanager.com/gtag/js?id={{ googleId }}"></script>
