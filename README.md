@@ -12,6 +12,7 @@ project boilerplate (see [`craft3`](https://github.com/miranj/craft-boilerplate/
   - [fontloader](https://gist.github.com/rungta/fa39058f1d15d6d4ea95)
   - [lazySizes](https://github.com/aFarkas/lazysizes)
   - [Pjax](https://github.com/MoOx/pjax)
+  - [Instant.page](https://github.com/instantpage/instant.page)
 - Server configuration files for Apache (dev) and Nginx (staging, production).
 - A few Craft plugins, along with their config files:
   - [CacheFlag](https://github.com/mmikkel/CacheFlag-Craft3)
