@@ -69,7 +69,7 @@
 
 {# Output #}
 {% if periodStart %}
-  {% spaceless %}
+  {% apply spaceless %}
     <time datetime="{{ periodStart|atom }}">
       {{- periodStart.format(periodStartFormat)|replace(' ', '&nbsp;')|raw -}}
     </time>
@@ -95,7 +95,7 @@
         {% endif %}
       {% endif %}
     {% endif %}
-  {% endspaceless %}
+  {% endapply %}
 {% endif %}
 
 {% if not periodIsValid and craft.app.request.isPreview %}
