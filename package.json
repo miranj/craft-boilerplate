@@ -29,6 +29,7 @@
   "dependencies": {
     "fontfaceobserver": "^2.1.0",
     "lazysizes": "^5.2.2",
+    "photoswipe": "^5.2.7",
     "pjax": "^0.2.8",
     "topbar": "^0.1.3"
   },

@@ -11,6 +11,7 @@ project boilerplate (see [`craft3`](https://github.com/miranj/craft-boilerplate/
   - [Font Face Observer](https://github.com/bramstein/fontfaceobserver)
   - [fontloader](https://gist.github.com/rungta/fa39058f1d15d6d4ea95)
   - [lazySizes](https://github.com/aFarkas/lazysizes)
+  - [PhotoSwipe](https://github.com/dimsemenov/photoswipe)
   - [Pjax](https://github.com/MoOx/pjax)
 - Server configuration files for Apache (dev) and Nginx (staging, production).
 - A few Craft plugins, along with their config files:
