@@ -5,6 +5,7 @@
 // - http://buunguyen.github.io/topbar/
 //
 (function (window) {
+  var disableScroll = true;
   var pjax = new Pjax({
     elements: 'a[href]:not(.no-pjax)',
     selectors: ['[data-pjax-track]', 'title', '#pjax-page'],
@@ -20,6 +21,16 @@
       },
     },
     cacheBust: false,
+    scrollRestoration: false,
+    scrollTo: disableScroll === true ? false : 0,
+    analytics: function () {
+      if (window.gtag && window.Obvious.gaID) {
+        window.gtag('config', window.Obvious.gaID, {
+          page_title: document.title,
+          page_path: location.pathname,
+        });
+      }
+    },
   });
 
   // Override handleResponse to treat 404 responses similar to 200 responses
@@ -36,6 +47,31 @@
     document.addEventListener('pjax:success', main);
   }
 
+  // Manually scroll to the top of the page without an animation
+  if (disableScroll) {
+    document.addEventListener('pjax:complete', function () {
+      // don't change anything if the new location points to an anchor on the page
+      var hash = window.document.location.hash;
+      if (hash && document.querySelector(hash)) {
+        return;
+      }
+
+      var oldScrollBehavior =
+        window.document.documentElement.style.scrollBehavior;
+      window.document.documentElement.style.scrollBehavior = 'auto';
+      window.requestAnimationFrame(function () {
+        window.scrollTo(0, 0);
+        // restore previous scroll behavior after 2 frames
+        window.requestAnimationFrame(function () {
+          window.requestAnimationFrame(function () {
+            window.document.documentElement.style.scrollBehavior =
+              oldScrollBehavior;
+          });
+        });
+      });
+    });
+  }
+
   // Loading progress indicator
   topbar.config({
     barThickness: 1,
@@ -47,4 +83,13 @@
   });
   document.addEventListener('pjax:send', topbar.show);
   document.addEventListener('pjax:complete', topbar.hide);
+
+  // Add Pjax to content inserted by HTMX
+  document.addEventListener('htmx:afterSwap', function (htmxEvent) {
+    pjax.refresh(htmxEvent.detail.elt);
+    pjax.refresh(htmxEvent.detail.target);
+    if (!htmxEvent.detail.elt.isSameNode(htmxEvent.srcElement)) {
+      pjax.refresh(htmxEvent.srcElement);
+    }
+  });
 })(this);
