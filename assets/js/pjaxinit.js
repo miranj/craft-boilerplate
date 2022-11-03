@@ -75,13 +75,4 @@
   });
   document.addEventListener('pjax:send', topbar.show);
   document.addEventListener('pjax:complete', topbar.hide);
-
-  // Add Pjax to content inserted by HTMX
-  document.addEventListener('htmx:afterSwap', function (htmxEvent) {
-    pjax.refresh(htmxEvent.detail.elt);
-    pjax.refresh(htmxEvent.detail.target);
-    if (!htmxEvent.detail.elt.isSameNode(htmxEvent.srcElement)) {
-      pjax.refresh(htmxEvent.srcElement);
-    }
-  });
 })(this);
