@@ -23,14 +23,6 @@
     cacheBust: false,
     scrollRestoration: false,
     scrollTo: disableScroll === true ? false : 0,
-    analytics: function () {
-      if (window.gtag && window.Obvious.gaID) {
-        window.gtag('config', window.Obvious.gaID, {
-          page_title: document.title,
-          page_path: location.pathname,
-        });
-      }
-    },
   });
 
   // Override handleResponse to treat 404 responses similar to 200 responses
