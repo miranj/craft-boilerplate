@@ -28,6 +28,7 @@
   },
   "dependencies": {
     "fontfaceobserver": "^2.1.0",
+    "instant.page": "^5.1.1",
     "lazysizes": "^5.2.2",
     "pjax": "^0.2.8",
     "topbar": "^0.1.3"
