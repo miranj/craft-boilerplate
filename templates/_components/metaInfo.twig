@@ -1,0 +1,63 @@
+{# _components/metaInfo #}
+
+{#
+  MetaInfo
+  Generate a description list for meta information items.
+
+  @param  items  {array}    List of Items
+  @param  class  {string}   Class names for <dl> tag element
+
+  Usage Example:
+  ```
+  {% include '_components/metaInfo' with { params: {
+    items: {
+      title: 'Author',
+      html: '<span class="font-normal">Miranj</span>',
+      text: 'Miranj',
+    },
+    class: 'pt-10',
+  } } %}
+  ```
+#}
+
+
+
+{# Params #}
+{% set metaInfoItems = params.items ?? [] %}
+{% set metaInfoClass = params.class ?? '' %}
+
+
+
+{# Variables #}
+{% set metaInfoItems = metaInfoItems
+ |filter(i => (i.html ?? i.text ?? '')|trim)
+ |map(i =>  ({
+    title: i.title ?? 'Info',
+    html: i.html ?? '',
+    text: i.text ?? '',
+  }))
+%}
+
+
+
+{# Render #}
+{% for meta in metaInfoItems %}
+  {% if loop.first %}
+    <dl {{ metaInfoClass ? attr({ class: metaInfoClass }) }}>
+  {% endif %}
+    {% if meta.title %}
+      <dt class="sr-only">
+        {{ meta.title }}
+      </dt>
+    {% endif %}
+      <dd>
+        {% if meta.text %}
+          {{ meta.text }}
+        {% else %}
+          {{ meta.html|raw }}
+        {% endif %}
+      </dd>
+  {% if loop.last %}
+    </dl>
+  {% endif %}
+{% endfor %}
