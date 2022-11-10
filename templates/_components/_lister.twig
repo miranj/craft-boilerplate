@@ -10,8 +10,6 @@
   @param  kind             {string}   Name of view type that you want to use for each list item eg: 'teaser' | 'title' etc.
   @param  list_class       {string}   Class names for <ul> tag element
   @param  list_attributes  {array}    Attributes for <ul> tag element
-  @param  wrap             {string}   Class name for a wrapper <div> element around the list
-  @param  itemWrap         {string}   Class name for a wrapper <div> element inside the list items
 
 
 
@@ -25,9 +23,13 @@
   A set of pre-configured values for list generation. Define the desired
   configurations in the `listerProfiles` array using the following options:
   
-  @option  view  {string}  Name of view type that you want to use for each list item eg: 'teaser' | 'title' etc.
-  @option  list  {string}  Class names for <ul> tag element
-  @option  item  {string}  Class names for <li> tag element
+  @option  view      {string}  Name of view type that you want to use for each list item eg: 'teaser' | 'title' etc.
+  @option  list      {string}  Class names for <ul> tag element
+  @option  item      {string}  Class names for <li> tag element
+  @option  wrap      {string}  Class name for a wrapper <div> element around the list
+  @option  itemWrap  {string}  Class name for a wrapper <div> element inside the list items
+
+
 
   Example:
   ```
@@ -36,6 +38,8 @@
     view: 'teaser',
     list: 'border-t border-gray-100',
     item: 'py-2',
+    wrap: 'bg-slate-100',
+    itemWrap: 'my-2',
   } %}
   ```
 
