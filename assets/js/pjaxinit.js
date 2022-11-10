@@ -7,7 +7,7 @@
 (function (window) {
   var pjax = new Pjax({
     elements: 'a[href]:not(.no-pjax)',
-    selectors: ['[data-pjax-track]', 'title', '#pjax-page'],
+    selectors: ['[data-pjax-track]', 'title', '#pjax-page', '#pjax-eval'],
     switches: {
       '[data-pjax-track]': function (oldEl, newEl, options) {
         if (oldEl.outerHTML == newEl.outerHTML) {
