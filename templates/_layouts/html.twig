@@ -63,9 +63,9 @@
 
         {# GA4 Google Analytics tracking #}
         {#
-          TODO: get a Google Analytics 4 Property ID from the authors to enable tracking
+          TODO: get a Google Analytics 4 Property ID from the .env settings or authors to enable tracking
         #}
-        {% set googleId = '' %}
+        {% set googleId = getenv('GOOGLE_ANALYTICS_4_PROPERTY_ID') %}
         {% if craft.app.config.custom.enableGoogleAnalytics and googleId %}
           <script async src="https://www.googletagmanager.com/gtag/js?id={{ googleId }}"></script>
           <script>
