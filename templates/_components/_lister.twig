@@ -4,18 +4,20 @@
   Lister
   Generate a list of entry views
   
-  @param  entries          {array}    List of Elements
-  @param  kind             {string}   Name of view type that you want to use for each list item eg: 'teaser' | 'title' etc.
   @param  class            {string}   Class names for list wrapper element
+  @param  entries          {array}    List of Elements
+  @param  item_class       {string}   Class names for <li> tag element
+  @param  kind             {string}   Name of view type that you want to use for each list item eg: 'teaser' | 'title' etc.
   @param  list_class       {string}   Class names for <ul> tag element
   @param  list_attributes  {array}    Attributes for <ul> tag element
-  @param  item_class       {string}   Class names for <li> tag element
+  @param  wrap             {string}   Class name for a wrapper <div> element around the list
+  @param  itemWrap         {string}   Class name for a wrapper <div> element inside the list items
 
 
 
   Configuration
   =============
-  There is a configurable option available which help save
+  There is a configurable option available which helps avoid
   some repetition when using the component for multiple use cases.
 
   ListerProfiles
