@@ -5,4 +5,4 @@
 @import 'components';
 @import 'tailwindcss/utilities';
 @import 'utilities';
-@import 'photoswipe';
+@import 'photoswipe/dist/photoswipe.css';
