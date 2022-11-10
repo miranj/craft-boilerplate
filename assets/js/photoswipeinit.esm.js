@@ -1,5 +1,9 @@
 // Init Photoswipe.js
 // es6
+//
+// uses:
+// - https://github.com/dimsemenov/photoswipe
+// - https://photoswipe.com/getting-started/
 
 const options = {
   gallery: 'body',
