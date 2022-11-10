@@ -23,7 +23,19 @@ function getLightbox() {
 }
 
 function initPhotoswipe() {
-  if (document.querySelector(options.gallery)) {
+  if (
+    typeof window.PHOTOZOOM === 'undefined' ||
+    window.PHOTOZOOM === null ||
+    !window.PHOTOZOOM.photoswipe
+  ) {
+    return;
+  }
+
+  if (
+    window.PHOTOZOOM.photoswipe.module &&
+    window.PHOTOZOOM.photoswipe.lightbox &&
+    document.querySelector(options.gallery)
+  ) {
     getLightbox()
       .then((lightbox) => {
         if (instance) {
