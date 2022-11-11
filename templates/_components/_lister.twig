@@ -1,0 +1,115 @@
+{# _components/_lister #}
+
+{#
+  Lister
+  Generate a list of entry views
+  
+  @param  class            {string}   Class names for list wrapper element
+  @param  entries          {array}    List of Elements
+  @param  item_class       {string}   Class names for <li> tag element
+  @param  kind             {string}   Name of view type that you want to use for each list item eg: 'teaser' | 'title' etc.
+  @param  list_class       {string}   Class names for <ul> tag element
+  @param  list_attributes  {array}    Attributes for <ul> tag element
+
+
+
+  Configuration
+  =============
+  There is a configurable option available which helps avoid
+  some repetition when using the component for multiple use cases.
+
+  ListerProfiles
+  ----------
+  A set of pre-configured values for list generation. Define the desired
+  configurations in the `listerProfiles` array using the following options:
+  
+  @option  view      {string}  Name of view type that you want to use for each list item eg: 'teaser' | 'title' etc.
+  @option  list      {string}  Class names for <ul> tag element
+  @option  item      {string}  Class names for <li> tag element
+  @option  wrap      {string}  Class name for a wrapper <div> element around the list
+  @option  itemWrap  {string}  Class name for a wrapper <div> element inside the list items
+
+
+
+  Example:
+  ```
+  {% set listerProfiles = {
+    teaser: {
+    view: 'teaser',
+    list: 'border-t border-gray-100',
+    item: 'py-2',
+    wrap: 'bg-slate-100',
+    itemWrap: 'my-2',
+  } %}
+  ```
+
+  Usage Example:
+  ```
+  {% include '_components/_lister' with { params: {
+    entries: collect(indexEntries).all(),
+    kind: 'teaser',
+    class: 'pt-10',
+    list_class: 'mt-10 md:mt-20',
+    list_attributes: {
+      'x-data': "{ activeSlideout: null }",
+    },
+    item_class: 'py-2',
+  } } %}
+  ```
+#}
+
+
+
+{# Parameters #}
+{% set listerEntries = params.entries ?? [] %}
+{% set listerKind = params.kind ?? 'teaser' %}
+{% set listerClass = params.class ?? '' %}
+{% set listerListClass = params.list_class ?? '' %}
+{% set listerListAttr = params.list_attributes ?? {} %}
+{% set listerItemClass = params.item_class ?? '' %}
+
+
+
+{# Config #}
+{% set listerProfiles = {} %}
+
+
+
+{# Variables #}
+{% set listerConfig = listerProfiles[listerKind] ?? (listerProfiles.teaser ?? {}) %}
+{% set listerConfig = listerConfig|merge({
+  list: listerListClass ?: listerConfig.list,
+  item: listerItemClass ?: listerConfig.item,
+}) %}
+
+
+
+{# Render #}
+{% for listEntry in listerEntries %}
+  {% set _classes = (listerConfig.item is string ? [listerConfig.item] : listerConfig.item)|merge([
+    not loop.last ? (listerConfig.notLastItem ?? ''),
+  ]) %}
+  {% if loop.first %}
+    {% if listerClass %}<div {{ attr({ class: listerClass }) }}>{% endif %}
+    {% if listerConfig.wrap ?? false %}<div {{ attr({ class: listerConfig.wrap }) }}>{% endif %}
+    <ul {{ attr({ class: listerConfig.list ?? '' }|merge(listerListAttr)) }}>
+  {% endif %}
+      <li {{ attr({ class: _classes }) }}>
+        {% if listerConfig.itemWrap is defined %}
+          <div class="{{ listerConfig.itemWrap }}">
+        {% endif %}
+        
+        {% block lister_item_router %}
+          {% include '_routers/' ~ listerConfig.view with { entry: listEntry } %}
+        {% endblock %}
+        
+        {% if listerConfig.itemWrap is defined %}
+          </div>
+        {% endif %}
+      </li>
+  {% if loop.last %}
+    </ul>
+    {% if listerConfig.wrap ?? false %}</div>{% endif %}
+    {% if listerClass %}</div>{% endif %}
+  {% endif %}
+{% endfor %}
