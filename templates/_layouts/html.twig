@@ -69,6 +69,21 @@
       
       {% block page %}{% endblock %}
       
+      {% block script_inline %}
+        {# JS Constants #}
+        {% set jsConstants = {
+          photoswipe: {
+            lightbox: 'photoswipe-lightbox.min.js',
+            module: 'photoswipe.min.js',
+          }|map((href, key) => alias('@assetBaseUrl/build/' ~ href|replace('/.(css|js)/', ".#{assetManifest[href]}.$1"))),
+        }|merge(jsConstants ?? {})|filter %}
+        <div id="pjax-eval">
+          <script>
+            window.PHOTOZOOM = {{ jsConstants|json_encode|raw }};
+          </script>
+        </div>
+      {% endblock %}
+
       {% for script in scripts %}
         <script {{ attr(script) }}></script>
       {% endfor %}

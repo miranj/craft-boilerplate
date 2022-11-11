@@ -82,6 +82,24 @@ paths.tasks = {
       destination: 'instant.js',
       watch: ['../node_modules/instant.page/instantpage.js'],
     },
+    photoswipe: {
+      es6: true,
+      source: ['../node_modules/photoswipe/dist/photoswipe.esm.js'],
+      destination: 'photoswipe.js',
+      watch: ['../node_modules/photoswipe/dist/photoswipe.esm.js'],
+    },
+    photoswipeLightbox: {
+      es6: true,
+      source: ['../node_modules/photoswipe/dist/photoswipe-lightbox.esm.js'],
+      destination: 'photoswipe-lightbox.js',
+      watch: ['../node_modules/photoswipe/dist/photoswipe-lightbox.esm.js'],
+    },
+    photoswipeInit: {
+      es6: true,
+      source: ['js/photoswipeinit.esm.js'],
+      destination: 'photoswipeinit.js',
+      watch: ['js/photoswipeinit.esm.js'],
+    },
   },
   hash: {
     source: paths.directories.build + '**/*.{js,css}',

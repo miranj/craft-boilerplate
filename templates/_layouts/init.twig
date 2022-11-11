@@ -31,15 +31,17 @@
   crossorigin: 'anonymous',
   rel: 'stylesheet',
 }) %}
-{% set scripts = [
-  'urgent.min.js',
-  'deferred.min.js',
-  'instant.min.js',
-]|map(s => {
+{% set scripts = {
+  'urgent.min.js': 'async',
+  'deferred.min.js': 'async',
+  'instant.min.js': 'module',
+  'photoswipeinit.min.js': 'module',
+}|map((type, s) => {
   src: alias('@assetBaseUrl/build/' ~ s|replace('.js', ".#{assetManifest[s]}.js")),
   integrity: sriManifest[s],
   crossorigin: 'anonymous',
-  async: true,
+  async: type == 'async',
+  type: type == 'module' ? type : false,
 }) %}
 
 

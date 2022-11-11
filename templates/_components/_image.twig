@@ -15,6 +15,7 @@
   - Auto-generates art-directed responsive images using the `<picture>` and `<source>` tags
   - Auto-generates WebP versions (if supported)
   - Lazyloads images using lazysizes
+  - Zoom images using photoswipe
   - Allows images to be specified as CSS class background images
   - Allows using different source images for different breakpoints
   - And finally, renders the image
@@ -34,6 +35,7 @@
   @param  background        {string}                Class name for background image
   @param  lazyload          {bool}                  Whether to lazyload images (default: true)
   @param  webp              {bool}                  Whether to generate WebP versions (default: true)
+  @param  zoom              {bool}                  Whether to zoom image on click (default: false)
 
 
 
@@ -288,6 +290,7 @@
 {% set imageIsCss = not not (params.background ?? false) %}
 {% set imageCssClass = params.background ?? '' %}
 {% set imageGenerateWebp = (params.webp ?? true) and craft.imager.serverSupportsWebp %}
+{% set imageHasZoom = params.zoom ?? false %}
 
 
 
@@ -429,6 +432,19 @@
 
 {# Output #}
 {% if imageAsset and not imageIsCss %}
+  {% set defaultSrcSet = craft.imager.srcset(imageTransforms) %}
+  
+  {% if imageHasZoom %}
+    <a 
+      href="{{ imageDefault.url }}"
+      data-pswp-width="{{ imageDefault.width }}"
+      data-pswp-height="{{ imageDefault.height }}"
+      data-pswp-srcset="{{ defaultSrcSet }}"
+      class="no-pjax photoswipe cursor-zoom-in"
+      target="_blank"
+      rel="noreferrer noopener">
+  {% endif %}
+
   {% if imageSources|length %}
     <picture>
   {% endif %}
@@ -480,14 +496,19 @@
     
   }:{}) | merge(imageTransforms is defined and imageTransforms|length > 1 ? {
     sizes: imageSizesGuide ?? false,
-    srcset: not imageLazyload ? craft.imager.srcset(imageTransforms) : false,
+    srcset: not imageLazyload ? defaultSrcSet : false,
     'data-sizes': imageLazyload and not (imageSizesGuide ?? true) ? 'auto',
-    'data-srcset': imageLazyload ? craft.imager.srcset(imageTransforms),
+    'data-srcset': imageLazyload ? defaultSrcSet,
   }:{})) }}
   
   {% if imageSources|length %}
     </picture>
   {% endif %}
+
+  {% if imageHasZoom %}
+    </a>
+  {% endif %}
+  
 {% elseif imageAsset and imageIsCss %}
   {% minify css %}
     <style>
