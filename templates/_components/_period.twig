@@ -1,0 +1,105 @@
+{# _components/_period #}
+
+{#
+  Generate an inline time period for an event
+  
+  @param  start         {DateTime}   A DateTime object indicating start time of the period
+  @param  end           {DateTime}   A DateTime object indicating end time of the period
+  @param  show_time     {boolean}    Whether to show time (default: false)
+  @param  time_text     {boolean}    Whether to show time text (default: false)
+  @param  summarize     {boolean}    Whether to summarize date range (default: false)
+  @param  inline        {boolean}    Whether to show inline (default: false)
+
+  Usage Example:
+  ```
+  {% include '_components/_period' with { params: {
+    start: event.startDate,
+    end: event.endDate,
+    show_time: false,
+    time_text: true,
+    summarize: true,
+    inline: true,
+  } } %}
+  ```
+#}
+
+
+
+{# Parameters #}
+{% set periodStart = params.start ?? false %}
+{% set periodEnd = params.end ?? false %}
+{% set periodShowTime = params.show_time ?? true %}
+{% set periodTimeText = params.time_text ?? false %}
+{% set periodSummarize = params.summarize ?? false %}
+{% set periodInline = params.inline ?? false %}
+
+
+
+{# Variables #}
+{% set periodHasEnd = not not periodEnd %}
+{% set periodIsValid = not periodHasEnd or periodEnd > periodStart %}
+{% set periodHasEnd = periodIsValid ? periodHasEnd %}
+{% if periodStart %}
+  {% set periodDatesOnly = periodStart.format('Hi') == '0000' and (not periodHasEnd ?: periodEnd.format('Hi') == '0000') %}
+  {% set periodSingleDay = not periodHasEnd or periodEnd.format('dMY') == periodStart.format('dMY') %}
+  
+  {% set periodStartFormat = (not periodSummarize ? 'd ') ~ 'M Y' %}
+  {% set periodEndFormat = '' %}
+  
+  {% if not periodSingleDay %}
+    {# Same month #}
+    {% if periodEnd.format('MY') == periodStart.format('MY') %}
+      {% set periodStartFormat = not periodSummarize ? 'd ' : 'M Y' %}
+      {% set periodEndFormat = not periodSummarize ? ' d M Y' %}
+    
+    {# Same year #}
+    {% elseif periodEnd.format('Y') == periodStart.format('Y') %}
+      {% set periodStartFormat = (not periodSummarize ? 'j ') ~ 'M ' %}
+      {% set periodEndFormat = (not periodSummarize ? ' j') ~ ' M Y' %}
+    
+    {# Diff month & year #}
+    {% else %}
+      {% set periodStartFormat = (not periodSummarize ? 'j ') ~ 'M Y ' %}
+      {% set periodEndFormat = (not periodSummarize ? ' j') ~ ' M Y' %}
+    {% endif %}
+  {% endif %}
+{% endif %}
+
+
+
+{# Output #}
+{% if periodStart %}
+  {% apply spaceless %}
+    <time datetime="{{ periodStart|atom }}">
+      {{- periodStart.format(periodStartFormat)|replace(' ', '&nbsp;')|raw -}}
+    </time>
+    
+    {%- if periodHasEnd and periodEndFormat != '' -%}
+      {{- '–' -}}
+      <time datetime="{{ periodEnd|atom }}">
+        {{- periodEnd.format(periodEndFormat)|replace(' ', '&nbsp;')|raw -}}
+      </time>
+    {% endif %}
+    
+    {%- if periodTimeText or (not periodDatesOnly and periodShowTime) %}
+      {{- periodInline ? ', ' : '<br>'}}
+      
+      {% if periodTimeText %}
+        {{ periodTimeText }}
+      {% else %}
+        {{ periodStart.format('g:i A')|replace(' ', '&nbsp;')|raw }}
+        {% if periodSingleDay and periodHasEnd %}
+          – {{ periodEnd.format('g:i A')|replace(' ', '&nbsp;')|raw }}
+        {% else %}
+          onwards
+        {% endif %}
+      {% endif %}
+    {% endif %}
+  {% endapply %}
+{% endif %}
+
+{% if not periodIsValid and craft.app.request.isPreview %}
+  <span class="bg-theme-dark text-brand-white">
+    Error: The end date must be after the start date.
+  </span>
+{% endif %}

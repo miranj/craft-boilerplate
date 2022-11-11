@@ -5,6 +5,7 @@
 // - http://buunguyen.github.io/topbar/
 //
 (function (window) {
+  var disableScroll = true;
   var pjax = new Pjax({
     elements: 'a[href]:not(.no-pjax)',
     selectors: ['[data-pjax-track]', 'title', '#pjax-page'],
@@ -20,6 +21,8 @@
       },
     },
     cacheBust: false,
+    scrollRestoration: false,
+    scrollTo: disableScroll === true ? false : 0,
   });
 
   // Override handleResponse to treat 404 responses similar to 200 responses
@@ -34,6 +37,31 @@
   // Fire app's main() function on a new page load
   if (window.main) {
     document.addEventListener('pjax:success', main);
+  }
+
+  // Manually scroll to the top of the page without an animation
+  if (disableScroll) {
+    document.addEventListener('pjax:complete', function () {
+      // don't change anything if the new location points to an anchor on the page
+      var hash = window.document.location.hash;
+      if (hash && document.querySelector(hash)) {
+        return;
+      }
+
+      var oldScrollBehavior =
+        window.document.documentElement.style.scrollBehavior;
+      window.document.documentElement.style.scrollBehavior = 'auto';
+      window.requestAnimationFrame(function () {
+        window.scrollTo(0, 0);
+        // restore previous scroll behavior after 2 frames
+        window.requestAnimationFrame(function () {
+          window.requestAnimationFrame(function () {
+            window.document.documentElement.style.scrollBehavior =
+              oldScrollBehavior;
+          });
+        });
+      });
+    });
   }
 
   // Loading progress indicator

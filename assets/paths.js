@@ -76,6 +76,12 @@ paths.tasks = {
       destination: 'deferred.js',
       watch: ['js/checkbox.js', 'js/pjaxinit.js'],
     },
+    instant: {
+      es6: true,
+      source: ['../node_modules/instant.page/instantpage.js'],
+      destination: 'instant.js',
+      watch: ['../node_modules/instant.page/instantpage.js'],
+    },
   },
   hash: {
     source: paths.directories.build + '**/*.{js,css}',
