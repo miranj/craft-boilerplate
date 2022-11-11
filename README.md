@@ -7,12 +7,13 @@ project boilerplate (see [`craft3`](https://github.com/miranj/craft-boilerplate/
 
 - Our [modular templating architecture](https://miranj.in/blog/2019/modular-architecture-for-building-content-websites).
 - A [Gulp](https://gulpjs.com/) based build process that uses
-  - [Tailwind CSS](https://tailwindcss.com/).
   - [Font Face Observer](https://github.com/bramstein/fontfaceobserver)
-  - [fontloader](https://gist.github.com/rungta/fa39058f1d15d6d4ea95)
-  - [lazySizes](https://github.com/aFarkas/lazysizes)
+  - [Fontloader](https://gist.github.com/rungta/fa39058f1d15d6d4ea95)
+  - [Instant.page](https://github.com/instantpage/instant.page)
+  - [LazySizes](https://github.com/aFarkas/lazysizes)
   - [PhotoSwipe](https://github.com/dimsemenov/photoswipe)
   - [Pjax](https://github.com/MoOx/pjax)
+  - [Tailwind CSS](https://tailwindcss.com/)
 - Server configuration files for Apache (dev) and Nginx (staging, production).
 - A few Craft plugins, along with their config files:
   - [CacheFlag](https://github.com/mmikkel/CacheFlag-Craft3)

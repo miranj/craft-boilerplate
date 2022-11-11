@@ -34,6 +34,7 @@
 {% set scripts = {
   'urgent.min.js': 'async',
   'deferred.min.js': 'async',
+  'instant.min.js': 'module',
   'photoswipeinit.min.js': 'module',
 }|map((type, s) => {
   src: alias('@assetBaseUrl/build/' ~ s|replace('.js', ".#{assetManifest[s]}.js")),
