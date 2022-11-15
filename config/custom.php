@@ -8,7 +8,7 @@
 return [
     // Global settings
     '*' => [
-        'enableGoogleAnalytics' => !!App::env('GOOGLE_ANALYTICS_ID'),
+        'enableGoogleAnalytics' => false,
     ],
 
     // Dev environment
@@ -19,6 +19,6 @@ return [
 
     // Production environment
     'production' => [
-        'enableGoogleAnalytics' => true,
+        'enableGoogleAnalytics' => !!App::env('GOOGLE_ANALYTICS_ID'),
     ],
 ];
