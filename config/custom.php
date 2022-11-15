@@ -8,7 +8,7 @@
 return [
     // Global settings
     '*' => [
-        'enableGoogleAnalytics' => false,
+        'enableGoogleAnalytics' => !!App::env('GOOGLE_ANALYTICS_ID'),
     ],
 
     // Dev environment
