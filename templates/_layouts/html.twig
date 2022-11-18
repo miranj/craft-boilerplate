@@ -42,6 +42,19 @@
           <link {{ attr(sheet) }}>
         {% endfor %}
         
+        {% set UrlHelper = create('craft\\helpers\\UrlHelper') %}
+        {% for sheet in externalStyles %}
+          <link rel="preconnect" href="{{ UrlHelper.hostInfo(sheet.href) }}">
+          {% if sheet.async ?? false %}
+            <link rel="preload" href="{{ sheet.href }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+            <noscript>
+              <link href="{{ sheet.href }}" rel="stylesheet">
+            </noscript>
+          {% else %}
+            <link href="{{ sheet.href }}" rel="stylesheet">
+          {% endif %}
+        {% endfor %}
+        
         <meta name="viewport" content="width=device-width,initial-scale=1">
         
         {# <link rel="apple-touch-icon" sizes="180x180" href="{{ alias('@assetBaseUrl/img/favicons/apple-touch-icon.png') }}">
