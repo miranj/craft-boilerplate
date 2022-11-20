@@ -43,7 +43,7 @@ paths.tasks = {
         defaultExtractor: (content) =>
           content.match(/[\w-/.:\[\]]+(?<!:)/g) || [],
         safelist: {
-          deep: [/wf-active/, /richtext/],
+          deep: [/wf-active/, /richtext/, /pswp/],
         },
       },
       watch: [
