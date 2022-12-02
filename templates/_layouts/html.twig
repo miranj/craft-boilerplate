@@ -72,6 +72,24 @@
         <script>
           document.documentElement.className = document.documentElement.className.replace('has-no-js', 'has-js');
         </script>
+        
+        {# GA4 Google Analytics tracking #}
+        {#
+          TODO: get a Google Analytics 4 Property ID (from .env settings or control panel) to enable tracking
+        #}
+        {% set googleId = getenv('GOOGLE_ANALYTICS_ID') %}
+        {% if craft.app.config.custom.enableGoogleAnalytics and googleId %}
+          <script async src="https://www.googletagmanager.com/gtag/js?id={{ googleId }}"></script>
+          <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){
+              dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+            gtag('config', '{{ googleId }}');
+          </script>
+        {% endif %}
+        
         {% block head_end %}{% endblock %}
         
         <meta name="build" content="{{ htmlCacheKey }}" data-pjax-track>
