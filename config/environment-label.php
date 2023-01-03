@@ -15,6 +15,7 @@
 
 return [
     '*' => [
+        'labelText' => ucfirst(App::env('CRAFT_ENVIRONMENT')),
         'suffixText' => ' environment',
     ],
 
