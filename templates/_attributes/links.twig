@@ -1,0 +1,27 @@
+{#
+  Link Helper Utils
+#}
+
+
+
+{# isExternalLink
+
+  Verify whether supplied link is external website link.
+  
+  input:
+    URL string
+  
+  intended output:
+    boolean
+#}
+
+{% macro isExternalLink(link) %}
+
+  {# Check if link is a valid url #}
+  {% set urlHelper = create("craft\\helpers\\UrlHelper") %}
+  {% set linkUrl = link and urlHelper.isFullUrl(link) %}
+  
+  {% return (linkUrl ?? false)
+    ? not (link starts with siteUrl)
+    : false %}
+{% endmacro %}
