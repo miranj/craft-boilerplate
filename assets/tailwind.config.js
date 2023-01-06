@@ -33,8 +33,8 @@ module.exports = {
         padding: '1.5rem',
       },
       fontFamily: {
-        title: fonts.prose,
-        'title-wf': fonts['title-wf'].concat(fonts.prose),
+        title: fonts.title,
+        'title-wf': fonts['title-wf'].concat(fonts.title),
         prose: fonts.prose,
         'prose-wf': fonts['prose-wf'].concat(fonts.prose),
       },
