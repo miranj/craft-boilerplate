@@ -20,7 +20,8 @@ module.exports = {
       lg: 1920 / 16 + 'em',
     },
     colors: {
-      inherit: 'inherit',
+      inherit: colors.inherit,
+      current: colors.current,
       transparent: colors.transparent,
       black: colors.black,
       white: colors.white,
