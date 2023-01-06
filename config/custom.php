@@ -5,6 +5,8 @@
  * https://craftcms.com/docs/4.x/config/#custom-settings
  */
 
+use craft\helpers\App;
+
 return [
     // Global settings
     '*' => [
