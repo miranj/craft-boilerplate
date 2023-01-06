@@ -46,7 +46,8 @@
         {% for sheet in externalStyles %}
           <link rel="preconnect" href="{{ UrlHelper.hostInfo(sheet.href) }}">
           {% if sheet.async ?? false %}
-            <link rel="preload" href="{{ sheet.href }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+            <link rel="preload" href="{{ sheet.href }}" as="style">
+            <link rel="stylesheet" href="{{ sheet.href }}" media='print' onload="this.media='all';">
             <noscript>
               <link href="{{ sheet.href }}" rel="stylesheet">
             </noscript>
