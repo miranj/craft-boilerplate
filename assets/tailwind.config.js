@@ -1,4 +1,5 @@
 const defaultTheme = require('tailwindcss/defaultTheme');
+const colors = require('tailwindcss/colors');
 const plugin = require('tailwindcss/plugin');
 const postcss = require('postcss');
 
@@ -19,10 +20,10 @@ module.exports = {
       lg: 1920 / 16 + 'em',
     },
     colors: {
-      transparent: defaultTheme.colors.transparent,
-      black: defaultTheme.colors.black,
-      white: defaultTheme.colors.white,
       inherit: 'inherit',
+      transparent: colors.transparent,
+      black: colors.black,
+      white: colors.white,
       brand: {},
     },
     extend: {
