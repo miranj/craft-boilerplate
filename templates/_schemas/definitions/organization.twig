@@ -1,12 +1,25 @@
 {% macro organization(props, schema = null) %}
+  {% from '_schemas/definitions/thing' import thing %}
   
   {% set schema = schema ?? craft.schema.Organization %}
   {% if props.url ?? false %}
     {% set schema = schema.id(props.url ~ '#identity') %}
   {% endif %}
+  {% set schema = thing(props, schema) %}
   {% set schema = schema
     .name(props.title)
     .url(props.url|default(null))
+    .email(props.email|default(null))
+    .foundingDate(props.foundingDate|default(null))
+    .foundingLocation(props.foundingLocation|default(null))
+    .telephone(props.telephone|default(null))
+    .address(props.address|default(null))
+    .logo(props.logo|default(null))
+    .subOrganization((props.offices ?? [])|map(office => craft.schema.Organization
+      .name(office.name)|default(null)
+      .address(office.address|default(null))
+      .telephone(office.phone|default(null))
+    )|default(null))
   %}
   
   {% return schema %}
