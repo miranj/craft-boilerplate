@@ -23,8 +23,8 @@ $defaultCustomEncoders = [
 return [
     // Global settings
     '*' => [
-        'imagerSystemPath' => '@assetBasePath/imager/',
-        'imagerUrl' => '@assetBaseUrl/imager/',
+        'imagerSystemPath' => '@assetBasePath/images/x',
+        'imagerUrl' => '@assetBaseUrl/images/x',
 
         'jpegQuality' => 85,
         'allowUpscale' => false,
