@@ -2,8 +2,9 @@
   
   {% set schema = schema ?? craft.schema.ListItem %}
   {% set schema = schema
-    .position(props.listPosition)
-    .url(props.url)
+    .position(props.listPosition|default(null))
+    .name(props.title|default(null))
+    .url(props.url|default(null))
   %}
   
   {% return schema %}
