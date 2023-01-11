@@ -1,15 +1,13 @@
 {% macro creativeWork(props, schema = null) %}
   {% from '_schemas/definitions/thing' import thing %}
   {% from '_schemas/definitions/organization' import organization %}
+  {% from '_schemas/definitions/person' import person %}
   
   {% set authors = [] %}
   
   {% for author in (props.authors ?? []) %}
     {% if author.type is defined and author.type == 'person' %}
-      {% set authors = authors|merge([craft.schema.Person
-        .name(author.name)
-        .url(author.url)
-      ]) %}
+      {% set authors = authors|merge([person(author)]) %}
     {% else %}
       {% set authorSchema = {
         title: author.title|default(siteName),
@@ -24,7 +22,7 @@
   
   {% for publisher in (props.publishers ?? []) %}
     {% if publisher.type is defined and publisher.type == 'person' %}
-      {% set publishers = publishers|merge([craft.schema.Person.name(publisher)]) %}
+      {% set publishers = publishers|merge([person(publisher)]) %}
     {% else %}
       {% set publisherSchema = {
         title: publisher.title|default(null),
