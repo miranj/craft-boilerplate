@@ -7,8 +7,6 @@
   {% endif %}
   {% set schema = thing(props, schema) %}
   {% set schema = schema
-    .name(props.title)
-    .url(props.url|default(null))
     .email(props.email|default(null))
     .foundingDate(props.foundingDate|default(null))
     .foundingLocation(props.foundingLocation|default(null))
