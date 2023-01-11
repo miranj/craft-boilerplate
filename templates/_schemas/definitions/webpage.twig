@@ -5,7 +5,7 @@
   {% set schema = schema ?? craft.schema.WebPage %}
   {% set schema = creativeWork(props, schema) %}
   {% set schema = schema
-    .id(siteUrl|default(null))
+    .id(props.url ~ '#webpage'|default(null))
     .mainContentOfPage(props.mainContentOfPage|default('main'))
     .primaryImageOfPage(props.image ?? false ? imageObject(props.image) : null)
   %}
