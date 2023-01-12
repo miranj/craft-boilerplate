@@ -2,6 +2,7 @@
   {% from '_schemas/definitions/thing' import thing %}
   
   {% set schema = schema ?? craft.schema.ListItem %}
+  {% set schema = thing(props, schema) %}
   {% set schema = schema
     .position(props.listPosition|default(null))
   %}
