@@ -54,6 +54,8 @@ return [
             '@web' => App::env('CRAFT_DEFAULT_SITE_URL'),
             '@assetBaseUrl' => App::env('CRAFT_ASSET_BASE_URL'),
             '@assetBasePath' => App::env('CRAFT_ASSET_BASE_PATH'),
+            '@contentBasePath' =>
+                App::env('CRAFT_CONTENT_BASE_PATH') ?: '@root/content',
         ],
     ],
 
