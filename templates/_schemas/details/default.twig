@@ -2,6 +2,7 @@
 
 
 
+{% set graph = create('Spatie\\SchemaOrg\\Graph') %}
 {% set seomateMetaData = craft.seomate.getMeta({
   config: { includeSitenameInTitle: false },
 }|merge(seomate ?? {}, true)) %}
@@ -39,6 +40,7 @@
     }|merge(schemaProps) %}
     {% set schema = webpage(schemaProps) %}
   {% endif %}
+  {% do graph.add(webpage(schemaProps)) %}
   
-  {{ schema|raw }}
+  {{ graph|raw }}
 {% endblock %}
