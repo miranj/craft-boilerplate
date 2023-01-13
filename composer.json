@@ -13,7 +13,7 @@
   "homepage": "https://miranj.in/",
   "type": "project",
   "require": {
-    "craftcms/cms": "~4.2.0",
+    "craftcms/cms": "~4.3.0",
     "craftcms/redactor": "^3.0",
     "doublesecretagency/craft-inventory": "^2.2",
     "marionnewlevant/twig-perversion": "^3.0",
