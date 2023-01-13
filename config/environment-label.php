@@ -13,6 +13,8 @@
  *
  */
 
+use craft\helpers\App;
+
 return [
     '*' => [
         'labelText' => ucfirst(App::env('CRAFT_ENVIRONMENT')),
