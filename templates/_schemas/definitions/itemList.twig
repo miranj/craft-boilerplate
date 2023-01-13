@@ -1,9 +1,12 @@
 {% macro itemList(props, schema = null) %}
+  {% from '_schemas/definitions/thing' import thing %}
   {% from '_schemas/definitions/listItem' import listItem %}
   
   {% set schema = schema ?? craft.schema.ItemList %}
+  {% set schema = thing(props, schema) %}
   {% set schema = schema
     .itemListElement((props.listItems ?? [])|map(listItem => listItem(listItem))|default(null))
+    .numberOfItems(props.numberOfItems|default(null))
   %}
   
   {% return schema %}

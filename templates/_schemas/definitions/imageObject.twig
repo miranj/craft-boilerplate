@@ -2,7 +2,9 @@
   
   {% set schema = schema ?? craft.schema.ImageObject %}
   {% set schema = schema
-    .url(props.url)
+    .url(props.url|default(null))
+    .width(props.width|default(null))
+    .height(props.height|default(null))
   %}
   
   {% return schema %}

@@ -25,7 +25,7 @@ syncCraft.sh
 
 # User data
 web/media/
-web/imager/
+web/images/
 
 # Licensed content
 assets/fonts/
