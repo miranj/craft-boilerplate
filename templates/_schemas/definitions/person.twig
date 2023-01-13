@@ -3,9 +3,6 @@
   
   {% set schema = schema ?? craft.schema.Person %}
   {% set schema = thing(props, schema) %}
-  {% set schema = schema
-    .name(props.name)
-  %}
   
   {% return schema %}
 {% endmacro %}
