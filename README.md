@@ -21,6 +21,7 @@ project boilerplate (see [`craft3`](https://github.com/miranj/craft-boilerplate/
   - [CP Field Inspect](https://github.com/mmikkel/CpFieldInspect-Craft)
   - [Element Index Defaults](https://github.com/verbb/element-index-defaults)
   - [Environment Label](https://github.com/TopShelfCraft/Environment-Label)
+  - [Field Manager](https://github.com/verbb/field-manager)
   - [Imager](https://github.com/aelvan/Imager-Craft)
   - [Image Resizer](https://github.com/verbb/image-resizer)
   - [Inventory](https://github.com/doublesecretagency/craft-inventory)
