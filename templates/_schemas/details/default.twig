@@ -6,6 +6,7 @@
 {% set seomateMetaData = craft.seomate.getMeta({
   config: { includeSitenameInTitle: false },
 }|merge(seomate ?? {}, true)) %}
+{% set entryImages = entryImages ?? craft.assets.relatedTo(entry).kind('image').all() %}
 
 {% set defaultSchemaProps = {
   title: seomateMetaData.meta.title ?? entry.title,
@@ -14,6 +15,7 @@
   dateUpdated: entry.dateUpdated ?? null,
   datePublished: entry.postDate ?? null,
   dateCreated: entry.postDate ?? null,
+  images: entryImages|filter|values,
   authors: [{
     title: siteInformation.seoTitle ?? siteName,
     url: siteUrl,
