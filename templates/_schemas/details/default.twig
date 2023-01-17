@@ -3,14 +3,14 @@
 
 
 {% set graph = create('Spatie\\SchemaOrg\\Graph') %}
-{% set seomateMetaData = craft.seomate.getMeta({
+{% set entrySeomateMeta = craft.seomate.getMeta({
   config: { includeSitenameInTitle: false },
 }|merge(seomate ?? {}, true)) %}
 {% set entryImages = entryImages ?? craft.assets.relatedTo(entry).kind('image').all() %}
 
 {% set defaultSchemaProps = {
-  title: seomateMetaData.meta.title ?? entry.title,
-  description: seomateMetaData.meta.description,
+  title: entrySeomateMeta.meta.title ?? entry.title,
+  description: entrySeomateMeta.meta.description,
   url: entry.url,
   mainEntityOfPage: mainEntityOfPage ?? null,
   dateUpdated: entry.dateUpdated ?? null,
