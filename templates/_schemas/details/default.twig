@@ -10,6 +10,7 @@
 
 {% set defaultSchemaProps = {
   title: seomateMetaData.meta.title ?? entry.title,
+  description: seomateMetaData.meta.description,
   url: entry.url,
   mainEntityOfPage: mainEntityOfPage ?? null,
   dateUpdated: entry.dateUpdated ?? null,
