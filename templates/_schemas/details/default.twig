@@ -16,7 +16,7 @@
   dateUpdated: entry.dateUpdated ?? null,
   datePublished: entry.postDate ?? null,
   dateCreated: entry.postDate ?? null,
-  images: entrySeomateMeta.meta.image ?? entryImages|filter|values,
+  images: entrySeomateMeta.meta.image ?: entryImages|filter|values,
   authors: [{
     title: siteName,
     url: siteUrl,
