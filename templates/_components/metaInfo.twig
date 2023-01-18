@@ -23,40 +23,76 @@
 
 
 {# Params #}
-{% set metaInfoItems = params.items ?? [] %}
-{% set metaInfoClass = params.class ?? '' %}
+{% set metaItems = params.items ?? [] %}
+{% set metaClass = params.class ?? '' %}
+{% set metaItemClass = params.item_class ?? '' %}
+{% set metaTitleClass = params.title_class ?? 'sr-only' %}
+{% set metaBodyClass = params.body_class ?? '' %}
+{% set metaFilterEmpty = params.filter ?? true %}
+{% set metaItemDefaults = params.defaults ?? {} %}
 
 
 
 {# Variables #}
-{% set metaInfoItems = metaInfoItems
- |filter(i => (i.html ?? i.text ?? '')|trim)
- |map(i =>  ({
-    title: i.title ?? 'Info',
-    html: i.html ?? '',
-    text: i.text ?? '',
-  }))
+{% set metaItemDefaults = {
+  title: 'Info',
+  html: '',
+  text: '',
+  entries: [],
+  lister: {},
+}|merge(metaItemDefaults) %}
+
+{% set metaClass = metaClass is string ? [metaClass] : metaClass %}
+{% set metaItemClass = metaItemClass is string ? [metaItemClass] : metaItemClass %}
+{% set metaTitleClass = metaTitleClass is string ? [metaTitleClass] : metaTitleClass %}
+{% set metaBodyClass = metaBodyClass is string ? [metaBodyClass] : metaBodyClass %}
+
+{% set metaItems = metaItems
+ |filter(i => not metaFilterEmpty
+   or (i.html ?? i.text ?? '')|trim
+   or (i.entries ?? []) is not empty
+  )
+ |map(i => metaItemDefaults|merge(i))
 %}
 
 
 
 {# Render #}
-{% for meta in metaInfoItems %}
+{% for meta in metaItems %}
   {% if loop.first %}
-    <dl {{ metaInfoClass ? attr({ class: metaInfoClass }) }}>
+    <dl {{ metaClass ? attr({ class: metaClass }) }}>
   {% endif %}
-    {% if meta.title %}
-      <dt class="sr-only">
-        {{ meta.title }}
-      </dt>
-    {% endif %}
-      <dd>
-        {% if meta.text %}
-          {{ meta.text }}
-        {% else %}
-          {{ meta.html|raw }}
+      
+      {% block meta_item %}
+        {% if metaItemClass|filter is not empty %}
+          <div {{ attr({ class: metaItemClass }) }}>
         {% endif %}
-      </dd>
+        
+        {% block meta_title %}
+          {% if meta.title %}
+            <dt {{ metaTitleClass ? attr({ class: metaTitleClass }) }}>
+              {{ meta.title|pluralize(meta.entries|length > 1 ? 2 : 1) }}
+            </dt>
+          {% endif %}
+        {% endblock %}
+      
+        {% block meta_body %}
+          <dd {{ metaBodyClass ? attr({ class: metaBodyClass }) }}>
+            {{ meta.text }}
+            
+            {{ meta.html|raw }}
+            
+            {% include '_components/_lister' with { params: {
+              entries: meta.entries,
+            }|merge(meta.lister) } %}
+          </dd>
+        {% endblock %}
+        
+        {% if metaItemClass|filter is not empty %}
+          </div>
+        {% endif %}
+      {% endblock %}      
+      
   {% if loop.last %}
     </dl>
   {% endif %}
