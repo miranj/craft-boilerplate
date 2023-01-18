@@ -18,6 +18,12 @@
         "options": {
           "parser": "markdown"
         }
+      },
+      {
+        "files": "*.json.default",
+        "options": {
+          "parser": "json"
+        }
       }
     ],
     "phpVersion": "8.0",
