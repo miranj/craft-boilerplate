@@ -25,6 +25,7 @@ project boilerplate (see [`craft3`](https://github.com/miranj/craft-boilerplate/
   - [Image Resizer](https://github.com/verbb/image-resizer)
   - [Inventory](https://github.com/doublesecretagency/craft-inventory)
   - [Minify](https://github.com/nystudio107/craft-minify)
+  - [No-Cache](https://github.com/ttempleton/craft-nocache)
   - [Redactor](https://github.com/craftcms/redactor)
   - [SEOMate](https://github.com/vaersaagod/seomate)
   - [Twig Perversion](https://github.com/marionnewlevant/craft-twig_perversion)

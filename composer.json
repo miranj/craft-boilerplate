@@ -24,6 +24,7 @@
     "nystudio107/craft-typogrify": "^4.0",
     "spacecatninja/imager-x": "^4.1",
     "topshelfcraft/environment-label": "^4.0",
+    "ttempleton/craft-nocache": "^3.0",
     "vaersaagod/seomate": "^2.0",
     "verbb/element-index-defaults": "^3.0",
     "verbb/image-resizer": "^3.0",
