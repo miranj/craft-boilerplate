@@ -78,8 +78,9 @@
 {# Variables #}
 {% set listerConfig = listerProfiles[listerKind] ?? (listerProfiles.teaser ?? {}) %}
 {% set listerConfig = listerConfig|merge({
-  list: listerListClass ?: listerConfig.list,
-  item: listerItemClass ?: listerConfig.item,
+  list: listerListClass ?: listerConfig.list ?? '',
+  item: listerItemClass ?: listerConfig.item ?? '',
+  view: listerConfig.view ?? listerKind, 
 }) %}
 
 
