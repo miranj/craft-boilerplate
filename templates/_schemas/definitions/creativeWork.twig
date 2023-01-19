@@ -1,0 +1,48 @@
+{% macro creativeWork(props, schema = null) %}
+  {% from '_schemas/definitions/thing' import thing %}
+  {% from '_schemas/definitions/organization' import organization %}
+  {% from '_schemas/definitions/person' import person %}
+  
+  {% set authors = [] %}
+  
+  {% for author in (props.authors ?? []) %}
+    {% if author.type is defined and author.type == 'person' %}
+      {% set authors = authors|merge([person(author)]) %}
+    {% else %}
+      {% set authorSchema = {
+        title: author.title|default(siteName),
+        url: author.url|default(siteUrl),
+        mainEntityOfPage: false
+      } %}
+      {% set authors = authors|merge([organization(authorSchema)]) %}
+    {% endif %}
+  {% endfor %}
+
+  {% set publishers = [] %}
+  
+  {% for publisher in (props.publishers ?? []) %}
+    {% if publisher.type is defined and publisher.type == 'person' %}
+      {% set publishers = publishers|merge([person(publisher)]) %}
+    {% else %}
+      {% set publisherSchema = {
+        title: publisher.title|default(null),
+        url: publisher.url|default(null),
+        mainEntityOfPage: false,
+        offices: publisher.offices|default(null),
+      } %}
+      {% set publishers = publishers|merge([organization(publisherSchema)]) %}
+    {% endif %}
+  {% endfor %}
+  
+  {% set schema = schema ?? craft.schema.CreativeWork %}
+  {% set schema = thing(props, schema) %}
+  {% set schema = schema
+    .author(authors|default(null))
+    .publisher(publishers|default(null))
+    .dateCreated(props.dateCreated|default(null))
+    .datePublished(props.datePublished|default(null))
+    .dateModified(props.dateUpdated|default(null))
+  %}
+  
+  {% return schema %}
+{% endmacro %}
