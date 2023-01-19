@@ -1,0 +1,12 @@
+{% extends "_schemas/details/default" %}
+
+
+
+{% set schemaProps = schemaProps ?? {} %}
+{% set schemaProps = {
+  authors: [entry.author]|map(person => {
+    name: person.name,
+    url: person['web'] ?? person['url'],
+    type: 'person',
+  })
+}|merge(schemaProps) %}
