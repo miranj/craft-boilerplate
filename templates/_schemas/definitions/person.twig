@@ -1,0 +1,8 @@
+{% macro person(props, schema = null) %}
+  {% from '_schemas/definitions/thing' import thing %}
+  
+  {% set schema = schema ?? craft.schema.Person %}
+  {% set schema = thing(props, schema) %}
+  
+  {% return schema %}
+{% endmacro %}
