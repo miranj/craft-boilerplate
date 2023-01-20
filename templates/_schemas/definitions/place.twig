@@ -1,0 +1,10 @@
+{% macro place(props, schema = null) %}
+  
+  {% set schema = schema ?? craft.schema.Place %}
+  {% set schema = schema
+    .name(props.title|default(null))
+    .address(props.address|default(null))
+  %}
+  
+  {% return schema %}
+{% endmacro %}
