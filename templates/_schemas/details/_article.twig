@@ -10,3 +10,12 @@
     type: 'person',
   })
 }|merge(schemaProps) %}
+
+
+
+{% block entry_schema %}
+  {% from '_schemas/definitions/blogPosting' import blogPosting %}
+  {% do graph.add(blogPosting(schemaProps)) %}
+  
+  {{ parent() }}
+{% endblock %}
