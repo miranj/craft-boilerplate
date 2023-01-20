@@ -1,13 +1,10 @@
 {% macro localBusiness(props, schema = null) %}
-  {% from '_schemas/definitions/thing' import thing %}
   {% from '_schemas/definitions/place' import place %}
   
   {% set schema = schema ?? craft.schema.LocalBusiness %}
-  {% set schema = thing(props, schema) %}
+  {% set schema = place(props, schema) %}
   {% set schema = schema
-    .address(place(props.address)|default(null))
     .telephone(props.telephone|default(null))
-    .sameAs(props.website|default(null))
   %}
   
   {% return schema %}
