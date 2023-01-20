@@ -1,0 +1,35 @@
+{% extends "_schemas/details/default" %}
+
+
+
+{% set schemaProps = schemaProps ?? {} %}
+{% set entrySalary = (entry.salary ?? '')|one %}
+{% set entryDeadline = entry.deadline ?? '' %}
+{% set schemaProps = {
+  name: entry.title ?? '',
+  title: entry.position ?? '',
+  description: entry.description ?? '',
+  countries: '',
+  employmentType: '',
+  hiringOrganization: {
+    title: siteName,
+    url: siteUrl,
+  },
+  baseSalary: entrySalary ? {
+    currency: entrySalary.currency.value ?? null,
+    unit: entrySalary.unit.value ?? null,
+    min: entrySalary.min ?? null,
+    max: entrySalary.max ?? null,
+    value: entrySalary.value ?? null,
+  } : null,
+  deadline: entryDeadline
+    ? entryDeadline|date('c')
+    : null,
+}|merge(schemaProps) %}
+
+{% block entry_schema %}
+  {% from '_schemas/definitions/jobPosting' import jobPosting %}
+  {% do graph.add(jobPosting(schemaProps)) %}
+
+  {{ parent() }}
+{% endblock %}
