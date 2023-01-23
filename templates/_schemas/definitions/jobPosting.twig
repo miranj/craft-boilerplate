@@ -1,0 +1,28 @@
+{% macro jobPosting(props, schema = null) %}
+  {% from '_schemas/definitions/thing' import thing %}
+  {% from '_schemas/definitions/organization' import organization %}
+
+  {% set schema = schema ?? craft.schema.JobPosting %}
+  {% set schema = thing(props, schema) %}
+  {% set schema = schema
+    .datePosted(props.datePublished|default(null))
+    .title(props.title|default(null))
+    .description(props.description|default(null))
+    .hiringOrganization(props.hiringOrganization is defined ? organization(props.hiringOrganization))
+    .employmentType(props.employmentType|default(null))
+    .validThrough(props.deadline|default(null))
+    .jobLocation(props.countries|default([])|map(c => craft.schema.Country.name(c.title)))
+    .baseSalary(props.baseSalary is defined
+      ? craft.schema.MonetaryAmount
+        .currency(props.baseSalary.currency|default(null))
+        .value(craft.schema.QuantitativeValue
+          .unitText(props.baseSalary.unit|default(null))
+          .value(props.baseSalary.value|default(null))
+          .minValue(props.baseSalary.min|default(null))
+          .maxValue(props.baseSalary.max|default(null))
+        )
+      : null)
+  %}
+  
+  {% return schema %}
+{% endmacro %}
