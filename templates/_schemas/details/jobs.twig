@@ -3,28 +3,18 @@
 
 
 {% set schemaProps = schemaProps ?? {} %}
-{% set entrySalary = (entry.salary ?? '')|one %}
-{% set entryDeadline = entry.deadline ?? '' %}
 {% set schemaProps = {
   name: entry.title ?? '',
-  title: entry.position ?? '',
-  description: entry.description ?? '',
+  title: '', 
+  description: '',
   countries: '',
   employmentType: '',
   hiringOrganization: {
     title: siteName,
     url: siteUrl,
   },
-  baseSalary: entrySalary ? {
-    currency: entrySalary.currency.value ?? null,
-    unit: entrySalary.unit.value ?? null,
-    min: entrySalary.min ?? null,
-    max: entrySalary.max ?? null,
-    value: entrySalary.value ?? null,
-  } : null,
-  deadline: entryDeadline
-    ? entryDeadline|date('c')
-    : null,
+  baseSalary: null,
+  deadline: null,
 }|merge(schemaProps) %}
 
 {% block entry_schema %}
