@@ -1,0 +1,15 @@
+{% extends "_schemas/details/default" %}
+
+
+
+{% set schemaProps = schemaProps ?? {} %}
+{% set schemaProps = {
+  title: siteName,
+  logo: null,
+  mainEntityOfPage: entry.url,
+  email: '',
+  address: '',
+  foundingDate: '',
+  foundingLocation: '',
+  website: craft.seomate.getMeta().meta['og:see_also'],
+}|merge(schemaProps) %}
