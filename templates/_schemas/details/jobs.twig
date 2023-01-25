@@ -1,0 +1,25 @@
+{% extends "_schemas/details/default" %}
+
+
+
+{% set schemaProps = schemaProps ?? {} %}
+{% set schemaProps = {
+  name: entry.title ?? '',
+  title: '', 
+  description: '',
+  countries: '',
+  employmentType: '',
+  hiringOrganization: {
+    title: siteName,
+    url: siteUrl,
+  },
+  baseSalary: null,
+  deadline: null,
+}|merge(schemaProps) %}
+
+{% block entry_schema %}
+  {% from '_schemas/definitions/jobPosting' import jobPosting %}
+  {% do graph.add(jobPosting(schemaProps)) %}
+
+  {{ parent() }}
+{% endblock %}
