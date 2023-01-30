@@ -13,6 +13,7 @@ return [
             'twitter:card' => 'summary_large_image',
             'og:site_name' => '{{ siteName }}',
             'og:type' => 'website',
+            'og:see_also' => [],
         ],
 
         'defaultProfile' => 'standard',
