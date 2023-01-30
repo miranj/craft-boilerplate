@@ -1,0 +1,15 @@
+{% extends '_schemas/details/default' %}
+
+{% set schemaProps = {
+  listItems: [],
+  numberOfItems: null,
+}|merge(schemaProps ?? {}) %}
+
+
+
+{% block entry_schema %}
+  {% from '_schemas/definitions/itemList' import itemList %}
+  {% do graph.add(itemList(schemaProps)) %}
+  
+  {{ parent() }}
+{% endblock %}

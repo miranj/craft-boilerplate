@@ -1,0 +1,11 @@
+{% macro localBusiness(props, schema = null) %}
+  {% from '_schemas/definitions/place' import place %}
+  
+  {% set schema = schema ?? craft.schema.LocalBusiness %}
+  {% set schema = place(props, schema) %}
+  {% set schema = schema
+    .telephone(props.telephone|default(null))
+  %}
+  
+  {% return schema %}
+{% endmacro %}

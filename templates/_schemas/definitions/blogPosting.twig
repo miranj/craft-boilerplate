@@ -1,0 +1,8 @@
+{% macro blogPosting(props, schema = null) %}
+  {% from '_schemas/definitions/article' import article %}
+  
+  {% set schema = schema ?? craft.schema.blogPosting %}
+  {% set schema = article(props, schema) %}
+
+  {% return schema %}
+{% endmacro %}

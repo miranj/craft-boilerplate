@@ -2,14 +2,29 @@
 
 
 
+{% set graph = create('Spatie\\SchemaOrg\\Graph') %}
+{% set entrySeomateMeta = craft.seomate.getMeta({
+  config: { includeSitenameInTitle: false },
+}|merge(seomate ?? {}, true)) %}
 {% set entryImages = entryImages ?? craft.assets.relatedTo(entry).kind('image').all() %}
 
 {% set defaultSchemaProps = {
-  title: entry.title,
+  title: entrySeomateMeta.meta.title ?? entry.title,
+  description: entrySeomateMeta.meta.description,
   url: entry.url,
-  dateCreated: entry.postDate,
-  dateUpdated: entry.dateUpdated,
-  images: entryImages|filter|values,
+  mainEntityOfPage: mainEntityOfPage ?? null,
+  dateUpdated: entry.dateUpdated ?? null,
+  datePublished: entry.postDate ?? null,
+  dateCreated: entry.postDate ?? null,
+  images: entrySeomateMeta.meta.image ?: entryImages|filter|values,
+  authors: [{
+    title: siteName,
+    url: siteUrl,
+  }],
+  publishers: [{
+    title: siteName,
+    url: siteUrl,
+  }],
 } %}
 {% set schemaProps = schemaProps ?? {} %}
 {% set schemaProps = defaultSchemaProps|merge(schemaProps) %}
@@ -25,6 +40,7 @@
     }|merge(schemaProps) %}
     {% set schema = webpage(schemaProps) %}
   {% endif %}
+  {% do graph.add(webpage(schemaProps)) %}
   
-  {{ schema|raw }}
+  {{ graph|raw }}
 {% endblock %}

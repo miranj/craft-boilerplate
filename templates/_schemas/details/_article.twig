@@ -1,0 +1,8 @@
+{% extends "_schemas/details/default" %}
+
+
+
+{% set schemaProps = schemaProps ?? {} %}
+{% set schemaProps = {
+  authors: []
+}|merge(schemaProps) %}

@@ -1,0 +1,10 @@
+{% macro article(props, schema = null) %}
+  {% from '_schemas/definitions/creativeWork' import creativeWork %}
+  
+  {% set schema = schema ?? craft.schema.Article %}
+  {% set schema = creativeWork(props, schema)
+    .headline(props.headline ?? props.title ?? props.name)
+  %}
+
+  {% return schema %}
+{% endmacro %}
