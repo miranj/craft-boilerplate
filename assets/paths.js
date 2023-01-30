@@ -74,7 +74,7 @@ paths.tasks = {
         'js/pjaxinit.js',
       ],
       destination: 'deferred.js',
-      watch: ['js/checkbox.js', 'js/pjaxinit.js'],
+      watch: ['js/pjaxinit.js'],
     },
     instant: {
       es6: true,
