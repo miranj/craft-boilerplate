@@ -1,0 +1,84 @@
+[
+  {
+    "name": "Share / SEO Description",
+    "handle": "seoSummary",
+    "instructions": null,
+    "required": null,
+    "searchable": true,
+    "translationMethod": "none",
+    "translationKeyFormat": null,
+    "type": "craft\\fields\\PlainText",
+    "settings": {
+      "uiMode": "normal",
+      "placeholder": null,
+      "code": false,
+      "multiline": true,
+      "initialRows": 2,
+      "charLimit": 300,
+      "byteLimit": null,
+      "columnType": null
+    }
+  },
+  {
+    "name": "Share / SEO Title",
+    "handle": "seoTitle",
+    "instructions": null,
+    "required": null,
+    "searchable": true,
+    "translationMethod": "none",
+    "translationKeyFormat": null,
+    "type": "craft\\fields\\PlainText",
+    "settings": {
+      "uiMode": "normal",
+      "placeholder": null,
+      "code": false,
+      "multiline": false,
+      "initialRows": 4,
+      "charLimit": null,
+      "byteLimit": null,
+      "columnType": null
+    }
+  },
+  {
+    "name": "Share Image",
+    "handle": "seoImage",
+    "instructions": null,
+    "required": null,
+    "searchable": true,
+    "translationMethod": "site",
+    "translationKeyFormat": null,
+    "type": "craft\\fields\\Assets",
+    "settings": {
+      "restrictLocation": false,
+      "restrictedLocationSource": "volume:15f6c121-6024-4dca-837b-fae66c03f83c",
+      "restrictedLocationSubpath": null,
+      "allowSubfolders": false,
+      "restrictedDefaultUploadSubpath": null,
+      "defaultUploadLocationSource": "volume:15f6c121-6024-4dca-837b-fae66c03f83c",
+      "defaultUploadLocationSubpath": "{section.handle}/{uri|replace((section.handle), '')|trim('/')}",
+      "allowUploads": true,
+      "restrictFiles": true,
+      "allowedKinds": ["image"],
+      "showUnpermittedVolumes": false,
+      "showUnpermittedFiles": false,
+      "previewMode": "thumbs",
+      "allowSelfRelations": false,
+      "localizeRelations": false,
+      "maxRelations": 1,
+      "minRelations": null,
+      "selectionLabel": "Add an image",
+      "showSiteMenu": true,
+      "source": null,
+      "sources": "*",
+      "targetSiteId": null,
+      "validateRelatedElements": false,
+      "viewMode": "large",
+      "selectionCondition": {
+        "elementType": "craft\\elements\\Asset",
+        "fieldContext": "global",
+        "class": "craft\\elements\\conditions\\assets\\AssetCondition",
+        "conditionRules": []
+      }
+    }
+  }
+]

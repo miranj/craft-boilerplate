@@ -21,6 +21,7 @@ project boilerplate (see [`craft3`](https://github.com/miranj/craft-boilerplate/
   - [CP Field Inspect](https://github.com/mmikkel/CpFieldInspect-Craft)
   - [Element Index Defaults](https://github.com/verbb/element-index-defaults)
   - [Environment Label](https://github.com/TopShelfCraft/Environment-Label)
+  - [Field Manager](https://github.com/verbb/field-manager)
   - [Imager](https://github.com/aelvan/Imager-Craft)
   - [Image Resizer](https://github.com/verbb/image-resizer)
   - [Inventory](https://github.com/doublesecretagency/craft-inventory)
@@ -31,6 +32,7 @@ project boilerplate (see [`craft3`](https://github.com/miranj/craft-boilerplate/
   - [Twig Perversion](https://github.com/marionnewlevant/craft-twig_perversion)
   - [Typogrify](https://github.com/nystudio107/craft-typogrify)
 - [Prettier](https://prettier.io/) for auto-formatting (all non-Twig) code.
+- Ready made fields to import to speed up the project development process.
 
 ## Usage
 
