@@ -18,3 +18,8 @@ picture img[data-sizes='auto'] {
 picture img.w-auto[data-sizes='auto'] {
     width: auto;
 }
+
+/* Hide AlpineJS components until Alpine is ready */
+html:not(.has-no-js) [x-cloak] {
+    display: none;
+}
