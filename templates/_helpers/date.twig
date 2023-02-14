@@ -1,0 +1,19 @@
+{#
+  Date Helper Utilities
+#}
+
+
+
+{#
+  getMonthName()
+  Convert month number to month name.
+  
+  eg: getMonthName(2) => 'Feb'
+      getMonthName(3, 'full') => 'March'
+#}
+{% macro getMonthName(monthNumber, format='short') %}
+  {% return create('DateTime')
+    .createFromFormat('!m', monthNumber * 1)
+    .format(format == 'short' ? 'M' : 'F')
+  %}
+{% endmacro %}
