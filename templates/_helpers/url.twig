@@ -1,27 +1,19 @@
 {#
-  Link Helper Utils
+  URL Helper Utilities
 #}
 
 
 
-{# isExternalLink
-
+{#
+  isExternalUrl()
   Verify whether supplied link is external website link.
-  
-  input:
-    URL string
-  
-  intended output:
-    boolean
+
+  eg: isExternalUrl('https://google.com/') => true
+      isExternalUrl(siteUrl) => false
 #}
-
-{% macro isExternalLink(link) %}
-
-  {# Check if link is a valid url #}
-  {% set urlHelper = create("craft\\helpers\\UrlHelper") %}
-  {% set linkUrl = link and urlHelper.isFullUrl(link) %}
-  
-  {% return (linkUrl ?? false)
-    ? not (link starts with siteUrl)
-    : false %}
+{% macro isExternalUrl(url) %}
+  {% return url
+    and create("craft\\helpers\\UrlHelper").isFullUrl(url)
+    and not (url starts with siteUrl)
+  %}
 {% endmacro %}
