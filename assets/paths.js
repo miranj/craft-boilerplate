@@ -41,7 +41,7 @@ paths.tasks = {
           paths.directories.build + '**/*.js',
         ],
         defaultExtractor: (content) =>
-          content.match(/[\w-/.:\[\]]+(?<!:)/g) || [],
+          content.match(/[\w-/.%:\[\]!]+(?<!:)/g) || [],
         safelist: {
           deep: [/wf-active/, /richtext/, /pswp/],
         },
