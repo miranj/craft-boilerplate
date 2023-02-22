@@ -484,7 +484,10 @@
   {% endfor %}
   
   {{ tag('img', {
-    class: imageClass ~ ' ' ~ (imageLazyload ? 'lazyload no-js:hidden' : 'lazyloaded'),
+    class: collect([
+      imageClass,
+      imageLazyload ? 'lazyload no-js:hidden' : 'lazyloaded',
+    ]).flatten().all(),
     src: imageDefault.url,
     alt: imageAlt|e('html_attr'),
     width:  not imageIsResponsive ? imageDefault.width * imageScaleFactor,
