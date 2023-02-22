@@ -17,3 +17,28 @@
     and not (url starts with siteUrl)
   %}
 {% endmacro %}
+
+
+
+{#
+  prettyUrl()
+  Remove 'http(s)://' and 'www' from URLs, optionaly truncate
+  
+  eg: prettyUrl('https://google.com/') => 'google.com'
+      prettyUrl('http://www.google.com/maps?q=0,0', 15) => 'google.com/map…'
+#}
+{% macro prettyUrl(url, truncate = '-1') %}
+  {% set url = url|replace({
+      'http://':'',
+      'http://www.':'',
+      'https://':'',
+      'https://www.':'',
+    })
+    |trim('/', 'right')
+  %}
+  {% if truncate > 0 and url|length > truncate %}
+    {% set url = url|slice(0,truncate) ~ '…' %}
+  {% endif %}
+
+  {% return url %}
+{% endmacro %}
