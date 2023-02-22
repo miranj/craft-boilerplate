@@ -1,0 +1,52 @@
+{#
+  Text Helper Utilities
+#}
+
+
+
+{#
+  markdownExtra()
+  Convert Markdown Extra text to HTML
+  `composer require michelf/php-markdown`
+  
+  eg: markdownExtra('Hello World') => '<p>Hello World</p>'
+      markdownExtra('# Foo') => '<h1>Foo</h1>'
+#}
+{% macro markdownExtra(text) %}
+  {% return create('Michelf\\MarkdownExtra')
+    .defaultTransform(text)
+  %}
+{% endmacro %}
+
+
+
+{#
+  addDropcap()
+  Adds a hook to style drop caps inside markdown text
+  
+  eg: addDropcap('Hello World') => '<span class="drop-cap">H</span>ello World'
+      addDropcap('# Foo') => '# Foo'
+#}
+{% macro addDropcap(text) %}
+  {% set firstCapitalLetterRegex = '/^(\\*\\*|\\*|_|__|\\[)?([\\p{Lu}])/' %}
+  {% set firstWord = text|striptags(['blockquote', 'li', 'pre'])|split(' ', 2)|first %}
+  {% if firstWord matches firstCapitalLetterRegex %}
+    {% set firstWordWithHook = firstWord|replace(firstCapitalLetterRegex, '$1<span class="drop-cap letter-$2">$2</span>') %}
+    {% set text = create('craft\\helpers\\StringHelper').replaceFirst(text, firstWord, firstWordWithHook) %}
+  {% endif %}
+  {% return text %}
+{% endmacro %}
+
+
+
+{#
+  openPDFLinksInNewTab()
+  Add attributes to open anchor links containing PDF in a new window or tab
+  `composer require mmikkel/retcon`
+#}
+{% macro openPDFLinksInNewTab(html) %}
+  {% return html|retconAttr('a[href$=".pdf"], a[href$=".PDF"]', {
+    'target': '_blank',
+    'data-no-pjax': true,
+  }) %}
+{% endmacro %}
