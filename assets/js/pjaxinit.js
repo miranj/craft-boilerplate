@@ -7,7 +7,7 @@
 (function (window) {
   var disableScroll = true;
   var pjax = new Pjax({
-    elements: 'a[href]:not(.no-pjax)',
+    elements: 'a[href]:not([data-no-pjax])',
     selectors: ['[data-pjax-track]', 'title', '#pjax-page', '#pjax-eval'],
     switches: {
       '[data-pjax-track]': function (oldEl, newEl, options) {
