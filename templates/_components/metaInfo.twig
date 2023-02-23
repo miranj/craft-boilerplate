@@ -35,6 +35,7 @@
 
 {# Variables #}
 {% set metaItemDefaults = {
+  class: '',
   title: 'Info',
   html: '',
   text: '',
@@ -77,7 +78,9 @@
         {% endblock %}
       
         {% block meta_body %}
-          <dd {{ metaBodyClass ? attr({ class: metaBodyClass }) }}>
+          <dd {{ metaBodyClass ? attr({
+            class: collect([metaBodyClass, meta.class]).flatten().all(),
+          }) }}>
             {{ meta.text }}
             
             {{ meta.html|raw }}
