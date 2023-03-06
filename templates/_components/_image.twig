@@ -426,7 +426,7 @@
 {% else %}
   {% set imageDefault = imageAsset %}
 {% endif %}
-{% set imageIsResponsive = imageSources|length - (craft.imager.serverSupportsWebp ? 1 : 0) > 0 %}
+{% set imageIsResponsive = (imageSources ?? [])|length - (craft.imager.serverSupportsWebp ? 1 : 0) > 0 %}
 
 
 
