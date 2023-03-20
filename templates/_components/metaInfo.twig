@@ -10,11 +10,11 @@
   Usage Example:
   ```
   {% include '_components/metaInfo' with { params: {
-    items: {
+    items: [{
       title: 'Author',
       html: '<span class="font-normal">Miranj</span>',
       text: 'Miranj',
-    },
+    }],
     class: 'pt-10',
   } } %}
   ```
@@ -72,14 +72,14 @@
         {% block meta_title %}
           {% if meta.title %}
             <dt {{ metaTitleClass ? attr({ class: metaTitleClass }) }}>
-              {{ meta.title|pluralize(meta.entries|length > 1 ? 2 : 1) }}
+              {{ meta.title|pluralize(meta.entries|length > 1 ? 2 : 1)|raw }}
             </dt>
           {% endif %}
         {% endblock %}
       
         {% block meta_body %}
           <dd {{ metaBodyClass ? attr({
-            class: collect([metaBodyClass, meta.class]).flatten().all(),
+            class: collect([metaBodyClass, meta.class]).flatten().filter().all(),
           }) }}>
             {{ meta.text }}
             
