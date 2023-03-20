@@ -16,10 +16,6 @@
 
 
 
-{% set queries = {} %}
-{% set themes = {} %}
-{% set eagerload = {} %}
-
 {% set assetManifest = source('_manifest.json')|json_decode %}
 {% set sriManifest = source('_manifest-sri.json')|json_decode %}
 {% set styles = [
