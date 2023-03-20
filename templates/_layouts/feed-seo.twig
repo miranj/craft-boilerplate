@@ -1,0 +1,28 @@
+{#
+  _layouts/feed-seo
+  
+  Renders an RSS feed's header tags using
+  the SEO meta values provided by SEOmate
+  https://github.com/vaersaagod/seomate/blob/master/src/templates/_output/meta.twig
+#}
+
+{% set meta = {
+  title: seomate.meta.title,
+  description: seomate.meta.description,
+  generator: seomate.meta['og:site_name'] ?? systemName ?: siteName,
+  lastBuildDate: now|date(constant('DATE_RFC822')),
+} %}
+{% for key, data in meta|filter %}
+  {{ tag(key, { text: data|striptags }) }}
+{% endfor %}
+
+{% if seomate.meta.image is defined %}
+  <image>
+    <url>{{ seomate.meta.image }}</url>
+    <title>{{ meta.title }}</title>
+    <link>{{ seomate.canonicalUrl }}</link>
+  </image>
+{% endif %}
+
+<link>{{ seomate.canonicalUrl }}</link>
+<atom:link href="{{ craft.app.request.absoluteUrl }}" rel="self" type="application/rss+xml"/>

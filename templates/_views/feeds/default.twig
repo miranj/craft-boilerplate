@@ -1,0 +1,67 @@
+{# _views/feeds/default #}
+{% extends '_layouts/blank' %}
+
+
+
+{#
+  Params
+#}
+{% set feedItemTitle = feedItemTitle ?? entry.title %}
+{% set feedItemUrl = feedItemUrl ?? entry.url %}
+{% set feedItemCredit = feedItemCredit ?? entry.author %}
+{% set feedItemDatePublished = feedItemDatePublished ?? entry.postDate %}
+{% set feedItemDateUpdated = feedItemDateUpdated ?? entry.dateUpdated %}
+{% set feedItemTaxonomies = feedItemTaxonomies ?? [] %}
+{% set feedItemBody = feedItemBody ?? '' %}
+
+
+
+{#
+  Biz Logic
+#}
+{% set feedItemBody = feedItemBody
+  |typogrify
+  |enkode_emails
+  |retcon([
+    ['remove', 'noscript'],
+    ['attr', '*', {
+      class: false,
+      style: false,
+      id: false,
+      'data-sizes': false,
+    }],
+  ])
+%}
+
+
+
+{#
+  Render
+#}
+{% block layout %}
+  <item>
+    <title>{{ feedItemTitle }}</title>
+    
+    {% if feedItemUrl %}
+      <link>{{ feedItemUrl }}</link>
+      <guid>{{ feedItemUrl }}</guid>
+    {% endif %}
+    
+    <content:encoded><![CDATA[{{ feedItemBody }}]]></content:encoded>
+    
+    {% if feedItemCredit %}
+      <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">{{ feedItemCredit }}</dc:creator>
+    {% endif %}
+    
+    {% if feedItemDatePublished %}
+      <pubDate>{{ feedItemDatePublished|date(constant('DATE_RFC822')) }}</pubDate>
+    {% endif %}
+    {% if feedItemDateUpdated %}
+      <atom:updated>{{ feedItemDateUpdated|atom }}</atom:updated>
+    {% endif %}
+    
+    {% for item in feedItemTaxonomies %}
+      <category><![CDATA[{{ item }}]]></category>
+    {% endfor %}
+  </item>
+{% endblock %}

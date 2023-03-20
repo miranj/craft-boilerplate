@@ -1,0 +1,12 @@
+{#
+  RSS Feed Router
+#}
+
+{%- extends (entry is instance of ('craft\\elements\\Category') ? [
+  '_views/feeds/' ~ entry.group.handle,
+] : [
+  '_views/feeds/' ~ entry.section.handle ~ '-' ~ entry.type.handle,
+  '_views/feeds/' ~ entry.section.handle,
+])|merge([
+  '_views/feeds/default',
+]) -%}

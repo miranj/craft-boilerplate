@@ -1,0 +1,39 @@
+{%- header('Content-Type: text/xml; charset=utf-8') -%}
+{%- extends '_layouts/init' -%}
+
+
+
+{#
+  Layout
+#}
+{% block response %}
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" {% block feed_attributes %}xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom"{% endblock %}>
+  <channel>
+    
+    {#
+      Params
+    #}
+    {% set feedEntries = feedEntries ?? indexEntries ?? [] %}
+    
+    
+    
+    {#
+      Render
+    #}
+    {# Use SEOmate to render the feed's header #}
+    {% block seo %}
+      {% set seomate = (seomate ?? {})|merge({
+        config: { metaTemplate: '_layouts/feed-seo' },
+      }, true) %}
+      {% hook 'seomateMeta' %}
+    {% endblock %}
+    
+    {% block channel %}
+      {% for entry in collect(feedEntries).all() %}
+        {% include '_routers/feed' with { entry } only %}
+      {% endfor %}
+    {% endblock %}
+  </channel>
+</rss>
+{% endblock %}
