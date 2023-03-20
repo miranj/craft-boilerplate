@@ -16,7 +16,6 @@ project boilerplate (see [`craft3`](https://github.com/miranj/craft-boilerplate/
   - [Tailwind CSS](https://tailwindcss.com/)
 - Server configuration files for Apache (dev) and Nginx (staging, production).
 - A few Craft plugins, along with their config files:
-  - [CacheFlag](https://github.com/mmikkel/CacheFlag-Craft3)
   - [Child Me](https://github.com/mmikkel/ChildMe-Craft)
   - [CP Field Inspect](https://github.com/mmikkel/CpFieldInspect-Craft)
   - [Element Index Defaults](https://github.com/verbb/element-index-defaults)

@@ -12,7 +12,6 @@
     and (craft.app.session.hasFlash('error') or craft.app.session.hasFlash('notice'))
   )
 %}
-{% set cacheflags = cacheflags ?? 'entries|assets|globals|categories|users' %}
 {% set cacheKeyPrefix = getenv('APP_ID') ~ ':v1' %}
 
 
@@ -88,16 +87,16 @@
     
     {# If a cacheKey is set, use that to globally cache the rendered page #}
     {% if cacheKey ?? false %}
-      {% cacheflag flagged cacheflags globally using key (htmlCacheKey ~ ':' ~ cacheKey) for 1 month %}
+      {% cache globally using key (htmlCacheKey ~ ':' ~ cacheKey) for 1 month %}
         {{- block('response') -}}
-      {% endcacheflag %}
+      {% endcache %}
       
     {% else %}
       
       {# No cacheKey set, cache the rendered page by url (not globally) #}
-      {% cacheflag flagged cacheflags using key htmlCacheKey for 1 month %}
+      {% cache using key htmlCacheKey for 1 month %}
         {{- block('response') -}}
-      {% endcacheflag %}
+      {% endcache %}
     {% endif %}
     
   {% else %}
