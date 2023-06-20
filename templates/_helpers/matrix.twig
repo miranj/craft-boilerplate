@@ -1,0 +1,54 @@
+{#
+  Matrix Helper Utilities
+#}
+
+
+
+{#
+  bunchByType()
+  Transform a flat list of Matrix (or Vizy) rows into a nested array,
+  grouping rows of specificed bunchTypes as hashes
+  
+  Example:
+  rows: [ heading, text, image, link1, link2, link3 ]
+  bunchTypes: link
+  return: [
+    heading, text, image,
+    { 
+      type: link,
+      rows: link1, link2, link3
+    },
+  ]
+#}
+{% macro bunchByType(rows, bunchTypes, bunchTarget) %}
+  {% set _startIndex = null %}
+  {% set bunchedRows = [] %}
+  {% set rows = rows|filter %}
+  {% for currentRow in rows %}
+    {% set rowType = currentRow.type == 'vizyBlock'
+      ? currentRow.handle
+      : currentRow.type.handle ?? currentRow.type
+    %}
+    {% if rowType in bunchTypes %}
+      {% set _startIndex = _startIndex is not same as(null) ? _startIndex : loop.index0 %}
+    {% else %}
+      {% if _startIndex is not same as(null) %}
+        {% set bunchedRows = bunchedRows|merge([{
+          type: bunchTarget,
+          rows: rows|slice(_startIndex, loop.index0 - _startIndex),
+        }]) %}
+        {% set _startIndex = null %}
+      {% endif %}
+      {% set bunchedRows = bunchedRows|merge([currentRow]) %}
+    {% endif %}
+  {% endfor %}
+  
+  {% if _startIndex is not same as(null) %}
+    {% set bunchedRows = bunchedRows|merge([{
+      type: bunchTarget,
+      rows: rows[_startIndex:],
+    }]) %}
+  {% endif %}
+  
+  {% return bunchedRows %}
+{% endmacro %}
