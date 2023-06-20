@@ -21,6 +21,40 @@
 
 
 {#
+  normaliseRichtext()
+  Apply standard set of filters and transforms to user-entered
+  rich text to prepare it for sanitised HTML output
+  - parse reference tags
+  - markdown (none / md / extra / inline)
+  - lazyload iframes
+  - typogrify
+  - obfuscate emails
+  
+  eg: normaliseRichtext('## Hello World') => '<h2>Hello World</h2>'
+
+  `composer require mmikkel/retcon miranj/craft-obfuscator nystudio107/craft-typogrify`
+#}
+{% macro normaliseRichtext(text, markdown = 'none') %}
+  {% set text = text|parseRefs %}
+  
+  {% if markdown in ['extra', 'markdownExtra', 'mdExtra'] %}
+    {% set text = _self.markdownExtra(text) %}
+  {% elseif markdown in ['md', 'original', 'markdown'] or markdown == true %}
+    {% set text = text|md %}
+  {% elseif markdown in ['inline', 'inlineOnly'] %}
+    {% set text = text|md('original', inlineOnly=true) %}
+  {% endif %}
+  
+  {% return text
+    |retconAttr('iframe', { loading: 'lazy' })
+    |typogrify
+    |enkode_emails
+  %}
+{% endmacro %}
+
+
+
+{#
   addDropcap()
   Adds a hook to style drop caps inside markdown text
   
