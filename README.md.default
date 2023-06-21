@@ -41,10 +41,7 @@
 
     Note: Use `npm install` if `package-lock.json` does not exist.
 
-3.  Edit 'web/.htaccess'
-
-    - Comment out HTTPS redirection directives (search for 'RewriteCond %{HTTPS} !=on')
-    - Disable all `Expires` headers
+3.  Edit 'web/.htaccess' and disable all `Expires` headers.
 
 4.  To migrate content from the production server —
 
