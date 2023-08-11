@@ -18,8 +18,10 @@
   dateCreated: entry.postDate ?? null,
   images: entrySeomateMeta.meta.image ?: entryImages|filter|values,
   authors: [{
-    title: siteName,
-    url: siteUrl,
+    organizations: [{
+      title: siteName,
+      url: siteUrl(),
+    }],
   }],
   publishers: [{
     title: siteName,
