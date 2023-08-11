@@ -1,0 +1,159 @@
+[
+    {
+        "name": "Social Media Links",
+        "handle": "socialMediaLinks",
+        "instructions": null,
+        "required": null,
+        "searchable": true,
+        "translationMethod": "site",
+        "translationKeyFormat": null,
+        "type": "craft\\fields\\Matrix",
+        "settings": {
+            "minBlocks": null,
+            "maxBlocks": null,
+            "contentTable": "{{%matrixcontent_socialmedialinks}}",
+            "propagationMethod": "all",
+            "propagationKeyFormat": null,
+            "blockTypes": {
+                "new1": {
+                    "name": "Facebook",
+                    "handle": "facebook",
+                    "fields": {
+                        "new1": {
+                            "name": "__blank__",
+                            "handle": "website",
+                            "required": true,
+                            "instructions": null,
+                            "searchable": false,
+                            "translationMethod": "none",
+                            "translationKeyFormat": null,
+                            "type": "craft\\fields\\Url",
+                            "typesettings": {
+                                "types": [
+                                    "url"
+                                ],
+                                "maxLength": 255
+                            },
+                            "width": 100
+                        }
+                    }
+                },
+                "new2": {
+                    "name": "Twitter",
+                    "handle": "twitter",
+                    "fields": {
+                        "new1": {
+                            "name": "__blank__",
+                            "handle": "website",
+                            "required": true,
+                            "instructions": null,
+                            "searchable": false,
+                            "translationMethod": "none",
+                            "translationKeyFormat": null,
+                            "type": "craft\\fields\\Url",
+                            "typesettings": {
+                                "types": [
+                                    "url"
+                                ],
+                                "maxLength": 255
+                            },
+                            "width": 100
+                        }
+                    }
+                },
+                "new3": {
+                    "name": "LinkedIn",
+                    "handle": "linkedin",
+                    "fields": {
+                        "new1": {
+                            "name": "__blank__",
+                            "handle": "website",
+                            "required": true,
+                            "instructions": null,
+                            "searchable": false,
+                            "translationMethod": "none",
+                            "translationKeyFormat": null,
+                            "type": "craft\\fields\\Url",
+                            "typesettings": {
+                                "types": [
+                                    "url"
+                                ],
+                                "maxLength": 255
+                            },
+                            "width": 100
+                        }
+                    }
+                },
+                "new4": {
+                    "name": "YouTube",
+                    "handle": "youtube",
+                    "fields": {
+                        "new1": {
+                            "name": "__blank__",
+                            "handle": "website",
+                            "required": true,
+                            "instructions": null,
+                            "searchable": false,
+                            "translationMethod": "none",
+                            "translationKeyFormat": null,
+                            "type": "craft\\fields\\Url",
+                            "typesettings": {
+                                "types": [
+                                    "url"
+                                ],
+                                "maxLength": 255
+                            },
+                            "width": 100
+                        }
+                    }
+                },
+                "new5": {
+                    "name": "Instagram",
+                    "handle": "instagram",
+                    "fields": {
+                        "new1": {
+                            "name": "__blank__",
+                            "handle": "website",
+                            "required": true,
+                            "instructions": null,
+                            "searchable": false,
+                            "translationMethod": "none",
+                            "translationKeyFormat": null,
+                            "type": "craft\\fields\\Url",
+                            "typesettings": {
+                                "types": [
+                                    "url"
+                                ],
+                                "maxLength": 255
+                            },
+                            "width": 100
+                        }
+                    }
+                },
+                "new6": {
+                    "name": "Mastodon",
+                    "handle": "mastodon",
+                    "fields": {
+                        "new1": {
+                            "name": "__blank__",
+                            "handle": "website",
+                            "required": true,
+                            "instructions": null,
+                            "searchable": false,
+                            "translationMethod": "none",
+                            "translationKeyFormat": null,
+                            "type": "craft\\fields\\Url",
+                            "typesettings": {
+                                "types": [
+                                    "url"
+                                ],
+                                "maxLength": 255
+                            },
+                            "width": 100
+                        }
+                    }
+                }
+            }
+        }
+    }
+]
