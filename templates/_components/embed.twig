@@ -1,0 +1,48 @@
+{#
+  _components/embed
+  
+  Embed content captured via a Hyper field
+  https://verbb.io/craft-plugins/hyper/docs/feature-tour/link-types#embed
+#}
+{% from '_helpers/text' import deferEmbeds, normaliseRichtext %}
+
+
+
+{#
+  Params
+#}
+{% set embedClass = params.class ?? '' %}
+{% set embedHyperField = params.embed ?? '' %}
+{% set embedCaptionClass = params.caption_class ?? '' %}
+{% set embedCaption = params.caption ?? '' %}
+
+
+
+{#
+  Variables
+#}
+{% set embedIsVideo = embedHyperField and embedHyperField.getData().providerName|lower in ['youtube', 'vimeo', 'facebook'] %}
+
+
+
+{#
+  Render
+#}
+{% if embedHyperField %}
+  <figure {{ attr({
+    class: [
+      embedClass,
+      embedIsVideo ? 'aspect-video responsive-embed',
+    ],
+  }) }}>
+
+    {{ deferEmbeds(embedHyperField.getHtml()) }}
+
+    {% if embedCaption %}
+      <figcaption {{ attr({ class: embedCaptionClass }) }}>
+        {{ normaliseRichtext(embedCaption) }}
+      </figcaption>
+    {% endif %}
+    
+  </figure>
+{% endif %}
