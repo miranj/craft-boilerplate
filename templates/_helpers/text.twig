@@ -45,8 +45,7 @@
     {% set text = text|md('original', inlineOnly=true) %}
   {% endif %}
   
-  {% return text
-    |retconAttr('iframe', { loading: 'lazy' })
+  {% return _self.deferEmbeds(_self.openPDFLinksInNewTab(text))
     |typogrify
     |enkode_emails
   %}
@@ -82,5 +81,18 @@
   {% return html|retconAttr('a[href$=".pdf"], a[href$=".PDF"]', {
     'target': '_blank',
     'data-no-pjax': true,
+  }) %}
+{% endmacro %}
+
+
+
+{#
+  deferEmbeds()
+  Lazyload embedded iframes
+  `composer require mmikkel/retcon`
+#}
+{% macro deferEmbeds(html) %}
+  {% return html|retconAttr('iframe', {
+    loading: 'lazy',
   }) %}
 {% endmacro %}
