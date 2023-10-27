@@ -3,6 +3,11 @@
     Detail Router
   #}
   
+  {# If non-paginated detail view has a page number, 404 #}
+  {% if craft.app.request.getPageNum() > 1 and not (indexPaginate ?? false) %}
+    {% exit 404 %}
+  {% endif %}
+  
   {%- include [
     '_views/details/' ~ entry.section.handle ~ '-' ~ entry.type.handle,
     '_views/details/' ~ entry.section.handle,
