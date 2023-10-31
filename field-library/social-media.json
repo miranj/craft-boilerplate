@@ -39,8 +39,8 @@
                     }
                 },
                 "new2": {
-                    "name": "Twitter",
-                    "handle": "twitter",
+                    "name": "X (Twitter)",
+                    "handle": "x-twitter",
                     "fields": {
                         "new1": {
                             "name": "__blank__",
