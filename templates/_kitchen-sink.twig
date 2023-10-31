@@ -13,79 +13,72 @@
 {% set loremTitle = 'Aperiam, culpa numquam!' %}
 {% set loremPara = 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam, culpa numquam! Numquam corrupti rerum, nihil explicabo voluptatibus aliquam dolorum recusandae pariatur in, porro asperiores dolores similique exercitationem necessitatibus. Ratione, sint.' %}
 
-{% set layoutStyles = [
-  {
-    heading: 'Layout Areas',
-    classes: {}
-  }
-] %}
+{% set layoutStyles = [{
+  heading: 'Layout Areas',
+  classes: {}
+}] %}
 
-{% set colourStyles = [
-  {
-    heading: 'Colours',
-    groups: {
-      'Base': {
-        'Black': 'bg-black',
-        'White': 'bg-white',
-      },
+{% set colourStyles = [{
+  heading: 'Colours',
+  groups: {
+    'Base': {
+      'Black': 'bg-black',
+      'White': 'bg-white',
     },
-  },{
-    heading: 'Gradients',
-    groups: {
-      'Gradients': {
-        'Black to White': 'bg-gradient-to-r from-black to-white',
-      }
+  },
+},{
+  heading: 'Gradients',
+  groups: {
+    'Gradients': {
+      'Black to White': 'bg-gradient-to-r from-black to-white',
     }
   }
-] %}
+}] %}
 
-{% set typographyStyles = [
-  {
-    heading: 'Font Classes',
-    classes: {},
-    text: loremTitle,
-  },{
-    heading: 'Font Styles',
-    classes: {
-      'Title Normal': ['font-title', 'font-normal'],
-      'Title Bold': ['font-title', 'font-bold'],
-      'Prose Italic': ['font-prose', 'italic'],
-      'Prose Normal': ['font-prose', 'font-normal'],
-      'Prose Bold': ['font-prose', 'font-bold'],
-      'Body': [],
-    },
-    text: loremTitle,
-  },{
-    heading: 'Font Scale',
-    classes: {
-      'xs': ['text-xs'],
-      'sm': ['text-sm'],
-      'base': ['text-base'],
-      'lg': ['text-lg'],
-      'xl': ['text-xl'],
-      '2xl': ['text-2xl'],
-      '3xl': ['text-3xl'],
-      '4xl': ['text-4xl'],
-      '5xl': ['text-5xl'],
-      '6xl': ['text-6xl'],
-    },
-    text: loremTitle,
-  },{
-    heading: 'Line Height',
-    classes: {
-      Squeeze: ['leading-squeeze'],
-      Tight: ['leading-tight'],
-      Snug: ['leading-snug'],
-      Normal: ['leading-normal'],
-    },
-    text: loremPara,
+{% set typographyStyles = [{
+  heading: 'Font Classes',
+  classes: {},
+  text: loremTitle,
+},{
+  heading: 'Font Styles',
+  classes: {
+    'Title Normal': ['font-title', 'font-normal'],
+    'Title Bold': ['font-title', 'font-bold'],
+    'Prose Italic': ['font-prose', 'italic'],
+    'Prose Normal': ['font-prose', 'font-normal'],
+    'Prose Bold': ['font-prose', 'font-bold'],
+    'Body': [],
   },
-] %}
+  text: loremTitle,
+},{
+  heading: 'Font Scale',
+  classes: {
+    'xs': ['text-xs'],
+    'sm': ['text-sm'],
+    'base': ['text-base'],
+    'lg': ['text-lg'],
+    'xl': ['text-xl'],
+    '2xl': ['text-2xl'],
+    '3xl': ['text-3xl'],
+    '4xl': ['text-4xl'],
+    '5xl': ['text-5xl'],
+    '6xl': ['text-6xl'],
+  },
+  text: loremTitle,
+},{
+  heading: 'Line Height',
+  classes: {
+    Squeeze: ['leading-squeeze'],
+    Tight: ['leading-tight'],
+    Snug: ['leading-snug'],
+    Normal: ['leading-normal'],
+  },
+  text: loremPara,
+}] %}
 
 
 
 {% block main %}
-
   <div id="top" class="container px-4 py-16 space-y-16">
     <h1 class="text-6xl font-bold">
       {{ siteName }} Kitchen Sink
@@ -121,6 +114,8 @@
       </ol>
     </nav>
   </div>
+
+
 
   {% for style in layoutStyles %}
     <section>
