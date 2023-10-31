@@ -1,0 +1,218 @@
+[
+  {
+    "name": "Canonical Links",
+    "handle": "canonicalLinks",
+    "instructions": "",
+    "required": null,
+    "searchable": 0,
+    "translationMethod": "site",
+    "translationKeyFormat": null,
+    "type": "craft\\fields\\Matrix",
+    "settings": {
+      "minBlocks": "",
+      "maxBlocks": "",
+      "contentTable": "{{%matrixcontent_canonicallinks}}",
+      "propagationMethod": "all",
+      "propagationKeyFormat": null,
+      "blockTypes": {
+        "new1": {
+          "name": "Spotify",
+          "handle": "spotify",
+          "fields": {
+            "new1": {
+              "name": "__blank__",
+              "handle": "hyperlink",
+              "required": 1,
+              "instructions": "",
+              "searchable": 1,
+              "translationMethod": "none",
+              "translationKeyFormat": null,
+              "type": "craft\\fields\\Url",
+              "typesettings": {
+                "types": ["url"],
+                "placeholder": null,
+                "maxLength": 255
+              },
+              "width": 100
+            }
+          }
+        },
+        "new2": {
+          "name": "Apple Podcasts",
+          "handle": "applePodcasts",
+          "fields": {
+            "new1": {
+              "name": "__blank__",
+              "handle": "hyperlink",
+              "required": 1,
+              "instructions": "",
+              "searchable": 1,
+              "translationMethod": "none",
+              "translationKeyFormat": null,
+              "type": "craft\\fields\\Url",
+              "typesettings": {
+                "types": ["url"],
+                "placeholder": null,
+                "maxLength": 255
+              },
+              "width": 100
+            }
+          }
+        },
+        "new3": {
+          "name": "Google Podcasts",
+          "handle": "googlePodcasts",
+          "fields": {
+            "new1": {
+              "name": "__blank__",
+              "handle": "hyperlink",
+              "required": 1,
+              "instructions": "",
+              "searchable": 1,
+              "translationMethod": "none",
+              "translationKeyFormat": null,
+              "type": "craft\\fields\\Url",
+              "typesettings": {
+                "types": ["url"],
+                "placeholder": null,
+                "maxLength": 255
+              },
+              "width": 100
+            }
+          }
+        },
+        "new4": {
+          "name": "Stitcher",
+          "handle": "stitcher",
+          "fields": {
+            "new1": {
+              "name": "__blank__",
+              "handle": "hyperlink",
+              "required": 1,
+              "instructions": "",
+              "searchable": 1,
+              "translationMethod": "none",
+              "translationKeyFormat": null,
+              "type": "craft\\fields\\Url",
+              "typesettings": {
+                "types": ["url"],
+                "placeholder": null,
+                "maxLength": 255
+              },
+              "width": 100
+            }
+          }
+        },
+        "new5": {
+          "name": "Anchor.fm",
+          "handle": "anchorfm",
+          "fields": {
+            "new1": {
+              "name": "__blank__",
+              "handle": "hyperlink",
+              "required": 1,
+              "instructions": "",
+              "searchable": 1,
+              "translationMethod": "none",
+              "translationKeyFormat": null,
+              "type": "craft\\fields\\Url",
+              "typesettings": {
+                "types": ["url"],
+                "placeholder": null,
+                "maxLength": 255
+              },
+              "width": 100
+            }
+          }
+        },
+        "new6": {
+          "name": "YouTube",
+          "handle": "youtube",
+          "fields": {
+            "new1": {
+              "name": "__blank__",
+              "handle": "hyperlink",
+              "required": 1,
+              "instructions": "",
+              "searchable": 1,
+              "translationMethod": "none",
+              "translationKeyFormat": null,
+              "type": "craft\\fields\\Url",
+              "typesettings": {
+                "types": ["url"],
+                "placeholder": null,
+                "maxLength": 255
+              },
+              "width": 100
+            }
+          }
+        },
+        "new7": {
+          "name": "Vimeo",
+          "handle": "vimeo",
+          "fields": {
+            "new1": {
+              "name": "__blank__",
+              "handle": "hyperlink",
+              "required": 1,
+              "instructions": "",
+              "searchable": 1,
+              "translationMethod": "none",
+              "translationKeyFormat": null,
+              "type": "craft\\fields\\Url",
+              "typesettings": {
+                "types": ["url"],
+                "placeholder": null,
+                "maxLength": 255
+              },
+              "width": 100
+            }
+          }
+        },
+        "new8": {
+          "name": "Other",
+          "handle": "other",
+          "fields": {
+            "new1": {
+              "name": "Label",
+              "handle": "label",
+              "required": 1,
+              "instructions": "",
+              "searchable": 1,
+              "translationMethod": "none",
+              "translationKeyFormat": null,
+              "type": "craft\\fields\\PlainText",
+              "typesettings": {
+                "uiMode": "normal",
+                "placeholder": null,
+                "code": "",
+                "multiline": "",
+                "initialRows": 4,
+                "charLimit": null,
+                "byteLimit": null,
+                "columnType": null
+              },
+              "width": 100
+            },
+            "new2": {
+              "name": "URL",
+              "handle": "hyperlink",
+              "required": 1,
+              "instructions": "",
+              "searchable": 1,
+              "translationMethod": "none",
+              "translationKeyFormat": null,
+              "type": "craft\\fields\\Url",
+              "typesettings": {
+                "types": ["url"],
+                "placeholder": null,
+                "maxLength": 255
+              },
+              "width": 100
+            }
+          }
+        }
+      }
+    }
+  }
+]
