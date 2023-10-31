@@ -527,10 +527,10 @@
             {% set fallbackImage = imageSources
               |reverse
               |map(i => i.type is not defined and i.media == source.media ? i.transforms|last)
-              |filter %}
-
-            {% set fallbackImageUrl = (fallbackImage|last).url ?? imageDefault.url %}
-            {% set fallbackImageType = (fallbackImage|last).mimeType ?? imageDefault.mimeType %}
+              |filter
+              |last %}
+            {% set fallbackImageUrl = fallbackImage.url ?? imageDefault.url %}
+            {% set fallbackImageType = fallbackImage.mimeType ?? imageDefault.mimeType %}
             {% for imageSet in imageSetVersions %}
               background-image: {{ imageSet }}(
                 url('{{ (source.transforms|last).url }}') type('{{ source.type }}'),
