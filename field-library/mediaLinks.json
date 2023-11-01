@@ -1,7 +1,7 @@
 [
   {
-    "name": "Canonical Links",
-    "handle": "canonicalLinks",
+    "name": "Media Links",
+    "handle": "mediaLinks",
     "instructions": "",
     "required": null,
     "searchable": 0,
