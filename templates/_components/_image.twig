@@ -521,26 +521,27 @@
         background-image: url('{{ imageDefault.url }}');
       }
       {% for source in imageSources|reverse %}
-      @media {{ source.media }} {
-        .{{ imageCssClass }} {
-          {% if source.type is defined %}
-            {% set fallbackImage = imageSources
-              |reverse
-              |map(i => i.type is not defined and i.media == source.media ? i.transforms|last)
-              |filter
-              |last %}
-            {% set fallbackImageUrl = fallbackImage.url ?? imageDefault.url %}
-            {% set fallbackImageType = fallbackImage.mimeType ?? imageDefault.mimeType %}
-            {% for imageSet in imageSetVersions %}
-              background-image: {{ imageSet }}(
-                url('{{ (source.transforms|last).url }}') type('{{ source.type }}'),
-                url('{{ fallbackImageUrl }}') type('{{ fallbackImageType }}'));
-            {% endfor %}
-          {% else %}
-            background-image: url('{{ (source.transforms|last).url }}');
-          {% endif %}
+        @media {{ source.media }} {
+          .{{ imageCssClass }} {
+            {% if source.type is defined %}
+              {% set fallbackImage = imageSources
+                |reverse
+                |map(i => i.type is not defined and i.media == source.media ? i.transforms|last)
+                |filter
+                |last %}
+              {% set fallbackImageUrl = fallbackImage.url ?? imageDefault.url %}
+              {% set fallbackImageType = fallbackImage.mimeType ?? imageDefault.mimeType %}
+              {% for imageSet in imageSetVersions %}
+                background-image: {{ imageSet }}(
+                  url('{{ (source.transforms|last).url }}') type('{{ source.type }}'),
+                  url('{{ fallbackImageUrl }}') type('{{ fallbackImageType }}'));
+              {% endfor %}
+            {% else %}
+              background-image: url('{{ (source.transforms|last).url }}');
+            {% endif %}
+          }
         }
-      }
+      {% endfor %}
     </style>
   {% endminify %}
 {% endif %}
