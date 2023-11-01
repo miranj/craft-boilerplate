@@ -1,0 +1,307 @@
+{#
+  Kitchen Sink
+
+  This file helps in visualising and documenting the various design tokens to be used in a project:
+  - Grid layouts
+  - Colours and gradients
+  - Font styles
+  - Font scales and line-height
+
+  This file assumes Tailwind CSS utility classes are being used in the project.
+
+  To view the output in the browser, populate the hashes below with the corresponding classes:
+  - layoutStyles
+  - colourStyles
+  - typographyStyles
+#}
+
+
+
+{% if not devMode %}
+  {% requireLogin %}
+  {% if not currentUser.admin %}
+    {% exit 403 %}
+  {% endif %}
+{% endif %}
+
+
+
+{% extends '_layouts/base' %}
+{% set doNotCache = true %}
+
+{% set loremTitle = 'Aperiam, culpa numquam!' %}
+{% set loremPara = 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam, culpa numquam! Numquam corrupti rerum, nihil explicabo voluptatibus aliquam dolorum recusandae pariatur in, porro asperiores dolores similique exercitationem necessitatibus. Ratione, sint.' %}
+
+
+
+{#
+  Layouts
+
+  Add the utility classes used to target areas in a base grid. For example:
+
+  {% set layoutStyles = [{
+    heading: 'Layout Areas',
+    classes: {
+      'Full': 'area-full',
+      'Base': 'area-base',
+      'Core': 'area-core',
+      'Core [First Half Large]': 'area-core-firstHalfLarge',
+      'Core [Second Half Small]': 'area-core-secondHalfSmall',
+    }
+  }] %}
+
+  The layout structure will be as follows:
+
+  <div class="{{ baseGrid }}">
+    <div class="{{ layoutStyles.classes[class] }}"></div>
+    ...
+  </div>
+#}
+
+{% set baseGrid = 'layout-base' %}
+{% set layoutStyles = [{
+  heading: 'Layout Areas',
+  classes: {}
+}] %}
+
+
+
+{#
+  Colours
+
+  Add colours and gradients as background classes, so they fill their containers.
+#}
+
+{% set colourStyles = [{
+  heading: 'Colours',
+  groups: {
+    'Base': {
+      'Black': 'bg-black',
+      'White': 'bg-white',
+    },
+  },
+},{
+  heading: 'Gradients',
+  groups: {
+    'Gradients': {
+      'Black to White': 'bg-gradient-to-r from-black to-white',
+    }
+  }
+}] %}
+
+
+
+{#
+  Typography
+
+  Use Font Classes to display any globally set font styles. For example:
+
+  {% set typographyStyles = [{
+    heading: 'Font Classes',
+    classes: {
+      'H1-Black': ['typo-h1-black'],
+      'H1': ['typo-h1'],
+      'H2': ['typo-h2'],
+      'H3': ['typo-h3'],
+      'P1': ['typo-p1'],
+      'P2': ['typo-p2'],
+      'P3': ['typo-p3'],
+    },
+    text: loremTitle,
+  },{
+  ...
+  }] %}
+#}
+
+{% set typographyStyles = [{
+  heading: 'Font Classes',
+  classes: {},
+  text: loremTitle,
+},{
+  heading: 'Font Styles',
+  classes: {
+    'Title Normal': ['font-title', 'font-normal'],
+    'Title Bold': ['font-title', 'font-bold'],
+    'Prose Italic': ['font-prose', 'italic'],
+    'Prose Normal': ['font-prose', 'font-normal'],
+    'Prose Bold': ['font-prose', 'font-bold'],
+    'Body': [],
+  },
+  text: loremTitle,
+},{
+  heading: 'Font Scale',
+  classes: {
+    'xs': ['text-xs'],
+    'sm': ['text-sm'],
+    'base': ['text-base'],
+    'lg': ['text-lg'],
+    'xl': ['text-xl'],
+    '2xl': ['text-2xl'],
+    '3xl': ['text-3xl'],
+    '4xl': ['text-4xl'],
+    '5xl': ['text-5xl'],
+    '6xl': ['text-6xl'],
+  },
+  text: loremTitle,
+},{
+  heading: 'Line Height',
+  classes: {
+    Squeeze: ['leading-squeeze'],
+    Tight: ['leading-tight'],
+    Snug: ['leading-snug'],
+    Normal: ['leading-normal'],
+  },
+  text: loremPara,
+}] %}
+
+
+
+{% block main %}
+  <div id="top" class="container px-4 py-16 space-y-16">
+    <h1 class="text-6xl font-bold">
+      {{ siteName }} Kitchen Sink
+    </h1>
+    <nav class="p-4 bg-black/5">
+      <h2 class="text-xl mb-2 font-bold">
+        On This Page
+      </h2>
+      <ol class="ml-6 list-decimal">
+        {% for style in layoutStyles %}
+          <li>
+            <a class="underline" href="#{{ style.heading|kebab }}">
+              {{ style.heading }}
+            </a>
+          </li>
+        {% endfor %}
+
+        {% for style in colourStyles %}
+          <li>
+            <a class="underline" href="#{{ style.heading|kebab }}">
+              {{ style.heading }}
+            </a>
+          </li>
+        {% endfor %}
+
+        {% for style in typographyStyles %}
+          <li>
+            <a class="underline" href="#{{ style.heading|kebab }}">
+              {{ style.heading }}
+            </a>
+          </li>
+        {% endfor %}
+      </ol>
+    </nav>
+  </div>
+
+
+
+  {% for style in layoutStyles %}
+    <section>
+      <div class="container px-4">
+        <header class="flex w-full border-t pt-2">
+          <h2 id="{{ style.heading|kebab }}" class="text-xl mb-8">
+            {{ style.heading }}
+          </h2>
+          <a class="ml-auto text-xs underline" href="#top">
+            Back to top
+          </a>
+        </header>
+      </div>
+      <div class="container">
+        <span class="inline-block px-2 py-1">
+          Layout Base Grid <br>
+          <span class="text-sm">
+            container
+          </span>
+        </span>
+        <div class="{{ baseGrid }} gap-y-4">
+          {% for label, class in style.classes %}
+            <div class="bg-black/10 {{ class }}  px-2 py-1">
+              {{ label }}<br>
+              <span class="text-sm">
+                {{ class }}
+              </span>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </section>
+  {% endfor %}
+
+
+
+  <div class="container px-4 py-16 space-y-16">
+    {% if colourStyles is not empty %}
+      {% for section in colourStyles %}
+        <section>
+          <header class="flex w-full border-t pt-2">
+            <h2 id="{{ section.heading|kebab }}" class="text-3xl mb-8">
+              {{ section.heading }}
+            </h2>
+            <a class="ml-auto text-xs underline" href="#">
+              Back to top
+            </a>
+          </header>
+          <div class="space-y-20">
+            {% for heading, styles in section.groups %}
+              <div class="flex flex-col sm:flex-row gap-8">
+                <h3 class="text-sm p-2 space-y-1 sm:w-1/4 sm:shrink-0 bg-black/5">
+                  <span class="block font-medium">
+                    {{ heading }}
+                  </span>
+                </h3>
+                <div class="grid grid-cols-3 xs:grid-cols-4 gap-4 md:gap-10">
+                  {% for label, class in styles %}
+                    <figure class="flex flex-col gap-y-2 md:max-w-24">
+                      <div class="{{ class }} aspect-square rounded-2xl"></div>
+                      <figcaption class="text-sm">
+                        <span class="font-medium">
+                          {{ label }}
+                        </span>
+                        <span class="block text-xs">
+                          {{ class }}
+                        </span>
+                      </figcaption>
+                    </figure>
+                  {% endfor %}
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+        </section>
+      {% endfor %}
+    {% endif %}
+
+
+
+    {% for style in typographyStyles %}
+      <section>
+        <header class="flex w-full border-t pt-2">
+          <h2 id="{{ style.heading|kebab }}" class="text-xl mb-8">
+            {{ style.heading }}
+          </h2>
+          <a class="ml-auto text-xs underline" href="#top">
+            Back to top
+          </a>
+        </header>
+        <div class="space-y-12 md:space-y-2">
+          {% for title, classes in style.classes %}
+            <div class="sm:flex sm:gap-8">
+              <div class="text-sm mb-2 p-2 space-y-1 sm:w-1/4 sm:shrink-0 bg-black/5">
+                <h3 class="block font-medium">
+                  {{ title }}
+                </h3>
+                <span class="block text-xs">
+                  {{ classes|join(' ') }}
+                </span>
+              </div>
+              <div {{ attr({ class: classes|push('self-center') }) }}>
+                {{ style.text }}
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </section>
+    {% endfor %}
+  </div>
+{% endblock %}
