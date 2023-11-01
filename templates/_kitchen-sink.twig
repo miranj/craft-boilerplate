@@ -1,3 +1,22 @@
+{#
+  Kitchen Sink
+
+  This file helps in visualising and documenting the various design tokens to be used in a project:
+  - Grid layouts
+  - Colours and gradients
+  - Font styles
+  - Font scales and line-height
+
+  This file assumes Tailwind CSS utility classes are being used in the project.
+
+  To view the output in the browser, populate the hashes below with the corresponding classes:
+  - layoutStyles
+  - colourStyles
+  - typographyStyles
+#}
+
+
+
 {% if not devMode %}
   {% requireLogin %}
   {% if not currentUser.admin %}
@@ -13,10 +32,45 @@
 {% set loremTitle = 'Aperiam, culpa numquam!' %}
 {% set loremPara = 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam, culpa numquam! Numquam corrupti rerum, nihil explicabo voluptatibus aliquam dolorum recusandae pariatur in, porro asperiores dolores similique exercitationem necessitatibus. Ratione, sint.' %}
 
+
+
+{#
+  Layouts
+
+  Add the utility classes used to target areas in a base grid. For example:
+
+  {% set layoutStyles = [{
+    heading: 'Layout Areas',
+    classes: {
+      'Full': 'area-full',
+      'Base': 'area-base',
+      'Core': 'area-core',
+      'Core [First Half Large]': 'area-core-firstHalfLarge',
+      'Core [Second Half Small]': 'area-core-secondHalfSmall',
+    }
+  }] %}
+
+  The layout structure will be as follows:
+
+  <div class="{{ baseGrid }}">
+    <div class="{{ layoutStyles.classes[class] }}"></div>
+    ...
+  </div>
+#}
+
+{% set baseGrid = 'layout-base' %}
 {% set layoutStyles = [{
   heading: 'Layout Areas',
   classes: {}
 }] %}
+
+
+
+{#
+  Colours
+
+  Add colours and gradients as background classes, so they fill their containers.
+#}
 
 {% set colourStyles = [{
   heading: 'Colours',
@@ -34,6 +88,30 @@
     }
   }
 }] %}
+
+
+
+{#
+  Typography
+
+  Use Font Classes to display any globally set font styles. For example:
+
+  {% set typographyStyles = [{
+    heading: 'Font Classes',
+    classes: {
+      'H1-Black': ['typo-h1-black'],
+      'H1': ['typo-h1'],
+      'H2': ['typo-h2'],
+      'H3': ['typo-h3'],
+      'P1': ['typo-p1'],
+      'P2': ['typo-p2'],
+      'P3': ['typo-p3'],
+    },
+    text: loremTitle,
+  },{
+  ...
+  }] %}
+#}
 
 {% set typographyStyles = [{
   heading: 'Font Classes',
@@ -136,7 +214,7 @@
             container
           </span>
         </span>
-        <div class="layout-base gap-y-4">
+        <div class="{{ baseGrid }} gap-y-4">
           {% for label, class in style.classes %}
             <div class="bg-black/10 {{ class }}  px-2 py-1">
               {{ label }}<br>
