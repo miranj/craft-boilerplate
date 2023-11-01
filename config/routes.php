@@ -18,4 +18,6 @@
  * set to the value `2012`.
  */
 
-return [];
+return [
+    '_kitchen-sink' => ['template' => '_kitchen-sink'],
+];
