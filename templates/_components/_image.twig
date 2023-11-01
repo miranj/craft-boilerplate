@@ -93,7 +93,7 @@
 
   Simple examples
   ---------------
-  
+
   1)  Basic (no transforms)
       ```
       {% include '_components/_image' with { params: {
@@ -127,13 +127,13 @@
         <noscript>
           <img src="image.png">
         </noscript>
-      
+
         <source
           type="image/webp"
           srcset="base64placeholder.svg"
           media="(min-width: 0)"
           data-srcset="image.webp 650w">
-      
+
         <img
           class="lazyload no-js:hidden"
           src="base64placeholder.svg"
@@ -142,7 +142,7 @@
           data-srcset="image.png 650w">
       </picture>
       ```
-  
+
   3)  With different breakpoint assets
       ```
       {% include '_components/_image' with { params: {
@@ -342,7 +342,7 @@
       Warning: No Image Preset
     </span>
   {% endif %}
-  
+
   {#
     Ensure all breakpoint asset overrides are present in the breakpoint presets
     and that all breakpoint presets use the correct asset for their transforms
@@ -371,7 +371,7 @@
   {% set imageGenerateWebp = imageGenerateWebp and not craft.imager.isAnimated(imageAsset) %}
   {% set imageIsCwebpSupported = imageAsset.mimeType in ['image/jpeg', 'image/png', 'image/tiff']
     or imageAsset.extension in ['jpg', 'jpeg', 'jfif', 'pjpeg', 'pjp', 'png', 'tif', 'tiff'] %}
-  
+
   {% for imagePreset in sortBreakpointPresets(breakpoints, queries|keys) %}
     {% set _imageAsset = imageBreakpointAssets
       and imagePreset.media is defined
@@ -383,7 +383,7 @@
     {% set imageScaleFactor = imageIsSvg ? 100 : 1 %}
     {% set imageSizesGuide = (imagePreset.guide ?? '')|replace(queries) ?: false %}
     {% set imageSourcesMedia = (imagePreset.media ?? '(min-width: 0)')|replace(queries) %}
-    
+
     {% if not (imageIsSvg or imageIsAnimatedGif) %}
       {% set imageTransformSizes = imagePreset.sizes ?? [{ width: _imageAsset.width }] %}
       {% set imageTransformParams = {
@@ -395,7 +395,7 @@
         imageTransformParams
         ) %}
       {% set imageDefault = imageTransforms|last %}
-      
+
       {# Generate WebP versions and put them before regular ones #}
       {% if imageGenerateWebp %}
         {% set imageTransformsWebP = craft.imager.transformImage(
@@ -415,7 +415,7 @@
       {% set imageTransforms = [_imageAsset] %}
       {% set imageDefault = _imageAsset %}
     {% endif %}
-    
+
     {% if imagePreset.media is defined %}
       {% set imageSources = imageSources|merge([{
         media: imageSourcesMedia,
@@ -433,9 +433,9 @@
 {# Output #}
 {% if imageAsset and not imageIsCss %}
   {% set defaultSrcSet = craft.imager.srcset(imageTransforms) %}
-  
+
   {% if imageHasZoom %}
-    <a 
+    <a
       href="{{ imageDefault.url }}"
       data-pswp-width="{{ imageDefault.width }}"
       data-pswp-height="{{ imageDefault.height }}"
@@ -449,7 +449,7 @@
   {% if imageSources|length %}
     <picture>
   {% endif %}
-  
+
   {% if imageLazyload %}
     {# Non JS fallback #}
     <noscript>
@@ -462,7 +462,7 @@
       }) }}
     </noscript>
   {% endif %}
-  
+
   {% for source in imageSources %}
     {% set lastTransform = source.transforms|last %}
     <!--[if IE 9]><audio><![endif]-->
@@ -472,7 +472,7 @@
       width: lastTransform.width,
       height: lastTransform.height,
       srcset: source.transforms|length > 1 ? craft.imager.srcset(source.transforms) : lastTransform.url,
-      
+
     } | merge(imageLazyload ? {
       srcset: craft.imager.placeholder({
         width: lastTransform.width,
@@ -483,7 +483,7 @@
     }:{})) }}
     <!--[if IE 9]></audio><![endif]-->
   {% endfor %}
-  
+
   {{ tag('img', {
     class: collect([
       imageClass,
@@ -493,18 +493,18 @@
     alt: imageAlt|e('html_attr'),
     width:  not imageIsResponsive ? imageDefault.width * imageScaleFactor,
     height: not imageIsResponsive ? imageDefault.height * imageScaleFactor,
-    
+
   } | merge(imageLazyload ? {
     src: craft.imager.base64Pixel(imageDefault.width, imageDefault.height, imageColour),
     'data-src': imageDefault.url,
-    
+
   }:{}) | merge(imageTransforms is defined and imageTransforms|length > 1 ? {
     sizes: imageSizesGuide ?? false,
     srcset: not imageLazyload ? defaultSrcSet : false,
     'data-sizes': imageLazyload and not (imageSizesGuide ?? true) ? 'auto',
     'data-srcset': imageLazyload ? defaultSrcSet,
   }:{})) }}
-  
+
   {% if imageSources|length %}
     </picture>
   {% endif %}
@@ -512,20 +512,35 @@
   {% if imageHasZoom %}
     </a>
   {% endif %}
-  
+
 {% elseif imageAsset and imageIsCss %}
+  {% set imageSetVersions = ['-webkit-image-set', 'image-set'] %}
   {% minify css %}
     <style>
       .{{ imageCssClass }} {
         background-image: url('{{ imageDefault.url }}');
       }
       {% for source in imageSources|reverse %}
-      @media {{ source.media }} {
-        {{ (source.type ?? '') == 'image/webp' ? '.has-webp ' -}}
-        .{{ imageCssClass }} {
-          background-image: url('{{ (source.transforms|last).url }}');
+        @media {{ source.media }} {
+          .{{ imageCssClass }} {
+            {% if source.type is defined %}
+              {% set fallbackImage = imageSources
+                |reverse
+                |map(i => i.type is not defined and i.media == source.media ? i.transforms|last)
+                |filter
+                |last %}
+              {% set fallbackImageUrl = fallbackImage.url ?? imageDefault.url %}
+              {% set fallbackImageType = fallbackImage.mimeType ?? imageDefault.mimeType %}
+              {% for imageSet in imageSetVersions %}
+                background-image: {{ imageSet }}(
+                  url('{{ (source.transforms|last).url }}') type('{{ source.type }}'),
+                  url('{{ fallbackImageUrl }}') type('{{ fallbackImageType }}'));
+              {% endfor %}
+            {% else %}
+              background-image: url('{{ (source.transforms|last).url }}');
+            {% endif %}
+          }
         }
-      }
       {% endfor %}
     </style>
   {% endminify %}
