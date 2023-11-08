@@ -1,0 +1,22 @@
+[
+    {
+        "name": "Summary",
+        "handle": "summary",
+        "instructions": "A concise summary of this page, which could be used in various contexts: internal links, search results, social media, etc. On index pages, links will show up to 140 characters.",
+        "required": null,
+        "searchable": true,
+        "translationMethod": "none",
+        "translationKeyFormat": null,
+        "type": "craft\\fields\\PlainText",
+        "settings": {
+            "uiMode": "normal",
+            "placeholder": null,
+            "code": false,
+            "multiline": true,
+            "initialRows": 4,
+            "charLimit": null,
+            "byteLimit": null,
+            "columnType": null
+        }
+    }
+]
