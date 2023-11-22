@@ -39,7 +39,7 @@ project boilerplate (see [`craft3`](https://github.com/miranj/craft-boilerplate/
 
 1.  Open your terminal and run the following command:
 
-        composer create-project miranj/craft-boilerplate /path/to/project "dev-dev"
+        composer create-project miranj/craft-boilerplate:dev-dev /path/to/project
 
 2.  Replace instances of "miranj/craft-boilerplate" and "boilerplate"
     with the handle of the new project in the following locations:
