@@ -1,21 +1,13 @@
 {% macro webpage(props, schema = null) %}
-  {% from '_schemas/definitions/thing' import thing %}
+  {% from '_schemas/definitions/creativeWork' import creativeWork %}
   {% from '_schemas/definitions/imageObject' import imageObject %}
-  {% from '_schemas/definitions/organization' import organization %}
   
-  {% set schema = schema ?? craft.schema.Webpage %}
-  {% set schema = thing(props, schema) %}
+  {% set schema = schema ?? craft.schema.WebPage %}
+  {% set schema = creativeWork(props, schema) %}
   {% set schema = schema
-    .id(props.url ~ '#webpage')
-    .dateCreated(props.dateCreated)
-    .datePublished(props.dateCreated)
-    .dateModified(props.dateUpdated)
-    .headline(create('craft\\helpers\\StringHelper').safeTruncate(props.title, 110))
-    .primaryImageOfPage((props.images ?? []) is not empty ? imageObject(props.images|first) : null)
-    .author((props.authors.organizations ?? [])|map(org => organization(org))|default(null))
-    .creator((props.creators ?? [])|map(org => organization(org))|default(null))
-    .copyrightHolder((props.authors.organizations ?? [])|map(org => organization(org))|default(null))
-    .copyrightYear(props.dateCreated|date('Y'))
+    .id(props.url ~ '#webpage'|default(null))
+    .mainContentOfPage(props.mainContentOfPage|default('main'))
+    .primaryImageOfPage(props.image ?? false ? imageObject(props.image) : null)
   %}
   
   {% return schema %}
