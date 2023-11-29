@@ -42,16 +42,9 @@ h5 {
 }
 
 /* Links */
-a,
-a:visited {
-    @apply text-inherit no-underline;
-}
-a:hover {
-    @apply underline;
-}
-a.block-link {
-    &:hover {
-        @apply no-underline;
+@layer base {
+    a:hover {
+        @apply underline;
     }
 }
 
