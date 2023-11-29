@@ -30,6 +30,7 @@ return [
         'timezone' => 'Asia/Kolkata',
         'defaultWeekStartDay' => '1',
         'defaultCpLanguage' => 'en-GB',
+        'defaultCpLocale' => 'en-IN',
         'baseCpUrl' => App::env('CRAFT_DEFAULT_SITE_URL'),
         'defaultSearchTermOptions' => [
             'subLeft' => true,
