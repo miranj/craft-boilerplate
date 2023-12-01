@@ -27,18 +27,6 @@ h5 {
 }
 
 
-body {
-    @apply font-prose;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5 {
-    @apply font-title;
-}
-
 /* Links */
 @layer base {
     a:hover {
