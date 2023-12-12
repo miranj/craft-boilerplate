@@ -17,6 +17,7 @@ project boilerplate (see [`craft3`](https://github.com/miranj/craft-boilerplate/
 - Server configuration files for Apache (dev) and Nginx (staging, production).
 - A few Craft plugins, along with their config files:
   - [Child Me](https://github.com/mmikkel/ChildMe-Craft)
+  - [CKEditor](https://github.com/craftcms/ckeditor)
   - [CP Field Inspect](https://github.com/mmikkel/CpFieldInspect-Craft)
   - [Element Index Defaults](https://github.com/verbb/element-index-defaults)
   - [Environment Label](https://github.com/TopShelfCraft/Environment-Label)
@@ -27,7 +28,6 @@ project boilerplate (see [`craft3`](https://github.com/miranj/craft-boilerplate/
   - [Minify](https://github.com/nystudio107/craft-minify)
   - [No-Cache](https://github.com/ttempleton/craft-nocache)
   - [Obfuscator](https://github.com/miranj/craft-obfuscator)
-  - [Redactor](https://github.com/craftcms/redactor)
   - [Retcon](https://github.com/mmikkel/Retcon-Craft)
   - [SEOMate](https://github.com/vaersaagod/seomate)
   - [Twig Perversion](https://github.com/marionnewlevant/craft-twig_perversion)
