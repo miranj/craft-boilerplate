@@ -20,6 +20,9 @@ paths.tasks = {
       source: 'css/main.css',
       destination: 'style.css',
       tailwind_config: 'tailwind.config.js',
+      nested_config: {
+        bubble: ['screen'],
+      },
       watch: [
         'css/**/*.css',
         'tailwind.config.js',
