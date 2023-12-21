@@ -1,4 +1,4 @@
-<img align="right" src="https://cdn.miranj.in/mc3/img/apple-touch-icon-precomposed.png" width="57" height="57" alt="Miranj">
+<img align="right" src="https://avatars.githubusercontent.com/u/1098673?s=200&v=4" width="67" height="67" alt="Miranj">
 
 # Miranj Craft Boilerplate
 
