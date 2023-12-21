@@ -1,4 +1,4 @@
-<img align="right" src="https://cdn.miranj.in/v4/favicons/apple-touch-icon.png" width="57" height="57" alt="Miranj">
+<img align="right" src="https://cdn.craft.cloud/032c8560-18a8-45ba-a958-a03804e5cb66/assets/partners/1146942.png" width="57" height="57" alt="Miranj">
 
 # Miranj Craft Boilerplate
 
