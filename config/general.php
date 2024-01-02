@@ -72,18 +72,14 @@ return [
     // Staging environment
     'staging' => [
         'devMode' => false,
-        'disabledPlugins' => ['inventory', 'cp-field-inspect'],
+        'disabledPlugins' => ['cp-field-inspect'],
     ],
 
     // Production environment
     'production' => [
         'devMode' => false,
         'disallowRobots' => false,
-        'disabledPlugins' => [
-            'inventory',
-            'cp-field-inspect',
-            'environment-label',
-        ],
+        'disabledPlugins' => ['cp-field-inspect', 'environment-label'],
         'runQueueAutomatically' => false,
     ],
 ];
