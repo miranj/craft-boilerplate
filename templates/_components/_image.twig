@@ -386,9 +386,10 @@
 
     {% if not (imageIsSvg or imageIsAnimatedGif) %}
       {% set imageTransformSizes = imagePreset.sizes ?? [{ width: _imageAsset.width }] %}
-      {% set imageTransformParams = {
-        position: _imageAsset.getFocalPoint(),
-      } | merge(imagePreset.transform ?? {}) %}
+      {% set imageTransformPosition = _imageAsset.getFocalPoint() is defined
+        ? { position: _imageAsset.getFocalPoint() }
+        : {} %}
+      {% set imageTransformParams = imageTransformPosition|merge(imagePreset.transform ?? {}) %}
       {% set imageTransforms = craft.imager.transformImage(
         _imageAsset,
         imageTransformSizes,
