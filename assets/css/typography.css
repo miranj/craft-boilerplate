@@ -26,20 +26,6 @@ h5 {
     @apply font-bold font-title;
 }
 
-.-wf-active {
-    .font-prose,
-    body {
-        @apply font-prose-wf;
-    }
-    .font-title,
-    h1,
-    h2,
-    h3,
-    h4,
-    h5 {
-        @apply font-title-wf;
-    }
-}
 
 /* Links */
 @layer base {
