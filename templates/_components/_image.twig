@@ -386,7 +386,7 @@
 
     {% if not (imageIsSvg or imageIsAnimatedGif) %}
       {% set imageTransformSizes = imagePreset.sizes ?? [{ width: _imageAsset.width }] %}
-      {% set imageTransformPosition = _imageAsset.getFocalPoint() is defined
+      {% set imageTransformParams = _imageAsset.getFocalPoint() is defined
         ? { position: _imageAsset.getFocalPoint() }
         : {} %}
       {% set imageTransformParams = imageTransformPosition|merge(imagePreset.transform ?? {}) %}
