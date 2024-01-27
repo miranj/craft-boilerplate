@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Label",
+    "handle": "label",
+    "instructions": null,
+    "required": null,
+    "searchable": true,
+    "translationMethod": "site",
+    "translationKeyFormat": null,
+    "type": "craft\\fields\\PlainText",
+    "settings": {
+      "uiMode": "normal",
+      "placeholder": null,
+      "code": false,
+      "multiline": false,
+      "initialRows": 4,
+      "charLimit": null,
+      "byteLimit": null,
+      "columnType": null
+    }
+  },
+  {
+    "name": "Label 2",
+    "handle": "label2",
+    "instructions": null,
+    "required": null,
+    "searchable": true,
+    "translationMethod": "site",
+    "translationKeyFormat": null,
+    "type": "craft\\fields\\PlainText",
+    "settings": {
+      "uiMode": "normal",
+      "placeholder": null,
+      "code": false,
+      "multiline": false,
+      "initialRows": 4,
+      "charLimit": null,
+      "byteLimit": null,
+      "columnType": null
+    }
+  },
+  {
+    "name": "Label 3",
+    "handle": "label3",
+    "instructions": null,
+    "required": null,
+    "searchable": true,
+    "translationMethod": "site",
+    "translationKeyFormat": null,
+    "type": "craft\\fields\\PlainText",
+    "settings": {
+      "uiMode": "normal",
+      "placeholder": null,
+      "code": false,
+      "multiline": false,
+      "initialRows": 4,
+      "charLimit": null,
+      "byteLimit": null,
+      "columnType": null
+    }
+  }
+]
