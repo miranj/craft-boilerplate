@@ -473,6 +473,7 @@
       width: lastTransform.width,
       height: lastTransform.height,
       srcset: source.transforms|length > 1 ? craft.imager.srcset(source.transforms) : lastTransform.url,
+      sizes: source.transforms|length > 1 and imageSizesGuide is defined ? imageSizesGuide : false,
 
     } | merge(imageLazyload ? {
       srcset: craft.imager.placeholder({
