@@ -5,6 +5,7 @@ namespace boilerplate;
 use Craft;
 use boilerplate\behaviors\EntryIndexQueryBehavior;
 use boilerplate\behaviors\IndexEntryBehaviors;
+use boilerplate\behaviors\SectionRouterBehavior;
 use craft\base\Element;
 use craft\elements\Entry;
 use craft\elements\db\EntryQuery;
