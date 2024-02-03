@@ -1,0 +1,24 @@
+{% minify %}
+  {#
+    Index Router
+
+    @param  section   Section object whose index is being rendered
+                      (auto-set when coming via the router)
+    @param  entry     The section's index page single entry
+                      (auto-set when directly hitting the single)
+    @param  entries   Query object of the index page's contents
+                      (auto-set when coming via the router)
+  #}
+  {% set section = section ?? entry['indexSection_'] ?? entry.section %}
+  {% set entry = entry ?? craft.entries.index_(section).one() %}
+  {% set entries = entries ?? craft.entries.section(section) %}
+
+  {% if not entry %}
+    {% exit 404 %}
+  {% endif %}
+
+  {%- include [
+    '_views/indexes/' ~ section.handle|replace('index_'),
+    '_views/indexes/default',
+  ] -%}
+{% endminify %}
