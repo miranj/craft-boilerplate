@@ -284,7 +284,7 @@
                   "conditionRules": []
                 }
               },
-              "width": 50
+              "width": 100
             }
           }
         },
@@ -328,7 +328,7 @@
                   ]
                 }
               },
-              "width": 50
+              "width": 100
             }
           }
         },
@@ -349,7 +349,7 @@
                 "types": ["url"],
                 "maxLength": 255
               },
-              "width": 50
+              "width": 100
             }
           }
         }
