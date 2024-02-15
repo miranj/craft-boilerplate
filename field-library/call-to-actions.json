@@ -21,7 +21,7 @@
           "fields": {
             "new1": {
               "name": "Asset",
-              "handle": "asset",
+              "handle": "element",
               "required": true,
               "instructions": null,
               "searchable": true,
@@ -105,7 +105,7 @@
           "fields": {
             "new1": {
               "name": "Entry",
-              "handle": "hyperlink",
+              "handle": "element",
               "required": true,
               "instructions": null,
               "searchable": true,
@@ -231,7 +231,7 @@
           "fields": {
             "new1": {
               "name": "Asset",
-              "handle": "asset",
+              "handle": "element",
               "required": true,
               "instructions": null,
               "searchable": true,
@@ -294,7 +294,7 @@
           "fields": {
             "new1": {
               "name": "Entry",
-              "handle": "hyperlink",
+              "handle": "element",
               "required": true,
               "instructions": null,
               "searchable": true,
