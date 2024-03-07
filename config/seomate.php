@@ -6,7 +6,6 @@
 return [
     // Global config
     '*' => [
-        'previewEnabled' => false,
         'sitenameSeparator' => '-',
 
         'additionalMeta' => [
@@ -50,6 +49,5 @@ return [
     // Dev environment
     'dev' => [
         'cacheEnabled' => false,
-        'previewEnabled' => true,
     ],
 ];
