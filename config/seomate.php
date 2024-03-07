@@ -18,7 +18,9 @@ return [
         'defaultProfile' => 'standard',
         'fieldProfiles' => [
             'standard' => [
-                'title' => ['title'],
+                'title' => ['seoTitle', 'title'],
+                'description' => ['seoSummary', 'summary'],
+                'image' => ['seoImage', 'image'],
             ],
         ],
 
@@ -42,7 +44,16 @@ return [
         'sitemapEnabled' => true,
         'sitemapLimit' => 100,
         'sitemapConfig' => [
-            'elements' => [],
+            'elements' => [
+                'homepage' => ['changefreq' => 'weekly', 'priority' => 1.0],
+                'indexes' => [
+                    'elementType' => \craft\elements\Entry::class,
+                    'criteria' => [
+                        'section' => [],
+                    ],
+                    'params' => ['changefreq' => 'weekly', 'priority' => 0.1],
+                ],
+            ],
         ],
     ],
 
