@@ -326,7 +326,7 @@
   {% set imageTransforms = [] %}
   {% set imageSources = [] %}
   {% set imageColour = 'transparent' %}
-  {% set imageAlt = imageAlt ?: imageAsset.title %}
+  {% set imageAlt = imageAlt ?: imageAlt.alt ?: imageAsset.title %}
   {% set imageIsSvg = imageAsset.mimeType in ['image/svg+xml'] or imageAsset.extension in ['svg'] %}
   {% set imageIsAnimatedGif = imageAsset.extension in ['gif'] and craft.imager.isAnimated(imageAsset) %}
   {% set imageScaleFactor = imageIsSvg ? 100 : 1 %}
