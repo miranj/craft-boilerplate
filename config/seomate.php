@@ -6,8 +6,10 @@
 return [
     // Global config
     '*' => [
-        'sitenameSeparator' => '-',
-
+        // default meta
+        'defaultMeta' => [
+            'image' => ['seo.seoImageDefault'],
+        ],
         'additionalMeta' => [
             'twitter:card' => 'summary_large_image',
             'og:site_name' => '{{ siteName }}',
@@ -15,6 +17,7 @@ return [
             'og:see_also' => [],
         ],
 
+        // entry meta cascades
         'defaultProfile' => 'standard',
         'fieldProfiles' => [
             'standard' => [
@@ -24,6 +27,8 @@ return [
             ],
         ],
 
+        // hygiene
+        'sitenameSeparator' => '-',
         'applyRestrictions' => true,
         'metaPropertyTypes' => [
             'title,og:title,twitter:title' => [
