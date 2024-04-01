@@ -389,7 +389,7 @@
       {% set imageTransformParams = _imageAsset.getFocalPoint() is defined
         ? { position: _imageAsset.getFocalPoint() }
         : {} %}
-      {% set imageTransformParams = imageTransformPosition|merge(imagePreset.transform ?? {}) %}
+      {% set imageTransformParams = imageTransformParams|merge(imagePreset.transform ?? {}) %}
       {% set imageTransforms = craft.imager.transformImage(
         _imageAsset,
         imageTransformSizes,
