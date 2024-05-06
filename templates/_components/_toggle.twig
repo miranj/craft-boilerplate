@@ -124,6 +124,7 @@
   }|merge(toggleConfig.wrapper ?? [])) }}>
     <button {{ attr({
       'x-on:click': 'isActive = !isActive',
+      'x-bind:aria-expanded': "isActive",
     }|merge(toggleConfig.button ?? [])) }}>
       {{ toggleLabelHtml|raw }}
     </button>
