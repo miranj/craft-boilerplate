@@ -5,6 +5,7 @@
   Generates a collapsing area controlled by a toggle button.
 
   @param    class           {string}    Class names for toggle wrapper element
+  @param    id              {string}    Unique ID for this component
   @param    profile         {string}    Name of profile type that you want to use. Eg: 'faq' | 'filter' etc
   @param    html            {string}    Html markup of main content of toggle
   @param    button_html      {string}   Html markup of toggle button's label
@@ -69,6 +70,7 @@
   Params
 #}
 {% set toggleClass = params.class ?? '' %}
+{% set toggleId = params.id ?? '' %}
 {% set toggleProfile = params.profile ?? 'default' %}
 {% set toggleHtml = params.html ?? '' %}
 {% set toggleLabelHtml = params.button_html ?? 'More' %}
@@ -123,12 +125,14 @@
     'x-on:keydown.esc': "isActive = false",
   }|merge(toggleConfig.wrapper ?? [])) }}>
     <button {{ attr({
+      'aria-controls': toggleId ?? null,
       'x-on:click': 'isActive = !isActive',
       'x-bind:aria-expanded': "isActive",
     }|merge(toggleConfig.button ?? [])) }}>
       {{ toggleLabelHtml|raw }}
     </button>
     <div {{ attr({
+      id: toggleId ?? null,
       'x-show': 'isActive',
       'x-cloak': true,
       'x-collapse': true,
