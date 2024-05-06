@@ -1,0 +1,138 @@
+{# _components/_toggle #}
+
+{#
+  Toggle
+  Generates a collapsing area controlled by a toggle button.
+
+  @param    class           {string}    Class names for toggle wrapper element
+  @param    profile         {string}    Name of profile type that you want to use. Eg: 'faq' | 'filter' etc
+  @param    html            {string}    Html markup of main content of toggle
+  @param    button_html      {string}   Html markup of toggle button's label
+  @param    wrapper_attr    {hash}      Hash of HTML attributes applied to the component's wrapper
+  @param    button_attr     {hash}      Hash of HTML attributes applied to the component's toggle button
+  @param    body_attr       {hash}      Hash of HTML attributes applied to the component's main content body
+
+
+
+  Configuration
+  =============
+  There is a configurable option available which helps avoid
+  some repetition when using the component for multiple use cases.
+
+  @option   wrapper   {hash}    Hash of HTML attributes applied to the component's wrapper
+  @option   button    {hash}    Hash of HTML attributes applied to the component's toggle button
+  @option   body      {hash}    Hash of HTML attributes applied to the component's main content body
+
+  Example:
+  ```
+  {% set toggleProfiles = {
+    default: {
+      wrapper: {
+        class: 'w-48',
+      },
+      button: {
+        class: 'border border-black',
+        'x-bind': "'isActive' ? 'opacity-50' : ''",
+      },
+      body: {
+        class: 'bg-white',
+      },
+    },
+  } %}
+  ```
+
+
+
+  Usage Example:
+  ```
+  {% include '_components/_dropdown' with { params: {
+    button_html: '<i>Toggle</i>',
+    html: '<div> Any valid HTML here <div>',
+    wrapper_attr: {
+      'x-intersect': 'onPage = true',
+      class: 'focus:outline-1',
+    },
+    button_attr: {
+      'x-bind': "'isActive' ? 'opacity-50' : ''",
+    },
+    body_attr: {
+      class: 'text-white bg-rebecca-purple',
+    },
+  }} %}
+  ```
+#}
+
+
+
+
+{#
+  Params
+#}
+{% set toggleClass = params.class ?? '' %}
+{% set toggleProfile = params.profile ?? 'default' %}
+{% set toggleHtml = params.html ?? '' %}
+{% set toggleLabelHtml = params.button_html ?? 'More' %}
+{% set toggleWrapperAttr = params.wrapper_attr ?? '' %}
+{% set togglebuttonAttr = params.button_attr ?? '' %}
+{% set toggleBodyAttr = params.body_attr ?? '' %}
+
+
+
+{#
+  Profiles
+#}
+{% set toggleProfiles = {
+  default: {
+    wrapper: {
+      class: 'w-48',
+    },
+    button: {
+      class: 'border border-black',
+      'x-bind': "'isActive' ? 'opacity-50' : ''",
+    },
+    body: {
+      class: 'bg-white',
+    },
+  },
+} %}
+
+{# {% set toggleProfiles = {} %} #}
+
+
+
+{#
+  Variables
+#}
+{% set toggleConfig = toggleProfiles[toggleProfile] ?? (toggleProfiles.default ?? {}) %}
+{% set toggleConfig = toggleConfig|merge({
+  wrapper: toggleWrapperAttr ?: toggleConfig.wrapper ?? null,
+  button: togglebuttonAttr ?: toggleConfig.button ?? null,
+  body: toggleBodyAttr ?: toggleConfig.body ?? null,
+}) %}
+
+
+
+{#
+  Render
+#}
+{% if toggleHtml %}
+  <div {{ attr({
+    class: toggleClass,
+    'x-data': '{ isActive: false }',
+    'x-on:click.outside': "isActive = false",
+    'x-on:keydown.esc': "isActive = false",
+  }|merge(toggleConfig.wrapper ?? [])) }}>
+    <button {{ attr({
+      'x-on:click': 'isActive = !isActive',
+    }|merge(toggleConfig.button ?? [])) }}>
+      {{ toggleLabelHtml|raw }}
+    </button>
+    <div {{ attr({
+      'x-show': 'isActive',
+      'x-cloak': true,
+      'x-collapse': true,
+    }|merge(toggleConfig.body ?? [])) }}>
+      {{ toggleHtml|raw }}
+    </div>
+  </div>
+{% endif %}
