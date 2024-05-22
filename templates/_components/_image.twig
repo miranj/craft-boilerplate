@@ -473,6 +473,7 @@
       width: lastTransform.width,
       height: lastTransform.height,
       srcset: source.transforms|length > 1 ? craft.imager.srcset(source.transforms) : lastTransform.url,
+      sizes: (source.transforms|length > 1 and not imageLazyload) ? (imageSizesGuide ?? false),
 
     } | merge(imageLazyload ? {
       srcset: craft.imager.placeholder({
@@ -481,7 +482,7 @@
         color: imageColour
       }),
       'data-srcset': source.transforms|length > 1 ? craft.imager.srcset(source.transforms)  : lastTransform.url,
-    }:{ sizes: imageSizesGuide ?? false })) }}
+    }:{})) }}
     <!--[if IE 9]></audio><![endif]-->
   {% endfor %}
 
@@ -500,9 +501,9 @@
     'data-src': imageDefault.url,
 
   }:{}) | merge(imageTransforms is defined and imageTransforms|length > 1 ? {
-    sizes: imageLazyload ? 'auto' : (imageSizesGuide ?? false),
-    srcset: not imageLazyload ? defaultSrcSet : false,
-    'data-sizes': imageLazyload ? 'auto' : (imageSizesGuide ?? false),
+    sizes: not imageLazyload ? (imageSizesGuide ?? false),
+    srcset: not imageLazyload ? defaultSrcSet,
+    'data-sizes': imageLazyload ? 'auto',
     'data-srcset': imageLazyload ? defaultSrcSet,
   }:{})) }}
 
