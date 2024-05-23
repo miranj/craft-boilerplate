@@ -111,7 +111,7 @@
         }|merge(jsConstants ?? {})|filter %}
         <div id="pjax-eval">
           <script>
-            window.PHOTOZOOM = {{ jsConstants|json_encode|raw }};
+            window.ProjectEnv = {{ jsConstants|json_encode|raw }};
           </script>
         </div>
       {% endblock %}
