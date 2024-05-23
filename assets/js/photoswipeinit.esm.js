@@ -34,7 +34,7 @@ function initPhotoswipe() {
   if (
     window.PHOTOZOOM.photoswipe.module &&
     window.PHOTOZOOM.photoswipe.lightbox &&
-    document.querySelector(options.gallery)
+    document.querySelector(options.gallery + ' ' + options.children)
   ) {
     getLightbox()
       .then((lightbox) => {
