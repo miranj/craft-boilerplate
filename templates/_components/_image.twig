@@ -386,15 +386,12 @@
 
     {% if not (imageIsSvg or imageIsAnimatedGif) %}
       {% set imageTransformSizes = imagePreset.sizes ?? [{ width: _imageAsset.width }] %}
-      {% set imageTransformParams = _imageAsset.getFocalPoint() is defined
-        ? { position: _imageAsset.getFocalPoint() }
-        : {} %}
-      {% set imageTransformParams = imageTransformParams|merge(imagePreset.transform ?? {}) %}
+      {% set imageTransformParams = imagePreset.transform ?? {} %}
       {% set imageTransforms = craft.imager.transformImage(
         _imageAsset,
         imageTransformSizes,
         imageTransformParams
-        ) %}
+      ) %}
       {% set imageDefault = imageTransforms|last %}
 
       {# Generate WebP versions and put them before regular ones #}
