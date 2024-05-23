@@ -31,6 +31,7 @@ return [
         'interlace' => 'plane',
         'removeMetadata' => true,
         'cacheDuration' => 60 * 60 * 24 * 365 * 10, // 10 years
+        'removeTransformsOnAssetFileops' => true,
 
         'optimizerConfig' => [
             'jpegoptim' => [
