@@ -326,7 +326,7 @@
   {% set imageTransforms = [] %}
   {% set imageSources = [] %}
   {% set imageColour = 'transparent' %}
-  {% set imageAlt = imageAlt ?: imageAsset.title %}
+  {% set imageAlt = imageAlt ?: imageAlt.alt ?: imageAsset.title %}
   {% set imageIsSvg = imageAsset.mimeType in ['image/svg+xml'] or imageAsset.extension in ['svg'] %}
   {% set imageIsAnimatedGif = imageAsset.extension in ['gif'] and craft.imager.isAnimated(imageAsset) %}
   {% set imageScaleFactor = imageIsSvg ? 100 : 1 %}
@@ -386,15 +386,12 @@
 
     {% if not (imageIsSvg or imageIsAnimatedGif) %}
       {% set imageTransformSizes = imagePreset.sizes ?? [{ width: _imageAsset.width }] %}
-      {% set imageTransformParams = _imageAsset.getFocalPoint() is defined
-        ? { position: _imageAsset.getFocalPoint() }
-        : {} %}
-      {% set imageTransformParams = imageTransformPosition|merge(imagePreset.transform ?? {}) %}
+      {% set imageTransformParams = imagePreset.transform ?? {} %}
       {% set imageTransforms = craft.imager.transformImage(
         _imageAsset,
         imageTransformSizes,
         imageTransformParams
-        ) %}
+      ) %}
       {% set imageDefault = imageTransforms|last %}
 
       {# Generate WebP versions and put them before regular ones #}
@@ -447,9 +444,7 @@
       rel="noreferrer noopener">
   {% endif %}
 
-  {% if imageSources|length %}
-    <picture>
-  {% endif %}
+  <picture>
 
   {% if imageLazyload %}
     {# Non JS fallback #}
@@ -507,9 +502,7 @@
     'data-srcset': imageLazyload ? defaultSrcSet,
   }:{})) }}
 
-  {% if imageSources|length %}
-    </picture>
-  {% endif %}
+  </picture>
 
   {% if imageHasZoom %}
     </a>

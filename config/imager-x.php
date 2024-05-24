@@ -31,6 +31,7 @@ return [
         'interlace' => 'plane',
         'removeMetadata' => true,
         'cacheDuration' => 60 * 60 * 24 * 365 * 10, // 10 years
+        'removeTransformsOnAssetFileops' => true,
 
         'optimizerConfig' => [
             'jpegoptim' => [
@@ -62,8 +63,8 @@ return [
 
     // Dev
     'dev' => [
-        'hashPath' => true,
         'filenamePattern' => '{fullname}.{extension}',
+        'fallbackImage' => 'https://placehold.co/1800x1200.png',
         'customEncoders' => App::env('IMAGER_CWEBP_PATH')
             ? ArrayHelper::merge($defaultCustomEncoders, [
                 'webp' => [

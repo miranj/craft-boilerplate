@@ -1,0 +1,359 @@
+[
+  {
+    "name": "Call To Action",
+    "handle": "cta",
+    "instructions": null,
+    "required": null,
+    "searchable": true,
+    "translationMethod": "site",
+    "translationKeyFormat": null,
+    "type": "craft\\fields\\Matrix",
+    "settings": {
+      "minBlocks": null,
+      "maxBlocks": 1,
+      "contentTable": "{{%matrixcontent_cta}}",
+      "propagationMethod": "all",
+      "propagationKeyFormat": null,
+      "blockTypes": {
+        "new1": {
+          "name": "Document",
+          "handle": "document",
+          "fields": {
+            "new1": {
+              "name": "Asset",
+              "handle": "element",
+              "required": true,
+              "instructions": null,
+              "searchable": true,
+              "translationMethod": "site",
+              "translationKeyFormat": null,
+              "type": "craft\\fields\\Assets",
+              "typesettings": {
+                "restrictLocation": false,
+                "restrictedLocationSource": "volume:f6aee24f-c735-4544-bb36-42481078fde4",
+                "restrictedLocationSubpath": null,
+                "allowSubfolders": false,
+                "restrictedDefaultUploadSubpath": null,
+                "defaultUploadLocationSource": "volume:91ae6e5b-a41a-4d60-ac31-d261d403db80",
+                "defaultUploadLocationSubpath": "{owner.section.handle}/{owner.uri|replace((owner.section.handle), '')|trim('/')}",
+                "allowUploads": true,
+                "restrictFiles": true,
+                "allowedKinds": [
+                  "audio",
+                  "captionsSubtitles",
+                  "compressed",
+                  "excel",
+                  "image",
+                  "json",
+                  "javascript",
+                  "pdf",
+                  "powerpoint",
+                  "text",
+                  "video",
+                  "word"
+                ],
+                "showUnpermittedVolumes": false,
+                "showUnpermittedFiles": false,
+                "previewMode": "full",
+                "allowSelfRelations": false,
+                "localizeRelations": false,
+                "maxRelations": 1,
+                "minRelations": null,
+                "selectionLabel": null,
+                "showSiteMenu": true,
+                "sources": ["volume:91ae6e5b-a41a-4d60-ac31-d261d403db80"],
+                "targetSiteId": null,
+                "validateRelatedElements": false,
+                "viewMode": "large",
+                "maintainHierarchy": false,
+                "branchLimit": null,
+                "selectionCondition": {
+                  "elementType": "craft\\elements\\Asset",
+                  "fieldContext": "global",
+                  "class": "craft\\elements\\conditions\\assets\\AssetCondition",
+                  "conditionRules": []
+                }
+              },
+              "width": 50
+            },
+            "new2": {
+              "name": "Label",
+              "handle": "label",
+              "required": false,
+              "instructions": null,
+              "searchable": true,
+              "translationMethod": "none",
+              "translationKeyFormat": null,
+              "type": "craft\\fields\\PlainText",
+              "typesettings": {
+                "uiMode": "normal",
+                "placeholder": "Default: \"Download\"",
+                "code": false,
+                "multiline": false,
+                "initialRows": 4,
+                "charLimit": null,
+                "byteLimit": null,
+                "columnType": null
+              },
+              "width": 50
+            }
+          }
+        },
+        "new2": {
+          "name": "Internal Link",
+          "handle": "internalLink",
+          "fields": {
+            "new1": {
+              "name": "Entry",
+              "handle": "element",
+              "required": true,
+              "instructions": null,
+              "searchable": true,
+              "translationMethod": "site",
+              "translationKeyFormat": null,
+              "type": "craft\\fields\\Entries",
+              "typesettings": {
+                "allowSelfRelations": false,
+                "localizeRelations": false,
+                "maxRelations": null,
+                "minRelations": null,
+                "selectionLabel": null,
+                "showSiteMenu": true,
+                "sources": "*",
+                "targetSiteId": null,
+                "validateRelatedElements": false,
+                "viewMode": null,
+                "maintainHierarchy": false,
+                "branchLimit": null,
+                "selectionCondition": {
+                  "elementType": "craft\\elements\\Entry",
+                  "fieldContext": "global",
+                  "class": "craft\\elements\\conditions\\entries\\EntryCondition",
+                  "conditionRules": [
+                    {
+                      "class": "craft\\elements\\conditions\\UriConditionRule",
+                      "uid": "8914210f-3ba0-4391-bb95-420f22a23b83",
+                      "operator": "notempty",
+                      "value": ""
+                    }
+                  ]
+                }
+              },
+              "width": 50
+            },
+            "new2": {
+              "name": "Label",
+              "handle": "label",
+              "required": false,
+              "instructions": null,
+              "searchable": true,
+              "translationMethod": "none",
+              "translationKeyFormat": null,
+              "type": "craft\\fields\\PlainText",
+              "typesettings": {
+                "uiMode": "normal",
+                "placeholder": "Defaults to entry title",
+                "code": false,
+                "multiline": false,
+                "initialRows": 4,
+                "charLimit": null,
+                "byteLimit": null,
+                "columnType": null
+              },
+              "width": 50
+            }
+          }
+        },
+        "new3": {
+          "name": "External Link",
+          "handle": "externalLink",
+          "fields": {
+            "new1": {
+              "name": "URL",
+              "handle": "hyperlink",
+              "required": true,
+              "instructions": null,
+              "searchable": true,
+              "translationMethod": "none",
+              "translationKeyFormat": null,
+              "type": "craft\\fields\\Url",
+              "typesettings": {
+                "types": ["url"],
+                "maxLength": 255
+              },
+              "width": 50
+            },
+            "new2": {
+              "name": "Label",
+              "handle": "label",
+              "required": false,
+              "instructions": null,
+              "searchable": true,
+              "translationMethod": "none",
+              "translationKeyFormat": null,
+              "type": "craft\\fields\\PlainText",
+              "typesettings": {
+                "uiMode": "normal",
+                "placeholder": "Default: \"Read More\"",
+                "code": false,
+                "multiline": false,
+                "initialRows": 4,
+                "charLimit": null,
+                "byteLimit": null,
+                "columnType": null
+              },
+              "width": 50
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "Call to Action (Link Only)",
+    "handle": "ctaLink",
+    "instructions": null,
+    "required": null,
+    "searchable": true,
+    "translationMethod": "site",
+    "translationKeyFormat": null,
+    "type": "craft\\fields\\Matrix",
+    "settings": {
+      "minBlocks": null,
+      "maxBlocks": 1,
+      "contentTable": "{{%matrixcontent_ctalink}}",
+      "propagationMethod": "all",
+      "propagationKeyFormat": null,
+      "blockTypes": {
+        "new1": {
+          "name": "Document",
+          "handle": "document",
+          "fields": {
+            "new1": {
+              "name": "Asset",
+              "handle": "element",
+              "required": true,
+              "instructions": null,
+              "searchable": true,
+              "translationMethod": "site",
+              "translationKeyFormat": null,
+              "type": "craft\\fields\\Assets",
+              "typesettings": {
+                "restrictLocation": false,
+                "restrictedLocationSource": "volume:f6aee24f-c735-4544-bb36-42481078fde4",
+                "restrictedLocationSubpath": null,
+                "allowSubfolders": false,
+                "restrictedDefaultUploadSubpath": null,
+                "defaultUploadLocationSource": "volume:91ae6e5b-a41a-4d60-ac31-d261d403db80",
+                "defaultUploadLocationSubpath": "{owner.section.handle}/{owner.uri|replace((owner.section.handle), '')|trim('/')}",
+                "allowUploads": true,
+                "restrictFiles": true,
+                "allowedKinds": [
+                  "audio",
+                  "captionsSubtitles",
+                  "compressed",
+                  "excel",
+                  "image",
+                  "json",
+                  "javascript",
+                  "pdf",
+                  "powerpoint",
+                  "text",
+                  "video",
+                  "word"
+                ],
+                "showUnpermittedVolumes": false,
+                "showUnpermittedFiles": false,
+                "previewMode": "full",
+                "allowSelfRelations": false,
+                "localizeRelations": false,
+                "maxRelations": 1,
+                "minRelations": null,
+                "selectionLabel": null,
+                "showSiteMenu": true,
+                "sources": ["volume:91ae6e5b-a41a-4d60-ac31-d261d403db80"],
+                "targetSiteId": null,
+                "validateRelatedElements": false,
+                "viewMode": "large",
+                "maintainHierarchy": false,
+                "branchLimit": null,
+                "selectionCondition": {
+                  "elementType": "craft\\elements\\Asset",
+                  "fieldContext": "global",
+                  "class": "craft\\elements\\conditions\\assets\\AssetCondition",
+                  "conditionRules": []
+                }
+              },
+              "width": 100
+            }
+          }
+        },
+        "new2": {
+          "name": "Internal Link",
+          "handle": "internalLink",
+          "fields": {
+            "new1": {
+              "name": "Entry",
+              "handle": "element",
+              "required": true,
+              "instructions": null,
+              "searchable": true,
+              "translationMethod": "site",
+              "translationKeyFormat": null,
+              "type": "craft\\fields\\Entries",
+              "typesettings": {
+                "allowSelfRelations": false,
+                "localizeRelations": false,
+                "maxRelations": null,
+                "minRelations": null,
+                "selectionLabel": null,
+                "showSiteMenu": true,
+                "sources": "*",
+                "targetSiteId": null,
+                "validateRelatedElements": false,
+                "viewMode": null,
+                "maintainHierarchy": false,
+                "branchLimit": null,
+                "selectionCondition": {
+                  "elementType": "craft\\elements\\Entry",
+                  "fieldContext": "global",
+                  "class": "craft\\elements\\conditions\\entries\\EntryCondition",
+                  "conditionRules": [
+                    {
+                      "class": "craft\\elements\\conditions\\UriConditionRule",
+                      "uid": "8914210f-3ba0-4391-bb95-420f22a23b83",
+                      "operator": "notempty",
+                      "value": ""
+                    }
+                  ]
+                }
+              },
+              "width": 100
+            }
+          }
+        },
+        "new3": {
+          "name": "External Link",
+          "handle": "externalLink",
+          "fields": {
+            "new1": {
+              "name": "URL",
+              "handle": "hyperlink",
+              "required": true,
+              "instructions": null,
+              "searchable": true,
+              "translationMethod": "none",
+              "translationKeyFormat": null,
+              "type": "craft\\fields\\Url",
+              "typesettings": {
+                "types": ["url"],
+                "maxLength": 255
+              },
+              "width": 100
+            }
+          }
+        }
+      }
+    }
+  }
+]

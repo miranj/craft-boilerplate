@@ -8,14 +8,14 @@
 const options = {
   gallery: 'body',
   children: '.photoswipe',
-  pswpModule: () => import(window.PHOTOZOOM.photoswipe.module),
+  pswpModule: () => import(window.ProjectEnv.photoswipe.module),
 };
 let lightbox;
 let instance;
 
 function getLightbox() {
   if (!lightbox) {
-    lightbox = import(window.PHOTOZOOM.photoswipe.lightbox).then(
+    lightbox = import(window.ProjectEnv.photoswipe.lightbox).then(
       (module) => module.default
     );
   }
@@ -24,17 +24,17 @@ function getLightbox() {
 
 function initPhotoswipe() {
   if (
-    typeof window.PHOTOZOOM === 'undefined' ||
-    window.PHOTOZOOM === null ||
-    !window.PHOTOZOOM.photoswipe
+    typeof window.ProjectEnv === 'undefined' ||
+    window.ProjectEnv === null ||
+    !window.ProjectEnv.photoswipe
   ) {
     return;
   }
 
   if (
-    window.PHOTOZOOM.photoswipe.module &&
-    window.PHOTOZOOM.photoswipe.lightbox &&
-    document.querySelector(options.gallery)
+    window.ProjectEnv.photoswipe.module &&
+    window.ProjectEnv.photoswipe.lightbox &&
+    document.querySelector(options.gallery + ' ' + options.children)
   ) {
     getLightbox()
       .then((lightbox) => {

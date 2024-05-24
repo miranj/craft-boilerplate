@@ -6,9 +6,10 @@
 return [
     // Global config
     '*' => [
-        'previewEnabled' => false,
-        'sitenameSeparator' => '-',
-
+        // default meta
+        'defaultMeta' => [
+            'image' => ['seo.seoImageDefault'],
+        ],
         'additionalMeta' => [
             'twitter:card' => 'summary_large_image',
             'og:site_name' => '{{ siteName }}',
@@ -16,13 +17,18 @@ return [
             'og:see_also' => [],
         ],
 
+        // entry meta cascades
         'defaultProfile' => 'standard',
         'fieldProfiles' => [
             'standard' => [
-                'title' => ['title'],
+                'title' => ['seoTitle', 'title'],
+                'description' => ['seoSummary', 'summary'],
+                'image' => ['seoImage', 'image'],
             ],
         ],
 
+        // hygiene
+        'sitenameSeparator' => '-',
         'applyRestrictions' => true,
         'metaPropertyTypes' => [
             'title,og:title,twitter:title' => [
@@ -43,13 +49,21 @@ return [
         'sitemapEnabled' => true,
         'sitemapLimit' => 100,
         'sitemapConfig' => [
-            'elements' => [],
+            'elements' => [
+                'homepage' => ['changefreq' => 'weekly', 'priority' => 1.0],
+                'indexes' => [
+                    'elementType' => \craft\elements\Entry::class,
+                    'criteria' => [
+                        'section' => [],
+                    ],
+                    'params' => ['changefreq' => 'weekly', 'priority' => 0.1],
+                ],
+            ],
         ],
     ],
 
     // Dev environment
     'dev' => [
         'cacheEnabled' => false,
-        'previewEnabled' => true,
     ],
 ];
