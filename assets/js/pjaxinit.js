@@ -42,9 +42,14 @@
   // Manually scroll to the top of the page without an animation
   if (disableScroll) {
     document.addEventListener('pjax:complete', function () {
-      // don't change anything if the new location points to an anchor on the page
-      var hash = window.document.location.hash;
-      if (hash && document.querySelector(hash)) {
+      // scroll to the anchor if the new location points to
+      // a valid element on the requested page
+      var el,
+        hash = window.document.location.hash;
+      if (hash && (el = document.querySelector(hash))) {
+        window.requestAnimationFrame(function () {
+          el.scrollIntoView();
+        });
         return;
       }
 
