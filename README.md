@@ -6,6 +6,7 @@ A [Craft CMS](https://craftcms.com/) 4 starter project based on [Miranj’s](htt
 project boilerplate (see [`craft3`](https://github.com/miranj/craft-boilerplate/tree/craft3) for the older version). It includes:
 
 - Our [modular templating architecture](https://miranj.in/blog/2019/modular-architecture-for-building-content-websites).
+- Our [multi-tiered caching architecture](https://miranj.in/blog/2020/fortifying-craft-for-high-traffic) with full-page template caches in Craft, and FastCGI micro-caching in Nginx).
 - A [Gulp](https://gulpjs.com/) based build process that uses
   - [Font Face Observer](https://github.com/bramstein/fontfaceobserver)
   - [Fontloader](https://gist.github.com/rungta/fa39058f1d15d6d4ea95)
