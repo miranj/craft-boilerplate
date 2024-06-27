@@ -7,28 +7,19 @@ node_modules/
 
 # Craft CMS
 config/license.key
-web/cpresources/
 
 # Environment specific config
 .env
 /htpasswd
-assets/.env
 web/.htaccess
 .tm_properties
-*.sublime-project
-*.sublime-workspace
 *.code-workspace
-syncCraft.*.cfg
-syncCraft.sh
 .idea/
 .vscode/
 
 # User data
 web/media/
 web/images/
-
-# Licensed content
-assets/fonts/
 
 # Testing
 templates/test.twig
