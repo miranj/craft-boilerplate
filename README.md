@@ -53,7 +53,7 @@ This starter project includes:
 
         composer create-project miranj/craft-boilerplate:dev-dev /path/to/project
 
-2.  Replace instances of "miranj/craft-boilerplate" and "boilerplate"
+2.  Replace instances of `miranj/craft-boilerplate` and `boilerplate`
     with the handle of the new project in the following locations:
 
     - `composer.json`
@@ -68,8 +68,8 @@ This starter project includes:
 3.  Replace instances of "Miranj Craft Boilerplate" / and "Boilerplate"
     with the title of the new project.
 
-4.  Inspect all FIXME comments in the project and take necessary action.
+4.  Inspect all `FIXME` comments in the project and take necessary action.
 
-5.  Assign values to all shared environment variables in .env.example.
+5.  Assign values to all shared environment variables in `.env.example`.
 
 6.  Run `composer dump-autoload`
