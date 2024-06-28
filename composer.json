@@ -64,8 +64,8 @@
       "@php -r \"rename('README.md.default', 'README.md');\"",
       "@php -r \"unlink('CHANGELOG.md');\"",
       "@php -r \"rename('CHANGELOG.md.default', 'CHANGELOG.md');\"",
-      "@php -r \"rmdir('field-library');\"",
       "@php -r \"rename('composer.json.default', 'composer.json');\"",
+      "rm -rf field-library",
       "@composer dump-autoload -o"
     ]
   }
