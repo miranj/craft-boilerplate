@@ -18,8 +18,8 @@
         body {
             margin: 0;
             padding: 0;
-            background-color: hsl(212, 10%, 93%);
-            color: hsl(212, 20%, 20%);
+            background-color: hsl(212, 60%, 97%);
+            color: hsl(209, 18%, 30%);
             display: flex;
         }
 
@@ -52,7 +52,7 @@
         }
 
         a {
-            color: #0d78f2;
+            color: #0B69A3;
             text-decoration: none;
         }
 
@@ -61,7 +61,7 @@
         }
 
         .go {
-            color: #0d78f2;
+            color: #0B69A3;
         }
 
         .go:after {
@@ -71,14 +71,14 @@
         }
 
         small {
-            color: #777;
+            color: hsl(211, 11%, 59%);
         }
 
         code {
             display: inline-block;
-            color: #da513d;
+            color: #EF4E4E;
             padding: 0 2px;
-            background: hsl(212, 10%, 96%);
+            background: hsl(212, 60%, 97%);
             border-radius: 3px;
             line-height: 1.3;
             font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
@@ -94,50 +94,13 @@
         }
 
         #aside {
-            background: hsl(212, 10%, 93%);
+            background: hsl(212, 60%, 97%);
         }
 
         .content {
             padding: 35px;
             padding-left: calc(35px + env(safe-area-inset-left));
             padding-right: calc(35px + env(safe-area-inset-right));
-        }
-
-        @media (min-width:480px) {
-            body {
-                background-image: url("{{ view.getAssetManager().getPublishedUrl('@app/web/assets/installer/dist', true, 'images/install-bg-1920.png') }}");
-                background-repeat: no-repeat;
-                background-size: cover;
-                background-position: center center;
-            }
-
-            #container {
-                display: flex;
-                align-items: normal;
-                justify-content: normal;
-            }
-        }
-
-        @media (min-width:480px) and (min-height: 376px) {
-            #container {
-                padding: 24px;
-                align-items: center;
-                justify-content: center;
-            }
-
-            #modal {
-                height: 100%;
-                max-width: 770px;
-                max-height: 510px;
-                border-radius: 4px;
-                overflow: auto;
-                box-shadow: 0 25px 100px rgba(0, 0, 0, 0.5);
-            }
-
-            #aside {
-                background: #f9f9f9;
-                overflow: auto;
-            }
         }
 
         @media (min-width:768px) {
@@ -156,21 +119,36 @@
             }
         }
 
-        @media only screen and (min-width: 1921px) {
+        @media (min-width:768px) and (min-height: 376px) {
             body {
-                background-image: url("{{ view.getAssetManager().getPublishedUrl('@app/web/assets/installer/dist', true, 'images/install-bg-5120.png') }}");
+                background-color: hsl(212, 50%, 93%);
+                background-image: url("{{ view.getAssetManager().getPublishedUrl('@app/web/assets/installer/dist', true, 'images/installer-bg.png') }}");
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center center;
+            }
+
+            #container {
+                display: flex;
+                padding: 24px;
+                align-items: center;
+                justify-content: center;
+            }
+
+            #modal {
+                height: 100%;
+                max-width: 800px;
+                max-height: 525px;
+                border-radius: 4px;
+                overflow: auto;
+                box-shadow: 0 25px 100px rgba(0, 0, 0, 0.5);
+            }
+
+            #aside {
+                overflow: auto;
             }
         }
 
-        @media only screen and (-webkit-min-device-pixel-ratio: 1.5) and (min-width: 961px),
-        only screen and (-moz-min-device-pixel-ratio: 1.5) and (min-width: 961px),
-        only screen and (-o-min-device-pixel-ratio: 3/2) and (min-width: 961px),
-        only screen and (min-device-pixel-ratio: 1.5) and (min-width: 961px),
-        only screen and (min-resolution: 1.5dppx) and (min-width: 961px) {
-            body {
-                background-image: url("{{ view.getAssetManager().getPublishedUrl('@app/web/assets/installer/dist', true, 'images/install-bg-5120.png') }}");
-            }
-        }
     </style>
 </head>
 <body class="ltr">
@@ -180,7 +158,7 @@
             <div class="content">
                 <h1>Welcome</h1>
                 <p>Thanks for installing Craft CMS!</p>
-                <p>You’re looking at the <code>index.html</code> template file located in your
+                <p>You’re looking at the <code>index.twig</code> template file located in your
                     <code>templates/</code> folder. Once you’re ready to start building out your site’s
                     front end, you can replace this with something custom.</p>
                 <p>If you’re new to Craft CMS, take some time to check out the resources on the right
@@ -188,15 +166,16 @@
                     <a href="https://craftcms.com/discord" target="_blank">Discord</a>
                     and <a href="http://craftcms.stackexchange.com/" target="_blank">Stack Exchange</a>.
                     The Craft community is full of smart, friendly, and helpful people!</p>
-                <p><span class="go"><a href="{{ cpUrl('') }}">Go to your Control Panel</a></span></p>
+                <p><span class="go"><a href="{{ cpUrl('') }}">Go to your control panel</a></span></p>
             </div>
         </div>
         <div id="aside">
             <div class="content">
                 <h2>Popular Resources</h2>
                 <ul>
-                    <li><a href="http://docs.craftcms.com/v3/" target="_blank">Documentation</a><br><small>Read the official docs.</small></li>
-                    <li><a href="https://craftcms.com/guides" target="_blank">Guides</a><br><small>Follow along with the official guides.</small></li>
+                    <li><a href="https://craftcms.com/docs/getting-started-tutorial/" target="_blank">Tutorial</a><br><small>Learn the basics.</small></li>
+                    <li><a href="https://craftcms.com/docs/5.x/" target="_blank">Documentation</a><br><small>Read the official docs.</small></li>
+                    <li><a href="https://craftcms.com/guides" target="_blank">Knowledge Base</a><br><small>Find answers to common problems.</small></li>
                     <li><a href="https://twitter.com/hashtag/craftcms" target="_blank">#craftcms</a><br><small>See the latest tweets about Craft.</small></li>
                     <li><a href="https://craftcms.com/discord" target="_blank">Discord</a><br><small>Meet the community.</small></li>
                     <li><a href="http://craftcms.stackexchange.com/" target="_blank">Stack Exchange</a><br><small>Get help and help others.</small></li>
