@@ -35,6 +35,7 @@ Release notes for Miranj's Craft Boilerplate starter project.
 
 - Added a Changelog to track updates to the boilerplate.
 - Added `package-lock.json` lockfile to keep track of exact Node packages.
+- Added [PHPStan](https://github.com/craftcms/phpstan) for PHP code quality audits.
 - Updated Node version to 20 LTS “Iron”.
 - Updated Prettier to 3.3.2.
 - Updated Prettier PHP plugin to 0.22.2.
