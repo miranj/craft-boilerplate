@@ -36,7 +36,6 @@ This starter project includes:
   - [Field Manager](https://github.com/verbb/field-manager)
   - [Imager](https://github.com/aelvan/Imager-Craft)
   - [Image Resizer](https://github.com/verbb/image-resizer)
-  - [Inventory](https://github.com/doublesecretagency/craft-inventory)
   - [Minify](https://github.com/nystudio107/craft-minify)
   - [No-Cache](https://github.com/ttempleton/craft-nocache)
   - [Obfuscator](https://github.com/miranj/craft-obfuscator)

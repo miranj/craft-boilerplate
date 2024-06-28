@@ -23,7 +23,7 @@ Release notes for Miranj's Craft Boilerplate starter project.
 - Updated SEOMate to 3.0.0-beta.6.
 - Updated Twig Perversion to 5.0.0.
 - Updated Typogrify to 5.0.1.
-- Removed Field Inventory.
+- Removed Inventory.
 
 ### Build
 
