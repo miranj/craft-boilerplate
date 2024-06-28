@@ -9,6 +9,7 @@ Release notes for Miranj's Craft Boilerplate starter project.
 - Added Craft 5 compatibility.
 - Added a default HTML Purifier config.
 - [Prevent user enumeration](https://craftcms.com/docs/5.x/reference/config/general.html#preventuserenumeration) on production via the _Forgot Password_ flow.
+- Simplified [Redis and App Cache config](https://craftcms.com/docs/5.x/reference/config/app.html#redis-example).
 - Updated Craft to 5.2.
 - Updated Child Me! to 2.2.2.
 - Updated CKEditor to 4.1.0.

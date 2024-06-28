@@ -46,19 +46,19 @@ return [
     'production' => [
         'components' => [
             'redis' => [
-                'class' => \yii\redis\Connection::class,
+                'class' => yii\redis\Connection::class,
                 'hostname' => App::env('REDIS_HOSTNAME') ?: 'localhost',
-                'port' => 6379,
                 'password' => App::env('REDIS_PASSWORD') ?: null,
-                'database' => 0,
             ],
-            'cache' => [
-                'class' => \yii\redis\Cache::class,
-                'keyPrefix' => App::env('CRAFT_APP_ID') ?: 'CraftCMS',
+            'cache' => fn() => Craft::createObject([
+                'class' => yii\redis\Cache::class,
+                'keyPrefix' => Craft::$app->id,
+                'defaultDuration' =>
+                    Craft::$app->config->general->cacheDuration,
                 'redis' => [
                     'database' => 1,
                 ],
-            ],
+            ]),
         ],
     ],
 ];
