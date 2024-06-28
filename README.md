@@ -3,7 +3,18 @@
 # Miranj Craft Boilerplate
 
 A [Craft CMS](https://craftcms.com/) 5 starter project based on [Miranj’s](https://miranj.in)
-project boilerplate (see [`craft4`](https://github.com/miranj/craft-boilerplate/tree/craft4) or [`craft3`](https://github.com/miranj/craft-boilerplate/tree/craft3) for the older versions). It includes:
+project boilerplate (see [`craft4`](https://github.com/miranj/craft-boilerplate/tree/craft4) or [`craft3`](https://github.com/miranj/craft-boilerplate/tree/craft3) for the older versions).
+
+## Contents
+
+- [Features](#features)
+- [Usage](#usage)
+- [Changelog](./CHANGELOG.md)
+- [License](./LICENSE)
+
+## Features
+
+This starter project includes:
 
 - Our [modular templating architecture](https://miranj.in/blog/2019/modular-architecture-for-building-content-websites).
 - Our [multi-tiered caching architecture](https://miranj.in/blog/2020/fortifying-craft-for-high-traffic) with full-page template caches in Craft, and FastCGI micro-caching in Nginx).
