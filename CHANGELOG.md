@@ -39,6 +39,7 @@ Release notes for Miranj's Craft Boilerplate starter project.
 - Updated Prettier to 3.3.2.
 - Updated Prettier PHP plugin to 0.22.2.
 - Updated PHP to 8.2.
+- The Field Library folder will now be purged in the post-install sequence.
 - Removed `./craft setup` from the project post-install sequence.
 - Removed legacy and redundant `.gitignore` rules.
 
