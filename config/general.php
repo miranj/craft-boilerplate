@@ -80,6 +80,7 @@ return [
         'devMode' => false,
         'disallowRobots' => false,
         'disabledPlugins' => ['cp-field-inspect', 'environment-label'],
+        'preventUserEnumeration' => true,
         'runQueueAutomatically' => false,
     ],
 ];
