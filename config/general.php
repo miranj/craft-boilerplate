@@ -53,6 +53,7 @@ return [
 
         'aliases' => [
             '@web' => App::env('CRAFT_DEFAULT_SITE_URL'),
+            '@webroot' => dirname(__DIR__) . '/web',
             '@assetBaseUrl' => App::env('CRAFT_ASSET_BASE_URL'),
             '@assetBasePath' => App::env('CRAFT_ASSET_BASE_PATH'),
             '@contentBasePath' =>
