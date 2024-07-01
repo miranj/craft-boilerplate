@@ -28,8 +28,8 @@ Object.entries(paths.tasks.css).forEach(([task_name, task_config]) => {
             require('postcss-nested')(task_config.nested_config),
             require('postcss-custom-properties'),
             require('postcss-calc')({ preserve: true }),
-          ].filter((plugin) => !!plugin)
-        )
+          ].filter((plugin) => !!plugin),
+        ),
       )
       .pipe(gulp.dest(paths.directories.build))
       .pipe(
@@ -40,8 +40,8 @@ Object.entries(paths.tasks.css).forEach(([task_name, task_config]) => {
               : false,
             require('autoprefixer'),
             require('postcss-inline-svg'),
-          ].filter((plugin) => !!plugin)
-        )
+          ].filter((plugin) => !!plugin),
+        ),
       )
       .pipe(gulp.dest(paths.directories.build, { sourcemaps: '.' }));
   };
@@ -106,7 +106,7 @@ function generateHash() {
         dest: paths.directories.build,
         filename: paths.tasks.hash.destination,
         json: true,
-      })
+      }),
     )
     .pipe(
       sri({
@@ -119,7 +119,7 @@ function generateHash() {
           return output;
         },
         formatter: (hash) => JSON.stringify(hash, null, 2),
-      })
+      }),
     )
     .pipe(gulp.dest(paths.directories.build));
 }
@@ -144,10 +144,10 @@ function sizeReport() {
         return fs.readFileSync(
           paths.directories.build +
             filepath.replace(/\.(css|js)$/, paths.config.minify_suffix + '.$1'),
-          'utf8'
+          'utf8',
         );
       },
-    })
+    }),
   );
 }
 exports.hash = gulp.series(generateHash, gulp.parallel(prettyHash, sizeReport));
@@ -158,11 +158,11 @@ exports['build'] = gulp.series(
   gulp.parallel(
     gulp.series(
       css_tasks.map((task) => exports[task]),
-      js_tasks.map((task) => exports[task])
+      js_tasks.map((task) => exports[task]),
     ),
-    purge_tasks.map((task) => exports[task])
+    purge_tasks.map((task) => exports[task]),
   ),
-  exports.hash
+  exports.hash,
 );
 
 // Watch task
@@ -171,7 +171,7 @@ function watch() {
     gulp.watch(
       task_files,
       Object.assign({ ignoreInitial: false }, task_config),
-      gulp.series(task_name)
+      gulp.series(task_name),
     );
   });
 }

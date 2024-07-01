@@ -52,7 +52,7 @@ module.exports = {
         container.append(retinaRule);
         retinaRule.walkRules((rule) => {
           rule.selector = `.${e(
-            `retina${separator}${rule.selector.slice(1)}`
+            `retina${separator}${rule.selector.slice(1)}`,
           )}`;
         });
       });
