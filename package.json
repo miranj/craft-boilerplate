@@ -36,7 +36,6 @@
     "*.{js,css,md,php,json,default}": "prettier --write --cache"
   },
   "dependencies": {
-    "fontfaceobserver": "^2.1.0",
     "instant.page": "^5.1.1",
     "lazysizes": "^5.2.2",
     "photoswipe": "^5.2.7",
