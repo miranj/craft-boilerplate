@@ -8,6 +8,10 @@ Release notes for Miranj's Craft Boilerplate starter project.
 
 - Removed Redactor configs.
 
+### DevOps
+
+- Added DDEV support for dev environments.
+
 ## 3.0.0 - 2024-07-01
 
 ### Craft

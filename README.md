@@ -56,7 +56,8 @@ This starter project includes:
     with the handle of the new project in the following locations:
 
     - `composer.json`
-    - `assets/package.json`
+    - `package.json`
+    - `.ddev/config.yaml`
     - `config/app.php`
     - `src/Module.php`
     - `serverconfigs/envs/production/env.conf`
@@ -70,5 +71,3 @@ This starter project includes:
 4.  Inspect all `FIXME` comments in the project and take necessary action.
 
 5.  Assign values to all shared environment variables in `.env.example`.
-
-6.  Run `composer dump-autoload`
