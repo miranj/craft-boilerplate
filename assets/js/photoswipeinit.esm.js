@@ -16,7 +16,7 @@ let instance;
 function getLightbox() {
   if (!lightbox) {
     lightbox = import(window.ProjectEnv.photoswipe.lightbox).then(
-      (module) => module.default
+      (module) => module.default,
     );
   }
   return lightbox;

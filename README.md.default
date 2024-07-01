@@ -2,7 +2,7 @@
 
 ## Requirements
 
-- PHP 8+
+- PHP 8.2+
 - composer
 - MySQL / MariaDB / PostgreSQL
 - [Production] Redis

@@ -2,8 +2,19 @@
 
 # Miranj Craft Boilerplate
 
-A [Craft CMS](https://craftcms.com/) 4 starter project based on [Miranj’s](https://miranj.in)
-project boilerplate (see [`craft3`](https://github.com/miranj/craft-boilerplate/tree/craft3) for the older version). It includes:
+A [Craft CMS](https://craftcms.com/) 5 starter project based on [Miranj’s](https://miranj.in)
+project boilerplate (see [`craft4`](https://github.com/miranj/craft-boilerplate/tree/craft4) or [`craft3`](https://github.com/miranj/craft-boilerplate/tree/craft3) for the older versions).
+
+## Contents
+
+- [Features](#features)
+- [Usage](#usage)
+- [Changelog](./CHANGELOG.md)
+- [License](./LICENSE)
+
+## Features
+
+This starter project includes:
 
 - Our [modular templating architecture](https://miranj.in/blog/2019/modular-architecture-for-building-content-websites).
 - Our [multi-tiered caching architecture](https://miranj.in/blog/2020/fortifying-craft-for-high-traffic) with full-page template caches in Craft, and FastCGI micro-caching in Nginx).
@@ -25,7 +36,6 @@ project boilerplate (see [`craft3`](https://github.com/miranj/craft-boilerplate/
   - [Field Manager](https://github.com/verbb/field-manager)
   - [Imager](https://github.com/aelvan/Imager-Craft)
   - [Image Resizer](https://github.com/verbb/image-resizer)
-  - [Inventory](https://github.com/doublesecretagency/craft-inventory)
   - [Minify](https://github.com/nystudio107/craft-minify)
   - [No-Cache](https://github.com/ttempleton/craft-nocache)
   - [Obfuscator](https://github.com/miranj/craft-obfuscator)
@@ -42,7 +52,7 @@ project boilerplate (see [`craft3`](https://github.com/miranj/craft-boilerplate/
 
         composer create-project miranj/craft-boilerplate:dev-dev /path/to/project
 
-2.  Replace instances of "miranj/craft-boilerplate" and "boilerplate"
+2.  Replace instances of `miranj/craft-boilerplate` and `boilerplate`
     with the handle of the new project in the following locations:
 
     - `composer.json`
@@ -57,8 +67,8 @@ project boilerplate (see [`craft3`](https://github.com/miranj/craft-boilerplate/
 3.  Replace instances of "Miranj Craft Boilerplate" / and "Boilerplate"
     with the title of the new project.
 
-4.  Inspect all FIXME comments in the project and take necessary action.
+4.  Inspect all `FIXME` comments in the project and take necessary action.
 
-5.  Assign values to all shared environment variables in .env.example.
+5.  Assign values to all shared environment variables in `.env.example`.
 
 6.  Run `composer dump-autoload`
