@@ -65,6 +65,7 @@
       "@php -r \"unlink('CHANGELOG.md');\"",
       "@php -r \"rename('CHANGELOG.md.default', 'CHANGELOG.md');\"",
       "@php -r \"rename('composer.json.default', 'composer.json');\"",
+      "@php -r \"copy('serverconfigs/apache-dev/sample.htaccess', 'web/.htaccess');\"",
       "rm -rf field-library",
       "@composer dump-autoload -o"
     ]

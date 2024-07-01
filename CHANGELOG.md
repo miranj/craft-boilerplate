@@ -33,6 +33,7 @@ Release notes for Miranj's Craft Boilerplate starter project.
 - Simplified `.env` config by assigning common default values.
 - Simplified Apache config for dev environments.
 - Refactored custom `.env` url and path variables to drop the `CRAFT_` prefix.
+- Apache dev config is automatically enabled via htaccess in the post-install sequence.
 
 ### System
 
