@@ -60,7 +60,7 @@
     "gulp-uglify": "^3.0.1",
     "husky": "^8.0.1",
     "lint-staged": "^13.0.3",
-    "postcss": "^8.4.12",
+    "postcss": "^8.4.31",
     "postcss-calc": "^7.0.1",
     "postcss-custom-properties": "^9.1.1",
     "postcss-import": "^14.0.2",
