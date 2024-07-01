@@ -4,6 +4,10 @@ Release notes for Miranj's Craft Boilerplate starter project.
 
 ## Unreleased 3.0.0
 
+### Front-end
+
+- Updated PostCSS to 8.4.31. ([#94](https://github.com/miranj/craft-boilerplate/pull/94) via [@dependabot](https://github.com/apps/dependabot))
+
 ### Craft
 
 - Added Craft 5 compatibility.
