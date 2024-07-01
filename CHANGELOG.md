@@ -2,6 +2,12 @@
 
 Release notes for Miranj's Craft Boilerplate starter project.
 
+## Unreleased
+
+### Craft
+
+- Removed Redactor configs.
+
 ## 3.0.0 - 2024-07-01
 
 ### Craft
