@@ -4,10 +4,6 @@ Release notes for Miranj's Craft Boilerplate starter project.
 
 ## Unreleased 3.0.0
 
-### Front-end
-
-- Updated PostCSS to 8.4.31. ([#94](https://github.com/miranj/craft-boilerplate/pull/94) via [@dependabot](https://github.com/apps/dependabot))
-
 ### Craft
 
 - Added Craft 5 compatibility.
@@ -46,6 +42,7 @@ Release notes for Miranj's Craft Boilerplate starter project.
 - Added [PHPStan](https://github.com/craftcms/phpstan) for PHP code quality audits.
 - Updated Gulp to 5.0.0. ([#96](https://github.com/miranj/craft-boilerplate/pull/96) via [@dependabot](https://github.com/apps/dependabot))
 - Updated Node version to 20 LTS “Iron”.
+- Updated PostCSS to 8.4.31. ([#94](https://github.com/miranj/craft-boilerplate/pull/94) via [@dependabot](https://github.com/apps/dependabot))
 - Updated Prettier to 3.3.2.
 - Updated Prettier PHP plugin to 0.22.2.
 - Updated PHP to 8.2.
