@@ -33,7 +33,7 @@
     "singleQuote": true
   },
   "lint-staged": {
-    "*.{js,css,md,php,json,default}": "prettier --write --cache"
+    "*.{js,css,md,php,json,default}": "prettier --write --cache --no-error-on-unmatched-pattern"
   },
   "dependencies": {
     "fontfaceobserver": "^2.1.0",

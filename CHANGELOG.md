@@ -12,6 +12,10 @@ Release notes for Miranj's Craft Boilerplate starter project.
 
 - Added DDEV support for dev environments.
 
+### System
+
+- Fixed a bug where Prettier would throw an error when committing the manifest symlink files.
+
 ## 3.0.0 - 2024-07-01
 
 ### Craft
