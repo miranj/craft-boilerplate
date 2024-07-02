@@ -6,6 +6,8 @@ Release notes for Miranj's Craft Boilerplate starter project.
 
 ### Craft
 
+- Enabled the _Last Edited By_ column for Entry sources.
+- Removed _New Child_ and _URI_ columns for Entry sources.
 - Removed Redactor configs.
 
 ### DevOps

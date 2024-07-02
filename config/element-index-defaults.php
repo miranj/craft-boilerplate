@@ -12,13 +12,7 @@ use craft\elements\Entry;
 
 return [
     'elementDefaults' => [
-        Entry::class => [
-            'title',
-            '_childme_addChild',
-            'uri',
-            'dateUpdated',
-            'link',
-        ],
+        Entry::class => ['title', 'dateUpdated', 'revisionCreator', 'link'],
         Category::class => ['title', 'dateCreated', 'dateUpdated'],
         Asset::class => ['title', 'filename', 'size', 'dateModified', 'link'],
     ],
