@@ -1,11 +1,9 @@
 {% extends '_layouts/html' %}
 
 {% block page %}
-  <div id="pjax-page">
-    {{ block('page_header') }}
-    {{ block('page_main') }}
-    {{ block('page_footer') }}
-  </div>
+  {{ block('page_header') }}
+  {{ block('page_main') }}
+  {{ block('page_footer') }}
 {% endblock %}
 
 

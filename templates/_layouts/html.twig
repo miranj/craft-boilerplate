@@ -93,7 +93,7 @@
         
         {% block head_end %}{% endblock %}
         
-        <meta name="build" content="{{ htmlCacheKey }}" data-pjax-track>
+        <meta name="build" content="{{ htmlCacheKey }}">
       {% endapply %}
     </head>
     
@@ -109,11 +109,9 @@
             module: 'photoswipe.min.js',
           }|map((href, key) => alias('@assetBaseUrl/build/' ~ href|replace('/.(css|js)/', ".#{assetManifest[href]}.$1"))),
         }|merge(jsConstants ?? {})|filter %}
-        <div id="pjax-eval">
-          <script>
-            window.ProjectEnv = {{ jsConstants|json_encode|raw }};
-          </script>
-        </div>
+        <script>
+          window.ProjectEnv = {{ jsConstants|json_encode|raw }};
+        </script>
       {% endblock %}
 
       {% for script in scripts %}

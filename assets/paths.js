@@ -69,12 +69,9 @@ paths.tasks = {
       source: [
         '../node_modules/@alpinejs/collapse/dist/cdn.js',
         '../node_modules/alpinejs/dist/cdn.js',
-        '../node_modules/pjax/pjax.min.js',
-        '../node_modules/topbar/topbar.min.js',
-        'js/pjaxinit.js',
       ],
       destination: 'deferred.js',
-      watch: ['js/pjaxinit.js'],
+      watch: ['../node_modules/alpinejs/dist/cdn.js'],
     },
     instant: {
       es6: true,

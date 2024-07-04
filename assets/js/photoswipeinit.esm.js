@@ -51,4 +51,3 @@ function initPhotoswipe() {
 }
 
 initPhotoswipe();
-document.addEventListener('pjax:success', initPhotoswipe);

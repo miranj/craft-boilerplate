@@ -23,7 +23,6 @@ This starter project includes:
   - [Instant.page](https://github.com/instantpage/instant.page)
   - [LazySizes](https://github.com/aFarkas/lazysizes)
   - [PhotoSwipe](https://github.com/dimsemenov/photoswipe)
-  - [Pjax](https://github.com/MoOx/pjax)
   - [Tailwind CSS](https://tailwindcss.com/)
 - Server configuration files for Apache (dev) and Nginx (staging, production).
 - A few Craft plugins, along with their config files:

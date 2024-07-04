@@ -80,7 +80,6 @@
 {% macro openPDFLinksInNewTab(html) %}
   {% return html|retconAttr('a[href$=".pdf"], a[href$=".PDF"]', {
     'target': '_blank',
-    'data-no-pjax': true,
   }) %}
 {% endmacro %}
 
