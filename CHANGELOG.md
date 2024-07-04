@@ -4,6 +4,10 @@ Release notes for Miranj's Craft Boilerplate starter project.
 
 ## Unreleased
 
+### Front-end
+
+- Updated Tailwind to 3.4.4.
+
 ### Craft
 
 - Enabled the _Last Edited By_ column for Entry sources.
