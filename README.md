@@ -19,6 +19,7 @@ This starter project includes:
 - Our [modular templating architecture](https://miranj.in/blog/2019/modular-architecture-for-building-content-websites).
 - Our [multi-tiered caching architecture](https://miranj.in/blog/2020/fortifying-craft-for-high-traffic) with full-page template caches in Craft, and FastCGI micro-caching in Nginx).
 - A [Gulp](https://gulpjs.com/) based build process that uses
+  - [Alpine.js](https://alpinejs.dev/)
   - [Font Face Observer](https://github.com/bramstein/fontfaceobserver)
   - [Fontloader](https://gist.github.com/rungta/fa39058f1d15d6d4ea95)
   - [Instant.page](https://github.com/instantpage/instant.page)

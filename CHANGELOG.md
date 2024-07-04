@@ -6,6 +6,7 @@ Release notes for Miranj's Craft Boilerplate starter project.
 
 ### Front-end
 
+- Added [Alpine.js](https://alpinejs.dev/), alongwith the [Collapse plugin](https://alpinejs.dev/plugins/collapse).
 - Updated Tailwind to 3.4.4.
 
 ### Craft

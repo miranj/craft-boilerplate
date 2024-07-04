@@ -72,6 +72,8 @@ paths.tasks = {
     },
     deferred: {
       source: [
+        '../node_modules/@alpinejs/collapse/dist/cdn.js',
+        '../node_modules/alpinejs/dist/cdn.js',
         '../node_modules/pjax/pjax.min.js',
         '../node_modules/topbar/topbar.min.js',
         'js/pjaxinit.js',

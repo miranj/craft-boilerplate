@@ -36,6 +36,8 @@
     "*.{js,css,md,php,json,default}": "prettier --write --cache --no-error-on-unmatched-pattern"
   },
   "dependencies": {
+    "@alpinejs/collapse": "^3.14.1",
+    "alpinejs": "^3.14.1",
     "fontfaceobserver": "^2.1.0",
     "instant.page": "^5.1.1",
     "lazysizes": "^5.2.2",
