@@ -38,7 +38,6 @@
   "dependencies": {
     "@alpinejs/collapse": "^3.14.1",
     "alpinejs": "^3.14.1",
-    "fontfaceobserver": "^2.1.0",
     "instant.page": "^5.1.1",
     "lazysizes": "^5.2.2",
     "photoswipe": "^5.2.7",

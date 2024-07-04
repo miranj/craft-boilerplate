@@ -3,13 +3,6 @@ const colors = require('tailwindcss/colors');
 const plugin = require('tailwindcss/plugin');
 const postcss = require('postcss');
 
-let fonts = {
-  title: defaultTheme.fontFamily.sans,
-  'title-wf': [],
-  prose: defaultTheme.fontFamily.serif,
-  'prose-wf': [],
-};
-
 module.exports = {
   content: ['../templates/**/*.{html,twig}', './js/**/*.js'],
   theme: {
@@ -33,10 +26,8 @@ module.exports = {
         padding: '1.5rem',
       },
       fontFamily: {
-        title: fonts.title,
-        'title-wf': fonts['title-wf'].concat(fonts.title),
-        prose: fonts.prose,
-        'prose-wf': fonts['prose-wf'].concat(fonts.prose),
+        title: [...defaultTheme.fontFamily.sans],
+        prose: [...defaultTheme.fontFamily.serif],
       },
     },
   },

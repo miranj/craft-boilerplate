@@ -46,7 +46,7 @@ paths.tasks = {
         defaultExtractor: (content) =>
           content.match(/[\w-/.%@&:\(\)\{\}\[\]!]+(?<!:)/g) || [],
         safelist: {
-          deep: [/wf-active/, /richtext/, /pswp/],
+          deep: [/richtext/, /pswp/],
         },
       },
       watch: [
@@ -61,14 +61,9 @@ paths.tasks = {
   },
   js: {
     urgent: {
-      source: [
-        '../node_modules/fontfaceobserver/fontfaceobserver.js',
-        'js/fontloader.js',
-        '../node_modules/lazysizes/lazysizes.js',
-        'js/lazyinit.js',
-      ],
+      source: ['../node_modules/lazysizes/lazysizes.js', 'js/lazyinit.js'],
       destination: 'urgent.js',
-      watch: ['js/fontloader.js', 'js/lazyinit.js'],
+      watch: ['js/lazyinit.js'],
     },
     deferred: {
       source: [
