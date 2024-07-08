@@ -18,6 +18,7 @@ module.exports = {
       transparent: colors.transparent,
       black: colors.black,
       white: colors.white,
+      zinc: colors.zinc,
       brand: {},
     },
     extend: {

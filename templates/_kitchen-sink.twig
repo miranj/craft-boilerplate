@@ -161,7 +161,7 @@
     <h1 class="text-6xl font-bold">
       {{ siteName }} Kitchen Sink
     </h1>
-    <nav class="p-4 bg-black/5">
+    <nav class="p-4 bg-black/5 dark:bg-white/10">
       <h2 class="text-xl mb-2 font-bold">
         On This Page
       </h2>
@@ -216,7 +216,7 @@
         </span>
         <div class="{{ baseGrid }} gap-y-4">
           {% for label, class in style.classes %}
-            <div class="bg-black/10 {{ class }}  px-2 py-1">
+            <div class="bg-black/10 dark:bg-white/15 {{ class }} px-2 py-1">
               {{ label }}<br>
               <span class="text-sm">
                 {{ class }}
@@ -245,7 +245,7 @@
           <div class="space-y-20">
             {% for heading, styles in section.groups %}
               <div class="flex flex-col sm:flex-row gap-8">
-                <h3 class="text-sm p-2 space-y-1 sm:w-1/4 sm:shrink-0 bg-black/5">
+                <h3 class="text-sm p-2 space-y-1 sm:w-1/4 sm:shrink-0 bg-black/5 dark:bg-white/10">
                   <span class="block font-medium">
                     {{ heading }}
                   </span>
@@ -287,7 +287,7 @@
         <div class="space-y-12 md:space-y-2">
           {% for title, classes in style.classes %}
             <div class="sm:flex sm:gap-8">
-              <div class="text-sm mb-2 p-2 space-y-1 sm:w-1/4 sm:shrink-0 bg-black/5">
+              <div class="text-sm mb-2 p-2 space-y-1 sm:w-1/4 sm:shrink-0 bg-black/5 dark:bg-white/10">
                 <h3 class="block font-medium">
                   {{ title }}
                 </h3>
