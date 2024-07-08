@@ -28,6 +28,13 @@
 
 {% extends '_layouts/base' %}
 {% set doNotCache = true %}
+{% set seomate = (seomate ?? {})|merge({
+  meta: {
+    title: 'Kitchen Sink',
+    description: 'Documents the various design tokens used in this project.',
+    robots: 'noindex',
+  },
+}, true) %}
 
 {% set loremTitle = 'Aperiam, culpa numquam!' %}
 {% set loremPara = 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam, culpa numquam! Numquam corrupti rerum, nihil explicabo voluptatibus aliquam dolorum recusandae pariatur in, porro asperiores dolores similique exercitationem necessitatibus. Ratione, sint.' %}
@@ -58,6 +65,7 @@
   </div>
 #}
 
+{% set baseGridWrapper = 'container' %}
 {% set baseGrid = 'layout-base' %}
 {% set layoutStyles = [{
   heading: 'Layout Areas',
@@ -114,20 +122,31 @@
 #}
 
 {% set typographyStyles = [{
-  heading: 'Font Classes',
-  classes: {},
+  heading: 'Title Presets',
+  classes: {
+    'Title H1': ['font-title', 'title-h1'],
+    'Title H2': ['font-title', 'title-h2'],
+  },
   text: loremTitle,
 },{
-  heading: 'Font Styles',
+  heading: 'Prose Presets',
   classes: {
-    'Title Normal': ['font-title', 'font-normal'],
-    'Title Bold': ['font-title', 'font-bold'],
-    'Prose Italic': ['font-prose', 'italic'],
-    'Prose Normal': ['font-prose', 'font-normal'],
-    'Prose Bold': ['font-prose', 'font-bold'],
+    'Prose Body': ['font-prose', 'prose-body'],
+    'Prose Meta': ['font-prose', 'prose-meta'],
+  },
+  text: loremPara,
+},{
+  heading: 'Font Families',
+  classes: {
+    'Generic Sans Normal': ['font-title', 'font-normal'],
+    'Generic Sans Bold': ['font-title', 'font-bold'],
+    'Generic Serif Italic': ['font-prose', 'italic'],
+    'Generic Serif Normal': ['font-prose', 'font-normal'],
+    'Generic Serif Bold': ['font-prose', 'font-bold'],
     'Body': [],
   },
   text: loremTitle,
+  baseClasses: 'truncate',
 },{
   heading: 'Font Scale',
   classes: {
@@ -143,13 +162,16 @@
     '6xl': ['text-6xl'],
   },
   text: loremTitle,
+  baseClasses: 'leading-tight truncate',
 },{
   heading: 'Line Height',
   classes: {
-    Squeeze: ['leading-squeeze'],
+    None: ['leading-none'],
     Tight: ['leading-tight'],
     Snug: ['leading-snug'],
     Normal: ['leading-normal'],
+    Relaxed: ['leading-relaxed'],
+    Loose: ['leading-loose'],
   },
   text: loremPara,
 }] %}
@@ -207,7 +229,7 @@
           </a>
         </header>
       </div>
-      <div class="container">
+      <div class="{{ baseGridWrapper }}">
         <span class="inline-block px-2 py-1">
           Layout Base Grid <br>
           <span class="text-sm">
@@ -235,7 +257,7 @@
       {% for section in colourStyles %}
         <section>
           <header class="flex w-full border-t pt-2">
-            <h2 id="{{ section.heading|kebab }}" class="text-3xl mb-8">
+            <h2 id="{{ section.heading|kebab }}" class="text-xl mb-8">
               {{ section.heading }}
             </h2>
             <a class="ml-auto text-xs underline" href="#">
@@ -287,7 +309,7 @@
         <div class="space-y-12 md:space-y-2">
           {% for title, classes in style.classes %}
             <div class="sm:flex sm:gap-8">
-              <div class="text-sm mb-2 p-2 space-y-1 sm:w-1/4 sm:shrink-0 bg-black/5 dark:bg-white/10">
+              <div class="text-sm p-2 space-y-1 sm:w-1/4 sm:shrink-0 bg-black/5 dark:bg-white/10">
                 <h3 class="block font-medium">
                   {{ title }}
                 </h3>
@@ -295,7 +317,7 @@
                   {{ classes|join(' ') }}
                 </span>
               </div>
-              <div {{ attr({ class: classes|push('self-center') }) }}>
+              <div {{ attr({ class: classes|push('self-center')|push(style.baseClasses ?? '') }) }}>
                 {{ style.text }}
               </div>
             </div>
