@@ -4,6 +4,7 @@
   {{ block('page_header') }}
   {{ block('page_main') }}
   {{ block('page_footer') }}
+  {{ block('page_admin') }}
 {% endblock %}
 
 
@@ -22,4 +23,38 @@
 
 
 {% block page_footer %}
+{% endblock %}
+
+
+
+{% block page_admin %}
+  {% if entry is defined %}
+    {% nocache with {
+      editUrl: entry.cpEditUrl ?? false,
+      sectionUID: entry.section.uid ?? false,
+    } %}
+      {% if currentUser
+        and editUrl
+        and not craft.app.request.isPreview
+        and sectionUID
+        and currentUser.can('saveEntries:' ~ sectionUID) %}
+        <div class="z-50 fixed" style="right:0;bottom:10%">
+          {{ tag('a', {
+            class: [
+              'block px-3.5 py-1.5',
+              'text-sm',
+              'rounded-s opacity-50',
+              'bg-black text-white dark:bg-zinc-100 dark:text-zinc-900',
+              'hover:no-underline hover:opacity-100',
+            ],
+            style: {
+              'font-family': 'system-ui,ui-sans-serif,sans-serif',
+            },
+            href: editUrl,
+            text: 'Edit',
+          }) }}
+        </div>
+      {% endif %}
+    {% endnocache %}
+  {% endif %}
 {% endblock %}
