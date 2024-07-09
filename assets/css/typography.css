@@ -2,28 +2,16 @@
  * Base
  */
 
-/* Font Scale */
-@screen xs {
-    html {
-        font-size: 1.4rem;
-    }
-}
-@screen sm {
-    html {
-        font-size: 1.333125rem;
-    }
-}
-
 /* Typefaces */
 body {
-    @apply font-prose;
+    @apply font-prose text-base;
 }
 h1,
 h2,
 h3,
 h4,
 h5 {
-    @apply font-bold font-title;
+    @apply font-title font-bold;
 }
 
 /* Links */
@@ -35,10 +23,13 @@ h5 {
 
 /* Text Styles */
 .title-h1 {
-    @apply text-xl;
+    @apply text-xl leading-tight;
 }
 .title-h2 {
-    @apply text-lg;
+    @apply text-lg leading-tight;
+}
+.title-h3 {
+    @apply text-md leading-tight;
 }
 .prose-body {
     @apply text-base;
