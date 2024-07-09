@@ -326,7 +326,7 @@
   {% set imageTransforms = [] %}
   {% set imageSources = [] %}
   {% set imageColour = 'transparent' %}
-  {% set imageAlt = imageAlt ?: imageAlt.alt ?: imageAsset.title %}
+  {% set imageAlt = imageAlt ?: imageAsset.alt ?: imageAsset.title %}
   {% set imageIsSvg = imageAsset.mimeType in ['image/svg+xml'] or imageAsset.extension in ['svg'] %}
   {% set imageIsAnimatedGif = imageAsset.extension in ['gif'] and craft.imager.isAnimated(imageAsset) %}
   {% set imageScaleFactor = imageIsSvg ? 100 : 1 %}
@@ -338,7 +338,7 @@
     and imageAsset.mimeType not in ['image/svg+xml']
     and (imagePreset is empty or preset is empty)
   %}
-    <span class="block bg-theme-red text-white all-caps">
+    <span class="block" style="border:2px solid red;color:red;padding:0 0.4em;text-transform:uppercase">
       Warning: No Image Preset
     </span>
   {% endif %}
@@ -451,7 +451,7 @@
       {{ tag('img', {
         class: imageClass,
         src: imageDefault.url,
-        alt: imageAlt|e('html_attr'),
+        alt: imageAlt,
         width: imageDefault.width * imageScaleFactor,
         height: imageDefault.height * imageScaleFactor,
       }) }}
@@ -486,7 +486,7 @@
       imageLazyload ? 'lazyload no-js:hidden' : 'lazyloaded',
     ]).flatten().all(),
     src: imageDefault.url,
-    alt: imageAlt|e('html_attr'),
+    alt: imageAlt,
     width:  not imageIsResponsive ? imageDefault.width * imageScaleFactor,
     height: not imageIsResponsive ? imageDefault.height * imageScaleFactor,
 
