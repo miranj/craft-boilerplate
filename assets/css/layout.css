@@ -1,0 +1,81 @@
+/* Grids and Layouts */
+
+:root {
+    --layout-margin: theme('spacing.sm-lg');
+    --layout-prose: clamp(20em, 65vw, 34em);
+    @screen xs {
+        --layout-margin: theme('spacing.xl-4xl');
+    }
+    @screen sm {
+        --layout-margin: theme('spacing.lg-3xl');
+    }
+}
+
+/* Simple Container */
+@layer utilities {
+    .container {
+        padding-left: var(--layout-margin);
+        padding-right: var(--layout-margin);
+    }
+}
+
+/*
+ Fine-grained Container via grid
+*/
+@layer utilities {
+    /* Base Grid */
+    .layout-base {
+        display: grid;
+        grid-template-columns:
+            var(--layout-margin)
+            minmax(0, 1fr)
+            var(--layout-margin);
+        @screen sm {
+            grid-template-columns:
+                var(--layout-margin)
+                1fr
+                var(--layout-prose)
+                1fr
+                var(--layout-margin);
+        }
+    }
+
+    /* Container, Content Areas */
+    .area-main {
+        @apply col-start-2 col-span-1;
+        @apply sm:col-start-2 sm:col-span-3;
+    }
+    .area-content {
+        @apply col-start-2 col-span-1;
+        @apply sm:col-start-3 sm:col-span-1;
+    }
+    .area-content-main-left {
+        @apply col-start-2 col-span-1;
+        @apply sm:col-start-2 sm:col-span-2;
+    }
+    .area-content-main-right {
+        @apply col-start-2 col-span-1;
+        @apply sm:col-start-3 sm:col-span-2;
+    }
+
+    /* Bleeds */
+    .area-bleed {
+        @apply col-span-full;
+    }
+    .area-bleed-left {
+        @apply col-start-1 col-span-2;
+        @apply sm:col-start-1 sm:col-span-4;
+    }
+    .area-bleed-right {
+        @apply col-start-2 col-span-2;
+        @apply sm:col-start-2 sm:col-span-4;
+    }
+    .area-content-bleed-left {
+        @apply col-start-1 col-span-2;
+        @apply sm:col-start-1 sm:col-span-3;
+    }
+    .area-content-bleed-right {
+        @apply col-start-2 col-span-2;
+        @apply sm:col-start-3 sm:col-span-3;
+    }
+}

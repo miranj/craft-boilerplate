@@ -5,6 +5,9 @@ const postcss = require('postcss');
 
 module.exports = {
   content: ['../templates/**/*.{html,twig}', './js/**/*.js'],
+  corePlugins: {
+    container: false,
+  },
   theme: {
     screens: {
       xs: 448 / 16 + 'em',
@@ -34,10 +37,6 @@ module.exports = {
       '4xl': 'clamp(2.986rem, 1.4634rem + 7.613vi, 7.3634rem)',
     },
     extend: {
-      container: {
-        center: true,
-        padding: '1.5rem',
-      },
       fontFamily: {
         // TODO Customise font stacks by adding webfonts here
         // TODO If using webfonts, add a URL to customise the set
