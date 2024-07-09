@@ -7,6 +7,7 @@ Release notes for Miranj's Craft Boilerplate starter project.
 ### Front-end
 
 - Added a base fluid type scale (via [Utopia](https://utopia.fyi/type/calculator/)).
+- Added a base fluid spacing scale (via [Utopia](https://utopia.fyi/space/calculator/)).
 - Added support for Dark Mode (via the `prefers-color-scheme` media query).
 - Added [Alpine.js](https://alpinejs.dev/), alongwith the [Collapse plugin](https://alpinejs.dev/plugins/collapse).
 - Updated Tailwind to 3.4.4.

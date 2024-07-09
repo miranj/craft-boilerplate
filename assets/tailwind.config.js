@@ -44,6 +44,27 @@ module.exports = {
         title: [...defaultTheme.fontFamily.sans],
         prose: [...defaultTheme.fontFamily.serif],
       },
+      spacing: {
+        /* @link https://utopia.fyi/space/calculator?c=320,16,1.2,1240,21,1.333,6,2,&s=0.75|0.5|0.25,1.5|2|3|4|5|6|7,s-l|l-3xl|xl-4xl&g=s,l,xl,12 */
+
+        // Scale
+        '3xs': 'clamp(0.25rem, 0.2283rem + 0.1087vi, 0.3125rem)',
+        '2xs': 'clamp(0.5rem, 0.4348rem + 0.3261vi, 0.6875rem)',
+        xs: 'clamp(0.75rem, 0.663rem + 0.4348vi, 1rem)',
+        sm: 'clamp(1rem, 0.8913rem + 0.5435vi, 1.3125rem)',
+        md: 'clamp(1.5rem, 1.3261rem + 0.8696vi, 2rem)',
+        lg: 'clamp(2rem, 1.7826rem + 1.087vi, 2.625rem)',
+        xl: 'clamp(3rem, 2.6739rem + 1.6304vi, 3.9375rem)',
+        '2xl': 'clamp(4rem, 3.5652rem + 2.1739vi, 5.25rem)',
+        '3xl': 'clamp(5rem, 4.4565rem + 2.7174vi, 6.5625rem)',
+        '4xl': 'clamp(6rem, 5.3478rem + 3.2609vi, 7.875rem)',
+        '5xl': 'clamp(7rem, 6.2391rem + 3.8043vi, 9.1875rem)',
+
+        // Custom Pairs
+        'sm-lg': 'clamp(1rem, 0.4348rem + 2.8261vi, 2.625rem)',
+        'lg-3xl': 'clamp(2rem, 0.413rem + 7.9348vi, 6.5625rem)',
+        'xl-4xl': 'clamp(3rem, 1.3043rem + 8.4783vi, 7.875rem)',
+      },
     },
   },
   plugins: [
