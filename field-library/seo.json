@@ -50,11 +50,11 @@
     "type": "craft\\fields\\Assets",
     "settings": {
       "restrictLocation": false,
-      "restrictedLocationSource": "volume:15f6c121-6024-4dca-837b-fae66c03f83c",
+      "restrictedLocationSource": "volume:b6f41447-5095-47c1-8e83-b9bc88387ca4",
       "restrictedLocationSubpath": null,
       "allowSubfolders": false,
       "restrictedDefaultUploadSubpath": null,
-      "defaultUploadLocationSource": "volume:15f6c121-6024-4dca-837b-fae66c03f83c",
+      "defaultUploadLocationSource": "volume:b6f41447-5095-47c1-8e83-b9bc88387ca4",
       "defaultUploadLocationSubpath": "{section.handle}/{uri|replace((section.handle), '')|trim('/')}",
       "allowUploads": true,
       "restrictFiles": true,
@@ -68,17 +68,65 @@
       "minRelations": null,
       "selectionLabel": "Add an image",
       "showSiteMenu": true,
-      "source": null,
-      "sources": "*",
+      "sources": ["volume:b6f41447-5095-47c1-8e83-b9bc88387ca4"],
       "targetSiteId": null,
       "validateRelatedElements": false,
       "viewMode": "large",
-      "selectionCondition": {
-        "elementType": "craft\\elements\\Asset",
-        "fieldContext": "global",
-        "class": "craft\\elements\\conditions\\assets\\AssetCondition",
-        "conditionRules": []
-      }
+      "showCardsInGrid": false,
+      "maintainHierarchy": false,
+      "branchLimit": null
+    }
+  },
+  {
+    "name": "Default Sharing Image",
+    "handle": "seoImageDefault",
+    "instructions": "The image that will appear when sharing a link, if no other image is available. Image will be automatically cropped to an aspect ratio of about 2:1 (differs from platform to platform).",
+    "required": null,
+    "searchable": true,
+    "translationMethod": "site",
+    "translationKeyFormat": null,
+    "type": "craft\\fields\\Assets",
+    "settings": {
+      "restrictLocation": false,
+      "restrictedLocationSource": "volume:b6f41447-5095-47c1-8e83-b9bc88387ca4",
+      "restrictedLocationSubpath": null,
+      "allowSubfolders": false,
+      "restrictedDefaultUploadSubpath": null,
+      "defaultUploadLocationSource": "volume:b6f41447-5095-47c1-8e83-b9bc88387ca4",
+      "defaultUploadLocationSubpath": "defaults/seo",
+      "allowUploads": true,
+      "restrictFiles": true,
+      "allowedKinds": ["image"],
+      "showUnpermittedVolumes": false,
+      "showUnpermittedFiles": false,
+      "previewMode": "thumbs",
+      "allowSelfRelations": false,
+      "localizeRelations": false,
+      "maxRelations": 1,
+      "minRelations": null,
+      "selectionLabel": "Add an image",
+      "showSiteMenu": true,
+      "sources": ["volume:b6f41447-5095-47c1-8e83-b9bc88387ca4"],
+      "targetSiteId": null,
+      "validateRelatedElements": false,
+      "viewMode": "large",
+      "showCardsInGrid": false,
+      "maintainHierarchy": false,
+      "branchLimit": null
+    }
+  },
+  {
+    "name": "Legacy URL",
+    "handle": "legacyUrl",
+    "instructions": "The URL of this entry on the previous site, including http:// or https://. The domain name will be automatically removed once the entry is saved.",
+    "required": null,
+    "searchable": false,
+    "translationMethod": "none",
+    "translationKeyFormat": null,
+    "type": "craft\\fields\\Url",
+    "settings": {
+      "types": ["url"],
+      "maxLength": 255
     }
   }
 ]
