@@ -1,6 +1,6 @@
 [
   {
-    "name": "Share / SEO Description",
+    "name": "Share/SEO Description",
     "handle": "seoSummary",
     "instructions": null,
     "required": null,
@@ -20,7 +20,7 @@
     }
   },
   {
-    "name": "Share / SEO Title",
+    "name": "Share/SEO Title",
     "handle": "seoTitle",
     "instructions": null,
     "required": null,
@@ -42,7 +42,7 @@
   {
     "name": "Share Image",
     "handle": "seoImage",
-    "instructions": null,
+    "instructions": "Image will be automatically cropped to an aspect ratio of about 2:1 (differs from platform to platform).",
     "required": null,
     "searchable": true,
     "translationMethod": "site",
@@ -78,7 +78,7 @@
     }
   },
   {
-    "name": "Default Sharing Image",
+    "name": "Default Share Image",
     "handle": "seoImageDefault",
     "instructions": "The image that will appear when sharing a link, if no other image is available. Image will be automatically cropped to an aspect ratio of about 2:1 (differs from platform to platform).",
     "required": null,
@@ -116,9 +116,9 @@
     }
   },
   {
-    "name": "Legacy URL",
+    "name": "Redirect legacy URL to this entry",
     "handle": "legacyUrl",
-    "instructions": "The URL of this entry on the previous site, including http:// or https://. The domain name will be automatically removed once the entry is saved.",
+    "instructions": "The URL of this entry on the previous site (including `http://` or `https://`). The domain name will be automatically removed once the entry is saved, and any visitors landing on the legacy URL will be redirected to the current entry page.",
     "required": null,
     "searchable": false,
     "translationMethod": "none",
