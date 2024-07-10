@@ -20,6 +20,7 @@ Release notes for Miranj's Craft Boilerplate starter project.
 
 ### Craft
 
+- Added `heroicon()` Twig function to render the SVG version of any [Heroicons](https://heroicons.com/).
 - Logged in users with editing permissions will see a floating “Edit” button when viewing an entry on the front-end.
 - Enabled the _Last Edited By_ column for Entry sources.
 - Enabled the _New Child_, and _Slug_ columns for Category sources.

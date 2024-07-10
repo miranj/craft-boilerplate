@@ -13,6 +13,20 @@
   "type": "project",
   "minimum-stability": "dev",
   "prefer-stable": true,
+  "repositories": [
+    {
+      "type": "package",
+      "package": {
+        "name": "tailwindlabs/heroicons",
+        "version": "2.1.5",
+        "source": {
+          "url": "https://github.com/tailwindlabs/heroicons.git",
+          "type": "git",
+          "reference": "v2.1.5"
+        }
+      }
+    }
+  ],
   "require": {
     "craftcms/ckeditor": "^4.1",
     "craftcms/cms": "~5.2.0",
@@ -24,6 +38,7 @@
     "nystudio107/craft-minify": "^5.0",
     "nystudio107/craft-typogrify": "^5.0",
     "spacecatninja/imager-x": "^5.0",
+    "tailwindlabs/heroicons": "^2.1",
     "topshelfcraft/environment-label": "^5.0",
     "ttempleton/craft-nocache": "^3.0",
     "vaersaagod/seomate": "^3.0@beta",
