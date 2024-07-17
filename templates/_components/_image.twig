@@ -455,7 +455,7 @@
       data-pswp-width="{{ imageDefault.width }}"
       data-pswp-height="{{ imageDefault.height }}"
       data-pswp-srcset="{{ defaultSrcSet }}"
-      class="photoswipe cursor-zoom-in"
+      class="photoswipe cursor-zoom-in group"
       target="_blank"
       rel="noreferrer noopener">
   {% endif %}
@@ -501,6 +501,7 @@
     class: collect([
       imageClass,
       imageLazyload ? 'lazyload no-js:hidden' : 'lazyloaded',
+      imageHasZoom ? 'group-hover:scale-104 sm:group-hover:scale-102 group-hover:shadow-lg transition duration-300',
     ]).flatten().all(),
     src: imageDefault.url,
     alt: imageAlt,
