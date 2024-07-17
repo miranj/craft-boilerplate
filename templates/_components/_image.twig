@@ -309,6 +309,10 @@
 {# Presets `sizes:` can refer to keys from `config/imager-x-transforms.php` #}
 {% set presets = {
   content: { sizes: 'content' },
+  logo: {
+    sizes: 'logo',
+    guide: '--sm-plus clamp(6rem, 5.3478rem + 3.2609vi, 7.875rem), clamp(7rem, 6.2391rem + 3.8043vi, 9.1875rem)',
+  },
 } %}
 
 

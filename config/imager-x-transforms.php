@@ -15,4 +15,14 @@ return [
             ['width' => 1800],
         ],
     ],
+
+    'logo' => [
+        'transforms' => [
+            ['width' => 120],
+            ['width' => 200],
+            ['width' => 320],
+            ['width' => 460],
+            ['width' => 600],
+        ],
+    ],
 ];
