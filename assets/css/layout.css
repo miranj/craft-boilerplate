@@ -14,8 +14,7 @@
 /* Simple Container */
 @layer utilities {
     .container {
-        padding-left: var(--layout-margin);
-        padding-right: var(--layout-margin);
+        @apply px-layout-margin;
     }
 }
 

@@ -44,6 +44,9 @@ module.exports = {
         prose: [...defaultTheme.fontFamily.serif],
       },
       spacing: {
+        // layout grid
+        'layout-margin': 'var(--layout-margin)',
+
         /* @link https://utopia.fyi/space/calculator?c=320,16,1.2,1240,21,1.333,6,2,&s=0.75|0.5|0.25,1.5|2|3|4|5|6|7,s-l|l-3xl|xl-4xl&g=s,l,xl,12 */
 
         // Scale
