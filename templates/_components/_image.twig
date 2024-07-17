@@ -280,7 +280,9 @@
 
 
 
-{# Parameters #}
+{#
+  Parameters
+#}
 {% set imageAsset = params.asset ?? false %}
 {% set imageBreakpointAssets = params.breakpoint_assets ?? {} %}
 {% set imagePreset = params.preset ?? false %}
@@ -294,7 +296,9 @@
 
 
 
-{# Config #}
+{#
+  Config
+#}
 {% set queries = {
   '--xs-plus': '(min-width: 448px)',
   '--sm-plus': '(min-width: 900px)',
@@ -302,11 +306,16 @@
   '--lg-plus': '(min-width: 1920px)',
   '--retina':  '(min-resolution: 192dpi)',
 } %}
-{% set presets = {} %}
+{# Presets `sizes:` can refer to keys from `config/imager-x-transforms.php` #}
+{% set presets = {
+  content: { sizes: 'content' },
+} %}
 
 
 
-{# Helpers #}
+{#
+  Helpers
+#}
 {% macro sortBreakpointPresets(presets, mediaQueryOrder) %}
   {% return presets
     |multisort(
@@ -319,7 +328,9 @@
 
 
 
-{# Biz logic #}
+{#
+  Biz logic
+#}
 {% if imageAsset %}
   {% set imageDefault = null %}
   {% set imageSizesGuide = false %}
@@ -428,7 +439,9 @@
 
 
 
-{# Output #}
+{#
+  Output
+#}
 {% if imageAsset and not imageIsCss %}
   {% set defaultSrcSet = craft.imager.srcset(imageTransforms) %}
 
