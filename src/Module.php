@@ -73,13 +73,19 @@ class Module extends \yii\base\Module
     {
         $request = Craft::$app->request;
         if ($request->isLivePreview || $request->isPreview) {
+            $parsedBaseCpUrl = parse_url(
+                Craft::$app->config->general->baseCpUrl,
+            );
             $headers = $event->sender->getHeaders();
             $headers->set(
                 'Content-Security-Policy',
                 'frame-ancestors ' .
-                    parse_url(
-                        Craft::$app->config->general->baseCpUrl,
-                        PHP_URL_HOST,
+                    implode(
+                        ':',
+                        array_filter([
+                            $parsedBaseCpUrl['host'],
+                            $parsedBaseCpUrl['port'],
+                        ]),
                     ),
             );
             $headers->set('X-Accel-Expires', '0');

@@ -25,6 +25,7 @@ Release notes for Miranj's Craft Boilerplate starter project.
 - Enabled the _Last Edited By_ column for Entry sources.
 - Enabled the _New Child_, and _Slug_ columns for Category sources.
 - Fixed a bug where `normaliseRichtext()` would process input as Markdown by default.
+- Fixed a bug where Live Previews would not work if the URL included a custom port.
 - Removed _New Child_, and _URI_ columns for Entry sources, and _Date Created_ for Category sources.
 - Removed Redactor configs.
 
