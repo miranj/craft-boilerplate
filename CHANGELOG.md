@@ -7,6 +7,7 @@ Release notes for Miranj's Craft Boilerplate starter project.
 ### Front-end
 
 - Added a barebones site-level header and footer to the base template.
+- Added a barebones placeholder homepage.
 - Added a base layout grid with utility classes for grid areas.
 - Added a base fluid type scale (via [Utopia](https://utopia.fyi/type/calculator/)).
 - Added a base fluid spacing scale (via [Utopia](https://utopia.fyi/space/calculator/)).
