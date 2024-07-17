@@ -33,6 +33,7 @@ Release notes for Miranj's Craft Boilerplate starter project.
 ### DevOps
 
 - Added DDEV support for dev environments.
+- Added Ngrok support (via DDEV).
 
 ### System
 
