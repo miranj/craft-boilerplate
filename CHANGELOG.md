@@ -27,6 +27,7 @@ Release notes for Miranj's Craft Boilerplate starter project.
 - Added `heroicon()` Twig function to render the SVG version of any [Heroicons](https://heroicons.com/).
 - Added `image` and `imageNested` fields to the Field Library.
 - Added sample [Imager X named transforms](https://imager-x.spacecat.ninja/usage/named-transforms.html) based preset to the `_image` component.
+- Refactored `embed` component to render an [oEmbed plugin field](https://github.com/wrav/oembed).
 - Logged in users with editing permissions will see a floating “Edit” button when viewing an entry on the front-end.
 - Enabled the _Last Edited By_ column for Entry sources.
 - Enabled the _New Child_, and _Slug_ columns for Category sources.

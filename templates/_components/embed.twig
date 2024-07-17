@@ -1,8 +1,8 @@
 {#
   _components/embed
   
-  Embed content captured via a Hyper field
-  https://verbb.io/craft-plugins/hyper/docs/feature-tour/link-types#embed
+  Embed content captured via an oEmbed field
+  https://github.com/wrav/oembed
 #}
 {% from '_helpers/text' import deferEmbeds, normaliseRichtext %}
 
@@ -11,38 +11,40 @@
 {#
   Params
 #}
-{% set embedClass = params.class ?? '' %}
-{% set embedHyperField = params.embed ?? '' %}
-{% set embedCaptionClass = params.caption_class ?? '' %}
+{% set embedField = params.embed ?? '' %}
 {% set embedCaption = params.caption ?? '' %}
+{% set embedClass = params.class ?? '' %}
+{% set embedCaptionClass = params.caption_class ?? '' %}
 
 
 
 {#
   Variables
 #}
-{% set embedIsVideo = embedHyperField and embedHyperField.getData().providerName|lower in ['youtube', 'vimeo', 'facebook'] %}
+{% set embedIsVideo = embedField
+  and embedField.valid
+  and (
+    embedField.media.providerName|lower in ['youtube', 'vimeo', 'facebook']
+    or embedField.media.url|indexOf('youtube') != -1
+    or embedField.media.url|indexOf('vimeo') != -1
+    or embedField.media.url|indexOf('facebook') != -1
+  ) %}
 
 
 
 {#
   Render
 #}
-{% if embedHyperField %}
-  <figure {{ attr({
-    class: [
-      embedClass,
-      embedIsVideo ? 'aspect-video responsive-embed',
-    ],
-  }) }}>
-
-    {{ deferEmbeds(embedHyperField.getHtml()) }}
-
+{% if embedField and embedField.valid %}
+  <figure {{ attr({ class: embedClass }) }}>
+    <div {{ attr({ class: embedIsVideo ? 'aspect-video responsive-embed' }) }}>
+      {{ deferEmbeds(embedField.render()) }}
+    </div>
+    
     {% if embedCaption %}
       <figcaption {{ attr({ class: embedCaptionClass }) }}>
         {{ normaliseRichtext(embedCaption) }}
       </figcaption>
     {% endif %}
-    
   </figure>
 {% endif %}
