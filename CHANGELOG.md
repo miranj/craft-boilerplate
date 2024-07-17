@@ -41,6 +41,7 @@ Release notes for Miranj's Craft Boilerplate starter project.
 
 ### System
 
+- Switched to new Changelog format showing the unreleased version number, and grouping changes under semantic, audience-based sub-heads.
 - Fixed a bug where Prettier would throw an error when committing the manifest symlink files.
 
 ## 3.0.0 - 2024-07-01
