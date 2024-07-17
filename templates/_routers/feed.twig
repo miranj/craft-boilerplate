@@ -7,6 +7,7 @@
 ] : [
   '_views/feeds/' ~ entry.section.handle ~ '-' ~ entry.type.handle,
   '_views/feeds/' ~ entry.section.handle,
+  '_views/feeds/_' ~ entry.type.handle,
 ])|merge([
   '_views/feeds/_default',
 ]) -%}

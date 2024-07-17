@@ -22,6 +22,7 @@ Release notes for Miranj's Craft Boilerplate starter project.
 
 ### Craft
 
+- View routers now also look for section-independent entry type overrides (eg: `_page`, `_article`, etc.) in their cascade before falling back to the `_default` view.
 - Added `heroicon()` Twig function to render the SVG version of any [Heroicons](https://heroicons.com/).
 - Added `image` and `imageNested` fields to the Field Library.
 - Added sample [Imager X named transforms](https://imager-x.spacecat.ninja/usage/named-transforms.html) based preset to the `_image` component.

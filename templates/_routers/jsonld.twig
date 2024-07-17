@@ -5,5 +5,6 @@
 {%- include [
   '_schemas/details/' ~ entry.section.handle ~ '-' ~ entry.type.handle,
   '_schemas/details/' ~ entry.section.handle,
+  '_schemas/details/_' ~ entry.type.handle,
   '_schemas/details/_default',
 ] -%}

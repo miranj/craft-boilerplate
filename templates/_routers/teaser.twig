@@ -7,6 +7,7 @@
 ] : [
   '_views/teasers/' ~ entry.section.handle ~ '-' ~ entry.type.handle,
   '_views/teasers/' ~ entry.section.handle,
+  '_views/teasers/_' ~ entry.type.handle,
 ])|merge([
   '_views/teasers/_default',
 ]) -%}
