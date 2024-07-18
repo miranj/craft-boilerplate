@@ -38,6 +38,7 @@ Release notes for Miranj's Craft Boilerplate starter project.
 
 ### DevOps
 
+- Configured CSP headers for CDN content (such as PDFs) to be embeddedable on the primary domain.
 - Added DDEV support for dev environments.
 - Added Ngrok support (via DDEV).
 
