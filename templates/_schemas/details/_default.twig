@@ -8,7 +8,7 @@
 }|merge(seomate ?? {}, true)) %}
 
 {% set defaultSchemaProps = {
-  title: entrySeomateMeta.meta.title ?? entry.title,
+  title: entrySeomateMeta.meta.title ?? entry.title ?? '',
   description: entrySeomateMeta.meta.description,
   url: entry.url,
   mainEntityOfPage: mainEntityOfPage ?? null,
