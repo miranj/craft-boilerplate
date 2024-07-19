@@ -2,12 +2,12 @@
   Teaser Router
 #}
 
-{%- extends (entry is instance of ('craft\\elements\\Category') ? [
-  '_views/teasers/' ~ entry.group.handle,
+{%- extends (element is instance of ('craft\\elements\\Category') ? [
+  '_views/teasers/' ~ element.group.handle,
 ] : [
-  '_views/teasers/' ~ entry.section.handle ~ '-' ~ entry.type.handle,
-  '_views/teasers/' ~ entry.section.handle,
-  '_views/teasers/_' ~ entry.type.handle,
+  '_views/teasers/' ~ element.section.handle ~ '-' ~ element.type.handle,
+  '_views/teasers/' ~ element.section.handle,
+  '_views/teasers/_' ~ element.type.handle,
 ])|merge([
   '_views/teasers/_default',
 ]) -%}
