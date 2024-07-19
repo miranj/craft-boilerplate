@@ -3,6 +3,11 @@
 // SEOMate plugin config
 // https://github.com/vaersaagod/seomate
 
+use craft\helpers\ArrayHelper;
+use vaersaagod\seomate\models\Settings as SEOMateSettings;
+
+$defaultSettings = new SEOMateSettings();
+
 return [
     // Global config
     '*' => [
@@ -30,21 +35,21 @@ return [
         // hygiene
         'sitenameSeparator' => '-',
         'applyRestrictions' => true,
-        'metaPropertyTypes' => [
-            'title,og:title,twitter:title' => [
-                'type' => 'text',
-                'minLength' => 10,
-                'maxLength' => 100,
+        'metaPropertyTypes' => ArrayHelper::merge(
+            $defaultSettings->metaPropertyTypes,
+            [
+                'title,og:title,twitter:title' => [
+                    'maxLength' => 100,
+                ],
             ],
-            'description,og:description,twitter:description' => [
-                'type' => 'text',
-                'minLength' => 50,
-                'maxLength' => 300,
+            true,
+        ),
+        'tagTemplateMap' => ArrayHelper::merge(
+            $defaultSettings->tagTemplateMap,
+            [
+                'links' => "{{ tag('link', value) }}",
             ],
-            'image,og:image,twitter:image' => [
-                'type' => 'image',
-            ],
-        ],
+        ),
 
         'sitemapEnabled' => true,
         'sitemapLimit' => 100,
