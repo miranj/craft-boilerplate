@@ -66,25 +66,31 @@
   2. Presets
   ----------
   A set of pre-configured image transformations. Define the desired
-  configurations in the `presets` array using the following options:
-
-  @option   sizes       {array}   Transform params for each unique image to generate for the
-                                  `srcset` attribute; typically `width` and/or `height`. See:
-                                  https://imager-x.spacecat.ninja/transform-parameters.html
-  @option   transform   {array}   Default transform params applied on all @sizes transforms;
-                                  typically crop `ratio` and `mode`. See:
-                                  https://imager-x.spacecat.ninja/transform-parameters.html
-  @option   guide       {string}  Value for the `sizes` attribute of the `<img>` tag. See:
-                                  https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-sizes
-
+  configurations as Named Imager Transforms in `config/imager-x-transforms.php`
+  
   -- or --
 
-  @option   breakpoints {array}   Preset configs for different breakpoints that will generate
-            │                     unique `<source>` tags per breakpoint
-            ├─ media    {string}  Media query for the `media` attribute of the `<source>` tag
-            ├─ @sizes
-            ├─ @transform
-            └─ @guide
+  the `presets` array in this file, using the following options:
+
+      @option   sizes       {string}  Transform defined in `config/imager-x-transforms.php`
+                                -- or --  
+                            {array}   Transform params for each unique image to generate for the
+                                      `srcset` attribute; typically `width` and/or `height`. See:
+                                      https://imager-x.spacecat.ninja/transform-parameters.html
+      @option   transform   {array}   Default transform params applied on all @sizes transforms;
+                                      typically crop `ratio` and `mode`. See:
+                                      https://imager-x.spacecat.ninja/transform-parameters.html
+      @option   guide       {string}  Value for the `sizes` attribute of the `<img>` tag. See:
+                                      https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-sizes
+      
+      -- or --
+      
+      @option   breakpoints {array}   Preset configs for different breakpoints that will generate
+                │                     unique `<source>` tags per breakpoint
+                ├─ media    {string}  Media query for the `media` attribute of the `<source>` tag
+                ├─ @sizes
+                ├─ @transform
+                └─ @guide
 
 
 
@@ -306,9 +312,7 @@
   '--lg-plus': '(min-width: 1920px)',
   '--retina':  '(min-resolution: 192dpi)',
 } %}
-{# Presets `sizes:` can refer to keys from `config/imager-x-transforms.php` #}
 {% set presets = {
-  content: { sizes: 'content' },
   logo: {
     sizes: 'logo',
     guide: '--sm-plus clamp(6rem, 5.3478rem + 3.2609vi, 7.875rem), clamp(7rem, 6.2391rem + 3.8043vi, 9.1875rem)',
@@ -347,7 +351,8 @@
   {% set imageScaleFactor = imageIsSvg ? 100 : 1 %}
 
   {# Assign an empty preset, and a single breakpoint if one isn't defined #}
-  {% set preset = presets[imagePreset] ?? {} %}
+  {# (assume preset points to a transform in `config/imager-x-transforms.php`) #}
+  {% set preset = presets[imagePreset] ?? { sizes: imagePreset }|filter %}
   {% set breakpoints = sortBreakpointPresets(preset.breakpoints ?? [preset], queries|keys) %}
   {% if devMode
     and imageAsset.mimeType not in ['image/svg+xml']
