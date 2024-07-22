@@ -23,9 +23,11 @@ $defaultCustomEncoders = [
 return [
     // Global settings
     '*' => [
+        // paths
         'imagerSystemPath' => '@assetBasePath/images/x',
         'imagerUrl' => '@assetBaseUrl/images/x',
 
+        // image handling
         'jpegQuality' => 85,
         'allowUpscale' => false,
         'interlace' => 'plane',
@@ -33,6 +35,7 @@ return [
         'cacheDuration' => 60 * 60 * 24 * 365 * 10, // 10 years
         'removeTransformsOnAssetFileops' => true,
 
+        // optimisers
         'optimizerConfig' => [
             'jpegoptim' => [
                 'optionString' => '-s -m85 -T1',
@@ -45,8 +48,6 @@ return [
                 'optionString' => '-o2',
             ],
         ],
-
-        // 'clearKey' => '',
     ],
 
     // Production
