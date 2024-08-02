@@ -23,58 +23,61 @@
 */
 @layer utilities {
     /* Base Grid */
+    /* prettier-ignore */
     .layout-base {
         display: grid;
         grid-template-columns:
-            var(--layout-margin)
-            minmax(0, 1fr)
-            var(--layout-margin);
+            [bleed-start]
+                var(--layout-margin)
+            [content-start main-start]
+                minmax(0, 1fr)
+            [content-end main-end]
+                var(--layout-margin)
+            [bleed-end];
         @screen sm {
             grid-template-columns:
-                var(--layout-margin)
-                1fr
-                var(--layout-prose)
-                1fr
-                var(--layout-margin);
+                [bleed-start]
+                    var(--layout-margin)
+                [main-start]
+                    1fr
+                [content-start]
+                    var(--layout-prose)
+                [content-end]
+                    1fr
+                [main-end]
+                    var(--layout-margin)
+                [bleed-end];
         }
     }
 
     /* Container, Content Areas */
     .area-main {
-        @apply col-start-2 col-span-1;
-        @apply sm:col-start-2 sm:col-span-3;
+        grid-column: main-start / main-end;
     }
     .area-content {
-        @apply col-start-2 col-span-1;
-        @apply sm:col-start-3 sm:col-span-1;
+        grid-column: content-start / content-end;
     }
     .area-content-main-left {
-        @apply col-start-2 col-span-1;
-        @apply sm:col-start-2 sm:col-span-2;
+        grid-column: main-start / content-end;
     }
     .area-content-main-right {
-        @apply col-start-2 col-span-1;
-        @apply sm:col-start-3 sm:col-span-2;
+        grid-column: content-start / main-end;
     }
 
     /* Bleeds */
     .area-bleed {
-        @apply col-span-full;
+        grid-column: bleed-start / bleed-end;
     }
     .area-bleed-left {
-        @apply col-start-1 col-span-2;
-        @apply sm:col-start-1 sm:col-span-4;
+        grid-column: bleed-start / main-end;
     }
     .area-bleed-right {
-        @apply col-start-2 col-span-2;
-        @apply sm:col-start-2 sm:col-span-4;
+        grid-column: main-start / bleed-end;
     }
     .area-content-bleed-left {
-        @apply col-start-1 col-span-2;
-        @apply sm:col-start-1 sm:col-span-3;
+        grid-column: bleed-start / content-end;
     }
     .area-content-bleed-right {
-        @apply col-start-2 col-span-2;
-        @apply sm:col-start-3 sm:col-span-3;
+        grid-column: content-start / bleed-end;
     }
 }
