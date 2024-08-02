@@ -11,6 +11,7 @@ Release notes for Miranj's Craft Boilerplate starter project.
 - Added a base layout grid with utility classes for grid areas.
 - Added a base fluid type scale (via [Utopia](https://utopia.fyi/type/calculator/)).
 - Added a base fluid spacing scale (via [Utopia](https://utopia.fyi/space/calculator/)).
+- Added `em` based relative units to the spacing scale corresponding to the existing `rem` scale.
 - Added support for Dark Mode (via the `prefers-color-scheme` media query).
 - Added hover feedback effect for zoomable images.
 - Added a page at `/_views` to visualise non-fullpage views such as Teasers, Snippets.
