@@ -16,6 +16,7 @@ Release notes for Miranj's Craft Boilerplate starter project.
 - Added hover feedback effect for zoomable images.
 - Added a page at `/_views` to visualise non-fullpage views such as Teasers, Snippets.
 - Added [Alpine.js](https://alpinejs.dev/), alongwith the [Collapse plugin](https://alpinejs.dev/plugins/collapse).
+- Fixed a bug where arbitrary value Tailwind classes with a `,` would always be purged.
 - Updated Tailwind to 3.4.4.
 - Removed JS based webfont loading workflow (deprecated in favour of [`font-display`](https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display)).
 - Removed Pjax based navigation (deprecated in favour of [Instant.page](https://github.com/instantpage/instant.page) and upcoming native page transitions).
