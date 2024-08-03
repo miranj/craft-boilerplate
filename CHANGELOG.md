@@ -41,6 +41,7 @@ Release notes for Miranj's Craft Boilerplate starter project.
 - Fixed a bug where `normaliseRichtext()` would process input as Markdown by default.
 - Fixed a bug where Live Previews would not work if the URL included a custom port.
 - Fixed a bug where the front-end “Edit” button would not render in private share URLs.
+- Fixed a bug where pagination would not work on any detail view pages.
 - Removed _New Child_, and _URI_ columns for Entry sources, and _Date Created_ for Category sources.
 - Removed Redactor configs.
 

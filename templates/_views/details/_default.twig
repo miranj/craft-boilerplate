@@ -2,6 +2,19 @@
 
 
 
+{# Biz Logic #}
+{% block response %}
+  {# If non-paginated detail view has a page number, 404 #}
+  {% if craft.app.request.getPageNum() > 1 and not (indexPaginate ?? false) %}
+    {% exit 404 %}
+  {% endif %}
+  
+  {{ parent() }}
+{% endblock %}
+
+
+
+{# SEO #}
 {% block jsonld %}
   {% include '_routers/jsonld' with { entry: entry } %}
 {% endblock %}
