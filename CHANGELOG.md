@@ -16,6 +16,7 @@ Release notes for Miranj's Craft Boilerplate starter project.
 - Added hover feedback effect for zoomable images.
 - Added a page at `/_views` to visualise non-fullpage views such as Teasers, Snippets.
 - Added [Alpine.js](https://alpinejs.dev/), alongwith the [Collapse plugin](https://alpinejs.dev/plugins/collapse).
+- Added icons for some common podcast hosts.
 - Fixed a bug where arbitrary value Tailwind classes with a `,` would always be purged.
 - Updated Tailwind to 3.4.4.
 - Removed JS based webfont loading workflow (deprecated in favour of [`font-display`](https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display)).
@@ -31,6 +32,7 @@ Release notes for Miranj's Craft Boilerplate starter project.
 - Added `heroicon()` Twig function to render the SVG version of any [Heroicons](https://heroicons.com/).
 - Added `image` and `imageNested` fields to the Field Library.
 - Added sample [Imager X named transforms](https://imager-x.spacecat.ninja/usage/named-transforms.html) based preset to the `_image` component.
+- Added an `@icons` alias for the public SVG icons folder.
 - The `_image` component's `preset` parameter can now directly refer to [Imager X named transforms](https://imager-x.spacecat.ninja/usage/named-transforms.html).
 - Refactored `embed` component to render an [oEmbed plugin field](https://github.com/wrav/oembed).
 - Logged in users with editing permissions will see a floating “Edit” button when viewing an entry on the front-end.

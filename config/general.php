@@ -58,6 +58,7 @@ return [
             '@assetBasePath' => App::env('CDN_BASE_PATH') ?: '@webroot',
             '@contentBasePath' =>
                 App::env('CONTENT_BASE_PATH') ?: '@root/content',
+            '@icons' => '@webroot/img/icons',
         ],
     ],
 
