@@ -5,7 +5,12 @@
   {% set schema = schema ?? craft.schema.ItemList %}
   {% set schema = thing(props, schema) %}
   {% set schema = schema
-    .itemListElement((props.listItems ?? [])|map(listItem => listItem(listItem))|default(null))
+    .itemListElement((props.listItems ?? [])
+      |values
+      |map((item, listPosition) => item|merge({ listPosition }))
+      |map(listItem => listItem(listItem))
+      |default(null)
+    )
     .numberOfItems(props.numberOfItems|default(null))
   %}
   

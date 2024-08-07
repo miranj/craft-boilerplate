@@ -1,9 +1,9 @@
 {% macro listItem(props, schema = null) %}
-  {% from '_schemas/definitions/thing' import thing %}
   
   {% set schema = schema ?? craft.schema.ListItem %}
-  {% set schema = thing(props, schema) %}
   {% set schema = schema
+    .name(props.title|default(null))
+    .url(props.url|default(null))
     .position(props.listPosition|default(null))
   %}
   

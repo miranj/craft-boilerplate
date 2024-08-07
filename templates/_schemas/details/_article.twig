@@ -6,3 +6,10 @@
 {% set schemaProps = {
   authors: []
 }|merge(schemaProps) %}
+
+{% block entry_schema %}
+  {% from '_schemas/definitions/article' import article %}
+  {% do graph.add(article(schemaProps)) %}
+  
+  {{ parent() }}
+{% endblock %}

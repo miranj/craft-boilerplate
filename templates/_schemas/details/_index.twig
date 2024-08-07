@@ -1,9 +1,15 @@
 {% extends '_schemas/details/_default' %}
 
-{% set schemaProps = {
-  listItems: [],
-  numberOfItems: null,
-}|merge(schemaProps ?? {}) %}
+{% if indexPaginate %}
+  {% set numberOfItems = indexPaginate ? indexPaginateInfo.total : indexEntries|length %}
+{% endif %}
+
+{% set schemaProps = schemaProps ?? {
+  title: indexTitle ?? entry.title,
+  url: indexUrl ?? entry.url ?? null,
+  listItems: indexEntries ?? null,
+  numberOfItems: numberOfItems ?? null,
+} %}
 
 
 

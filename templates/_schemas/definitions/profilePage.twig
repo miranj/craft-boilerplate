@@ -1,0 +1,11 @@
+{% macro profilePage(props, schema = null) %}
+  {% from '_schemas/definitions/webpage' import webpage %}
+  
+  {% set schema = schema ?? craft.schema.ProfilePage %}
+  {% set schema = webpage(props, schema) %}
+  {% set schema = schema
+    .mainEntity(props.mainEntity|default(null))
+  %}
+  
+  {% return schema %}
+{% endmacro %}

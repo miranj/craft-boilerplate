@@ -40,6 +40,8 @@ Release notes for Miranj's Craft Boilerplate starter project.
 - Added sample code for GA4 data model integration.
 - Enabled the _Last Edited By_ column for Entry sources.
 - Enabled the _New Child_, and _Slug_ columns for Category sources.
+- Added ProfilePage JSON-LD Schema definition.
+- Improved existing JSON-LD Schema definitions, default templates.
 - Fixed a bug where `normaliseRichtext()` would process input as Markdown by default.
 - Fixed a bug where Live Previews would not work if the URL included a custom port.
 - Fixed a bug where the front-end “Edit” button would not render in private share URLs.
