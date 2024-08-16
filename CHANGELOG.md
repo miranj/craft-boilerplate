@@ -34,6 +34,7 @@ Release notes for Miranj's Craft Boilerplate starter project.
 - Added sample [Imager X named transforms](https://imager-x.spacecat.ninja/usage/named-transforms.html) based preset to the `_image` component.
 - Added an `@icons` alias for the public SVG icons folder.
 - The `_image` component's `preset` parameter can now directly refer to [Imager X named transforms](https://imager-x.spacecat.ninja/usage/named-transforms.html).
+- Added `--dark-mode` media query to the `_image` component.
 - Refactored `embed` component to render an [oEmbed plugin field](https://github.com/wrav/oembed).
 - Logged in users with editing permissions will see a floating “Edit” button when viewing an entry on the front-end.
 - SEOMate meta can now render custom `<link>` tags via the `links` key.
