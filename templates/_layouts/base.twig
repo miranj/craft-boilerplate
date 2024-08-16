@@ -71,7 +71,7 @@
     } %}
       {% if currentUser
         and editUrl
-        and not craft.app.request.isLivePreview
+        and not (craft.app.request.isLivePreview or craft.app.request.isPreview)
         and sectionUID
         and currentUser.can('saveEntries:' ~ sectionUID) %}
         <div class="z-50 fixed" style="right:0;bottom:10%">
