@@ -511,10 +511,10 @@
     ]).flatten().all(),
     src: imageDefault.url,
     alt: imageAlt,
-    width:  not imageIsResponsive ? imageDefault.width * imageScaleFactor,
-    height: not imageIsResponsive ? imageDefault.height * imageScaleFactor,
+    width: imageDefault.width ? (not imageIsResponsive ? imageDefault.width * imageScaleFactor) : false,
+    height: imageDefault.height ? (not imageIsResponsive ? imageDefault.height * imageScaleFactor) : false,
 
-  } | merge(imageLazyload ? {
+  } | merge(imageLazyload and imageDefault.width and imageDefault.height ? {
     src: craft.imager.base64Pixel(imageDefault.width, imageDefault.height, imageColour),
     'data-src': imageDefault.url,
 
