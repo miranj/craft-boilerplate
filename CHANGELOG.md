@@ -2,6 +2,12 @@
 
 Release notes for Miranj's Craft Boilerplate starter project.
 
+## Unreleased
+
+### Craft
+
+- Improved handling of SEO page title for a homepage single.
+
 ## 3.1.0 - 2024-08-28
 
 ### Front-end
