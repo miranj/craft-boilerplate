@@ -7,6 +7,7 @@ Release notes for Miranj's Craft Boilerplate starter project.
 ### Craft
 
 - Improved handling of SEO page title for a homepage single.
+- Fixed a bug where certain Craft preview pages were getting cached by Nginx FastCGI.
 
 ## 3.1.0 - 2024-08-28
 
