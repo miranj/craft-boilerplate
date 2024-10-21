@@ -42,7 +42,7 @@ This starter project includes:
   - [Twig Perversion](https://github.com/marionnewlevant/craft-twig_perversion)
   - [Typogrify](https://github.com/nystudio107/craft-typogrify)
 - [Prettier](https://prettier.io/) for auto-formatting (all non-Twig) code.
-- Ready made fields to import to speed up the project development process.
+- [Ready to import fields](https://github.com/miranj/craft-boilerplate/tree/dev/field-library) to speed up the project development process.
 
 ## Usage
 
