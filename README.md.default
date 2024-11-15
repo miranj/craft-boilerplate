@@ -36,7 +36,8 @@
 2.  Install
 
         $ ddev start
-        $ ddev import-db < path/to/backup.sql
+        $ ddev composer install --no-scripts
+        $ ddev craft db/restore path/to/backup.sql
         $ nvm use
         $ npm ci
         $ npm run dev
