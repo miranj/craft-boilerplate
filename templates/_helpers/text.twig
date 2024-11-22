@@ -36,10 +36,13 @@
 #}
 {% macro normaliseRichtext(text, markdown = 'none') %}
   {% set text = text|parseRefs %}
+  {% set markdown = markdown is string
+    ? markdown
+    : (markdown ? 'md' : 'none') %}
   
   {% if markdown in ['extra', 'markdownExtra', 'mdExtra'] %}
     {% set text = _self.markdownExtra(text) %}
-  {% elseif markdown in ['md', 'original', 'markdown'] or markdown === true %}
+  {% elseif markdown in ['md', 'original', 'markdown'] %}
     {% set text = text|md %}
   {% elseif markdown in ['inline', 'inlineOnly'] %}
     {% set text = text|md('original', inlineOnly=true) %}

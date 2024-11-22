@@ -8,6 +8,7 @@ Release notes for Miranj's Craft Boilerplate starter project.
 
 - Improved handling of SEO page title for a homepage single.
 - Fixed a bug where certain Craft preview pages were getting cached by Nginx FastCGI.
+- Fixed a bug where `normaliseRichtext()` would process input as Markdown by default.
 - Updated Craft to 5.3.
 
 ### System
