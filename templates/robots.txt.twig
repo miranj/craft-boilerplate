@@ -3,7 +3,9 @@
 # robots.txt
 # {{ siteUrl }}
 
-Sitemap: {{ url('sitemap.xml') }}
+{% for site in craft.app.sites.allSites %}
+Sitemap: {{ siteUrl('sitemap.xml', siteId=site.id) }}
+{% endfor %}
 
 {# FIXME #}
 {% if siteUrl|trim('/', 'right') != 'https://example.com' -%}

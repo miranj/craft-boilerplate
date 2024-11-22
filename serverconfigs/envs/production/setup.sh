@@ -14,6 +14,7 @@ cd $TARGET_DIR
 
 # CDN
 ln -s $REPO_DIR/serverconfigs/nginx/cdn/static.conf $CDN_NAME.location.static.include.conf
+ln -s $REPO_DIR/serverconfigs/envs/production/env.conf $CDN_NAME.location.main-before.include.conf
 ln -s $REPO_DIR/serverconfigs/nginx/cdn/main.conf $CDN_NAME.location.main.include.conf
 ln -s $REPO_DIR/serverconfigs/nginx/cdn/proxy.conf $CDN_NAME.location.proxy.include.conf
 

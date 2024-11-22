@@ -20,6 +20,9 @@ paths.tasks = {
       source: 'css/main.css',
       destination: 'style.css',
       tailwind_config: 'tailwind.config.js',
+      nested_config: {
+        bubble: ['screen'],
+      },
       watch: [
         'css/**/*.css',
         'tailwind.config.js',
@@ -41,7 +44,7 @@ paths.tasks = {
           paths.directories.build + '**/*.js',
         ],
         defaultExtractor: (content) =>
-          content.match(/[\w-/.%:\[\]!]+(?<!:)/g) || [],
+          content.match(/[\w-/,.%@&:\(\)\{\}\[\]!]+(?<!:)/g) || [],
         safelist: {
           deep: [/richtext/, /pswp/],
         },
@@ -58,21 +61,17 @@ paths.tasks = {
   },
   js: {
     urgent: {
-      source: [
-        '../node_modules/lazysizes/lazysizes.js',
-        'js/lazyinit.js',
-      ],
+      source: ['../node_modules/lazysizes/lazysizes.js', 'js/lazyinit.js'],
       destination: 'urgent.js',
       watch: ['js/lazyinit.js'],
     },
     deferred: {
       source: [
-        '../node_modules/pjax/pjax.min.js',
-        '../node_modules/topbar/topbar.min.js',
-        'js/pjaxinit.js',
+        '../node_modules/@alpinejs/collapse/dist/cdn.js',
+        '../node_modules/alpinejs/dist/cdn.js',
       ],
       destination: 'deferred.js',
-      watch: ['js/pjaxinit.js'],
+      watch: ['../node_modules/alpinejs/dist/cdn.js'],
     },
     instant: {
       es6: true,

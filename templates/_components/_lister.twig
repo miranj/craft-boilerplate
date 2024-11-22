@@ -102,7 +102,7 @@
         {% endif %}
         
         {% block lister_item_router %}
-          {% include '_routers/' ~ listerConfig.view with { entry: listEntry } %}
+          {% include '_routers/' ~ listerConfig.view with { element: listEntry } %}
         {% endblock %}
         
         {% if listerConfig.itemWrap is defined %}

@@ -6,6 +6,7 @@ html {
 /* Defaults */
 body {
     @apply bg-white text-black;
+    @apply dark:bg-zinc-900 dark:text-zinc-100;
 }
 p {
     @apply mt-0;

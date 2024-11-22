@@ -1,17 +1,31 @@
 {% extends '_layouts/html' %}
 
+
+
 {% block page %}
-  <div id="pjax-page">
-    {{ block('page_header') }}
-    {{ block('page_main') }}
-    {{ block('page_footer') }}
-  </div>
+  {#
+    Params
+  #}
+  {% set siteLogo = siteLogo ?? null %}
+  
+  
+  
+  {#
+    Layout
+  #}
+  {{ block('page_header') }}
+  {{ block('page_main') }}
+  {{ block('page_footer') }}
+  {{ block('page_admin') }}
 {% endblock %}
 
 
 
+{#
+  Render
+#}
 {% block page_main %}
-  <main class="{% block main_class %}{% endblock %}">
+  <main class="{% block main_class '' %}">
     {% block main %}{% endblock %}
   </main>
 {% endblock %}
@@ -19,9 +33,64 @@
 
 
 {% block page_header %}
+  <header class="container">
+    <h2 class="{{ logo ? 'w-4xl sm:w-5xl' }}">
+      <a href="{{ url() }}" title="Visit the {{ siteName }} home page">
+        {% if logo %}
+          {% include '_components/_image' with { params: {
+            asset: logo,
+            preset: 'logo',
+            lazyload: false,
+          } } %}
+        {% else %}
+          {{ siteName }}
+        {% endif %}
+      </a>
+    </h2>
+  </header>
 {% endblock %}
 
 
 
 {% block page_footer %}
+  <footer class="container">
+    <hr>
+    <div>
+      &copy; {{ now|date('Y') }} {{ siteName }}
+    </div>
+  </footer>
+{% endblock %}
+
+
+
+{% block page_admin %}
+  {% if entry is defined %}
+    {% nocache with {
+      editUrl: entry.cpEditUrl ?? false,
+      sectionUID: entry.section.uid ?? false,
+    } %}
+      {% if currentUser
+        and editUrl
+        and not (craft.app.request.isLivePreview or craft.app.request.isPreview)
+        and sectionUID
+        and currentUser.can('saveEntries:' ~ sectionUID) %}
+        <div class="z-50 fixed" style="right:0;bottom:10%">
+          {{ tag('a', {
+            class: [
+              'block px-3.5 py-1.5',
+              'text-sm',
+              'rounded-s opacity-50',
+              'bg-black text-white dark:bg-zinc-100 dark:text-zinc-900',
+              'hover:no-underline hover:opacity-100',
+            ],
+            style: {
+              'font-family': 'system-ui,ui-sans-serif,sans-serif',
+            },
+            href: editUrl,
+            text: 'Edit',
+          }) }}
+        </div>
+      {% endif %}
+    {% endnocache %}
+  {% endif %}
 {% endblock %}

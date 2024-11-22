@@ -66,25 +66,31 @@
   2. Presets
   ----------
   A set of pre-configured image transformations. Define the desired
-  configurations in the `presets` array using the following options:
-
-  @option   sizes       {array}   Transform params for each unique image to generate for the
-                                  `srcset` attribute; typically `width` and/or `height`. See:
-                                  https://imager-x.spacecat.ninja/transform-parameters.html
-  @option   transform   {array}   Default transform params applied on all @sizes transforms;
-                                  typically crop `ratio` and `mode`. See:
-                                  https://imager-x.spacecat.ninja/transform-parameters.html
-  @option   guide       {string}  Value for the `sizes` attribute of the `<img>` tag. See:
-                                  https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-sizes
-
+  configurations as Named Imager Transforms in `config/imager-x-transforms.php`
+  
   -- or --
 
-  @option   breakpoints {array}   Preset configs for different breakpoints that will generate
-            │                     unique `<source>` tags per breakpoint
-            ├─ media    {string}  Media query for the `media` attribute of the `<source>` tag
-            ├─ @sizes
-            ├─ @transform
-            └─ @guide
+  the `presets` array in this file, using the following options:
+
+      @option   sizes       {string}  Transform defined in `config/imager-x-transforms.php`
+                                -- or --  
+                            {array}   Transform params for each unique image to generate for the
+                                      `srcset` attribute; typically `width` and/or `height`. See:
+                                      https://imager-x.spacecat.ninja/transform-parameters.html
+      @option   transform   {array}   Default transform params applied on all @sizes transforms;
+                                      typically crop `ratio` and `mode`. See:
+                                      https://imager-x.spacecat.ninja/transform-parameters.html
+      @option   guide       {string}  Value for the `sizes` attribute of the `<img>` tag. See:
+                                      https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-sizes
+      
+      -- or --
+      
+      @option   breakpoints {array}   Preset configs for different breakpoints that will generate
+                │                     unique `<source>` tags per breakpoint
+                ├─ media    {string}  Media query for the `media` attribute of the `<source>` tag
+                ├─ @sizes
+                ├─ @transform
+                └─ @guide
 
 
 
@@ -280,7 +286,9 @@
 
 
 
-{# Parameters #}
+{#
+  Parameters
+#}
 {% set imageAsset = params.asset ?? false %}
 {% set imageBreakpointAssets = params.breakpoint_assets ?? {} %}
 {% set imagePreset = params.preset ?? false %}
@@ -294,19 +302,29 @@
 
 
 
-{# Config #}
+{#
+  Config
+#}
 {% set queries = {
   '--xs-plus': '(min-width: 448px)',
   '--sm-plus': '(min-width: 900px)',
   '--md-plus': '(min-width: 1188px)',
   '--lg-plus': '(min-width: 1920px)',
   '--retina':  '(min-resolution: 192dpi)',
+  '--dark-mode': '(prefers-color-scheme: dark)',
 } %}
-{% set presets = {} %}
+{% set presets = {
+  logo: {
+    sizes: 'logo',
+    guide: '--sm-plus clamp(6rem, 5.3478rem + 3.2609vi, 7.875rem), clamp(7rem, 6.2391rem + 3.8043vi, 9.1875rem)',
+  },
+} %}
 
 
 
-{# Helpers #}
+{#
+  Helpers
+#}
 {% macro sortBreakpointPresets(presets, mediaQueryOrder) %}
   {% return presets
     |multisort(
@@ -319,26 +337,29 @@
 
 
 
-{# Biz logic #}
+{#
+  Biz logic
+#}
 {% if imageAsset %}
   {% set imageDefault = null %}
   {% set imageSizesGuide = false %}
   {% set imageTransforms = [] %}
   {% set imageSources = [] %}
   {% set imageColour = 'transparent' %}
-  {% set imageAlt = imageAlt ?: imageAsset.title %}
+  {% set imageAlt = imageAlt ?: imageAsset.alt ?: imageAsset.title %}
   {% set imageIsSvg = imageAsset.mimeType in ['image/svg+xml'] or imageAsset.extension in ['svg'] %}
   {% set imageIsAnimatedGif = imageAsset.extension in ['gif'] and craft.imager.isAnimated(imageAsset) %}
   {% set imageScaleFactor = imageIsSvg ? 100 : 1 %}
 
   {# Assign an empty preset, and a single breakpoint if one isn't defined #}
-  {% set preset = presets[imagePreset] ?? {} %}
+  {# (assume preset points to a transform in `config/imager-x-transforms.php`) #}
+  {% set preset = presets[imagePreset] ?? { sizes: imagePreset }|filter %}
   {% set breakpoints = sortBreakpointPresets(preset.breakpoints ?? [preset], queries|keys) %}
   {% if devMode
     and imageAsset.mimeType not in ['image/svg+xml']
     and (imagePreset is empty or preset is empty)
   %}
-    <span class="block bg-theme-red text-white all-caps">
+    <span class="block" style="border:2px solid red;color:red;padding:0 0.4em;text-transform:uppercase">
       Warning: No Image Preset
     </span>
   {% endif %}
@@ -386,14 +407,12 @@
 
     {% if not (imageIsSvg or imageIsAnimatedGif) %}
       {% set imageTransformSizes = imagePreset.sizes ?? [{ width: _imageAsset.width }] %}
-      {% set imageTransformParams = {
-        position: _imageAsset.getFocalPoint(),
-      } | merge(imagePreset.transform ?? {}) %}
+      {% set imageTransformParams = imagePreset.transform ?? {} %}
       {% set imageTransforms = craft.imager.transformImage(
         _imageAsset,
         imageTransformSizes,
         imageTransformParams
-        ) %}
+      ) %}
       {% set imageDefault = imageTransforms|last %}
 
       {# Generate WebP versions and put them before regular ones #}
@@ -430,7 +449,9 @@
 
 
 
-{# Output #}
+{#
+  Output
+#}
 {% if imageAsset and not imageIsCss %}
   {% set defaultSrcSet = craft.imager.srcset(imageTransforms) %}
 
@@ -440,15 +461,12 @@
       data-pswp-width="{{ imageDefault.width }}"
       data-pswp-height="{{ imageDefault.height }}"
       data-pswp-srcset="{{ defaultSrcSet }}"
-      data-no-pjax
-      class="photoswipe cursor-zoom-in"
+      class="photoswipe cursor-zoom-in group"
       target="_blank"
       rel="noreferrer noopener">
   {% endif %}
 
-  {% if imageSources|length %}
-    <picture>
-  {% endif %}
+  <picture>
 
   {% if imageLazyload %}
     {# Non JS fallback #}
@@ -456,7 +474,7 @@
       {{ tag('img', {
         class: imageClass,
         src: imageDefault.url,
-        alt: imageAlt|e('html_attr'),
+        alt: imageAlt,
         width: imageDefault.width * imageScaleFactor,
         height: imageDefault.height * imageScaleFactor,
       }) }}
@@ -472,6 +490,7 @@
       width: lastTransform.width,
       height: lastTransform.height,
       srcset: source.transforms|length > 1 ? craft.imager.srcset(source.transforms) : lastTransform.url,
+      sizes: (source.transforms|length > 1 and not imageLazyload) ? (imageSizesGuide ?? false),
 
     } | merge(imageLazyload ? {
       srcset: craft.imager.placeholder({
@@ -488,26 +507,25 @@
     class: collect([
       imageClass,
       imageLazyload ? 'lazyload no-js:hidden' : 'lazyloaded',
+      imageHasZoom ? 'group-hover:scale-104 sm:group-hover:scale-102 group-hover:shadow-lg transition duration-300',
     ]).flatten().all(),
     src: imageDefault.url,
-    alt: imageAlt|e('html_attr'),
-    width:  not imageIsResponsive ? imageDefault.width * imageScaleFactor,
-    height: not imageIsResponsive ? imageDefault.height * imageScaleFactor,
+    alt: imageAlt,
+    width: imageDefault.width ? (not imageIsResponsive ? imageDefault.width * imageScaleFactor) : false,
+    height: imageDefault.height ? (not imageIsResponsive ? imageDefault.height * imageScaleFactor) : false,
 
-  } | merge(imageLazyload ? {
+  } | merge(imageLazyload and imageDefault.width and imageDefault.height ? {
     src: craft.imager.base64Pixel(imageDefault.width, imageDefault.height, imageColour),
     'data-src': imageDefault.url,
 
   }:{}) | merge(imageTransforms is defined and imageTransforms|length > 1 ? {
-    sizes: imageSizesGuide ?? false,
-    srcset: not imageLazyload ? defaultSrcSet : false,
-    'data-sizes': imageLazyload and not (imageSizesGuide ?? true) ? 'auto',
+    sizes: not imageLazyload ? (imageSizesGuide ?? false),
+    srcset: not imageLazyload ? defaultSrcSet,
+    'data-sizes': imageLazyload ? 'auto',
     'data-srcset': imageLazyload ? defaultSrcSet,
   }:{})) }}
 
-  {% if imageSources|length %}
-    </picture>
-  {% endif %}
+  </picture>
 
   {% if imageHasZoom %}
     </a>

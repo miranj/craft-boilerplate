@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Toggle [On]",
+    "handle": "toggleOn",
+    "instructions": null,
+    "required": null,
+    "searchable": true,
+    "translationMethod": "site",
+    "translationKeyFormat": null,
+    "type": "craft\\fields\\Lightswitch",
+    "settings": {
+      "default": false,
+      "onLabel": null,
+      "offLabel": null
+    }
+  }
+]

@@ -1,0 +1,83 @@
+/* Grids and Layouts */
+
+:root {
+    --layout-margin: theme('spacing.sm-lg');
+    --layout-prose: clamp(20em, 65vw, 34em);
+    @screen xs {
+        --layout-margin: theme('spacing.xl-4xl');
+    }
+    @screen sm {
+        --layout-margin: theme('spacing.lg-3xl');
+    }
+}
+
+/* Simple Container */
+@layer utilities {
+    .container {
+        @apply px-layout-margin;
+    }
+}
+
+/*
+ Fine-grained Container via grid
+*/
+@layer utilities {
+    /* Base Grid */
+    /* prettier-ignore */
+    .layout-base {
+        display: grid;
+        grid-template-columns:
+            [bleed-start]
+                var(--layout-margin)
+            [content-start main-start]
+                minmax(0, 1fr)
+            [content-end main-end]
+                var(--layout-margin)
+            [bleed-end];
+        @screen sm {
+            grid-template-columns:
+                [bleed-start]
+                    var(--layout-margin)
+                [main-start]
+                    1fr
+                [content-start]
+                    var(--layout-prose)
+                [content-end]
+                    1fr
+                [main-end]
+                    var(--layout-margin)
+                [bleed-end];
+        }
+    }
+
+    /* Container, Content Areas */
+    .area-main {
+        grid-column: main-start / main-end;
+    }
+    .area-content {
+        grid-column: content-start / content-end;
+    }
+    .area-content-main-left {
+        grid-column: main-start / content-end;
+    }
+    .area-content-main-right {
+        grid-column: content-start / main-end;
+    }
+
+    /* Bleeds */
+    .area-bleed {
+        grid-column: bleed-start / bleed-end;
+    }
+    .area-bleed-left {
+        grid-column: bleed-start / main-end;
+    }
+    .area-bleed-right {
+        grid-column: main-start / bleed-end;
+    }
+    .area-content-bleed-left {
+        grid-column: bleed-start / content-end;
+    }
+    .area-content-bleed-right {
+        grid-column: content-start / bleed-end;
+    }
+}

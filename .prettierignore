@@ -32,6 +32,7 @@ web/imager
 # Generated files
 config/project
 web/build
+.ddev/
 templates/_manifest-sri.json
 templates/_manifest.json
 

@@ -1,0 +1,19 @@
+{# _views/details/homepage #}
+{% extends '_views/details/_default' %}
+
+
+
+
+{# SEO #}
+{% block seo %}
+  {#
+    - Do not use “Home Page” entry title as SEO title
+    - Avoid repeating the site name in the title
+  #}
+  {% set seomate = {
+    meta: { title: entry.seoTitle ?: siteName },
+    config: { includeSitenameInTitle: false },
+  } %}
+  
+  {{ parent() }}
+{% endblock %}

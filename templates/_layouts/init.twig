@@ -5,6 +5,8 @@
 #}
 
 {% set cacheableEnv = craft.app.request.getParam('nocache') is same as(NULL)
+  and craft.app.request.getParam('x-craft-preview') is same as(NULL)
+  and craft.app.request.getParam('x-craft-live-preview') is same as(NULL)
   and not craft.app.request.isPost
   and not (doNotCache ?? false)
   and not (

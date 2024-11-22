@@ -6,11 +6,21 @@
     .name(props.name ?? props.title)
     .url(props.url|default(null))
     .sameAs(props.website|default(null))
-    .image(props.images|default([])|map(img => imageObject(img))|default(null))
-    .description(props.description|default('')|striptags|replace('&nbsp;', ' ')|default(null))
+    .image(props.images
+      |default([props.image|default(null)])
+      |filter
+      |map(img => imageObject(img))
+      |default(null)
+    )
+    .description(props.description
+      |default('')
+      |striptags
+      |replace('&nbsp;', ' ')
+      |default(null)
+    )
     .alternateName(props.alternateName|default(null))
     .mainEntityOfPage(props.mainEntityOfPage ?? false
-      ? craft.schema.WebPage.url(props.mainEntityOfPage)
+      ? craft.schema.WebPage.url(props.url)
       : null)
   %}
   

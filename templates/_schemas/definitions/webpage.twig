@@ -9,7 +9,7 @@
     .id(props.url ~ '#webpage')
     .dateCreated(props.dateCreated)
     .datePublished(props.dateCreated)
-    .dateModified(props.dateUpdated)
+    .dateModified(props.dateModified)
     .headline(create('craft\\helpers\\StringHelper').safeTruncate(props.title, 110))
     .primaryImageOfPage((props.images ?? []) is not empty ? imageObject(props.images|first) : null)
     .author((props.authors.organizations ?? [])|map(org => organization(org))|default(null))

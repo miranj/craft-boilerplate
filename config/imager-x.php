@@ -23,15 +23,19 @@ $defaultCustomEncoders = [
 return [
     // Global settings
     '*' => [
+        // paths
         'imagerSystemPath' => '@assetBasePath/images/x',
         'imagerUrl' => '@assetBaseUrl/images/x',
 
+        // image handling
         'jpegQuality' => 85,
         'allowUpscale' => false,
         'interlace' => 'plane',
         'removeMetadata' => true,
         'cacheDuration' => 60 * 60 * 24 * 365 * 10, // 10 years
+        'removeTransformsOnAssetFileops' => true,
 
+        // optimisers
         'optimizerConfig' => [
             'jpegoptim' => [
                 'optionString' => '-s -m85 -T1',
@@ -44,8 +48,6 @@ return [
                 'optionString' => '-o2',
             ],
         ],
-
-        // 'clearKey' => '',
     ],
 
     // Production
@@ -62,8 +64,8 @@ return [
 
     // Dev
     'dev' => [
-        'hashPath' => true,
         'filenamePattern' => '{fullname}.{extension}',
+        'fallbackImage' => 'https://placehold.co/1800x1200.png',
         'customEncoders' => App::env('IMAGER_CWEBP_PATH')
             ? ArrayHelper::merge($defaultCustomEncoders, [
                 'webp' => [

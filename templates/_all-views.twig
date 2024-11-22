@@ -1,0 +1,120 @@
+{#
+  Views
+
+  This file helps in visualising the various non-fullpage views to be available in a project:
+  - Collective
+  - Teaser
+  - Snippet
+  - etc.
+#}
+
+
+
+{# Pre-flight #}
+{% if not devMode %}
+  {% requireLogin %}
+  {% if not currentUser.admin %}
+    {% exit 403 %}
+  {% endif %}
+{% endif %}
+
+
+
+{#
+  Params
+#}
+{% set allViews = {
+  teaser: {},
+} %}
+{% set activeView = viewType ?? allViews|keys|first %}
+{% set activeSection = sectionHandle ?? '' %}
+{% set itemsLimit = craft.app.request.getParam('limit', activeSection ? 9 : 3) %}
+{% set basePageUrl = url('_views') %}
+
+
+
+{#
+  Biz Logic
+#}
+{% set doNotCache = true %}
+{% set allSections = craft.app.entries.getAllSections()
+  |map(s => {
+    name: s.name,
+    handle: s.handle,
+    type: s.type,
+    sortType: s.type == 'single' ? 'single' : 'channel/structure',
+    hasUrls: s.getSiteSettings()[currentSite.id].hasUrls ?? false,
+  })
+  |multisort(
+    ['hasUrls', 'sortType'],
+    direction=[SORT_DESC, SORT_ASC]
+  )
+  |filter(s => activeSection ? activeSection == s.handle : 'index_' not in s.handle ~ '') %}
+{% set seomate = (seomate ?? {})|merge({
+  meta: {
+    title: [activeSection, activeView]
+      |map(l => l|ucfirst)
+      |join(' ')
+      ~ ' views',
+    robots: 'noindex',
+  },
+}, true) %}
+
+
+{#
+  Render
+#}
+{% extends '_layouts/base' %}
+{% block main_class parent() ~ ' layout-base space-y-3xl' %}
+{% block main %}
+  <nav class="area-main mt-2">
+    <div class="inline-flex divide-x font-title text-sm border mb-sm">
+      {% for v in allViews|keys %}
+        {{ tag('a', {
+          class: [
+            'p-4',
+            v == activeView ? 'bg-zinc-900/20 dark:bg-white/20',
+          ],
+          href: url([basePageUrl, v]|join('/')),
+          text: v|ucfirst,
+        }) }}
+      {% endfor %}
+    </div>
+    <details class="font-title text-sm">
+      <summary class="text-xs">Jump to</summary>
+      {{ ul(allSections|map(s => tag('a', {
+        href: '#' ~ s.handle,
+        text: s.name,
+      })), { encode: false }) }}
+    </details>
+  </nav>
+
+  {% for section in allSections %}
+    <section id="{{ section.handle }}" class="area-main">
+      <div class="flex items-center gap-2 font-title text-sm mb-sm opacity-50">
+        <h2 class="uppercase">
+          <a href="{{ url([basePageUrl, activeView, section.handle]|join('/')) }}">
+            {{ section.name }}
+          </a>
+        </h2>
+        
+        {% if activeSection %}
+          <a class="order-first flex items-center text-xs bg-zinc-900/20 dark:bg-white/20 py-0.5 px-1.5" href="{{ url([basePageUrl, activeView]|join('/')) }}">
+            {{ heroicon('arrow-left')|attr({ class: 'w-4 h-4' }) }}
+            All Sections
+          </a>
+        {% endif %}
+      </div>
+
+      <div class="{{ allViews[activeView].wrapper ?? '' }}">
+        {% include '_components/_lister' with { params: {
+          entries: craft.entries
+            .section(section.handle)
+            .orderBy('RAND()')
+            .limit(itemsLimit).all(),
+          kind: activeView,
+        } } %}
+      </div>
+    </section>
+  {% endfor %}
+{% endblock %}
