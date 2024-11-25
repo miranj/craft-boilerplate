@@ -18,6 +18,7 @@ Release notes for Miranj's Craft Boilerplate starter project.
 ### System
 
 - Prefer importing database dumps via Craft’s `db/restore` for better robustness.
+- Updated PurgeCSS to 7.0.0, switched to PostCSS plugin based usage.
 
 ## 3.1.0 - 2024-08-28
 

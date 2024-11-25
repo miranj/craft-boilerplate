@@ -10,8 +10,8 @@
   "photoswipeinit.js": "sha256-U3KzCEAuplnVIs1muFOE5foJrJvscmXQnfhsGGzsnlE=",
   "photoswipeinit.min.js": "sha256-3u+G77yjt3Uep6gIQJa0B3+pNmrWZaTpQ8r1Ber2dU4=",
   "style.css": "sha256-HUg/fVynpL7NwmldrlYiIf54FIa/tEpl48u/WR8MYKI=",
+  "style.purged.css": "sha256-sZ4LAHoIYzKmqgDJd7ePtDWng76fld6BlovC3Hhc9hY=",
+  "style.purged.min.css": "sha256-lEGtfu0HvHnZJ9VhhDGeMmd3EyLjIJrPdzcJ9FEafT4=",
   "urgent.js": "sha256-CdHwhucjsWxf3KAMIJ6GUpOItAw6kjXsHKKas6N/z8Q=",
-  "urgent.min.js": "sha256-7QV74xoBGpZ8s60GCPqgL9HehwETp0lNdBzoTGfXQLM=",
-  "style.purged.css": "sha256-4MgaPsE5R/hc30y4wtmJ4gWORpH7Nb0pr8x1n04r9y4=",
-  "style.purged.min.css": "sha256-3XP3hUKz5RztfLeei3W1eqVEAKu/ukFeJPtNG69PSKk="
+  "urgent.min.js": "sha256-7QV74xoBGpZ8s60GCPqgL9HehwETp0lNdBzoTGfXQLM="
 }

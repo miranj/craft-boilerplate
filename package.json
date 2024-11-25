@@ -43,6 +43,7 @@
     "photoswipe": "^5.2.7"
   },
   "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^7.0.2",
     "@prettier/plugin-php": "^0.22.2",
     "autoprefixer": "^10.4.4",
     "cssnano": "^5.1.11",
@@ -51,7 +52,6 @@
     "gulp-hashsum": "^1.2.0",
     "gulp-json-format": "^2.0.0",
     "gulp-postcss": "^9.0.0",
-    "gulp-purgecss": "^4.0.3",
     "gulp-rename": "^2.0.0",
     "gulp-sizereport": "^1.2.1",
     "gulp-sri": "^0.3.1",
