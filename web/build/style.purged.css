@@ -88,7 +88,10 @@ Add the correct text decoration in Chrome, Edge, and Safari.
 Remove the default font size and weight for headings.
 */
 h1,
-h2 {
+h2,
+h3,
+h4,
+h5 {
   font-size: inherit;
   font-weight: inherit;
 }
@@ -102,7 +105,8 @@ a {
 /*
 Add the correct font weight in Edge and Safari.
 */
-b {
+b,
+strong {
   font-weight: bolder;
 }
 /*
@@ -127,6 +131,19 @@ small {
 /*
 Prevent `sub` and `sup` elements from affecting the line height in all browsers.
 */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sub {
+  bottom: -0.25em;
+}
+sup {
+  top: -0.5em;
+}
 /*
 1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
 2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
@@ -221,13 +238,16 @@ dl,
 dd,
 h1,
 h2,
+h3,
+h4,
+h5,
 hr,
 figure,
 p,
 pre {
   margin: 0;
 }
-
+ol,
 ul {
   list-style: none;
   margin: 0;
@@ -407,7 +427,10 @@ body {
     font-size: clamp(1rem, 0.8913rem + 0.5435vi, 1.3125rem);
 }
 h1,
-h2 {
+h2,
+h3,
+h4,
+h5 {
     font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     font-weight: 700;
 }
