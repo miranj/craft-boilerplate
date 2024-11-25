@@ -43,6 +43,10 @@ paths.tasks = {
           '../templates/**/*.{twig,html}',
           paths.directories.build + '**/*.js',
         ],
+        skippedContentGlobs: [
+          '../templates/_kitchen-sink.twig',
+          '../templates/_all-views.twig',
+        ],
         defaultExtractor: (content) =>
           content.match(/[\w-/,.%@&:\(\)\{\}\[\]!]+(?<!:)/g) || [],
         safelist: {
