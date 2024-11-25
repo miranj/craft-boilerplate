@@ -4,6 +4,10 @@ Release notes for Miranj's Craft Boilerplate starter project.
 
 ## Unreleased
 
+### Front-end
+
+- Added generated front-end CSS and JS assets inside the `./web/build` folder.
+
 ### Craft
 
 - Improved handling of SEO page title for a homepage single.
