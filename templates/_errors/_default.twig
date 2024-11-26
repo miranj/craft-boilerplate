@@ -1,0 +1,20 @@
+{# _errors/_default #}
+
+{# Params #}
+{% set errorStatusCode = errorStatusCode ?? 404 %}
+{% set cacheKey = cacheKey ?? 'error_' ~ errorStatusCode %}
+{% set errorEntrySection = errorEntrySection ?? 'pageNotFound' %}
+{% set entry = entry ?? craft.entries.section(errorEntrySection).one() %}
+{% set seomate = (seomate ?? {})|merge({
+  element: entry,
+}, true) %}
+
+
+
+{# Biz logic #}
+{% do craft.app.response.setStatusCode(errorStatusCode) %}
+
+
+
+{# Render #}
+{% extends '_routers/detail' %}
