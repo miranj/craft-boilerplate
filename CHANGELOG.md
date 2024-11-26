@@ -7,7 +7,7 @@ Release notes for Miranj's Craft Boilerplate starter project.
 ### Front-end
 
 - Added generated front-end CSS and JS assets inside the `./web/build` folder.
-- Safelisted CSS selectors for common HTML tags in richtext content.
+- Safelisted CSS selectors for common HTML tags in richtext content, as well as typographic frills added by the `| typogrify` filter.
 - CSS purge task will now ignore dev preview templates when scanning for selectors.
 
 ### Craft

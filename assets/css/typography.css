@@ -39,6 +39,7 @@ h5 {
 }
 
 /* Frills */
+/* purgecss start ignore */
 .quo {
     margin-left: -0.24em;
 }
@@ -48,6 +49,7 @@ h5 {
 .tquo {
     margin-left: -0.68em;
 }
+/* purgecss end ignore */
 
 /* Rich Text */
 .richtext {

@@ -506,6 +506,7 @@ h5 {
     font-size: clamp(0.8333rem, 0.7807rem + 0.2631vi, 0.9846rem);
 }
 /* Frills */
+/* purgecss start ignore */
 .quo {
     margin-left: -0.24em;
 }
@@ -515,6 +516,7 @@ h5 {
 .tquo {
     margin-left: -0.68em;
 }
+/* purgecss end ignore */
 /* Rich Text */
 .richtext p,
     .richtext ul,

@@ -437,6 +437,15 @@ h5 {
 /* Links */
 /* Text Styles */
 /* Frills */
+.quo {
+    margin-left: -0.24em;
+}
+.dquo {
+    margin-left: -0.44em;
+}
+.tquo {
+    margin-left: -0.68em;
+}
 /* Rich Text */
 .richtext p,
     .richtext ul,
