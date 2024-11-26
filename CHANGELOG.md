@@ -7,7 +7,7 @@ Release notes for Miranj's Craft Boilerplate starter project.
 ### Front-end
 
 - Added generated front-end CSS and JS assets inside the `./web/build` folder.
-- Safelisted CSS selectors for common HTML tags in richtext content, as well as typographic frills added by the `| typogrify` filter.
+- Safelisted CSS selectors for common HTML tags in richtext content, as well as typographic frills added by the `|typogrify` filter.
 - CSS purge task will now ignore dev preview templates when scanning for selectors.
 
 ### Craft
@@ -16,6 +16,7 @@ Release notes for Miranj's Craft Boilerplate starter project.
 - Improved handling of SEO page title for a homepage single.
 - Fixed a bug where certain Craft preview pages were getting cached by Nginx FastCGI.
 - Fixed a bug where `normaliseRichtext()` would process input as Markdown by default.
+- Removed all uses of the deprecated `|spaceless` filter.
 - Updated Craft to 5.3.
 
 ### System

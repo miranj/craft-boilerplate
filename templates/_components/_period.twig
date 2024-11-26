@@ -69,33 +69,31 @@
 
 {# Output #}
 {% if periodStart %}
-  {% apply spaceless %}
-    <time datetime="{{ periodStart|atom }}">
-      {{- periodStart.format(periodStartFormat)|replace(' ', '&nbsp;')|raw -}}
+  <time datetime="{{ periodStart|atom }}">
+    {{- periodStart.format(periodStartFormat)|replace(' ', '&nbsp;')|raw -}}
+  </time>
+  
+  {%- if periodHasEnd and periodEndFormat != '' -%}
+    {{- '–' -}}
+    <time datetime="{{ periodEnd|atom }}">
+      {{- periodEnd.format(periodEndFormat)|replace(' ', '&nbsp;')|raw -}}
     </time>
+  {% endif %}
+  
+  {%- if periodTimeText or (not periodDatesOnly and periodShowTime) %}
+    {{- periodInline ? ', ' : '<br>'}}
     
-    {%- if periodHasEnd and periodEndFormat != '' -%}
-      {{- '–' -}}
-      <time datetime="{{ periodEnd|atom }}">
-        {{- periodEnd.format(periodEndFormat)|replace(' ', '&nbsp;')|raw -}}
-      </time>
-    {% endif %}
-    
-    {%- if periodTimeText or (not periodDatesOnly and periodShowTime) %}
-      {{- periodInline ? ', ' : '<br>'}}
-      
-      {% if periodTimeText %}
-        {{ periodTimeText }}
+    {% if periodTimeText %}
+      {{ periodTimeText }}
+    {% else %}
+      {{ periodStart.format('g:i A')|replace(' ', '&nbsp;')|raw }}
+      {% if periodSingleDay and periodHasEnd %}
+        – {{ periodEnd.format('g:i A')|replace(' ', '&nbsp;')|raw }}
       {% else %}
-        {{ periodStart.format('g:i A')|replace(' ', '&nbsp;')|raw }}
-        {% if periodSingleDay and periodHasEnd %}
-          – {{ periodEnd.format('g:i A')|replace(' ', '&nbsp;')|raw }}
-        {% else %}
-          onwards
-        {% endif %}
+        onwards
       {% endif %}
     {% endif %}
-  {% endapply %}
+  {% endif %}
 {% endif %}
 
 {% if not periodIsValid and craft.app.request.isPreview %}
