@@ -13,6 +13,7 @@ Release notes for Miranj's Craft Boilerplate starter project.
 ### Craft
 
 - Added custom 404 and 403 error page templates. The 403 page is automatically shown when accessing an entry that is not yet published.
+- Added `getPDFCover()` macro to `_helpers/pdf`.
 - Improved handling of SEO page title for a homepage single.
 - Fixed a bug where certain Craft preview pages were getting cached by Nginx FastCGI.
 - Fixed a bug where `normaliseRichtext()` would process input as Markdown by default.

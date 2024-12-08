@@ -1,0 +1,24 @@
+{#
+  PDF Helper Utilities
+#}
+
+
+
+{#
+  getPDFCover()
+  Returns the first page of the PDF as an Imager X transformed image
+
+  eg: getPDFCover(craft.assets.kind('pdf').one())
+
+  `composer require spacecatninja/imager-x-pdf-adapter`
+#}
+{% macro getPDFCover(asset, width = 1600) %}
+  {% if asset.kind != 'pdf' %}
+    {% return asset %}
+  {% endif %}
+  
+  {% return craft.imagerx.transformImage(asset, {
+    width,
+    adapterParams: { page: 1, density: 72 },
+  }) %}
+{% endmacro %}
