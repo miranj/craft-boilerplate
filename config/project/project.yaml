@@ -1,4 +1,4 @@
-dateModified: 1734390101
+dateModified: 1734390520
 email:
   fromEmail: $CRAFT_FROM_EMAIL
   fromName: $CRAFT_FROM_NAME
@@ -47,7 +47,9 @@ meta:
     08b5b22b-fb98-46ef-8a90-e392edb2244f: 'Rich Text' # Rich Text
     8dddc601-5e96-40bb-b036-520072ba4aa7: Images # Images
     89c58a76-1da8-4581-84f1-caf2222de75a: Documents # Documents
+    349b5e6f-3a2a-43f1-a9dd-2373bf4a0a67: 'Share/SEO Description' # Share/SEO Description
     840acb32-6694-40d0-9384-60a0220c1de0: Label # Label
+    5661ce90-e09f-4c95-bffe-ffe44c413db3: 'Default Share Image' # Default Share Image
     69339afc-d4f1-440b-a7ad-7da2ccb77972: Image # Image
     386721be-1ee4-4e3b-b22c-7fb3dfded3ff: 'Simple Text' # Simple Text
     8341919b-4097-4c45-8f3b-97ff673d9ab5: $CRAFT_SITE_NAME # $CRAFT_SITE_NAME
@@ -55,6 +57,8 @@ meta:
     a20788dd-9031-41ba-8145-5f9d17b719ad: Primary # Primary
     afc7f0bc-1b97-4841-a1d2-5b0385a7ca35: 'Plain Text' # Plain Text
     b6ab5147-5d5b-42af-9984-8d4c1b01f63a: 'Static Assets' # Static Assets
+    d4720a93-54ad-45de-a939-b668ed8660dc: 'Share/SEO Image' # Share/SEO Image
+    da24c053-b31c-4fa8-b113-217845a4ce83: 'Share/SEO Title' # Share/SEO Title
     e421ceea-a2f2-459f-88b9-2695f86047bd: Images # Images
     e5323eec-2cf3-40d3-b122-7df6192a5bdf: 'Form Submissions' # Form Submissions
     fd23984e-764a-4004-9834-8efe25601ba5: Simple # Simple
