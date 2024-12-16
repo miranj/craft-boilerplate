@@ -34,11 +34,11 @@
 
 {% block page_header %}
   <header class="container">
-    <h2 class="{{ logo ? 'w-4xl sm:w-5xl' }}">
+    <h2 class="{{ siteLogo ? 'w-4xl sm:w-5xl' }}">
       <a href="{{ url() }}" title="Visit the {{ siteName }} home page">
-        {% if logo %}
+        {% if siteLogo %}
           {% include '_components/_image' with { params: {
-            asset: logo,
+            asset: siteLogo,
             preset: 'logo',
             lazyload: false,
           } } %}
