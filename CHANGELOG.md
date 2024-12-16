@@ -4,6 +4,10 @@ Release notes for Miranj's Craft Boilerplate starter project.
 
 ## Unreleased
 
+### Craft
+
+- Added project config for a blank Craft install.
+
 ### System
 
 - Added the Composer lock file.

@@ -1,0 +1,36 @@
+dateModified: 1734383816
+email:
+  fromEmail: $CRAFT_FROM_EMAIL
+  fromName: $CRAFT_FROM_NAME
+  replyToEmail: null
+  template: null
+  transportSettings:
+    command: '/usr/sbin/sendmail -t -i'
+  transportType: craft\mail\transportadapters\Sendmail
+meta:
+  __names__:
+    8341919b-4097-4c45-8f3b-97ff673d9ab5: $CRAFT_SITE_NAME # $CRAFT_SITE_NAME
+    a20788dd-9031-41ba-8145-5f9d17b719ad: Primary # Primary
+plugins:
+  minify:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  nocache:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+system:
+  edition: solo
+  live: true
+  name: $CRAFT_SITE_NAME
+  retryDuration: null
+  schemaVersion: 5.3.0.2
+  timeZone: Asia/Kolkata
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: null
+  photoVolumeUid: null
+  require2fa: false
+  requireEmailVerification: true
