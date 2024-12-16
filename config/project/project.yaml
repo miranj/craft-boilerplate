@@ -1,4 +1,4 @@
-dateModified: 1734388473
+dateModified: 1734390101
 email:
   fromEmail: $CRAFT_FROM_EMAIL
   fromName: $CRAFT_FROM_NAME
@@ -45,8 +45,10 @@ meta:
     5d68dab3-70f1-4fbc-833e-e504aa7c926d: 'User Photos' # User Photos
     7b8b18a2-8e96-4b93-bfaa-34a1d9fa86e1: Rich # Rich
     08b5b22b-fb98-46ef-8a90-e392edb2244f: 'Rich Text' # Rich Text
+    8dddc601-5e96-40bb-b036-520072ba4aa7: Images # Images
     89c58a76-1da8-4581-84f1-caf2222de75a: Documents # Documents
     840acb32-6694-40d0-9384-60a0220c1de0: Label # Label
+    69339afc-d4f1-440b-a7ad-7da2ccb77972: Image # Image
     386721be-1ee4-4e3b-b22c-7fb3dfded3ff: 'Simple Text' # Simple Text
     8341919b-4097-4c45-8f3b-97ff673d9ab5: $CRAFT_SITE_NAME # $CRAFT_SITE_NAME
     a53f5b40-fb8c-4a9d-8c25-dc8e3dfe58d6: Code # Code
