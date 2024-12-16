@@ -7,6 +7,7 @@ Release notes for Miranj's Craft Boilerplate starter project.
 ### Craft
 
 - Added project config for a blank Craft install.
+- Added _Sharing & SEO_ global set.
 - Added text fields for common use cases: Label, Plain Text, Simple Text, Rich Text, and Code.
 - Added asset fields for common use cases: Image, Images.
 - Added SEO fields for: title, description, image, and default image.
