@@ -7,6 +7,7 @@ Release notes for Miranj's Craft Boilerplate starter project.
 ### Craft
 
 - Added project config for a blank Craft install.
+- Added common text fields: Label, Plain Text, Simple Text, Rich Text, and Code.
 - Added a primary site.
 - Added SMTP email config.
 - Updated Craft to 5.5.
