@@ -9,6 +9,7 @@ Release notes for Miranj's Craft Boilerplate starter project.
 - Added project config for a blank Craft install.
 - Added a primary site.
 - Added SMTP email config.
+- Updated Craft to 5.5.
 
 ### System
 
