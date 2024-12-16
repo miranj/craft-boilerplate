@@ -1,4 +1,4 @@
-dateModified: 1734386072
+dateModified: 1734386499
 email:
   fromEmail: $CRAFT_FROM_EMAIL
   fromName: $CRAFT_FROM_NAME
@@ -15,12 +15,66 @@ meta:
   __names__:
     8341919b-4097-4c45-8f3b-97ff673d9ab5: $CRAFT_SITE_NAME # $CRAFT_SITE_NAME
     a20788dd-9031-41ba-8145-5f9d17b719ad: Primary # Primary
+    fd23984e-764a-4004-9834-8efe25601ba5: Simple # Simple
 plugins:
+  child-me:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  ckeditor:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.0.0.0
+  cp-field-inspect:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  element-index-defaults:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  environment-label:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  field-manager:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  image-resizer:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.0.0
+  imager-x:
+    edition: lite
+    enabled: true
+    licenseKey: $CRAFT_LICENSE_IMAGER_X
+    schemaVersion: 4.0.0
   minify:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
   nocache:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  obfuscator:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  retcon:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  seomate:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  twig-perversion:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  typogrify:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
