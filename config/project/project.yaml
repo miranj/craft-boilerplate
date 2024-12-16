@@ -1,12 +1,16 @@
-dateModified: 1734383816
+dateModified: 1734386072
 email:
   fromEmail: $CRAFT_FROM_EMAIL
   fromName: $CRAFT_FROM_NAME
   replyToEmail: null
   template: null
   transportSettings:
-    command: '/usr/sbin/sendmail -t -i'
-  transportType: craft\mail\transportadapters\Sendmail
+    host: $CRAFT_SMTP_HOST
+    password: $CRAFT_SMTP_PASSWORD
+    port: $CRAFT_SMTP_PORT
+    useAuthentication: '1'
+    username: $CRAFT_SMTP_USER
+  transportType: craft\mail\transportadapters\Smtp
 meta:
   __names__:
     8341919b-4097-4c45-8f3b-97ff673d9ab5: $CRAFT_SITE_NAME # $CRAFT_SITE_NAME
