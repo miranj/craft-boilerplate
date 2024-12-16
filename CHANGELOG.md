@@ -2,6 +2,12 @@
 
 Release notes for Miranj's Craft Boilerplate starter project.
 
+## Unreleased
+
+### System
+
+- Added the Composer lock file.
+
 ## 3.2.0 - 2024-12-17
 
 ### Front-end
