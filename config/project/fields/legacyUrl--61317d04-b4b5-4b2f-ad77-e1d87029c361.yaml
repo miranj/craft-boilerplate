@@ -1,0 +1,26 @@
+columnSuffix: null
+handle: legacyUrl
+instructions: 'The URL of this entry on the previous site (including `http://` or `https://`). The domain name will be automatically removed once the entry is saved, and any visitors landing on the legacy URL will be redirected to the current entry page.'
+name: 'Legacy URL'
+searchable: true
+settings:
+  maxLength: 255
+  showLabelField: false
+  showTargetField: false
+  typeSettings:
+    __assoc__:
+      -
+        - url
+        -
+          __assoc__:
+            -
+              - allowRootRelativeUrls
+              - '1'
+            -
+              - allowAnchors
+              - ''
+  types:
+    - url
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Link

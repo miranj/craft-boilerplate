@@ -12,6 +12,7 @@ Release notes for Miranj's Craft Boilerplate starter project.
 - Added text fields for common use cases: Label, Plain Text, Simple Text, Rich Text, and Code.
 - Added asset fields for common use cases: Image, Images.
 - Added SEO fields for: title, description, image, and default image.
+- Added Legacy URL field.
 - Added filesystems for common use cases: Uploads, Static Assets, Transforms, and Private Uploads.
 - Added asset volumes for common use cases: Images, Documents, Form Submissions, User Photos, and Static Assets.
 - Added a primary site.
