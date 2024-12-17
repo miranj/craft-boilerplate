@@ -1,4 +1,4 @@
-dateModified: 1734469990
+dateModified: 1734470124
 email:
   fromEmail: $CRAFT_FROM_EMAIL
   fromName: $CRAFT_FROM_NAME
@@ -47,6 +47,7 @@ meta:
     7b8b18a2-8e96-4b93-bfaa-34a1d9fa86e1: Rich # Rich
     08b5b22b-fb98-46ef-8a90-e392edb2244f: 'Rich Text' # Rich Text
     8dddc601-5e96-40bb-b036-520072ba4aa7: Images # Images
+    8f58365f-4eeb-4347-9d3d-5c0d3ffd3989: 'Toggle (Default: off)' # Toggle (Default: off)
     89c58a76-1da8-4581-84f1-caf2222de75a: Documents # Documents
     349b5e6f-3a2a-43f1-a9dd-2373bf4a0a67: 'Share/SEO Description' # Share/SEO Description
     840acb32-6694-40d0-9384-60a0220c1de0: Label # Label
@@ -61,6 +62,7 @@ meta:
     afc7f0bc-1b97-4841-a1d2-5b0385a7ca35: 'Plain Text' # Plain Text
     b5fe8dff-122f-4559-8bbb-d4049e479d18: 'Google Analytics' # Google Analytics
     b6ab5147-5d5b-42af-9984-8d4c1b01f63a: 'Static Assets' # Static Assets
+    b99607d1-2cd8-44ef-add2-731bb39d4397: 'Toggle (Default: on)' # Toggle (Default: on)
     d4720a93-54ad-45de-a939-b668ed8660dc: 'Share/SEO Image' # Share/SEO Image
     da24c053-b31c-4fa8-b113-217845a4ce83: 'Share/SEO Title' # Share/SEO Title
     e421ceea-a2f2-459f-88b9-2695f86047bd: Images # Images

@@ -11,6 +11,7 @@ Release notes for Miranj's Craft Boilerplate starter project.
 - Added _Google Analytics_ global set.
 - Added text fields for common use cases: Label, Plain Text, Simple Text, Rich Text, Summary, and Code.
 - Added asset fields for common use cases: Image, Images.
+- Added lightswitch fields for common use cases: Toggle (Default: off), and Toggle (Default: on).
 - Added SEO fields for: title, description, image, and default image.
 - Added Legacy URL field.
 - Added filesystems for common use cases: Uploads, Static Assets, Transforms, and Private Uploads.
