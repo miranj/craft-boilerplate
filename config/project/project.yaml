@@ -1,4 +1,4 @@
-dateModified: 1734470650
+dateModified: 1734471077
 email:
   fromEmail: $CRAFT_FROM_EMAIL
   fromName: $CRAFT_FROM_NAME
@@ -50,6 +50,7 @@ meta:
     8dddc601-5e96-40bb-b036-520072ba4aa7: Images # Images
     8f58365f-4eeb-4347-9d3d-5c0d3ffd3989: 'Toggle (Default: off)' # Toggle (Default: off)
     89c58a76-1da8-4581-84f1-caf2222de75a: Documents # Documents
+    295e5325-afca-4a03-93e9-ed957c574148: Footer # Footer
     349b5e6f-3a2a-43f1-a9dd-2373bf4a0a67: 'Share/SEO Description' # Share/SEO Description
     840acb32-6694-40d0-9384-60a0220c1de0: Label # Label
     5661ce90-e09f-4c95-bffe-ffe44c413db3: 'Default Share Image' # Default Share Image
@@ -58,6 +59,7 @@ meta:
     69339afc-d4f1-440b-a7ad-7da2ccb77972: Image # Image
     386721be-1ee4-4e3b-b22c-7fb3dfded3ff: 'Simple Text' # Simple Text
     8341919b-4097-4c45-8f3b-97ff673d9ab5: $CRAFT_SITE_NAME # $CRAFT_SITE_NAME
+    25388890-1b39-49c8-8d89-7ef2d82f89a1: Newsletter # Newsletter
     a53f5b40-fb8c-4a9d-8c25-dc8e3dfe58d6: Code # Code
     a20788dd-9031-41ba-8145-5f9d17b719ad: Primary # Primary
     afc7f0bc-1b97-4841-a1d2-5b0385a7ca35: 'Plain Text' # Plain Text
