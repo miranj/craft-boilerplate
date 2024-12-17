@@ -1,4 +1,4 @@
-dateModified: 1734471077
+dateModified: 1734471793
 email:
   fromEmail: $CRAFT_FROM_EMAIL
   fromName: $CRAFT_FROM_NAME
@@ -63,6 +63,7 @@ meta:
     a53f5b40-fb8c-4a9d-8c25-dc8e3dfe58d6: Code # Code
     a20788dd-9031-41ba-8145-5f9d17b719ad: Primary # Primary
     afc7f0bc-1b97-4841-a1d2-5b0385a7ca35: 'Plain Text' # Plain Text
+    b5b9369b-8ab5-44dc-bbaa-058288143025: 'Index Page' # Index Page
     b5fe8dff-122f-4559-8bbb-d4049e479d18: 'Google Analytics' # Google Analytics
     b6ab5147-5d5b-42af-9984-8d4c1b01f63a: 'Static Assets' # Static Assets
     b99607d1-2cd8-44ef-add2-731bb39d4397: 'Toggle (Default: on)' # Toggle (Default: on)
