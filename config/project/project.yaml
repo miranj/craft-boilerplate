@@ -146,7 +146,7 @@ plugins:
     enabled: true
     schemaVersion: 1.0.0
 system:
-  edition: solo
+  edition: pro
   live: true
   name: $CRAFT_SITE_NAME
   retryDuration: null
