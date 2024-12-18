@@ -1,0 +1,10 @@
+description: 'Users in this group can configure site-wide behaviour such as navigation, footer, branding, redirects, external integrations, etc.'
+handle: config
+name: 'Site Configuration'
+permissions:
+  - accesscp
+  - accesssitewhensystemisoff
+  - 'editglobalset:25388890-1b39-49c8-8d89-7ef2d82f89a1' # Newsletter
+  - 'editglobalset:295e5325-afca-4a03-93e9-ed957c574148' # Footer
+  - 'editglobalset:8447c697-1e38-439d-bfcc-beac5bf1ae31' # Sharing & SEO
+  - 'editglobalset:b5fe8dff-122f-4559-8bbb-d4049e479d18' # Google Analytics

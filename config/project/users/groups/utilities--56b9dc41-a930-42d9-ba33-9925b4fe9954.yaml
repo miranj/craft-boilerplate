@@ -1,0 +1,16 @@
+description: "⚠️ _High risk, technical know-how recommended._\r\nUsers in this group can access system admin tools to take a database backup, clear caches, manage the task queue, etc."
+handle: utilities
+name: 'System Administration'
+permissions:
+  - accesscp
+  - accesscpwhensystemisoff
+  - accesssitewhensystemisoff
+  - 'utility:asset-indexes'
+  - 'utility:clear-caches'
+  - 'utility:db-backup'
+  - 'utility:deprecation-errors'
+  - 'utility:find-replace'
+  - 'utility:php-info'
+  - 'utility:queue-manager'
+  - 'utility:system-messages'
+  - 'utility:system-report'

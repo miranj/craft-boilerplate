@@ -1,0 +1,18 @@
+description: 'Users in this group can register, modify, disable and delete all control panel users.'
+handle: managers
+name: 'User Managers'
+permissions:
+  - accesscp
+  - accesscpwhensystemisoff
+  - accesssitewhensystemisoff
+  - administrateusers
+  - 'assignusergroup:56b9dc41-a930-42d9-ba33-9925b4fe9954' # System Administration
+  - 'assignusergroup:6813a87d-5d20-4e93-8019-6fde740ef87d' # Editors
+  - 'assignusergroup:90d23e21-4d7c-444f-89c4-e66aeb92c134' # Site Configuration
+  - 'assignusergroup:e5d70b3c-403b-416d-b670-a93437ce427b' # User Managers
+  - assignuserpermissions
+  - deleteusers
+  - editusers
+  - impersonateusers
+  - moderateusers
+  - registerusers

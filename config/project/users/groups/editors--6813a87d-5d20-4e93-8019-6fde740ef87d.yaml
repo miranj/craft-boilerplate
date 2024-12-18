@@ -1,0 +1,58 @@
+description: 'Users in this group have permissions to edit all site content.'
+handle: editors
+name: Editors
+permissions:
+  - accesscp
+  - accesssitewhensystemisoff
+  - 'createentries:653ea464-6b43-4bc9-8138-79615323d877' # Blog
+  - 'createentries:6b8b6979-d75e-432e-8798-2fc0d53eb8f8' # Pages
+  - 'createfolders:89c58a76-1da8-4581-84f1-caf2222de75a' # Documents
+  - 'createfolders:e421ceea-a2f2-459f-88b9-2695f86047bd' # Images
+  - 'deleteassets:89c58a76-1da8-4581-84f1-caf2222de75a' # Documents
+  - 'deleteassets:e421ceea-a2f2-459f-88b9-2695f86047bd' # Images
+  - 'deleteentries:653ea464-6b43-4bc9-8138-79615323d877' # Blog
+  - 'deleteentries:6b8b6979-d75e-432e-8798-2fc0d53eb8f8' # Pages
+  - 'deletepeerassets:89c58a76-1da8-4581-84f1-caf2222de75a' # Documents
+  - 'deletepeerassets:e421ceea-a2f2-459f-88b9-2695f86047bd' # Images
+  - 'deletepeerentries:653ea464-6b43-4bc9-8138-79615323d877' # Blog
+  - 'deletepeerentries:6b8b6979-d75e-432e-8798-2fc0d53eb8f8' # Pages
+  - 'deletepeerentrydrafts:1afae8bb-74c6-43e3-8b44-3e8cac38e2e8' # Blog Index
+  - 'deletepeerentrydrafts:653ea464-6b43-4bc9-8138-79615323d877' # Blog
+  - 'deletepeerentrydrafts:6b8b6979-d75e-432e-8798-2fc0d53eb8f8' # Pages
+  - 'deletepeerentrydrafts:bc20ba64-4979-418f-aa28-244626f315ab' # Home Page
+  - 'editimages:89c58a76-1da8-4581-84f1-caf2222de75a' # Documents
+  - 'editimages:e421ceea-a2f2-459f-88b9-2695f86047bd' # Images
+  - 'editpeerimages:89c58a76-1da8-4581-84f1-caf2222de75a' # Documents
+  - 'editpeerimages:e421ceea-a2f2-459f-88b9-2695f86047bd' # Images
+  - 'replacefiles:89c58a76-1da8-4581-84f1-caf2222de75a' # Documents
+  - 'replacefiles:e421ceea-a2f2-459f-88b9-2695f86047bd' # Images
+  - 'replacepeerfiles:89c58a76-1da8-4581-84f1-caf2222de75a' # Documents
+  - 'replacepeerfiles:e421ceea-a2f2-459f-88b9-2695f86047bd' # Images
+  - 'saveassets:89c58a76-1da8-4581-84f1-caf2222de75a' # Documents
+  - 'saveassets:e421ceea-a2f2-459f-88b9-2695f86047bd' # Images
+  - 'saveentries:1afae8bb-74c6-43e3-8b44-3e8cac38e2e8' # Blog Index
+  - 'saveentries:653ea464-6b43-4bc9-8138-79615323d877' # Blog
+  - 'saveentries:6b8b6979-d75e-432e-8798-2fc0d53eb8f8' # Pages
+  - 'saveentries:bc20ba64-4979-418f-aa28-244626f315ab' # Home Page
+  - 'savepeerassets:89c58a76-1da8-4581-84f1-caf2222de75a' # Documents
+  - 'savepeerassets:e421ceea-a2f2-459f-88b9-2695f86047bd' # Images
+  - 'savepeerentries:653ea464-6b43-4bc9-8138-79615323d877' # Blog
+  - 'savepeerentries:6b8b6979-d75e-432e-8798-2fc0d53eb8f8' # Pages
+  - 'savepeerentrydrafts:1afae8bb-74c6-43e3-8b44-3e8cac38e2e8' # Blog Index
+  - 'savepeerentrydrafts:653ea464-6b43-4bc9-8138-79615323d877' # Blog
+  - 'savepeerentrydrafts:6b8b6979-d75e-432e-8798-2fc0d53eb8f8' # Pages
+  - 'savepeerentrydrafts:bc20ba64-4979-418f-aa28-244626f315ab' # Home Page
+  - 'viewassets:89c58a76-1da8-4581-84f1-caf2222de75a' # Documents
+  - 'viewassets:e421ceea-a2f2-459f-88b9-2695f86047bd' # Images
+  - 'viewentries:1afae8bb-74c6-43e3-8b44-3e8cac38e2e8' # Blog Index
+  - 'viewentries:653ea464-6b43-4bc9-8138-79615323d877' # Blog
+  - 'viewentries:6b8b6979-d75e-432e-8798-2fc0d53eb8f8' # Pages
+  - 'viewentries:bc20ba64-4979-418f-aa28-244626f315ab' # Home Page
+  - 'viewpeerassets:89c58a76-1da8-4581-84f1-caf2222de75a' # Documents
+  - 'viewpeerassets:e421ceea-a2f2-459f-88b9-2695f86047bd' # Images
+  - 'viewpeerentries:653ea464-6b43-4bc9-8138-79615323d877' # Blog
+  - 'viewpeerentries:6b8b6979-d75e-432e-8798-2fc0d53eb8f8' # Pages
+  - 'viewpeerentrydrafts:1afae8bb-74c6-43e3-8b44-3e8cac38e2e8' # Blog Index
+  - 'viewpeerentrydrafts:653ea464-6b43-4bc9-8138-79615323d877' # Blog
+  - 'viewpeerentrydrafts:6b8b6979-d75e-432e-8798-2fc0d53eb8f8' # Pages
+  - 'viewpeerentrydrafts:bc20ba64-4979-418f-aa28-244626f315ab' # Home Page
