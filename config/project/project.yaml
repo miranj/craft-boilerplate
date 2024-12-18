@@ -1,4 +1,4 @@
-dateModified: 1734546323
+dateModified: 1734547266
 email:
   fromEmail: $CRAFT_FROM_EMAIL
   fromName: $CRAFT_FROM_NAME
@@ -42,6 +42,7 @@ fs:
     url: '@assetBaseUrl/images/t'
 meta:
   __names__:
+    1afae8bb-74c6-43e3-8b44-3e8cac38e2e8: 'Blog Index' # Blog Index
     5a1e3562-bcf8-4492-afd5-f8c9cabda572: 'Call to Action' # Call to Action
     5b72b712-0218-40c6-9717-0c395a914ad8: Summary # Summary
     5d68dab3-70f1-4fbc-833e-e504aa7c926d: 'User Photos' # User Photos
@@ -55,6 +56,7 @@ meta:
     89c58a76-1da8-4581-84f1-caf2222de75a: Documents # Documents
     295e5325-afca-4a03-93e9-ed957c574148: Footer # Footer
     349b5e6f-3a2a-43f1-a9dd-2373bf4a0a67: 'Share/SEO Description' # Share/SEO Description
+    653ea464-6b43-4bc9-8138-79615323d877: Blog # Blog
     840acb32-6694-40d0-9384-60a0220c1de0: Label # Label
     5661ce90-e09f-4c95-bffe-ffe44c413db3: 'Default Share Image' # Default Share Image
     8447c697-1e38-439d-bfcc-beac5bf1ae31: 'Sharing & SEO' # Sharing & SEO
@@ -75,6 +77,7 @@ meta:
     d356acc9-4ecf-488d-a89d-2857490bb576: Hyperlink # Hyperlink
     d4720a93-54ad-45de-a939-b668ed8660dc: 'Share/SEO Image' # Share/SEO Image
     da24c053-b31c-4fa8-b113-217845a4ce83: 'Share/SEO Title' # Share/SEO Title
+    de677f5b-6642-4086-ac1a-3e95990c19d0: 'Blog Post' # Blog Post
     e03f52b8-38a8-493c-b27a-3c61c5532f18: Builder # Builder
     e421ceea-a2f2-459f-88b9-2695f86047bd: Images # Images
     e5323eec-2cf3-40d3-b122-7df6192a5bdf: 'Form Submissions' # Form Submissions

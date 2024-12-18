@@ -7,9 +7,9 @@ Release notes for Miranj's Craft Boilerplate starter project.
 ### Craft
 
 - Added project config for a blank Craft install.
-- Added _Pages_ section.
+- Added _Blog_, _Blog Index_, and _Pages_ sections.
 - Added _Sharing & SEO_, _Footer_, _Newsletter_, and _Google Analytics_ global sets.
-- Added _Page_, and _Index Page_ entry types.
+- Added _Page_, _Blog Post_, and _Index Page_ entry types.
 - Added Body field with nested Image, Gallery blocks.
 - Added text fields for common use cases: Label, Plain Text, Simple Text, Rich Text, Summary, and Code.
 - Added asset fields for common use cases: Image, Images.
