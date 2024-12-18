@@ -7,7 +7,7 @@ Release notes for Miranj's Craft Boilerplate starter project.
 ### Craft
 
 - Added project config for a blank Craft install.
-- Added _Blog_, _Blog Index_, _Home Page_, and _Pages_ sections.
+- Added _Blog_, _Blog Index_, _Home Page_, _Pages_, and _404 Page Not Found_ sections.
 - Added _Sharing & SEO_, _Footer_, _Newsletter_, and _Google Analytics_ global sets.
 - Added _Page_, _Blog Post_, and _Index Page_ entry types.
 - Added Body field with nested Image, Gallery blocks.

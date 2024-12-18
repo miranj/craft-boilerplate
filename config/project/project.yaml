@@ -1,4 +1,4 @@
-dateModified: 1734552482
+dateModified: 1734553451
 elementSources:
   craft\elements\Entry:
     -
@@ -63,6 +63,26 @@ elementSources:
         - dateUpdated
         - revisionCreator
       type: native
+    -
+      condition:
+        class: craft\elements\conditions\entries\EntryCondition
+        conditionRules:
+          -
+            class: craft\elements\conditions\entries\SectionConditionRule
+            operator: in
+            uid: 3da6cdb6-b997-463a-8d2b-3d0af26be86d
+            values:
+              - b64f08d1-e4db-4745-bf21-6e03e16ed93b # 404 Page Not Found
+        elementType: craft\elements\Entry
+        fieldContext: global
+      defaultSort:
+        - section
+        - asc
+      defaultViewMode: cards
+      key: 'custom:4b115974-a69e-4d19-a72e-f16a993033a5'
+      label: 'Error Pages'
+      tableAttributes: '-'
+      type: custom
     -
       defaultSort:
         - title
@@ -273,6 +293,7 @@ meta:
     b5b9369b-8ab5-44dc-bbaa-058288143025: 'Index Page' # Index Page
     b5fe8dff-122f-4559-8bbb-d4049e479d18: 'Google Analytics' # Google Analytics
     b6ab5147-5d5b-42af-9984-8d4c1b01f63a: 'Static Assets' # Static Assets
+    b64f08d1-e4db-4745-bf21-6e03e16ed93b: '404 Page Not Found' # 404 Page Not Found
     b99607d1-2cd8-44ef-add2-731bb39d4397: 'Toggle (Default: on)' # Toggle (Default: on)
     bc20ba64-4979-418f-aa28-244626f315ab: 'Home Page' # Home Page
     d356acc9-4ecf-488d-a89d-2857490bb576: Hyperlink # Hyperlink
