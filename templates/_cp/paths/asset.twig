@@ -12,7 +12,10 @@
 
 
 {# Params #}
-{% set rootElement = rootElement ?? object %}
+{% set rootElement = rootElement
+  ?? object.primaryOwner
+  ?: object.owner
+  ?: object %}
 
 
 

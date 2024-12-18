@@ -1,0 +1,43 @@
+css: ".ck.ck-content h3 { font-size: x-large; }\r\n.ck.ck-content h4 { font-size: large; }"
+headingLevels: false
+name: Builder
+options:
+  heading:
+    options:
+      -
+        class: ck-heading_paragraph
+        model: paragraph
+        title: Paragraph
+      -
+        class: ck-heading_heading1
+        model: heading1
+        title: Heading
+        view: h3
+      -
+        class: ck-heading_heading2
+        model: heading2
+        title: 'Heading (Level 2)'
+        view: h4
+  link:
+    decorators:
+      openInNewTab:
+        attributes:
+          target: _blank
+        label: 'Open in a new tab'
+        mode: manual
+    defaultProtocol: 'http://'
+  list:
+    properties:
+      reversed: false
+      startIndex: true
+      styles: false
+toolbar:
+  - createEntry
+  - heading
+  - blockQuote
+  - '|'
+  - bold
+  - italic
+  - link
+  - bulletedList
+  - numberedList

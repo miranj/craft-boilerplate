@@ -1,0 +1,24 @@
+columnSuffix: null
+handle: body
+instructions: null
+name: Body
+searchable: true
+settings:
+  availableTransforms: ''
+  availableVolumes: '*'
+  ckeConfig: e03f52b8-38a8-493c-b27a-3c61c5532f18 # Builder
+  createButtonLabel: 'Insert block'
+  defaultTransform: null
+  enableSourceEditingForNonAdmins: false
+  entryTypes:
+    - 6caf0d7f-9b74-4ae4-b0dd-458633bd94d1 # Image
+    - 64ee8bca-fd54-4c78-853c-aaf37e0bb8c0 # Gallery
+  purifierConfig: null
+  purifyHtml: true
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+  showWordCount: false
+  wordLimit: null
+translationKeyFormat: null
+translationMethod: none
+type: craft\ckeditor\Field

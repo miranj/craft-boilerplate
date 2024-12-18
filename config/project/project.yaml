@@ -1,4 +1,4 @@
-dateModified: 1734471793
+dateModified: 1734545165
 email:
   fromEmail: $CRAFT_FROM_EMAIL
   fromName: $CRAFT_FROM_NAME
@@ -45,10 +45,12 @@ meta:
     5a1e3562-bcf8-4492-afd5-f8c9cabda572: 'Call to Action' # Call to Action
     5b72b712-0218-40c6-9717-0c395a914ad8: Summary # Summary
     5d68dab3-70f1-4fbc-833e-e504aa7c926d: 'User Photos' # User Photos
+    6caf0d7f-9b74-4ae4-b0dd-458633bd94d1: Image # Image
     7b8b18a2-8e96-4b93-bfaa-34a1d9fa86e1: Rich # Rich
     08b5b22b-fb98-46ef-8a90-e392edb2244f: 'Rich Text' # Rich Text
     8dddc601-5e96-40bb-b036-520072ba4aa7: Images # Images
     8f58365f-4eeb-4347-9d3d-5c0d3ffd3989: 'Toggle (Default: off)' # Toggle (Default: off)
+    64ee8bca-fd54-4c78-853c-aaf37e0bb8c0: Gallery # Gallery
     89c58a76-1da8-4581-84f1-caf2222de75a: Documents # Documents
     295e5325-afca-4a03-93e9-ed957c574148: Footer # Footer
     349b5e6f-3a2a-43f1-a9dd-2373bf4a0a67: 'Share/SEO Description' # Share/SEO Description
@@ -61,6 +63,7 @@ meta:
     8341919b-4097-4c45-8f3b-97ff673d9ab5: $CRAFT_SITE_NAME # $CRAFT_SITE_NAME
     25388890-1b39-49c8-8d89-7ef2d82f89a1: Newsletter # Newsletter
     a53f5b40-fb8c-4a9d-8c25-dc8e3dfe58d6: Code # Code
+    a9736c79-b219-4814-ba33-728835b7d230: Body # Body
     a20788dd-9031-41ba-8145-5f9d17b719ad: Primary # Primary
     afc7f0bc-1b97-4841-a1d2-5b0385a7ca35: 'Plain Text' # Plain Text
     b5b9369b-8ab5-44dc-bbaa-058288143025: 'Index Page' # Index Page
@@ -70,6 +73,7 @@ meta:
     d356acc9-4ecf-488d-a89d-2857490bb576: Hyperlink # Hyperlink
     d4720a93-54ad-45de-a939-b668ed8660dc: 'Share/SEO Image' # Share/SEO Image
     da24c053-b31c-4fa8-b113-217845a4ce83: 'Share/SEO Title' # Share/SEO Title
+    e03f52b8-38a8-493c-b27a-3c61c5532f18: Builder # Builder
     e421ceea-a2f2-459f-88b9-2695f86047bd: Images # Images
     e5323eec-2cf3-40d3-b122-7df6192a5bdf: 'Form Submissions' # Form Submissions
     fd23984e-764a-4004-9834-8efe25601ba5: Simple # Simple
