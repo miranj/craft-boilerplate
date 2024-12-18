@@ -27,8 +27,8 @@ return [
         'fieldProfiles' => [
             'standard' => [
                 'title' => ['seoTitle', 'title'],
-                'description' => ['seoSummary', 'summary'],
-                'image' => ['seoImage', 'image'],
+                'description' => ['seoSummary', 'summary', 'body'],
+                'image' => ['seoImage', 'cover', 'image'],
             ],
         ],
 
@@ -55,6 +55,10 @@ return [
         'sitemapLimit' => 100,
         'sitemapConfig' => [
             'elements' => [
+                // collections
+                'pages' => ['changefreq' => 'monthly', 'priority' => 0.5],
+
+                // singles
                 'homepage' => ['changefreq' => 'weekly', 'priority' => 1.0],
                 'indexes' => [
                     'elementType' => \craft\elements\Entry::class,
