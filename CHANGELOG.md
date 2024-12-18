@@ -18,6 +18,8 @@ Release notes for Miranj's Craft Boilerplate starter project.
 - Added SEO fields for: title, description, image, and default image.
 - Added filesystems for common use cases: Uploads, Static Assets, Transforms, and Private Uploads.
 - Added asset volumes for common use cases: Images, Documents, Form Submissions, User Photos, and Static Assets.
+- Added custom entry sources for Home Page and Index Pages.
+- Added dynamic entry sources: Updated Recently, Published Recently, Created Recently.
 - Added a primary site.
 - Added SMTP email config.
 - Updated Craft to 5.5.

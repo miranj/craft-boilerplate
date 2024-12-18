@@ -1,4 +1,201 @@
-dateModified: 1734551170
+dateModified: 1734551811
+elementSources:
+  craft\elements\Entry:
+    -
+      condition:
+        class: craft\elements\conditions\entries\EntryCondition
+        conditionRules:
+          -
+            class: craft\elements\conditions\entries\SectionConditionRule
+            operator: in
+            uid: 5b0b4220-3d4a-430e-804f-f7c9f0db27b6
+            values:
+              - bc20ba64-4979-418f-aa28-244626f315ab # Home Page
+        elementType: craft\elements\Entry
+        fieldContext: global
+      defaultSort:
+        - id
+        - asc
+      defaultViewMode: cards
+      key: 'custom:bb29a724-9ba6-4bcb-bcaa-928112733af1'
+      label: Homepage
+      tableAttributes: '-'
+      type: custom
+    -
+      condition:
+        class: craft\elements\conditions\entries\EntryCondition
+        conditionRules:
+          -
+            class: craft\elements\conditions\entries\TypeConditionRule
+            operator: in
+            uid: 0f8f04f6-7ffe-49d9-ba37-9f5910a116cb
+            values:
+              - b5b9369b-8ab5-44dc-bbaa-058288143025 # Index Page
+          -
+            class: craft\elements\conditions\entries\SectionConditionRule
+            operator: ni
+            uid: 1ce7e9fc-7a91-45ff-a07c-9755ab5d5dcb
+            values:
+              - bc20ba64-4979-418f-aa28-244626f315ab # Home Page
+        elementType: craft\elements\Entry
+        fieldContext: global
+      defaultSort:
+        - uri
+        - asc
+      defaultViewMode: cards
+      key: 'custom:1aa71832-b8e6-4557-b0d7-6fcea7f324b3'
+      label: Indexes
+      tableAttributes:
+        - uri
+        - link
+        - dateUpdated
+        - revisionCreator
+      type: custom
+    -
+      defaultSort:
+        - structure
+        - asc
+      defaultViewMode: ''
+      disabled: false
+      key: 'section:6b8b6979-d75e-432e-8798-2fc0d53eb8f8' # Pages
+      tableAttributes:
+        - link
+        - dateUpdated
+        - revisionCreator
+      type: native
+    -
+      defaultSort:
+        - title
+        - asc
+      defaultViewMode: ''
+      disabled: true
+      key: singles
+      tableAttributes:
+        - postDate
+        - link
+        - dateUpdated
+      type: native
+    -
+      heading: Channels
+      type: heading
+    -
+      defaultSort:
+        - postDate
+        - desc
+      defaultViewMode: ''
+      disabled: false
+      key: 'section:653ea464-6b43-4bc9-8138-79615323d877' # Blog
+      tableAttributes:
+        - postDate
+        - link
+        - dateUpdated
+        - revisionCreator
+      type: native
+    -
+      heading: Auto
+      type: heading
+    -
+      condition:
+        class: craft\elements\conditions\entries\EntryCondition
+        conditionRules:
+          -
+            class: craft\elements\conditions\DateUpdatedConditionRule
+            endDate: null
+            periodType: daysAgo
+            periodValue: null
+            rangeType: past30Days
+            startDate: null
+            uid: 6d9f9446-7e37-4a00-b583-61532ea48bd5
+          -
+            class: craft\elements\conditions\HasUrlConditionRule
+            uid: 304d9eec-1cc9-4b80-829f-f72555e50b5e
+            value: true
+        elementType: craft\elements\Entry
+        fieldContext: global
+      defaultSort:
+        - dateUpdated
+        - desc
+      defaultViewMode: ''
+      key: 'custom:b6b6db60-afda-4442-8e36-6279d2b2387d'
+      label: 'Updated Recently'
+      tableAttributes:
+        - dateUpdated
+        - link
+        - section
+        - revisionCreator
+      type: custom
+    -
+      condition:
+        class: craft\elements\conditions\entries\EntryCondition
+        conditionRules:
+          -
+            class: craft\elements\conditions\entries\PostDateConditionRule
+            endDate: null
+            periodType: daysAgo
+            periodValue: null
+            rangeType: past30Days
+            startDate: null
+            uid: c62fd80c-b8e7-4b7e-8b2b-e37d8037301d
+          -
+            class: craft\elements\conditions\HasUrlConditionRule
+            uid: 8d40ae49-ef47-4103-b2bc-10d68d020efa
+            value: true
+        elementType: craft\elements\Entry
+        fieldContext: global
+      defaultSort:
+        - postDate
+        - desc
+      defaultViewMode: ''
+      key: 'custom:8011777f-f2c5-449e-9053-d48b36d995f6'
+      label: 'Published Recently'
+      tableAttributes:
+        - postDate
+        - link
+        - section
+      type: custom
+    -
+      condition:
+        class: craft\elements\conditions\entries\EntryCondition
+        conditionRules:
+          -
+            class: craft\elements\conditions\DateCreatedConditionRule
+            endDate: null
+            periodType: daysAgo
+            periodValue: null
+            rangeType: past30Days
+            startDate: null
+            uid: f2a1e105-9528-4f7a-99eb-47a9b414c495
+          -
+            class: craft\elements\conditions\HasUrlConditionRule
+            uid: e409829f-1c5f-4449-9129-06df652309e3
+            value: true
+        elementType: craft\elements\Entry
+        fieldContext: global
+      defaultSort:
+        - dateCreated
+        - desc
+      defaultViewMode: ''
+      key: 'custom:7e0fdfb7-2573-4d33-9aa1-9d6f7877de37'
+      label: 'Created Recently'
+      tableAttributes:
+        - dateCreated
+        - link
+        - section
+        - authors
+      type: custom
+    -
+      defaultSort:
+        - postDate
+        - desc
+      defaultViewMode: ''
+      disabled: false
+      key: '*'
+      tableAttributes:
+        - link
+        - section
+        - dateUpdated
+        - revisionCreator
+      type: native
 email:
   fromEmail: $CRAFT_FROM_EMAIL
   fromName: $CRAFT_FROM_NAME
