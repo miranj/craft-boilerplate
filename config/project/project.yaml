@@ -1,4 +1,4 @@
-dateModified: 1734547266
+dateModified: 1734551170
 email:
   fromEmail: $CRAFT_FROM_EMAIL
   fromName: $CRAFT_FROM_NAME
@@ -74,6 +74,7 @@ meta:
     b5fe8dff-122f-4559-8bbb-d4049e479d18: 'Google Analytics' # Google Analytics
     b6ab5147-5d5b-42af-9984-8d4c1b01f63a: 'Static Assets' # Static Assets
     b99607d1-2cd8-44ef-add2-731bb39d4397: 'Toggle (Default: on)' # Toggle (Default: on)
+    bc20ba64-4979-418f-aa28-244626f315ab: 'Home Page' # Home Page
     d356acc9-4ecf-488d-a89d-2857490bb576: Hyperlink # Hyperlink
     d4720a93-54ad-45de-a939-b668ed8660dc: 'Share/SEO Image' # Share/SEO Image
     da24c053-b31c-4fa8-b113-217845a4ce83: 'Share/SEO Title' # Share/SEO Title
