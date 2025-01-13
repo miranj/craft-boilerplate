@@ -6,5 +6,5 @@
   '_schemas/details/' ~ entry.section.handle ~ '-' ~ entry.type.handle,
   '_schemas/details/' ~ entry.section.handle,
   '_schemas/details/_' ~ entry.type.handle,
-  '_schemas/details/_default',
+  '_schemas/details/' ~ ('index_' in entry.section.handle ? '_index' : 'default'),
 ] -%}
