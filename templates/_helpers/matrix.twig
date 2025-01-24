@@ -52,3 +52,35 @@
   
   {% return bunchedRows %}
 {% endmacro %}
+
+
+
+{#
+  limitBlocksByType()
+  Returns an array of entries with the limits applied for matrix blocks
+
+  Example:
+  matrixBlocksList: [
+    {MatrixBlock object...},
+    {MatrixBlock object...}
+  ]
+  entryTypeLimits: {'group': 3, 'phone': 1}
+  return: [
+    {MatrixBlock object...},
+  ]
+#}
+{% macro limitBlocksByType(matrixBlocksList, typeLimits) %}
+  {% set blocksFound = {} %}
+  {% set limitedBlocksList = [] %}
+  {% for item in matrixBlocksList %}
+    {% set itemType = item.type.handle ?? '' %}
+    {% set blocksFound = blocksFound
+      |merge({ (itemType): (blocksFound[itemType] ?? 0) + 1 }) %}
+
+    {% if typeLimits[itemType] is not defined or blocksFound[itemType] <= typeLimits[itemType] %}
+      {% set limitedBlocksList = limitedBlocksList|push(item) %}
+    {% endif %}
+  {% endfor %}
+
+  {% return limitedBlocksList %}
+{% endmacro %}
