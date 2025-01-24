@@ -2,6 +2,10 @@
 html {
     scroll-behavior: smooth;
 }
+/* Enable default view transitions */
+@view-transition {
+    navigation: auto;
+}
 /* Defaults */
 body {
     --tw-bg-opacity: 1;

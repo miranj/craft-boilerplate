@@ -3,6 +3,11 @@ html {
     scroll-behavior: smooth;
 }
 
+/* Enable default view transitions */
+@view-transition {
+    navigation: auto;
+}
+
 /* Defaults */
 body {
     @apply bg-white text-black;
