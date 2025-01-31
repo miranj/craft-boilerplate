@@ -4,6 +4,10 @@ Release notes for Miranj's Craft Boilerplate starter project.
 
 ## Unreleased
 
+### Front-end
+
+- Added native CSS view transitions when navigating between pages.
+
 ### Craft
 
 - Added project config for a blank Craft install.
