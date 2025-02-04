@@ -33,6 +33,7 @@ Release notes for Miranj's Craft Boilerplate starter project.
 ### System
 
 - Added the Composer lock file.
+- Improved asset upload paths to eliminate special characters.
 
 ## 3.2.0 - 2024-12-17
 
