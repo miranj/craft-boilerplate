@@ -35,7 +35,7 @@
                 "allowSubfolders": false,
                 "restrictedDefaultUploadSubpath": null,
                 "defaultUploadLocationSource": "volume:91ae6e5b-a41a-4d60-ac31-d261d403db80",
-                "defaultUploadLocationSubpath": "{owner.section.handle}/{owner.uri|replace((owner.section.handle), '')|trim('/')}",
+                "defaultUploadLocationSubpath": "{owner.section.handle}/{owner.uri|replace((owner.section.handle), '')|trim('/')|ascii|kebab}",
                 "allowUploads": true,
                 "restrictFiles": true,
                 "allowedKinds": [
@@ -245,7 +245,7 @@
                 "allowSubfolders": false,
                 "restrictedDefaultUploadSubpath": null,
                 "defaultUploadLocationSource": "volume:91ae6e5b-a41a-4d60-ac31-d261d403db80",
-                "defaultUploadLocationSubpath": "{owner.section.handle}/{owner.uri|replace((owner.section.handle), '')|trim('/')}",
+                "defaultUploadLocationSubpath": "{owner.section.handle}/{owner.uri|replace((owner.section.handle), '')|trim('/')|ascii|kebab}",
                 "allowUploads": true,
                 "restrictFiles": true,
                 "allowedKinds": [

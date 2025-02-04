@@ -28,6 +28,8 @@
 {# Render #}
 {% block render [ _base ]
   |merge(_segments|split('/'))
+  |ascii
+  |kebab
   |filter
   |unique
   |join('/')
