@@ -13,7 +13,7 @@
 
 {# Params #}
 {% set rootElement = rootElement
-  ?? object.primaryOwner
+  ?? object.getRootOwner()
   ?: object.owner
   ?: object %}
 
