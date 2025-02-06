@@ -28,6 +28,7 @@ Release notes for Miranj's Craft Boilerplate starter project.
 - Added a primary site.
 - Added SMTP email config.
 - Added `limitBlocksByType()` macro to `_helpers/matrix`.
+- Added `_cp/paths/assets` template for generically generating asset upload paths.
 - Updated Craft to 5.5.
 
 ### System
