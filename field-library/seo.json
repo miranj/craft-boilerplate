@@ -55,7 +55,7 @@
       "allowSubfolders": false,
       "restrictedDefaultUploadSubpath": null,
       "defaultUploadLocationSource": "volume:b6f41447-5095-47c1-8e83-b9bc88387ca4",
-      "defaultUploadLocationSubpath": "{section.handle}/{uri|replace((section.handle), '')|trim('/')|ascii|kebab}",
+      "defaultUploadLocationSubpath": "{% include '_cp/paths/asset' %}",
       "allowUploads": true,
       "restrictFiles": true,
       "allowedKinds": ["image"],
