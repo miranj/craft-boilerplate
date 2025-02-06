@@ -30,8 +30,6 @@
   |merge(_segments|split('/'))
   |filter
   |unique
-  |map(s => s
-    |ascii
-    |kebab)
+  |map(s => s|ascii|kebab)
   |join('/')
 %}
