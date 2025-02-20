@@ -29,6 +29,8 @@ Release notes for Miranj's Craft Boilerplate starter project.
 - Added SMTP email config.
 - Added scaffolding for including custom Control Panel CSS.
 - Improved robustness of Live Preview CORS headers for control panel URLs using standard ports.
+- Added `limitBlocksByType()` macro to `_helpers/matrix`.
+- Added `_cp/paths/assets` template for generically generating asset upload paths.
 - Updated Craft to 5.5.
 
 ### System
