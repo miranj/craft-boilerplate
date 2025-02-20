@@ -33,6 +33,11 @@ paths.tasks = {
         ignored: '../templates/_manifest*.json',
       },
     },
+    cp: {
+      source: 'craft-cp/main.css',
+      destination: 'craftcp.css',
+      watch: ['craft-cp/**/*.css'],
+    },
   },
   purge: {
     default: {

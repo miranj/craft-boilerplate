@@ -27,6 +27,7 @@ Release notes for Miranj's Craft Boilerplate starter project.
 - Added user permissions groups for Editors, Site Configuration, System Administration, and User Managers.
 - Added a primary site.
 - Added SMTP email config.
+- Added scaffolding for including custom Control Panel CSS.
 - Updated Craft to 5.5.
 
 ### System
