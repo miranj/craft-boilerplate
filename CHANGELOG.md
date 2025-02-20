@@ -28,6 +28,7 @@ Release notes for Miranj's Craft Boilerplate starter project.
 - Added a primary site.
 - Added SMTP email config.
 - Added scaffolding for including custom Control Panel CSS.
+- Improved robustness of Live Preview CORS headers for control panel URLs using standard ports.
 - Updated Craft to 5.5.
 
 ### System

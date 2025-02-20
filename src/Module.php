@@ -83,8 +83,8 @@ class Module extends \yii\base\Module
                     implode(
                         ':',
                         array_filter([
-                            $parsedBaseCpUrl['host'],
-                            $parsedBaseCpUrl['port'],
+                            $parsedBaseCpUrl['host'] ?? '',
+                            $parsedBaseCpUrl['port'] ?? '',
                         ]),
                     ),
             );
