@@ -2,7 +2,7 @@
 
 Release notes for Miranj's Craft Boilerplate starter project.
 
-## Unreleased
+## 3.3.0 - 2025-02-24
 
 ### Front-end
 
