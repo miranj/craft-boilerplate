@@ -6,6 +6,8 @@ Release notes for Miranj's Craft Boilerplate starter project.
 
 ### Craft
 
+- Updated Craft CMS to 5.6.9.1
+- Updated CKEditor to 4.6.0
 - Updated CP Field Inspect to 2.0.4
 - Updated Image Resizer to 4.0.2
 - Updated Imager X to 5.1.1
