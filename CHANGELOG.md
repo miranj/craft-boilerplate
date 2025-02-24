@@ -8,7 +8,7 @@ Release notes for Miranj's Craft Boilerplate starter project.
 
 - Added native CSS view transitions when navigating between pages.
 
-### Craft
+### Data Model
 
 - Added project config for a blank Craft install.
 - Added _Blog_, _Blog Index_, _Home Page_, _Pages_, and _404 Page Not Found_ sections.
@@ -26,12 +26,18 @@ Release notes for Miranj's Craft Boilerplate starter project.
 - Added dynamic entry sources: Updated Recently, Published Recently, Created Recently.
 - Added user permissions groups for Editors, Site Configuration, System Administration, and User Managers.
 - Added a primary site.
+
+### Craft
+
 - Added SMTP email config.
 - Added scaffolding for including custom Control Panel CSS.
-- Improved robustness of Live Preview CORS headers for control panel URLs using standard ports.
 - Added `limitBlocksByType()` macro to `_helpers/matrix`.
 - Added `_cp/paths/assets` template for generically generating asset upload paths.
 - Updated Craft to 5.5.
+
+### DevOps
+
+- Improved robustness of Live Preview CORS headers for control panel URLs using standard ports.
 
 ### System
 
