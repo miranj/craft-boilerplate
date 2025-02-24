@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6411b3ec2c7ff43074ff19ec9477359c",
+    "content-hash": "87b2fde7d5e1c13c7ba5b9e453c5055e",
     "packages": [
         {
             "name": "aws/aws-crt-php",
@@ -3475,16 +3475,16 @@
         },
         {
             "name": "mmikkel/cp-field-inspect",
-            "version": "2.0.2",
+            "version": "2.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mmikkel/CpFieldInspect-Craft.git",
-                "reference": "413884283874038ce53d59ded040d0d1e4e9de49"
+                "reference": "ac990c3c3102880649136ddc543781b36b296833"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mmikkel/CpFieldInspect-Craft/zipball/413884283874038ce53d59ded040d0d1e4e9de49",
-                "reference": "413884283874038ce53d59ded040d0d1e4e9de49",
+                "url": "https://api.github.com/repos/mmikkel/CpFieldInspect-Craft/zipball/ac990c3c3102880649136ddc543781b36b296833",
+                "reference": "ac990c3c3102880649136ddc543781b36b296833",
                 "shasum": ""
             },
             "require": {
@@ -3527,9 +3527,9 @@
             "support": {
                 "docs": "https://github.com/mmikkel/CpFieldInspect-Craft/blob/master/README.md",
                 "issues": "https://github.com/mmikkel/CpFieldInspect-Craft/issues",
-                "source": "https://github.com/mmikkel/CpFieldInspect-Craft/tree/2.0.2"
+                "source": "https://github.com/mmikkel/CpFieldInspect-Craft/tree/2.0.4"
             },
-            "time": "2024-08-05T07:41:21+00:00"
+            "time": "2025-01-26T11:01:13+00:00"
         },
         {
             "name": "mmikkel/retcon",
@@ -5886,16 +5886,16 @@
         },
         {
             "name": "spacecatninja/imager-x",
-            "version": "5.1.0",
+            "version": "5.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spacecatninja/craft-imager-x.git",
-                "reference": "d50366407e61e9f392d9f34a7867491fa956ce8e"
+                "reference": "9f5b4ec51bf1c51779aae46a00a392b9ce6bc00a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spacecatninja/craft-imager-x/zipball/d50366407e61e9f392d9f34a7867491fa956ce8e",
-                "reference": "d50366407e61e9f392d9f34a7867491fa956ce8e",
+                "url": "https://api.github.com/repos/spacecatninja/craft-imager-x/zipball/9f5b4ec51bf1c51779aae46a00a392b9ce6bc00a",
+                "reference": "9f5b4ec51bf1c51779aae46a00a392b9ce6bc00a",
                 "shasum": ""
             },
             "require": {
@@ -5952,9 +5952,9 @@
             "support": {
                 "docs": "http://imager-x.spacecat.ninja/",
                 "issues": "https://github.com/spacecatninja/craft-imager-x/issues",
-                "source": "https://github.com/spacecatninja/craft-imager-x/tree/5.1.0"
+                "source": "https://github.com/spacecatninja/craft-imager-x/tree/5.1.1"
             },
-            "time": "2024-12-01T17:17:42+00:00"
+            "time": "2025-01-07T15:23:42+00:00"
         },
         {
             "name": "spatie/schema-org",
@@ -9268,16 +9268,16 @@
         },
         {
             "name": "verbb/image-resizer",
-            "version": "4.0.1",
+            "version": "4.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/verbb/image-resizer.git",
-                "reference": "03fc5c84e4847bf2429a59276b3311fce6b9a413"
+                "reference": "3f131b9da1a5550e6d9cfe66ce626ffde3504264"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/verbb/image-resizer/zipball/03fc5c84e4847bf2429a59276b3311fce6b9a413",
-                "reference": "03fc5c84e4847bf2429a59276b3311fce6b9a413",
+                "url": "https://api.github.com/repos/verbb/image-resizer/zipball/3f131b9da1a5550e6d9cfe66ce626ffde3504264",
+                "reference": "3f131b9da1a5550e6d9cfe66ce626ffde3504264",
                 "shasum": ""
             },
             "require": {
@@ -9331,7 +9331,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-08-11T00:40:35+00:00"
+            "time": "2025-02-05T03:38:09+00:00"
         },
         {
             "name": "vlucas/phpdotenv",

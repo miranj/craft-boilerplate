@@ -37,7 +37,7 @@
     "mmikkel/retcon": "^3.1",
     "nystudio107/craft-minify": "^5.0",
     "nystudio107/craft-typogrify": "^5.0",
-    "spacecatninja/imager-x": "^5.0",
+    "spacecatninja/imager-x": "5.1.1",
     "tailwindlabs/heroicons": "^2.1",
     "topshelfcraft/environment-label": "^5.0",
     "ttempleton/craft-nocache": "^3.0",

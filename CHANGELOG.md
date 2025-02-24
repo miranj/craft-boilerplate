@@ -4,6 +4,12 @@ Release notes for Miranj's Craft Boilerplate starter project.
 
 ## Unreleased - 3.4.0
 
+### Craft
+
+- Updated CP Field Inspect to 2.0.4
+- Updated Image Resizer to 4.0.2
+- Updated Imager X to 5.1.1
+
 ## 3.3.0 - 2025-02-24
 
 ### Front-end
