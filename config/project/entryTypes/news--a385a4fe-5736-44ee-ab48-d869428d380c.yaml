@@ -2,7 +2,7 @@ color: null
 fieldLayouts:
   92cedb0f-57b8-4c55-9218-d9745e6582eb:
     cardView:
-      - dateUpdated
+      - postDate
       - 'layoutElement:edbf1b70-48b9-4f1a-84f5-b1c38c704707'
       - 'layoutElement:94a7e9a4-baf6-492c-9514-f9aa47f40454'
     tabs:
