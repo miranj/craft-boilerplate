@@ -8,7 +8,8 @@ Release notes for Miranj's Craft Boilerplate starter project.
 
 - Added _News_ section.
 - Added _News_ entry type.
-- Added _Media Embed_ field.
+- Added _News Types_ category.
+- Added _Media Embed_ and _News Type_ fields.
 - Added _Media Embed_ block type to the _Body_ field.
 
 ### Craft
