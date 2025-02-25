@@ -55,10 +55,10 @@ fieldLayouts:
             dateAdded: '2025-02-25T04:17:41+00:00'
             elementCondition: null
             fieldUid: 69339afc-d4f1-440b-a7ad-7da2ccb77972 # Image
-            handle: null
+            handle: photo
             includeInCards: false
             instructions: null
-            label: null
+            label: Photo
             providesThumbs: false
             required: false
             tip: null
