@@ -19,6 +19,14 @@ settings:
       __assoc__:
         -
           - uid
+          - 69391708-3840-4afb-8ba3-65f2bdba9bbb # Contact: Phone Number
+        -
+          - name
+          - 'Phone Number'
+    -
+      __assoc__:
+        -
+          - uid
           - 7bc0d428-9e00-47b5-b928-67896f29ae17 # Contact: Website
         -
           - name
