@@ -68,13 +68,35 @@ fieldLayouts:
             warning: null
             width: 50
           -
+            dateAdded: '2025-02-25T07:46:41+00:00'
+            elementCondition: null
+            fieldUid: 856911a9-89f9-4865-bdb1-5665460c6c23 # Contact Information
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: bc7fb77c-d866-42b6-a1fb-401c268161e3
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 01879fa8-d73c-4913-99f6-d017a48bce36
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
             dateAdded: '2025-02-25T04:19:35+00:00'
             elementCondition: null
             fieldUid: 08b5b22b-fb98-46ef-8a90-e392edb2244f # Rich Text
             handle: bio
             includeInCards: false
             instructions: null
-            label: Bio
+            label: __blank__
             providesThumbs: false
             required: false
             tip: null
@@ -83,8 +105,8 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-        name: Content
-        uid: 01879fa8-d73c-4913-99f6-d017a48bce36
+        name: Bio
+        uid: 893d3dda-6c52-4911-a2c4-b0c329e670ff
         userCondition: null
 handle: person
 hasTitleField: true
