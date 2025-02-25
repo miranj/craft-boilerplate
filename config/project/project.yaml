@@ -1,4 +1,4 @@
-dateModified: 1740477700
+dateModified: 1740480674
 elementSources:
   craft\elements\Entry:
     -
@@ -299,6 +299,7 @@ meta:
     8dddc601-5e96-40bb-b036-520072ba4aa7: Images # Images
     8f58365f-4eeb-4347-9d3d-5c0d3ffd3989: 'Toggle (Default: off)' # Toggle (Default: off)
     8f896808-aacf-4f83-9a35-cd7076a6707b: Type # Type
+    15ad504a-20b4-4e89-b94c-e7be7f135774: 'People Index' # People Index
     52ed9e0d-6fb7-457a-b237-fa5bab3271f6: 'Social Media' # Social Media
     56b9dc41-a930-42d9-ba33-9925b4fe9954: 'System Administration' # System Administration
     64ee8bca-fd54-4c78-853c-aaf37e0bb8c0: Gallery # Gallery
