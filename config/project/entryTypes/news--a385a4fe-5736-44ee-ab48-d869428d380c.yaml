@@ -3,6 +3,8 @@ fieldLayouts:
   92cedb0f-57b8-4c55-9218-d9745e6582eb:
     cardView:
       - dateUpdated
+      - 'layoutElement:edbf1b70-48b9-4f1a-84f5-b1c38c704707'
+      - 'layoutElement:94a7e9a4-baf6-492c-9514-f9aa47f40454'
     tabs:
       -
         elementCondition: null
@@ -58,7 +60,7 @@ fieldLayouts:
             elementCondition: null
             fieldUid: 69339afc-d4f1-440b-a7ad-7da2ccb77972 # Image
             handle: null
-            includeInCards: false
+            includeInCards: true
             instructions: null
             label: 'Cover Image'
             providesThumbs: false
@@ -112,7 +114,7 @@ fieldLayouts:
             elementCondition: null
             fieldUid: 5b72b712-0218-40c6-9717-0c395a914ad8 # Summary
             handle: null
-            includeInCards: false
+            includeInCards: true
             instructions: null
             label: null
             providesThumbs: false
