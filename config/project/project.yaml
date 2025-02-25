@@ -1,4 +1,4 @@
-dateModified: 1740451868
+dateModified: 1740452701
 elementSources:
   craft\elements\Entry:
     -
@@ -274,6 +274,7 @@ fs:
 meta:
   __names__:
     0bc8375c-5e05-4156-a6c9-5678af911123: 'News Types' # News Types
+    0dcf57f2-a803-4b2e-8235-bc0870989f38: 'Media Embed' # Media Embed
     1afae8bb-74c6-43e3-8b44-3e8cac38e2e8: 'Blog Index' # Blog Index
     5a1e3562-bcf8-4492-afd5-f8c9cabda572: 'Call to Action' # Call to Action
     5b72b712-0218-40c6-9717-0c395a914ad8: Summary # Summary
@@ -322,6 +323,7 @@ meta:
     e5d70b3c-403b-416d-b670-a93437ce427b: 'User Managers' # User Managers
     e421ceea-a2f2-459f-88b9-2695f86047bd: Images # Images
     e5323eec-2cf3-40d3-b122-7df6192a5bdf: 'Form Submissions' # Form Submissions
+    fad3fe56-0b6b-46c4-a97b-b7fb98847f3c: 'Media Embed' # Media Embed
     fd23984e-764a-4004-9834-8efe25601ba5: Simple # Simple
 plugins:
   child-me:
