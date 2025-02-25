@@ -4,8 +4,17 @@ Release notes for Miranj's Craft Boilerplate starter project.
 
 ## Unreleased - 3.4.0
 
+### Data Model
+
+- Added _News_ section.
+- Added _News_ entry type.
+- Added _News Types_ category.
+- Added _Media Embed_ and _News Type_ fields.
+- Added _Media Embed_ block type to the _Body_ field.
+
 ### Craft
 
+- Installed oEmbed 3.1.3.
 - Updated Craft CMS to 5.6.9.1.
 - Updated CKEditor to 4.6.0.
 - Updated CP Field Inspect to 2.0.4.

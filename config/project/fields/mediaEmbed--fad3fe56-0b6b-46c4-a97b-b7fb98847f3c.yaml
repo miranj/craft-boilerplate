@@ -1,0 +1,10 @@
+columnSuffix: null
+handle: mediaEmbed
+instructions: 'Embed supported external content such as videos, podcasts or social media posts. Eg: YouTube, Spotify, Bluesky.'
+name: 'Media Embed'
+searchable: true
+settings:
+  url: ''
+translationKeyFormat: null
+translationMethod: none
+type: wrav\oembed\fields\OembedField

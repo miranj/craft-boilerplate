@@ -37,6 +37,7 @@ This starter project includes:
   - [Minify](https://github.com/nystudio107/craft-minify)
   - [No-Cache](https://github.com/ttempleton/craft-nocache)
   - [Obfuscator](https://github.com/miranj/craft-obfuscator)
+  - [oEmbed](https://github.com/wrav/oembed)
   - [Retcon](https://github.com/mmikkel/Retcon-Craft)
   - [SEOMate](https://github.com/vaersaagod/seomate)
   - [Twig Perversion](https://github.com/marionnewlevant/craft-twig_perversion)
