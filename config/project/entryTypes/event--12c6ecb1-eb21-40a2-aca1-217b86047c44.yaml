@@ -36,6 +36,22 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: '2025-02-26T02:53:40+00:00'
+            elementCondition: null
+            fieldUid: 9b5f9007-3f61-4857-b978-fdfbc4b29dba # Exhibition Types
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 2cc09c24-ea29-47ac-aa51-21495d792080
+            userCondition: null
+            warning: null
+            width: 50
+          -
             dateAdded: '2025-02-26T02:38:49+00:00'
             elementCondition: null
             fieldUid: 69339afc-d4f1-440b-a7ad-7da2ccb77972 # Image
@@ -48,22 +64,6 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 04ba682b-6348-48de-833f-c03c6dd10b6b
-            userCondition: null
-            warning: null
-            width: 50
-          -
-            dateAdded: '2025-02-26T02:40:53+00:00'
-            elementCondition: null
-            fieldUid: afc7f0bc-1b97-4841-a1d2-5b0385a7ca35 # Plain Text
-            handle: location
-            includeInCards: false
-            instructions: null
-            label: Location
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: c4c78f42-c653-4f93-8661-742ba26442c5
             userCondition: null
             warning: null
             width: 50
@@ -100,6 +100,22 @@ fieldLayouts:
             warning: null
             width: 50
           -
+            dateAdded: '2025-02-26T02:40:53+00:00'
+            elementCondition: null
+            fieldUid: afc7f0bc-1b97-4841-a1d2-5b0385a7ca35 # Plain Text
+            handle: location
+            includeInCards: false
+            instructions: null
+            label: Location
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c4c78f42-c653-4f93-8661-742ba26442c5
+            userCondition: null
+            warning: null
+            width: 50
+          -
             dateAdded: '2025-02-26T02:38:49+00:00'
             elementCondition: null
             fieldUid: d356acc9-4ecf-488d-a89d-2857490bb576 # Hyperlink
@@ -114,7 +130,7 @@ fieldLayouts:
             uid: 56b8470c-c2ba-4889-8430-cae12cc6e7ef
             userCondition: null
             warning: null
-            width: 100
+            width: 50
           -
             dateAdded: '2025-02-26T02:38:49+00:00'
             elementCondition: null

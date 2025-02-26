@@ -1,4 +1,4 @@
-dateModified: 1740537691
+dateModified: 1740538571
 elementSources:
   craft\elements\Entry:
     -
@@ -285,10 +285,12 @@ meta:
     6b8b6979-d75e-432e-8798-2fc0d53eb8f8: Pages # Pages
     6caf0d7f-9b74-4ae4-b0dd-458633bd94d1: Image # Image
     7b8b18a2-8e96-4b93-bfaa-34a1d9fa86e1: Rich # Rich
+    8a5099a8-7b2e-4052-b798-5e7d19f38b15: 'Exhibition Types' # Exhibition Types
     08b5b22b-fb98-46ef-8a90-e392edb2244f: 'Rich Text' # Rich Text
     8dddc601-5e96-40bb-b036-520072ba4aa7: Images # Images
     8f58365f-4eeb-4347-9d3d-5c0d3ffd3989: 'Toggle (Default: off)' # Toggle (Default: off)
     8f896808-aacf-4f83-9a35-cd7076a6707b: Type # Type
+    9b5f9007-3f61-4857-b978-fdfbc4b29dba: 'Exhibition Types' # Exhibition Types
     12c6ecb1-eb21-40a2-aca1-217b86047c44: Event # Event
     56b9dc41-a930-42d9-ba33-9925b4fe9954: 'System Administration' # System Administration
     64ee8bca-fd54-4c78-853c-aaf37e0bb8c0: Gallery # Gallery
