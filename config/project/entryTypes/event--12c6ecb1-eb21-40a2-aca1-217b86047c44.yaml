@@ -1,0 +1,51 @@
+color: null
+fieldLayouts:
+  ccb6f9a2-b037-48d3-9dd8-333530aa8e65:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: '2025-02-26T02:29:54+00:00'
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            required: true
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: b8a3d948-a454-4787-a0bb-9680311de7ab
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 75617204-c935-43b7-947d-d05cff433e07
+        userCondition: null
+handle: event
+hasTitleField: true
+icon: calendar-days
+name: Event
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
