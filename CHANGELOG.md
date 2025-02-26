@@ -9,7 +9,7 @@ Release notes for Miranj's Craft Boilerplate starter project.
 - Added _Events_, _People_, _People Index_, _News_, and _News Index_ sections.
 - Added _Event_, _Person_ and _News_ entry type.
 - Added _News Types_ category.
-- Added _Date_, _Social Media_, _Contact Information_, _Media Embed_ and _News Type_ fields.
+- Added _People_, _Date_, _Social Media_, _Contact Information_, _Media Embed_ and _News Type_ fields.
 - Added _Media Embed_ block type to the _Body_ field.
 
 ### Craft
