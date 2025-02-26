@@ -1,8 +1,6 @@
 color: null
 fieldLayouts:
   db50601d-9c20-49e1-8013-55a3def9b1e7:
-    cardView:
-      - 'layoutElement:0b14f3a0-3dae-49be-ad71-7cca5748fc40'
     tabs:
       -
         elementCondition: null
@@ -24,18 +22,18 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            dateAdded: '2025-02-25T02:57:17+00:00'
+            dateAdded: '2025-02-25T10:14:19+00:00'
             elementCondition: null
-            fieldUid: 840acb32-6694-40d0-9384-60a0220c1de0 # Label
+            fieldUid: 386721be-1ee4-4e3b-b22c-7fb3dfded3ff # Simple Text
             handle: caption
-            includeInCards: true
+            includeInCards: false
             instructions: null
             label: Caption
             providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 0b14f3a0-3dae-49be-ad71-7cca5748fc40
+            uid: c98ff9f5-fff7-4aa2-b055-232d4f7dda89
             userCondition: null
             warning: null
             width: 100
