@@ -1,4 +1,4 @@
-dateModified: 1740537157
+dateModified: 1740537691
 elementSources:
   craft\elements\Entry:
     -
@@ -110,6 +110,9 @@ elementSources:
         - link
         - dateUpdated
         - revisionCreator
+      type: native
+    -
+      key: 'section:a976662e-fc19-4f89-ae6b-a5b4db64752b' # Events
       type: native
     -
       defaultSort:
@@ -317,6 +320,7 @@ meta:
     b6ab5147-5d5b-42af-9984-8d4c1b01f63a: 'Static Assets' # Static Assets
     b64f08d1-e4db-4745-bf21-6e03e16ed93b: '404 Page Not Found' # 404 Page Not Found
     b99607d1-2cd8-44ef-add2-731bb39d4397: 'Toggle (Default: on)' # Toggle (Default: on)
+    bb0a4a47-dcbd-41a8-9bbb-82341295f5ff: Date # Date
     bc20ba64-4979-418f-aa28-244626f315ab: 'Home Page' # Home Page
     d356acc9-4ecf-488d-a89d-2857490bb576: Hyperlink # Hyperlink
     d4720a93-54ad-45de-a939-b668ed8660dc: 'Share/SEO Image' # Share/SEO Image
