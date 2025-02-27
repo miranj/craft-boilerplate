@@ -131,8 +131,18 @@ elementSources:
         - desc
       defaultViewMode: ''
       disabled: false
-      key: 'section:be130f04-1c51-420d-818e-6d4f5a5960fa' # Resources
       key: 'section:5280da4e-b8fa-4970-9b39-490dd3a96904' # Publications
+      tableAttributes:
+        - link
+        - postDate
+      type: native
+    -
+      defaultSort:
+        - postDate
+        - desc
+      defaultViewMode: ''
+      disabled: false
+      key: 'section:be130f04-1c51-420d-818e-6d4f5a5960fa' # Resources
       tableAttributes:
         - link
         - postDate
