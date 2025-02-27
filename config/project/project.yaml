@@ -1,4 +1,4 @@
-dateModified: 1740538871
+dateModified: 1740628808
 elementSources:
   craft\elements\Entry:
     -
@@ -120,7 +120,7 @@ elementSources:
       key: 'section:94e56347-cb09-47d3-a930-1fd9bc2cb026' # News
       tableAttributes:
         - link
-        - 'field:8f896808-aacf-4f83-9a35-cd7076a6707b' # Type
+        - 'field:8f896808-aacf-4f83-9a35-cd7076a6707b' # News Type
         - postDate
         - dateUpdated
         - revisionCreator
@@ -285,7 +285,7 @@ meta:
     08b5b22b-fb98-46ef-8a90-e392edb2244f: 'Rich Text' # Rich Text
     8dddc601-5e96-40bb-b036-520072ba4aa7: Images # Images
     8f58365f-4eeb-4347-9d3d-5c0d3ffd3989: 'Toggle (Default: off)' # Toggle (Default: off)
-    8f896808-aacf-4f83-9a35-cd7076a6707b: Type # Type
+    8f896808-aacf-4f83-9a35-cd7076a6707b: 'News Type' # News Type
     56b9dc41-a930-42d9-ba33-9925b4fe9954: 'System Administration' # System Administration
     64ee8bca-fd54-4c78-853c-aaf37e0bb8c0: Gallery # Gallery
     89c58a76-1da8-4581-84f1-caf2222de75a: Documents # Documents
