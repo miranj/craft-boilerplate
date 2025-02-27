@@ -1,0 +1,47 @@
+columnSuffix: null
+handle: documents
+instructions: null
+name: Documents
+searchable: true
+settings:
+  allowSelfRelations: false
+  allowSubfolders: false
+  allowUploads: true
+  allowedKinds:
+    - audio
+    - captionsSubtitles
+    - compressed
+    - excel
+    - image
+    - json
+    - pdf
+    - powerpoint
+    - text
+    - video
+    - word
+  branchLimit: null
+  defaultUploadLocationSource: 'volume:89c58a76-1da8-4581-84f1-caf2222de75a' # Documents
+  defaultUploadLocationSubpath: '{% include ''_cp/paths/asset'' %}'
+  maintainHierarchy: false
+  maxRelations: null
+  minRelations: null
+  previewMode: full
+  restrictFiles: true
+  restrictLocation: false
+  restrictedDefaultUploadSubpath: null
+  restrictedLocationSource: 'volume:e421ceea-a2f2-459f-88b9-2695f86047bd' # Images
+  restrictedLocationSubpath: null
+  selectionLabel: null
+  showCardsInGrid: false
+  showSiteMenu: false
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+  sources:
+    - 'volume:e421ceea-a2f2-459f-88b9-2695f86047bd' # Images
+    - 'volume:89c58a76-1da8-4581-84f1-caf2222de75a' # Documents
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: list
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Assets
