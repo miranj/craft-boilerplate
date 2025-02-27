@@ -36,6 +36,22 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: '2025-02-27T11:06:02+00:00'
+            elementCondition: null
+            fieldUid: 69339afc-d4f1-440b-a7ad-7da2ccb77972 # Image
+            handle: cover
+            includeInCards: false
+            instructions: null
+            label: 'Cover Image'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c142d799-74ac-41a7-9316-89302e77631d
+            userCondition: null
+            warning: null
+            width: 100
+          -
             dateAdded: '2025-02-27T03:41:20+00:00'
             elementCondition: null
             fieldUid: be827b12-3e63-4d2a-b17a-5c60ab99f248 # Publication Type
@@ -64,6 +80,22 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 46d6d211-9765-4a6e-99d9-a2007c402384
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-02-27T11:06:02+00:00'
+            elementCondition: null
+            fieldUid: 840acb32-6694-40d0-9384-60a0220c1de0 # Label
+            handle: publisher
+            includeInCards: false
+            instructions: null
+            label: Publisher
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 6ba3cee4-259a-456a-b0da-eebf6a2796b6
             userCondition: null
             warning: null
             width: 100
