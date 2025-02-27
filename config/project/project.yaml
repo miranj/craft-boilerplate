@@ -1,4 +1,4 @@
-dateModified: 1740641666
+dateModified: 1740641900
 elementSources:
   craft\elements\Entry:
     -
@@ -331,6 +331,7 @@ meta:
     69339afc-d4f1-440b-a7ad-7da2ccb77972: Image # Image
     386721be-1ee4-4e3b-b22c-7fb3dfded3ff: 'Simple Text' # Simple Text
     8341919b-4097-4c45-8f3b-97ff673d9ab5: $CRAFT_SITE_NAME # $CRAFT_SITE_NAME
+    18803174-20d5-4b61-a067-3072b484f857: 'Resources Index' # Resources Index
     25388890-1b39-49c8-8d89-7ef2d82f89a1: Newsletter # Newsletter
     a53f5b40-fb8c-4a9d-8c25-dc8e3dfe58d6: Code # Code
     a385a4fe-5736-44ee-ab48-d869428d380c: News # News
