@@ -54,7 +54,7 @@ fieldLayouts:
           -
             dateAdded: '2025-02-27T03:39:06+00:00'
             elementCondition: null
-            fieldUid: 1a28c01c-3fa0-4a60-8c73-d7c7707be626 # Documents
+            fieldUid: 1a28c01c-3fa0-4a60-8c73-d7c7707be626 # Document
             handle: null
             includeInCards: false
             instructions: null
