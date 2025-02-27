@@ -74,7 +74,7 @@ fieldLayouts:
             handle: null
             includeInCards: false
             instructions: null
-            label: null
+            label: Abstract
             providesThumbs: false
             required: false
             tip: null
