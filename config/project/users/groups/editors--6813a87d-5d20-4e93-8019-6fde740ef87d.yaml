@@ -4,6 +4,7 @@ name: Editors
 permissions:
   - accesscp
   - accesssitewhensystemisoff
+  - 'createentries:5280da4e-b8fa-4970-9b39-490dd3a96904' # Publications
   - 'createentries:653ea464-6b43-4bc9-8138-79615323d877' # Blog
   - 'createentries:6b8b6979-d75e-432e-8798-2fc0d53eb8f8' # Pages
   - 'createentries:94e56347-cb09-47d3-a930-1fd9bc2cb026' # News
@@ -12,17 +13,22 @@ permissions:
   - 'deleteassets:89c58a76-1da8-4581-84f1-caf2222de75a' # Documents
   - 'deleteassets:e421ceea-a2f2-459f-88b9-2695f86047bd' # Images
   - 'deletecategories:0bc8375c-5e05-4156-a6c9-5678af911123' # News Types
+  - 'deletecategories:a907570e-41b8-4e87-b566-c2abe353e2a6' # Publication Types
+  - 'deleteentries:5280da4e-b8fa-4970-9b39-490dd3a96904' # Publications
   - 'deleteentries:653ea464-6b43-4bc9-8138-79615323d877' # Blog
   - 'deleteentries:6b8b6979-d75e-432e-8798-2fc0d53eb8f8' # Pages
   - 'deleteentries:94e56347-cb09-47d3-a930-1fd9bc2cb026' # News
   - 'deletepeerassets:89c58a76-1da8-4581-84f1-caf2222de75a' # Documents
   - 'deletepeerassets:e421ceea-a2f2-459f-88b9-2695f86047bd' # Images
   - 'deletepeercategorydrafts:0bc8375c-5e05-4156-a6c9-5678af911123' # News Types
+  - 'deletepeercategorydrafts:a907570e-41b8-4e87-b566-c2abe353e2a6' # Publication Types
+  - 'deletepeerentries:5280da4e-b8fa-4970-9b39-490dd3a96904' # Publications
   - 'deletepeerentries:653ea464-6b43-4bc9-8138-79615323d877' # Blog
   - 'deletepeerentries:6b8b6979-d75e-432e-8798-2fc0d53eb8f8' # Pages
   - 'deletepeerentries:94e56347-cb09-47d3-a930-1fd9bc2cb026' # News
   - 'deletepeerentrydrafts:1afae8bb-74c6-43e3-8b44-3e8cac38e2e8' # Blog Index
   - 'deletepeerentrydrafts:317eb1dc-2ab0-4290-a1d3-573e6ead4388' # News Index
+  - 'deletepeerentrydrafts:5280da4e-b8fa-4970-9b39-490dd3a96904' # Publications
   - 'deletepeerentrydrafts:653ea464-6b43-4bc9-8138-79615323d877' # Blog
   - 'deletepeerentrydrafts:6b8b6979-d75e-432e-8798-2fc0d53eb8f8' # Pages
   - 'deletepeerentrydrafts:94e56347-cb09-47d3-a930-1fd9bc2cb026' # News
@@ -38,8 +44,10 @@ permissions:
   - 'saveassets:89c58a76-1da8-4581-84f1-caf2222de75a' # Documents
   - 'saveassets:e421ceea-a2f2-459f-88b9-2695f86047bd' # Images
   - 'savecategories:0bc8375c-5e05-4156-a6c9-5678af911123' # News Types
+  - 'savecategories:a907570e-41b8-4e87-b566-c2abe353e2a6' # Publication Types
   - 'saveentries:1afae8bb-74c6-43e3-8b44-3e8cac38e2e8' # Blog Index
   - 'saveentries:317eb1dc-2ab0-4290-a1d3-573e6ead4388' # News Index
+  - 'saveentries:5280da4e-b8fa-4970-9b39-490dd3a96904' # Publications
   - 'saveentries:653ea464-6b43-4bc9-8138-79615323d877' # Blog
   - 'saveentries:6b8b6979-d75e-432e-8798-2fc0d53eb8f8' # Pages
   - 'saveentries:94e56347-cb09-47d3-a930-1fd9bc2cb026' # News
@@ -47,11 +55,14 @@ permissions:
   - 'savepeerassets:89c58a76-1da8-4581-84f1-caf2222de75a' # Documents
   - 'savepeerassets:e421ceea-a2f2-459f-88b9-2695f86047bd' # Images
   - 'savepeercategorydrafts:0bc8375c-5e05-4156-a6c9-5678af911123' # News Types
+  - 'savepeercategorydrafts:a907570e-41b8-4e87-b566-c2abe353e2a6' # Publication Types
+  - 'savepeerentries:5280da4e-b8fa-4970-9b39-490dd3a96904' # Publications
   - 'savepeerentries:653ea464-6b43-4bc9-8138-79615323d877' # Blog
   - 'savepeerentries:6b8b6979-d75e-432e-8798-2fc0d53eb8f8' # Pages
   - 'savepeerentries:94e56347-cb09-47d3-a930-1fd9bc2cb026' # News
   - 'savepeerentrydrafts:1afae8bb-74c6-43e3-8b44-3e8cac38e2e8' # Blog Index
   - 'savepeerentrydrafts:317eb1dc-2ab0-4290-a1d3-573e6ead4388' # News Index
+  - 'savepeerentrydrafts:5280da4e-b8fa-4970-9b39-490dd3a96904' # Publications
   - 'savepeerentrydrafts:653ea464-6b43-4bc9-8138-79615323d877' # Blog
   - 'savepeerentrydrafts:6b8b6979-d75e-432e-8798-2fc0d53eb8f8' # Pages
   - 'savepeerentrydrafts:94e56347-cb09-47d3-a930-1fd9bc2cb026' # News
@@ -59,8 +70,10 @@ permissions:
   - 'viewassets:89c58a76-1da8-4581-84f1-caf2222de75a' # Documents
   - 'viewassets:e421ceea-a2f2-459f-88b9-2695f86047bd' # Images
   - 'viewcategories:0bc8375c-5e05-4156-a6c9-5678af911123' # News Types
+  - 'viewcategories:a907570e-41b8-4e87-b566-c2abe353e2a6' # Publication Types
   - 'viewentries:1afae8bb-74c6-43e3-8b44-3e8cac38e2e8' # Blog Index
   - 'viewentries:317eb1dc-2ab0-4290-a1d3-573e6ead4388' # News Index
+  - 'viewentries:5280da4e-b8fa-4970-9b39-490dd3a96904' # Publications
   - 'viewentries:653ea464-6b43-4bc9-8138-79615323d877' # Blog
   - 'viewentries:6b8b6979-d75e-432e-8798-2fc0d53eb8f8' # Pages
   - 'viewentries:94e56347-cb09-47d3-a930-1fd9bc2cb026' # News
@@ -68,11 +81,14 @@ permissions:
   - 'viewpeerassets:89c58a76-1da8-4581-84f1-caf2222de75a' # Documents
   - 'viewpeerassets:e421ceea-a2f2-459f-88b9-2695f86047bd' # Images
   - 'viewpeercategorydrafts:0bc8375c-5e05-4156-a6c9-5678af911123' # News Types
+  - 'viewpeercategorydrafts:a907570e-41b8-4e87-b566-c2abe353e2a6' # Publication Types
+  - 'viewpeerentries:5280da4e-b8fa-4970-9b39-490dd3a96904' # Publications
   - 'viewpeerentries:653ea464-6b43-4bc9-8138-79615323d877' # Blog
   - 'viewpeerentries:6b8b6979-d75e-432e-8798-2fc0d53eb8f8' # Pages
   - 'viewpeerentries:94e56347-cb09-47d3-a930-1fd9bc2cb026' # News
   - 'viewpeerentrydrafts:1afae8bb-74c6-43e3-8b44-3e8cac38e2e8' # Blog Index
   - 'viewpeerentrydrafts:317eb1dc-2ab0-4290-a1d3-573e6ead4388' # News Index
+  - 'viewpeerentrydrafts:5280da4e-b8fa-4970-9b39-490dd3a96904' # Publications
   - 'viewpeerentrydrafts:653ea464-6b43-4bc9-8138-79615323d877' # Blog
   - 'viewpeerentrydrafts:6b8b6979-d75e-432e-8798-2fc0d53eb8f8' # Pages
   - 'viewpeerentrydrafts:94e56347-cb09-47d3-a930-1fd9bc2cb026' # News
