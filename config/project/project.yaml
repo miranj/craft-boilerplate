@@ -1,4 +1,4 @@
-dateModified: 1740630833
+dateModified: 1740640497
 elementSources:
   craft\elements\Entry:
     -
@@ -124,6 +124,17 @@ elementSources:
         - postDate
         - dateUpdated
         - revisionCreator
+      type: native
+    -
+      defaultSort:
+        - postDate
+        - desc
+      defaultViewMode: ''
+      disabled: false
+      key: 'section:be130f04-1c51-420d-818e-6d4f5a5960fa' # Resources
+      tableAttributes:
+        - link
+        - postDate
       type: native
     -
       heading: Auto
@@ -276,6 +287,7 @@ meta:
     0bc8375c-5e05-4156-a6c9-5678af911123: 'News Types' # News Types
     0dcf57f2-a803-4b2e-8235-bc0870989f38: 'Media Embed' # Media Embed
     1afae8bb-74c6-43e3-8b44-3e8cac38e2e8: 'Blog Index' # Blog Index
+    1ba3b532-e3ed-43db-93a6-00c05efcc84f: 'Resource Types' # Resource Types
     5a1e3562-bcf8-4492-afd5-f8c9cabda572: 'Call to Action' # Call to Action
     5b72b712-0218-40c6-9717-0c395a914ad8: Summary # Summary
     5d68dab3-70f1-4fbc-833e-e504aa7c926d: 'User Photos' # User Photos
@@ -287,6 +299,7 @@ meta:
     8f58365f-4eeb-4347-9d3d-5c0d3ffd3989: 'Toggle (Default: off)' # Toggle (Default: off)
     8f896808-aacf-4f83-9a35-cd7076a6707b: 'News Type' # News Type
     56b9dc41-a930-42d9-ba33-9925b4fe9954: 'System Administration' # System Administration
+    58e76d43-a465-4c1a-b102-2726a9fc13f5: 'Resources Types' # Resources Types
     64ee8bca-fd54-4c78-853c-aaf37e0bb8c0: Gallery # Gallery
     89c58a76-1da8-4581-84f1-caf2222de75a: Documents # Documents
     90d23e21-4d7c-444f-89c4-e66aeb92c134: 'Site Configuration' # Site Configuration
