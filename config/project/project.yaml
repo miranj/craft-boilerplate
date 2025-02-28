@@ -1,4 +1,4 @@
-dateModified: 1740712012
+dateModified: 1740712013
 elementSources:
   craft\elements\Entry:
     -
@@ -298,7 +298,7 @@ meta:
     08b5b22b-fb98-46ef-8a90-e392edb2244f: 'Rich Text' # Rich Text
     8dddc601-5e96-40bb-b036-520072ba4aa7: Images # Images
     8f58365f-4eeb-4347-9d3d-5c0d3ffd3989: 'Toggle (Default: off)' # Toggle (Default: off)
-    8f896808-aacf-4f83-9a35-cd7076a6707b: Type # Type
+    15ad504a-20b4-4e89-b94c-e7be7f135774: 'People Index' # People Index
     9bd98d08-c228-41bf-99b2-217e9444daee: 'Contact Detail' # Contact Detail
     14f7242a-668c-4d66-a588-17cde4b7e598: 'Social Media' # Social Media
     8f896808-aacf-4f83-9a35-cd7076a6707b: 'News Type' # News Type

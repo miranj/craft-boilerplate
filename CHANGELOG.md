@@ -6,7 +6,7 @@ Release notes for Miranj's Craft Boilerplate starter project.
 
 ### Data Model
 
-- Added _People_, _News_ and _News Index_ sections.
+- Added _People_, _News_, _People Index_ and _News Index_ sections.
 - Added _Person_ and _News_ entry type.
 - Added _News Types_ category.
 - Added _Contact Information_, _Media Embed_ and _News Type_ fields.
