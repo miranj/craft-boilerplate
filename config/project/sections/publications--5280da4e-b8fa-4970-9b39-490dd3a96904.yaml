@@ -1,0 +1,28 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  -
+    uid: 9b8054bc-bad1-4e95-b74b-e722465d36b9 # Publication
+handle: publications
+maxAuthors: 1
+name: Publications
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  8341919b-4097-4c45-8f3b-97ff673d9ab5: # $CRAFT_SITE_NAME
+    enabledByDefault: true
+    hasUrls: true
+    template: _routers/detail.twig
+    uriFormat: 'publications/{slug}'
+type: channel
