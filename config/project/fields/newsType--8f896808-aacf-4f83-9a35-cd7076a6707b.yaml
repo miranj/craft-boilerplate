@@ -1,7 +1,7 @@
 columnSuffix: null
 handle: newsType
 instructions: 'Eg: _Press Release_, _Announcement_.'
-name: Type
+name: 'News Type'
 searchable: true
 settings:
   allowSelfRelations: false

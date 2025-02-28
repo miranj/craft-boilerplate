@@ -1,4 +1,4 @@
-dateModified: 1740712011
+dateModified: 1740712012
 elementSources:
   craft\elements\Entry:
     -
@@ -120,7 +120,7 @@ elementSources:
       key: 'section:94e56347-cb09-47d3-a930-1fd9bc2cb026' # News
       tableAttributes:
         - link
-        - 'field:8f896808-aacf-4f83-9a35-cd7076a6707b' # Type
+        - 'field:8f896808-aacf-4f83-9a35-cd7076a6707b' # News Type
         - postDate
         - dateUpdated
         - revisionCreator
@@ -301,6 +301,7 @@ meta:
     8f896808-aacf-4f83-9a35-cd7076a6707b: Type # Type
     9bd98d08-c228-41bf-99b2-217e9444daee: 'Contact Detail' # Contact Detail
     14f7242a-668c-4d66-a588-17cde4b7e598: 'Social Media' # Social Media
+    8f896808-aacf-4f83-9a35-cd7076a6707b: 'News Type' # News Type
     56b9dc41-a930-42d9-ba33-9925b4fe9954: 'System Administration' # System Administration
     64ee8bca-fd54-4c78-853c-aaf37e0bb8c0: Gallery # Gallery
     65fd1257-02e1-40e1-a8a4-0ad89b4e9510: 'External Link' # External Link
