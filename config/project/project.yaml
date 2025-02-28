@@ -1,4 +1,4 @@
-dateModified: 1740714356
+dateModified: 1740732204
 elementSources:
   craft\elements\Entry:
     -
@@ -127,6 +127,17 @@ elementSources:
       type: native
     -
       defaultSort:
+        - title
+        - asc
+      defaultViewMode: ''
+      disabled: false
+      key: 'section:08b4a047-a20d-4d56-81b0-32b599c4fb41' # People
+      tableAttributes:
+        - link
+        - 'fieldInstance:6b80c15b-e48e-4b66-8f5a-795142b9a77f'
+      type: native
+    -
+      defaultSort:
         - postDate
         - desc
       defaultViewMode: ''
@@ -146,17 +157,6 @@ elementSources:
       tableAttributes:
         - link
         - postDate
-      type: native
-    -
-      defaultSort:
-        - title
-        - asc
-      defaultViewMode: ''
-      disabled: false
-      key: 'section:08b4a047-a20d-4d56-81b0-32b599c4fb41' # People
-      tableAttributes:
-        - link
-        - 'fieldInstance:6b80c15b-e48e-4b66-8f5a-795142b9a77f'
       type: native
     -
       heading: Auto
