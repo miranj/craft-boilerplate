@@ -5,3 +5,11 @@
 */
 
 /*@import 'file';*/
+
+.flex-fields > h2:not(:nth-child(-n + 1 of :not(.hidden))) {
+    border-block-start: 1px solid #cecece;
+    font-size: 1.2rem;
+    color: #9da9b5;
+    padding-block-end: 0.25rem;
+    font-weight: 600;
+}
