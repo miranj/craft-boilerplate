@@ -11,26 +11,12 @@ settings:
       __assoc__:
         -
           - uid
-          - 6998bd71-39fb-446f-bb36-6d6e51be3b7c # Contact: Email
-        -
-          - name
-          - Email
+          - 9bd98d08-c228-41bf-99b2-217e9444daee # Contact Detail
     -
       __assoc__:
         -
           - uid
-          - 69391708-3840-4afb-8ba3-65f2bdba9bbb # Contact: Phone Number
-        -
-          - name
-          - 'Phone Number'
-    -
-      __assoc__:
-        -
-          - uid
-          - 7bc0d428-9e00-47b5-b928-67896f29ae17 # Contact: Website
-        -
-          - name
-          - Website
+          - 14f7242a-668c-4d66-a588-17cde4b7e598 # Social Media
   includeTableView: false
   maxEntries: null
   minEntries: null
