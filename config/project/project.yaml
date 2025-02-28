@@ -157,6 +157,7 @@ elementSources:
       tableAttributes:
         - link
         - 'fieldInstance:6b80c15b-e48e-4b66-8f5a-795142b9a77f'
+      type: native
     -
       heading: Auto
       type: heading
