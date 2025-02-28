@@ -1,0 +1,132 @@
+columnSuffix: null
+handle: socialMediaType
+instructions: null
+name: 'Social Media'
+searchable: false
+settings:
+  customOptions: false
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - Bluesky
+        -
+          - value
+          - bluesky
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Facebook
+        -
+          - value
+          - facebook
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Instagram
+        -
+          - value
+          - instagram
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - LinkedIn
+        -
+          - value
+          - linkedin
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Mastodon
+        -
+          - value
+          - mastodon
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Substack
+        -
+          - value
+          - substack
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - TikTok
+        -
+          - value
+          - tiktok
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - WhatsApp
+        -
+          - value
+          - whatsapp
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - X
+        -
+          - value
+          - xTwitter
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - YouTube
+        -
+          - value
+          - youtube
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Other
+        -
+          - value
+          - other
+        -
+          - default
+          - ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Dropdown

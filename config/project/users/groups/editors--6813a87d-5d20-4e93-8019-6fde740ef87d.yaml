@@ -5,6 +5,7 @@ permissions:
   - accesscp
   - accesssitewhensystemisoff
   - 'createentries:5280da4e-b8fa-4970-9b39-490dd3a96904' # Publications
+  - 'createentries:08b4a047-a20d-4d56-81b0-32b599c4fb41' # People
   - 'createentries:653ea464-6b43-4bc9-8138-79615323d877' # Blog
   - 'createentries:6b8b6979-d75e-432e-8798-2fc0d53eb8f8' # Pages
   - 'createentries:94e56347-cb09-47d3-a930-1fd9bc2cb026' # News
@@ -15,6 +16,7 @@ permissions:
   - 'deletecategories:0bc8375c-5e05-4156-a6c9-5678af911123' # News Types
   - 'deletecategories:a907570e-41b8-4e87-b566-c2abe353e2a6' # Publication Types
   - 'deleteentries:5280da4e-b8fa-4970-9b39-490dd3a96904' # Publications
+  - 'deleteentries:08b4a047-a20d-4d56-81b0-32b599c4fb41' # People
   - 'deleteentries:653ea464-6b43-4bc9-8138-79615323d877' # Blog
   - 'deleteentries:6b8b6979-d75e-432e-8798-2fc0d53eb8f8' # Pages
   - 'deleteentries:94e56347-cb09-47d3-a930-1fd9bc2cb026' # News
@@ -23,9 +25,11 @@ permissions:
   - 'deletepeercategorydrafts:0bc8375c-5e05-4156-a6c9-5678af911123' # News Types
   - 'deletepeercategorydrafts:a907570e-41b8-4e87-b566-c2abe353e2a6' # Publication Types
   - 'deletepeerentries:5280da4e-b8fa-4970-9b39-490dd3a96904' # Publications
+  - 'deletepeerentries:08b4a047-a20d-4d56-81b0-32b599c4fb41' # People
   - 'deletepeerentries:653ea464-6b43-4bc9-8138-79615323d877' # Blog
   - 'deletepeerentries:6b8b6979-d75e-432e-8798-2fc0d53eb8f8' # Pages
   - 'deletepeerentries:94e56347-cb09-47d3-a930-1fd9bc2cb026' # News
+  - 'deletepeerentrydrafts:08b4a047-a20d-4d56-81b0-32b599c4fb41' # People
   - 'deletepeerentrydrafts:1afae8bb-74c6-43e3-8b44-3e8cac38e2e8' # Blog Index
   - 'deletepeerentrydrafts:317eb1dc-2ab0-4290-a1d3-573e6ead4388' # News Index
   - 'deletepeerentrydrafts:5280da4e-b8fa-4970-9b39-490dd3a96904' # Publications
@@ -46,6 +50,7 @@ permissions:
   - 'saveassets:e421ceea-a2f2-459f-88b9-2695f86047bd' # Images
   - 'savecategories:0bc8375c-5e05-4156-a6c9-5678af911123' # News Types
   - 'savecategories:a907570e-41b8-4e87-b566-c2abe353e2a6' # Publication Types
+  - 'saveentries:08b4a047-a20d-4d56-81b0-32b599c4fb41' # People
   - 'saveentries:1afae8bb-74c6-43e3-8b44-3e8cac38e2e8' # Blog Index
   - 'saveentries:317eb1dc-2ab0-4290-a1d3-573e6ead4388' # News Index
   - 'saveentries:5280da4e-b8fa-4970-9b39-490dd3a96904' # Publications
@@ -59,9 +64,11 @@ permissions:
   - 'savepeercategorydrafts:0bc8375c-5e05-4156-a6c9-5678af911123' # News Types
   - 'savepeercategorydrafts:a907570e-41b8-4e87-b566-c2abe353e2a6' # Publication Types
   - 'savepeerentries:5280da4e-b8fa-4970-9b39-490dd3a96904' # Publications
+  - 'savepeerentries:08b4a047-a20d-4d56-81b0-32b599c4fb41' # People
   - 'savepeerentries:653ea464-6b43-4bc9-8138-79615323d877' # Blog
   - 'savepeerentries:6b8b6979-d75e-432e-8798-2fc0d53eb8f8' # Pages
   - 'savepeerentries:94e56347-cb09-47d3-a930-1fd9bc2cb026' # News
+  - 'savepeerentrydrafts:08b4a047-a20d-4d56-81b0-32b599c4fb41' # People
   - 'savepeerentrydrafts:1afae8bb-74c6-43e3-8b44-3e8cac38e2e8' # Blog Index
   - 'savepeerentrydrafts:317eb1dc-2ab0-4290-a1d3-573e6ead4388' # News Index
   - 'savepeerentrydrafts:5280da4e-b8fa-4970-9b39-490dd3a96904' # Publications
@@ -74,6 +81,7 @@ permissions:
   - 'viewassets:e421ceea-a2f2-459f-88b9-2695f86047bd' # Images
   - 'viewcategories:0bc8375c-5e05-4156-a6c9-5678af911123' # News Types
   - 'viewcategories:a907570e-41b8-4e87-b566-c2abe353e2a6' # Publication Types
+  - 'viewentries:08b4a047-a20d-4d56-81b0-32b599c4fb41' # People
   - 'viewentries:1afae8bb-74c6-43e3-8b44-3e8cac38e2e8' # Blog Index
   - 'viewentries:317eb1dc-2ab0-4290-a1d3-573e6ead4388' # News Index
   - 'viewentries:5280da4e-b8fa-4970-9b39-490dd3a96904' # Publications
@@ -87,9 +95,11 @@ permissions:
   - 'viewpeercategorydrafts:0bc8375c-5e05-4156-a6c9-5678af911123' # News Types
   - 'viewpeercategorydrafts:a907570e-41b8-4e87-b566-c2abe353e2a6' # Publication Types
   - 'viewpeerentries:5280da4e-b8fa-4970-9b39-490dd3a96904' # Publications
+  - 'viewpeerentries:08b4a047-a20d-4d56-81b0-32b599c4fb41' # People
   - 'viewpeerentries:653ea464-6b43-4bc9-8138-79615323d877' # Blog
   - 'viewpeerentries:6b8b6979-d75e-432e-8798-2fc0d53eb8f8' # Pages
   - 'viewpeerentries:94e56347-cb09-47d3-a930-1fd9bc2cb026' # News
+  - 'viewpeerentrydrafts:08b4a047-a20d-4d56-81b0-32b599c4fb41' # People
   - 'viewpeerentrydrafts:1afae8bb-74c6-43e3-8b44-3e8cac38e2e8' # Blog Index
   - 'viewpeerentrydrafts:317eb1dc-2ab0-4290-a1d3-573e6ead4388' # News Index
   - 'viewpeerentrydrafts:5280da4e-b8fa-4970-9b39-490dd3a96904' # Publications
