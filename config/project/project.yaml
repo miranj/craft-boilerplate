@@ -1,4 +1,4 @@
-dateModified: 1740714354
+dateModified: 1740714355
 elementSources:
   craft\elements\Entry:
     -
@@ -358,6 +358,7 @@ meta:
     b99607d1-2cd8-44ef-add2-731bb39d4397: 'Toggle (Default: on)' # Toggle (Default: on)
     bc20ba64-4979-418f-aa28-244626f315ab: 'Home Page' # Home Page
     be827b12-3e63-4d2a-b17a-5c60ab99f248: 'Publication Type' # Publication Type
+    c5712456-e12b-4cbc-a8cc-b570cf00d66e: 'Publications Index' # Publications Index
     d356acc9-4ecf-488d-a89d-2857490bb576: Hyperlink # Hyperlink
     d4720a93-54ad-45de-a939-b668ed8660dc: 'Share/SEO Image' # Share/SEO Image
     da24c053-b31c-4fa8-b113-217845a4ce83: 'Share/SEO Title' # Share/SEO Title
