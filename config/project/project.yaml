@@ -1,4 +1,4 @@
-dateModified: 1740713747
+dateModified: 1740714354
 elementSources:
   craft\elements\Entry:
     -
@@ -318,6 +318,7 @@ meta:
     9bd98d08-c228-41bf-99b2-217e9444daee: 'Contact Detail' # Contact Detail
     14f7242a-668c-4d66-a588-17cde4b7e598: 'Social Media' # Social Media
     15ad504a-20b4-4e89-b94c-e7be7f135774: 'People Index' # People Index
+    32ed2f1a-9024-4ee9-9028-3a5041c0e5e6: Date # Date
     56b9dc41-a930-42d9-ba33-9925b4fe9954: 'System Administration' # System Administration
     64ee8bca-fd54-4c78-853c-aaf37e0bb8c0: Gallery # Gallery
     65fd1257-02e1-40e1-a8a4-0ad89b4e9510: 'External Link' # External Link

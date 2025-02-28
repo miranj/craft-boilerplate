@@ -36,38 +36,6 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            dateAdded: '2025-02-28T03:35:24+00:00'
-            elementCondition: null
-            fieldUid: 7a8f449f-4cfb-49db-8656-d7551c298f4c # Authors
-            handle: documentAuthors
-            includeInCards: false
-            instructions: null
-            label: null
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: c4b46ebb-2831-46b8-8263-cb736b4b0dc3
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            dateAdded: '2025-02-27T03:41:20+00:00'
-            elementCondition: null
-            fieldUid: be827b12-3e63-4d2a-b17a-5c60ab99f248 # Publication Type
-            handle: null
-            includeInCards: false
-            instructions: null
-            label: Type
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 1662d955-b5cb-4dca-846f-7d02d4e76cc6
-            userCondition: null
-            warning: null
-            width: 100
-          -
             dateAdded: '2025-02-27T11:06:02+00:00'
             elementCondition: null
             fieldUid: 69339afc-d4f1-440b-a7ad-7da2ccb77972 # Image
@@ -80,6 +48,45 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: c142d799-74ac-41a7-9316-89302e77631d
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-02-28T03:44:46+00:00'
+            elementCondition: null
+            heading: 'Publication Data'
+            type: craft\fieldlayoutelements\Heading
+            uid: 967f3ade-cee9-48b5-82ee-437ae5fb36bb
+            userCondition: null
+          -
+            dateAdded: '2025-02-28T03:39:25+00:00'
+            elementCondition: null
+            fieldUid: 32ed2f1a-9024-4ee9-9028-3a5041c0e5e6 # Date
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: 'Date Published'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 48d72199-8eb5-4877-8d0c-ec2d73d410a2
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-02-28T03:35:24+00:00'
+            elementCondition: null
+            fieldUid: 7a8f449f-4cfb-49db-8656-d7551c298f4c # Authors
+            handle: documentAuthors
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c4b46ebb-2831-46b8-8263-cb736b4b0dc3
             userCondition: null
             warning: null
             width: 100
@@ -128,6 +135,29 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: b7ed147c-4ef6-4629-8437-5c5a9e1d4f46
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-02-28T03:44:46+00:00'
+            elementCondition: null
+            heading: Related
+            type: craft\fieldlayoutelements\Heading
+            uid: 5bba2c90-3fde-4132-92e1-604e179d7910
+            userCondition: null
+          -
+            dateAdded: '2025-02-27T03:41:20+00:00'
+            elementCondition: null
+            fieldUid: be827b12-3e63-4d2a-b17a-5c60ab99f248 # Publication Type
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: Type
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 1662d955-b5cb-4dca-846f-7d02d4e76cc6
             userCondition: null
             warning: null
             width: 100
