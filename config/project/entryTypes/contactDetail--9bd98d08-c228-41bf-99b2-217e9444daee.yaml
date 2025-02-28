@@ -1,0 +1,37 @@
+color: null
+fieldLayouts:
+  615ff859-cfef-465f-91bb-316a4423afcf:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-02-28T02:59:42+00:00'
+            elementCondition: null
+            fieldUid: 65fd1257-02e1-40e1-a8a4-0ad89b4e9510 # External Link
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: __blank__
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 0cf9c9e3-08f5-4a55-b652-55d97087c320
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: f0013db3-8a14-40de-adcf-9b64abe72001
+        userCondition: null
+handle: contactDetail
+hasTitleField: false
+icon: link
+name: 'Contact Detail'
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
