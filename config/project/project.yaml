@@ -1,4 +1,4 @@
-dateModified: 1740711880
+dateModified: 1740712011
 elementSources:
   craft\elements\Entry:
     -
@@ -127,8 +127,8 @@ elementSources:
       type: native
     -
       defaultSort:
-        - postDate
-        - desc
+        - title
+        - asc
       defaultViewMode: ''
       disabled: false
       key: 'section:08b4a047-a20d-4d56-81b0-32b599c4fb41' # People
