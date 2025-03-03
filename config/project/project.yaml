@@ -1,4 +1,4 @@
-dateModified: 1740999040
+dateModified: 1740999867
 elementSources:
   craft\elements\Entry:
     -
@@ -343,7 +343,7 @@ meta:
     8dddc601-5e96-40bb-b036-520072ba4aa7: Images # Images
     8f58365f-4eeb-4347-9d3d-5c0d3ffd3989: 'Toggle (Default: off)' # Toggle (Default: off)
     8f896808-aacf-4f83-9a35-cd7076a6707b: 'News Type' # News Type
-    9b5f9007-3f61-4857-b978-fdfbc4b29dba: 'Exhibition Types' # Exhibition Types
+    9b5f9007-3f61-4857-b978-fdfbc4b29dba: 'Event Types' # Event Types
     9b8054bc-bad1-4e95-b74b-e722465d36b9: Publication # Publication
     9bd98d08-c228-41bf-99b2-217e9444daee: 'Contact Detail' # Contact Detail
     9c5f24a6-1969-4197-9fce-ff44e5a18b9b: People # People

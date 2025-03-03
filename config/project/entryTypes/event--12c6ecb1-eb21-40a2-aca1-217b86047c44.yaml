@@ -38,7 +38,7 @@ fieldLayouts:
           -
             dateAdded: '2025-02-26T02:53:40+00:00'
             elementCondition: null
-            fieldUid: 9b5f9007-3f61-4857-b978-fdfbc4b29dba # Exhibition Types
+            fieldUid: 9b5f9007-3f61-4857-b978-fdfbc4b29dba # Event Types
             handle: null
             includeInCards: false
             instructions: null

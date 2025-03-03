@@ -1,7 +1,7 @@
 columnSuffix: null
-handle: exhibitionTypes
+handle: eventTypes
 instructions: 'Eg: _Exhibitions_, _Screening_.'
-name: 'Exhibition Types'
+name: 'Event Types'
 searchable: true
 settings:
   allowSelfRelations: false
