@@ -71,7 +71,7 @@ fieldLayouts:
             dateAdded: '2025-02-26T02:38:49+00:00'
             elementCondition: null
             fieldUid: bb0a4a47-dcbd-41a8-9bbb-82341295f5ff # Date & Time
-            handle: startDate
+            handle: startDateTime
             includeInCards: false
             instructions: null
             label: 'Start Date'
@@ -87,7 +87,7 @@ fieldLayouts:
             dateAdded: '2025-02-26T02:38:49+00:00'
             elementCondition: null
             fieldUid: bb0a4a47-dcbd-41a8-9bbb-82341295f5ff # Date & Time
-            handle: endDate
+            handle: endDateTime
             includeInCards: false
             instructions: null
             label: 'End Date'
