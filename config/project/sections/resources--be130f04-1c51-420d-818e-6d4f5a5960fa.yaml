@@ -3,6 +3,8 @@ enableVersioning: true
 entryTypes:
   -
     uid: 992c932b-21e6-4b0b-8017-1289891c1ac4 # Resource: Document
+  -
+    uid: 3aba8130-5dea-47d5-ad23-a536e8b9760a # Resource: Link
 handle: resources
 maxAuthors: 1
 name: Resources
