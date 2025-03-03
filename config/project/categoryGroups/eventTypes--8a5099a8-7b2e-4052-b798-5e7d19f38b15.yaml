@@ -38,8 +38,8 @@ fieldLayouts:
         name: Content
         uid: 74b492a6-4fcb-4a5a-b0c5-ddd9148339e2
         userCondition: null
-handle: exhibitionTypes
-name: 'Exhibition Types'
+handle: eventTypes
+name: 'Event Types'
 siteSettings:
   8341919b-4097-4c45-8f3b-97ff673d9ab5: # $CRAFT_SITE_NAME
     hasUrls: false

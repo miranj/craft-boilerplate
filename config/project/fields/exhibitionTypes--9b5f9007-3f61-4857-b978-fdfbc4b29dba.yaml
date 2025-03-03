@@ -12,7 +12,7 @@ settings:
   selectionLabel: null
   showCardsInGrid: false
   showSiteMenu: true
-  source: 'group:8a5099a8-7b2e-4052-b798-5e7d19f38b15' # Exhibition Types
+  source: 'group:8a5099a8-7b2e-4052-b798-5e7d19f38b15' # Event Types
   targetSiteId: null
   validateRelatedElements: false
   viewMode: list
