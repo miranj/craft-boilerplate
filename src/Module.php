@@ -106,19 +106,13 @@ class Module extends \yii\base\Module
                 // Section:EntryType
                 'events:event',
             ],
-            MatrixBlock::class => [
-                // Field:BlockType
-            ],
         ];
 
         // Set Entry data
         $element = $event->sender;
 
         // Only check elements in the include-list
-        $context =
-            get_class($element) == MatrixBlock::class
-                ? $element->type->field->handle . ':' . $element->type->handle
-                : $element->section->handle . ':' . $element->type->handle;
+        $context = $element->section->handle . ':' . $element->type->handle;
         if (!in_array($context, $validateElementTypes[get_class($element)])) {
             return;
         }
@@ -203,11 +197,6 @@ class Module extends \yii\base\Module
         ]);
 
         Event::on(Entry::class, Entry::EVENT_DEFINE_RULES, [
-            $this,
-            'validateEventEndDateTime',
-        ]);
-
-        Event::on(MatrixBlock::class, MatrixBlock::EVENT_DEFINE_RULES, [
             $this,
             'validateEventEndDateTime',
         ]);
