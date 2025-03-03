@@ -70,7 +70,7 @@ fieldLayouts:
           -
             dateAdded: '2025-02-26T02:38:49+00:00'
             elementCondition: null
-            fieldUid: bb0a4a47-dcbd-41a8-9bbb-82341295f5ff # Date
+            fieldUid: bb0a4a47-dcbd-41a8-9bbb-82341295f5ff # Date & Time
             handle: startDate
             includeInCards: false
             instructions: null
@@ -86,7 +86,7 @@ fieldLayouts:
           -
             dateAdded: '2025-02-26T02:38:49+00:00'
             elementCondition: null
-            fieldUid: bb0a4a47-dcbd-41a8-9bbb-82341295f5ff # Date
+            fieldUid: bb0a4a47-dcbd-41a8-9bbb-82341295f5ff # Date & Time
             handle: endDate
             includeInCards: false
             instructions: null

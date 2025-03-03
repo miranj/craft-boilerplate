@@ -1,4 +1,4 @@
-dateModified: 1740995890
+dateModified: 1740996474
 elementSources:
   craft\elements\Entry:
     -
@@ -337,17 +337,17 @@ meta:
     7a8f449f-4cfb-49db-8656-d7551c298f4c: Authors # Authors
     7b8b18a2-8e96-4b93-bfaa-34a1d9fa86e1: Rich # Rich
     7bc0d428-9e00-47b5-b928-67896f29ae17: 'Contact: Website' # Contact: Website
-    8a5099a8-7b2e-4052-b798-5e7d19f38b15: 'Exhibition Types' # Exhibition Types
+    8a5099a8-7b2e-4052-b798-5e7d19f38b15: 'Event Types' # Event Types
     08b4a047-a20d-4d56-81b0-32b599c4fb41: People # People
     08b5b22b-fb98-46ef-8a90-e392edb2244f: 'Rich Text' # Rich Text
     8dddc601-5e96-40bb-b036-520072ba4aa7: Images # Images
     8f58365f-4eeb-4347-9d3d-5c0d3ffd3989: 'Toggle (Default: off)' # Toggle (Default: off)
-    9b5f9007-3f61-4857-b978-fdfbc4b29dba: 'Exhibition Types' # Exhibition Types
-    9c5f24a6-1969-4197-9fce-ff44e5a18b9b: People # People
-    12c6ecb1-eb21-40a2-aca1-217b86047c44: Event # Event
     8f896808-aacf-4f83-9a35-cd7076a6707b: 'News Type' # News Type
+    9b5f9007-3f61-4857-b978-fdfbc4b29dba: 'Exhibition Types' # Exhibition Types
     9b8054bc-bad1-4e95-b74b-e722465d36b9: Publication # Publication
     9bd98d08-c228-41bf-99b2-217e9444daee: 'Contact Detail' # Contact Detail
+    9c5f24a6-1969-4197-9fce-ff44e5a18b9b: People # People
+    12c6ecb1-eb21-40a2-aca1-217b86047c44: Event # Event
     14f7242a-668c-4d66-a588-17cde4b7e598: 'Social Media' # Social Media
     15ad504a-20b4-4e89-b94c-e7be7f135774: 'People Index' # People Index
     32ed2f1a-9024-4ee9-9028-3a5041c0e5e6: Date # Date
@@ -381,8 +381,8 @@ meta:
     a404ee2c-1d0d-4da9-a736-cd565a4d2605: Page # Page
     a9736c79-b219-4814-ba33-728835b7d230: Body # Body
     a20788dd-9031-41ba-8145-5f9d17b719ad: Primary # Primary
-    a976662e-fc19-4f89-ae6b-a5b4db64752b: Events # Events
     a907570e-41b8-4e87-b566-c2abe353e2a6: 'Publication Types' # Publication Types
+    a976662e-fc19-4f89-ae6b-a5b4db64752b: Events # Events
     ad5b3d91-425f-4181-8ded-f9c7c53a6bba: Person # Person
     afc7f0bc-1b97-4841-a1d2-5b0385a7ca35: 'Plain Text' # Plain Text
     b5b9369b-8ab5-44dc-bbaa-058288143025: 'Index Page' # Index Page
@@ -391,7 +391,7 @@ meta:
     b6ab5147-5d5b-42af-9984-8d4c1b01f63a: 'Static Assets' # Static Assets
     b64f08d1-e4db-4745-bf21-6e03e16ed93b: '404 Page Not Found' # 404 Page Not Found
     b99607d1-2cd8-44ef-add2-731bb39d4397: 'Toggle (Default: on)' # Toggle (Default: on)
-    bb0a4a47-dcbd-41a8-9bbb-82341295f5ff: Date # Date
+    bb0a4a47-dcbd-41a8-9bbb-82341295f5ff: 'Date & Time' # Date & Time
     bc20ba64-4979-418f-aa28-244626f315ab: 'Home Page' # Home Page
     be130f04-1c51-420d-818e-6d4f5a5960fa: Resources # Resources
     be827b12-3e63-4d2a-b17a-5c60ab99f248: 'Publication Type' # Publication Type

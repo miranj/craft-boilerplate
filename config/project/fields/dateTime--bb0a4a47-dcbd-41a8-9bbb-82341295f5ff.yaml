@@ -1,7 +1,7 @@
 columnSuffix: null
-handle: date
+handle: dateTime
 instructions: null
-name: Date
+name: 'Date & Time'
 searchable: false
 settings:
   max: null
