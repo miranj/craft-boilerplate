@@ -42,11 +42,11 @@ fieldLayouts:
           -
             dateAdded: '2025-02-24T11:05:10+00:00'
             elementCondition: null
-            fieldUid: 8f896808-aacf-4f83-9a35-cd7076a6707b # Type
+            fieldUid: 8f896808-aacf-4f83-9a35-cd7076a6707b # News Type
             handle: null
             includeInCards: false
             instructions: null
-            label: null
+            label: Type
             providesThumbs: false
             required: false
             tip: null

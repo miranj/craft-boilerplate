@@ -1,0 +1,30 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  -
+    uid: 992c932b-21e6-4b0b-8017-1289891c1ac4 # Resource: Document
+  -
+    uid: 3aba8130-5dea-47d5-ad23-a536e8b9760a # Resource: Link
+handle: resources
+maxAuthors: 1
+name: Resources
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  8341919b-4097-4c45-8f3b-97ff673d9ab5: # $CRAFT_SITE_NAME
+    enabledByDefault: true
+    hasUrls: true
+    template: _routers/detail.twig
+    uriFormat: 'resources/{slug}'
+type: channel
