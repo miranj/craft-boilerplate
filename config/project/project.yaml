@@ -1,4 +1,4 @@
-dateModified: 1740732204
+dateModified: 1740988682
 elementSources:
   craft\elements\Entry:
     -
@@ -345,7 +345,7 @@ meta:
     349b5e6f-3a2a-43f1-a9dd-2373bf4a0a67: 'Share/SEO Description' # Share/SEO Description
     653ea464-6b43-4bc9-8138-79615323d877: Blog # Blog
     840acb32-6694-40d0-9384-60a0220c1de0: Label # Label
-    992c932b-21e6-4b0b-8017-1289891c1ac4: Resource # Resource
+    992c932b-21e6-4b0b-8017-1289891c1ac4: 'Resource: Document' # Resource: Document
     5280da4e-b8fa-4970-9b39-490dd3a96904: Publications # Publications
     5661ce90-e09f-4c95-bffe-ffe44c413db3: 'Default Share Image' # Default Share Image
     6813a87d-5d20-4e93-8019-6fde740ef87d: Editors # Editors
