@@ -76,7 +76,7 @@ fieldLayouts:
             instructions: null
             label: 'Start Date'
             providesThumbs: false
-            required: false
+            required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: e30e5ed4-2a93-4299-927a-7993d8dc68b3
