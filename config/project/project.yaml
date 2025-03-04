@@ -1,4 +1,4 @@
-dateModified: 1740999914
+dateModified: 1741056040
 elementSources:
   craft\elements\Entry:
     -
@@ -113,7 +113,7 @@ elementSources:
       type: native
     -
       defaultSort:
-        - postDate
+        - 'fieldInstance:e30e5ed4-2a93-4299-927a-7993d8dc68b3'
         - desc
       defaultViewMode: ''
       disabled: false
