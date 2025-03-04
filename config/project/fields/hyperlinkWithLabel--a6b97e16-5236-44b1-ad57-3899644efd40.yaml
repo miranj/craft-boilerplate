@@ -1,0 +1,61 @@
+columnSuffix: null
+handle: hyperlinkWithLabel
+instructions: null
+name: 'Hyperlink With Label'
+searchable: false
+settings:
+  fullGraphqlData: true
+  maxLength: 255
+  showLabelField: true
+  typeSettings:
+    __assoc__:
+      -
+        - entry
+        -
+          __assoc__:
+            -
+              - sources
+              - '*'
+      -
+        - url
+        -
+          __assoc__:
+            -
+              - allowRootRelativeUrls
+              - ''
+            -
+              - allowAnchors
+              - ''
+      -
+        - asset
+        -
+          __assoc__:
+            -
+              - sources
+              - '*'
+            -
+              - allowedKinds
+              -
+                - audio
+                - captionsSubtitles
+                - compressed
+                - image
+                - json
+                - pdf
+                - powerpoint
+                - text
+                - video
+                - word
+            -
+              - showUnpermittedVolumes
+              - ''
+            -
+              - showUnpermittedFiles
+              - ''
+  types:
+    - entry
+    - url
+    - asset
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Link
