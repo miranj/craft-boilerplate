@@ -137,48 +137,6 @@ class Module extends \yii\base\Module
                 'on' => Entry::SCENARIO_LIVE,
             ];
         }
-
-        // For occurence fields, ensure the startDate:date is within
-        // the owner element's startDate:date range
-        if ($context == 'occurrences:slot') {
-            if (!empty($element->owner->startDateTime)) {
-                $event->rules[] = [
-                    ['field:startDateTime', 'field:endDateTime'],
-                    DateCompareValidator::class,
-                    'operator' => '>=',
-                    'compareValue' => function () use ($element) {
-                        return $element->owner->startDateTime;
-                    },
-                    'skipOnEmpty' => true,
-                    'on' => Entry::SCENARIO_LIVE,
-                    'message' =>
-                        'This slot’s {attribute} must be greater than or equal to the event’s {attribute} of {compareValueOrAttribute}',
-                ];
-            }
-
-            if (!empty($element->owner->endDateTime)) {
-                $event->rules[] = [
-                    ['field:startDate'],
-                    DateCompareValidator::class,
-                    'operator' => '<',
-                    'compareValue' => function () use ($element) {
-                        $date = clone $element->owner->endDateTime;
-                        return $date->add(
-                            date_interval_create_from_date_string('1 day'),
-                        );
-                    },
-                    'skipOnEmpty' => true,
-                    'on' => Entry::SCENARIO_LIVE,
-                    'message' =>
-                        'This slot’s {attribute} must be less than or equal to the event’s {attribute} of  {compareValueOrAttribute}',
-                ];
-            }
-        }
-    }
-
-    public function registerVizyFeedMeField(RegisterFeedMeFieldsEvent $e)
-    {
-        $e->fields[] = FeedMeVizy::class;
     }
 
     // Protected Methods
