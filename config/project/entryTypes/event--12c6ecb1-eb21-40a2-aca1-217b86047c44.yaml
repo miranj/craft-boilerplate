@@ -119,10 +119,10 @@ fieldLayouts:
             dateAdded: '2025-02-26T02:40:53+00:00'
             elementCondition: null
             fieldUid: afc7f0bc-1b97-4841-a1d2-5b0385a7ca35 # Plain Text
-            handle: location
+            handle: venue
             includeInCards: false
             instructions: null
-            label: Location
+            label: 'Venue / Address'
             providesThumbs: false
             required: false
             tip: null
