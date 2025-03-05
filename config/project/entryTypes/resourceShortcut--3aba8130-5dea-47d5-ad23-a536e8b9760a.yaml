@@ -43,18 +43,18 @@ fieldLayouts:
             uid: eb19ab94-6c51-4a20-a843-a11b3523ff7a
             userCondition: null
           -
-            dateAdded: '2025-03-03T07:59:24+00:00'
+            dateAdded: '2025-03-05T08:22:19+00:00'
             elementCondition: null
-            fieldUid: d356acc9-4ecf-488d-a89d-2857490bb576 # Hyperlink
-            handle: null
+            fieldUid: ed5b1453-5dc4-4e73-8865-dad39383c4cb # Hyperlink (Entry, URL)
+            handle: hyperlink
             includeInCards: false
             instructions: null
-            label: null
+            label: Link
             providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: a274ae7b-30a1-47ac-8631-b2c2d3e3037c
+            uid: be6f55b6-d145-4867-8923-8a25463f3ed7
             userCondition: null
             warning: null
             width: 100

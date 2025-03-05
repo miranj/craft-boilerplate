@@ -1,4 +1,4 @@
-dateModified: 1741162527
+dateModified: 1741162939
 elementSources:
   craft\elements\Entry:
     -
@@ -385,6 +385,7 @@ meta:
     e421ceea-a2f2-459f-88b9-2695f86047bd: Images # Images
     e455d48b-03ff-4280-b08f-90e20f74c7b3: Languages # Languages
     e5323eec-2cf3-40d3-b122-7df6192a5bdf: 'Form Submissions' # Form Submissions
+    ed5b1453-5dc4-4e73-8865-dad39383c4cb: 'Hyperlink (Entry, URL)' # Hyperlink (Entry, URL)
     fad3fe56-0b6b-46c4-a97b-b7fb98847f3c: 'Media Embed' # Media Embed
     fd23984e-764a-4004-9834-8efe25601ba5: Simple # Simple
 plugins:
