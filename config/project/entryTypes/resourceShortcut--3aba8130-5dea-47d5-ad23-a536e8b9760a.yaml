@@ -38,42 +38,10 @@ fieldLayouts:
           -
             dateAdded: '2025-03-03T09:58:09+00:00'
             elementCondition: null
-            fieldUid: 69339afc-d4f1-440b-a7ad-7da2ccb77972 # Image
-            handle: cover
-            includeInCards: false
-            instructions: null
-            label: 'Cover Image'
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: a69fb45c-cd69-4bfc-be59-14cfd880215e
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            dateAdded: '2025-03-03T09:58:09+00:00'
-            elementCondition: null
             heading: 'Link Data'
             type: craft\fieldlayoutelements\Heading
             uid: eb19ab94-6c51-4a20-a843-a11b3523ff7a
             userCondition: null
-          -
-            dateAdded: '2025-03-03T09:58:09+00:00'
-            elementCondition: null
-            fieldUid: 32ed2f1a-9024-4ee9-9028-3a5041c0e5e6 # Date
-            handle: null
-            includeInCards: false
-            instructions: null
-            label: 'Date Updated'
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: deca0b91-23e7-4e0c-b710-ca51f4afd41c
-            userCondition: null
-            warning: null
-            width: 100
           -
             dateAdded: '2025-03-03T07:59:24+00:00'
             elementCondition: null
@@ -148,32 +116,10 @@ fieldLayouts:
         name: Content
         uid: 3e2309b8-4506-467c-a760-3d0ec08416fa
         userCondition: null
-      -
-        elementCondition: null
-        elements:
-          -
-            dateAdded: '2025-03-03T09:58:09+00:00'
-            elementCondition: null
-            fieldUid: 5b72b712-0218-40c6-9717-0c395a914ad8 # Summary
-            handle: null
-            includeInCards: false
-            instructions: null
-            label: null
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 40737852-4810-40e6-b1bb-4cbd77c9a7fa
-            userCondition: null
-            warning: null
-            width: 100
-        name: Summary
-        uid: 02c4b0d8-15cc-4119-bed2-92a35caa3d29
-        userCondition: null
-handle: resourceLink
+handle: resourceShortcut
 hasTitleField: true
 icon: book
-name: 'Resource: Link'
+name: 'Resource: Shortcut'
 showSlugField: true
 showStatusField: true
 slugTranslationKeyFormat: null

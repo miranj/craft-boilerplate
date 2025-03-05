@@ -158,7 +158,7 @@ fieldLayouts:
             handle: null
             includeInCards: false
             instructions: null
-            label: Abstract
+            label: Body
             providesThumbs: false
             required: false
             tip: null
@@ -167,7 +167,7 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-        name: Abstract
+        name: Body
         uid: 8ff94327-55d3-4051-b60b-5469f5f6f537
         userCondition: null
       -
@@ -277,10 +277,10 @@ fieldLayouts:
         name: 'Sharing & SEO'
         uid: 532fbb8a-9b44-45b6-b47d-d17f2d7d2d48
         userCondition: null
-handle: resourceDocument
+handle: resource
 hasTitleField: true
 icon: book
-name: 'Resource: Document'
+name: Resource
 showSlugField: true
 showStatusField: true
 slugTranslationKeyFormat: null

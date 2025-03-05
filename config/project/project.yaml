@@ -1,4 +1,4 @@
-dateModified: 1740995889
+dateModified: 1741162527
 elementSources:
   craft\elements\Entry:
     -
@@ -314,7 +314,7 @@ meta:
     1afae8bb-74c6-43e3-8b44-3e8cac38e2e8: 'Blog Index' # Blog Index
     1ba3b532-e3ed-43db-93a6-00c05efcc84f: 'Resource Types' # Resource Types
     2bfee73d-1d4f-480f-9a78-6be8410a6704: 'Social Media' # Social Media
-    3aba8130-5dea-47d5-ad23-a536e8b9760a: 'Resource: Link' # Resource: Link
+    3aba8130-5dea-47d5-ad23-a536e8b9760a: 'Resource: Shortcut' # Resource: Shortcut
     5a1e3562-bcf8-4492-afd5-f8c9cabda572: 'Call to Action' # Call to Action
     5b72b712-0218-40c6-9717-0c395a914ad8: Summary # Summary
     5d68dab3-70f1-4fbc-833e-e504aa7c926d: 'User Photos' # User Photos
@@ -347,7 +347,7 @@ meta:
     349b5e6f-3a2a-43f1-a9dd-2373bf4a0a67: 'Share/SEO Description' # Share/SEO Description
     653ea464-6b43-4bc9-8138-79615323d877: Blog # Blog
     840acb32-6694-40d0-9384-60a0220c1de0: Label # Label
-    992c932b-21e6-4b0b-8017-1289891c1ac4: 'Resource: Document' # Resource: Document
+    992c932b-21e6-4b0b-8017-1289891c1ac4: Resource # Resource
     5280da4e-b8fa-4970-9b39-490dd3a96904: Publications # Publications
     5661ce90-e09f-4c95-bffe-ffe44c413db3: 'Default Share Image' # Default Share Image
     6813a87d-5d20-4e93-8019-6fde740ef87d: Editors # Editors
