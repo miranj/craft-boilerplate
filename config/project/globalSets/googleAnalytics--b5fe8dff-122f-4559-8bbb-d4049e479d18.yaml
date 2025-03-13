@@ -25,4 +25,4 @@ fieldLayouts:
         userCondition: null
 handle: googleAnalytics
 name: 'Google Analytics'
-sortOrder: 4
+sortOrder: 2

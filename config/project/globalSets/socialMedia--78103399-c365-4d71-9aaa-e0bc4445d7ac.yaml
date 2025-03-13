@@ -1,28 +1,28 @@
 fieldLayouts:
-  8fe4fcdf-41e6-4f3c-82d4-51ca865256e1:
+  3edfa4a3-4429-4e26-b227-365ae51d2931:
     tabs:
       -
         elementCondition: null
         elements:
           -
-            dateAdded: '2024-12-16T23:10:59+00:00'
+            dateAdded: '2025-03-13T08:30:18+00:00'
             elementCondition: null
-            fieldUid: 5661ce90-e09f-4c95-bffe-ffe44c413db3 # Default Share Image
+            fieldUid: 2bfee73d-1d4f-480f-9a78-6be8410a6704 # Social Media
             handle: null
             includeInCards: false
             instructions: null
-            label: null
+            label: 'Social Media Links'
             providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 36890a3f-ee45-4413-86f1-5ba9addfa3a9
+            uid: 7a3bc6fc-e63c-42cc-a8b8-dda3359e5019
             userCondition: null
             warning: null
             width: 100
-        name: Content
-        uid: cb56995e-fe58-497c-a15f-1c923488bb3c
+        name: Links
+        uid: 1e5971cb-dd7a-4bf7-8001-d52856250563
         userCondition: null
-handle: seo
-name: 'Sharing & SEO'
-sortOrder: 4
+handle: socialMedia
+name: 'Social Media'
+sortOrder: 5

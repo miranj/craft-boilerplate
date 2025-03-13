@@ -1,4 +1,4 @@
-dateModified: 1740714355
+dateModified: 1741854646
 elementSources:
   craft\elements\Entry:
     -
@@ -342,6 +342,7 @@ meta:
     856911a9-89f9-4865-bdb1-5665460c6c23: 'Contact Information' # Contact Information
     8341919b-4097-4c45-8f3b-97ff673d9ab5: $CRAFT_SITE_NAME # $CRAFT_SITE_NAME
     25388890-1b39-49c8-8d89-7ef2d82f89a1: Newsletter # Newsletter
+    78103399-c365-4d71-9aaa-e0bc4445d7ac: 'Social Media' # Social Media
     a53f5b40-fb8c-4a9d-8c25-dc8e3dfe58d6: Code # Code
     a385a4fe-5736-44ee-ab48-d869428d380c: News # News
     a404ee2c-1d0d-4da9-a736-cd565a4d2605: Page # Page
