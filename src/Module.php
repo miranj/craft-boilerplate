@@ -112,7 +112,8 @@ class Module extends \yii\base\Module
         $element = $event->sender;
 
         // Only check elements in the include-list
-        $context = $element->section->handle . ':' . $element->type->handle;
+        $context =
+            ($element->section->handle ?? '*') . ':' . $element->type->handle;
         if (!in_array($context, $validateElementTypes[get_class($element)])) {
             return;
         }
