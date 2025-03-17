@@ -1,1 +1,74 @@
-{% extends '_views/detail/default' %}
+{% extends '_views/details/_default' %}
+
+
+
+{# Params #}
+{% set indexTitle = indexTitle ?? entry.title %}
+{% set indexSeoTitle = indexSeoTitle ?? indexTitle %}
+{% set indexSeoTitleSuffix = indexSeoTitleSuffix ?? '' %}
+{% set indexView = indexView ?? 'collective' %}
+{% set indexOrderedBy = indexOrderedBy ?? 'postDate DESC' %}
+{% set indexPaginate = indexPaginate ?? true %}
+{% set indexPaginateCount = indexPaginateCount ?? 12 %}
+{% set indexActiveFilters = indexActiveFilters ?? [] %}
+
+
+
+{# Biz logic #}
+{% block response %}
+  {# Configure entries query #}
+  {% if indexOrderedBy %}
+    {% do entries.orderBy(indexOrderedBy) %}
+  {% endif %}
+
+  {# Build final entries list #}
+  {% if indexPaginate %}
+    {% paginate clone(entries).limit(indexPaginateCount) as indexPaginateInfo, indexEntries %}
+    {# If page number is not valid (greater than total), 404 #}
+    {% if craft.app.request.getPageNum() > indexPaginateInfo.totalPages %}
+      {% exit 404 %}
+    {% endif %}
+  {% else %}
+    {% set indexEntries = indexEntries ?? collect(entries).all() %}
+  {% endif %}
+
+  {# 404 if no entries due to filters #}
+  {% if indexEntries is empty and indexActiveFilters is not empty %}
+    {% do craft.app.response.setStatusCode('404') %}
+  {% endif %}
+
+  {{ parent() }}
+{% endblock %}
+
+{% block seo %}
+  {% set seomate = {
+    element: entry,
+    canonicalUrl: entry.url,
+    meta: {
+      title: [
+        (entry.seoTitle ?? indexSeoTitle ?? indexTitle)|striptags,
+        indexSeoTitleSuffix,
+        ((indexPaginateInfo.currentPage ?? 0) > 1 ? "(page #{indexPaginateInfo.currentPage})")
+      ]|filter|join(' '),
+      description: entry.seoSummary ?? '',
+      robots: indexActiveFilters|length > 1 ? 'noindex',
+      links: [{
+        rel: 'alternate',
+        type: 'application/rss+xml',
+        title: "#{siteName} #{indexTitle} Feed",
+        href: entry.url ~ '/feed.xml',
+      }],
+    }|filter,
+    config: {
+      cacheEnabled: false,
+    },
+  } %}
+
+  {{ parent() }}
+{% endblock %}
+
+
+
+{# Layout #}
+{% block main %}
+{% endblock %}
