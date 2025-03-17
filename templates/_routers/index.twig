@@ -9,10 +9,10 @@
     @param  entries   Query object of the index page's contents
                       (auto-set when coming via the router)
   #}
-  {% set section = section ?? entry['indexSection_'] ?? entry.section %}
+
+  {% set section = section ?? craft.app.entries.getSectionByHandle(entry.section.handle|replace('/^index_/')) %}
   {% set entry = entry ?? craft.entries.index_(section).one() %}
   {% set entries = entries ?? craft.entries.section(section) %}
-
   {% if not entry %}
     {% exit 404 %}
   {% endif %}
