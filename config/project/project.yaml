@@ -1,4 +1,4 @@
-dateModified: 1740714355
+dateModified: 1742179864
 elementSources:
   craft\elements\Entry:
     -
@@ -110,6 +110,18 @@ elementSources:
         - link
         - dateUpdated
         - revisionCreator
+      type: native
+    -
+      defaultSort:
+        - 'field:32ed2f1a-9024-4ee9-9028-3a5041c0e5e6' # Date
+        - asc
+      defaultViewMode: ''
+      disabled: false
+      key: 'section:febb1068-1cf0-4781-8a41-bf420bb95e2f' # Jobs
+      tableAttributes:
+        - link
+        - postDate
+        - 'field:32ed2f1a-9024-4ee9-9028-3a5041c0e5e6' # Date
       type: native
     -
       defaultSort:
@@ -358,6 +370,7 @@ meta:
     b99607d1-2cd8-44ef-add2-731bb39d4397: 'Toggle (Default: on)' # Toggle (Default: on)
     bc20ba64-4979-418f-aa28-244626f315ab: 'Home Page' # Home Page
     be827b12-3e63-4d2a-b17a-5c60ab99f248: 'Publication Type' # Publication Type
+    c2bd9b72-0968-4b24-aee2-02048ebf7f8c: Opportunity # Opportunity
     c5712456-e12b-4cbc-a8cc-b570cf00d66e: 'Publications Index' # Publications Index
     d356acc9-4ecf-488d-a89d-2857490bb576: Hyperlink # Hyperlink
     d4720a93-54ad-45de-a939-b668ed8660dc: 'Share/SEO Image' # Share/SEO Image
@@ -370,6 +383,7 @@ meta:
     e5323eec-2cf3-40d3-b122-7df6192a5bdf: 'Form Submissions' # Form Submissions
     fad3fe56-0b6b-46c4-a97b-b7fb98847f3c: 'Media Embed' # Media Embed
     fd23984e-764a-4004-9834-8efe25601ba5: Simple # Simple
+    febb1068-1cf0-4781-8a41-bf420bb95e2f: Jobs # Jobs
 plugins:
   child-me:
     edition: standard
