@@ -44,6 +44,7 @@ permissions:
   - 'deletepeerentrydrafts:653ea464-6b43-4bc9-8138-79615323d877' # Blog
   - 'deletepeerentrydrafts:6b8b6979-d75e-432e-8798-2fc0d53eb8f8' # Pages
   - 'deletepeerentrydrafts:94e56347-cb09-47d3-a930-1fd9bc2cb026' # News
+  - 'deletepeerentrydrafts:a3f3307a-1056-486e-9ed7-fb4e84632cb0' # Jobs Index
   - 'deletepeerentrydrafts:bc20ba64-4979-418f-aa28-244626f315ab' # Home Page
   - 'deletepeerentrydrafts:c5712456-e12b-4cbc-a8cc-b570cf00d66e' # Publications Index
   - 'deletepeerentrydrafts:febb1068-1cf0-4781-8a41-bf420bb95e2f' # Jobs
@@ -69,6 +70,7 @@ permissions:
   - 'saveentries:653ea464-6b43-4bc9-8138-79615323d877' # Blog
   - 'saveentries:6b8b6979-d75e-432e-8798-2fc0d53eb8f8' # Pages
   - 'saveentries:94e56347-cb09-47d3-a930-1fd9bc2cb026' # News
+  - 'saveentries:a3f3307a-1056-486e-9ed7-fb4e84632cb0' # Jobs Index
   - 'saveentries:bc20ba64-4979-418f-aa28-244626f315ab' # Home Page
   - 'saveentries:c5712456-e12b-4cbc-a8cc-b570cf00d66e' # Publications Index
   - 'saveentries:febb1068-1cf0-4781-8a41-bf420bb95e2f' # Jobs
@@ -92,6 +94,7 @@ permissions:
   - 'savepeerentrydrafts:653ea464-6b43-4bc9-8138-79615323d877' # Blog
   - 'savepeerentrydrafts:6b8b6979-d75e-432e-8798-2fc0d53eb8f8' # Pages
   - 'savepeerentrydrafts:94e56347-cb09-47d3-a930-1fd9bc2cb026' # News
+  - 'savepeerentrydrafts:a3f3307a-1056-486e-9ed7-fb4e84632cb0' # Jobs Index
   - 'savepeerentrydrafts:bc20ba64-4979-418f-aa28-244626f315ab' # Home Page
   - 'savepeerentrydrafts:c5712456-e12b-4cbc-a8cc-b570cf00d66e' # Publications Index
   - 'savepeerentrydrafts:febb1068-1cf0-4781-8a41-bf420bb95e2f' # Jobs
@@ -109,6 +112,7 @@ permissions:
   - 'viewentries:653ea464-6b43-4bc9-8138-79615323d877' # Blog
   - 'viewentries:6b8b6979-d75e-432e-8798-2fc0d53eb8f8' # Pages
   - 'viewentries:94e56347-cb09-47d3-a930-1fd9bc2cb026' # News
+  - 'viewentries:a3f3307a-1056-486e-9ed7-fb4e84632cb0' # Jobs Index
   - 'viewentries:bc20ba64-4979-418f-aa28-244626f315ab' # Home Page
   - 'viewentries:c5712456-e12b-4cbc-a8cc-b570cf00d66e' # Publications Index
   - 'viewentries:febb1068-1cf0-4781-8a41-bf420bb95e2f' # Jobs
@@ -132,6 +136,7 @@ permissions:
   - 'viewpeerentrydrafts:653ea464-6b43-4bc9-8138-79615323d877' # Blog
   - 'viewpeerentrydrafts:6b8b6979-d75e-432e-8798-2fc0d53eb8f8' # Pages
   - 'viewpeerentrydrafts:94e56347-cb09-47d3-a930-1fd9bc2cb026' # News
+  - 'viewpeerentrydrafts:a3f3307a-1056-486e-9ed7-fb4e84632cb0' # Jobs Index
   - 'viewpeerentrydrafts:bc20ba64-4979-418f-aa28-244626f315ab' # Home Page
   - 'viewpeerentrydrafts:c5712456-e12b-4cbc-a8cc-b570cf00d66e' # Publications Index
   - 'viewpeerentrydrafts:febb1068-1cf0-4781-8a41-bf420bb95e2f' # Jobs
