@@ -1,0 +1,36 @@
+columnSuffix: null
+handle: seoImageDefault
+instructions: 'The image that will appear when sharing a link, if no other image is available. Image will be automatically cropped to an aspect ratio of about 2:1 (differs from platform to platform).'
+name: 'Default Share Image'
+searchable: true
+settings:
+  allowSelfRelations: false
+  allowSubfolders: false
+  allowUploads: true
+  allowedKinds:
+    - image
+  branchLimit: null
+  defaultUploadLocationSource: 'volume:e421ceea-a2f2-459f-88b9-2695f86047bd' # Images
+  defaultUploadLocationSubpath: 'defaults/{slug ?: handle}'
+  maintainHierarchy: false
+  maxRelations: 1
+  minRelations: null
+  previewMode: thumbs
+  restrictFiles: true
+  restrictLocation: false
+  restrictedDefaultUploadSubpath: null
+  restrictedLocationSource: 'volume:e421ceea-a2f2-459f-88b9-2695f86047bd' # Images
+  restrictedLocationSubpath: null
+  selectionLabel: 'Add an image'
+  showCardsInGrid: false
+  showSiteMenu: false
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+  sources:
+    - 'volume:e421ceea-a2f2-459f-88b9-2695f86047bd' # Images
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: large
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Assets

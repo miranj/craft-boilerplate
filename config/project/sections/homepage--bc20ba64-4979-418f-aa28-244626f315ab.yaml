@@ -1,0 +1,28 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  - a404ee2c-1d0d-4da9-a736-cd565a4d2605 # Page
+  - b5b9369b-8ab5-44dc-bbaa-058288143025 # Index Page
+handle: homepage
+maxAuthors: 1
+name: 'Home Page'
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  8341919b-4097-4c45-8f3b-97ff673d9ab5: # $CRAFT_SITE_NAME
+    enabledByDefault: true
+    hasUrls: true
+    template: _routers/detail.twig
+    uriFormat: __home__
+type: single

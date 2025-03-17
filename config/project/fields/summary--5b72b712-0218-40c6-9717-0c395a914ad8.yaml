@@ -1,0 +1,16 @@
+columnSuffix: null
+handle: summary
+instructions: 'A concise summary of this page, which could be used in various contexts: internal links, search results, social media, etc.'
+name: Summary
+searchable: true
+settings:
+  byteLimit: null
+  charLimit: null
+  code: false
+  initialRows: 4
+  multiline: true
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

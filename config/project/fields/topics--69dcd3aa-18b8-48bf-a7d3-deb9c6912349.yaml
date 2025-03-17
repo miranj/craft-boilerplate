@@ -1,0 +1,21 @@
+columnSuffix: null
+handle: topics
+instructions: null
+name: Topics
+searchable: true
+settings:
+  allowSelfRelations: false
+  branchLimit: null
+  maintainHierarchy: false
+  maxRelations: null
+  minRelations: null
+  selectionLabel: 'Add topics'
+  showCardsInGrid: false
+  showSiteMenu: false
+  source: 'group:6ae2a9cc-c9cc-4b89-9c8c-d7a417cbb87e' # Topics
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: list
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Categories

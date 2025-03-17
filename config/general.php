@@ -30,7 +30,8 @@ return [
         'timezone' => 'Asia/Kolkata',
         'defaultWeekStartDay' => '1',
         'defaultCpLanguage' => 'en-GB',
-        'baseCpUrl' => App::env('CRAFT_DEFAULT_SITE_URL'),
+        'defaultCpLocale' => 'en-IN',
+        'baseCpUrl' => App::env('PRIMARY_SITE_URL'),
         'defaultSearchTermOptions' => [
             'subLeft' => true,
             'subRight' => true,
@@ -51,11 +52,13 @@ return [
         'maxUploadFileSize' => '100M',
 
         'aliases' => [
-            '@web' => App::env('CRAFT_DEFAULT_SITE_URL'),
-            '@assetBaseUrl' => App::env('CRAFT_ASSET_BASE_URL'),
-            '@assetBasePath' => App::env('CRAFT_ASSET_BASE_PATH'),
+            '@web' => App::env('PRIMARY_SITE_URL'),
+            '@webroot' => dirname(__DIR__) . '/web',
+            '@assetBaseUrl' => App::env('CDN_BASE_URL') ?: '@web',
+            '@assetBasePath' => App::env('CDN_BASE_PATH') ?: '@webroot',
             '@contentBasePath' =>
-                App::env('CRAFT_CONTENT_BASE_PATH') ?: '@root/content',
+                App::env('CONTENT_BASE_PATH') ?: '@root/content',
+            '@icons' => '@webroot/img/icons',
         ],
     ],
 
@@ -71,18 +74,15 @@ return [
     // Staging environment
     'staging' => [
         'devMode' => false,
-        'disabledPlugins' => ['inventory', 'cp-field-inspect'],
+        'disabledPlugins' => ['cp-field-inspect'],
     ],
 
     // Production environment
     'production' => [
         'devMode' => false,
         'disallowRobots' => false,
-        'disabledPlugins' => [
-            'inventory',
-            'cp-field-inspect',
-            'environment-label',
-        ],
+        'disabledPlugins' => ['cp-field-inspect', 'environment-label'],
+        'preventUserEnumeration' => true,
         'runQueueAutomatically' => false,
     ],
 ];

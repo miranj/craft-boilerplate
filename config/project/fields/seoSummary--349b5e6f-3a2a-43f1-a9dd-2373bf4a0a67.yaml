@@ -1,0 +1,16 @@
+columnSuffix: null
+handle: seoSummary
+instructions: null
+name: 'Share/SEO Description'
+searchable: true
+settings:
+  byteLimit: null
+  charLimit: 300
+  code: false
+  initialRows: 2
+  multiline: true
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

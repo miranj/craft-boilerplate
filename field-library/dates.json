@@ -1,0 +1,38 @@
+[
+  {
+    "name": "End Date",
+    "handle": "endDate",
+    "instructions": null,
+    "required": null,
+    "searchable": true,
+    "translationMethod": "site",
+    "translationKeyFormat": null,
+    "type": "craft\\fields\\Date",
+    "settings": {
+      "showDate": true,
+      "showTime": false,
+      "showTimeZone": false,
+      "min": null,
+      "max": null,
+      "minuteIncrement": 30
+    }
+  },
+  {
+    "name": "Start Date",
+    "handle": "startDate",
+    "instructions": null,
+    "required": null,
+    "searchable": true,
+    "translationMethod": "site",
+    "translationKeyFormat": null,
+    "type": "craft\\fields\\Date",
+    "settings": {
+      "showDate": true,
+      "showTime": false,
+      "showTimeZone": false,
+      "min": null,
+      "max": null,
+      "minuteIncrement": 30
+    }
+  }
+]

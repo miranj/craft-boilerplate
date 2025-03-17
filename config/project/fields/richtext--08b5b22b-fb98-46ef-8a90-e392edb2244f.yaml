@@ -1,0 +1,21 @@
+columnSuffix: null
+handle: richtext
+instructions: null
+name: 'Rich Text'
+searchable: true
+settings:
+  availableTransforms: ''
+  availableVolumes: ''
+  ckeConfig: 7b8b18a2-8e96-4b93-bfaa-34a1d9fa86e1 # Rich
+  createButtonLabel: null
+  defaultTransform: null
+  enableSourceEditingForNonAdmins: false
+  purifierConfig: null
+  purifyHtml: true
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+  showWordCount: true
+  wordLimit: null
+translationKeyFormat: null
+translationMethod: none
+type: craft\ckeditor\Field

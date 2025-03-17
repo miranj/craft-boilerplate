@@ -1,0 +1,445 @@
+dateModified: 1742195898
+elementSources:
+  craft\elements\Entry:
+    -
+      condition:
+        class: craft\elements\conditions\entries\EntryCondition
+        conditionRules:
+          -
+            class: craft\elements\conditions\entries\SectionConditionRule
+            operator: in
+            uid: 5b0b4220-3d4a-430e-804f-f7c9f0db27b6
+            values:
+              - bc20ba64-4979-418f-aa28-244626f315ab # Home Page
+        elementType: craft\elements\Entry
+        fieldContext: global
+      defaultSort:
+        - id
+        - asc
+      defaultViewMode: cards
+      key: 'custom:bb29a724-9ba6-4bcb-bcaa-928112733af1'
+      label: Homepage
+      tableAttributes: '-'
+      type: custom
+    -
+      condition:
+        class: craft\elements\conditions\entries\EntryCondition
+        conditionRules:
+          -
+            class: craft\elements\conditions\entries\TypeConditionRule
+            operator: in
+            uid: 0f8f04f6-7ffe-49d9-ba37-9f5910a116cb
+            values:
+              - b5b9369b-8ab5-44dc-bbaa-058288143025 # Index Page
+          -
+            class: craft\elements\conditions\entries\SectionConditionRule
+            operator: ni
+            uid: 1ce7e9fc-7a91-45ff-a07c-9755ab5d5dcb
+            values:
+              - bc20ba64-4979-418f-aa28-244626f315ab # Home Page
+        elementType: craft\elements\Entry
+        fieldContext: global
+      defaultSort:
+        - uri
+        - asc
+      defaultViewMode: cards
+      key: 'custom:1aa71832-b8e6-4557-b0d7-6fcea7f324b3'
+      label: Indexes
+      tableAttributes:
+        - uri
+        - link
+        - dateUpdated
+        - revisionCreator
+      type: custom
+    -
+      defaultSort:
+        - structure
+        - asc
+      defaultViewMode: ''
+      disabled: false
+      key: 'section:6b8b6979-d75e-432e-8798-2fc0d53eb8f8' # Pages
+      tableAttributes:
+        - link
+        - dateUpdated
+        - revisionCreator
+      type: native
+    -
+      condition:
+        class: craft\elements\conditions\entries\EntryCondition
+        conditionRules:
+          -
+            class: craft\elements\conditions\entries\SectionConditionRule
+            operator: in
+            uid: 3da6cdb6-b997-463a-8d2b-3d0af26be86d
+            values:
+              - b64f08d1-e4db-4745-bf21-6e03e16ed93b # 404 Page Not Found
+        elementType: craft\elements\Entry
+        fieldContext: global
+      defaultSort:
+        - section
+        - asc
+      defaultViewMode: cards
+      key: 'custom:4b115974-a69e-4d19-a72e-f16a993033a5'
+      label: 'Error Pages'
+      tableAttributes: '-'
+      type: custom
+    -
+      defaultSort:
+        - title
+        - asc
+      defaultViewMode: ''
+      disabled: true
+      key: singles
+      tableAttributes:
+        - postDate
+        - link
+        - dateUpdated
+      type: native
+    -
+      heading: Channels
+      type: heading
+    -
+      defaultSort:
+        - postDate
+        - desc
+      defaultViewMode: ''
+      disabled: false
+      key: 'section:653ea464-6b43-4bc9-8138-79615323d877' # Blog
+      tableAttributes:
+        - postDate
+        - link
+        - dateUpdated
+        - revisionCreator
+      type: native
+    -
+      defaultSort:
+        - postDate
+        - desc
+      defaultViewMode: ''
+      disabled: false
+      key: 'section:94e56347-cb09-47d3-a930-1fd9bc2cb026' # News
+      tableAttributes:
+        - link
+        - 'field:8f896808-aacf-4f83-9a35-cd7076a6707b' # News Type
+        - postDate
+        - dateUpdated
+        - revisionCreator
+      type: native
+    -
+      defaultSort:
+        - postDate
+        - desc
+      defaultViewMode: ''
+      disabled: false
+      key: 'section:5280da4e-b8fa-4970-9b39-490dd3a96904' # Publications
+      tableAttributes:
+        - link
+        - postDate
+      type: native
+    -
+      defaultSort:
+        - title
+        - asc
+      defaultViewMode: ''
+      disabled: false
+      key: 'section:08b4a047-a20d-4d56-81b0-32b599c4fb41' # People
+      tableAttributes:
+        - link
+        - 'fieldInstance:6b80c15b-e48e-4b66-8f5a-795142b9a77f'
+      type: native
+    -
+      heading: Auto
+      type: heading
+    -
+      condition:
+        class: craft\elements\conditions\entries\EntryCondition
+        conditionRules:
+          -
+            class: craft\elements\conditions\DateUpdatedConditionRule
+            endDate: null
+            periodType: daysAgo
+            periodValue: null
+            rangeType: past30Days
+            startDate: null
+            uid: 6d9f9446-7e37-4a00-b583-61532ea48bd5
+          -
+            class: craft\elements\conditions\HasUrlConditionRule
+            uid: 304d9eec-1cc9-4b80-829f-f72555e50b5e
+            value: true
+        elementType: craft\elements\Entry
+        fieldContext: global
+      defaultSort:
+        - dateUpdated
+        - desc
+      defaultViewMode: ''
+      key: 'custom:b6b6db60-afda-4442-8e36-6279d2b2387d'
+      label: 'Updated Recently'
+      tableAttributes:
+        - dateUpdated
+        - link
+        - section
+        - revisionCreator
+      type: custom
+    -
+      condition:
+        class: craft\elements\conditions\entries\EntryCondition
+        conditionRules:
+          -
+            class: craft\elements\conditions\entries\PostDateConditionRule
+            endDate: null
+            periodType: daysAgo
+            periodValue: null
+            rangeType: past30Days
+            startDate: null
+            uid: c62fd80c-b8e7-4b7e-8b2b-e37d8037301d
+          -
+            class: craft\elements\conditions\HasUrlConditionRule
+            uid: 8d40ae49-ef47-4103-b2bc-10d68d020efa
+            value: true
+        elementType: craft\elements\Entry
+        fieldContext: global
+      defaultSort:
+        - postDate
+        - desc
+      defaultViewMode: ''
+      key: 'custom:8011777f-f2c5-449e-9053-d48b36d995f6'
+      label: 'Published Recently'
+      tableAttributes:
+        - postDate
+        - link
+        - section
+      type: custom
+    -
+      condition:
+        class: craft\elements\conditions\entries\EntryCondition
+        conditionRules:
+          -
+            class: craft\elements\conditions\DateCreatedConditionRule
+            endDate: null
+            periodType: daysAgo
+            periodValue: null
+            rangeType: past30Days
+            startDate: null
+            uid: f2a1e105-9528-4f7a-99eb-47a9b414c495
+          -
+            class: craft\elements\conditions\HasUrlConditionRule
+            uid: e409829f-1c5f-4449-9129-06df652309e3
+            value: true
+        elementType: craft\elements\Entry
+        fieldContext: global
+      defaultSort:
+        - dateCreated
+        - desc
+      defaultViewMode: ''
+      key: 'custom:7e0fdfb7-2573-4d33-9aa1-9d6f7877de37'
+      label: 'Created Recently'
+      tableAttributes:
+        - dateCreated
+        - link
+        - section
+        - authors
+      type: custom
+    -
+      defaultSort:
+        - postDate
+        - desc
+      defaultViewMode: ''
+      disabled: false
+      key: '*'
+      tableAttributes:
+        - link
+        - section
+        - dateUpdated
+        - revisionCreator
+      type: native
+email:
+  fromEmail: $CRAFT_FROM_EMAIL
+  fromName: $CRAFT_FROM_NAME
+  replyToEmail: null
+  template: null
+  transportSettings:
+    host: $CRAFT_SMTP_HOST
+    password: $CRAFT_SMTP_PASSWORD
+    port: $CRAFT_SMTP_PORT
+    useAuthentication: '1'
+    username: $CRAFT_SMTP_USER
+  transportType: craft\mail\transportadapters\Smtp
+fs:
+  contentMedia:
+    hasUrls: false
+    name: 'Private Uploads'
+    settings:
+      path: '@contentBasePath'
+    type: craft\fs\Local
+    url: null
+  webAssets:
+    hasUrls: true
+    name: 'Public Static Assets'
+    settings:
+      path: '@assetBasePath/img/assets'
+    type: craft\fs\Local
+    url: '@assetBaseUrl/img/assets/'
+  webMedia:
+    hasUrls: true
+    name: 'Public Uploads'
+    settings:
+      path: '@assetBasePath/media'
+    type: craft\fs\Local
+    url: '@assetBaseUrl/media/'
+  webTransforms:
+    hasUrls: true
+    name: 'Public Generated Transforms'
+    settings:
+      path: '@assetBasePath/images/t'
+    type: craft\fs\Local
+    url: '@assetBaseUrl/images/t'
+meta:
+  __names__:
+    0bc8375c-5e05-4156-a6c9-5678af911123: 'News Types' # News Types
+    0dcf57f2-a803-4b2e-8235-bc0870989f38: 'Media Embed' # Media Embed
+    0ebe4125-0bbc-4efc-a7d1-055eebd82cb5: Languages # Languages
+    1a28c01c-3fa0-4a60-8c73-d7c7707be626: Document # Document
+    1afae8bb-74c6-43e3-8b44-3e8cac38e2e8: 'Blog Index' # Blog Index
+    2bfee73d-1d4f-480f-9a78-6be8410a6704: 'Social Media' # Social Media
+    5a1e3562-bcf8-4492-afd5-f8c9cabda572: 'Call to Action' # Call to Action
+    5b72b712-0218-40c6-9717-0c395a914ad8: Summary # Summary
+    5d68dab3-70f1-4fbc-833e-e504aa7c926d: 'User Photos' # User Photos
+    6ae2a9cc-c9cc-4b89-9c8c-d7a417cbb87e: Topics # Topics
+    6b8b6979-d75e-432e-8798-2fc0d53eb8f8: Pages # Pages
+    6caf0d7f-9b74-4ae4-b0dd-458633bd94d1: Image # Image
+    7a8f449f-4cfb-49db-8656-d7551c298f4c: Authors # Authors
+    7b8b18a2-8e96-4b93-bfaa-34a1d9fa86e1: Rich # Rich
+    08b4a047-a20d-4d56-81b0-32b599c4fb41: People # People
+    08b5b22b-fb98-46ef-8a90-e392edb2244f: 'Rich Text' # Rich Text
+    8dddc601-5e96-40bb-b036-520072ba4aa7: Images # Images
+    8f58365f-4eeb-4347-9d3d-5c0d3ffd3989: 'Toggle (Default: off)' # Toggle (Default: off)
+    8f896808-aacf-4f83-9a35-cd7076a6707b: 'News Type' # News Type
+    9b8054bc-bad1-4e95-b74b-e722465d36b9: Publication # Publication
+    9bd98d08-c228-41bf-99b2-217e9444daee: 'Contact Detail' # Contact Detail
+    14f7242a-668c-4d66-a588-17cde4b7e598: 'Social Media' # Social Media
+    15ad504a-20b4-4e89-b94c-e7be7f135774: 'People Index' # People Index
+    32ed2f1a-9024-4ee9-9028-3a5041c0e5e6: Date # Date
+    56b9dc41-a930-42d9-ba33-9925b4fe9954: 'System Administration' # System Administration
+    64ee8bca-fd54-4c78-853c-aaf37e0bb8c0: Gallery # Gallery
+    65fd1257-02e1-40e1-a8a4-0ad89b4e9510: 'External Link' # External Link
+    69dcd3aa-18b8-48bf-a7d3-deb9c6912349: Topics # Topics
+    89c58a76-1da8-4581-84f1-caf2222de75a: Documents # Documents
+    89c71771-4a5b-44ce-aa3b-a61f30e4c23e: Email # Email
+    90d23e21-4d7c-444f-89c4-e66aeb92c134: 'Site Configuration' # Site Configuration
+    94e56347-cb09-47d3-a930-1fd9bc2cb026: News # News
+    295e5325-afca-4a03-93e9-ed957c574148: Footer # Footer
+    317eb1dc-2ab0-4290-a1d3-573e6ead4388: 'News Index' # News Index
+    349b5e6f-3a2a-43f1-a9dd-2373bf4a0a67: 'Share/SEO Description' # Share/SEO Description
+    653ea464-6b43-4bc9-8138-79615323d877: Blog # Blog
+    840acb32-6694-40d0-9384-60a0220c1de0: Label # Label
+    5280da4e-b8fa-4970-9b39-490dd3a96904: Publications # Publications
+    5661ce90-e09f-4c95-bffe-ffe44c413db3: 'Default Share Image' # Default Share Image
+    6813a87d-5d20-4e93-8019-6fde740ef87d: Editors # Editors
+    8447c697-1e38-439d-bfcc-beac5bf1ae31: 'Sharing & SEO' # Sharing & SEO
+    61317d04-b4b5-4b2f-ad77-e1d87029c361: 'Legacy URL' # Legacy URL
+    69339afc-d4f1-440b-a7ad-7da2ccb77972: Image # Image
+    386721be-1ee4-4e3b-b22c-7fb3dfded3ff: 'Simple Text' # Simple Text
+    856911a9-89f9-4865-bdb1-5665460c6c23: 'Contact Information' # Contact Information
+    8341919b-4097-4c45-8f3b-97ff673d9ab5: $CRAFT_SITE_NAME # $CRAFT_SITE_NAME
+    25388890-1b39-49c8-8d89-7ef2d82f89a1: Newsletter # Newsletter
+    a53f5b40-fb8c-4a9d-8c25-dc8e3dfe58d6: Code # Code
+    a385a4fe-5736-44ee-ab48-d869428d380c: News # News
+    a404ee2c-1d0d-4da9-a736-cd565a4d2605: Page # Page
+    a9736c79-b219-4814-ba33-728835b7d230: Body # Body
+    a20788dd-9031-41ba-8145-5f9d17b719ad: Primary # Primary
+    a907570e-41b8-4e87-b566-c2abe353e2a6: 'Publication Types' # Publication Types
+    ad5b3d91-425f-4181-8ded-f9c7c53a6bba: Person # Person
+    afc7f0bc-1b97-4841-a1d2-5b0385a7ca35: 'Plain Text' # Plain Text
+    b5b9369b-8ab5-44dc-bbaa-058288143025: 'Index Page' # Index Page
+    b5e4cb0a-59d9-4e16-bfc3-408104521a11: URL # URL
+    b5fe8dff-122f-4559-8bbb-d4049e479d18: 'Google Analytics' # Google Analytics
+    b6ab5147-5d5b-42af-9984-8d4c1b01f63a: 'Static Assets' # Static Assets
+    b64f08d1-e4db-4745-bf21-6e03e16ed93b: '404 Page Not Found' # 404 Page Not Found
+    b99607d1-2cd8-44ef-add2-731bb39d4397: 'Toggle (Default: on)' # Toggle (Default: on)
+    bc20ba64-4979-418f-aa28-244626f315ab: 'Home Page' # Home Page
+    be827b12-3e63-4d2a-b17a-5c60ab99f248: 'Publication Type' # Publication Type
+    c5712456-e12b-4cbc-a8cc-b570cf00d66e: 'Publications Index' # Publications Index
+    d356acc9-4ecf-488d-a89d-2857490bb576: Hyperlink # Hyperlink
+    d4720a93-54ad-45de-a939-b668ed8660dc: 'Share/SEO Image' # Share/SEO Image
+    da24c053-b31c-4fa8-b113-217845a4ce83: 'Share/SEO Title' # Share/SEO Title
+    de677f5b-6642-4086-ac1a-3e95990c19d0: 'Blog Post' # Blog Post
+    e03f52b8-38a8-493c-b27a-3c61c5532f18: Builder # Builder
+    e5d70b3c-403b-416d-b670-a93437ce427b: 'User Managers' # User Managers
+    e421ceea-a2f2-459f-88b9-2695f86047bd: Images # Images
+    e455d48b-03ff-4280-b08f-90e20f74c7b3: Languages # Languages
+    e5323eec-2cf3-40d3-b122-7df6192a5bdf: 'Form Submissions' # Form Submissions
+    fad3fe56-0b6b-46c4-a97b-b7fb98847f3c: 'Media Embed' # Media Embed
+    fd23984e-764a-4004-9834-8efe25601ba5: Simple # Simple
+plugins:
+  child-me:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  ckeditor:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.0.0.0
+  cp-field-inspect:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  element-index-defaults:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  environment-label:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  field-manager:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  image-resizer:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.0.0
+  imager-x:
+    edition: lite
+    enabled: true
+    licenseKey: $CRAFT_LICENSE_IMAGER_X
+    schemaVersion: 4.0.0
+  minify:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  nocache:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  obfuscator:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  oembed:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.1
+  retcon:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  seomate:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  twig-perversion:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  typogrify:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+system:
+  edition: pro
+  live: true
+  name: $CRAFT_SITE_NAME
+  retryDuration: null
+  schemaVersion: 5.6.0.2
+  timeZone: Asia/Kolkata

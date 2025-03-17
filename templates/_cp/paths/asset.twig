@@ -1,0 +1,35 @@
+{#
+  _cp/paths/asset
+  
+  generate a clean section / URI based
+  folder path for the given asset. Eg:
+  - <section> / <slug>
+  - <section> / <parts/of/a/compound/uri>
+#}
+
+{% extends '_cp/paths/_base' %}
+
+
+
+{# Params #}
+{% set rootElement = rootElement
+  ?? object.getRootOwner()
+  ?: object.owner
+  ?: object %}
+
+
+
+{# Biz Logic #}
+{% set _base = rootElement.section.handle ?? rootElement.refHandle %}
+{% set _segments = rootElement.uri ?? rootElement.slug ?? rootElement.handle %}
+
+
+
+{# Render #}
+{% block render [ _base ]
+  |merge(_segments|split('/'))
+  |filter
+  |unique
+  |map(s => s|ascii|kebab)
+  |join('/')
+%}

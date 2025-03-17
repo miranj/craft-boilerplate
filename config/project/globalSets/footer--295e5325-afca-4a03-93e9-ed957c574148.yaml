@@ -1,0 +1,28 @@
+fieldLayouts:
+  e60bf3c7-3502-4fec-8b64-27a07ec20883:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2024-12-17T21:29:37+00:00'
+            elementCondition: null
+            fieldUid: 386721be-1ee4-4e3b-b22c-7fb3dfded3ff # Simple Text
+            handle: copyright
+            includeInCards: false
+            instructions: null
+            label: 'Copyright Notice'
+            providesThumbs: false
+            required: false
+            tip: 'Will show the site name if left blank.'
+            type: craft\fieldlayoutelements\CustomField
+            uid: f73d09db-0220-4e4e-baa9-4c6c5c1189c0
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 078e1068-8f06-446c-a49f-ef15d760c5c9
+        userCondition: null
+handle: footer
+name: Footer
+sortOrder: 2

@@ -1,0 +1,53 @@
+color: null
+fieldLayouts:
+  db50601d-9c20-49e1-8013-55a3def9b1e7:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-02-25T02:50:10+00:00'
+            elementCondition: null
+            fieldUid: fad3fe56-0b6b-46c4-a97b-b7fb98847f3c # Media Embed
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 71b3de71-a53a-4d7b-ae09-dc509291012f
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-02-25T10:14:19+00:00'
+            elementCondition: null
+            fieldUid: 386721be-1ee4-4e3b-b22c-7fb3dfded3ff # Simple Text
+            handle: caption
+            includeInCards: false
+            instructions: null
+            label: Caption
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c98ff9f5-fff7-4aa2-b055-232d4f7dda89
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: e02d4ece-fcb5-46c6-a4b2-68759c621411
+        userCondition: null
+handle: mediaEmbed
+hasTitleField: false
+icon: photo-film-music
+name: 'Media Embed'
+showSlugField: false
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: '{{ [object.mediaEmbed.media.providerName, object.mediaEmbed.media.title]|filter|join('' – '') }}'
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

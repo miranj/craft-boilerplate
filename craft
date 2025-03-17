@@ -12,3 +12,4 @@ require __DIR__ . '/bootstrap.php';
 $app = require CRAFT_VENDOR_PATH . '/craftcms/cms/bootstrap/console.php';
 $exitCode = $app->run();
 exit($exitCode);
+

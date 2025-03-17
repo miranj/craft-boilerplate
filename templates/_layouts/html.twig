@@ -35,66 +35,65 @@
 {% block response %}
   {%- minify %}
     <head>
-      {%- apply spaceless %}
-        <meta charset="utf-8"/>
-        
-        {% for sheet in styles %}
-          <link {{ attr(sheet) }}>
-        {% endfor %}
-        
-        {% set UrlHelper = create('craft\\helpers\\UrlHelper') %}
-        {% for sheet in externalStyles %}
-          <link rel="preconnect" href="{{ UrlHelper.hostInfo(sheet.href) }}">
-          {% if sheet.async ?? false %}
-            <link rel="preload" href="{{ sheet.href }}" as="style">
-            <link rel="stylesheet" href="{{ sheet.href }}" media='print' onload="this.media='all';">
-            <noscript>
-              <link href="{{ sheet.href }}" rel="stylesheet">
-            </noscript>
-          {% else %}
+      <meta charset="utf-8"/>
+      
+      {% for sheet in styles %}
+        <link {{ attr(sheet) }}>
+      {% endfor %}
+      
+      {% set UrlHelper = create('craft\\helpers\\UrlHelper') %}
+      {% for sheet in externalStyles %}
+        <link rel="preconnect" href="{{ UrlHelper.hostInfo(sheet.href) }}">
+        {% if sheet.async ?? false %}
+          <link rel="preload" href="{{ sheet.href }}" as="style">
+          <link rel="stylesheet" href="{{ sheet.href }}" media='print' onload="this.media='all';">
+          <noscript>
             <link href="{{ sheet.href }}" rel="stylesheet">
-          {% endif %}
-        {% endfor %}
-        
-        <meta name="viewport" content="width=device-width,initial-scale=1">
-        
-        {# <link rel="apple-touch-icon" sizes="180x180" href="{{ alias('@assetBaseUrl/img/favicons/apple-touch-icon.png') }}">
-        <link rel="icon" type="image/png" sizes="32x32" href="{{ alias('@assetBaseUrl/img/favicons/favicon-32x32.png') }}">
-        <link rel="icon" type="image/png" sizes="16x16" href="{{ alias('@assetBaseUrl/img/favicons/favicon-16x16.png') }}">
-        <link rel="manifest" href="{{ alias('@assetBaseUrl/img/favicons/site.webmanifest') }}">
-        <link rel="mask-icon" color="#2379b7" href="{{ alias('@assetBaseUrl/img/favicons/safari-pinned-tab.svg') }}">
-        <meta name="msapplication-TileColor" content="#2379b7">
-        <meta name="theme-color" content="#ffffff"> #}
-        
-        {% block seo %}
-          {% hook 'seomateMeta' %}
-        {% endblock %}
-        
-        <script>
-          document.documentElement.className = document.documentElement.className.replace('has-no-js', 'has-js');
-        </script>
-        
-        {# GA4 Google Analytics tracking #}
-        {#
-          TODO: get a Google Analytics 4 Property ID (from .env settings or control panel) to enable tracking
-        #}
-        {% set googleId = getenv('GOOGLE_ANALYTICS_ID') %}
-        {% if craft.app.config.custom.enableGoogleAnalytics and googleId %}
-          <script async src="https://www.googletagmanager.com/gtag/js?id={{ googleId }}"></script>
-          <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){
-              dataLayer.push(arguments);
-            }
-            gtag('js', new Date());
-            gtag('config', '{{ googleId }}');
-          </script>
+          </noscript>
+        {% else %}
+          <link href="{{ sheet.href }}" rel="stylesheet">
         {% endif %}
-        
-        {% block head_end %}{% endblock %}
-        
-        <meta name="build" content="{{ htmlCacheKey }}" data-pjax-track>
-      {% endapply %}
+      {% endfor %}
+      
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      {# <link rel="apple-touch-icon" sizes="180x180" href="{{ alias('@assetBaseUrl/favicons/apple-touch-icon.png') }}">
+      <link rel="icon" type="image/png" sizes="32x32" href="{{ alias('@assetBaseUrl/favicons/favicon-32x32.png') }}">
+      <link rel="icon" type="image/png" sizes="16x16" href="{{ alias('@assetBaseUrl/favicons/favicon-16x16.png') }}">
+      <link rel="manifest" href="{{ alias('@assetBaseUrl/favicons/manifest.json') }}">
+      <link rel="mask-icon" color="#2379b7" href="{{ alias('@assetBaseUrl/favicons/safari-pinned-tab.svg') }}">
+      <meta name="msapplication-TileColor" content="#2379b7">
+      <meta name="theme-color" content="#ffffff"> #}
+      
+      {% block seo %}
+        {% hook 'seomateMeta' %}
+      {% endblock %}
+      
+      <script>
+        document.documentElement.className = document.documentElement.className.replace('has-no-js', 'has-js');
+      </script>
+      
+      {# GA4 Google Analytics tracking #}
+      {#
+        TODO: get a Google Analytics 4 Measurement ID (from .env settings or control panel) to enable tracking
+        {% set googleId = googleAnalytics.measurementId|trim ?: getenv('GOOGLE_ANALYTICS_ID') %}
+      #}
+      {% set googleId = getenv('GOOGLE_ANALYTICS_ID') %}
+      {% if craft.app.config.custom.enableGoogleAnalytics and googleId %}
+        <script async src="https://www.googletagmanager.com/gtag/js?id={{ googleId }}"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){
+            dataLayer.push(arguments);
+          }
+          gtag('js', new Date());
+          gtag('config', '{{ googleId }}');
+        </script>
+      {% endif %}
+      
+      {% block head_end %}{% endblock %}
+      
+      <meta name="build" content="{{ htmlCacheKey }}">
     </head>
     
     {{ block('body_open') }}
@@ -109,11 +108,9 @@
             module: 'photoswipe.min.js',
           }|map((href, key) => alias('@assetBaseUrl/build/' ~ href|replace('/.(css|js)/', ".#{assetManifest[href]}.$1"))),
         }|merge(jsConstants ?? {})|filter %}
-        <div id="pjax-eval">
-          <script>
-            window.PHOTOZOOM = {{ jsConstants|json_encode|raw }};
-          </script>
-        </div>
+        <script>
+          window.ProjectEnv = {{ jsConstants|json_encode|raw }};
+        </script>
       {% endblock %}
 
       {% for script in scripts %}

@@ -1,0 +1,13 @@
+{# _errors/404 #}
+
+{# Fetch the entry with the requested URI #}
+{% set isRequestedUriDisabled = craft.entries()
+  .uri(craft.app.request.getPathInfo()|literal)
+  .status(['disabled', 'pending'])
+  .exists()
+%}
+
+{# Render #}
+{% extends isRequestedUriDisabled
+  ? '_errors/403'
+  : '_errors/_default' %}

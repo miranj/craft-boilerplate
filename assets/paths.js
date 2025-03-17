@@ -20,6 +20,9 @@ paths.tasks = {
       source: 'css/main.css',
       destination: 'style.css',
       tailwind_config: 'tailwind.config.js',
+      nested_config: {
+        bubble: ['screen'],
+      },
       watch: [
         'css/**/*.css',
         'tailwind.config.js',
@@ -29,6 +32,11 @@ paths.tasks = {
       watch_config: {
         ignored: '../templates/_manifest*.json',
       },
+    },
+    cp: {
+      source: 'craft-cp/main.css',
+      destination: 'craftcp.css',
+      watch: ['craft-cp/**/*.css'],
     },
   },
   purge: {
@@ -40,10 +48,32 @@ paths.tasks = {
           '../templates/**/*.{twig,html}',
           paths.directories.build + '**/*.js',
         ],
+        skippedContentGlobs: [
+          '../templates/_kitchen-sink.twig',
+          '../templates/_all-views.twig',
+        ],
         defaultExtractor: (content) =>
-          content.match(/[\w-/.%:\[\]!]+(?<!:)/g) || [],
+          content.match(/[\w-/,.%@&:\(\)\{\}\[\]!]+(?<!:)/g) || [],
         safelist: {
-          deep: [/wf-active/, /richtext/, /pswp/],
+          standard: [
+            'h1',
+            'h2',
+            'h3',
+            'h4',
+            'h5',
+            'p',
+            'ul',
+            'ol',
+            'li',
+            'blockquote',
+            'em',
+            'strong',
+            'i',
+            'b',
+            'sup',
+            'sub',
+          ],
+          deep: [/richtext/, /pswp/],
         },
       },
       watch: [
@@ -58,23 +88,17 @@ paths.tasks = {
   },
   js: {
     urgent: {
-      source: [
-        '../node_modules/fontfaceobserver/fontfaceobserver.js',
-        'js/fontloader.js',
-        '../node_modules/lazysizes/lazysizes.js',
-        'js/lazyinit.js',
-      ],
+      source: ['../node_modules/lazysizes/lazysizes.js', 'js/lazyinit.js'],
       destination: 'urgent.js',
-      watch: ['js/fontloader.js', 'js/lazyinit.js'],
+      watch: ['js/lazyinit.js'],
     },
     deferred: {
       source: [
-        '../node_modules/pjax/pjax.min.js',
-        '../node_modules/topbar/topbar.min.js',
-        'js/pjaxinit.js',
+        '../node_modules/@alpinejs/collapse/dist/cdn.js',
+        '../node_modules/alpinejs/dist/cdn.js',
       ],
       destination: 'deferred.js',
-      watch: ['js/pjaxinit.js'],
+      watch: ['../node_modules/alpinejs/dist/cdn.js'],
     },
     instant: {
       es6: true,

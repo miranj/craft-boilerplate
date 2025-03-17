@@ -1,0 +1,6 @@
+allowPublicRegistration: false
+defaultGroup: null
+photoSubpath: '{username}'
+photoVolumeUid: 5d68dab3-70f1-4fbc-833e-e504aa7c926d # User Photos
+require2fa: false
+requireEmailVerification: true
