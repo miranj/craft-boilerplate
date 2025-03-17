@@ -42,7 +42,7 @@ fieldLayouts:
             handle: null
             includeInCards: false
             instructions: null
-            label: 'Apply By'
+            label: 'Application Deadline'
             providesThumbs: false
             required: false
             tip: null
