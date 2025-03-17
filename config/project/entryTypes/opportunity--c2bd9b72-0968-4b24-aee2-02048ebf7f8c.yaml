@@ -36,6 +36,54 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: '2025-03-17T03:10:40+00:00'
+            elementCondition: null
+            fieldUid: 840acb32-6694-40d0-9384-60a0220c1de0 # Label
+            handle: jobReference
+            includeInCards: false
+            instructions: null
+            label: 'Reference Number'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 7f74e83f-d685-4084-ae9f-8bb9396ca1ff
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-03-17T03:10:40+00:00'
+            elementCondition: null
+            fieldUid: 15fb4de4-f33b-47b3-aef0-be4a80ad479b # Department
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b6caa343-37ca-4c88-81d8-85683018b021
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-03-17T03:04:28+00:00'
+            elementCondition: null
+            fieldUid: 4a6b0f8c-21ac-43ae-8df2-afe365e78304 # Job Type
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 6ca5b99b-0eab-4618-9003-062f06dbf141
+            userCondition: null
+            warning: null
+            width: 100
+          -
             dateAdded: '2025-03-13T10:20:28+00:00'
             elementCondition: null
             fieldUid: 32ed2f1a-9024-4ee9-9028-3a5041c0e5e6 # Date
@@ -52,18 +100,34 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            dateAdded: '2025-03-13T10:20:28+00:00'
+            dateAdded: '2025-03-17T03:07:14+00:00'
             elementCondition: null
-            fieldUid: a9736c79-b219-4814-ba33-728835b7d230 # Body
-            handle: null
+            fieldUid: 840acb32-6694-40d0-9384-60a0220c1de0 # Label
+            handle: duration
             includeInCards: false
             instructions: null
-            label: Details
+            label: 'Contract Duration'
             providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 5decdee0-6442-4b95-9fd7-63c85b8648fc
+            uid: 0ae783b5-b15f-4200-b222-8c5b5015c912
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-03-17T03:07:14+00:00'
+            elementCondition: null
+            fieldUid: 840acb32-6694-40d0-9384-60a0220c1de0 # Label
+            handle: experience
+            includeInCards: false
+            instructions: null
+            label: 'Experience Requirements'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e02cbb50-676b-4032-ab1b-5c5ce776e603
             userCondition: null
             warning: null
             width: 100
@@ -85,6 +149,28 @@ fieldLayouts:
             width: 100
         name: Content
         uid: a3a1bd25-8624-43b8-a5e8-f668f5d1cff6
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-03-13T10:20:28+00:00'
+            elementCondition: null
+            fieldUid: a9736c79-b219-4814-ba33-728835b7d230 # Body
+            handle: description
+            includeInCards: false
+            instructions: null
+            label: Description
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5decdee0-6442-4b95-9fd7-63c85b8648fc
+            userCondition: null
+            warning: null
+            width: 100
+        name: Description
+        uid: 2591bb92-334d-429f-af49-cc1781cb0df4
         userCondition: null
       -
         elementCondition: null

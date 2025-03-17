@@ -1,0 +1,50 @@
+defaultPlacement: end
+fieldLayouts:
+  1345f768-ce81-41aa-8c27-a2424f9eaff0:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: '2025-03-17T03:01:02+00:00'
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\TitleField
+            uid: 68bb58d9-d82b-4897-8be6-65fbf283d429
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 2f992d2a-1995-47bc-9410-9af9f5477216
+        userCondition: null
+handle: jobTypes
+name: 'Job Types'
+siteSettings:
+  8341919b-4097-4c45-8f3b-97ff673d9ab5: # $CRAFT_SITE_NAME
+    hasUrls: false
+    template: null
+    uriFormat: null
+structure:
+  maxLevels: 1
+  uid: 608bdff8-65b5-46e1-b2c6-53fa91fe4edc

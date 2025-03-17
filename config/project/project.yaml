@@ -1,4 +1,4 @@
-dateModified: 1742180402
+dateModified: 1742181322
 elementSources:
   craft\elements\Entry:
     -
@@ -120,6 +120,9 @@ elementSources:
       key: 'section:febb1068-1cf0-4781-8a41-bf420bb95e2f' # Jobs
       tableAttributes:
         - link
+        - 'fieldInstance:7f74e83f-d685-4084-ae9f-8bb9396ca1ff'
+        - 'field:15fb4de4-f33b-47b3-aef0-be4a80ad479b' # Department
+        - 'field:4a6b0f8c-21ac-43ae-8df2-afe365e78304' # Job Type
         - postDate
         - 'field:32ed2f1a-9024-4ee9-9028-3a5041c0e5e6' # Date
       type: native
@@ -313,6 +316,7 @@ meta:
     1a28c01c-3fa0-4a60-8c73-d7c7707be626: Document # Document
     1afae8bb-74c6-43e3-8b44-3e8cac38e2e8: 'Blog Index' # Blog Index
     2bfee73d-1d4f-480f-9a78-6be8410a6704: 'Social Media' # Social Media
+    4a6b0f8c-21ac-43ae-8df2-afe365e78304: 'Job Type' # Job Type
     5a1e3562-bcf8-4492-afd5-f8c9cabda572: 'Call to Action' # Call to Action
     5b72b712-0218-40c6-9717-0c395a914ad8: Summary # Summary
     5d68dab3-70f1-4fbc-833e-e504aa7c926d: 'User Photos' # User Photos
@@ -321,6 +325,8 @@ meta:
     6caf0d7f-9b74-4ae4-b0dd-458633bd94d1: Image # Image
     7a8f449f-4cfb-49db-8656-d7551c298f4c: Authors # Authors
     7b8b18a2-8e96-4b93-bfaa-34a1d9fa86e1: Rich # Rich
+    7b76ffa4-3aed-45cd-9087-771dca56704e: Departments # Departments
+    7da8d57d-2f04-4b73-a787-e23c441a48f4: 'Job Types' # Job Types
     08b4a047-a20d-4d56-81b0-32b599c4fb41: People # People
     08b5b22b-fb98-46ef-8a90-e392edb2244f: 'Rich Text' # Rich Text
     8dddc601-5e96-40bb-b036-520072ba4aa7: Images # Images
@@ -330,6 +336,7 @@ meta:
     9bd98d08-c228-41bf-99b2-217e9444daee: 'Contact Detail' # Contact Detail
     14f7242a-668c-4d66-a588-17cde4b7e598: 'Social Media' # Social Media
     15ad504a-20b4-4e89-b94c-e7be7f135774: 'People Index' # People Index
+    15fb4de4-f33b-47b3-aef0-be4a80ad479b: Department # Department
     32ed2f1a-9024-4ee9-9028-3a5041c0e5e6: Date # Date
     56b9dc41-a930-42d9-ba33-9925b4fe9954: 'System Administration' # System Administration
     64ee8bca-fd54-4c78-853c-aaf37e0bb8c0: Gallery # Gallery
