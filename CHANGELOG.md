@@ -6,10 +6,10 @@ Release notes for Miranj's Craft Boilerplate starter project.
 
 ### Data Model
 
-- Added _Jobs_, _Publications_, _People_, _People Index_, _News_ and _News Index_ sections.
-- Added _Opportunity_, _Publication_, _Person_ and _News_ entry type.
-- Added _Departments_, _Job Types_, _Languages_, _Topics_, _Publications Types_ and _News Types_ categories.
-- Added _Department_, _Job Type_, _Authors_, _Languages_, _Topics_, _Publications Type_, _Contact Information_, _Media Embed_ and _News Type_ fields.
+- Added _Publications_, _People_, _People Index_, _News_ and _News Index_ sections.
+- Added _Publication_, _Person_ and _News_ entry type.
+- Added _Languages_, _Topics_,_Publications Types_ and _News Types_ categories.
+- Added _Authors_, _Languages_, _Topics_, _Publications Type_, _Contact Information_, _Media Embed_ and _News Type_ fields.
 - Added _Media Embed_ block type to the _Body_ field.
 
 ### Craft
