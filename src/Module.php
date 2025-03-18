@@ -5,7 +5,8 @@ namespace boilerplate;
 use Craft;
 use boilerplate\behaviors\EntryIndexQueryBehavior;
 use boilerplate\behaviors\IndexEntryBehaviors;
-use boilerplate\behaviors\SectionRouterBehavior;
+use boilerplate\behaviors\SectionIndexBehavior;
+use craft\models\Section;
 use craft\base\Element;
 use craft\elements\Entry;
 use craft\elements\db\EntryQuery;
@@ -128,7 +129,7 @@ class Module extends \yii\base\Module
     public function onSectionDefineBehaviors(DefineBehaviorsEvent $event)
     {
         if ($event->sender instanceof Section && $event->sender->id) {
-            $event->behaviors[$this->id] = SectionRouterBehavior::class;
+            $event->behaviors[$this->id] = SectionIndexBehavior::class;
         }
     }
 
@@ -155,6 +156,11 @@ class Module extends \yii\base\Module
         Event::on(EntryQuery::class, EntryQuery::EVENT_DEFINE_BEHAVIORS, [
             $this,
             'onEntryQueryDefineBehaviors',
+        ]);
+
+        Event::on(Section::class, Section::EVENT_DEFINE_BEHAVIORS, [
+            $this,
+            'onSectionDefineBehaviors',
         ]);
     }
 }
