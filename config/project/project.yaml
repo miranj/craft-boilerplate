@@ -1,4 +1,4 @@
-dateModified: 1742195898
+dateModified: 1742270967
 elementSources:
   craft\elements\Entry:
     -
@@ -146,6 +146,18 @@ elementSources:
       tableAttributes:
         - link
         - 'fieldInstance:6b80c15b-e48e-4b66-8f5a-795142b9a77f'
+      type: native
+    -
+      defaultSort:
+        - postDate
+        - desc
+      defaultViewMode: ''
+      disabled: false
+      key: 'section:e39594b6-01d5-4f33-b105-7b111cb3214a' # Testimonials
+      tableAttributes:
+        - postDate
+        - 'fieldInstance:36b64021-f6b3-4968-ac0a-08bef7157ff9'
+        - 'fieldInstance:4dce8f44-1b50-46a9-b253-f6cad99f3dd7'
       type: native
     -
       heading: Auto
@@ -309,6 +321,7 @@ meta:
     6caf0d7f-9b74-4ae4-b0dd-458633bd94d1: Image # Image
     7a8f449f-4cfb-49db-8656-d7551c298f4c: Authors # Authors
     7b8b18a2-8e96-4b93-bfaa-34a1d9fa86e1: Rich # Rich
+    7e194f18-cd05-4cd2-bc77-67272aaa31a3: Testimonial # Testimonial
     08b4a047-a20d-4d56-81b0-32b599c4fb41: People # People
     08b5b22b-fb98-46ef-8a90-e392edb2244f: 'Rich Text' # Rich Text
     8dddc601-5e96-40bb-b036-520072ba4aa7: Images # Images
@@ -327,6 +340,7 @@ meta:
     89c71771-4a5b-44ce-aa3b-a61f30e4c23e: Email # Email
     90d23e21-4d7c-444f-89c4-e66aeb92c134: 'Site Configuration' # Site Configuration
     94e56347-cb09-47d3-a930-1fd9bc2cb026: News # News
+    96f5233c-d76d-4f31-9f8d-6de2dfc22373: Author # Author
     295e5325-afca-4a03-93e9-ed957c574148: Footer # Footer
     317eb1dc-2ab0-4290-a1d3-573e6ead4388: 'News Index' # News Index
     349b5e6f-3a2a-43f1-a9dd-2373bf4a0a67: 'Share/SEO Description' # Share/SEO Description
@@ -368,6 +382,7 @@ meta:
     e421ceea-a2f2-459f-88b9-2695f86047bd: Images # Images
     e455d48b-03ff-4280-b08f-90e20f74c7b3: Languages # Languages
     e5323eec-2cf3-40d3-b122-7df6192a5bdf: 'Form Submissions' # Form Submissions
+    e39594b6-01d5-4f33-b105-7b111cb3214a: Testimonials # Testimonials
     fad3fe56-0b6b-46c4-a97b-b7fb98847f3c: 'Media Embed' # Media Embed
     fd23984e-764a-4004-9834-8efe25601ba5: Simple # Simple
 plugins:

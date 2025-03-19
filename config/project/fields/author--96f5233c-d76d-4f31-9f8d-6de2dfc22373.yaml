@@ -1,0 +1,22 @@
+columnSuffix: null
+handle: author
+instructions: null
+name: Author
+searchable: true
+settings:
+  allowSelfRelations: false
+  branchLimit: null
+  maintainHierarchy: false
+  maxRelations: 1
+  minRelations: null
+  selectionLabel: 'Add an author'
+  showCardsInGrid: false
+  showSiteMenu: true
+  sources:
+    - 'section:08b4a047-a20d-4d56-81b0-32b599c4fb41' # People
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: list
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Entries
