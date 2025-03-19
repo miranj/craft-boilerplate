@@ -89,6 +89,8 @@
   </header>
 {% endblock %}
 
+
+
 {% block index_body %}
   {% include '_components/_lister' with { params: {
     class: 'container',
@@ -97,5 +99,11 @@
   } } %}
 {% endblock %}
 
+
+
 {% block index_pagination %}
+  {% include '_components/pagination' with { params: {
+    class: 'container',
+    info: indexPaginateInfo ?? null,
+  } } %}
 {% endblock %}

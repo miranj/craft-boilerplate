@@ -1,0 +1,99 @@
+{# _components/pagination #}
+
+{#
+  Params
+#}
+{% set paginateInfo = params.info ?? null %}
+{% set paginateClass = params.class ?? '' %}
+{% set paginateButtonClass = params.button_class ?? 'inline-flex items-center gap-0.5e' %}
+{% set paginateButtonIconClass = params.button_icon_class ?? 'size-4' %}
+{% set paginateDropdownClass = params.dropdown_class ?? 'border bg-transparent' %}
+{% set paginateActionClass = params.action_class ?? 'inline-flex items-center' %}
+
+
+
+{#
+  Render
+#}
+{% if paginateInfo and paginateInfo.totalPages > 1 %}
+  {% set paginateButtons = [{
+    url: paginateInfo.prevUrl,
+    icon: 'chevron-left',
+    label: 'Prev',
+    labelExtra: 'ious',
+  },{
+    url: paginateInfo.nextUrl,
+    icon: 'chevron-right',
+    class: 'order-last',
+    label: 'Next',
+    labelExtra: '',
+  }] %}
+  <nav class="{{ paginateClass }} flex gap-3 items-center">
+    {% for _button in paginateButtons %}
+      <div class="{{ loop.last ? 'text-right' }}">
+        {% if _button.url %}
+          <a class="{{ paginateButtonClass }}" href="{{ _button.url }}">
+            {{ heroicon(_button.icon)|attr({
+              class: [
+                paginateButtonIconClass,
+                _button.class ?? ''
+              ]|join(' '),
+            }) }}
+            <span>
+              {{ _button.label }}
+              {%- if _button.labelExtra -%}
+                <span class="hidden sm:inline">{{ _button.labelExtra }}</span>
+              {% endif %}
+            </span>
+            <span class="hidden sm:inline-block">
+              Page
+            </span>
+          </a>
+        {% endif %}
+      </div>
+
+      {% if loop.first %}
+        <form {{ attr({
+          class: [
+            'w-1/3 grow shrink-0 text-center mx-auto',
+            'flex sm:block flex-wrap justify-center items-center gap-2xs',
+          ],
+          'x-cloak': true,
+          'x-data': { url: paginateInfo.getPageUrl(paginateInfo.currentPage) },
+          'x-on:submit.prevent': 'window.location = url',
+        }) }}>
+          <label>
+            <span class="sr-only">Jump to</span>
+            <span class="hidden xs:inline-block">
+              Page
+            </span>
+            <select {{ attr({
+              class: paginateDropdownClass,
+              'x-model': 'url',
+            }) }}>
+              {% for pageNumber in 1..paginateInfo.totalPages %}
+                <option value="{{ paginateInfo.getPageUrl(pageNumber) }}">
+                  {{ pageNumber }}
+                </option>
+              {% endfor %}
+            </select>
+            of {{ paginateInfo.totalPages }}
+          </label>
+
+          <button {{ attr({
+            class: paginateActionClass,
+            type: 'submit',
+            'x-show': "url != '#{craft.app.request.absoluteUrl}'",
+            'x-transition.scale.origin.left': true,
+          }) }}>
+            Go
+            {{ heroicon('chevron-right')|attr({
+              class: paginateButtonIconClass,
+              data: { position: 'end' },
+            }) }}
+          </button>
+        </form>
+      {% endif %}
+    {% endfor %}
+  </nav>
+{% endif %}
