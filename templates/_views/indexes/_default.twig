@@ -1,4 +1,4 @@
-{% extends '_views/details/_default' %}
+{% extends '_views/indexes/_preflight' %}
 
 
 
@@ -6,7 +6,7 @@
 {% set indexTitle = indexTitle ?? entry.title %}
 {% set indexSeoTitle = indexSeoTitle ?? indexTitle %}
 {% set indexSeoTitleSuffix = indexSeoTitleSuffix ?? '' %}
-{% set indexView = indexView ?? 'collective' %}
+{% set indexView = indexView ?? 'teaser' %}
 {% set indexOrderedBy = indexOrderedBy ?? 'postDate DESC' %}
 {% set indexPaginate = indexPaginate ?? true %}
 {% set indexPaginateCount = indexPaginateCount ?? 12 %}
@@ -71,4 +71,31 @@
 
 {# Layout #}
 {% block main %}
+  <article>
+    {{ block('index_header') }}
+    {{ block('index_body') }}
+    {{ block('index_pagination') }}
+  </article>
+{% endblock %}
+
+
+
+{# Render #}
+{% block index_header %}
+  <header class="{% block index_header_class 'container py-4' %}">
+    <h1 class="{% block index_title_class 'title-h2' %}">
+      {{ entry.title }}
+    </h1>
+  </header>
+{% endblock %}
+
+{% block index_body %}
+  {% include '_components/_lister' with { params: {
+    class: 'container',
+    entries: indexEntries,
+    kind: indexView,
+  } } %}
+{% endblock %}
+
+{% block index_pagination %}
 {% endblock %}

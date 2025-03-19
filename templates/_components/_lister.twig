@@ -3,7 +3,7 @@
 {#
   Lister
   Generate a list of entry views
-  
+
   @param  class            {string}   Class names for list wrapper element
   @param  entries          {array}    List of Elements
   @param  item_class       {string}   Class names for <li> tag element
@@ -22,7 +22,7 @@
   ----------
   A set of pre-configured values for list generation. Define the desired
   configurations in the `listerProfiles` array using the following options:
-  
+
   @option  view      {string}  Name of view type that you want to use for each list item eg: 'teaser' | 'title' etc.
   @option  list      {string}  Class names for <ul> tag element
   @option  item      {string}  Class names for <li> tag element
@@ -72,7 +72,11 @@
 
 
 {# Config #}
-{% set listerProfiles = {} %}
+{% set listerProfiles = {
+  teaser: {
+    list: 'grid gap-8 sm:grid-cols-3',
+  }
+} %}
 
 
 
@@ -81,7 +85,7 @@
 {% set listerConfig = listerConfig|merge({
   list: listerListClass ?: listerConfig.list ?? '',
   item: listerItemClass ?: listerConfig.item ?? '',
-  view: listerConfig.view ?? listerKind, 
+  view: listerConfig.view ?? listerKind,
 }) %}
 
 
@@ -100,11 +104,11 @@
         {% if listerConfig.itemWrap is defined %}
           <div class="{{ listerConfig.itemWrap }}">
         {% endif %}
-        
+
         {% block lister_item_router %}
           {% include '_routers/' ~ listerConfig.view with { element: listEntry } %}
         {% endblock %}
-        
+
         {% if listerConfig.itemWrap is defined %}
           </div>
         {% endif %}

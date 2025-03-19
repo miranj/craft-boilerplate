@@ -689,6 +689,9 @@ h5 {
 .grid {
     display: grid;
 }
+.contents {
+    display: contents;
+}
 .aspect-square {
     aspect-ratio: 1 / 1;
 }
@@ -875,6 +878,10 @@ h5 {
 .py-2 {
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
+}
+.py-4 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 .pt-10 {
     padding-top: 2.5rem;
@@ -1436,6 +1443,12 @@ div.pswp__img--placeholder,
     }
     .sm\:shrink-0 {
         flex-shrink: 0;
+    }
+    .sm\:grid-cols-4 {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+    .sm\:grid-cols-3 {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
     }
     .sm\:flex-row {
         flex-direction: row;

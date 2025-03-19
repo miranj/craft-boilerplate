@@ -440,6 +440,14 @@ h5 {
 }
 /* Links */
 /* Text Styles */
+.title-h2 {
+    font-size: clamp(1.44rem, 1.1297rem + 1.5516vi, 2.3322rem);
+    line-height: 1.25;
+}
+.title-h3 {
+    font-size: clamp(1.2rem, 1.0088rem + 0.9558vi, 1.7496rem);
+    line-height: 1.25;
+}
 /* Frills */
 .quo {
     margin-left: -0.24em;
@@ -585,6 +593,12 @@ h5 {
 .inline {
     display: inline;
 }
+.grid {
+    display: grid;
+}
+.contents {
+    display: contents;
+}
 .aspect-video {
     aspect-ratio: 16 / 9;
 }
@@ -599,6 +613,9 @@ h5 {
 }
 .cursor-zoom-in {
     cursor: zoom-in;
+}
+.gap-8 {
+    gap: 2rem;
 }
 .truncate {
     overflow: hidden;
@@ -630,6 +647,10 @@ h5 {
 .py-2 {
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
+}
+.py-4 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 .pt-10 {
     padding-top: 2.5rem;
@@ -1039,6 +1060,9 @@ div.pswp__img--placeholder,
 @media (min-width: 56.25em) {
     .sm\:w-5xl {
         width: clamp(7rem, 6.2391rem + 3.8043vi, 9.1875rem);
+    }
+    .sm\:grid-cols-3 {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 }
 @media (min-width: 74.25em) {

@@ -1,0 +1,27 @@
+{# _views/teasers/_default #}
+{% extends '_layouts/blank' %}
+
+
+
+{# Params #}
+{% set teaserTitle = teaserTitle ?? element.title %}
+{% set teaserUrl = teaserUrl ?? element.url ?: '' %}
+
+
+
+{# Render #}
+{% block layout %}
+  <article class="{% block teaser_class '' %}">
+    {% block teaser %}
+      {% if teaserUrl %}
+        <a href="{{ teaserUrl }}">
+      {% endif %}
+        <h4 {% block teaser_title_class 'title-h3' %}>
+          {{ teaserTitle }}
+        </h4>
+      {% if teaserUrl %}
+        </a>
+      {% endif %}
+    {% endblock %}
+  </article>
+{% endblock %}

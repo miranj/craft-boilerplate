@@ -1,0 +1,83 @@
+{# _views/indexes/_preflight #}
+
+{% extends feed is defined
+  ? '_layouts/feed'
+  : '_views/details/_default'
+%}
+
+
+
+{# Params #}
+{% set indexOrderedBy = indexOrderedBy ?? null %}
+{% set indexGroupBy = indexGroupBy ?? false %}
+{% set indexGroupByIsRelationField = indexGroupByIsRelationField ?? true %}
+{% set indexPaginate = indexPaginate ?? true %}
+{% set indexPaginateCount = indexPaginateCount ?? 12 %}
+{% set indexActiveFilters = indexActiveFilters ?? [] %}
+
+
+
+{# Biz logic #}
+{% block response %}
+
+  {#
+    Configure entries query
+    - sorting
+    - grouping
+  #}
+
+  {# soring #}
+  {% if indexOrderedBy %}
+    {% do entries.orderBy(indexOrderedBy) %}
+  {% endif %}
+
+  {# eager-load groupBy field #}
+  {% if indexGroupBy and indexGroupByIsRelationField %}
+    {% do entries.with((entries.with ?? [])|merge([indexGroupBy])) %}
+  {% endif %}
+
+  {#
+    Build final entries list
+  #}
+  {% if indexPaginate %}
+    {% paginate clone(entries).limit(indexPaginateCount) as indexPaginateInfo, indexEntries %}
+    {# If page number is not valid (greater than total), 404 #}
+    {% if craft.app.request.getPageNum() > indexPaginateInfo.totalPages %}
+      {% exit 404 %}
+    {% endif %}
+  {% else %}
+    {% set indexEntries = indexEntries ?? collect(entries).all() %}
+  {% endif %}
+
+  {# 404 if no entries due to filters #}
+  {% if indexEntries is empty and indexActiveFilters is not empty %}
+    {% do craft.app.response.setStatusCode('404') %}
+  {% endif %}
+
+  {#
+    Group entries if required
+  #}
+  {% if indexGroupBy %}
+    {% if indexGroupByIsRelationField %}
+      {#
+        (Each item can belong to multiple indexGroupBy items)
+        We use `array|merge(<to-merge>, true)` for recursively building
+        the grouped array
+      #}
+      {% set indexGroupedEntries = indexEntries|reduce(
+        (carry, entry) => carry|merge(combine(
+          (entry[indexGroupBy].all() ?: [ { title: 'Others' } ])|column('title'),
+          (entry[indexGroupBy].all() ?: [ {} ])|map(s => [entry])
+        ), true),
+        {}
+      ) %}
+    {% else %}
+      {% set indexGroupedEntries = indexEntries|group(indexGroupBy) %}
+    {% endif %}
+    {% set indexGroupedEntries = indexGroupedEntries|map((entries, title) => { title, entries }) %}
+  {% else %}
+    {% set indexGroupedEntries = [] %}
+  {% endif %}
+
+  {{ parent() }}
+{% endblock %}

@@ -1,5 +1,5 @@
 {
-  "craftcp.css": "sha256-e8PWdOq5arX3h4Hyft+5vkX/x7yGCoLtwHOlsws7WH8=",
+  "craftcp.css": "sha256-TnWIu4fEs4bM07GMxpboz52ZXjzU8gR1ZsusR4+2YDA=",
   "deferred.js": "sha256-g6jwe1ApjC6YWvRAbAbzSHHtItIdkx8b0v1XbaBuSJo=",
   "deferred.min.js": "sha256-qQahqH9tuRhw12rMICq71wCrrqiNIERnCsheTW4fzNI=",
   "instant.js": "sha256-B2iaWvgA0cj+jFBa+1MTqbfv7BfWt4qWj51wO1GBBIM=",
@@ -10,9 +10,9 @@
   "photoswipe.min.js": "sha256-2BmKr+JYn5q6+NwUOtE421JG1AvyBxq0KGzHJqRt+xE=",
   "photoswipeinit.js": "sha256-U3KzCEAuplnVIs1muFOE5foJrJvscmXQnfhsGGzsnlE=",
   "photoswipeinit.min.js": "sha256-3u+G77yjt3Uep6gIQJa0B3+pNmrWZaTpQ8r1Ber2dU4=",
-  "style.css": "sha256-j4AQFD+PpowbKN7tmLK0xJgnhbPAEMtmzhaqjB8TUcY=",
-  "style.purged.css": "sha256-rif2fubayWZSmcGyQH2yPYcQE6QxNX7oEhtpTBu/IWA=",
-  "style.purged.min.css": "sha256-OfiDc03cRetvmSGbSIKLFXVu6Sha7QRP3zNKi/R3U5s=",
+  "style.css": "sha256-tsBz7Wsy4rqEIPzhCdWiREmnvNmliCcZ4UdQMe2XrwA=",
+  "style.purged.css": "sha256-PAtE3/qcsLrU70mKGGflwihDBnyiVMz2/RU+AB0dTS0=",
+  "style.purged.min.css": "sha256-7XR7PKl9T3XwHkTk8NsXTJmD80TlI7OaLgo6iCeIGHY=",
   "urgent.js": "sha256-CdHwhucjsWxf3KAMIJ6GUpOItAw6kjXsHKKas6N/z8Q=",
   "urgent.min.js": "sha256-7QV74xoBGpZ8s60GCPqgL9HehwETp0lNdBzoTGfXQLM="
 }
