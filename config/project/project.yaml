@@ -1,4 +1,4 @@
-dateModified: 1744037515
+dateModified: 1744038129
 elementSources:
   craft\elements\Entry:
     -
@@ -315,7 +315,7 @@ meta:
     1afae8bb-74c6-43e3-8b44-3e8cac38e2e8: 'Blog Index' # Blog Index
     1ba3b532-e3ed-43db-93a6-00c05efcc84f: 'Resource Types' # Resource Types
     2bfee73d-1d4f-480f-9a78-6be8410a6704: 'Social Media' # Social Media
-    3aba8130-5dea-47d5-ad23-a536e8b9760a: 'Resource: Shortcut' # Resource: Shortcut
+    3aba8130-5dea-47d5-ad23-a536e8b9760a: 'Resource: Link' # Resource: Link
     5a1e3562-bcf8-4492-afd5-f8c9cabda572: 'Call to Action' # Call to Action
     5b72b712-0218-40c6-9717-0c395a914ad8: Summary # Summary
     5d68dab3-70f1-4fbc-833e-e504aa7c926d: 'User Photos' # User Photos

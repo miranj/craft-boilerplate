@@ -6,6 +6,15 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
+            content: 'Use this entry type to include a resource already present elsewhere in the site or in an external site.'
+            dateAdded: '2025-04-07T14:58:53+00:00'
+            displayInPane: true
+            elementCondition: null
+            type: craft\fieldlayoutelements\Markdown
+            uid: 40ea3b02-d8d1-4456-833d-b6bc0769eb8e
+            userCondition: null
+            width: 100
+          -
             autocapitalize: true
             autocomplete: false
             autocorrect: true
@@ -114,10 +123,10 @@ fieldLayouts:
         name: Summary
         uid: 13576120-b7c1-4a21-9fc3-13672bcb9d02
         userCondition: null
-handle: resourceShortcut
+handle: resourceLink
 hasTitleField: true
 icon: book
-name: 'Resource: Shortcut'
+name: 'Resource: Link'
 showSlugField: true
 showStatusField: true
 slugTranslationKeyFormat: null
