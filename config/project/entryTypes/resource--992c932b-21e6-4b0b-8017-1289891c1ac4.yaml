@@ -52,15 +52,34 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            dateAdded: '2025-02-28T08:54:00+00:00'
+            dateAdded: '2025-02-27T07:24:28+00:00'
             elementCondition: null
-            heading: 'Document Data'
-            type: craft\fieldlayoutelements\Heading
-            uid: d30e5818-039e-4fba-8c68-19e1dacf53a0
+            fieldUid: 1a28c01c-3fa0-4a60-8c73-d7c7707be626 # Document
+            handle: null
+            includeInCards: false
+            instructions: 'Optionally make a document available for download.'
+            label: null
+            providesThumbs: false
+            required: false
+            tip: 'Using the _Body_ field below for resource content will make it accessible to more devices and technologies.'
+            type: craft\fieldlayoutelements\CustomField
+            uid: 76160498-ef32-49bf-b1db-f5dd0f753621
             userCondition: null
+            warning: null
+            width: 50
           -
             dateAdded: '2025-02-28T08:54:00+00:00'
-            elementCondition: null
+            elementCondition:
+              class: craft\elements\conditions\entries\EntryCondition
+              conditionRules:
+                -
+                  class: craft\fields\conditions\RelationalFieldConditionRule
+                  fieldUid: 1a28c01c-3fa0-4a60-8c73-d7c7707be626 # Document
+                  layoutElementUid: 76160498-ef32-49bf-b1db-f5dd0f753621
+                  operator: notempty
+                  uid: c6aa6fc0-7ffe-4d4e-8ea4-672027186323
+              elementType: craft\elements\Entry
+              fieldContext: global
             fieldUid: 32ed2f1a-9024-4ee9-9028-3a5041c0e5e6 # Date
             handle: null
             includeInCards: false
@@ -73,46 +92,29 @@ fieldLayouts:
             uid: e9976c4e-75b9-4b12-bc2d-5f9e8cf8ca6e
             userCondition: null
             warning: null
-            width: 100
+            width: 50
           -
-            dateAdded: '2025-02-27T07:24:28+00:00'
+            dateAdded: '2025-02-27T04:41:51+00:00'
             elementCondition: null
-            fieldUid: 1a28c01c-3fa0-4a60-8c73-d7c7707be626 # Document
+            fieldUid: a9736c79-b219-4814-ba33-728835b7d230 # Body
             handle: null
             includeInCards: false
             instructions: null
-            label: null
+            label: Body
             providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 76160498-ef32-49bf-b1db-f5dd0f753621
+            uid: 43e8a921-2b66-4b33-84a4-8e8999f5c789
             userCondition: null
             warning: null
             width: 100
-          -
-            dateAdded: '2025-02-28T08:54:00+00:00'
-            elementCondition: null
-            fieldUid: e455d48b-03ff-4280-b08f-90e20f74c7b3 # Languages
-            handle: null
-            includeInCards: false
-            instructions: null
-            label: null
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 050870e1-1ef3-47a1-8373-411998c0c5de
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            dateAdded: '2025-02-28T08:54:00+00:00'
-            elementCondition: null
-            heading: Related
-            type: craft\fieldlayoutelements\Heading
-            uid: 8b49ab05-f11d-4675-bcc0-229aa5b62bf0
-            userCondition: null
+        name: Page
+        uid: 8ff94327-55d3-4051-b60b-5469f5f6f537
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
           -
             dateAdded: '2025-02-27T04:42:27+00:00'
             elementCondition: null
@@ -145,30 +147,8 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-        name: Information
+        name: Related
         uid: 0804600b-7a8c-438a-b877-6a0c13f3435e
-        userCondition: null
-      -
-        elementCondition: null
-        elements:
-          -
-            dateAdded: '2025-02-27T04:41:51+00:00'
-            elementCondition: null
-            fieldUid: a9736c79-b219-4814-ba33-728835b7d230 # Body
-            handle: null
-            includeInCards: false
-            instructions: null
-            label: Body
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 43e8a921-2b66-4b33-84a4-8e8999f5c789
-            userCondition: null
-            warning: null
-            width: 100
-        name: Body
-        uid: 8ff94327-55d3-4051-b60b-5469f5f6f537
         userCondition: null
       -
         elementCondition: null

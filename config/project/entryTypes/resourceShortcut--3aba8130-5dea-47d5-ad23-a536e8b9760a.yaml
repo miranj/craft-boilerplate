@@ -36,13 +36,6 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            dateAdded: '2025-03-03T09:58:09+00:00'
-            elementCondition: null
-            heading: 'Link Data'
-            type: craft\fieldlayoutelements\Heading
-            uid: eb19ab94-6c51-4a20-a843-a11b3523ff7a
-            userCondition: null
-          -
             dateAdded: '2025-03-05T08:22:19+00:00'
             elementCondition: null
             fieldUid: ed5b1453-5dc4-4e73-8865-dad39383c4cb # Hyperlink (Entry, URL)
@@ -58,29 +51,12 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-          -
-            dateAdded: '2025-03-03T09:58:09+00:00'
-            elementCondition: null
-            fieldUid: e455d48b-03ff-4280-b08f-90e20f74c7b3 # Languages
-            handle: null
-            includeInCards: false
-            instructions: null
-            label: null
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 23f3b933-7af2-4af9-aeca-7e58f1fce0f2
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            dateAdded: '2025-03-03T09:58:09+00:00'
-            elementCondition: null
-            heading: Related
-            type: craft\fieldlayoutelements\Heading
-            uid: a501a4c9-fe26-4d84-8c1f-0ce17471cc6b
-            userCondition: null
+        name: Meta
+        uid: 3e2309b8-4506-467c-a760-3d0ec08416fa
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
           -
             dateAdded: '2025-03-03T09:58:09+00:00'
             elementCondition: null
@@ -113,8 +89,30 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-        name: Content
-        uid: 3e2309b8-4506-467c-a760-3d0ec08416fa
+        name: Related
+        uid: 351ddd4a-eb8a-4610-bbe5-a4a5f8835c7a
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-04-07T14:50:46+00:00'
+            elementCondition: null
+            fieldUid: 5b72b712-0218-40c6-9717-0c395a914ad8 # Summary
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 673336e4-27cc-45dd-acdb-6a3152dfa3e1
+            userCondition: null
+            warning: null
+            width: 100
+        name: Summary
+        uid: 13576120-b7c1-4a21-9fc3-13672bcb9d02
         userCondition: null
 handle: resourceShortcut
 hasTitleField: true
