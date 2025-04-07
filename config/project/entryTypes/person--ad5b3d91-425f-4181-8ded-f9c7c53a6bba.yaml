@@ -96,7 +96,7 @@ fieldLayouts:
             handle: bio
             includeInCards: false
             instructions: null
-            label: __blank__
+            label: Bio
             providesThumbs: false
             required: false
             tip: null
