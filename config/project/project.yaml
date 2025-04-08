@@ -1,4 +1,4 @@
-dateModified: 1742265384
+dateModified: 1744038699
 elementSources:
   craft\elements\Entry:
     -
@@ -127,6 +127,17 @@ elementSources:
       type: native
     -
       defaultSort:
+        - title
+        - asc
+      defaultViewMode: ''
+      disabled: false
+      key: 'section:08b4a047-a20d-4d56-81b0-32b599c4fb41' # People
+      tableAttributes:
+        - link
+        - 'fieldInstance:6b80c15b-e48e-4b66-8f5a-795142b9a77f'
+      type: native
+    -
+      defaultSort:
         - postDate
         - desc
       defaultViewMode: ''
@@ -138,14 +149,16 @@ elementSources:
       type: native
     -
       defaultSort:
-        - title
-        - asc
+        - postDate
+        - desc
       defaultViewMode: ''
       disabled: false
-      key: 'section:08b4a047-a20d-4d56-81b0-32b599c4fb41' # People
+      key: 'section:be130f04-1c51-420d-818e-6d4f5a5960fa' # Resources
       tableAttributes:
         - link
-        - 'fieldInstance:6b80c15b-e48e-4b66-8f5a-795142b9a77f'
+        - type
+        - dateUpdated
+        - revisionCreator
       type: native
     -
       heading: Auto
@@ -300,7 +313,9 @@ meta:
     0ebe4125-0bbc-4efc-a7d1-055eebd82cb5: Languages # Languages
     1a28c01c-3fa0-4a60-8c73-d7c7707be626: Document # Document
     1afae8bb-74c6-43e3-8b44-3e8cac38e2e8: 'Blog Index' # Blog Index
+    1ba3b532-e3ed-43db-93a6-00c05efcc84f: 'Resource Types' # Resource Types
     2bfee73d-1d4f-480f-9a78-6be8410a6704: 'Social Media' # Social Media
+    3aba8130-5dea-47d5-ad23-a536e8b9760a: 'Resource: Link' # Resource: Link
     5a1e3562-bcf8-4492-afd5-f8c9cabda572: 'Call to Action' # Call to Action
     5b72b712-0218-40c6-9717-0c395a914ad8: Summary # Summary
     5d68dab3-70f1-4fbc-833e-e504aa7c926d: 'User Photos' # User Photos
@@ -320,6 +335,7 @@ meta:
     15ad504a-20b4-4e89-b94c-e7be7f135774: 'People Index' # People Index
     32ed2f1a-9024-4ee9-9028-3a5041c0e5e6: Date # Date
     56b9dc41-a930-42d9-ba33-9925b4fe9954: 'System Administration' # System Administration
+    58e76d43-a465-4c1a-b102-2726a9fc13f5: 'Resources Types' # Resources Types
     64ee8bca-fd54-4c78-853c-aaf37e0bb8c0: Gallery # Gallery
     65fd1257-02e1-40e1-a8a4-0ad89b4e9510: 'External Link' # External Link
     69dcd3aa-18b8-48bf-a7d3-deb9c6912349: Topics # Topics
@@ -332,6 +348,7 @@ meta:
     349b5e6f-3a2a-43f1-a9dd-2373bf4a0a67: 'Share/SEO Description' # Share/SEO Description
     653ea464-6b43-4bc9-8138-79615323d877: Blog # Blog
     840acb32-6694-40d0-9384-60a0220c1de0: Label # Label
+    992c932b-21e6-4b0b-8017-1289891c1ac4: Resource # Resource
     5280da4e-b8fa-4970-9b39-490dd3a96904: Publications # Publications
     5661ce90-e09f-4c95-bffe-ffe44c413db3: 'Default Share Image' # Default Share Image
     6813a87d-5d20-4e93-8019-6fde740ef87d: Editors # Editors
@@ -357,9 +374,10 @@ meta:
     b64f08d1-e4db-4745-bf21-6e03e16ed93b: '404 Page Not Found' # 404 Page Not Found
     b99607d1-2cd8-44ef-add2-731bb39d4397: 'Toggle (Default: on)' # Toggle (Default: on)
     bc20ba64-4979-418f-aa28-244626f315ab: 'Home Page' # Home Page
+    be130f04-1c51-420d-818e-6d4f5a5960fa: Resources # Resources
     be827b12-3e63-4d2a-b17a-5c60ab99f248: 'Publication Type' # Publication Type
     c5712456-e12b-4cbc-a8cc-b570cf00d66e: 'Publications Index' # Publications Index
-    d356acc9-4ecf-488d-a89d-2857490bb576: Hyperlink # Hyperlink
+    d356acc9-4ecf-488d-a89d-2857490bb576: 'Link (inc. Assets)' # Link (inc. Assets)
     d4720a93-54ad-45de-a939-b668ed8660dc: 'Share/SEO Image' # Share/SEO Image
     da24c053-b31c-4fa8-b113-217845a4ce83: 'Share/SEO Title' # Share/SEO Title
     de677f5b-6642-4086-ac1a-3e95990c19d0: 'Blog Post' # Blog Post
@@ -368,6 +386,7 @@ meta:
     e421ceea-a2f2-459f-88b9-2695f86047bd: Images # Images
     e455d48b-03ff-4280-b08f-90e20f74c7b3: Languages # Languages
     e5323eec-2cf3-40d3-b122-7df6192a5bdf: 'Form Submissions' # Form Submissions
+    ed5b1453-5dc4-4e73-8865-dad39383c4cb: Link # Link
     fad3fe56-0b6b-46c4-a97b-b7fb98847f3c: 'Media Embed' # Media Embed
     fd23984e-764a-4004-9834-8efe25601ba5: Simple # Simple
 plugins:
