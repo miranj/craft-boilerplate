@@ -42,7 +42,7 @@ fieldLayouts:
         userCondition: null
 handle: contactSocialMedia
 hasTitleField: false
-icon: link
+icon: thumbs-up
 name: 'Social Media'
 showSlugField: true
 showStatusField: true
