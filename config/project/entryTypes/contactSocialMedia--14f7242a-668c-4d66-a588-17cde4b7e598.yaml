@@ -44,7 +44,7 @@ handle: contactSocialMedia
 hasTitleField: false
 icon: thumbs-up
 name: 'Social Media'
-showSlugField: true
+showSlugField: false
 showStatusField: true
 slugTranslationKeyFormat: null
 slugTranslationMethod: site
