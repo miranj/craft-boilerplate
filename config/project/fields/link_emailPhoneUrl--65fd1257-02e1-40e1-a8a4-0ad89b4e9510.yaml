@@ -1,12 +1,12 @@
 columnSuffix: null
-handle: linkUrl
+handle: link_emailPhoneUrl
 instructions: null
-name: 'Link: URL'
-searchable: true
+name: 'Link (Email, Phone, URL)'
+searchable: false
 settings:
   fullGraphqlData: false
   maxLength: 255
-  showLabelField: false
+  showLabelField: true
   typeSettings:
     __assoc__:
       -
@@ -21,6 +21,8 @@ settings:
               - ''
   types:
     - url
+    - email
+    - tel
 translationKeyFormat: null
 translationMethod: none
 type: craft\fields\Link

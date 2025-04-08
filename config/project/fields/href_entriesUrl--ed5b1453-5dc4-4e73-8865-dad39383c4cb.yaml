@@ -1,7 +1,7 @@
 columnSuffix: null
-handle: hyperlink
+handle: href_entriesUrl
 instructions: null
-name: Link
+name: 'URL (Entries, URL)'
 searchable: false
 settings:
   fullGraphqlData: false

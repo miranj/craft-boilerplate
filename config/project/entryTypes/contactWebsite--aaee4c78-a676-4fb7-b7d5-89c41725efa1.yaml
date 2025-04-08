@@ -8,8 +8,8 @@ fieldLayouts:
           -
             dateAdded: '2025-04-08T12:13:30+00:00'
             elementCondition: null
-            fieldUid: b5e4cb0a-59d9-4e16-bfc3-408104521a11 # Link: URL
-            handle: null
+            fieldUid: b5e4cb0a-59d9-4e16-bfc3-408104521a11 # URL
+            handle: hyperlink
             includeInCards: false
             instructions: null
             label: __blank__

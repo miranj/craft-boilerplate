@@ -1,4 +1,4 @@
-dateModified: 1744121884
+dateModified: 1744122472
 elementSources:
   craft\elements\Entry:
     -
@@ -356,7 +356,7 @@ meta:
     56b9dc41-a930-42d9-ba33-9925b4fe9954: 'System Administration' # System Administration
     58e76d43-a465-4c1a-b102-2726a9fc13f5: 'Resources Types' # Resources Types
     64ee8bca-fd54-4c78-853c-aaf37e0bb8c0: Gallery # Gallery
-    65fd1257-02e1-40e1-a8a4-0ad89b4e9510: 'External Link' # External Link
+    65fd1257-02e1-40e1-a8a4-0ad89b4e9510: 'Link (Email, Phone, URL)' # Link (Email, Phone, URL)
     69dcd3aa-18b8-48bf-a7d3-deb9c6912349: Topics # Topics
     89c58a76-1da8-4581-84f1-caf2222de75a: Documents # Documents
     89c71771-4a5b-44ce-aa3b-a61f30e4c23e: Email # Email
@@ -372,7 +372,7 @@ meta:
     5661ce90-e09f-4c95-bffe-ffe44c413db3: 'Default Share Image' # Default Share Image
     6813a87d-5d20-4e93-8019-6fde740ef87d: Editors # Editors
     8447c697-1e38-439d-bfcc-beac5bf1ae31: 'Sharing & SEO' # Sharing & SEO
-    23995e04-c457-4eeb-b78d-1c22f16cf4f6: 'Link: Email' # Link: Email
+    23995e04-c457-4eeb-b78d-1c22f16cf4f6: 'URL (Email)' # URL (Email)
     61317d04-b4b5-4b2f-ad77-e1d87029c361: 'Legacy URL' # Legacy URL
     69339afc-d4f1-440b-a7ad-7da2ccb77972: Image # Image
     386721be-1ee4-4e3b-b22c-7fb3dfded3ff: 'Simple Text' # Simple Text
@@ -380,7 +380,7 @@ meta:
     8341919b-4097-4c45-8f3b-97ff673d9ab5: $CRAFT_SITE_NAME # $CRAFT_SITE_NAME
     18803174-20d5-4b61-a067-3072b484f857: 'Resources Index' # Resources Index
     25388890-1b39-49c8-8d89-7ef2d82f89a1: Newsletter # Newsletter
-    a6b97e16-5236-44b1-ad57-3899644efd40: 'Link With Label (inc. Assets)' # Link With Label (inc. Assets)
+    a6b97e16-5236-44b1-ad57-3899644efd40: 'Link (Assets, Entries, URL)' # Link (Assets, Entries, URL)
     a53f5b40-fb8c-4a9d-8c25-dc8e3dfe58d6: Code # Code
     a385a4fe-5736-44ee-ab48-d869428d380c: News # News
     a404ee2c-1d0d-4da9-a736-cd565a4d2605: Page # Page
@@ -392,7 +392,7 @@ meta:
     ad5b3d91-425f-4181-8ded-f9c7c53a6bba: Person # Person
     afc7f0bc-1b97-4841-a1d2-5b0385a7ca35: 'Plain Text' # Plain Text
     b5b9369b-8ab5-44dc-bbaa-058288143025: 'Index Page' # Index Page
-    b5e4cb0a-59d9-4e16-bfc3-408104521a11: 'Link: URL' # Link: URL
+    b5e4cb0a-59d9-4e16-bfc3-408104521a11: URL # URL
     b5fe8dff-122f-4559-8bbb-d4049e479d18: 'Google Analytics' # Google Analytics
     b6ab5147-5d5b-42af-9984-8d4c1b01f63a: 'Static Assets' # Static Assets
     b64f08d1-e4db-4745-bf21-6e03e16ed93b: '404 Page Not Found' # 404 Page Not Found
@@ -410,7 +410,7 @@ meta:
     e421ceea-a2f2-459f-88b9-2695f86047bd: Images # Images
     e455d48b-03ff-4280-b08f-90e20f74c7b3: Languages # Languages
     e5323eec-2cf3-40d3-b122-7df6192a5bdf: 'Form Submissions' # Form Submissions
-    ed5b1453-5dc4-4e73-8865-dad39383c4cb: Link # Link
+    ed5b1453-5dc4-4e73-8865-dad39383c4cb: 'URL (Entries, URL)' # URL (Entries, URL)
     fad3fe56-0b6b-46c4-a97b-b7fb98847f3c: 'Media Embed' # Media Embed
     fd23984e-764a-4004-9834-8efe25601ba5: Simple # Simple
 plugins:

@@ -1,12 +1,12 @@
 columnSuffix: null
-handle: externalLink
+handle: href_url
 instructions: null
-name: 'External Link'
-searchable: false
+name: URL
+searchable: true
 settings:
   fullGraphqlData: false
   maxLength: 255
-  showLabelField: true
+  showLabelField: false
   typeSettings:
     __assoc__:
       -
@@ -21,8 +21,6 @@ settings:
               - ''
   types:
     - url
-    - email
-    - tel
 translationKeyFormat: null
 translationMethod: none
 type: craft\fields\Link

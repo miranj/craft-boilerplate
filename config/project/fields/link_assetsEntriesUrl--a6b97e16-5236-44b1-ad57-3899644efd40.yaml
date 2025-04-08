@@ -1,7 +1,7 @@
 columnSuffix: null
-handle: linkWithLabelIncAssets
+handle: link_assetsEntriesUrl
 instructions: null
-name: 'Link With Label (inc. Assets)'
+name: 'Link (Assets, Entries, URL)'
 searchable: false
 settings:
   fullGraphqlData: false

@@ -1,10 +1,10 @@
 columnSuffix: null
-handle: linkUrlEmail
+handle: href_email
 instructions: null
-name: 'Link: Email'
+name: 'URL (Email)'
 searchable: true
 settings:
-  fullGraphqlData: true
+  fullGraphqlData: false
   maxLength: 255
   showLabelField: false
   types:
