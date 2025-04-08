@@ -8,7 +8,7 @@ fieldLayouts:
           -
             dateAdded: '2025-02-28T02:59:42+00:00'
             elementCondition: null
-            fieldUid: 65fd1257-02e1-40e1-a8a4-0ad89b4e9510 # External Link
+            fieldUid: 65fd1257-02e1-40e1-a8a4-0ad89b4e9510 # External Link With Label
             handle: null
             includeInCards: false
             instructions: null

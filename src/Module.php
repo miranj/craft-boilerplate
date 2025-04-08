@@ -3,17 +3,18 @@
 namespace boilerplate;
 
 use Craft;
+use craft\elements\Entry;
 use boilerplate\behaviors\EntryIndexQueryBehavior;
 use boilerplate\behaviors\IndexEntryBehaviors;
 use boilerplate\behaviors\SectionIndexBehavior;
 use craft\models\Section;
 use craft\base\Element;
-use craft\elements\Entry;
 use craft\elements\db\EntryQuery;
 use craft\events\DefineBehaviorsEvent;
 use craft\web\Response;
 use boilerplate\twig\Extension;
 use yii\base\Event;
+use craft\validators\DateCompareValidator;
 
 /**
  * Custom module class.
@@ -100,6 +101,52 @@ class Module extends \yii\base\Module
         }
     }
 
+    /**
+     * Custom validation rule to ensure Event end date should be greater than start date
+     * https://craftcms.com/docs/3.x/extend/extending-system-components.html#custom-validation-rules
+     */
+    public function validateEventEndDateTime(Event $event)
+    {
+        // Elements to be validated
+        $validateElementTypes = [
+            Entry::class => [
+                // Section:EntryType
+                'events:event',
+            ],
+        ];
+
+        // Set Entry data
+        $element = $event->sender;
+
+        // Only check elements in the include-list
+        $context =
+            ($element->section->handle ?? '*') . ':' . $element->type->handle;
+        if (!in_array($context, $validateElementTypes[get_class($element)])) {
+            return;
+        }
+
+        // Disallow only end date but no start date
+        $event->rules[] = [
+            'field:endDateTime',
+            'required',
+            'when' => function ($model) {
+                return !empty($model->endDateTime);
+            },
+            'on' => Entry::SCENARIO_LIVE,
+        ];
+
+        // Both start and end dates should be present
+        if (!empty($element->endDateTime) && !empty($element->startDateTime)) {
+            $event->rules[] = [
+                ['field:endDateTime'],
+                DateCompareValidator::class,
+                'operator' => '>=',
+                'compareAttribute' => 'field:startDateTime',
+                'on' => Entry::SCENARIO_LIVE,
+            ];
+        }
+    }
+
     // define entry behaviors
     // - custom index entry properties
     public function onEntryDefineBehaviors(DefineBehaviorsEvent $event)
@@ -146,6 +193,11 @@ class Module extends \yii\base\Module
         Event::on(Response::class, Response::EVENT_BEFORE_SEND, [
             $this,
             'onBeforeSendLivePreview',
+        ]);
+
+        Event::on(Entry::class, Entry::EVENT_DEFINE_RULES, [
+            $this,
+            'validateEventEndDateTime',
         ]);
 
         Event::on(Entry::class, Element::EVENT_DEFINE_BEHAVIORS, [

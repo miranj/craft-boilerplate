@@ -1,12 +1,12 @@
 columnSuffix: null
-handle: hyperlinkAssets
+handle: linkWithLabelIncAssets
 instructions: null
-name: 'Link (inc. Assets)'
-searchable: true
+name: 'Link With Label (inc. Assets)'
+searchable: false
 settings:
   fullGraphqlData: false
   maxLength: 255
-  showLabelField: false
+  showLabelField: true
   typeSettings:
     __assoc__:
       -
@@ -15,12 +15,20 @@ settings:
           __assoc__:
             -
               - sources
-              -
-                - 'volume:e421ceea-a2f2-459f-88b9-2695f86047bd' # Images
-                - 'volume:89c58a76-1da8-4581-84f1-caf2222de75a' # Documents
+              - '*'
             -
               - allowedKinds
-              - '*'
+              -
+                - audio
+                - captionsSubtitles
+                - compressed
+                - image
+                - json
+                - pdf
+                - powerpoint
+                - text
+                - video
+                - word
             -
               - showUnpermittedVolumes
               - ''
@@ -43,7 +51,7 @@ settings:
               - ''
             -
               - allowAnchors
-              - '1'
+              - ''
   types:
     - entry
     - url
