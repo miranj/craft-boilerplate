@@ -1,4 +1,4 @@
-dateModified: 1744038700
+dateModified: 1744085068
 elementSources:
   craft\elements\Entry:
     -
@@ -120,9 +120,10 @@ elementSources:
       key: 'section:a976662e-fc19-4f89-ae6b-a5b4db64752b' # Events
       tableAttributes:
         - link
-        - 'fieldInstance:04ba682b-6348-48de-833f-c03c6dd10b6b'
         - 'fieldInstance:e30e5ed4-2a93-4299-927a-7993d8dc68b3'
-        - 'fieldInstance:7f13ccc6-9d8e-4cbb-b64c-7821ab39219b'
+        - 'field:9b5f9007-3f61-4857-b978-fdfbc4b29dba' # Event Types
+        - dateUpdated
+        - revisionCreator
       type: native
     -
       defaultSort:

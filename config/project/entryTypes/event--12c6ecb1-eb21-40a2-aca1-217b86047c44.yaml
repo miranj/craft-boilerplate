@@ -1,6 +1,8 @@
 color: null
 fieldLayouts:
   ccb6f9a2-b037-48d3-9dd8-333530aa8e65:
+    cardView:
+      - 'layoutElement:e30e5ed4-2a93-4299-927a-7993d8dc68b3'
     tabs:
       -
         elementCondition: null
@@ -59,7 +61,7 @@ fieldLayouts:
             includeInCards: false
             instructions: null
             label: 'Cover Image'
-            providesThumbs: false
+            providesThumbs: true
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -72,7 +74,7 @@ fieldLayouts:
             elementCondition: null
             fieldUid: bb0a4a47-dcbd-41a8-9bbb-82341295f5ff # Date & Time
             handle: startDateTime
-            includeInCards: false
+            includeInCards: true
             instructions: null
             label: 'Start Date'
             providesThumbs: false
