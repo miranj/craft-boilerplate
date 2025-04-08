@@ -1,4 +1,4 @@
-dateModified: 1744085068
+dateModified: 1744086007
 elementSources:
   craft\elements\Entry:
     -
@@ -330,7 +330,6 @@ meta:
     1ba3b532-e3ed-43db-93a6-00c05efcc84f: 'Resource Types' # Resource Types
     2bfee73d-1d4f-480f-9a78-6be8410a6704: 'Social Media' # Social Media
     3aba8130-5dea-47d5-ad23-a536e8b9760a: 'Resource: Link' # Resource: Link
-    5a1e3562-bcf8-4492-afd5-f8c9cabda572: 'Call to Action' # Call to Action
     5b72b712-0218-40c6-9717-0c395a914ad8: Summary # Summary
     5d68dab3-70f1-4fbc-833e-e504aa7c926d: 'User Photos' # User Photos
     6ae2a9cc-c9cc-4b89-9c8c-d7a417cbb87e: Topics # Topics
@@ -356,7 +355,7 @@ meta:
     56b9dc41-a930-42d9-ba33-9925b4fe9954: 'System Administration' # System Administration
     58e76d43-a465-4c1a-b102-2726a9fc13f5: 'Resources Types' # Resources Types
     64ee8bca-fd54-4c78-853c-aaf37e0bb8c0: Gallery # Gallery
-    65fd1257-02e1-40e1-a8a4-0ad89b4e9510: 'External Link' # External Link
+    65fd1257-02e1-40e1-a8a4-0ad89b4e9510: 'External Link With Label' # External Link With Label
     69dcd3aa-18b8-48bf-a7d3-deb9c6912349: Topics # Topics
     89c58a76-1da8-4581-84f1-caf2222de75a: Documents # Documents
     89c71771-4a5b-44ce-aa3b-a61f30e4c23e: Email # Email
@@ -378,7 +377,7 @@ meta:
     856911a9-89f9-4865-bdb1-5665460c6c23: 'Contact Information' # Contact Information
     8341919b-4097-4c45-8f3b-97ff673d9ab5: $CRAFT_SITE_NAME # $CRAFT_SITE_NAME
     25388890-1b39-49c8-8d89-7ef2d82f89a1: Newsletter # Newsletter
-    a6b97e16-5236-44b1-ad57-3899644efd40: 'Hyperlink With Label' # Hyperlink With Label
+    a6b97e16-5236-44b1-ad57-3899644efd40: 'Link With Label (inc. Assets)' # Link With Label (inc. Assets)
     a53f5b40-fb8c-4a9d-8c25-dc8e3dfe58d6: Code # Code
     a385a4fe-5736-44ee-ab48-d869428d380c: News # News
     a404ee2c-1d0d-4da9-a736-cd565a4d2605: Page # Page
@@ -399,7 +398,6 @@ meta:
     be130f04-1c51-420d-818e-6d4f5a5960fa: Resources # Resources
     be827b12-3e63-4d2a-b17a-5c60ab99f248: 'Publication Type' # Publication Type
     c5712456-e12b-4cbc-a8cc-b570cf00d66e: 'Publications Index' # Publications Index
-    d356acc9-4ecf-488d-a89d-2857490bb576: 'Link (inc. Assets)' # Link (inc. Assets)
     d4720a93-54ad-45de-a939-b668ed8660dc: 'Share/SEO Image' # Share/SEO Image
     da24c053-b31c-4fa8-b113-217845a4ce83: 'Share/SEO Title' # Share/SEO Title
     de677f5b-6642-4086-ac1a-3e95990c19d0: 'Blog Post' # Blog Post

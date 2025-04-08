@@ -104,11 +104,11 @@ fieldLayouts:
           -
             dateAdded: '2025-03-04T02:46:51+00:00'
             elementCondition: null
-            fieldUid: a6b97e16-5236-44b1-ad57-3899644efd40 # Hyperlink With Label
-            handle: null
+            fieldUid: a6b97e16-5236-44b1-ad57-3899644efd40 # Link With Label (inc. Assets)
+            handle: cta
             includeInCards: false
             instructions: null
-            label: null
+            label: 'Registration Link / Additional Information'
             providesThumbs: false
             required: false
             tip: null

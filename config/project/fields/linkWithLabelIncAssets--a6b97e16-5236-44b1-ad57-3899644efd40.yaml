@@ -1,31 +1,14 @@
 columnSuffix: null
-handle: hyperlinkWithLabel
+handle: linkWithLabelIncAssets
 instructions: null
-name: 'Hyperlink With Label'
+name: 'Link With Label (inc. Assets)'
 searchable: false
 settings:
-  fullGraphqlData: true
+  fullGraphqlData: false
   maxLength: 255
   showLabelField: true
   typeSettings:
     __assoc__:
-      -
-        - entry
-        -
-          __assoc__:
-            -
-              - sources
-              - '*'
-      -
-        - url
-        -
-          __assoc__:
-            -
-              - allowRootRelativeUrls
-              - ''
-            -
-              - allowAnchors
-              - ''
       -
         - asset
         -
@@ -51,6 +34,23 @@ settings:
               - ''
             -
               - showUnpermittedFiles
+              - ''
+      -
+        - entry
+        -
+          __assoc__:
+            -
+              - sources
+              - '*'
+      -
+        - url
+        -
+          __assoc__:
+            -
+              - allowRootRelativeUrls
+              - ''
+            -
+              - allowAnchors
               - ''
   types:
     - entry

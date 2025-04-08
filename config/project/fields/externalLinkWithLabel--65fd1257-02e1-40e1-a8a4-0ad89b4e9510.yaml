@@ -1,10 +1,10 @@
 columnSuffix: null
-handle: externalLink
+handle: externalLinkWithLabel
 instructions: null
-name: 'External Link'
+name: 'External Link With Label'
 searchable: false
 settings:
-  fullGraphqlData: true
+  fullGraphqlData: false
   maxLength: 255
   showLabelField: true
   typeSettings:
