@@ -1,7 +1,7 @@
 columnSuffix: null
-handle: externalLinkWithLabel
+handle: externalLink
 instructions: null
-name: 'External Link With Label'
+name: 'External Link'
 searchable: false
 settings:
   fullGraphqlData: false
