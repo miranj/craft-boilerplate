@@ -327,6 +327,7 @@ meta:
     0ebe4125-0bbc-4efc-a7d1-055eebd82cb5: Languages # Languages
     1a28c01c-3fa0-4a60-8c73-d7c7707be626: Document # Document
     1afae8bb-74c6-43e3-8b44-3e8cac38e2e8: 'Blog Index' # Blog Index
+    1b75b0c0-3003-4fe3-bc8f-478e12906e75: 'Contact: Email' # Contact: Email
     1ba3b532-e3ed-43db-93a6-00c05efcc84f: 'Resource Types' # Resource Types
     2bfee73d-1d4f-480f-9a78-6be8410a6704: 'Social Media' # Social Media
     3aba8130-5dea-47d5-ad23-a536e8b9760a: 'Resource: Link' # Resource: Link
@@ -371,6 +372,7 @@ meta:
     5661ce90-e09f-4c95-bffe-ffe44c413db3: 'Default Share Image' # Default Share Image
     6813a87d-5d20-4e93-8019-6fde740ef87d: Editors # Editors
     8447c697-1e38-439d-bfcc-beac5bf1ae31: 'Sharing & SEO' # Sharing & SEO
+    23995e04-c457-4eeb-b78d-1c22f16cf4f6: 'Link: Email' # Link: Email
     61317d04-b4b5-4b2f-ad77-e1d87029c361: 'Legacy URL' # Legacy URL
     69339afc-d4f1-440b-a7ad-7da2ccb77972: Image # Image
     386721be-1ee4-4e3b-b22c-7fb3dfded3ff: 'Simple Text' # Simple Text
@@ -386,6 +388,7 @@ meta:
     a20788dd-9031-41ba-8145-5f9d17b719ad: Primary # Primary
     a907570e-41b8-4e87-b566-c2abe353e2a6: 'Publication Types' # Publication Types
     a976662e-fc19-4f89-ae6b-a5b4db64752b: Events # Events
+    aaee4c78-a676-4fb7-b7d5-89c41725efa1: 'Contact: Website' # Contact: Website
     ad5b3d91-425f-4181-8ded-f9c7c53a6bba: Person # Person
     afc7f0bc-1b97-4841-a1d2-5b0385a7ca35: 'Plain Text' # Plain Text
     b5b9369b-8ab5-44dc-bbaa-058288143025: 'Index Page' # Index Page

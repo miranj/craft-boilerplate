@@ -1,0 +1,37 @@
+color: null
+fieldLayouts:
+  06fdfe70-c335-42ac-8287-2180563d8db2:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-04-08T12:09:31+00:00'
+            elementCondition: null
+            fieldUid: 23995e04-c457-4eeb-b78d-1c22f16cf4f6 # Link: Email
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 2e66dc27-e362-4bdd-804e-df6e44c00431
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: f0becc8f-468f-499c-84eb-ea898b5374f2
+        userCondition: null
+handle: contactEmail
+hasTitleField: false
+icon: envelope
+name: 'Contact: Email'
+showSlugField: false
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

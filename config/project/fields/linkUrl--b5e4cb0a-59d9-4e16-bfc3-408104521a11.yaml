@@ -1,10 +1,10 @@
 columnSuffix: null
 handle: linkUrl
 instructions: null
-name: URL
+name: 'Link: URL'
 searchable: true
 settings:
-  fullGraphqlData: true
+  fullGraphqlData: false
   maxLength: 255
   showLabelField: false
   typeSettings:
