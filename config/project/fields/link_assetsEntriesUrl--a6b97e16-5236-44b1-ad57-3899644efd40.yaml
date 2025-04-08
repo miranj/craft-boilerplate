@@ -2,7 +2,7 @@ columnSuffix: null
 handle: link_assetsEntriesUrl
 instructions: null
 name: 'Link (Assets, Entries, URL)'
-searchable: false
+searchable: true
 settings:
   fullGraphqlData: false
   maxLength: 255

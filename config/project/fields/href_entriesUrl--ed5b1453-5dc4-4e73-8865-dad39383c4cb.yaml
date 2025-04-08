@@ -2,7 +2,7 @@ columnSuffix: null
 handle: href_entriesUrl
 instructions: null
 name: 'URL (Entries, URL)'
-searchable: false
+searchable: true
 settings:
   fullGraphqlData: false
   maxLength: 255
