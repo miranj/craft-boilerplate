@@ -12,7 +12,7 @@ fieldLayouts:
             handle: null
             includeInCards: false
             instructions: null
-            label: URL
+            label: __blank__
             providesThumbs: false
             required: true
             tip: null
