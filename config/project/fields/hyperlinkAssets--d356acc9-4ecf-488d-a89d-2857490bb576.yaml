@@ -1,31 +1,14 @@
 columnSuffix: null
-handle: hyperlink
+handle: hyperlinkAssets
 instructions: null
-name: Hyperlink
+name: 'Link (inc. Assets)'
 searchable: true
 settings:
+  fullGraphqlData: false
   maxLength: 255
   showLabelField: false
-  showTargetField: false
   typeSettings:
     __assoc__:
-      -
-        - entry
-        -
-          __assoc__:
-            -
-              - sources
-              - '*'
-      -
-        - url
-        -
-          __assoc__:
-            -
-              - allowRootRelativeUrls
-              - ''
-            -
-              - allowAnchors
-              - '1'
       -
         - asset
         -
@@ -44,6 +27,23 @@ settings:
             -
               - showUnpermittedFiles
               - ''
+      -
+        - entry
+        -
+          __assoc__:
+            -
+              - sources
+              - '*'
+      -
+        - url
+        -
+          __assoc__:
+            -
+              - allowRootRelativeUrls
+              - ''
+            -
+              - allowAnchors
+              - '1'
   types:
     - entry
     - url

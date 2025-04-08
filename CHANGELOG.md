@@ -4,6 +4,10 @@ Release notes for Miranj's Craft Boilerplate starter project.
 
 ## Unreleased - 3.4.0
 
+### Front-end
+
+- Added _Index_ views router.
+
 ### Data Model
 
 - Added _Events_,_Publications_, _People_, _People Index_, _News_ and _News Index_ sections.

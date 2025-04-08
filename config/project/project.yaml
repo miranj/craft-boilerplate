@@ -1,4 +1,4 @@
-dateModified: 1741056587
+dateModified: 1744038700
 elementSources:
   craft\elements\Entry:
     -
@@ -170,7 +170,8 @@ elementSources:
       tableAttributes:
         - link
         - type
-        - postDate
+        - dateUpdated
+        - revisionCreator
       type: native
     -
       heading: Auto
@@ -365,7 +366,7 @@ meta:
     349b5e6f-3a2a-43f1-a9dd-2373bf4a0a67: 'Share/SEO Description' # Share/SEO Description
     653ea464-6b43-4bc9-8138-79615323d877: Blog # Blog
     840acb32-6694-40d0-9384-60a0220c1de0: Label # Label
-    992c932b-21e6-4b0b-8017-1289891c1ac4: 'Resource: Document' # Resource: Document
+    992c932b-21e6-4b0b-8017-1289891c1ac4: Resource # Resource
     5280da4e-b8fa-4970-9b39-490dd3a96904: Publications # Publications
     5661ce90-e09f-4c95-bffe-ffe44c413db3: 'Default Share Image' # Default Share Image
     6813a87d-5d20-4e93-8019-6fde740ef87d: Editors # Editors
@@ -397,7 +398,7 @@ meta:
     be130f04-1c51-420d-818e-6d4f5a5960fa: Resources # Resources
     be827b12-3e63-4d2a-b17a-5c60ab99f248: 'Publication Type' # Publication Type
     c5712456-e12b-4cbc-a8cc-b570cf00d66e: 'Publications Index' # Publications Index
-    d356acc9-4ecf-488d-a89d-2857490bb576: Hyperlink # Hyperlink
+    d356acc9-4ecf-488d-a89d-2857490bb576: 'Link (inc. Assets)' # Link (inc. Assets)
     d4720a93-54ad-45de-a939-b668ed8660dc: 'Share/SEO Image' # Share/SEO Image
     da24c053-b31c-4fa8-b113-217845a4ce83: 'Share/SEO Title' # Share/SEO Title
     de677f5b-6642-4086-ac1a-3e95990c19d0: 'Blog Post' # Blog Post
@@ -406,6 +407,7 @@ meta:
     e421ceea-a2f2-459f-88b9-2695f86047bd: Images # Images
     e455d48b-03ff-4280-b08f-90e20f74c7b3: Languages # Languages
     e5323eec-2cf3-40d3-b122-7df6192a5bdf: 'Form Submissions' # Form Submissions
+    ed5b1453-5dc4-4e73-8865-dad39383c4cb: Link # Link
     fad3fe56-0b6b-46c4-a97b-b7fb98847f3c: 'Media Embed' # Media Embed
     fd23984e-764a-4004-9834-8efe25601ba5: Simple # Simple
 plugins:

@@ -18,6 +18,8 @@ permissions:
   - 'deletecategories:0bc8375c-5e05-4156-a6c9-5678af911123' # News Types
   - 'deletecategories:58e76d43-a465-4c1a-b102-2726a9fc13f5' # Resources Types
   - 'deletecategories:8a5099a8-7b2e-4052-b798-5e7d19f38b15' # Event Types
+  - 'deletecategories:0ebe4125-0bbc-4efc-a7d1-055eebd82cb5' # Languages
+  - 'deletecategories:6ae2a9cc-c9cc-4b89-9c8c-d7a417cbb87e' # Topics
   - 'deletecategories:a907570e-41b8-4e87-b566-c2abe353e2a6' # Publication Types
   - 'deleteentries:08b4a047-a20d-4d56-81b0-32b599c4fb41' # People
   - 'deleteentries:5280da4e-b8fa-4970-9b39-490dd3a96904' # Publications
@@ -31,6 +33,8 @@ permissions:
   - 'deletepeercategorydrafts:0bc8375c-5e05-4156-a6c9-5678af911123' # News Types
   - 'deletepeercategorydrafts:58e76d43-a465-4c1a-b102-2726a9fc13f5' # Resources Types
   - 'deletepeercategorydrafts:8a5099a8-7b2e-4052-b798-5e7d19f38b15' # Event Types
+  - 'deletepeercategorydrafts:0ebe4125-0bbc-4efc-a7d1-055eebd82cb5' # Languages
+  - 'deletepeercategorydrafts:6ae2a9cc-c9cc-4b89-9c8c-d7a417cbb87e' # Topics
   - 'deletepeercategorydrafts:a907570e-41b8-4e87-b566-c2abe353e2a6' # Publication Types
   - 'deletepeerentries:08b4a047-a20d-4d56-81b0-32b599c4fb41' # People
   - 'deletepeerentries:5280da4e-b8fa-4970-9b39-490dd3a96904' # Publications
@@ -40,6 +44,7 @@ permissions:
   - 'deletepeerentries:a976662e-fc19-4f89-ae6b-a5b4db64752b' # Events
   - 'deletepeerentries:be130f04-1c51-420d-818e-6d4f5a5960fa' # Resources
   - 'deletepeerentrydrafts:08b4a047-a20d-4d56-81b0-32b599c4fb41' # People
+  - 'deletepeerentrydrafts:15ad504a-20b4-4e89-b94c-e7be7f135774' # People Index
   - 'deletepeerentrydrafts:1afae8bb-74c6-43e3-8b44-3e8cac38e2e8' # Blog Index
   - 'deletepeerentrydrafts:317eb1dc-2ab0-4290-a1d3-573e6ead4388' # News Index
   - 'deletepeerentrydrafts:5280da4e-b8fa-4970-9b39-490dd3a96904' # Publications
@@ -63,8 +68,11 @@ permissions:
   - 'savecategories:0bc8375c-5e05-4156-a6c9-5678af911123' # News Types
   - 'savecategories:58e76d43-a465-4c1a-b102-2726a9fc13f5' # Resources Types
   - 'savecategories:8a5099a8-7b2e-4052-b798-5e7d19f38b15' # Event Types
+  - 'savecategories:0ebe4125-0bbc-4efc-a7d1-055eebd82cb5' # Languages
+  - 'savecategories:6ae2a9cc-c9cc-4b89-9c8c-d7a417cbb87e' # Topics
   - 'savecategories:a907570e-41b8-4e87-b566-c2abe353e2a6' # Publication Types
   - 'saveentries:08b4a047-a20d-4d56-81b0-32b599c4fb41' # People
+  - 'saveentries:15ad504a-20b4-4e89-b94c-e7be7f135774' # People Index
   - 'saveentries:1afae8bb-74c6-43e3-8b44-3e8cac38e2e8' # Blog Index
   - 'saveentries:317eb1dc-2ab0-4290-a1d3-573e6ead4388' # News Index
   - 'saveentries:5280da4e-b8fa-4970-9b39-490dd3a96904' # Publications
@@ -80,6 +88,8 @@ permissions:
   - 'savepeercategorydrafts:0bc8375c-5e05-4156-a6c9-5678af911123' # News Types
   - 'savepeercategorydrafts:58e76d43-a465-4c1a-b102-2726a9fc13f5' # Resources Types
   - 'savepeercategorydrafts:8a5099a8-7b2e-4052-b798-5e7d19f38b15' # Event Types
+  - 'savepeercategorydrafts:0ebe4125-0bbc-4efc-a7d1-055eebd82cb5' # Languages
+  - 'savepeercategorydrafts:6ae2a9cc-c9cc-4b89-9c8c-d7a417cbb87e' # Topics
   - 'savepeercategorydrafts:a907570e-41b8-4e87-b566-c2abe353e2a6' # Publication Types
   - 'savepeerentries:08b4a047-a20d-4d56-81b0-32b599c4fb41' # People
   - 'savepeerentries:5280da4e-b8fa-4970-9b39-490dd3a96904' # Publications
@@ -89,6 +99,7 @@ permissions:
   - 'savepeerentries:a976662e-fc19-4f89-ae6b-a5b4db64752b' # Events
   - 'savepeerentries:be130f04-1c51-420d-818e-6d4f5a5960fa' # Resources
   - 'savepeerentrydrafts:08b4a047-a20d-4d56-81b0-32b599c4fb41' # People
+  - 'savepeerentrydrafts:15ad504a-20b4-4e89-b94c-e7be7f135774' # People Index
   - 'savepeerentrydrafts:1afae8bb-74c6-43e3-8b44-3e8cac38e2e8' # Blog Index
   - 'savepeerentrydrafts:317eb1dc-2ab0-4290-a1d3-573e6ead4388' # News Index
   - 'savepeerentrydrafts:5280da4e-b8fa-4970-9b39-490dd3a96904' # Publications
@@ -104,8 +115,11 @@ permissions:
   - 'viewcategories:0bc8375c-5e05-4156-a6c9-5678af911123' # News Types
   - 'viewcategories:58e76d43-a465-4c1a-b102-2726a9fc13f5' # Resources Types
   - 'viewcategories:8a5099a8-7b2e-4052-b798-5e7d19f38b15' # Event Types
+  - 'viewcategories:0ebe4125-0bbc-4efc-a7d1-055eebd82cb5' # Languages
+  - 'viewcategories:6ae2a9cc-c9cc-4b89-9c8c-d7a417cbb87e' # Topics
   - 'viewcategories:a907570e-41b8-4e87-b566-c2abe353e2a6' # Publication Types
   - 'viewentries:08b4a047-a20d-4d56-81b0-32b599c4fb41' # People
+  - 'viewentries:15ad504a-20b4-4e89-b94c-e7be7f135774' # People Index
   - 'viewentries:1afae8bb-74c6-43e3-8b44-3e8cac38e2e8' # Blog Index
   - 'viewentries:317eb1dc-2ab0-4290-a1d3-573e6ead4388' # News Index
   - 'viewentries:5280da4e-b8fa-4970-9b39-490dd3a96904' # Publications
@@ -121,6 +135,8 @@ permissions:
   - 'viewpeercategorydrafts:0bc8375c-5e05-4156-a6c9-5678af911123' # News Types
   - 'viewpeercategorydrafts:58e76d43-a465-4c1a-b102-2726a9fc13f5' # Resources Types
   - 'viewpeercategorydrafts:8a5099a8-7b2e-4052-b798-5e7d19f38b15' # Event Types
+  - 'viewpeercategorydrafts:0ebe4125-0bbc-4efc-a7d1-055eebd82cb5' # Languages
+  - 'viewpeercategorydrafts:6ae2a9cc-c9cc-4b89-9c8c-d7a417cbb87e' # Topics
   - 'viewpeercategorydrafts:a907570e-41b8-4e87-b566-c2abe353e2a6' # Publication Types
   - 'viewpeerentries:08b4a047-a20d-4d56-81b0-32b599c4fb41' # People
   - 'viewpeerentries:5280da4e-b8fa-4970-9b39-490dd3a96904' # Publications
@@ -130,6 +146,7 @@ permissions:
   - 'viewpeerentries:a976662e-fc19-4f89-ae6b-a5b4db64752b' # Events
   - 'viewpeerentries:be130f04-1c51-420d-818e-6d4f5a5960fa' # Resources
   - 'viewpeerentrydrafts:08b4a047-a20d-4d56-81b0-32b599c4fb41' # People
+  - 'viewpeerentrydrafts:15ad504a-20b4-4e89-b94c-e7be7f135774' # People Index
   - 'viewpeerentrydrafts:1afae8bb-74c6-43e3-8b44-3e8cac38e2e8' # Blog Index
   - 'viewpeerentrydrafts:317eb1dc-2ab0-4290-a1d3-573e6ead4388' # News Index
   - 'viewpeerentrydrafts:5280da4e-b8fa-4970-9b39-490dd3a96904' # Publications
