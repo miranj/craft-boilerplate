@@ -3,6 +3,14 @@
 namespace boilerplate;
 
 use Craft;
+use boilerplate\behaviors\EntryIndexQueryBehavior;
+use boilerplate\behaviors\IndexEntryBehaviors;
+use boilerplate\behaviors\SectionIndexBehavior;
+use craft\models\Section;
+use craft\base\Element;
+use craft\elements\Entry;
+use craft\elements\db\EntryQuery;
+use craft\events\DefineBehaviorsEvent;
 use craft\web\Response;
 use boilerplate\twig\Extension;
 use yii\base\Event;
@@ -92,6 +100,39 @@ class Module extends \yii\base\Module
         }
     }
 
+    // define entry behaviors
+    // - custom index entry properties
+    public function onEntryDefineBehaviors(DefineBehaviorsEvent $event)
+    {
+        $entry = $event->sender;
+        if (
+            $entry->id &&
+            $entry->sectionId &&
+            strpos(
+                $entry->section->handle,
+                IndexEntryBehaviors::$sectionHandlePrefix,
+            ) === 0
+        ) {
+            $event->behaviors[$this->id . 'IndexEntry'] =
+                IndexEntryBehaviors::class;
+        }
+    }
+
+    // define custom index query
+    public function onEntryQueryDefineBehaviors(DefineBehaviorsEvent $event)
+    {
+        $event->behaviors[$this->id . EntryIndexQueryBehavior::class] =
+            EntryIndexQueryBehavior::class;
+    }
+
+    // define custom Section properties
+    public function onSectionDefineBehaviors(DefineBehaviorsEvent $event)
+    {
+        if ($event->sender instanceof Section && $event->sender->id) {
+            $event->behaviors[$this->id] = SectionIndexBehavior::class;
+        }
+    }
+
     // Protected Methods
     // =================
 
@@ -105,6 +146,21 @@ class Module extends \yii\base\Module
         Event::on(Response::class, Response::EVENT_BEFORE_SEND, [
             $this,
             'onBeforeSendLivePreview',
+        ]);
+
+        Event::on(Entry::class, Element::EVENT_DEFINE_BEHAVIORS, [
+            $this,
+            'onEntryDefineBehaviors',
+        ]);
+
+        Event::on(EntryQuery::class, EntryQuery::EVENT_DEFINE_BEHAVIORS, [
+            $this,
+            'onEntryQueryDefineBehaviors',
+        ]);
+
+        Event::on(Section::class, Section::EVENT_DEFINE_BEHAVIORS, [
+            $this,
+            'onSectionDefineBehaviors',
         ]);
     }
 }

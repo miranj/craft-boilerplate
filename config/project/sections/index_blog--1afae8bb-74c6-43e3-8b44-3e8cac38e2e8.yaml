@@ -1,7 +1,8 @@
 defaultPlacement: end
 enableVersioning: true
 entryTypes:
-  - b5b9369b-8ab5-44dc-bbaa-058288143025 # Index Page
+  -
+    uid: b5b9369b-8ab5-44dc-bbaa-058288143025 # Index Page
 handle: index_blog
 maxAuthors: 1
 name: 'Blog Index'
@@ -22,6 +23,6 @@ siteSettings:
   8341919b-4097-4c45-8f3b-97ff673d9ab5: # $CRAFT_SITE_NAME
     enabledByDefault: true
     hasUrls: true
-    template: _routers/detail.twig
+    template: _routers/index.twig
     uriFormat: blog
 type: single
