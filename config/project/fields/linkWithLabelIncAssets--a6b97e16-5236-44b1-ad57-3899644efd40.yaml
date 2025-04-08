@@ -1,0 +1,61 @@
+columnSuffix: null
+handle: linkWithLabelIncAssets
+instructions: null
+name: 'Link With Label (inc. Assets)'
+searchable: false
+settings:
+  fullGraphqlData: false
+  maxLength: 255
+  showLabelField: true
+  typeSettings:
+    __assoc__:
+      -
+        - asset
+        -
+          __assoc__:
+            -
+              - sources
+              - '*'
+            -
+              - allowedKinds
+              -
+                - audio
+                - captionsSubtitles
+                - compressed
+                - image
+                - json
+                - pdf
+                - powerpoint
+                - text
+                - video
+                - word
+            -
+              - showUnpermittedVolumes
+              - ''
+            -
+              - showUnpermittedFiles
+              - ''
+      -
+        - entry
+        -
+          __assoc__:
+            -
+              - sources
+              - '*'
+      -
+        - url
+        -
+          __assoc__:
+            -
+              - allowRootRelativeUrls
+              - ''
+            -
+              - allowAnchors
+              - ''
+  types:
+    - entry
+    - url
+    - asset
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Link

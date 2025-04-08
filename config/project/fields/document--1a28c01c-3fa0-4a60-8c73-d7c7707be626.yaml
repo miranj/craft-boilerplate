@@ -1,7 +1,7 @@
 columnSuffix: null
-handle: documents
+handle: document
 instructions: null
-name: Documents
+name: Document
 searchable: true
 settings:
   allowSelfRelations: false
@@ -23,7 +23,7 @@ settings:
   defaultUploadLocationSource: 'volume:89c58a76-1da8-4581-84f1-caf2222de75a' # Documents
   defaultUploadLocationSubpath: '{% include ''_cp/paths/asset'' %}'
   maintainHierarchy: false
-  maxRelations: null
+  maxRelations: 1
   minRelations: null
   previewMode: full
   restrictFiles: true
@@ -33,11 +33,10 @@ settings:
   restrictedLocationSubpath: null
   selectionLabel: null
   showCardsInGrid: false
-  showSiteMenu: false
+  showSiteMenu: true
   showUnpermittedFiles: false
   showUnpermittedVolumes: false
   sources:
-    - 'volume:e421ceea-a2f2-459f-88b9-2695f86047bd' # Images
     - 'volume:89c58a76-1da8-4581-84f1-caf2222de75a' # Documents
   targetSiteId: null
   validateRelatedElements: false

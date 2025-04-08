@@ -2,13 +2,10 @@ defaultPlacement: end
 enableVersioning: true
 entryTypes:
   -
-    uid: 992c932b-21e6-4b0b-8017-1289891c1ac4 # Resource
-  -
-    name: Link
-    uid: 3aba8130-5dea-47d5-ad23-a536e8b9760a # Resource: Link
-handle: resources
+    uid: 12c6ecb1-eb21-40a2-aca1-217b86047c44 # Event
+handle: events
 maxAuthors: 1
-name: Resources
+name: Events
 previewTargets:
   -
     __assoc__:
@@ -27,5 +24,5 @@ siteSettings:
     enabledByDefault: true
     hasUrls: true
     template: _routers/detail.twig
-    uriFormat: 'resources/{slug}'
+    uriFormat: 'events/{slug}'
 type: channel

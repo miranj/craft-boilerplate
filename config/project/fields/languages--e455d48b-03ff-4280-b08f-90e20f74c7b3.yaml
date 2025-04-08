@@ -1,0 +1,21 @@
+columnSuffix: null
+handle: languages
+instructions: null
+name: Languages
+searchable: true
+settings:
+  allowSelfRelations: false
+  branchLimit: null
+  maintainHierarchy: false
+  maxRelations: null
+  minRelations: null
+  selectionLabel: 'Add languages'
+  showCardsInGrid: false
+  showSiteMenu: true
+  source: 'group:0ebe4125-0bbc-4efc-a7d1-055eebd82cb5' # Languages
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: list
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Categories

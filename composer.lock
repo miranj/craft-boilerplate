@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5c2ec8f47323a7b94a36ae83c116804f",
+    "content-hash": "5ee91d65a3cf09b136e6ed46078e4c20",
     "packages": [
         {
             "name": "aws/aws-crt-php",
@@ -3389,17 +3389,11 @@
         },
         {
             "name": "marionnewlevant/twig-perversion",
-            "version": "5.0.1",
+            "version": "v5.x-dev",
             "source": {
                 "type": "git",
-                "url": "https://github.com/marionnewlevant/craft-twig_perversion.git",
-                "reference": "4db60478d078ff433a544f585b0f15e04587cbb8"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/marionnewlevant/craft-twig_perversion/zipball/4db60478d078ff433a544f585b0f15e04587cbb8",
-                "reference": "4db60478d078ff433a544f585b0f15e04587cbb8",
-                "shasum": ""
+                "url": "https://github.com/brandonkelly/craft-twig_perversion",
+                "reference": "5357da2d19ffcfa6e84dfca87e01c45f46461a46"
             },
             "require": {
                 "craftcms/cms": "^5.0",
@@ -3408,17 +3402,17 @@
             "require-dev": {
                 "craftcms/phpstan": "dev-main"
             },
+            "default-branch": true,
             "type": "craft-plugin",
             "extra": {
-                "name": "Twig Perversion",
-                "handle": "twig-perversion"
+                "handle": "twig-perversion",
+                "name": "Twig Perversion"
             },
             "autoload": {
                 "psr-4": {
                     "marionnewlevant\\twigperversion\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -3430,17 +3424,17 @@
             ],
             "description": "Making twig do things it really shouldn't",
             "keywords": [
-                "Craft",
+                "craft",
                 "craftcms",
                 "plugin",
                 "twigperversion"
             ],
             "support": {
-                "docs": "https://github.com/marionnewlevant/craft-twig_perversion/blob/v5/README.md",
                 "issues": "https://github.com/marionnewlevant/craft-twig_perversion/issues?state=open",
-                "source": "https://github.com/marionnewlevant/craft-twig_perversion"
+                "source": "https://github.com/marionnewlevant/craft-twig_perversion",
+                "docs": "https://github.com/marionnewlevant/craft-twig_perversion/blob/v5/README.md"
             },
-            "time": "2024-11-28T21:31:55+00:00"
+            "time": "2025-01-30T19:38:20+00:00"
         },
         {
             "name": "masterminds/html5",
@@ -12004,13 +11998,14 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "vaersaagod/seomate": 10,
-        "craftcms/phpstan": 20
+        "craftcms/phpstan": 20,
+        "marionnewlevant/twig-perversion": 20,
+        "vaersaagod/seomate": 10
     },
     "prefer-stable": true,
     "prefer-lowest": false,
-    "platform": [],
-    "platform-dev": [],
+    "platform": {},
+    "platform-dev": {},
     "platform-overrides": {
         "php": "8.2"
     },
