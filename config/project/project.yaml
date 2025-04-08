@@ -1,4 +1,4 @@
-dateModified: 1744109362
+dateModified: 1744109623
 elementSources:
   craft\elements\Entry:
     -
@@ -149,6 +149,18 @@ elementSources:
       tableAttributes:
         - link
         - 'fieldInstance:6b80c15b-e48e-4b66-8f5a-795142b9a77f'
+      type: native
+    -
+      defaultSort:
+        - postDate
+        - desc
+      defaultViewMode: ''
+      disabled: false
+      key: 'section:3efc7d18-2f42-40d1-beee-b05867f36104' # Programs
+      tableAttributes:
+        - link
+        - dateUpdated
+        - revisionCreator
       type: native
     -
       defaultSort:
