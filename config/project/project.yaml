@@ -1,4 +1,4 @@
-dateModified: 1744107859
+dateModified: 1744109054
 elementSources:
   craft\elements\Entry:
     -
@@ -330,6 +330,7 @@ meta:
     1ba3b532-e3ed-43db-93a6-00c05efcc84f: 'Resource Types' # Resource Types
     2bfee73d-1d4f-480f-9a78-6be8410a6704: 'Social Media' # Social Media
     3aba8130-5dea-47d5-ad23-a536e8b9760a: 'Resource: Link' # Resource: Link
+    3efc7d18-2f42-40d1-beee-b05867f36104: Programs # Programs
     5b72b712-0218-40c6-9717-0c395a914ad8: Summary # Summary
     5d68dab3-70f1-4fbc-833e-e504aa7c926d: 'User Photos' # User Photos
     6ae2a9cc-c9cc-4b89-9c8c-d7a417cbb87e: Topics # Topics
@@ -398,6 +399,7 @@ meta:
     bc20ba64-4979-418f-aa28-244626f315ab: 'Home Page' # Home Page
     be130f04-1c51-420d-818e-6d4f5a5960fa: Resources # Resources
     be827b12-3e63-4d2a-b17a-5c60ab99f248: 'Publication Type' # Publication Type
+    c4fb7c86-c508-4410-9362-e47f5b604631: Program # Program
     c5712456-e12b-4cbc-a8cc-b570cf00d66e: 'Publications Index' # Publications Index
     d4720a93-54ad-45de-a939-b668ed8660dc: 'Share/SEO Image' # Share/SEO Image
     da24c053-b31c-4fa8-b113-217845a4ce83: 'Share/SEO Title' # Share/SEO Title
