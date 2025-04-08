@@ -1,4 +1,4 @@
-dateModified: 1744109769
+dateModified: 1744110253
 elementSources:
   craft\elements\Entry:
     -
@@ -152,8 +152,8 @@ elementSources:
       type: native
     -
       defaultSort:
-        - postDate
-        - desc
+        - title
+        - asc
       defaultViewMode: ''
       disabled: false
       key: 'section:3efc7d18-2f42-40d1-beee-b05867f36104' # Programs
