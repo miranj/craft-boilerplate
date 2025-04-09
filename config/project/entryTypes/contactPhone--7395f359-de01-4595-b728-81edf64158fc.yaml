@@ -1,15 +1,15 @@
-color: null
+color: blue
 fieldLayouts:
-  615ff859-cfef-465f-91bb-316a4423afcf:
+  a176ad31-6928-43b5-b3c0-559eb293b621:
     tabs:
       -
         elementCondition: null
         elements:
           -
-            dateAdded: '2025-02-28T02:59:42+00:00'
+            dateAdded: '2025-04-09T06:39:16+00:00'
             elementCondition: null
-            fieldUid: 65fd1257-02e1-40e1-a8a4-0ad89b4e9510 # External Link With Label
-            handle: null
+            fieldUid: 90d8deb5-3a82-411b-b04f-8eed4c8890c9 # URL (Phone)
+            handle: hyperlink
             includeInCards: false
             instructions: null
             label: __blank__
@@ -17,18 +17,18 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 0cf9c9e3-08f5-4a55-b652-55d97087c320
+            uid: af993c76-d411-4845-9181-7fd423ec85bc
             userCondition: null
             warning: null
             width: 100
         name: Content
-        uid: f0013db3-8a14-40de-adcf-9b64abe72001
+        uid: 71919eaa-53a4-4783-a596-4551f364e98c
         userCondition: null
-handle: contactDetail
+handle: contactPhone
 hasTitleField: false
-icon: link
-name: 'Contact Detail'
-showSlugField: true
+icon: phone
+name: 'Contact: Phone'
+showSlugField: false
 showStatusField: true
 slugTranslationKeyFormat: null
 slugTranslationMethod: site

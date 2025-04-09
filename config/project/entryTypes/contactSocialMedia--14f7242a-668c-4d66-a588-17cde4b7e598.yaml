@@ -1,4 +1,4 @@
-color: null
+color: blue
 fieldLayouts:
   5333638f-9ef5-4fd0-91dc-aa91e481cdef:
     tabs:
@@ -25,10 +25,10 @@ fieldLayouts:
             dateAdded: '2025-02-28T02:49:06+00:00'
             elementCondition: null
             fieldUid: b5e4cb0a-59d9-4e16-bfc3-408104521a11 # URL
-            handle: null
+            handle: hyperlink
             includeInCards: false
             instructions: null
-            label: null
+            label: URL
             providesThumbs: false
             required: true
             tip: null
@@ -42,9 +42,9 @@ fieldLayouts:
         userCondition: null
 handle: contactSocialMedia
 hasTitleField: false
-icon: link
+icon: thumbs-up
 name: 'Social Media'
-showSlugField: true
+showSlugField: false
 showStatusField: true
 slugTranslationKeyFormat: null
 slugTranslationMethod: site

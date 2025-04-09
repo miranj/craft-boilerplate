@@ -70,10 +70,10 @@ fieldLayouts:
           -
             dateAdded: '2025-02-25T07:46:41+00:00'
             elementCondition: null
-            fieldUid: 856911a9-89f9-4865-bdb1-5665460c6c23 # Contact Information
+            fieldUid: 856911a9-89f9-4865-bdb1-5665460c6c23 # Contact & Social Media Information
             handle: null
             includeInCards: false
-            instructions: null
+            instructions: 'Social Media links and Contact links will be grouped separately on the front-end.'
             label: null
             providesThumbs: false
             required: false

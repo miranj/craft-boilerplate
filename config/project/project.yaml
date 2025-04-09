@@ -1,4 +1,4 @@
-dateModified: 1744107859
+dateModified: 1744181186
 elementSources:
   craft\elements\Entry:
     -
@@ -327,6 +327,7 @@ meta:
     0ebe4125-0bbc-4efc-a7d1-055eebd82cb5: Languages # Languages
     1a28c01c-3fa0-4a60-8c73-d7c7707be626: Document # Document
     1afae8bb-74c6-43e3-8b44-3e8cac38e2e8: 'Blog Index' # Blog Index
+    1b75b0c0-3003-4fe3-bc8f-478e12906e75: 'Contact: Email' # Contact: Email
     1ba3b532-e3ed-43db-93a6-00c05efcc84f: 'Resource Types' # Resource Types
     2bfee73d-1d4f-480f-9a78-6be8410a6704: 'Social Media' # Social Media
     3aba8130-5dea-47d5-ad23-a536e8b9760a: 'Resource: Link' # Resource: Link
@@ -346,7 +347,6 @@ meta:
     8f896808-aacf-4f83-9a35-cd7076a6707b: 'News Type' # News Type
     9b5f9007-3f61-4857-b978-fdfbc4b29dba: 'Event Types' # Event Types
     9b8054bc-bad1-4e95-b74b-e722465d36b9: Publication # Publication
-    9bd98d08-c228-41bf-99b2-217e9444daee: 'Contact Detail' # Contact Detail
     9c5f24a6-1969-4197-9fce-ff44e5a18b9b: People # People
     12c6ecb1-eb21-40a2-aca1-217b86047c44: Event # Event
     14f7242a-668c-4d66-a588-17cde4b7e598: 'Social Media' # Social Media
@@ -355,10 +355,11 @@ meta:
     56b9dc41-a930-42d9-ba33-9925b4fe9954: 'System Administration' # System Administration
     58e76d43-a465-4c1a-b102-2726a9fc13f5: 'Resources Types' # Resources Types
     64ee8bca-fd54-4c78-853c-aaf37e0bb8c0: Gallery # Gallery
-    65fd1257-02e1-40e1-a8a4-0ad89b4e9510: 'External Link With Label' # External Link With Label
+    65fd1257-02e1-40e1-a8a4-0ad89b4e9510: 'Link (Email, Phone, URL)' # Link (Email, Phone, URL)
     69dcd3aa-18b8-48bf-a7d3-deb9c6912349: Topics # Topics
     89c58a76-1da8-4581-84f1-caf2222de75a: Documents # Documents
     89c71771-4a5b-44ce-aa3b-a61f30e4c23e: Email # Email
+    90d8deb5-3a82-411b-b04f-8eed4c8890c9: 'URL (Phone)' # URL (Phone)
     90d23e21-4d7c-444f-89c4-e66aeb92c134: 'Site Configuration' # Site Configuration
     94e56347-cb09-47d3-a930-1fd9bc2cb026: News # News
     295e5325-afca-4a03-93e9-ed957c574148: Footer # Footer
@@ -370,15 +371,17 @@ meta:
     5280da4e-b8fa-4970-9b39-490dd3a96904: Publications # Publications
     5661ce90-e09f-4c95-bffe-ffe44c413db3: 'Default Share Image' # Default Share Image
     6813a87d-5d20-4e93-8019-6fde740ef87d: Editors # Editors
+    7395f359-de01-4595-b728-81edf64158fc: 'Contact: Phone' # Contact: Phone
     8447c697-1e38-439d-bfcc-beac5bf1ae31: 'Sharing & SEO' # Sharing & SEO
+    23995e04-c457-4eeb-b78d-1c22f16cf4f6: 'URL (Email)' # URL (Email)
     61317d04-b4b5-4b2f-ad77-e1d87029c361: 'Legacy URL' # Legacy URL
     69339afc-d4f1-440b-a7ad-7da2ccb77972: Image # Image
     386721be-1ee4-4e3b-b22c-7fb3dfded3ff: 'Simple Text' # Simple Text
-    856911a9-89f9-4865-bdb1-5665460c6c23: 'Contact Information' # Contact Information
+    856911a9-89f9-4865-bdb1-5665460c6c23: 'Contact & Social Media Information' # Contact & Social Media Information
     8341919b-4097-4c45-8f3b-97ff673d9ab5: $CRAFT_SITE_NAME # $CRAFT_SITE_NAME
     18803174-20d5-4b61-a067-3072b484f857: 'Resources Index' # Resources Index
     25388890-1b39-49c8-8d89-7ef2d82f89a1: Newsletter # Newsletter
-    a6b97e16-5236-44b1-ad57-3899644efd40: 'Link With Label (inc. Assets)' # Link With Label (inc. Assets)
+    a6b97e16-5236-44b1-ad57-3899644efd40: 'Link (Assets, Entries, URL)' # Link (Assets, Entries, URL)
     a53f5b40-fb8c-4a9d-8c25-dc8e3dfe58d6: Code # Code
     a385a4fe-5736-44ee-ab48-d869428d380c: News # News
     a404ee2c-1d0d-4da9-a736-cd565a4d2605: Page # Page
@@ -386,6 +389,7 @@ meta:
     a20788dd-9031-41ba-8145-5f9d17b719ad: Primary # Primary
     a907570e-41b8-4e87-b566-c2abe353e2a6: 'Publication Types' # Publication Types
     a976662e-fc19-4f89-ae6b-a5b4db64752b: Events # Events
+    aaee4c78-a676-4fb7-b7d5-89c41725efa1: 'Contact: Website' # Contact: Website
     ad5b3d91-425f-4181-8ded-f9c7c53a6bba: Person # Person
     afc7f0bc-1b97-4841-a1d2-5b0385a7ca35: 'Plain Text' # Plain Text
     b5b9369b-8ab5-44dc-bbaa-058288143025: 'Index Page' # Index Page
@@ -407,7 +411,7 @@ meta:
     e421ceea-a2f2-459f-88b9-2695f86047bd: Images # Images
     e455d48b-03ff-4280-b08f-90e20f74c7b3: Languages # Languages
     e5323eec-2cf3-40d3-b122-7df6192a5bdf: 'Form Submissions' # Form Submissions
-    ed5b1453-5dc4-4e73-8865-dad39383c4cb: Link # Link
+    ed5b1453-5dc4-4e73-8865-dad39383c4cb: 'URL (Entries, URL)' # URL (Entries, URL)
     fad3fe56-0b6b-46c4-a97b-b7fb98847f3c: 'Media Embed' # Media Embed
     fd23984e-764a-4004-9834-8efe25601ba5: Simple # Simple
 plugins:

@@ -1,0 +1,14 @@
+columnSuffix: null
+handle: href_email
+instructions: null
+name: 'URL (Email)'
+searchable: true
+settings:
+  fullGraphqlData: false
+  maxLength: 255
+  showLabelField: false
+  types:
+    - email
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Link

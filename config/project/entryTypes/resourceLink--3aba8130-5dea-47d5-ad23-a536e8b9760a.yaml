@@ -47,7 +47,7 @@ fieldLayouts:
           -
             dateAdded: '2025-03-05T08:22:19+00:00'
             elementCondition: null
-            fieldUid: ed5b1453-5dc4-4e73-8865-dad39383c4cb # Link
+            fieldUid: ed5b1453-5dc4-4e73-8865-dad39383c4cb # URL (Entries, URL)
             handle: hyperlink
             includeInCards: false
             instructions: null
