@@ -1,7 +1,7 @@
 columnSuffix: null
-handle: contactInformation
+handle: contactSocialInformation
 instructions: null
-name: 'Contact Information'
+name: 'Contact & Social Media Information'
 searchable: true
 settings:
   createButtonLabel: 'Add contact info'
@@ -11,7 +11,26 @@ settings:
       __assoc__:
         -
           - uid
-          - 9bd98d08-c228-41bf-99b2-217e9444daee # Contact Detail
+          - 1b75b0c0-3003-4fe3-bc8f-478e12906e75 # Contact: Email
+        -
+          - name
+          - Email
+    -
+      __assoc__:
+        -
+          - uid
+          - 7395f359-de01-4595-b728-81edf64158fc # Contact: Phone
+        -
+          - name
+          - Phone
+    -
+      __assoc__:
+        -
+          - uid
+          - aaee4c78-a676-4fb7-b7d5-89c41725efa1 # Contact: Website
+        -
+          - name
+          - Website
     -
       __assoc__:
         -
