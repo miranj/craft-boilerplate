@@ -1,0 +1,50 @@
+defaultPlacement: end
+fieldLayouts:
+  2d8b1ff1-e12d-478e-8e1a-410a0c6a8ce0:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: '2025-04-09T06:23:12+00:00'
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\TitleField
+            uid: 521b6815-19a0-4601-9a4b-d30c8f122398
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 5c15aeec-bde0-4e9d-bdd5-bbfee50b9a2c
+        userCondition: null
+handle: faculties
+name: Faculties
+siteSettings:
+  8341919b-4097-4c45-8f3b-97ff673d9ab5: # $CRAFT_SITE_NAME
+    hasUrls: false
+    template: null
+    uriFormat: null
+structure:
+  maxLevels: 1
+  uid: 3baf6234-ebf9-47b5-99b3-8bb891fa215a

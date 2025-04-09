@@ -1,4 +1,4 @@
-dateModified: 1744110253
+dateModified: 1744179954
 elementSources:
   craft\elements\Entry:
     -
@@ -376,6 +376,7 @@ meta:
     89c71771-4a5b-44ce-aa3b-a61f30e4c23e: Email # Email
     90d23e21-4d7c-444f-89c4-e66aeb92c134: 'Site Configuration' # Site Configuration
     94e56347-cb09-47d3-a930-1fd9bc2cb026: News # News
+    129a4054-497a-409f-b543-6232f0220bc1: Faculties # Faculties
     295e5325-afca-4a03-93e9-ed957c574148: Footer # Footer
     317eb1dc-2ab0-4290-a1d3-573e6ead4388: 'News Index' # News Index
     349b5e6f-3a2a-43f1-a9dd-2373bf4a0a67: 'Share/SEO Description' # Share/SEO Description
