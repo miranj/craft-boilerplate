@@ -38,10 +38,10 @@ fieldLayouts:
         name: Page
         uid: 5c90ee96-a7ac-4922-9fa8-df2639aeb188
         userCondition: null
-handle: program
+handle: programme
 hasTitleField: true
 icon: graduation-cap
-name: Program
+name: Programme
 showSlugField: true
 showStatusField: true
 slugTranslationKeyFormat: null
