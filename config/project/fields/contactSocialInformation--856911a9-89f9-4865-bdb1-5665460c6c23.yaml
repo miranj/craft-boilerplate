@@ -11,7 +11,15 @@ settings:
       __assoc__:
         -
           - uid
-          - 14f7242a-668c-4d66-a588-17cde4b7e598 # Social Media
+          - 1b75b0c0-3003-4fe3-bc8f-478e12906e75 # Contact: Email
+        -
+          - name
+          - Email
+    -
+      __assoc__:
+        -
+          - uid
+          - 7395f359-de01-4595-b728-81edf64158fc # Phone
     -
       __assoc__:
         -
@@ -24,10 +32,7 @@ settings:
       __assoc__:
         -
           - uid
-          - 1b75b0c0-3003-4fe3-bc8f-478e12906e75 # Contact: Email
-        -
-          - name
-          - Email
+          - 14f7242a-668c-4d66-a588-17cde4b7e598 # Social Media
   includeTableView: false
   maxEntries: null
   minEntries: null
