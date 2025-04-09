@@ -27,7 +27,7 @@ fieldLayouts:
 handle: contactPhone
 hasTitleField: false
 icon: phone
-name: Phone
+name: 'Contact: Phone'
 showSlugField: false
 showStatusField: true
 slugTranslationKeyFormat: null

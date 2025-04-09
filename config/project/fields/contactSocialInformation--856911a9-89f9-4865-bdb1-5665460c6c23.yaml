@@ -19,7 +19,10 @@ settings:
       __assoc__:
         -
           - uid
-          - 7395f359-de01-4595-b728-81edf64158fc # Phone
+          - 7395f359-de01-4595-b728-81edf64158fc # Contact: Phone
+        -
+          - name
+          - Phone
     -
       __assoc__:
         -
