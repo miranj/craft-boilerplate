@@ -3,9 +3,9 @@ enableVersioning: true
 entryTypes:
   -
     uid: c4fb7c86-c508-4410-9362-e47f5b604631 # Program
-handle: programs
+handle: programmes
 maxAuthors: 1
-name: Programs
+name: Programmes
 previewTargets:
   -
     __assoc__:
@@ -24,5 +24,5 @@ siteSettings:
     enabledByDefault: true
     hasUrls: true
     template: _routers/detail.twig
-    uriFormat: 'programs/{slug}'
+    uriFormat: 'programmes/{slug}'
 type: channel
