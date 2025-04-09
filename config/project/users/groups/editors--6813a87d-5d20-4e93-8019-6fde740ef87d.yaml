@@ -10,6 +10,7 @@ permissions:
   - 'createentries:653ea464-6b43-4bc9-8138-79615323d877' # Blog
   - 'createentries:6b8b6979-d75e-432e-8798-2fc0d53eb8f8' # Pages
   - 'createentries:94e56347-cb09-47d3-a930-1fd9bc2cb026' # News
+  - 'createentries:a71afc7e-315c-4be0-b69b-5c70a7dc85db' # Faculties
   - 'createentries:a976662e-fc19-4f89-ae6b-a5b4db64752b' # Events
   - 'createentries:be130f04-1c51-420d-818e-6d4f5a5960fa' # Resources
   - 'createfolders:89c58a76-1da8-4581-84f1-caf2222de75a' # Documents
@@ -18,7 +19,6 @@ permissions:
   - 'deleteassets:e421ceea-a2f2-459f-88b9-2695f86047bd' # Images
   - 'deletecategories:0bc8375c-5e05-4156-a6c9-5678af911123' # News Types
   - 'deletecategories:0ebe4125-0bbc-4efc-a7d1-055eebd82cb5' # Languages
-  - 'deletecategories:129a4054-497a-409f-b543-6232f0220bc1' # Faculties
   - 'deletecategories:53c65b45-5d94-4867-95c3-6b235eef1853' # Focus Areas
   - 'deletecategories:58e76d43-a465-4c1a-b102-2726a9fc13f5' # Resources Types
   - 'deletecategories:6ae2a9cc-c9cc-4b89-9c8c-d7a417cbb87e' # Topics
@@ -31,13 +31,13 @@ permissions:
   - 'deleteentries:653ea464-6b43-4bc9-8138-79615323d877' # Blog
   - 'deleteentries:6b8b6979-d75e-432e-8798-2fc0d53eb8f8' # Pages
   - 'deleteentries:94e56347-cb09-47d3-a930-1fd9bc2cb026' # News
+  - 'deleteentries:a71afc7e-315c-4be0-b69b-5c70a7dc85db' # Faculties
   - 'deleteentries:a976662e-fc19-4f89-ae6b-a5b4db64752b' # Events
   - 'deleteentries:be130f04-1c51-420d-818e-6d4f5a5960fa' # Resources
   - 'deletepeerassets:89c58a76-1da8-4581-84f1-caf2222de75a' # Documents
   - 'deletepeerassets:e421ceea-a2f2-459f-88b9-2695f86047bd' # Images
   - 'deletepeercategorydrafts:0bc8375c-5e05-4156-a6c9-5678af911123' # News Types
   - 'deletepeercategorydrafts:0ebe4125-0bbc-4efc-a7d1-055eebd82cb5' # Languages
-  - 'deletepeercategorydrafts:129a4054-497a-409f-b543-6232f0220bc1' # Faculties
   - 'deletepeercategorydrafts:53c65b45-5d94-4867-95c3-6b235eef1853' # Focus Areas
   - 'deletepeercategorydrafts:58e76d43-a465-4c1a-b102-2726a9fc13f5' # Resources Types
   - 'deletepeercategorydrafts:6ae2a9cc-c9cc-4b89-9c8c-d7a417cbb87e' # Topics
@@ -50,6 +50,7 @@ permissions:
   - 'deletepeerentries:653ea464-6b43-4bc9-8138-79615323d877' # Blog
   - 'deletepeerentries:6b8b6979-d75e-432e-8798-2fc0d53eb8f8' # Pages
   - 'deletepeerentries:94e56347-cb09-47d3-a930-1fd9bc2cb026' # News
+  - 'deletepeerentries:a71afc7e-315c-4be0-b69b-5c70a7dc85db' # Faculties
   - 'deletepeerentries:a976662e-fc19-4f89-ae6b-a5b4db64752b' # Events
   - 'deletepeerentries:be130f04-1c51-420d-818e-6d4f5a5960fa' # Resources
   - 'deletepeerentrydrafts:08b4a047-a20d-4d56-81b0-32b599c4fb41' # People
@@ -62,6 +63,7 @@ permissions:
   - 'deletepeerentrydrafts:653ea464-6b43-4bc9-8138-79615323d877' # Blog
   - 'deletepeerentrydrafts:6b8b6979-d75e-432e-8798-2fc0d53eb8f8' # Pages
   - 'deletepeerentrydrafts:94e56347-cb09-47d3-a930-1fd9bc2cb026' # News
+  - 'deletepeerentrydrafts:a71afc7e-315c-4be0-b69b-5c70a7dc85db' # Faculties
   - 'deletepeerentrydrafts:a976662e-fc19-4f89-ae6b-a5b4db64752b' # Events
   - 'deletepeerentrydrafts:bc20ba64-4979-418f-aa28-244626f315ab' # Home Page
   - 'deletepeerentrydrafts:be130f04-1c51-420d-818e-6d4f5a5960fa' # Resources
@@ -78,7 +80,6 @@ permissions:
   - 'saveassets:e421ceea-a2f2-459f-88b9-2695f86047bd' # Images
   - 'savecategories:0bc8375c-5e05-4156-a6c9-5678af911123' # News Types
   - 'savecategories:0ebe4125-0bbc-4efc-a7d1-055eebd82cb5' # Languages
-  - 'savecategories:129a4054-497a-409f-b543-6232f0220bc1' # Faculties
   - 'savecategories:53c65b45-5d94-4867-95c3-6b235eef1853' # Focus Areas
   - 'savecategories:58e76d43-a465-4c1a-b102-2726a9fc13f5' # Resources Types
   - 'savecategories:6ae2a9cc-c9cc-4b89-9c8c-d7a417cbb87e' # Topics
@@ -95,6 +96,7 @@ permissions:
   - 'saveentries:653ea464-6b43-4bc9-8138-79615323d877' # Blog
   - 'saveentries:6b8b6979-d75e-432e-8798-2fc0d53eb8f8' # Pages
   - 'saveentries:94e56347-cb09-47d3-a930-1fd9bc2cb026' # News
+  - 'saveentries:a71afc7e-315c-4be0-b69b-5c70a7dc85db' # Faculties
   - 'saveentries:a976662e-fc19-4f89-ae6b-a5b4db64752b' # Events
   - 'saveentries:bc20ba64-4979-418f-aa28-244626f315ab' # Home Page
   - 'saveentries:be130f04-1c51-420d-818e-6d4f5a5960fa' # Resources
@@ -103,7 +105,6 @@ permissions:
   - 'savepeerassets:e421ceea-a2f2-459f-88b9-2695f86047bd' # Images
   - 'savepeercategorydrafts:0bc8375c-5e05-4156-a6c9-5678af911123' # News Types
   - 'savepeercategorydrafts:0ebe4125-0bbc-4efc-a7d1-055eebd82cb5' # Languages
-  - 'savepeercategorydrafts:129a4054-497a-409f-b543-6232f0220bc1' # Faculties
   - 'savepeercategorydrafts:53c65b45-5d94-4867-95c3-6b235eef1853' # Focus Areas
   - 'savepeercategorydrafts:58e76d43-a465-4c1a-b102-2726a9fc13f5' # Resources Types
   - 'savepeercategorydrafts:6ae2a9cc-c9cc-4b89-9c8c-d7a417cbb87e' # Topics
@@ -116,6 +117,7 @@ permissions:
   - 'savepeerentries:653ea464-6b43-4bc9-8138-79615323d877' # Blog
   - 'savepeerentries:6b8b6979-d75e-432e-8798-2fc0d53eb8f8' # Pages
   - 'savepeerentries:94e56347-cb09-47d3-a930-1fd9bc2cb026' # News
+  - 'savepeerentries:a71afc7e-315c-4be0-b69b-5c70a7dc85db' # Faculties
   - 'savepeerentries:a976662e-fc19-4f89-ae6b-a5b4db64752b' # Events
   - 'savepeerentries:be130f04-1c51-420d-818e-6d4f5a5960fa' # Resources
   - 'savepeerentrydrafts:08b4a047-a20d-4d56-81b0-32b599c4fb41' # People
@@ -128,6 +130,7 @@ permissions:
   - 'savepeerentrydrafts:653ea464-6b43-4bc9-8138-79615323d877' # Blog
   - 'savepeerentrydrafts:6b8b6979-d75e-432e-8798-2fc0d53eb8f8' # Pages
   - 'savepeerentrydrafts:94e56347-cb09-47d3-a930-1fd9bc2cb026' # News
+  - 'savepeerentrydrafts:a71afc7e-315c-4be0-b69b-5c70a7dc85db' # Faculties
   - 'savepeerentrydrafts:a976662e-fc19-4f89-ae6b-a5b4db64752b' # Events
   - 'savepeerentrydrafts:bc20ba64-4979-418f-aa28-244626f315ab' # Home Page
   - 'savepeerentrydrafts:be130f04-1c51-420d-818e-6d4f5a5960fa' # Resources
@@ -136,7 +139,6 @@ permissions:
   - 'viewassets:e421ceea-a2f2-459f-88b9-2695f86047bd' # Images
   - 'viewcategories:0bc8375c-5e05-4156-a6c9-5678af911123' # News Types
   - 'viewcategories:0ebe4125-0bbc-4efc-a7d1-055eebd82cb5' # Languages
-  - 'viewcategories:129a4054-497a-409f-b543-6232f0220bc1' # Faculties
   - 'viewcategories:53c65b45-5d94-4867-95c3-6b235eef1853' # Focus Areas
   - 'viewcategories:58e76d43-a465-4c1a-b102-2726a9fc13f5' # Resources Types
   - 'viewcategories:6ae2a9cc-c9cc-4b89-9c8c-d7a417cbb87e' # Topics
@@ -153,6 +155,7 @@ permissions:
   - 'viewentries:653ea464-6b43-4bc9-8138-79615323d877' # Blog
   - 'viewentries:6b8b6979-d75e-432e-8798-2fc0d53eb8f8' # Pages
   - 'viewentries:94e56347-cb09-47d3-a930-1fd9bc2cb026' # News
+  - 'viewentries:a71afc7e-315c-4be0-b69b-5c70a7dc85db' # Faculties
   - 'viewentries:a976662e-fc19-4f89-ae6b-a5b4db64752b' # Events
   - 'viewentries:bc20ba64-4979-418f-aa28-244626f315ab' # Home Page
   - 'viewentries:be130f04-1c51-420d-818e-6d4f5a5960fa' # Resources
@@ -161,7 +164,6 @@ permissions:
   - 'viewpeerassets:e421ceea-a2f2-459f-88b9-2695f86047bd' # Images
   - 'viewpeercategorydrafts:0bc8375c-5e05-4156-a6c9-5678af911123' # News Types
   - 'viewpeercategorydrafts:0ebe4125-0bbc-4efc-a7d1-055eebd82cb5' # Languages
-  - 'viewpeercategorydrafts:129a4054-497a-409f-b543-6232f0220bc1' # Faculties
   - 'viewpeercategorydrafts:53c65b45-5d94-4867-95c3-6b235eef1853' # Focus Areas
   - 'viewpeercategorydrafts:58e76d43-a465-4c1a-b102-2726a9fc13f5' # Resources Types
   - 'viewpeercategorydrafts:6ae2a9cc-c9cc-4b89-9c8c-d7a417cbb87e' # Topics
@@ -174,6 +176,7 @@ permissions:
   - 'viewpeerentries:653ea464-6b43-4bc9-8138-79615323d877' # Blog
   - 'viewpeerentries:6b8b6979-d75e-432e-8798-2fc0d53eb8f8' # Pages
   - 'viewpeerentries:94e56347-cb09-47d3-a930-1fd9bc2cb026' # News
+  - 'viewpeerentries:a71afc7e-315c-4be0-b69b-5c70a7dc85db' # Faculties
   - 'viewpeerentries:a976662e-fc19-4f89-ae6b-a5b4db64752b' # Events
   - 'viewpeerentries:be130f04-1c51-420d-818e-6d4f5a5960fa' # Resources
   - 'viewpeerentrydrafts:08b4a047-a20d-4d56-81b0-32b599c4fb41' # People
@@ -186,6 +189,7 @@ permissions:
   - 'viewpeerentrydrafts:653ea464-6b43-4bc9-8138-79615323d877' # Blog
   - 'viewpeerentrydrafts:6b8b6979-d75e-432e-8798-2fc0d53eb8f8' # Pages
   - 'viewpeerentrydrafts:94e56347-cb09-47d3-a930-1fd9bc2cb026' # News
+  - 'viewpeerentrydrafts:a71afc7e-315c-4be0-b69b-5c70a7dc85db' # Faculties
   - 'viewpeerentrydrafts:a976662e-fc19-4f89-ae6b-a5b4db64752b' # Events
   - 'viewpeerentrydrafts:bc20ba64-4979-418f-aa28-244626f315ab' # Home Page
   - 'viewpeerentrydrafts:be130f04-1c51-420d-818e-6d4f5a5960fa' # Resources

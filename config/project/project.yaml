@@ -1,4 +1,4 @@
-dateModified: 1744180396
+dateModified: 1744182944
 elementSources:
   craft\elements\Entry:
     -
@@ -122,6 +122,18 @@ elementSources:
         - link
         - 'fieldInstance:e30e5ed4-2a93-4299-927a-7993d8dc68b3'
         - 'field:9b5f9007-3f61-4857-b978-fdfbc4b29dba' # Event Types
+        - dateUpdated
+        - revisionCreator
+      type: native
+    -
+      defaultSort:
+        - title
+        - asc
+      defaultViewMode: ''
+      disabled: false
+      key: 'section:a71afc7e-315c-4be0-b69b-5c70a7dc85db' # Faculties
+      tableAttributes:
+        - link
         - dateUpdated
         - revisionCreator
       type: native
@@ -376,7 +388,6 @@ meta:
     89c71771-4a5b-44ce-aa3b-a61f30e4c23e: Email # Email
     90d23e21-4d7c-444f-89c4-e66aeb92c134: 'Site Configuration' # Site Configuration
     94e56347-cb09-47d3-a930-1fd9bc2cb026: News # News
-    129a4054-497a-409f-b543-6232f0220bc1: Faculties # Faculties
     295e5325-afca-4a03-93e9-ed957c574148: Footer # Footer
     317eb1dc-2ab0-4290-a1d3-573e6ead4388: 'News Index' # News Index
     349b5e6f-3a2a-43f1-a9dd-2373bf4a0a67: 'Share/SEO Description' # Share/SEO Description
@@ -396,6 +407,7 @@ meta:
     25388890-1b39-49c8-8d89-7ef2d82f89a1: Newsletter # Newsletter
     a6b97e16-5236-44b1-ad57-3899644efd40: 'Link With Label (inc. Assets)' # Link With Label (inc. Assets)
     a53f5b40-fb8c-4a9d-8c25-dc8e3dfe58d6: Code # Code
+    a71afc7e-315c-4be0-b69b-5c70a7dc85db: Faculties # Faculties
     a385a4fe-5736-44ee-ab48-d869428d380c: News # News
     a404ee2c-1d0d-4da9-a736-cd565a4d2605: Page # Page
     a9736c79-b219-4814-ba33-728835b7d230: Body # Body
@@ -415,6 +427,7 @@ meta:
     be130f04-1c51-420d-818e-6d4f5a5960fa: Resources # Resources
     be827b12-3e63-4d2a-b17a-5c60ab99f248: 'Publication Type' # Publication Type
     c4fb7c86-c508-4410-9362-e47f5b604631: Programme # Programme
+    c8c8ccd9-ebdc-48dd-bac8-029cb3d04923: Faculty # Faculty
     c5712456-e12b-4cbc-a8cc-b570cf00d66e: 'Publications Index' # Publications Index
     d4720a93-54ad-45de-a939-b668ed8660dc: 'Share/SEO Image' # Share/SEO Image
     da24c053-b31c-4fa8-b113-217845a4ce83: 'Share/SEO Title' # Share/SEO Title
