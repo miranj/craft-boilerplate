@@ -18,12 +18,12 @@ Release notes for Miranj's Craft Boilerplate starter project.
 
 ### Craft
 
-- Installed oEmbed 3.1.3.
-- Updated Craft CMS to 5.6.9.1.
+- Installed oEmbed 3.1.4.
+- Updated Craft CMS to 5.6.17.
 - Updated CKEditor to 4.6.0.
 - Updated CP Field Inspect to 2.0.4.
-- Updated Image Resizer to 4.0.2.
-- Updated Imager X to 5.1.1.
+- Updated Image Resizer to 4.0.3.
+- Updated Imager X to 5.1.3.
 
 ## 3.3.0 - 2025-02-24
 
