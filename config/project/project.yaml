@@ -1,4 +1,4 @@
-dateModified: 1744181186
+dateModified: 1744524828
 elementSources:
   craft\elements\Entry:
     -
@@ -127,6 +127,18 @@ elementSources:
       type: native
     -
       defaultSort:
+        - title
+        - asc
+      defaultViewMode: ''
+      disabled: false
+      key: 'section:a71afc7e-315c-4be0-b69b-5c70a7dc85db' # Departments
+      tableAttributes:
+        - link
+        - dateUpdated
+        - revisionCreator
+      type: native
+    -
+      defaultSort:
         - postDate
         - desc
       defaultViewMode: ''
@@ -149,6 +161,18 @@ elementSources:
       tableAttributes:
         - link
         - 'fieldInstance:6b80c15b-e48e-4b66-8f5a-795142b9a77f'
+      type: native
+    -
+      defaultSort:
+        - title
+        - asc
+      defaultViewMode: ''
+      disabled: false
+      key: 'section:3efc7d18-2f42-40d1-beee-b05867f36104' # Programmes
+      tableAttributes:
+        - link
+        - dateUpdated
+        - revisionCreator
       type: native
     -
       defaultSort:
@@ -331,11 +355,13 @@ meta:
     1ba3b532-e3ed-43db-93a6-00c05efcc84f: 'Resource Types' # Resource Types
     2bfee73d-1d4f-480f-9a78-6be8410a6704: 'Social Media' # Social Media
     3aba8130-5dea-47d5-ad23-a536e8b9760a: 'Resource: Link' # Resource: Link
+    3efc7d18-2f42-40d1-beee-b05867f36104: Programmes # Programmes
     5b72b712-0218-40c6-9717-0c395a914ad8: Summary # Summary
     5d68dab3-70f1-4fbc-833e-e504aa7c926d: 'User Photos' # User Photos
     6ae2a9cc-c9cc-4b89-9c8c-d7a417cbb87e: Topics # Topics
     6b8b6979-d75e-432e-8798-2fc0d53eb8f8: Pages # Pages
     6caf0d7f-9b74-4ae4-b0dd-458633bd94d1: Image # Image
+    6d709589-8e2f-4fef-9c6f-48f5644fb922: Disciplines # Disciplines
     7a8f449f-4cfb-49db-8656-d7551c298f4c: Authors # Authors
     7b8b18a2-8e96-4b93-bfaa-34a1d9fa86e1: Rich # Rich
     7bc0d428-9e00-47b5-b928-67896f29ae17: 'Contact: Website' # Contact: Website
@@ -352,6 +378,7 @@ meta:
     14f7242a-668c-4d66-a588-17cde4b7e598: 'Social Media' # Social Media
     15ad504a-20b4-4e89-b94c-e7be7f135774: 'People Index' # People Index
     32ed2f1a-9024-4ee9-9028-3a5041c0e5e6: Date # Date
+    53c65b45-5d94-4867-95c3-6b235eef1853: 'Focus Areas' # Focus Areas
     56b9dc41-a930-42d9-ba33-9925b4fe9954: 'System Administration' # System Administration
     58e76d43-a465-4c1a-b102-2726a9fc13f5: 'Resources Types' # Resources Types
     64ee8bca-fd54-4c78-853c-aaf37e0bb8c0: Gallery # Gallery
@@ -383,6 +410,7 @@ meta:
     25388890-1b39-49c8-8d89-7ef2d82f89a1: Newsletter # Newsletter
     a6b97e16-5236-44b1-ad57-3899644efd40: 'Link (Assets, Entries, URL)' # Link (Assets, Entries, URL)
     a53f5b40-fb8c-4a9d-8c25-dc8e3dfe58d6: Code # Code
+    a71afc7e-315c-4be0-b69b-5c70a7dc85db: Departments # Departments
     a385a4fe-5736-44ee-ab48-d869428d380c: News # News
     a404ee2c-1d0d-4da9-a736-cd565a4d2605: Page # Page
     a9736c79-b219-4814-ba33-728835b7d230: Body # Body
@@ -402,6 +430,8 @@ meta:
     bc20ba64-4979-418f-aa28-244626f315ab: 'Home Page' # Home Page
     be130f04-1c51-420d-818e-6d4f5a5960fa: Resources # Resources
     be827b12-3e63-4d2a-b17a-5c60ab99f248: 'Publication Type' # Publication Type
+    c4fb7c86-c508-4410-9362-e47f5b604631: Programme # Programme
+    c8c8ccd9-ebdc-48dd-bac8-029cb3d04923: Department # Department
     c5712456-e12b-4cbc-a8cc-b570cf00d66e: 'Publications Index' # Publications Index
     d4720a93-54ad-45de-a939-b668ed8660dc: 'Share/SEO Image' # Share/SEO Image
     da24c053-b31c-4fa8-b113-217845a4ce83: 'Share/SEO Title' # Share/SEO Title
