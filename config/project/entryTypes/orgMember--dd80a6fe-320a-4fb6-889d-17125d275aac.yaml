@@ -70,10 +70,10 @@ fieldLayouts:
         name: Page
         uid: f052a411-0c92-4669-bf4a-8f9d613feac0
         userCondition: null
-handle: member
+handle: orgMember
 hasTitleField: true
 icon: user
-name: Member
+name: 'Org Member'
 showSlugField: true
 showStatusField: true
 slugTranslationKeyFormat: null

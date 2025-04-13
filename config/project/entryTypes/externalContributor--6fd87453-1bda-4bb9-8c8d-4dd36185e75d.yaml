@@ -70,10 +70,10 @@ fieldLayouts:
         name: Content
         uid: 00729573-9236-4b4b-ac77-3138b2cc63b5
         userCondition: null
-handle: external
+handle: externalContributor
 hasTitleField: true
 icon: handshake
-name: External
+name: 'External Contributor'
 showSlugField: true
 showStatusField: true
 slugTranslationKeyFormat: null
