@@ -195,10 +195,10 @@ class Module extends \yii\base\Module
             'onBeforeSendLivePreview',
         ]);
 
-        Event::on(Entry::class, Entry::EVENT_DEFINE_RULES, [
-            $this,
-            'validateEventEndDateTime',
-        ]);
+        // Event::on(Entry::class, Entry::EVENT_DEFINE_RULES, [
+        //     $this,
+        //     'validateEventEndDateTime',
+        // ]);
 
         Event::on(Entry::class, Element::EVENT_DEFINE_BEHAVIORS, [
             $this,
