@@ -38,10 +38,10 @@ fieldLayouts:
         name: Content
         uid: bd308d9b-4552-4b33-a434-c8592a1b8de4
         userCondition: null
-handle: faculty
+handle: department
 hasTitleField: true
-icon: school
-name: Faculty
+icon: building
+name: Department
 showSlugField: true
 showStatusField: true
 slugTranslationKeyFormat: null

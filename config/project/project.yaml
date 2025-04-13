@@ -1,4 +1,4 @@
-dateModified: 1744182945
+dateModified: 1744524828
 elementSources:
   craft\elements\Entry:
     -
@@ -131,7 +131,7 @@ elementSources:
         - asc
       defaultViewMode: ''
       disabled: false
-      key: 'section:a71afc7e-315c-4be0-b69b-5c70a7dc85db' # Faculties
+      key: 'section:a71afc7e-315c-4be0-b69b-5c70a7dc85db' # Departments
       tableAttributes:
         - link
         - dateUpdated
@@ -410,7 +410,7 @@ meta:
     25388890-1b39-49c8-8d89-7ef2d82f89a1: Newsletter # Newsletter
     a6b97e16-5236-44b1-ad57-3899644efd40: 'Link (Assets, Entries, URL)' # Link (Assets, Entries, URL)
     a53f5b40-fb8c-4a9d-8c25-dc8e3dfe58d6: Code # Code
-    a71afc7e-315c-4be0-b69b-5c70a7dc85db: Faculties # Faculties
+    a71afc7e-315c-4be0-b69b-5c70a7dc85db: Departments # Departments
     a385a4fe-5736-44ee-ab48-d869428d380c: News # News
     a404ee2c-1d0d-4da9-a736-cd565a4d2605: Page # Page
     a9736c79-b219-4814-ba33-728835b7d230: Body # Body
@@ -431,7 +431,7 @@ meta:
     be130f04-1c51-420d-818e-6d4f5a5960fa: Resources # Resources
     be827b12-3e63-4d2a-b17a-5c60ab99f248: 'Publication Type' # Publication Type
     c4fb7c86-c508-4410-9362-e47f5b604631: Programme # Programme
-    c8c8ccd9-ebdc-48dd-bac8-029cb3d04923: Faculty # Faculty
+    c8c8ccd9-ebdc-48dd-bac8-029cb3d04923: Department # Department
     c5712456-e12b-4cbc-a8cc-b570cf00d66e: 'Publications Index' # Publications Index
     d4720a93-54ad-45de-a939-b668ed8660dc: 'Share/SEO Image' # Share/SEO Image
     da24c053-b31c-4fa8-b113-217845a4ce83: 'Share/SEO Title' # Share/SEO Title
