@@ -3,6 +3,8 @@ enableVersioning: true
 entryTypes:
   -
     uid: dd80a6fe-320a-4fb6-889d-17125d275aac # Member
+  -
+    uid: 6fd87453-1bda-4bb9-8c8d-4dd36185e75d # External
 handle: people
 maxAuthors: 1
 name: People
