@@ -2,7 +2,7 @@ defaultPlacement: end
 enableVersioning: true
 entryTypes:
   -
-    uid: ad5b3d91-425f-4181-8ded-f9c7c53a6bba # Person
+    uid: dd80a6fe-320a-4fb6-889d-17125d275aac # Member
 handle: people
 maxAuthors: 1
 name: People
@@ -24,5 +24,8 @@ siteSettings:
     enabledByDefault: true
     hasUrls: true
     template: _routers/detail.twig
-    uriFormat: 'people/{slug}'
-type: channel
+    uriFormat: 'members/{slug}'
+structure:
+  maxLevels: 1
+  uid: 3760b257-08c1-4c72-b232-18a46eabe54a
+type: structure
