@@ -6,6 +6,7 @@ Release notes for Miranj's Craft Boilerplate starter project.
 
 ### DevOps
 
+- PDF files can now be cached by user agents for 1 month.
 - Fixed a bug where the primary Craft app would not honour extra static file rules for videos, webmanifests, etc.
 - Refactored extra Nginx static file rules config for better re-use.
 
