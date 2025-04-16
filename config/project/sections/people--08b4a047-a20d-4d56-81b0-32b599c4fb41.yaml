@@ -27,7 +27,4 @@ siteSettings:
     hasUrls: true
     template: _routers/detail.twig
     uriFormat: 'members/{slug}'
-structure:
-  maxLevels: 1
-  uid: 3760b257-08c1-4c72-b232-18a46eabe54a
-type: structure
+type: channel
