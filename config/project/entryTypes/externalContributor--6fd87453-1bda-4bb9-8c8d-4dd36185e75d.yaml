@@ -67,7 +67,23 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-        name: Content
+          -
+            dateAdded: '2025-04-16T01:50:00+00:00'
+            elementCondition: null
+            fieldUid: 08b5b22b-fb98-46ef-8a90-e392edb2244f # Rich Text
+            handle: bio
+            includeInCards: false
+            instructions: null
+            label: Bio
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 6b36485c-18c7-4076-a451-819dbf338986
+            userCondition: null
+            warning: null
+            width: 100
+        name: Page
         uid: 00729573-9236-4b4b-ac77-3138b2cc63b5
         userCondition: null
       -
