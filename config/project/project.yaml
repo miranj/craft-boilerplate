@@ -1,4 +1,4 @@
-dateModified: 1744865781
+dateModified: 1744865782
 elementSources:
   craft\elements\Category:
     -
@@ -505,6 +505,7 @@ meta:
     386721be-1ee4-4e3b-b22c-7fb3dfded3ff: 'Simple Text' # Simple Text
     856911a9-89f9-4865-bdb1-5665460c6c23: 'Contact & Social Media Information' # Contact & Social Media Information
     8341919b-4097-4c45-8f3b-97ff673d9ab5: $CRAFT_SITE_NAME # $CRAFT_SITE_NAME
+    11127416-2baf-40e9-bb28-9ea76040af2a: 'Person Roles' # Person Roles
     18803174-20d5-4b61-a067-3072b484f857: 'Resources Index' # Resources Index
     25388890-1b39-49c8-8d89-7ef2d82f89a1: Newsletter # Newsletter
     a0320c92-dcb7-489b-94e3-bd21fdc647cc: Practices # Practices

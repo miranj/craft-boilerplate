@@ -99,6 +99,22 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
+          -
+            dateAdded: '2025-04-17T04:38:10+00:00'
+            elementCondition: null
+            fieldUid: 11127416-2baf-40e9-bb28-9ea76040af2a # Person Roles
+            handle: roles
+            includeInCards: false
+            instructions: null
+            label: Roles
+            providesThumbs: false
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 180d4fc7-9ed8-45dd-8658-851b8d3687ea
+            userCondition: null
+            warning: null
+            width: 100
         name: Page
         uid: f052a411-0c92-4669-bf4a-8f9d613feac0
         userCondition: null
