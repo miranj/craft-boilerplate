@@ -4,6 +4,10 @@ Release notes for Miranj's Craft Boilerplate starter project.
 
 ## Unreleased 3.3.next
 
+### Craft
+
+- Fixed a bug where changes to an existing asset would not always result in Imager transforms being re-generated.
+
 ### DevOps
 
 - PDF files can now be cached by user agents for 1 month.

@@ -26,6 +26,11 @@ return [
         // paths
         'imagerSystemPath' => '@assetBasePath/images/x',
         'imagerUrl' => '@assetBaseUrl/images/x',
+        'filenamePattern' => implode('_', [
+            '{basename}',
+            '{transformString|hash}',
+            '{timestamp}.{extension}', // ensure asset changes force a re-transform
+        ]),
 
         // image handling
         'jpegQuality' => 85,
