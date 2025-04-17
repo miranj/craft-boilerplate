@@ -1,4 +1,4 @@
-dateModified: 1744863973
+dateModified: 1744864059
 elementSources:
   craft\elements\Entry:
     -
@@ -207,6 +207,7 @@ elementSources:
       tableAttributes:
         - link
         - dateUpdated
+        - revisionCreator
       type: custom
     -
       defaultSort:
