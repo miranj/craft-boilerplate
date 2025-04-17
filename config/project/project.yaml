@@ -1,5 +1,40 @@
-dateModified: 1744865257
+dateModified: 1744865781
 elementSources:
+  craft\elements\Category:
+    -
+      key: 'group:6d709589-8e2f-4fef-9c6f-48f5644fb922' # Disciplines
+      type: native
+    -
+      key: 'group:8a5099a8-7b2e-4052-b798-5e7d19f38b15' # Event Types
+      type: native
+    -
+      key: 'group:53c65b45-5d94-4867-95c3-6b235eef1853' # Focus Areas
+      type: native
+    -
+      key: 'group:0ebe4125-0bbc-4efc-a7d1-055eebd82cb5' # Languages
+      type: native
+    -
+      key: 'group:0bc8375c-5e05-4156-a6c9-5678af911123' # News Types
+      type: native
+    -
+      defaultSort:
+        - structure
+        - asc
+      defaultViewMode: ''
+      disabled: false
+      key: 'group:9ff437c1-0323-4492-a95e-007c3a05ab8f' # Practices
+      tableAttributes:
+        - dateUpdated
+      type: native
+    -
+      key: 'group:a907570e-41b8-4e87-b566-c2abe353e2a6' # Publication Types
+      type: native
+    -
+      key: 'group:58e76d43-a465-4c1a-b102-2726a9fc13f5' # Resources Types
+      type: native
+    -
+      key: 'group:6ae2a9cc-c9cc-4b89-9c8c-d7a417cbb87e' # Topics
+      type: native
   craft\elements\Entry:
     -
       condition:
@@ -436,6 +471,7 @@ meta:
     9b8054bc-bad1-4e95-b74b-e722465d36b9: Publication # Publication
     9c5f24a6-1969-4197-9fce-ff44e5a18b9b: People # People
     9ce8d4e8-4f27-44a1-8f1c-60187033a3e3: 'Focus Areas' # Focus Areas
+    9ff437c1-0323-4492-a95e-007c3a05ab8f: Practices # Practices
     12c6ecb1-eb21-40a2-aca1-217b86047c44: Event # Event
     14f7242a-668c-4d66-a588-17cde4b7e598: 'Social Media' # Social Media
     15ad504a-20b4-4e89-b94c-e7be7f135774: 'People Index' # People Index
@@ -471,6 +507,7 @@ meta:
     8341919b-4097-4c45-8f3b-97ff673d9ab5: $CRAFT_SITE_NAME # $CRAFT_SITE_NAME
     18803174-20d5-4b61-a067-3072b484f857: 'Resources Index' # Resources Index
     25388890-1b39-49c8-8d89-7ef2d82f89a1: Newsletter # Newsletter
+    a0320c92-dcb7-489b-94e3-bd21fdc647cc: Practices # Practices
     a6b97e16-5236-44b1-ad57-3899644efd40: 'Link (Assets, Entries, URL)' # Link (Assets, Entries, URL)
     a53f5b40-fb8c-4a9d-8c25-dc8e3dfe58d6: Code # Code
     a71afc7e-315c-4be0-b69b-5c70a7dc85db: Departments # Departments
