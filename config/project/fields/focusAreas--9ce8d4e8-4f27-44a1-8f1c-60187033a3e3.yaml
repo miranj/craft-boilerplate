@@ -1,0 +1,21 @@
+columnSuffix: null
+handle: focusAreas
+instructions: null
+name: 'Focus Areas'
+searchable: true
+settings:
+  allowSelfRelations: false
+  branchLimit: null
+  maintainHierarchy: false
+  maxRelations: null
+  minRelations: null
+  selectionLabel: 'Add Focus Areas'
+  showCardsInGrid: false
+  showSiteMenu: false
+  source: 'group:53c65b45-5d94-4867-95c3-6b235eef1853' # Focus Areas
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: list
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Categories

@@ -1,4 +1,4 @@
-dateModified: 1744864059
+dateModified: 1744865257
 elementSources:
   craft\elements\Entry:
     -
@@ -435,6 +435,7 @@ meta:
     9b5f9007-3f61-4857-b978-fdfbc4b29dba: 'Event Types' # Event Types
     9b8054bc-bad1-4e95-b74b-e722465d36b9: Publication # Publication
     9c5f24a6-1969-4197-9fce-ff44e5a18b9b: People # People
+    9ce8d4e8-4f27-44a1-8f1c-60187033a3e3: 'Focus Areas' # Focus Areas
     12c6ecb1-eb21-40a2-aca1-217b86047c44: Event # Event
     14f7242a-668c-4d66-a588-17cde4b7e598: 'Social Media' # Social Media
     15ad504a-20b4-4e89-b94c-e7be7f135774: 'People Index' # People Index
@@ -445,6 +446,7 @@ meta:
     64ee8bca-fd54-4c78-853c-aaf37e0bb8c0: Gallery # Gallery
     65fd1257-02e1-40e1-a8a4-0ad89b4e9510: 'Link (Email, Phone, URL)' # Link (Email, Phone, URL)
     69dcd3aa-18b8-48bf-a7d3-deb9c6912349: Topics # Topics
+    86d5863c-5339-40bb-9add-f4872cdfdce5: Departments # Departments
     89c58a76-1da8-4581-84f1-caf2222de75a: Documents # Documents
     89c71771-4a5b-44ce-aa3b-a61f30e4c23e: Email # Email
     90d8deb5-3a82-411b-b04f-8eed4c8890c9: 'URL (Phone)' # URL (Phone)
@@ -484,6 +486,7 @@ meta:
     b5e4cb0a-59d9-4e16-bfc3-408104521a11: URL # URL
     b5fe8dff-122f-4559-8bbb-d4049e479d18: 'Google Analytics' # Google Analytics
     b6ab5147-5d5b-42af-9984-8d4c1b01f63a: 'Static Assets' # Static Assets
+    b41f3521-c73f-45d7-baac-db7ec5a54bd1: Programmes # Programmes
     b64f08d1-e4db-4745-bf21-6e03e16ed93b: '404 Page Not Found' # 404 Page Not Found
     b99607d1-2cd8-44ef-add2-731bb39d4397: 'Toggle (Default: on)' # Toggle (Default: on)
     bb0a4a47-dcbd-41a8-9bbb-82341295f5ff: 'Date & Time' # Date & Time
