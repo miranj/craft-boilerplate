@@ -1,10 +1,12 @@
 {#
   _cp/paths/url/people.twig
+
+  Figure out which entries get a URL based on a set of conditions.
 #}
 
 {# Params #}
 {% set personRoles = personRoles ?? object.roles|map(e => e.value) %}
-{% set personIsActive = personIsActive ?? not object.isAlumni %}
+{% set personIsActive = personIsActive ?? not (object.isAlumni ?? false) %}
 
 
 
