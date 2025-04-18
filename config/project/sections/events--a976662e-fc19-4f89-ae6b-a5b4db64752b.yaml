@@ -2,10 +2,10 @@ defaultPlacement: end
 enableVersioning: true
 entryTypes:
   -
-    uid: b5b9369b-8ab5-44dc-bbaa-058288143025 # Index Page
-handle: index_publications
+    uid: 12c6ecb1-eb21-40a2-aca1-217b86047c44 # Event
+handle: events
 maxAuthors: 1
-name: 'Publications Index'
+name: Events
 previewTargets:
   -
     __assoc__:
@@ -23,6 +23,6 @@ siteSettings:
   8341919b-4097-4c45-8f3b-97ff673d9ab5: # $CRAFT_SITE_NAME
     enabledByDefault: true
     hasUrls: true
-    template: _routers/index.twig
-    uriFormat: publications
-type: single
+    template: _routers/detail.twig
+    uriFormat: 'events/{slug}'
+type: channel

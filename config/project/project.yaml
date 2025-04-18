@@ -1,4 +1,4 @@
-dateModified: 1742270967
+dateModified: 1744967629
 elementSources:
   craft\elements\Entry:
     -
@@ -113,6 +113,32 @@ elementSources:
       type: native
     -
       defaultSort:
+        - 'fieldInstance:e30e5ed4-2a93-4299-927a-7993d8dc68b3'
+        - desc
+      defaultViewMode: ''
+      disabled: false
+      key: 'section:a976662e-fc19-4f89-ae6b-a5b4db64752b' # Events
+      tableAttributes:
+        - link
+        - 'fieldInstance:e30e5ed4-2a93-4299-927a-7993d8dc68b3'
+        - 'field:9b5f9007-3f61-4857-b978-fdfbc4b29dba' # Event Types
+        - dateUpdated
+        - revisionCreator
+      type: native
+    -
+      defaultSort:
+        - title
+        - asc
+      defaultViewMode: ''
+      disabled: false
+      key: 'section:a71afc7e-315c-4be0-b69b-5c70a7dc85db' # Departments
+      tableAttributes:
+        - link
+        - dateUpdated
+        - revisionCreator
+      type: native
+    -
+      defaultSort:
         - postDate
         - desc
       defaultViewMode: ''
@@ -122,6 +148,89 @@ elementSources:
         - link
         - 'field:8f896808-aacf-4f83-9a35-cd7076a6707b' # News Type
         - postDate
+        - dateUpdated
+        - revisionCreator
+      type: native
+    -
+      condition:
+        class: craft\elements\conditions\entries\EntryCondition
+        conditionRules:
+          -
+            class: craft\elements\conditions\entries\SectionConditionRule
+            operator: in
+            uid: fa319362-41b5-4d74-937d-78e28c8f3885
+            values:
+              - 08b4a047-a20d-4d56-81b0-32b599c4fb41 # People
+          -
+            class: craft\elements\conditions\entries\TypeConditionRule
+            operator: in
+            uid: 36ed3005-5a84-4677-83d8-b8b38ed73c74
+            values:
+              - dd80a6fe-320a-4fb6-889d-17125d275aac # Org Member
+        elementType: craft\elements\Entry
+        fieldContext: global
+      defaultSort:
+        - title
+        - asc
+      defaultViewMode: ''
+      key: 'custom:74176ca4-24f3-451c-9878-05473385ae3e'
+      label: 'Organization Members'
+      tableAttributes:
+        - link
+        - dateUpdated
+        - revisionCreator
+      type: custom
+    -
+      condition:
+        class: craft\elements\conditions\entries\EntryCondition
+        conditionRules:
+          -
+            class: craft\elements\conditions\entries\SectionConditionRule
+            operator: in
+            uid: ad6584d1-fbee-4da2-9e6f-361e181ac8db
+            values:
+              - 08b4a047-a20d-4d56-81b0-32b599c4fb41 # People
+          -
+            class: craft\elements\conditions\entries\TypeConditionRule
+            operator: in
+            uid: a5eaf8a5-2223-42f3-b8e4-19a9706efca5
+            values:
+              - 6fd87453-1bda-4bb9-8c8d-4dd36185e75d # External Contributor
+        elementType: craft\elements\Entry
+        fieldContext: global
+      defaultSort:
+        - title
+        - asc
+      defaultViewMode: ''
+      key: 'custom:3765d7ff-9a91-48f6-bd36-1008e96248d1'
+      label: 'External Contributors'
+      tableAttributes:
+        - link
+        - dateUpdated
+        - revisionCreator
+      type: custom
+    -
+      defaultSort:
+        - title
+        - asc
+      defaultViewMode: ''
+      disabled: true
+      key: 'section:08b4a047-a20d-4d56-81b0-32b599c4fb41' # People
+      tableAttributes:
+        - link
+        - type
+        - dateUpdated
+        - revisionCreator
+      type: native
+    -
+      defaultSort:
+        - title
+        - asc
+      defaultViewMode: ''
+      disabled: false
+      key: 'section:3efc7d18-2f42-40d1-beee-b05867f36104' # Programmes
+      tableAttributes:
+        - link
         - dateUpdated
         - revisionCreator
       type: native
@@ -138,14 +247,16 @@ elementSources:
       type: native
     -
       defaultSort:
-        - title
-        - asc
+        - postDate
+        - desc
       defaultViewMode: ''
       disabled: false
-      key: 'section:08b4a047-a20d-4d56-81b0-32b599c4fb41' # People
+      key: 'section:be130f04-1c51-420d-818e-6d4f5a5960fa' # Resources
       tableAttributes:
         - link
-        - 'fieldInstance:6b80c15b-e48e-4b66-8f5a-795142b9a77f'
+        - type
+        - dateUpdated
+        - revisionCreator
       type: native
     -
       defaultSort:
@@ -312,32 +423,44 @@ meta:
     0ebe4125-0bbc-4efc-a7d1-055eebd82cb5: Languages # Languages
     1a28c01c-3fa0-4a60-8c73-d7c7707be626: Document # Document
     1afae8bb-74c6-43e3-8b44-3e8cac38e2e8: 'Blog Index' # Blog Index
+    1b75b0c0-3003-4fe3-bc8f-478e12906e75: 'Contact: Email' # Contact: Email
+    1ba3b532-e3ed-43db-93a6-00c05efcc84f: 'Resource Types' # Resource Types
     2bfee73d-1d4f-480f-9a78-6be8410a6704: 'Social Media' # Social Media
-    5a1e3562-bcf8-4492-afd5-f8c9cabda572: 'Call to Action' # Call to Action
+    3aba8130-5dea-47d5-ad23-a536e8b9760a: 'Resource: Link' # Resource: Link
+    3efc7d18-2f42-40d1-beee-b05867f36104: Programmes # Programmes
     5b72b712-0218-40c6-9717-0c395a914ad8: Summary # Summary
     5d68dab3-70f1-4fbc-833e-e504aa7c926d: 'User Photos' # User Photos
     6ae2a9cc-c9cc-4b89-9c8c-d7a417cbb87e: Topics # Topics
     6b8b6979-d75e-432e-8798-2fc0d53eb8f8: Pages # Pages
     6caf0d7f-9b74-4ae4-b0dd-458633bd94d1: Image # Image
+    6d709589-8e2f-4fef-9c6f-48f5644fb922: Disciplines # Disciplines
+    6fd87453-1bda-4bb9-8c8d-4dd36185e75d: 'External Contributor' # External Contributor
     7a8f449f-4cfb-49db-8656-d7551c298f4c: Authors # Authors
     7b8b18a2-8e96-4b93-bfaa-34a1d9fa86e1: Rich # Rich
+    7bc0d428-9e00-47b5-b928-67896f29ae17: 'Contact: Website' # Contact: Website
     7e194f18-cd05-4cd2-bc77-67272aaa31a3: Testimonial # Testimonial
+    8a5099a8-7b2e-4052-b798-5e7d19f38b15: 'Event Types' # Event Types
     08b4a047-a20d-4d56-81b0-32b599c4fb41: People # People
     08b5b22b-fb98-46ef-8a90-e392edb2244f: 'Rich Text' # Rich Text
     8dddc601-5e96-40bb-b036-520072ba4aa7: Images # Images
     8f58365f-4eeb-4347-9d3d-5c0d3ffd3989: 'Toggle (Default: off)' # Toggle (Default: off)
     8f896808-aacf-4f83-9a35-cd7076a6707b: 'News Type' # News Type
+    9b5f9007-3f61-4857-b978-fdfbc4b29dba: 'Event Types' # Event Types
     9b8054bc-bad1-4e95-b74b-e722465d36b9: Publication # Publication
-    9bd98d08-c228-41bf-99b2-217e9444daee: 'Contact Detail' # Contact Detail
+    9c5f24a6-1969-4197-9fce-ff44e5a18b9b: People # People
+    12c6ecb1-eb21-40a2-aca1-217b86047c44: Event # Event
     14f7242a-668c-4d66-a588-17cde4b7e598: 'Social Media' # Social Media
     15ad504a-20b4-4e89-b94c-e7be7f135774: 'People Index' # People Index
     32ed2f1a-9024-4ee9-9028-3a5041c0e5e6: Date # Date
+    53c65b45-5d94-4867-95c3-6b235eef1853: 'Focus Areas' # Focus Areas
     56b9dc41-a930-42d9-ba33-9925b4fe9954: 'System Administration' # System Administration
+    58e76d43-a465-4c1a-b102-2726a9fc13f5: 'Resources Types' # Resources Types
     64ee8bca-fd54-4c78-853c-aaf37e0bb8c0: Gallery # Gallery
-    65fd1257-02e1-40e1-a8a4-0ad89b4e9510: 'External Link' # External Link
+    65fd1257-02e1-40e1-a8a4-0ad89b4e9510: 'Link (Email, Phone, URL)' # Link (Email, Phone, URL)
     69dcd3aa-18b8-48bf-a7d3-deb9c6912349: Topics # Topics
     89c58a76-1da8-4581-84f1-caf2222de75a: Documents # Documents
     89c71771-4a5b-44ce-aa3b-a61f30e4c23e: Email # Email
+    90d8deb5-3a82-411b-b04f-8eed4c8890c9: 'URL (Phone)' # URL (Phone)
     90d23e21-4d7c-444f-89c4-e66aeb92c134: 'Site Configuration' # Site Configuration
     94e56347-cb09-47d3-a930-1fd9bc2cb026: News # News
     96f5233c-d76d-4f31-9f8d-6de2dfc22373: Author # Author
@@ -346,23 +469,30 @@ meta:
     349b5e6f-3a2a-43f1-a9dd-2373bf4a0a67: 'Share/SEO Description' # Share/SEO Description
     653ea464-6b43-4bc9-8138-79615323d877: Blog # Blog
     840acb32-6694-40d0-9384-60a0220c1de0: Label # Label
+    992c932b-21e6-4b0b-8017-1289891c1ac4: Resource # Resource
     5280da4e-b8fa-4970-9b39-490dd3a96904: Publications # Publications
     5661ce90-e09f-4c95-bffe-ffe44c413db3: 'Default Share Image' # Default Share Image
     6813a87d-5d20-4e93-8019-6fde740ef87d: Editors # Editors
+    7395f359-de01-4595-b728-81edf64158fc: 'Contact: Phone' # Contact: Phone
     8447c697-1e38-439d-bfcc-beac5bf1ae31: 'Sharing & SEO' # Sharing & SEO
+    23995e04-c457-4eeb-b78d-1c22f16cf4f6: 'URL (Email)' # URL (Email)
     61317d04-b4b5-4b2f-ad77-e1d87029c361: 'Legacy URL' # Legacy URL
     69339afc-d4f1-440b-a7ad-7da2ccb77972: Image # Image
     386721be-1ee4-4e3b-b22c-7fb3dfded3ff: 'Simple Text' # Simple Text
-    856911a9-89f9-4865-bdb1-5665460c6c23: 'Contact Information' # Contact Information
+    856911a9-89f9-4865-bdb1-5665460c6c23: 'Contact & Social Media Information' # Contact & Social Media Information
     8341919b-4097-4c45-8f3b-97ff673d9ab5: $CRAFT_SITE_NAME # $CRAFT_SITE_NAME
+    18803174-20d5-4b61-a067-3072b484f857: 'Resources Index' # Resources Index
     25388890-1b39-49c8-8d89-7ef2d82f89a1: Newsletter # Newsletter
+    a6b97e16-5236-44b1-ad57-3899644efd40: 'Link (Assets, Entries, URL)' # Link (Assets, Entries, URL)
     a53f5b40-fb8c-4a9d-8c25-dc8e3dfe58d6: Code # Code
+    a71afc7e-315c-4be0-b69b-5c70a7dc85db: Departments # Departments
     a385a4fe-5736-44ee-ab48-d869428d380c: News # News
     a404ee2c-1d0d-4da9-a736-cd565a4d2605: Page # Page
     a9736c79-b219-4814-ba33-728835b7d230: Body # Body
     a20788dd-9031-41ba-8145-5f9d17b719ad: Primary # Primary
     a907570e-41b8-4e87-b566-c2abe353e2a6: 'Publication Types' # Publication Types
-    ad5b3d91-425f-4181-8ded-f9c7c53a6bba: Person # Person
+    a976662e-fc19-4f89-ae6b-a5b4db64752b: Events # Events
+    aaee4c78-a676-4fb7-b7d5-89c41725efa1: 'Contact: Website' # Contact: Website
     afc7f0bc-1b97-4841-a1d2-5b0385a7ca35: 'Plain Text' # Plain Text
     b5b9369b-8ab5-44dc-bbaa-058288143025: 'Index Page' # Index Page
     b5e4cb0a-59d9-4e16-bfc3-408104521a11: URL # URL
@@ -370,12 +500,16 @@ meta:
     b6ab5147-5d5b-42af-9984-8d4c1b01f63a: 'Static Assets' # Static Assets
     b64f08d1-e4db-4745-bf21-6e03e16ed93b: '404 Page Not Found' # 404 Page Not Found
     b99607d1-2cd8-44ef-add2-731bb39d4397: 'Toggle (Default: on)' # Toggle (Default: on)
+    bb0a4a47-dcbd-41a8-9bbb-82341295f5ff: 'Date & Time' # Date & Time
     bc20ba64-4979-418f-aa28-244626f315ab: 'Home Page' # Home Page
+    be130f04-1c51-420d-818e-6d4f5a5960fa: Resources # Resources
     be827b12-3e63-4d2a-b17a-5c60ab99f248: 'Publication Type' # Publication Type
+    c4fb7c86-c508-4410-9362-e47f5b604631: Programme # Programme
+    c8c8ccd9-ebdc-48dd-bac8-029cb3d04923: Department # Department
     c5712456-e12b-4cbc-a8cc-b570cf00d66e: 'Publications Index' # Publications Index
-    d356acc9-4ecf-488d-a89d-2857490bb576: Hyperlink # Hyperlink
     d4720a93-54ad-45de-a939-b668ed8660dc: 'Share/SEO Image' # Share/SEO Image
     da24c053-b31c-4fa8-b113-217845a4ce83: 'Share/SEO Title' # Share/SEO Title
+    dd80a6fe-320a-4fb6-889d-17125d275aac: 'Org Member' # Org Member
     de677f5b-6642-4086-ac1a-3e95990c19d0: 'Blog Post' # Blog Post
     e03f52b8-38a8-493c-b27a-3c61c5532f18: Builder # Builder
     e5d70b3c-403b-416d-b670-a93437ce427b: 'User Managers' # User Managers
@@ -383,6 +517,7 @@ meta:
     e455d48b-03ff-4280-b08f-90e20f74c7b3: Languages # Languages
     e5323eec-2cf3-40d3-b122-7df6192a5bdf: 'Form Submissions' # Form Submissions
     e39594b6-01d5-4f33-b105-7b111cb3214a: Testimonials # Testimonials
+    ed5b1453-5dc4-4e73-8865-dad39383c4cb: 'URL (Entries, URL)' # URL (Entries, URL)
     fad3fe56-0b6b-46c4-a97b-b7fb98847f3c: 'Media Embed' # Media Embed
     fd23984e-764a-4004-9834-8efe25601ba5: Simple # Simple
 plugins:

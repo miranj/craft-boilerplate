@@ -2,10 +2,13 @@ defaultPlacement: end
 enableVersioning: true
 entryTypes:
   -
-    uid: b5b9369b-8ab5-44dc-bbaa-058288143025 # Index Page
-handle: index_publications
+    uid: 992c932b-21e6-4b0b-8017-1289891c1ac4 # Resource
+  -
+    name: Link
+    uid: 3aba8130-5dea-47d5-ad23-a536e8b9760a # Resource: Link
+handle: resources
 maxAuthors: 1
-name: 'Publications Index'
+name: Resources
 previewTargets:
   -
     __assoc__:
@@ -23,6 +26,6 @@ siteSettings:
   8341919b-4097-4c45-8f3b-97ff673d9ab5: # $CRAFT_SITE_NAME
     enabledByDefault: true
     hasUrls: true
-    template: _routers/index.twig
-    uriFormat: publications
-type: single
+    template: _routers/detail.twig
+    uriFormat: 'resources/{slug}'
+type: channel
