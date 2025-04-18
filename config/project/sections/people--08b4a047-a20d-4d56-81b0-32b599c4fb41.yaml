@@ -26,5 +26,5 @@ siteSettings:
     enabledByDefault: true
     hasUrls: true
     template: _routers/detail.twig
-    uriFormat: 'members/{slug}'
+    uriFormat: '{% include(''_cp/paths/url/people'') %}'
 type: channel

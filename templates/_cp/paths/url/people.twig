@@ -1,0 +1,21 @@
+{#
+  _cp/paths/url/people.twig
+#}
+
+{# Params #}
+{% set personRoles = personRoles ?? object.roles|map(e => e.value) %}
+{% set personIsActive = personIsActive ?? not object.isAlumni %}
+
+
+
+{# Variables #}
+{% set personIsAmbassadorOnly = (personRoles|length == 1) and ('ambassador' in personRoles) %}
+{% set personHasUrl =
+  personIsActive
+  and not personIsAmbassadorOnly
+%}
+
+
+
+{# Render #}
+{{ personHasUrl ? 'members/' ~ object.slug }}
