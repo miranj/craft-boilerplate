@@ -115,6 +115,12 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
+        name: Page
+        uid: f052a411-0c92-4669-bf4a-8f9d613feac0
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
           -
             dateAdded: '2025-04-17T04:38:10+00:00'
             elementCondition: null
@@ -131,8 +137,126 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-        name: Page
-        uid: f052a411-0c92-4669-bf4a-8f9d613feac0
+          -
+            dateAdded: '2025-04-18T04:09:13+00:00'
+            elementCondition:
+              class: craft\elements\conditions\entries\EntryCondition
+              conditionRules:
+                -
+                  class: craft\fields\conditions\OptionsFieldConditionRule
+                  fieldUid: 11127416-2baf-40e9-bb28-9ea76040af2a # Person Roles
+                  layoutElementUid: 180d4fc7-9ed8-45dd-8658-851b8d3687ea
+                  operator: in
+                  uid: 026a29b8-c3a9-47de-bc26-7b8c7046dbdf
+                  values:
+                    - faculty
+                    - student
+              elementType: craft\elements\Entry
+              fieldContext: global
+            fieldUid: 86d5863c-5339-40bb-9add-f4872cdfdce5 # Departments
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 210f744d-d380-4b33-8c71-efee8432c558
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-04-18T04:09:13+00:00'
+            elementCondition:
+              class: craft\elements\conditions\entries\EntryCondition
+              conditionRules:
+                -
+                  class: craft\fields\conditions\OptionsFieldConditionRule
+                  fieldUid: 11127416-2baf-40e9-bb28-9ea76040af2a # Person Roles
+                  layoutElementUid: 180d4fc7-9ed8-45dd-8658-851b8d3687ea
+                  operator: in
+                  uid: 066d91e9-48f8-41dc-9aae-42e2c8b02898
+                  values:
+                    - faculty
+                    - student
+              elementType: craft\elements\Entry
+              fieldContext: global
+            fieldUid: b41f3521-c73f-45d7-baac-db7ec5a54bd1 # Programmes
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 430e5bb8-7c59-4d2e-a3bf-a0ebe904a284
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-04-18T04:09:13+00:00'
+            elementCondition:
+              class: craft\elements\conditions\entries\EntryCondition
+              conditionRules:
+                -
+                  class: craft\fields\conditions\OptionsFieldConditionRule
+                  fieldUid: 11127416-2baf-40e9-bb28-9ea76040af2a # Person Roles
+                  layoutElementUid: 180d4fc7-9ed8-45dd-8658-851b8d3687ea
+                  operator: in
+                  uid: eeafe1af-9a3d-44e8-b445-1874efa0546d
+                  values:
+                    - faculty
+                    - staff
+                    - student
+              elementType: craft\elements\Entry
+              fieldContext: global
+            fieldUid: 9ce8d4e8-4f27-44a1-8f1c-60187033a3e3 # Focus Areas
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 3188eeb4-372a-4b9e-a4a4-50345d3712c5
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-04-18T04:09:13+00:00'
+            elementCondition:
+              class: craft\elements\conditions\entries\EntryCondition
+              conditionRules:
+                -
+                  class: craft\fields\conditions\OptionsFieldConditionRule
+                  fieldUid: 11127416-2baf-40e9-bb28-9ea76040af2a # Person Roles
+                  layoutElementUid: 180d4fc7-9ed8-45dd-8658-851b8d3687ea
+                  operator: in
+                  uid: 092d7dd8-e61f-4f63-9211-70c7a0277cac
+                  values:
+                    - faculty
+                    - student
+                    - staff
+              elementType: craft\elements\Entry
+              fieldContext: global
+            fieldUid: a0320c92-dcb7-489b-94e3-bd21fdc647cc # Practices
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 814b97f8-8873-4e51-86c5-f372b7073dff
+            userCondition: null
+            warning: null
+            width: 100
+        name: Meta
+        uid: 52c1bed4-7ef0-4add-82b4-099fa3efabf0
         userCondition: null
       -
         elementCondition: null
