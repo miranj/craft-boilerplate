@@ -167,6 +167,34 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: '2025-04-18T04:22:14+00:00'
+            elementCondition:
+              class: craft\elements\conditions\entries\EntryCondition
+              conditionRules:
+                -
+                  class: craft\fields\conditions\OptionsFieldConditionRule
+                  fieldUid: 11127416-2baf-40e9-bb28-9ea76040af2a # Person Roles
+                  layoutElementUid: 180d4fc7-9ed8-45dd-8658-851b8d3687ea
+                  operator: in
+                  uid: e394b6e5-5a5b-4b34-9dbf-a4976090b9c1
+                  values:
+                    - staff
+              elementType: craft\elements\Entry
+              fieldContext: global
+            fieldUid: 16ca56d3-1df0-41ad-9bf1-f0b273739be2 # Offices
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 2658265c-3e39-472c-9619-27093888b943
+            userCondition: null
+            warning: null
+            width: 100
+          -
             dateAdded: '2025-04-18T04:09:13+00:00'
             elementCondition:
               class: craft\elements\conditions\entries\EntryCondition

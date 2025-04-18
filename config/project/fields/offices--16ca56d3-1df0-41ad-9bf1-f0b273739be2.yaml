@@ -1,0 +1,22 @@
+columnSuffix: null
+handle: offices
+instructions: null
+name: Offices
+searchable: true
+settings:
+  allowSelfRelations: false
+  branchLimit: null
+  maintainHierarchy: false
+  maxRelations: null
+  minRelations: null
+  selectionLabel: 'Add Offices'
+  showCardsInGrid: false
+  showSiteMenu: false
+  sources:
+    - 'section:54bdab3f-b980-46c0-a830-de704b143895' # Offices
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: list
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Entries
