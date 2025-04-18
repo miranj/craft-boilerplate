@@ -982,14 +982,6 @@ h5 {
         display: grid;
         grid-template-columns:
             [bleed-start]
-                clamp(1rem, 0.4348rem + 2.8261vi, 2.625rem)
-            [content-start main-start]
-                minmax(0, 1fr)
-            [content-end main-end]
-                clamp(1rem, 0.4348rem + 2.8261vi, 2.625rem)
-            [bleed-end];
-        grid-template-columns:
-            [bleed-start]
                 var(--layout-margin)
             [content-start main-start]
                 minmax(0, 1fr)
@@ -999,18 +991,6 @@ h5 {
     }
 @media (min-width: 56.25em) {
     .layout-base {
-            grid-template-columns:
-                [bleed-start]
-                    clamp(1rem, 0.4348rem + 2.8261vi, 2.625rem)
-                [main-start]
-                    1fr
-                [content-start]
-                    clamp(20em, 65vw, 34em)
-                [content-end]
-                    1fr
-                [main-end]
-                    clamp(1rem, 0.4348rem + 2.8261vi, 2.625rem)
-                [bleed-end];
             grid-template-columns:
                 [bleed-start]
                     var(--layout-margin)

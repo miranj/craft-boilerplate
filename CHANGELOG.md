@@ -4,6 +4,10 @@ Release notes for Miranj's Craft Boilerplate starter project.
 
 ## Unreleased 3.3.next
 
+### Front-end
+
+- Remove CSS fallbacks for `calc()`, and CSS variables, both of which are now _Baseline: Widely Available_.
+
 ### Craft
 
 - Fixed a bug where changes to an existing asset would not always result in Imager transforms being re-generated.
