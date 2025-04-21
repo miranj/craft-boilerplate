@@ -6,21 +6,35 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
-            dateAdded: '2025-04-18T10:08:41+00:00'
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: '2025-04-21T03:00:47+00:00'
+            disabled: false
             elementCondition: null
-            fieldUid: 69339afc-d4f1-440b-a7ad-7da2ccb77972 # Image
-            handle: null
+            id: null
             includeInCards: false
-            instructions: null
+            inputType: null
+            instructions: 'For internal purposes only, this title will not appear on the front-end.'
             label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
             providesThumbs: false
-            required: false
+            readonly: false
+            required: true
+            size: null
+            step: null
             tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 216eeb7b-3120-43f6-aaf2-0824c6721703
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: dddc5392-e48c-4d56-a484-eef0f62d01b7
             userCondition: null
             warning: null
-            width: 50
+            width: 100
           -
             dateAdded: '2025-04-18T09:19:24+00:00'
             elementCondition: null
@@ -55,12 +69,23 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-03-18T04:07:28+00:00'
-            elementCondition: null
+            elementCondition:
+              class: craft\elements\conditions\entries\EntryCondition
+              conditionRules:
+                -
+                  class: craft\fields\conditions\TextFieldConditionRule
+                  fieldUid: 840acb32-6694-40d0-9384-60a0220c1de0 # Label
+                  layoutElementUid: 36b64021-f6b3-4968-ac0a-08bef7157ff9
+                  operator: empty
+                  uid: 3946a772-47f0-4a33-a4be-42f8e8406cb3
+                  value: ''
+              elementType: craft\elements\Entry
+              fieldContext: global
             fieldUid: 96f5233c-d76d-4f31-9f8d-6de2dfc22373 # Author
-            handle: testimonialAuthor
+            handle: existingAuthor
             includeInCards: false
             instructions: null
-            label: null
+            label: 'Choose Exiting Person'
             providesThumbs: false
             required: false
             tip: null
@@ -68,12 +93,65 @@ fieldLayouts:
             uid: f8b44222-f6d4-490b-addb-5d2948a524b9
             userCondition: null
             warning: null
+            width: 50
+          -
+            dateAdded: '2025-03-18T04:00:53+00:00'
+            elementCondition:
+              class: craft\elements\conditions\entries\EntryCondition
+              conditionRules:
+                -
+                  class: craft\fields\conditions\RelationalFieldConditionRule
+                  fieldUid: 96f5233c-d76d-4f31-9f8d-6de2dfc22373 # Author
+                  layoutElementUid: f8b44222-f6d4-490b-addb-5d2948a524b9
+                  operator: empty
+                  uid: d351d028-0f19-46b5-9147-6af7893966a5
+              elementType: craft\elements\Entry
+              fieldContext: global
+            fieldUid: 840acb32-6694-40d0-9384-60a0220c1de0 # Label
+            handle: customAuthor
+            includeInCards: false
+            instructions: null
+            label: 'Custom Person'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 36b64021-f6b3-4968-ac0a-08bef7157ff9
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-03-18T04:00:53+00:00'
+            elementCondition:
+              class: craft\elements\conditions\entries\EntryCondition
+              conditionRules:
+                -
+                  class: craft\fields\conditions\TextFieldConditionRule
+                  fieldUid: 840acb32-6694-40d0-9384-60a0220c1de0 # Label
+                  layoutElementUid: 36b64021-f6b3-4968-ac0a-08bef7157ff9
+                  operator: notempty
+                  uid: 21f620dc-3a85-4105-a090-9301e13ebaef
+                  value: ''
+              elementType: craft\elements\Entry
+              fieldContext: global
+            fieldUid: 840acb32-6694-40d0-9384-60a0220c1de0 # Label
+            handle: designation
+            includeInCards: false
+            instructions: null
+            label: Designation
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: f764279c-eb06-41ef-a694-a0aa1029a95d
+            userCondition: null
+            warning: null
             width: 100
         name: Content
         uid: 4a9705d4-3b74-4c99-8b89-a2e7f2a5d14b
         userCondition: null
 handle: testimonial
-hasTitleField: false
+hasTitleField: true
 icon: comment
 name: Testimonial
 showSlugField: false
