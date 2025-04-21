@@ -6,36 +6,6 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
-            autocapitalize: true
-            autocomplete: false
-            autocorrect: true
-            class: null
-            dateAdded: '2025-04-21T03:00:47+00:00'
-            disabled: false
-            elementCondition: null
-            id: null
-            includeInCards: false
-            inputType: null
-            instructions: 'For internal purposes only, this title will not appear on the front-end.'
-            label: null
-            max: null
-            min: null
-            name: null
-            orientation: null
-            placeholder: null
-            providesThumbs: false
-            readonly: false
-            required: true
-            size: null
-            step: null
-            tip: null
-            title: null
-            type: craft\fieldlayoutelements\entries\EntryTitleField
-            uid: dddc5392-e48c-4d56-a484-eef0f62d01b7
-            userCondition: null
-            warning: null
-            width: 100
-          -
             dateAdded: '2025-04-18T09:19:24+00:00'
             elementCondition: null
             fieldUid: fad3fe56-0b6b-46c4-a97b-b7fb98847f3c # Media Embed
@@ -147,17 +117,33 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
+          -
+            dateAdded: '2025-04-21T10:15:35+00:00'
+            elementCondition: null
+            fieldUid: 840acb32-6694-40d0-9384-60a0220c1de0 # Label
+            handle: null
+            includeInCards: false
+            instructions: 'For internal purposes only, this title will not appear on the front-end.'
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 8c0688f8-0190-4338-b437-49a977899925
+            userCondition: null
+            warning: null
+            width: 100
         name: Content
         uid: 4a9705d4-3b74-4c99-8b89-a2e7f2a5d14b
         userCondition: null
 handle: testimonial
-hasTitleField: true
+hasTitleField: false
 icon: comment
 name: Testimonial
 showSlugField: false
 showStatusField: true
 slugTranslationKeyFormat: null
 slugTranslationMethod: site
-titleFormat: null
+titleFormat: '{{ label ?: [(existingAuthor.one.title ?? customAuthor), quote]|filter|join('' – '')|truncate(255) }}'
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
