@@ -1,0 +1,37 @@
+color: blue
+fieldLayouts:
+  6e450d53-7330-4262-838e-efc8771c60e7:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-04-21T04:23:24+00:00'
+            elementCondition: null
+            fieldUid: b5e4cb0a-59d9-4e16-bfc3-408104521a11 # URL
+            handle: hyperlink
+            includeInCards: false
+            instructions: null
+            label: __blank__
+            providesThumbs: false
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 62993e3a-7aee-42ed-9293-940a4a3763be
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 5fcd2e23-bb33-4330-9101-f5da5097b6e8
+        userCondition: null
+handle: socialMastodon
+hasTitleField: false
+icon: globe
+name: 'Social: Mastodon'
+showSlugField: false
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

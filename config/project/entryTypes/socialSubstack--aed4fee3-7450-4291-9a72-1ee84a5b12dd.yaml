@@ -1,0 +1,37 @@
+color: blue
+fieldLayouts:
+  8610f69e-3a4c-47be-9f30-2822b74436c1:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-04-21T04:25:04+00:00'
+            elementCondition: null
+            fieldUid: b5e4cb0a-59d9-4e16-bfc3-408104521a11 # URL
+            handle: hyperlink
+            includeInCards: false
+            instructions: null
+            label: __blank__
+            providesThumbs: false
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ae792819-3df8-40cf-bd29-3a0a70815f5c
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: cde87d3b-079f-4a80-9c25-057956c63e98
+        userCondition: null
+handle: socialSubstack
+hasTitleField: false
+icon: globe
+name: 'Social: Substack'
+showSlugField: false
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

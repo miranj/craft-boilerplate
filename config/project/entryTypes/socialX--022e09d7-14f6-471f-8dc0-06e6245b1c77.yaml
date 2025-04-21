@@ -1,0 +1,37 @@
+color: blue
+fieldLayouts:
+  02e279a7-d7a2-4cca-8035-987c9de5ec57:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-04-21T04:01:11+00:00'
+            elementCondition: null
+            fieldUid: b5e4cb0a-59d9-4e16-bfc3-408104521a11 # URL
+            handle: hyperlink
+            includeInCards: false
+            instructions: null
+            label: __blank__
+            providesThumbs: false
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 8dbcb009-cb89-4c00-ba84-8a5cf3611e54
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: fe692ced-42f6-4faa-8e04-51c4b968dd65
+        userCondition: null
+handle: socialX
+hasTitleField: false
+icon: x-twitter
+name: 'Social: X'
+showSlugField: false
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

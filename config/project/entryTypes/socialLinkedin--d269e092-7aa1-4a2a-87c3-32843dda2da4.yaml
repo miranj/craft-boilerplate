@@ -1,0 +1,37 @@
+color: blue
+fieldLayouts:
+  59fdd101-1220-4c0c-b5ee-dbe6db72d964:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-04-21T04:02:28+00:00'
+            elementCondition: null
+            fieldUid: b5e4cb0a-59d9-4e16-bfc3-408104521a11 # URL
+            handle: hyperlink
+            includeInCards: false
+            instructions: null
+            label: __blank__
+            providesThumbs: false
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b1e98f69-b69c-4025-9c61-9e40d1e56159
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 09ac34d9-244d-4ccd-932c-51f1ab371ede
+        userCondition: null
+handle: socialLinkedin
+hasTitleField: false
+icon: linkedin
+name: 'Social: LinkedIn'
+showSlugField: false
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
