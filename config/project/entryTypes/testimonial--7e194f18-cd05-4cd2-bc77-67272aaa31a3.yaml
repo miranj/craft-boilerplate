@@ -192,6 +192,6 @@ showSlugField: false
 showStatusField: true
 slugTranslationKeyFormat: null
 slugTranslationMethod: site
-titleFormat: '{{ label ?: [(existingAuthor.one.title ?? customAuthor), quote]|filter|join('' – '')|truncate(255) }}'
+titleFormat: '{{ label ?: [(existingAuthor.one.title ?? customAuthor), quote]|filter|join('' – '')|truncate(80) }}'
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
