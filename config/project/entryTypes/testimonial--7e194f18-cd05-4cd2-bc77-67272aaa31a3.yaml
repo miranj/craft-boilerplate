@@ -86,7 +86,7 @@ fieldLayouts:
             uid: f8b44222-f6d4-490b-addb-5d2948a524b9
             userCondition: null
             warning: null
-            width: 50
+            width: 100
           -
             dateAdded: '2025-03-18T04:00:53+00:00'
             elementCondition:
