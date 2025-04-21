@@ -2,10 +2,13 @@
   _cp/paths/url/people.twig
 
   Set a URL based on a set of conditions.
+
+  People marked as "Alumni" or with a single "Ambassador" role will not have
+  a URL.
 #}
 
 {# Params #}
-{% set personRoles = personRoles ?? object.roles|map(e => e.value) %}
+{% set personRoles = personRoles ?? object.roles|column('value') %}
 {% set personIsActive = personIsActive ?? not (object.isAlumni ?? false) %}
 
 
@@ -20,4 +23,4 @@
 
 
 {# Render #}
-{{ personHasUrl ? 'members/' ~ object.slug : '' }}
+{{ personHasUrl ? 'people/' ~ object.slug : '' }}
