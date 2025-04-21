@@ -9,11 +9,10 @@ settings:
   maintainHierarchy: false
   maxRelations: null
   minRelations: null
-  selectionLabel: 'Add People'
+  selectionLabel: 'Add people'
   showCardsInGrid: false
-  showSiteMenu: false
-  sources:
-    - 'section:08b4a047-a20d-4d56-81b0-32b599c4fb41' # People
+  showSiteMenu: true
+  sources: '*'
   targetSiteId: null
   validateRelatedElements: false
   viewMode: list

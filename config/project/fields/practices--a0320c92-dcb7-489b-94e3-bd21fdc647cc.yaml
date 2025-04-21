@@ -9,7 +9,7 @@ settings:
   maintainHierarchy: false
   maxRelations: null
   minRelations: null
-  selectionLabel: 'Add Practices'
+  selectionLabel: 'Add practices'
   showCardsInGrid: false
   showSiteMenu: true
   source: 'group:9ff437c1-0323-4492-a95e-007c3a05ab8f' # Practices

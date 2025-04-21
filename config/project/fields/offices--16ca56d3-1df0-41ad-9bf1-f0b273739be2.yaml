@@ -9,9 +9,9 @@ settings:
   maintainHierarchy: false
   maxRelations: null
   minRelations: null
-  selectionLabel: 'Add Offices'
+  selectionLabel: 'Add offices'
   showCardsInGrid: false
-  showSiteMenu: false
+  showSiteMenu: true
   sources:
     - 'section:54bdab3f-b980-46c0-a830-de704b143895' # Offices
   targetSiteId: null

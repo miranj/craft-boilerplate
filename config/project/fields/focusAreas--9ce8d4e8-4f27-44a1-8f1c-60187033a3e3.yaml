@@ -9,9 +9,9 @@ settings:
   maintainHierarchy: false
   maxRelations: null
   minRelations: null
-  selectionLabel: 'Add Focus Areas'
+  selectionLabel: 'Add focus areas'
   showCardsInGrid: false
-  showSiteMenu: false
+  showSiteMenu: true
   source: 'group:53c65b45-5d94-4867-95c3-6b235eef1853' # Focus Areas
   targetSiteId: null
   validateRelatedElements: false
