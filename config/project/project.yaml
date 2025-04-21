@@ -1,4 +1,4 @@
-dateModified: 1745203715
+dateModified: 1745204498
 elementSources:
   craft\elements\Entry:
     -
@@ -266,9 +266,10 @@ elementSources:
       disabled: false
       key: 'section:e39594b6-01d5-4f33-b105-7b111cb3214a' # Testimonials
       tableAttributes:
-        - postDate
+        - 'fieldInstance:f8b44222-f6d4-490b-addb-5d2948a524b9'
         - 'fieldInstance:36b64021-f6b3-4968-ac0a-08bef7157ff9'
-        - 'fieldInstance:4dce8f44-1b50-46a9-b253-f6cad99f3dd7'
+        - dateUpdated
+        - revisionCreator
       type: native
     -
       heading: Auto
