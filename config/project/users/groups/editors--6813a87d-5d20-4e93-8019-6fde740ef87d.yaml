@@ -13,6 +13,7 @@ permissions:
   - 'createentries:a71afc7e-315c-4be0-b69b-5c70a7dc85db' # Departments
   - 'createentries:a976662e-fc19-4f89-ae6b-a5b4db64752b' # Events
   - 'createentries:be130f04-1c51-420d-818e-6d4f5a5960fa' # Resources
+  - 'createentries:e39594b6-01d5-4f33-b105-7b111cb3214a' # Testimonials
   - 'createfolders:89c58a76-1da8-4581-84f1-caf2222de75a' # Documents
   - 'createfolders:e421ceea-a2f2-459f-88b9-2695f86047bd' # Images
   - 'deleteassets:89c58a76-1da8-4581-84f1-caf2222de75a' # Documents
@@ -34,6 +35,7 @@ permissions:
   - 'deleteentries:a71afc7e-315c-4be0-b69b-5c70a7dc85db' # Departments
   - 'deleteentries:a976662e-fc19-4f89-ae6b-a5b4db64752b' # Events
   - 'deleteentries:be130f04-1c51-420d-818e-6d4f5a5960fa' # Resources
+  - 'deleteentries:e39594b6-01d5-4f33-b105-7b111cb3214a' # Testimonials
   - 'deletepeerassets:89c58a76-1da8-4581-84f1-caf2222de75a' # Documents
   - 'deletepeerassets:e421ceea-a2f2-459f-88b9-2695f86047bd' # Images
   - 'deletepeercategorydrafts:0bc8375c-5e05-4156-a6c9-5678af911123' # News Types
@@ -53,6 +55,7 @@ permissions:
   - 'deletepeerentries:a71afc7e-315c-4be0-b69b-5c70a7dc85db' # Departments
   - 'deletepeerentries:a976662e-fc19-4f89-ae6b-a5b4db64752b' # Events
   - 'deletepeerentries:be130f04-1c51-420d-818e-6d4f5a5960fa' # Resources
+  - 'deletepeerentries:e39594b6-01d5-4f33-b105-7b111cb3214a' # Testimonials
   - 'deletepeerentrydrafts:08b4a047-a20d-4d56-81b0-32b599c4fb41' # People
   - 'deletepeerentrydrafts:15ad504a-20b4-4e89-b94c-e7be7f135774' # People Index
   - 'deletepeerentrydrafts:18803174-20d5-4b61-a067-3072b484f857' # Resources Index
@@ -68,6 +71,7 @@ permissions:
   - 'deletepeerentrydrafts:bc20ba64-4979-418f-aa28-244626f315ab' # Home Page
   - 'deletepeerentrydrafts:be130f04-1c51-420d-818e-6d4f5a5960fa' # Resources
   - 'deletepeerentrydrafts:c5712456-e12b-4cbc-a8cc-b570cf00d66e' # Publications Index
+  - 'deletepeerentrydrafts:e39594b6-01d5-4f33-b105-7b111cb3214a' # Testimonials
   - 'editimages:89c58a76-1da8-4581-84f1-caf2222de75a' # Documents
   - 'editimages:e421ceea-a2f2-459f-88b9-2695f86047bd' # Images
   - 'editpeerimages:89c58a76-1da8-4581-84f1-caf2222de75a' # Documents
@@ -101,6 +105,7 @@ permissions:
   - 'saveentries:bc20ba64-4979-418f-aa28-244626f315ab' # Home Page
   - 'saveentries:be130f04-1c51-420d-818e-6d4f5a5960fa' # Resources
   - 'saveentries:c5712456-e12b-4cbc-a8cc-b570cf00d66e' # Publications Index
+  - 'saveentries:e39594b6-01d5-4f33-b105-7b111cb3214a' # Testimonials
   - 'savepeerassets:89c58a76-1da8-4581-84f1-caf2222de75a' # Documents
   - 'savepeerassets:e421ceea-a2f2-459f-88b9-2695f86047bd' # Images
   - 'savepeercategorydrafts:0bc8375c-5e05-4156-a6c9-5678af911123' # News Types
@@ -120,6 +125,7 @@ permissions:
   - 'savepeerentries:a71afc7e-315c-4be0-b69b-5c70a7dc85db' # Departments
   - 'savepeerentries:a976662e-fc19-4f89-ae6b-a5b4db64752b' # Events
   - 'savepeerentries:be130f04-1c51-420d-818e-6d4f5a5960fa' # Resources
+  - 'savepeerentries:e39594b6-01d5-4f33-b105-7b111cb3214a' # Testimonials
   - 'savepeerentrydrafts:08b4a047-a20d-4d56-81b0-32b599c4fb41' # People
   - 'savepeerentrydrafts:15ad504a-20b4-4e89-b94c-e7be7f135774' # People Index
   - 'savepeerentrydrafts:18803174-20d5-4b61-a067-3072b484f857' # Resources Index
@@ -135,6 +141,7 @@ permissions:
   - 'savepeerentrydrafts:bc20ba64-4979-418f-aa28-244626f315ab' # Home Page
   - 'savepeerentrydrafts:be130f04-1c51-420d-818e-6d4f5a5960fa' # Resources
   - 'savepeerentrydrafts:c5712456-e12b-4cbc-a8cc-b570cf00d66e' # Publications Index
+  - 'savepeerentrydrafts:e39594b6-01d5-4f33-b105-7b111cb3214a' # Testimonials
   - 'viewassets:89c58a76-1da8-4581-84f1-caf2222de75a' # Documents
   - 'viewassets:e421ceea-a2f2-459f-88b9-2695f86047bd' # Images
   - 'viewcategories:0bc8375c-5e05-4156-a6c9-5678af911123' # News Types
@@ -160,6 +167,7 @@ permissions:
   - 'viewentries:bc20ba64-4979-418f-aa28-244626f315ab' # Home Page
   - 'viewentries:be130f04-1c51-420d-818e-6d4f5a5960fa' # Resources
   - 'viewentries:c5712456-e12b-4cbc-a8cc-b570cf00d66e' # Publications Index
+  - 'viewentries:e39594b6-01d5-4f33-b105-7b111cb3214a' # Testimonials
   - 'viewpeerassets:89c58a76-1da8-4581-84f1-caf2222de75a' # Documents
   - 'viewpeerassets:e421ceea-a2f2-459f-88b9-2695f86047bd' # Images
   - 'viewpeercategorydrafts:0bc8375c-5e05-4156-a6c9-5678af911123' # News Types
@@ -179,6 +187,7 @@ permissions:
   - 'viewpeerentries:a71afc7e-315c-4be0-b69b-5c70a7dc85db' # Departments
   - 'viewpeerentries:a976662e-fc19-4f89-ae6b-a5b4db64752b' # Events
   - 'viewpeerentries:be130f04-1c51-420d-818e-6d4f5a5960fa' # Resources
+  - 'viewpeerentries:e39594b6-01d5-4f33-b105-7b111cb3214a' # Testimonials
   - 'viewpeerentrydrafts:08b4a047-a20d-4d56-81b0-32b599c4fb41' # People
   - 'viewpeerentrydrafts:15ad504a-20b4-4e89-b94c-e7be7f135774' # People Index
   - 'viewpeerentrydrafts:18803174-20d5-4b61-a067-3072b484f857' # Resources Index
@@ -194,3 +203,4 @@ permissions:
   - 'viewpeerentrydrafts:bc20ba64-4979-418f-aa28-244626f315ab' # Home Page
   - 'viewpeerentrydrafts:be130f04-1c51-420d-818e-6d4f5a5960fa' # Resources
   - 'viewpeerentrydrafts:c5712456-e12b-4cbc-a8cc-b570cf00d66e' # Publications Index
+  - 'viewpeerentrydrafts:e39594b6-01d5-4f33-b105-7b111cb3214a' # Testimonials
