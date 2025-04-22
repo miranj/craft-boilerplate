@@ -8,16 +8,20 @@
 #}
 
 {# Params #}
-{% set personRoles = personRoles ?? object.roles|column('value') %}
-{% set personIsActive = personIsActive ?? not (object.isAlumni ?? false) %}
+{% set entryRoles = entryRoles ?? object.personRoles|column('value') %}
+{% set entryIsActive = entryIsActive ?? not (object.isAlumni ?? false) %}
 
 
 
 {# Variables #}
-{% set personIsAmbassadorOnly = (personRoles|length == 1) and ('ambassador' in personRoles) %}
+{% set rolesWithUrl = ['faculty', 'staff', 'student'] %}
+
+
+
+{# Variables #}
 {% set personHasUrl =
-  personIsActive
-  and not personIsAmbassadorOnly
+  entryRoles|intersect(rolesWithUrl) is not empty
+  and entryIsActive
 %}
 
 
