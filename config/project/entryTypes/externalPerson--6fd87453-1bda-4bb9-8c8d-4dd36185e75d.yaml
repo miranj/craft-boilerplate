@@ -90,18 +90,18 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
-            dateAdded: '2025-04-22T07:39:32+00:00'
+            dateAdded: '2025-04-22T07:47:34+00:00'
             elementCondition: null
-            fieldUid: 11127416-2baf-40e9-bb28-9ea76040af2a # Person Roles
-            handle: null
+            fieldUid: 9cbdb5d5-1a67-4b57-820f-7226cef3d0c8 # External Person Roles
+            handle: personRoles
             includeInCards: false
             instructions: null
-            label: null
+            label: Roles
             providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 46003905-d842-4140-b23c-016da50d60f0
+            uid: 4fa8150e-2258-4471-91e3-218f423c715d
             userCondition: null
             warning: null
             width: 100

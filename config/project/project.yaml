@@ -1,4 +1,4 @@
-dateModified: 1745307814
+dateModified: 1745318462
 elementSources:
   craft\elements\Category:
     -
@@ -500,6 +500,7 @@ meta:
     9b5f9007-3f61-4857-b978-fdfbc4b29dba: 'Event Types' # Event Types
     9b8054bc-bad1-4e95-b74b-e722465d36b9: Publication # Publication
     9c5f24a6-1969-4197-9fce-ff44e5a18b9b: People # People
+    9cbdb5d5-1a67-4b57-820f-7226cef3d0c8: 'External Person Roles' # External Person Roles
     9ce8d4e8-4f27-44a1-8f1c-60187033a3e3: 'Focus Areas' # Focus Areas
     9ff437c1-0323-4492-a95e-007c3a05ab8f: Practices # Practices
     12c6ecb1-eb21-40a2-aca1-217b86047c44: Event # Event
@@ -543,7 +544,7 @@ meta:
     386721be-1ee4-4e3b-b22c-7fb3dfded3ff: 'Simple Text' # Simple Text
     856911a9-89f9-4865-bdb1-5665460c6c23: 'Contact & Social Media Information' # Contact & Social Media Information
     8341919b-4097-4c45-8f3b-97ff673d9ab5: $CRAFT_SITE_NAME # $CRAFT_SITE_NAME
-    11127416-2baf-40e9-bb28-9ea76040af2a: 'Person Roles' # Person Roles
+    11127416-2baf-40e9-bb28-9ea76040af2a: 'Org Person Roles' # Org Person Roles
     18803174-20d5-4b61-a067-3072b484f857: 'Resources Index' # Resources Index
     25388890-1b39-49c8-8d89-7ef2d82f89a1: Newsletter # Newsletter
     a0320c92-dcb7-489b-94e3-bd21fdc647cc: Practices # Practices

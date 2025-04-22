@@ -1,7 +1,7 @@
 columnSuffix: null
-handle: personEducationRoles
+handle: orgPersonRoles
 instructions: null
-name: 'Person Roles'
+name: 'Org Person Roles'
 searchable: true
 settings:
   customOptions: false

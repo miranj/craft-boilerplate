@@ -108,8 +108,8 @@ fieldLayouts:
           -
             dateAdded: '2025-04-17T04:38:10+00:00'
             elementCondition: null
-            fieldUid: 11127416-2baf-40e9-bb28-9ea76040af2a # Person Roles
-            handle: currentRoles
+            fieldUid: 11127416-2baf-40e9-bb28-9ea76040af2a # Org Person Roles
+            handle: personRoles
             includeInCards: false
             instructions: 'People with only an _Ambassador_ role will not get a public page.'
             label: 'Current Roles'
@@ -128,7 +128,7 @@ fieldLayouts:
               conditionRules:
                 -
                   class: craft\fields\conditions\OptionsFieldConditionRule
-                  fieldUid: 11127416-2baf-40e9-bb28-9ea76040af2a # Person Roles
+                  fieldUid: 11127416-2baf-40e9-bb28-9ea76040af2a # Org Person Roles
                   layoutElementUid: 180d4fc7-9ed8-45dd-8658-851b8d3687ea
                   operator: in
                   uid: 026a29b8-c3a9-47de-bc26-7b8c7046dbdf
@@ -157,7 +157,7 @@ fieldLayouts:
               conditionRules:
                 -
                   class: craft\fields\conditions\OptionsFieldConditionRule
-                  fieldUid: 11127416-2baf-40e9-bb28-9ea76040af2a # Person Roles
+                  fieldUid: 11127416-2baf-40e9-bb28-9ea76040af2a # Org Person Roles
                   layoutElementUid: 180d4fc7-9ed8-45dd-8658-851b8d3687ea
                   operator: in
                   uid: e394b6e5-5a5b-4b34-9dbf-a4976090b9c1
@@ -185,7 +185,7 @@ fieldLayouts:
               conditionRules:
                 -
                   class: craft\fields\conditions\OptionsFieldConditionRule
-                  fieldUid: 11127416-2baf-40e9-bb28-9ea76040af2a # Person Roles
+                  fieldUid: 11127416-2baf-40e9-bb28-9ea76040af2a # Org Person Roles
                   layoutElementUid: 180d4fc7-9ed8-45dd-8658-851b8d3687ea
                   operator: in
                   uid: 066d91e9-48f8-41dc-9aae-42e2c8b02898
@@ -214,7 +214,7 @@ fieldLayouts:
               conditionRules:
                 -
                   class: craft\fields\conditions\OptionsFieldConditionRule
-                  fieldUid: 11127416-2baf-40e9-bb28-9ea76040af2a # Person Roles
+                  fieldUid: 11127416-2baf-40e9-bb28-9ea76040af2a # Org Person Roles
                   layoutElementUid: 180d4fc7-9ed8-45dd-8658-851b8d3687ea
                   operator: in
                   uid: eeafe1af-9a3d-44e8-b445-1874efa0546d
@@ -244,7 +244,7 @@ fieldLayouts:
               conditionRules:
                 -
                   class: craft\fields\conditions\OptionsFieldConditionRule
-                  fieldUid: 11127416-2baf-40e9-bb28-9ea76040af2a # Person Roles
+                  fieldUid: 11127416-2baf-40e9-bb28-9ea76040af2a # Org Person Roles
                   layoutElementUid: 180d4fc7-9ed8-45dd-8658-851b8d3687ea
                   operator: in
                   uid: 092d7dd8-e61f-4f63-9211-70c7a0277cac
