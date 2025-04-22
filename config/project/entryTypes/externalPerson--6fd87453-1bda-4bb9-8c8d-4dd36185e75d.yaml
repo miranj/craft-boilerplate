@@ -90,6 +90,28 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
+            dateAdded: '2025-04-22T07:39:32+00:00'
+            elementCondition: null
+            fieldUid: 11127416-2baf-40e9-bb28-9ea76040af2a # Person Roles
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 46003905-d842-4140-b23c-016da50d60f0
+            userCondition: null
+            warning: null
+            width: 100
+        name: Roles
+        uid: 9dbd1acf-5751-4881-a52f-55620cd78c03
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
             dateAdded: '2025-04-13T07:21:09+00:00'
             elementCondition: null
             fieldUid: 856911a9-89f9-4865-bdb1-5665460c6c23 # Contact & Social Media Information

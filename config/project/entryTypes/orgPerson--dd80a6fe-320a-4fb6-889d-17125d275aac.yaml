@@ -109,10 +109,10 @@ fieldLayouts:
             dateAdded: '2025-04-17T04:38:10+00:00'
             elementCondition: null
             fieldUid: 11127416-2baf-40e9-bb28-9ea76040af2a # Person Roles
-            handle: roles
+            handle: currentRoles
             includeInCards: false
             instructions: 'People with only an _Ambassador_ role will not get a public page.'
-            label: Roles
+            label: 'Current Roles'
             providesThumbs: false
             required: true
             tip: null
