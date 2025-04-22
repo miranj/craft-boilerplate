@@ -12,7 +12,9 @@ settings:
   selectionLabel: 'Add people'
   showCardsInGrid: false
   showSiteMenu: true
-  sources: '*'
+  sources:
+    - 'custom:3765d7ff-9a91-48f6-bd36-1008e96248d1'
+    - 'custom:74176ca4-24f3-451c-9878-05473385ae3e'
   targetSiteId: null
   validateRelatedElements: false
   viewMode: list
