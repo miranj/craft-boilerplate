@@ -68,22 +68,6 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            dateAdded: '2025-04-13T07:21:09+00:00'
-            elementCondition: null
-            fieldUid: 856911a9-89f9-4865-bdb1-5665460c6c23 # Contact & Social Media Information
-            handle: null
-            includeInCards: false
-            instructions: null
-            label: null
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 56c2e9f4-1987-4064-947f-08a6935ab23f
-            userCondition: null
-            warning: null
-            width: 100
-          -
             dateAdded: '2025-04-16T01:50:00+00:00'
             elementCondition: null
             fieldUid: 08b5b22b-fb98-46ef-8a90-e392edb2244f # Rich Text
@@ -101,6 +85,28 @@ fieldLayouts:
             width: 100
         name: Profile
         uid: 00729573-9236-4b4b-ac77-3138b2cc63b5
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-04-13T07:21:09+00:00'
+            elementCondition: null
+            fieldUid: 856911a9-89f9-4865-bdb1-5665460c6c23 # Contact & Social Media Information
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 56c2e9f4-1987-4064-947f-08a6935ab23f
+            userCondition: null
+            warning: null
+            width: 100
+        name: Contact
+        uid: 6f98b81c-b0df-41c2-8d1d-66f494898307
         userCondition: null
       -
         elementCondition: null

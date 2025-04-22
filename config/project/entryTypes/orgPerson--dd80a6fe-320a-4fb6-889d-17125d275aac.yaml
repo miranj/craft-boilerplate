@@ -68,22 +68,6 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            dateAdded: '2025-04-13T07:06:54+00:00'
-            elementCondition: null
-            fieldUid: 856911a9-89f9-4865-bdb1-5665460c6c23 # Contact & Social Media Information
-            handle: null
-            includeInCards: false
-            instructions: null
-            label: null
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: dacc502d-89a5-443a-8acd-d8f413cf50b2
-            userCondition: null
-            warning: null
-            width: 100
-          -
             dateAdded: '2025-04-13T07:55:25+00:00'
             elementCondition: null
             fieldUid: 08b5b22b-fb98-46ef-8a90-e392edb2244f # Rich Text
@@ -285,6 +269,28 @@ fieldLayouts:
             width: 100
         name: Roles
         uid: 52c1bed4-7ef0-4add-82b4-099fa3efabf0
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-04-13T07:06:54+00:00'
+            elementCondition: null
+            fieldUid: 856911a9-89f9-4865-bdb1-5665460c6c23 # Contact & Social Media Information
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: dacc502d-89a5-443a-8acd-d8f413cf50b2
+            userCondition: null
+            warning: null
+            width: 100
+        name: Contact
+        uid: 27ae856c-8d21-40f0-a53c-1283b40db426
         userCondition: null
       -
         elementCondition: null
