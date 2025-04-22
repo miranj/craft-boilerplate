@@ -38,10 +38,11 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            dateAdded: '2025-04-21T10:28:13+00:00'
+            dateAdded: '2025-04-22T02:53:04+00:00'
             elementCondition: null
-            type: craft\fieldlayoutelements\HorizontalRule
-            uid: 2d7d9684-a784-418e-8e0a-d3c5d3836c09
+            heading: Author
+            type: craft\fieldlayoutelements\Heading
+            uid: e3bbfbe7-1d3d-4263-b1fb-57b7465d4279
             userCondition: null
           -
             dateAdded: '2025-04-21T10:26:46+00:00'
@@ -50,7 +51,7 @@ fieldLayouts:
             handle: null
             includeInCards: false
             instructions: null
-            label: null
+            label: Type
             providesThumbs: false
             required: false
             tip: null
@@ -106,7 +107,7 @@ fieldLayouts:
             handle: customName
             includeInCards: false
             instructions: null
-            label: 'Author Name'
+            label: Name
             providesThumbs: false
             required: false
             tip: null
@@ -134,7 +135,7 @@ fieldLayouts:
             handle: customPortrait
             includeInCards: false
             instructions: null
-            label: 'Author Portrait'
+            label: Portrait
             providesThumbs: false
             required: false
             tip: null
@@ -150,7 +151,7 @@ fieldLayouts:
             handle: customDesignation
             includeInCards: false
             instructions: null
-            label: 'Author Designation'
+            label: Designation
             providesThumbs: false
             required: false
             tip: null
@@ -171,8 +172,8 @@ fieldLayouts:
             fieldUid: 840acb32-6694-40d0-9384-60a0220c1de0 # Label
             handle: null
             includeInCards: false
-            instructions: 'For internal purposes only, this title will not appear on the front-end.'
-            label: null
+            instructions: 'This title will not appear on the front-end.'
+            label: 'Internal Label'
             providesThumbs: false
             required: false
             tip: null
