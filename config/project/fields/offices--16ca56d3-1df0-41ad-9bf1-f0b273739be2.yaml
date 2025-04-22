@@ -1,21 +1,22 @@
 columnSuffix: null
-handle: publicationType
-instructions: 'Eg: _Case Study_, _Report_.'
-name: 'Publication Type'
-searchable: false
+handle: offices
+instructions: null
+name: Offices
+searchable: true
 settings:
   allowSelfRelations: false
   branchLimit: null
   maintainHierarchy: false
-  maxRelations: 1
+  maxRelations: null
   minRelations: null
-  selectionLabel: 'Add type'
+  selectionLabel: 'Add offices'
   showCardsInGrid: false
   showSiteMenu: true
-  source: 'group:a907570e-41b8-4e87-b566-c2abe353e2a6' # Publication Types
+  sources:
+    - 'section:54bdab3f-b980-46c0-a830-de704b143895' # Offices
   targetSiteId: null
   validateRelatedElements: false
   viewMode: list
 translationKeyFormat: null
 translationMethod: none
-type: craft\fields\Categories
+type: craft\fields\Entries

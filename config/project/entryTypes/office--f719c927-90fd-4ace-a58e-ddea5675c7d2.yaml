@@ -1,0 +1,51 @@
+color: null
+fieldLayouts:
+  0c2305ce-d4f6-410b-aba1-59c0b5f2f7a5:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: '2025-04-18T04:14:11+00:00'
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            required: true
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: a6f5a4b6-a7c5-4f31-8266-ea8ceae114b7
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: e716ba2a-9a27-4f0b-bfa9-09efb2e79d7d
+        userCondition: null
+handle: office
+hasTitleField: true
+icon: chair-office
+name: Office
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

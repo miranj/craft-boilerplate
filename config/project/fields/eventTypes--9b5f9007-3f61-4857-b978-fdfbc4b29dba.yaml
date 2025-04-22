@@ -9,7 +9,7 @@ settings:
   maintainHierarchy: false
   maxRelations: null
   minRelations: null
-  selectionLabel: null
+  selectionLabel: 'Add types'
   showCardsInGrid: false
   showSiteMenu: true
   source: 'group:8a5099a8-7b2e-4052-b798-5e7d19f38b15' # Event Types
