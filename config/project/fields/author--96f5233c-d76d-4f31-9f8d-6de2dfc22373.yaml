@@ -1,21 +1,23 @@
 columnSuffix: null
-handle: publicationType
-instructions: 'Eg: _Case Study_, _Report_.'
-name: 'Publication Type'
-searchable: false
+handle: author
+instructions: null
+name: Author
+searchable: true
 settings:
   allowSelfRelations: false
   branchLimit: null
   maintainHierarchy: false
   maxRelations: 1
   minRelations: null
-  selectionLabel: 'Add type'
+  selectionLabel: 'Add an author'
   showCardsInGrid: false
   showSiteMenu: true
-  source: 'group:a907570e-41b8-4e87-b566-c2abe353e2a6' # Publication Types
+  sources:
+    - 'custom:3765d7ff-9a91-48f6-bd36-1008e96248d1'
+    - 'custom:74176ca4-24f3-451c-9878-05473385ae3e'
   targetSiteId: null
   validateRelatedElements: false
   viewMode: list
 translationKeyFormat: null
 translationMethod: none
-type: craft\fields\Categories
+type: craft\fields\Entries
