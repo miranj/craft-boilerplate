@@ -1,18 +1,18 @@
 columnSuffix: null
-handle: publicationType
-instructions: 'Eg: _Case Study_, _Report_.'
-name: 'Publication Type'
-searchable: false
+handle: focusAreas
+instructions: null
+name: 'Focus Areas'
+searchable: true
 settings:
   allowSelfRelations: false
   branchLimit: null
   maintainHierarchy: false
-  maxRelations: 1
+  maxRelations: null
   minRelations: null
-  selectionLabel: 'Add type'
+  selectionLabel: 'Add focus areas'
   showCardsInGrid: false
   showSiteMenu: true
-  source: 'group:a907570e-41b8-4e87-b566-c2abe353e2a6' # Publication Types
+  source: 'group:53c65b45-5d94-4867-95c3-6b235eef1853' # Focus Areas
   targetSiteId: null
   validateRelatedElements: false
   viewMode: list

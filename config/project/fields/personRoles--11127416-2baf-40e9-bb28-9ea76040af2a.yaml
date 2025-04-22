@@ -1,0 +1,55 @@
+columnSuffix: null
+handle: personRoles
+instructions: null
+name: 'Person Roles'
+searchable: true
+settings:
+  customOptions: false
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - Faculty
+        -
+          - value
+          - faculty
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Staff
+        -
+          - value
+          - staff
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Student
+        -
+          - value
+          - student
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Ambassador
+        -
+          - value
+          - ambassador
+        -
+          - default
+          - ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Checkboxes
