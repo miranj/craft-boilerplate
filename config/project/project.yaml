@@ -1,4 +1,4 @@
-dateModified: 1745377418
+dateModified: 1745377599
 elementSources:
   craft\elements\Category:
     -
@@ -216,7 +216,7 @@ elementSources:
             operator: in
             uid: 36ed3005-5a84-4677-83d8-b8b38ed73c74
             values:
-              - dd80a6fe-320a-4fb6-889d-17125d275aac # Org Member
+              - dd80a6fe-320a-4fb6-889d-17125d275aac # People: Org Member
         elementType: craft\elements\Entry
         fieldContext: global
       defaultSort:
@@ -227,6 +227,7 @@ elementSources:
       label: 'Organization Members'
       tableAttributes:
         - link
+        - 'fieldInstance:180d4fc7-9ed8-45dd-8658-851b8d3687ea'
         - dateUpdated
         - revisionCreator
       type: custom
@@ -245,7 +246,7 @@ elementSources:
             operator: in
             uid: a5eaf8a5-2223-42f3-b8e4-19a9706efca5
             values:
-              - 6fd87453-1bda-4bb9-8c8d-4dd36185e75d # External Contributor
+              - 6fd87453-1bda-4bb9-8c8d-4dd36185e75d # People: External Contributor
         elementType: craft\elements\Entry
         fieldContext: global
       defaultSort:
@@ -486,7 +487,7 @@ meta:
     6caf0d7f-9b74-4ae4-b0dd-458633bd94d1: Image # Image
     6cb8c647-c45e-4437-86ec-02d2ffe7f0f5: 'Social: Facebook' # Social: Facebook
     6d709589-8e2f-4fef-9c6f-48f5644fb922: Disciplines # Disciplines
-    6fd87453-1bda-4bb9-8c8d-4dd36185e75d: 'External Contributor' # External Contributor
+    6fd87453-1bda-4bb9-8c8d-4dd36185e75d: 'People: External Contributor' # People: External Contributor
     7a8f449f-4cfb-49db-8656-d7551c298f4c: Authors # Authors
     7b8b18a2-8e96-4b93-bfaa-34a1d9fa86e1: Rich # Rich
     7bc0d428-9e00-47b5-b928-67896f29ae17: 'Contact: Website' # Contact: Website
@@ -577,7 +578,7 @@ meta:
     d269e092-7aa1-4a2a-87c3-32843dda2da4: 'Social: LinkedIn' # Social: LinkedIn
     d4720a93-54ad-45de-a939-b668ed8660dc: 'Share/SEO Image' # Share/SEO Image
     da24c053-b31c-4fa8-b113-217845a4ce83: 'Share/SEO Title' # Share/SEO Title
-    dd80a6fe-320a-4fb6-889d-17125d275aac: 'Org Member' # Org Member
+    dd80a6fe-320a-4fb6-889d-17125d275aac: 'People: Org Member' # People: Org Member
     de677f5b-6642-4086-ac1a-3e95990c19d0: 'Blog Post' # Blog Post
     e03f52b8-38a8-493c-b27a-3c61c5532f18: Builder # Builder
     e5d70b3c-403b-416d-b670-a93437ce427b: 'User Managers' # User Managers

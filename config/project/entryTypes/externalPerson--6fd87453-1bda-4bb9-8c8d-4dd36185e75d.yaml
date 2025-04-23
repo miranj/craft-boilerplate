@@ -264,7 +264,7 @@ fieldLayouts:
 handle: externalPerson
 hasTitleField: true
 icon: handshake
-name: 'External Contributor'
+name: 'People: External Contributor'
 showSlugField: true
 showStatusField: true
 slugTranslationKeyFormat: null

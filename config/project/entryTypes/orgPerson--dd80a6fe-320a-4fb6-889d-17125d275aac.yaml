@@ -442,7 +442,7 @@ fieldLayouts:
 handle: orgPerson
 hasTitleField: true
 icon: user
-name: 'Org Member'
+name: 'People: Org Member'
 showSlugField: true
 showStatusField: true
 slugTranslationKeyFormat: null
