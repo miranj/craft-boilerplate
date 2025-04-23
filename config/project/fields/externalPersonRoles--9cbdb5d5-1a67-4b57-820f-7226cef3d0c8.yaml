@@ -1,0 +1,22 @@
+columnSuffix: null
+handle: externalPersonRoles
+instructions: null
+name: 'External Person Roles'
+searchable: false
+settings:
+  customOptions: false
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - 'Guest with public profile'
+        -
+          - value
+          - guestWithProfile
+        -
+          - default
+          - ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Checkboxes

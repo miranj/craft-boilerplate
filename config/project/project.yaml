@@ -1,4 +1,4 @@
-dateModified: 1745291584
+dateModified: 1745405512
 elementSources:
   craft\elements\Category:
     -
@@ -216,7 +216,7 @@ elementSources:
             operator: in
             uid: 36ed3005-5a84-4677-83d8-b8b38ed73c74
             values:
-              - dd80a6fe-320a-4fb6-889d-17125d275aac # Org Member
+              - dd80a6fe-320a-4fb6-889d-17125d275aac # People: Org Member
         elementType: craft\elements\Entry
         fieldContext: global
       defaultSort:
@@ -227,6 +227,7 @@ elementSources:
       label: 'Organization Members'
       tableAttributes:
         - link
+        - 'fieldInstance:180d4fc7-9ed8-45dd-8658-851b8d3687ea'
         - dateUpdated
         - revisionCreator
       type: custom
@@ -245,7 +246,7 @@ elementSources:
             operator: in
             uid: a5eaf8a5-2223-42f3-b8e4-19a9706efca5
             values:
-              - 6fd87453-1bda-4bb9-8c8d-4dd36185e75d # External Contributor
+              - 6fd87453-1bda-4bb9-8c8d-4dd36185e75d # People: External Contributor
         elementType: craft\elements\Entry
         fieldContext: global
       defaultSort:
@@ -486,7 +487,7 @@ meta:
     6caf0d7f-9b74-4ae4-b0dd-458633bd94d1: Image # Image
     6cb8c647-c45e-4437-86ec-02d2ffe7f0f5: 'Social: Facebook' # Social: Facebook
     6d709589-8e2f-4fef-9c6f-48f5644fb922: Disciplines # Disciplines
-    6fd87453-1bda-4bb9-8c8d-4dd36185e75d: 'External Contributor' # External Contributor
+    6fd87453-1bda-4bb9-8c8d-4dd36185e75d: 'People: External Contributor' # People: External Contributor
     7a8f449f-4cfb-49db-8656-d7551c298f4c: Authors # Authors
     7b8b18a2-8e96-4b93-bfaa-34a1d9fa86e1: Rich # Rich
     7bc0d428-9e00-47b5-b928-67896f29ae17: 'Contact: Website' # Contact: Website
@@ -500,6 +501,7 @@ meta:
     9b5f9007-3f61-4857-b978-fdfbc4b29dba: 'Event Types' # Event Types
     9b8054bc-bad1-4e95-b74b-e722465d36b9: Publication # Publication
     9c5f24a6-1969-4197-9fce-ff44e5a18b9b: People # People
+    9cbdb5d5-1a67-4b57-820f-7226cef3d0c8: 'External Person Roles' # External Person Roles
     9ce8d4e8-4f27-44a1-8f1c-60187033a3e3: 'Focus Areas' # Focus Areas
     9ff437c1-0323-4492-a95e-007c3a05ab8f: Practices # Practices
     12c6ecb1-eb21-40a2-aca1-217b86047c44: Event # Event
@@ -543,7 +545,7 @@ meta:
     386721be-1ee4-4e3b-b22c-7fb3dfded3ff: 'Simple Text' # Simple Text
     856911a9-89f9-4865-bdb1-5665460c6c23: 'Contact & Social Media Information' # Contact & Social Media Information
     8341919b-4097-4c45-8f3b-97ff673d9ab5: $CRAFT_SITE_NAME # $CRAFT_SITE_NAME
-    11127416-2baf-40e9-bb28-9ea76040af2a: 'Person Roles' # Person Roles
+    11127416-2baf-40e9-bb28-9ea76040af2a: 'Org Person Roles' # Org Person Roles
     18803174-20d5-4b61-a067-3072b484f857: 'Resources Index' # Resources Index
     25388890-1b39-49c8-8d89-7ef2d82f89a1: Newsletter # Newsletter
     a0320c92-dcb7-489b-94e3-bd21fdc647cc: Practices # Practices
@@ -576,7 +578,7 @@ meta:
     d269e092-7aa1-4a2a-87c3-32843dda2da4: 'Social: LinkedIn' # Social: LinkedIn
     d4720a93-54ad-45de-a939-b668ed8660dc: 'Share/SEO Image' # Share/SEO Image
     da24c053-b31c-4fa8-b113-217845a4ce83: 'Share/SEO Title' # Share/SEO Title
-    dd80a6fe-320a-4fb6-889d-17125d275aac: 'Org Member' # Org Member
+    dd80a6fe-320a-4fb6-889d-17125d275aac: 'People: Org Member' # People: Org Member
     de677f5b-6642-4086-ac1a-3e95990c19d0: 'Blog Post' # Blog Post
     e03f52b8-38a8-493c-b27a-3c61c5532f18: Builder # Builder
     e5d70b3c-403b-416d-b670-a93437ce427b: 'User Managers' # User Managers
