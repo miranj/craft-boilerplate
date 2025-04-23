@@ -67,6 +67,22 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
+          -
+            dateAdded: '2025-04-23T03:18:25+00:00'
+            elementCondition: null
+            fieldUid: aab7a3de-9a4a-4020-97b0-d960292b931f # Content Builder
+            handle: null
+            includeInCards: false
+            instructions: '_Faculty Programs_ will automatically be added after the _Body_ area. To change the order, add a _Section Content_ block and move it around.'
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 9811074a-cac0-4a4c-90f2-907043e230cc
+            userCondition: null
+            warning: null
+            width: 100
         name: Page
         uid: bd308d9b-4552-4b33-a434-c8592a1b8de4
         userCondition: null

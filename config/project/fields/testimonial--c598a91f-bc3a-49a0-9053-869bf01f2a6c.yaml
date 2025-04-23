@@ -1,0 +1,22 @@
+columnSuffix: null
+handle: testimonial
+instructions: null
+name: Testimonial
+searchable: true
+settings:
+  allowSelfRelations: false
+  branchLimit: null
+  maintainHierarchy: false
+  maxRelations: 1
+  minRelations: null
+  selectionLabel: 'Add testimonial'
+  showCardsInGrid: true
+  showSiteMenu: false
+  sources:
+    - 'section:e39594b6-01d5-4f33-b105-7b111cb3214a' # Testimonials
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: cards
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Entries

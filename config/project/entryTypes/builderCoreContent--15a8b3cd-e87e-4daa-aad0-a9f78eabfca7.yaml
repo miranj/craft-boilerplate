@@ -1,0 +1,30 @@
+color: lime
+fieldLayouts:
+  4d5b743b-fda2-435a-9033-27e958fe190b:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-04-23T03:48:08+00:00'
+            elementCondition: null
+            template: _cp/instructions/blockPageCore.twig
+            templateMode: site
+            type: craft\fieldlayoutelements\Template
+            uid: f7b51f05-8fce-4466-960b-85a485196ee1
+            userCondition: null
+            width: 100
+        name: Content
+        uid: 0201e9e9-067d-4069-9932-2a580008a352
+        userCondition: null
+handle: builderCoreContent
+hasTitleField: false
+icon: puzzle-piece
+name: 'Content Builder: Section Core Content'
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
