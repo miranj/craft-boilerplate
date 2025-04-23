@@ -14,17 +14,17 @@
 
 
 {# Variables #}
-{% set rolesWithUrl = ['faculty', 'staff', 'student'] %}
+{% set entryRolesWithUrl = ['faculty', 'staff', 'student'] %}
 
 
 
 {# Variables #}
-{% set personHasUrl =
-  entryRoles|intersect(rolesWithUrl) is not empty
+{% set entryHasUrl =
+  entryRoles|intersect(entryRolesWithUrl) is not empty
   and entryIsActive
 %}
 
 
 
 {# Render #}
-{{ personHasUrl ? 'people/' ~ object.slug : '' }}
+{{ entryHasUrl ? 'people/' ~ object.slug : '' }}
