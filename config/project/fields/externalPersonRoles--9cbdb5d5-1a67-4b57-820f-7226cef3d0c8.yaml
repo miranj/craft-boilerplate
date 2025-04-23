@@ -10,17 +10,6 @@ settings:
       __assoc__:
         -
           - label
-          - Guest
-        -
-          - value
-          - guest
-        -
-          - default
-          - ''
-    -
-      __assoc__:
-        -
-          - label
           - 'Guest with public profile'
         -
           - value
