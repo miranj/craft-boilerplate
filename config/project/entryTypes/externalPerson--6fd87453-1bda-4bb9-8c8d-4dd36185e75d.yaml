@@ -93,7 +93,7 @@ fieldLayouts:
             dateAdded: '2025-04-22T07:47:34+00:00'
             elementCondition: null
             fieldUid: 9cbdb5d5-1a67-4b57-820f-7226cef3d0c8 # External Person Roles
-            handle: personRoles
+            handle: roles
             includeInCards: false
             instructions: null
             label: Roles

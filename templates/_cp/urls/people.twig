@@ -8,7 +8,7 @@
 #}
 
 {# Params #}
-{% set entryRoles = entryRoles ?? object.personRoles|column('value') %}
+{% set entryRoles = entryRoles ?? object.roles|column('value') %}
 {% set entryIsActive = entryIsActive ?? not (object.isAlumni ?? false) %}
 
 
