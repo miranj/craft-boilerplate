@@ -293,7 +293,27 @@ fieldLayouts:
         uid: 27ae856c-8d21-40f0-a53c-1283b40db426
         userCondition: null
       -
-        elementCondition: null
+        elementCondition:
+          class: craft\elements\conditions\entries\EntryCondition
+          conditionRules:
+            -
+              class: craft\fields\conditions\LightswitchFieldConditionRule
+              fieldUid: 8f58365f-4eeb-4347-9d3d-5c0d3ffd3989 # Toggle (Default: off)
+              layoutElementUid: 9644274f-ad63-4409-9003-7ab68e1eaaf4
+              uid: 41c2e871-54e8-4d83-8a51-17d2593bc8de
+              value: false
+            -
+              class: craft\fields\conditions\OptionsFieldConditionRule
+              fieldUid: 11127416-2baf-40e9-bb28-9ea76040af2a # Org Person Roles
+              layoutElementUid: 180d4fc7-9ed8-45dd-8658-851b8d3687ea
+              operator: in
+              uid: 7756512c-13f0-445d-8b00-6c47d6aee5a8
+              values:
+                - faculty
+                - staff
+                - student
+          elementType: craft\elements\Entry
+          fieldContext: global
         elements:
           -
             dateAdded: '2025-04-13T07:50:34+00:00'
@@ -315,7 +335,27 @@ fieldLayouts:
         uid: 759f924d-7e40-427c-9ab6-2988bcc89081
         userCondition: null
       -
-        elementCondition: null
+        elementCondition:
+          class: craft\elements\conditions\entries\EntryCondition
+          conditionRules:
+            -
+              class: craft\fields\conditions\LightswitchFieldConditionRule
+              fieldUid: 8f58365f-4eeb-4347-9d3d-5c0d3ffd3989 # Toggle (Default: off)
+              layoutElementUid: 9644274f-ad63-4409-9003-7ab68e1eaaf4
+              uid: a6dce140-e6e0-4168-a65b-f416c9e7e971
+              value: false
+            -
+              class: craft\fields\conditions\OptionsFieldConditionRule
+              fieldUid: 11127416-2baf-40e9-bb28-9ea76040af2a # Org Person Roles
+              layoutElementUid: 180d4fc7-9ed8-45dd-8658-851b8d3687ea
+              operator: in
+              uid: 462f746e-9615-4ef2-962d-f082a539e5e9
+              values:
+                - faculty
+                - staff
+                - student
+          elementType: craft\elements\Entry
+          fieldContext: global
         elements:
           -
             dateAdded: '2025-04-13T07:50:34+00:00'
