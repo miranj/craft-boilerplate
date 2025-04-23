@@ -17,6 +17,17 @@ settings:
         -
           - default
           - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Guest with public profile'
+        -
+          - value
+          - guestWithProfile
+        -
+          - default
+          - ''
 translationKeyFormat: null
 translationMethod: none
 type: craft\fields\Checkboxes
