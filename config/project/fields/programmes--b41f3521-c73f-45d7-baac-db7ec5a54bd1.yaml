@@ -1,0 +1,22 @@
+columnSuffix: null
+handle: programmes
+instructions: null
+name: Programmes
+searchable: true
+settings:
+  allowSelfRelations: false
+  branchLimit: null
+  maintainHierarchy: false
+  maxRelations: null
+  minRelations: null
+  selectionLabel: 'Add programmes'
+  showCardsInGrid: false
+  showSiteMenu: true
+  sources:
+    - 'section:3efc7d18-2f42-40d1-beee-b05867f36104' # Programmes
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: list
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Entries

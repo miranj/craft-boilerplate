@@ -1,34 +1,34 @@
-color: null
+color: blue
 fieldLayouts:
-  615ff859-cfef-465f-91bb-316a4423afcf:
+  8610f69e-3a4c-47be-9f30-2822b74436c1:
     tabs:
       -
         elementCondition: null
         elements:
           -
-            dateAdded: '2025-02-28T02:59:42+00:00'
+            dateAdded: '2025-04-21T04:25:04+00:00'
             elementCondition: null
-            fieldUid: 65fd1257-02e1-40e1-a8a4-0ad89b4e9510 # External Link
-            handle: null
+            fieldUid: b5e4cb0a-59d9-4e16-bfc3-408104521a11 # URL
+            handle: hyperlink
             includeInCards: false
             instructions: null
             label: __blank__
             providesThumbs: false
-            required: false
+            required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 0cf9c9e3-08f5-4a55-b652-55d97087c320
+            uid: ae792819-3df8-40cf-bd29-3a0a70815f5c
             userCondition: null
             warning: null
             width: 100
         name: Content
-        uid: f0013db3-8a14-40de-adcf-9b64abe72001
+        uid: cde87d3b-079f-4a80-9c25-057956c63e98
         userCondition: null
-handle: contactDetail
+handle: socialSubstack
 hasTitleField: false
-icon: link
-name: 'Contact Detail'
-showSlugField: true
+icon: globe
+name: 'Social: Substack'
+showSlugField: false
 showStatusField: true
 slugTranslationKeyFormat: null
 slugTranslationMethod: site

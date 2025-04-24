@@ -1,0 +1,37 @@
+color: blue
+fieldLayouts:
+  a176ad31-6928-43b5-b3c0-559eb293b621:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-04-09T06:39:16+00:00'
+            elementCondition: null
+            fieldUid: 90d8deb5-3a82-411b-b04f-8eed4c8890c9 # URL (Phone)
+            handle: hyperlink
+            includeInCards: false
+            instructions: null
+            label: __blank__
+            providesThumbs: false
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: af993c76-d411-4845-9181-7fd423ec85bc
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 71919eaa-53a4-4783-a596-4551f364e98c
+        userCondition: null
+handle: contactPhone
+hasTitleField: false
+icon: phone
+name: 'Contact: Phone'
+showSlugField: false
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

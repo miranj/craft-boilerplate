@@ -9,7 +9,7 @@ settings:
   maintainHierarchy: false
   maxRelations: 1
   minRelations: null
-  selectionLabel: 'Add a type'
+  selectionLabel: 'Add type'
   showCardsInGrid: false
   showSiteMenu: true
   source: 'group:a907570e-41b8-4e87-b566-c2abe353e2a6' # Publication Types

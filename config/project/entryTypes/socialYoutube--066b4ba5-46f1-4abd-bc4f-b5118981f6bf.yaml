@@ -1,0 +1,37 @@
+color: blue
+fieldLayouts:
+  e5ee4f14-96b6-4538-b464-688354fc09ce:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-04-21T04:06:14+00:00'
+            elementCondition: null
+            fieldUid: b5e4cb0a-59d9-4e16-bfc3-408104521a11 # URL
+            handle: hyperlink
+            includeInCards: false
+            instructions: null
+            label: __blank__
+            providesThumbs: false
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 51296de7-7988-498b-a5eb-bad1c0cd577e
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 854b41dc-7545-4594-8796-b741d82888bd
+        userCondition: null
+handle: socialYoutube
+hasTitleField: false
+icon: youtube
+name: 'Social: YouTube'
+showSlugField: true
+showStatusField: false
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

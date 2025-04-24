@@ -1,10 +1,10 @@
 columnSuffix: null
-handle: externalLink
+handle: link_emailPhoneUrl
 instructions: null
-name: 'External Link'
-searchable: false
+name: 'Link (Email, Phone, URL)'
+searchable: true
 settings:
-  fullGraphqlData: true
+  fullGraphqlData: false
   maxLength: 255
   showLabelField: true
   typeSettings:

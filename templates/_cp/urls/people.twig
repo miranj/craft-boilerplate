@@ -1,0 +1,35 @@
+{#
+  _cp/urls/people.twig
+
+  Set a URL based on a set of conditions.
+
+  People marked as "Alumni" or with a single "Ambassador" role will not have
+  a URL.
+#}
+
+{# Params #}
+{% set entryRoles = entryRoles ?? object.roles|column('value') %}
+{% set entryIsActive = entryIsActive ?? not (object.isAlumni ?? false) %}
+
+
+
+{# Variables #}
+{% set entryRolesWithUrl = [
+  'faculty',
+  'guestWithProfile',
+  'staff',
+  'student',
+] %}
+
+
+
+{# Variables #}
+{% set entryHasUrl =
+  entryRoles|intersect(entryRolesWithUrl) is not empty
+  and entryIsActive
+%}
+
+
+
+{# Render #}
+{{ entryHasUrl ? 'people/' ~ object.slug : '' }}

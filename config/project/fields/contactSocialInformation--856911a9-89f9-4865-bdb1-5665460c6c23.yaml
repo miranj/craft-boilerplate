@@ -1,0 +1,129 @@
+columnSuffix: null
+handle: contactSocialInformation
+instructions: 'Contact information and social media links will be grouped separately on the front-end.'
+name: 'Contact & Social Media Information'
+searchable: true
+settings:
+  createButtonLabel: 'Add contact info'
+  defaultIndexViewMode: cards
+  entryTypes:
+    -
+      __assoc__:
+        -
+          - uid
+          - 1b75b0c0-3003-4fe3-bc8f-478e12906e75 # Contact: Email
+        -
+          - name
+          - Email
+    -
+      __assoc__:
+        -
+          - uid
+          - 7395f359-de01-4595-b728-81edf64158fc # Contact: Phone
+        -
+          - name
+          - Phone
+    -
+      __assoc__:
+        -
+          - uid
+          - aaee4c78-a676-4fb7-b7d5-89c41725efa1 # Contact: Website
+        -
+          - name
+          - Website
+    -
+      __assoc__:
+        -
+          - uid
+          - 46be6b8a-5b32-42d7-803e-7e7458d3b3dd # BlueSky
+    -
+      __assoc__:
+        -
+          - uid
+          - 6cb8c647-c45e-4437-86ec-02d2ffe7f0f5 # Social: Facebook
+        -
+          - name
+          - Facebook
+    -
+      __assoc__:
+        -
+          - uid
+          - ece488e2-352e-44a2-8a74-1baf13a4f946 # Social: Instagram
+        -
+          - name
+          - Instagram
+    -
+      __assoc__:
+        -
+          - uid
+          - d269e092-7aa1-4a2a-87c3-32843dda2da4 # Social: LinkedIn
+        -
+          - name
+          - LinkedIn
+    -
+      __assoc__:
+        -
+          - uid
+          - 960e6704-e653-4bd7-915f-e776db06eed3 # Social: Mastodon
+        -
+          - name
+          - Mastodon
+    -
+      __assoc__:
+        -
+          - uid
+          - aed4fee3-7450-4291-9a72-1ee84a5b12dd # Social: Substack
+        -
+          - name
+          - Substack
+    -
+      __assoc__:
+        -
+          - uid
+          - 0978a69a-6e11-4c28-b1b4-ee3f15d51b83 # Social: TikTok
+        -
+          - name
+          - TikTok
+    -
+      __assoc__:
+        -
+          - uid
+          - 1be17f42-da77-4201-b98f-1221dedc25e9 # Social: WhatsApp
+        -
+          - name
+          - WhatsApp
+    -
+      __assoc__:
+        -
+          - uid
+          - 022e09d7-14f6-471f-8dc0-06e6245b1c77 # Social: X
+        -
+          - name
+          - X
+    -
+      __assoc__:
+        -
+          - uid
+          - 066b4ba5-46f1-4abd-bc4f-b5118981f6bf # Social: YouTube
+        -
+          - name
+          - YouTube
+    -
+      __assoc__:
+        -
+          - uid
+          - 78b65745-d87e-4107-87a7-8ae091e8dcf5 # Social: Other
+        -
+          - name
+          - 'Other Social Media'
+  includeTableView: false
+  maxEntries: null
+  minEntries: null
+  pageSize: null
+  propagationKeyFormat: null
+  propagationMethod: all
+  showCardsInGrid: false
+  viewMode: blocks
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

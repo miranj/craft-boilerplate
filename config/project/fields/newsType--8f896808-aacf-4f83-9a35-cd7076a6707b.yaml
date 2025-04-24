@@ -9,7 +9,7 @@ settings:
   maintainHierarchy: false
   maxRelations: 1
   minRelations: null
-  selectionLabel: null
+  selectionLabel: 'Add type'
   showCardsInGrid: false
   showSiteMenu: true
   source: 'group:0bc8375c-5e05-4156-a6c9-5678af911123' # News Types
