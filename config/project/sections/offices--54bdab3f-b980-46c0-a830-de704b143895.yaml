@@ -2,14 +2,10 @@ defaultPlacement: end
 enableVersioning: true
 entryTypes:
   -
-    name: 'Org Member'
-    uid: dd80a6fe-320a-4fb6-889d-17125d275aac # People: Org Member
-  -
-    name: 'External Contributor'
-    uid: 6fd87453-1bda-4bb9-8c8d-4dd36185e75d # People: External Contributor
-handle: people
+    uid: f719c927-90fd-4ace-a58e-ddea5675c7d2 # Office
+handle: offices
 maxAuthors: 1
-name: People
+name: Offices
 previewTargets:
   -
     __assoc__:
@@ -28,5 +24,5 @@ siteSettings:
     enabledByDefault: true
     hasUrls: true
     template: _routers/detail.twig
-    uriFormat: '{% include(''_cp/urls/people'') %}'
+    uriFormat: 'offices/{slug}'
 type: channel

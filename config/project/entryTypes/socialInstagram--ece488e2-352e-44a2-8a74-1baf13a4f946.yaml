@@ -1,14 +1,14 @@
 color: blue
 fieldLayouts:
-  a176ad31-6928-43b5-b3c0-559eb293b621:
+  5b19a9d2-c00e-4338-816a-e2a31bb5bd3e:
     tabs:
       -
         elementCondition: null
         elements:
           -
-            dateAdded: '2025-04-09T06:39:16+00:00'
+            dateAdded: '2025-04-21T04:17:03+00:00'
             elementCondition: null
-            fieldUid: 90d8deb5-3a82-411b-b04f-8eed4c8890c9 # URL (Phone)
+            fieldUid: b5e4cb0a-59d9-4e16-bfc3-408104521a11 # URL
             handle: hyperlink
             includeInCards: false
             instructions: null
@@ -17,17 +17,17 @@ fieldLayouts:
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: af993c76-d411-4845-9181-7fd423ec85bc
+            uid: 951d96d5-ff59-45d1-a26f-b5bcde6b65c5
             userCondition: null
             warning: null
             width: 100
         name: Content
-        uid: 71919eaa-53a4-4783-a596-4551f364e98c
+        uid: 0f414495-b394-4685-8b0b-3f3921e52b0f
         userCondition: null
-handle: contactPhone
+handle: socialInstagram
 hasTitleField: false
-icon: phone
-name: 'Contact: Phone'
+icon: instagram
+name: 'Social: Instagram'
 showSlugField: false
 showStatusField: true
 slugTranslationKeyFormat: null

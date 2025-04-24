@@ -1,18 +1,18 @@
 columnSuffix: null
-handle: publicationType
-instructions: 'Eg: _Case Study_, _Report_.'
-name: 'Publication Type'
-searchable: false
+handle: practices
+instructions: null
+name: Practices
+searchable: true
 settings:
   allowSelfRelations: false
   branchLimit: null
   maintainHierarchy: false
-  maxRelations: 1
+  maxRelations: null
   minRelations: null
-  selectionLabel: 'Add type'
+  selectionLabel: 'Add practices'
   showCardsInGrid: false
   showSiteMenu: true
-  source: 'group:a907570e-41b8-4e87-b566-c2abe353e2a6' # Publication Types
+  source: 'group:9ff437c1-0323-4492-a95e-007c3a05ab8f' # Practices
   targetSiteId: null
   validateRelatedElements: false
   viewMode: list

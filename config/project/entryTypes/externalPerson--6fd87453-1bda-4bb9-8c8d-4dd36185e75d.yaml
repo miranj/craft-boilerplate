@@ -68,22 +68,6 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            dateAdded: '2025-04-13T07:21:09+00:00'
-            elementCondition: null
-            fieldUid: 856911a9-89f9-4865-bdb1-5665460c6c23 # Contact & Social Media Information
-            handle: null
-            includeInCards: false
-            instructions: null
-            label: null
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 56c2e9f4-1987-4064-947f-08a6935ab23f
-            userCondition: null
-            warning: null
-            width: 100
-          -
             dateAdded: '2025-04-16T01:50:00+00:00'
             elementCondition: null
             fieldUid: 08b5b22b-fb98-46ef-8a90-e392edb2244f # Rich Text
@@ -99,14 +83,70 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-        name: Page
+        name: Profile
         uid: 00729573-9236-4b4b-ac77-3138b2cc63b5
         userCondition: null
       -
         elementCondition: null
         elements:
           -
-            dateAdded: '2025-04-13T07:52:28+00:00'
+            dateAdded: '2025-04-22T07:47:34+00:00'
+            elementCondition: null
+            fieldUid: 9cbdb5d5-1a67-4b57-820f-7226cef3d0c8 # External Person Roles
+            handle: roles
+            includeInCards: false
+            instructions: null
+            label: Roles
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 4fa8150e-2258-4471-91e3-218f423c715d
+            userCondition: null
+            warning: null
+            width: 100
+        name: Roles
+        uid: 9dbd1acf-5751-4881-a52f-55620cd78c03
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-04-13T07:21:09+00:00'
+            elementCondition: null
+            fieldUid: 856911a9-89f9-4865-bdb1-5665460c6c23 # Contact & Social Media Information
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 56c2e9f4-1987-4064-947f-08a6935ab23f
+            userCondition: null
+            warning: null
+            width: 100
+        name: Contact
+        uid: 6f98b81c-b0df-41c2-8d1d-66f494898307
+        userCondition: null
+      -
+        elementCondition:
+          class: craft\elements\conditions\entries\EntryCondition
+          conditionRules:
+            -
+              class: craft\fields\conditions\OptionsFieldConditionRule
+              fieldUid: 9cbdb5d5-1a67-4b57-820f-7226cef3d0c8 # External Person Roles
+              layoutElementUid: 4fa8150e-2258-4471-91e3-218f423c715d
+              operator: in
+              uid: 3ac00040-2a6c-4c7e-b126-04702a8d2043
+              values:
+                - guestWithProfile
+          elementType: craft\elements\Entry
+          fieldContext: global
+        elements:
+          -
+            dateAdded: '2025-04-23T02:56:46+00:00'
             elementCondition: null
             fieldUid: 5b72b712-0218-40c6-9717-0c395a914ad8 # Summary
             handle: null
@@ -117,27 +157,39 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: d1770d1a-a5e9-493b-a6ef-8529c2bf1053
+            uid: 8c68515a-f7ca-4455-b20b-f5bf1351a189
             userCondition: null
             warning: null
             width: 100
         name: Summary
-        uid: 77cdf692-294f-471d-9525-79f0fde80ca5
+        uid: 948e7509-1667-4502-add7-f272f8d1c63c
         userCondition: null
       -
-        elementCondition: null
+        elementCondition:
+          class: craft\elements\conditions\entries\EntryCondition
+          conditionRules:
+            -
+              class: craft\fields\conditions\OptionsFieldConditionRule
+              fieldUid: 9cbdb5d5-1a67-4b57-820f-7226cef3d0c8 # External Person Roles
+              layoutElementUid: 4fa8150e-2258-4471-91e3-218f423c715d
+              operator: in
+              uid: 89997885-8c59-426b-8ce9-ede4686b7c41
+              values:
+                - guestWithProfile
+          elementType: craft\elements\Entry
+          fieldContext: global
         elements:
           -
-            dateAdded: '2025-04-13T07:52:28+00:00'
+            dateAdded: '2025-04-23T02:58:24+00:00'
             elementCondition: null
             template: _cp/instructions/seo.twig
             templateMode: site
             type: craft\fieldlayoutelements\Template
-            uid: 9b2d7617-aca1-47c0-8611-501b3d1c2fc3
+            uid: cdd4e514-974d-4ca8-b6e7-e08c9eadcb11
             userCondition: null
             width: 100
           -
-            dateAdded: '2025-04-13T07:52:28+00:00'
+            dateAdded: '2025-04-23T02:58:24+00:00'
             elementCondition: null
             fieldUid: da24c053-b31c-4fa8-b113-217845a4ce83 # Share/SEO Title
             handle: null
@@ -148,12 +200,12 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: c8c5f49b-9ae7-4b8d-9df4-e0775ce8210a
+            uid: 152efffe-371c-40a1-afba-976529a1cbe5
             userCondition: null
             warning: null
             width: 100
           -
-            dateAdded: '2025-04-13T07:52:28+00:00'
+            dateAdded: '2025-04-23T02:58:24+00:00'
             elementCondition: null
             fieldUid: 349b5e6f-3a2a-43f1-a9dd-2373bf4a0a67 # Share/SEO Description
             handle: null
@@ -164,12 +216,12 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 13a154a8-6113-4e25-9c4c-39e673515a10
+            uid: 2e815dc1-cdd8-49cc-b74a-4486f259cec6
             userCondition: null
             warning: null
             width: 100
           -
-            dateAdded: '2025-04-13T07:52:28+00:00'
+            dateAdded: '2025-04-23T02:58:24+00:00'
             elementCondition: null
             fieldUid: d4720a93-54ad-45de-a939-b668ed8660dc # Share/SEO Image
             handle: null
@@ -180,18 +232,18 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 0b1bd1de-3e9f-49f4-9106-a0df40ba021a
+            uid: 29334484-ee65-45fd-84bd-10e1247762d4
             userCondition: null
             warning: null
             width: 100
           -
-            dateAdded: '2025-04-13T07:52:28+00:00'
+            dateAdded: '2025-04-23T02:58:24+00:00'
             elementCondition: null
             type: craft\fieldlayoutelements\HorizontalRule
-            uid: 0a316be6-ef06-45b2-97fe-f1632051d73d
+            uid: 6171adcb-a5e4-4213-855f-64ffe99b9847
             userCondition: null
           -
-            dateAdded: '2025-04-13T07:52:28+00:00'
+            dateAdded: '2025-04-23T02:58:24+00:00'
             elementCondition: null
             fieldUid: 61317d04-b4b5-4b2f-ad77-e1d87029c361 # Legacy URL
             handle: null
@@ -202,17 +254,17 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: a31d5835-55ca-4d04-a986-223a2eb91cdd
+            uid: defc9ca9-f12c-45f8-8f8c-a68950ba07aa
             userCondition: null
             warning: null
             width: 100
         name: 'Sharing & SEO'
-        uid: 0b8b9169-bf5b-416d-8cce-6770df63ea80
+        uid: d72af6ca-5d37-45b1-98de-4cf02d616ce8
         userCondition: null
 handle: externalPerson
 hasTitleField: true
 icon: handshake
-name: 'External Contributor'
+name: 'People: External Contributor'
 showSlugField: true
 showStatusField: true
 slugTranslationKeyFormat: null
