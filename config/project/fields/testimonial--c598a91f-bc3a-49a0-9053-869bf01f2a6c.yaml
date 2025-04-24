@@ -11,7 +11,7 @@ settings:
   minRelations: null
   selectionLabel: 'Add testimonial'
   showCardsInGrid: true
-  showSiteMenu: false
+  showSiteMenu: true
   sources:
     - 'section:e39594b6-01d5-4f33-b105-7b111cb3214a' # Testimonials
   targetSiteId: null

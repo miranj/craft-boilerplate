@@ -1,6 +1,9 @@
 color: null
 fieldLayouts:
   a505b95b-13f9-4b66-a8ec-1e687621fc77:
+    cardView:
+      - 'layoutElement:dd4faceb-8cf4-4baf-805f-e3288ccecd1c'
+      - 'layoutElement:28d6f35e-db83-4ff4-af7c-79c89bb9f4a4'
     tabs:
       -
         elementCondition: null
@@ -41,11 +44,11 @@ fieldLayouts:
             fieldUid: 8f58365f-4eeb-4347-9d3d-5c0d3ffd3989 # Toggle (Default: off)
             handle: null
             includeInCards: false
-            instructions: null
+            instructions: 'Useful for highlighting testimonials from an organization''s leadership.'
             label: 'Is Featured?'
             providesThumbs: false
             required: false
-            tip: 'Useful for highlighting testimonials from an organization''s leadership.'
+            tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: df7f8478-3d85-4052-8d9e-d0ff9a41c9d0
             userCondition: null
@@ -66,9 +69,9 @@ fieldLayouts:
               fieldContext: global
             fieldUid: c598a91f-bc3a-49a0-9053-869bf01f2a6c # Testimonial
             handle: null
-            includeInCards: false
+            includeInCards: true
             instructions: null
-            label: null
+            label: 'Featured Testimonial'
             providesThumbs: false
             required: true
             tip: null
@@ -92,7 +95,7 @@ fieldLayouts:
               fieldContext: global
             fieldUid: 12bc836f-fce2-4315-8a94-22967b0923c8 # Testimonials
             handle: null
-            includeInCards: false
+            includeInCards: true
             instructions: null
             label: null
             providesThumbs: false
