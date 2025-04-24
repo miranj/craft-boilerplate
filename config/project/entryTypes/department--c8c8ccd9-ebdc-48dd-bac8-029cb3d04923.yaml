@@ -52,13 +52,29 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: '2025-04-24T03:13:24+00:00'
+            elementCondition: null
+            fieldUid: 386721be-1ee4-4e3b-b22c-7fb3dfded3ff # Simple Text
+            handle: introduction
+            includeInCards: false
+            instructions: null
+            label: Introduction
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 85bd832e-6f5d-409c-ad53-0188a52978e9
+            userCondition: null
+            warning: null
+            width: 100
+          -
             dateAdded: '2025-04-18T10:50:20+00:00'
             elementCondition: null
             fieldUid: a9736c79-b219-4814-ba33-728835b7d230 # Body
             handle: null
             includeInCards: false
             instructions: null
-            label: null
+            label: Description
             providesThumbs: false
             required: false
             tip: null
@@ -67,6 +83,12 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
+        name: Page
+        uid: bd308d9b-4552-4b33-a434-c8592a1b8de4
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
           -
             dateAdded: '2025-04-23T03:18:25+00:00'
             elementCondition: null
@@ -83,8 +105,8 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-        name: Page
-        uid: bd308d9b-4552-4b33-a434-c8592a1b8de4
+        name: Blocks
+        uid: 872d2788-25ab-4a2c-b92c-7eb13941d44c
         userCondition: null
       -
         elementCondition: null
