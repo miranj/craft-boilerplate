@@ -125,10 +125,10 @@ fieldLayouts:
             dateAdded: '2025-03-17T03:07:14+00:00'
             elementCondition: null
             fieldUid: 840acb32-6694-40d0-9384-60a0220c1de0 # Label
-            handle: start
+            handle: employmentStart
             includeInCards: false
             instructions: null
-            label: Start
+            label: 'Employment Start'
             providesThumbs: false
             required: false
             tip: null

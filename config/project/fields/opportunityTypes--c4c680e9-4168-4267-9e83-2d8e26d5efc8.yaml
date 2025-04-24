@@ -1,6 +1,6 @@
 columnSuffix: null
 handle: opportunityTypes
-instructions: null
+instructions: 'Eg. _Administrative_, _Logistics_.'
 name: 'Opportunity Types'
 searchable: false
 settings:
@@ -11,7 +11,7 @@ settings:
   minRelations: null
   selectionLabel: 'Add a type'
   showCardsInGrid: false
-  showSiteMenu: false
+  showSiteMenu: true
   source: 'group:df899104-7d07-489b-954f-20ec40505f31' # Opportunity Types
   targetSiteId: null
   validateRelatedElements: false
