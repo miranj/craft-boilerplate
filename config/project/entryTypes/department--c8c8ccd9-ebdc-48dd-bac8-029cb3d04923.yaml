@@ -39,10 +39,10 @@ fieldLayouts:
             dateAdded: '2025-04-18T10:50:20+00:00'
             elementCondition: null
             fieldUid: 8dddc601-5e96-40bb-b036-520072ba4aa7 # Images
-            handle: null
+            handle: carousel
             includeInCards: false
             instructions: null
-            label: null
+            label: 'Banner Carousel'
             providesThumbs: false
             required: false
             tip: null
