@@ -6,7 +6,7 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
-            content: 'List of Faculty Programs will be inserted here.'
+            content: 'List of Faculty Programmes will be inserted here.'
             dateAdded: '2025-04-24T02:47:54+00:00'
             displayInPane: false
             elementCondition: null
@@ -17,10 +17,10 @@ fieldLayouts:
         name: Content
         uid: 0201e9e9-067d-4069-9932-2a580008a352
         userCondition: null
-handle: blockFacultyPrograms
+handle: blockFacultyProgrammes
 hasTitleField: false
 icon: scroll
-name: 'Block: Faculty Programs'
+name: 'Block: Faculty Programmes'
 showSlugField: false
 showStatusField: true
 slugTranslationKeyFormat: null

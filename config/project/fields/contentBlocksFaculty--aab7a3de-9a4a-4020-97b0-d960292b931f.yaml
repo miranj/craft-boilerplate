@@ -11,10 +11,10 @@ settings:
       __assoc__:
         -
           - uid
-          - 15a8b3cd-e87e-4daa-aad0-a9f78eabfca7 # Block: Faculty Programs
+          - 15a8b3cd-e87e-4daa-aad0-a9f78eabfca7 # Block: Faculty Programmes
         -
           - name
-          - 'Faculty Programs'
+          - 'Faculty Programmes'
     -
       __assoc__:
         -
