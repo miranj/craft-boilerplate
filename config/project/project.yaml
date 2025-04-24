@@ -1,4 +1,4 @@
-dateModified: 1745461846
+dateModified: 1745463419
 elementSources:
   craft\elements\Entry:
     -
@@ -449,11 +449,11 @@ meta:
     9b5f9007-3f61-4857-b978-fdfbc4b29dba: 'Event Types' # Event Types
     9b8054bc-bad1-4e95-b74b-e722465d36b9: Publication # Publication
     9c5f24a6-1969-4197-9fce-ff44e5a18b9b: People # People
-    09d5d648-f5ec-41b7-b39e-4d3c1585936a: 'Content Builder: Testimonials' # Content Builder: Testimonials
+    09d5d648-f5ec-41b7-b39e-4d3c1585936a: 'Block: Testimonials' # Block: Testimonials
     12bc836f-fce2-4315-8a94-22967b0923c8: Testimonials # Testimonials
     12c6ecb1-eb21-40a2-aca1-217b86047c44: Event # Event
     14f7242a-668c-4d66-a588-17cde4b7e598: 'Social Media' # Social Media
-    15a8b3cd-e87e-4daa-aad0-a9f78eabfca7: 'Content Builder: Section Core Content' # Content Builder: Section Core Content
+    15a8b3cd-e87e-4daa-aad0-a9f78eabfca7: 'Block: Faculty Programs' # Block: Faculty Programs
     15ad504a-20b4-4e89-b94c-e7be7f135774: 'People Index' # People Index
     32ed2f1a-9024-4ee9-9028-3a5041c0e5e6: Date # Date
     53c65b45-5d94-4867-95c3-6b235eef1853: 'Focus Areas' # Focus Areas
@@ -496,7 +496,7 @@ meta:
     a20788dd-9031-41ba-8145-5f9d17b719ad: Primary # Primary
     a907570e-41b8-4e87-b566-c2abe353e2a6: 'Publication Types' # Publication Types
     a976662e-fc19-4f89-ae6b-a5b4db64752b: Events # Events
-    aab7a3de-9a4a-4020-97b0-d960292b931f: 'Content Builder' # Content Builder
+    aab7a3de-9a4a-4020-97b0-d960292b931f: 'Content Blocks: Faculty' # Content Blocks: Faculty
     aaee4c78-a676-4fb7-b7d5-89c41725efa1: 'Contact: Website' # Contact: Website
     afc7f0bc-1b97-4841-a1d2-5b0385a7ca35: 'Plain Text' # Plain Text
     b5b9369b-8ab5-44dc-bbaa-058288143025: 'Index Page' # Index Page

@@ -1,25 +1,25 @@
 columnSuffix: null
-handle: contentBuilder
-instructions: 'Core content will automatically be added after the _Body_ area. To change the order, add a _Core Content_ block and move it around.'
-name: 'Content Builder'
+handle: contentBlocksFaculty
+instructions: '_Faculty Programs_ will automatically shown as the first block. To change the order, add a _Faculty Programs_ block below and move it around.'
+name: 'Content Blocks: Faculty'
 searchable: true
 settings:
-  createButtonLabel: 'Add content block'
+  createButtonLabel: 'New block'
   defaultIndexViewMode: cards
   entryTypes:
     -
       __assoc__:
         -
           - uid
-          - 15a8b3cd-e87e-4daa-aad0-a9f78eabfca7 # Content Builder: Section Core Content
+          - 15a8b3cd-e87e-4daa-aad0-a9f78eabfca7 # Block: Faculty Programs
         -
           - name
-          - 'Page Specific Content'
+          - 'Faculty Programs'
     -
       __assoc__:
         -
           - uid
-          - 09d5d648-f5ec-41b7-b39e-4d3c1585936a # Content Builder: Testimonials
+          - 09d5d648-f5ec-41b7-b39e-4d3c1585936a # Block: Testimonials
         -
           - name
           - Testimonials

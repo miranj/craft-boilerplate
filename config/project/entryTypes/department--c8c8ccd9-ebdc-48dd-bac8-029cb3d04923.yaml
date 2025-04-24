@@ -70,11 +70,11 @@ fieldLayouts:
           -
             dateAdded: '2025-04-23T03:18:25+00:00'
             elementCondition: null
-            fieldUid: aab7a3de-9a4a-4020-97b0-d960292b931f # Content Builder
-            handle: null
+            fieldUid: aab7a3de-9a4a-4020-97b0-d960292b931f # Content Blocks: Faculty
+            handle: contentBlocks
             includeInCards: false
-            instructions: '_Faculty Programs_ will automatically be added after the _Body_ area. To change the order, add a _Section Content_ block and move it around.'
-            label: null
+            instructions: null
+            label: 'Content Blocks'
             providesThumbs: false
             required: false
             tip: null

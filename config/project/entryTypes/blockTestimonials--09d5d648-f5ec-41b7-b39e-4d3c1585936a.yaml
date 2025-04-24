@@ -106,10 +106,10 @@ fieldLayouts:
         name: Content
         uid: 428a9c4b-53fc-4d3d-b3fc-a9a48d375898
         userCondition: null
-handle: contentBuilderTestimonials
+handle: blockTestimonials
 hasTitleField: true
 icon: comments
-name: 'Content Builder: Testimonials'
+name: 'Block: Testimonials'
 showSlugField: true
 showStatusField: true
 slugTranslationKeyFormat: null

@@ -1,4 +1,4 @@
-color: lime
+color: orange
 fieldLayouts:
   4d5b743b-fda2-435a-9033-27e958fe190b:
     tabs:
@@ -6,22 +6,22 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
-            dateAdded: '2025-04-23T03:48:08+00:00'
+            content: 'List of Faculty Programs will be inserted here.'
+            dateAdded: '2025-04-24T02:47:54+00:00'
+            displayInPane: false
             elementCondition: null
-            template: _cp/instructions/blockPageCore.twig
-            templateMode: site
-            type: craft\fieldlayoutelements\Template
-            uid: f7b51f05-8fce-4466-960b-85a485196ee1
+            type: craft\fieldlayoutelements\Markdown
+            uid: 5962d7a3-53b8-4813-8fdc-95d9e9472c86
             userCondition: null
             width: 100
         name: Content
         uid: 0201e9e9-067d-4069-9932-2a580008a352
         userCondition: null
-handle: builderCoreContent
+handle: blockFacultyPrograms
 hasTitleField: false
-icon: puzzle-piece
-name: 'Content Builder: Section Core Content'
-showSlugField: true
+icon: scroll
+name: 'Block: Faculty Programs'
+showSlugField: false
 showStatusField: true
 slugTranslationKeyFormat: null
 slugTranslationMethod: site

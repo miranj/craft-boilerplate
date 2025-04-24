@@ -1,8 +1,0 @@
-{# cp/instructions/blockPageCore #}
-
-{% set guidelines = {
-  default: 'Section-specific content will be displayed here.',
-  departments: 'List of Faculty Programs will be displayed here.',
-} %}
-
-{{ guidelines[element.owner.section.handle ?? 'default']|md }}
