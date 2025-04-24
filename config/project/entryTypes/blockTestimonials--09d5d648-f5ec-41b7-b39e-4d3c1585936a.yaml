@@ -113,7 +113,7 @@ handle: blockTestimonials
 hasTitleField: true
 icon: comments
 name: 'Block: Testimonials'
-showSlugField: true
+showSlugField: false
 showStatusField: true
 slugTranslationKeyFormat: null
 slugTranslationMethod: site
