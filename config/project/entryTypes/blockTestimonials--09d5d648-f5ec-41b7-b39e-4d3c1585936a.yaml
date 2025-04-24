@@ -28,7 +28,7 @@ fieldLayouts:
             placeholder: null
             providesThumbs: false
             readonly: false
-            required: false
+            required: true
             size: null
             step: null
             tip: null
