@@ -1,4 +1,4 @@
-dateModified: 1745492258
+dateModified: 1745492679
 elementSources:
   craft\elements\Category:
     -
@@ -542,6 +542,7 @@ meta:
     23995e04-c457-4eeb-b78d-1c22f16cf4f6: 'URL (Email)' # URL (Email)
     61317d04-b4b5-4b2f-ad77-e1d87029c361: 'Legacy URL' # Legacy URL
     69339afc-d4f1-440b-a7ad-7da2ccb77972: Image # Image
+    74946a7f-3d6f-43eb-afb2-f79f614d409a: Link # Link
     386721be-1ee4-4e3b-b22c-7fb3dfded3ff: 'Simple Text' # Simple Text
     856911a9-89f9-4865-bdb1-5665460c6c23: 'Contact & Social Media Information' # Contact & Social Media Information
     8341919b-4097-4c45-8f3b-97ff673d9ab5: $CRAFT_SITE_NAME # $CRAFT_SITE_NAME
@@ -574,11 +575,13 @@ meta:
     be827b12-3e63-4d2a-b17a-5c60ab99f248: 'Publication Type' # Publication Type
     c4fb7c86-c508-4410-9362-e47f5b604631: Programme # Programme
     c8c8ccd9-ebdc-48dd-bac8-029cb3d04923: Department # Department
+    c16e920d-e7e5-4510-8dde-4f1b5627b97f: 'Link (Entries, URL)' # Link (Entries, URL)
     c5712456-e12b-4cbc-a8cc-b570cf00d66e: 'Publications Index' # Publications Index
     d269e092-7aa1-4a2a-87c3-32843dda2da4: 'Social: LinkedIn' # Social: LinkedIn
     d4720a93-54ad-45de-a939-b668ed8660dc: 'Share/SEO Image' # Share/SEO Image
     da24c053-b31c-4fa8-b113-217845a4ce83: 'Share/SEO Title' # Share/SEO Title
     dd80a6fe-320a-4fb6-889d-17125d275aac: 'People: Org Member' # People: Org Member
+    ddf843d6-31c0-4b23-8927-b1fb0fec9efb: 'Simple Navigation' # Simple Navigation
     de677f5b-6642-4086-ac1a-3e95990c19d0: 'Blog Post' # Blog Post
     e03f52b8-38a8-493c-b27a-3c61c5532f18: Builder # Builder
     e5d70b3c-403b-416d-b670-a93437ce427b: 'User Managers' # User Managers

@@ -90,6 +90,28 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
+            dateAdded: '2025-04-24T11:03:46+00:00'
+            elementCondition: null
+            fieldUid: ddf843d6-31c0-4b23-8927-b1fb0fec9efb # Simple Navigation
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: 'Additional Content'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 558ad47f-ee8f-4bde-ab50-d9fc6a85ef47
+            userCondition: null
+            warning: null
+            width: 100
+        name: Meta
+        uid: 05c10978-faa4-4142-b247-acfac7532c4b
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
             dateAdded: '2025-04-24T10:55:15+00:00'
             elementCondition: null
             fieldUid: 5b72b712-0218-40c6-9717-0c395a914ad8 # Summary
