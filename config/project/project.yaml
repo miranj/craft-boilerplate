@@ -1,4 +1,4 @@
-dateModified: 1745405513
+dateModified: 1745469285
 elementSources:
   craft\elements\Category:
     -
@@ -160,7 +160,7 @@ elementSources:
         - link
         - 'fieldInstance:7f74e83f-d685-4084-ae9f-8bb9396ca1ff'
         - 'field:15fb4de4-f33b-47b3-aef0-be4a80ad479b' # Department
-        - 'field:4a6b0f8c-21ac-43ae-8df2-afe365e78304' # Job Type
+        - 'field:4a6b0f8c-21ac-43ae-8df2-afe365e78304' # Employment Types
         - postDate
         - 'field:32ed2f1a-9024-4ee9-9028-3a5041c0e5e6' # Date
         - 'fieldInstance:e30e5ed4-2a93-4299-927a-7993d8dc68b3'
@@ -491,11 +491,11 @@ meta:
     1ba3b532-e3ed-43db-93a6-00c05efcc84f: 'Resource Types' # Resource Types
     1be17f42-da77-4201-b98f-1221dedc25e9: 'Social: WhatsApp' # Social: WhatsApp
     2bfee73d-1d4f-480f-9a78-6be8410a6704: 'Social Media' # Social Media
-    4a6b0f8c-21ac-43ae-8df2-afe365e78304: 'Job Type' # Job Type
-    5a1e3562-bcf8-4492-afd5-f8c9cabda572: 'Call to Action' # Call to Action
     2fc7574e-8621-4ac0-87f9-1f3b73cc235b: 'Author Type' # Author Type
     3aba8130-5dea-47d5-ad23-a536e8b9760a: 'Resource: Link' # Resource: Link
     3efc7d18-2f42-40d1-beee-b05867f36104: Programmes # Programmes
+    4a6b0f8c-21ac-43ae-8df2-afe365e78304: 'Employment Types' # Employment Types
+    5a1e3562-bcf8-4492-afd5-f8c9cabda572: 'Call to Action' # Call to Action
     5b72b712-0218-40c6-9717-0c395a914ad8: Summary # Summary
     5d68dab3-70f1-4fbc-833e-e504aa7c926d: 'User Photos' # User Photos
     6ae2a9cc-c9cc-4b89-9c8c-d7a417cbb87e: Topics # Topics
@@ -507,8 +507,8 @@ meta:
     7a8f449f-4cfb-49db-8656-d7551c298f4c: Authors # Authors
     7b8b18a2-8e96-4b93-bfaa-34a1d9fa86e1: Rich # Rich
     7b76ffa4-3aed-45cd-9087-771dca56704e: Departments # Departments
-    7da8d57d-2f04-4b73-a787-e23c441a48f4: 'Job Types' # Job Types
     7bc0d428-9e00-47b5-b928-67896f29ae17: 'Contact: Website' # Contact: Website
+    7da8d57d-2f04-4b73-a787-e23c441a48f4: 'Employment Types' # Employment Types
     7e194f18-cd05-4cd2-bc77-67272aaa31a3: Testimonial # Testimonial
     8a5099a8-7b2e-4052-b798-5e7d19f38b15: 'Event Types' # Event Types
     08b4a047-a20d-4d56-81b0-32b599c4fb41: People # People
@@ -592,6 +592,7 @@ meta:
     be130f04-1c51-420d-818e-6d4f5a5960fa: Resources # Resources
     be827b12-3e63-4d2a-b17a-5c60ab99f248: 'Publication Type' # Publication Type
     c2bd9b72-0968-4b24-aee2-02048ebf7f8c: Opportunity # Opportunity
+    c4c680e9-4168-4267-9e83-2d8e26d5efc8: 'Opportunity Types' # Opportunity Types
     c4fb7c86-c508-4410-9362-e47f5b604631: Programme # Programme
     c8c8ccd9-ebdc-48dd-bac8-029cb3d04923: Department # Department
     c5712456-e12b-4cbc-a8cc-b570cf00d66e: 'Publications Index' # Publications Index
@@ -600,6 +601,7 @@ meta:
     da24c053-b31c-4fa8-b113-217845a4ce83: 'Share/SEO Title' # Share/SEO Title
     dd80a6fe-320a-4fb6-889d-17125d275aac: 'People: Org Member' # People: Org Member
     de677f5b-6642-4086-ac1a-3e95990c19d0: 'Blog Post' # Blog Post
+    df899104-7d07-489b-954f-20ec40505f31: 'Opportunity Types' # Opportunity Types
     e03f52b8-38a8-493c-b27a-3c61c5532f18: Builder # Builder
     e5d70b3c-403b-416d-b670-a93437ce427b: 'User Managers' # User Managers
     e421ceea-a2f2-459f-88b9-2695f86047bd: Images # Images

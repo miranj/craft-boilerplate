@@ -1,7 +1,7 @@
 columnSuffix: null
-handle: jobType
-instructions: 'Eg: _Part Time_ or _Full Time_.'
-name: 'Job Type'
+handle: employmentTypes
+instructions: 'Eg: _Full Time_, _Contractual_.'
+name: 'Employment Types'
 searchable: true
 settings:
   allowSelfRelations: false
@@ -12,7 +12,7 @@ settings:
   selectionLabel: 'Add a type'
   showCardsInGrid: false
   showSiteMenu: true
-  source: 'group:7da8d57d-2f04-4b73-a787-e23c441a48f4' # Job Types
+  source: 'group:7da8d57d-2f04-4b73-a787-e23c441a48f4' # Employment Types
   targetSiteId: null
   validateRelatedElements: false
   viewMode: list
