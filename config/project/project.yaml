@@ -1,4 +1,4 @@
-dateModified: 1745469285
+dateModified: 1745481170
 elementSources:
   craft\elements\Category:
     -
@@ -513,6 +513,7 @@ meta:
     8a5099a8-7b2e-4052-b798-5e7d19f38b15: 'Event Types' # Event Types
     08b4a047-a20d-4d56-81b0-32b599c4fb41: People # People
     08b5b22b-fb98-46ef-8a90-e392edb2244f: 'Rich Text' # Rich Text
+    08d78078-fb0a-4d0a-88b4-d5dc8238886e: Locations # Locations
     8dddc601-5e96-40bb-b036-520072ba4aa7: Images # Images
     8f58365f-4eeb-4347-9d3d-5c0d3ffd3989: 'Toggle (Default: off)' # Toggle (Default: off)
     8f896808-aacf-4f83-9a35-cd7076a6707b: 'News Type' # News Type
@@ -570,6 +571,7 @@ meta:
     a0320c92-dcb7-489b-94e3-bd21fdc647cc: Practices # Practices
     a6b97e16-5236-44b1-ad57-3899644efd40: 'Link (Assets, Entries, URL)' # Link (Assets, Entries, URL)
     a53f5b40-fb8c-4a9d-8c25-dc8e3dfe58d6: Code # Code
+    a60b8050-4e83-40d0-9598-4a9572ce027a: Location # Location
     a71afc7e-315c-4be0-b69b-5c70a7dc85db: Departments # Departments
     a385a4fe-5736-44ee-ab48-d869428d380c: News # News
     a404ee2c-1d0d-4da9-a736-cd565a4d2605: Page # Page

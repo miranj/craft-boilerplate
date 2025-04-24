@@ -176,6 +176,22 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: '2025-04-24T07:52:50+00:00'
+            elementCondition: null
+            fieldUid: a60b8050-4e83-40d0-9598-4a9572ce027a # Location
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5a101ed5-b562-4623-b947-9a04bbdbb64f
+            userCondition: null
+            warning: null
+            width: 100
+          -
             dateAdded: '2025-04-24T04:32:15+00:00'
             elementCondition: null
             fieldUid: a0320c92-dcb7-489b-94e3-bd21fdc647cc # Practices

@@ -20,6 +20,7 @@ permissions:
   - 'createfolders:e421ceea-a2f2-459f-88b9-2695f86047bd' # Images
   - 'deleteassets:89c58a76-1da8-4581-84f1-caf2222de75a' # Documents
   - 'deleteassets:e421ceea-a2f2-459f-88b9-2695f86047bd' # Images
+  - 'deletecategories:08d78078-fb0a-4d0a-88b4-d5dc8238886e' # Locations
   - 'deletecategories:0bc8375c-5e05-4156-a6c9-5678af911123' # News Types
   - 'deletecategories:0ebe4125-0bbc-4efc-a7d1-055eebd82cb5' # Languages
   - 'deletecategories:53c65b45-5d94-4867-95c3-6b235eef1853' # Focus Areas
@@ -46,6 +47,7 @@ permissions:
   - 'deleteentries:febb1068-1cf0-4781-8a41-bf420bb95e2f' # Jobs
   - 'deletepeerassets:89c58a76-1da8-4581-84f1-caf2222de75a' # Documents
   - 'deletepeerassets:e421ceea-a2f2-459f-88b9-2695f86047bd' # Images
+  - 'deletepeercategorydrafts:08d78078-fb0a-4d0a-88b4-d5dc8238886e' # Locations
   - 'deletepeercategorydrafts:0bc8375c-5e05-4156-a6c9-5678af911123' # News Types
   - 'deletepeercategorydrafts:0ebe4125-0bbc-4efc-a7d1-055eebd82cb5' # Languages
   - 'deletepeercategorydrafts:53c65b45-5d94-4867-95c3-6b235eef1853' # Focus Areas
@@ -98,6 +100,7 @@ permissions:
   - 'replacepeerfiles:e421ceea-a2f2-459f-88b9-2695f86047bd' # Images
   - 'saveassets:89c58a76-1da8-4581-84f1-caf2222de75a' # Documents
   - 'saveassets:e421ceea-a2f2-459f-88b9-2695f86047bd' # Images
+  - 'savecategories:08d78078-fb0a-4d0a-88b4-d5dc8238886e' # Locations
   - 'savecategories:0bc8375c-5e05-4156-a6c9-5678af911123' # News Types
   - 'savecategories:0ebe4125-0bbc-4efc-a7d1-055eebd82cb5' # Languages
   - 'savecategories:53c65b45-5d94-4867-95c3-6b235eef1853' # Focus Areas
@@ -130,6 +133,7 @@ permissions:
   - 'saveentries:febb1068-1cf0-4781-8a41-bf420bb95e2f' # Jobs
   - 'savepeerassets:89c58a76-1da8-4581-84f1-caf2222de75a' # Documents
   - 'savepeerassets:e421ceea-a2f2-459f-88b9-2695f86047bd' # Images
+  - 'savepeercategorydrafts:08d78078-fb0a-4d0a-88b4-d5dc8238886e' # Locations
   - 'savepeercategorydrafts:0bc8375c-5e05-4156-a6c9-5678af911123' # News Types
   - 'savepeercategorydrafts:0ebe4125-0bbc-4efc-a7d1-055eebd82cb5' # Languages
   - 'savepeercategorydrafts:53c65b45-5d94-4867-95c3-6b235eef1853' # Focus Areas
@@ -174,6 +178,7 @@ permissions:
   - 'savepeerentrydrafts:febb1068-1cf0-4781-8a41-bf420bb95e2f' # Jobs
   - 'viewassets:89c58a76-1da8-4581-84f1-caf2222de75a' # Documents
   - 'viewassets:e421ceea-a2f2-459f-88b9-2695f86047bd' # Images
+  - 'viewcategories:08d78078-fb0a-4d0a-88b4-d5dc8238886e' # Locations
   - 'viewcategories:0bc8375c-5e05-4156-a6c9-5678af911123' # News Types
   - 'viewcategories:0ebe4125-0bbc-4efc-a7d1-055eebd82cb5' # Languages
   - 'viewcategories:53c65b45-5d94-4867-95c3-6b235eef1853' # Focus Areas
@@ -206,6 +211,7 @@ permissions:
   - 'viewentries:febb1068-1cf0-4781-8a41-bf420bb95e2f' # Jobs
   - 'viewpeerassets:89c58a76-1da8-4581-84f1-caf2222de75a' # Documents
   - 'viewpeerassets:e421ceea-a2f2-459f-88b9-2695f86047bd' # Images
+  - 'viewpeercategorydrafts:08d78078-fb0a-4d0a-88b4-d5dc8238886e' # Locations
   - 'viewpeercategorydrafts:0bc8375c-5e05-4156-a6c9-5678af911123' # News Types
   - 'viewpeercategorydrafts:0ebe4125-0bbc-4efc-a7d1-055eebd82cb5' # Languages
   - 'viewpeercategorydrafts:53c65b45-5d94-4867-95c3-6b235eef1853' # Focus Areas
