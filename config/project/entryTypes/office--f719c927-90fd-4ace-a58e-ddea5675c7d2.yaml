@@ -90,6 +90,28 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
+            dateAdded: '2025-04-25T03:43:22+00:00'
+            elementCondition: null
+            fieldUid: 856911a9-89f9-4865-bdb1-5665460c6c23 # Contact & Social Media Information
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 42d8dd75-70fe-41a7-8d44-22ed9509e7d5
+            userCondition: null
+            warning: null
+            width: 100
+        name: Contact
+        uid: ec5fb6d8-c752-4cb2-a63c-8fbe2917e4bf
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
             dateAdded: '2025-04-24T11:03:46+00:00'
             elementCondition: null
             fieldUid: ddf843d6-31c0-4b23-8927-b1fb0fec9efb # Simple Navigation
