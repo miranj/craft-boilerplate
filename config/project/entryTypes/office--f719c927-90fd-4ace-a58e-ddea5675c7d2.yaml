@@ -83,7 +83,7 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-        name: Content
+        name: Page
         uid: e716ba2a-9a27-4f0b-bfa9-09efb2e79d7d
         userCondition: null
       -
@@ -96,7 +96,7 @@ fieldLayouts:
             handle: null
             includeInCards: false
             instructions: null
-            label: 'Additional Content'
+            label: 'Additional Content Navigation'
             providesThumbs: false
             required: false
             tip: null
