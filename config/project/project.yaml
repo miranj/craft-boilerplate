@@ -1,4 +1,4 @@
-dateModified: 1745492679
+dateModified: 1745552231
 elementSources:
   craft\elements\Category:
     -
@@ -495,6 +495,7 @@ meta:
     8a5099a8-7b2e-4052-b798-5e7d19f38b15: 'Event Types' # Event Types
     08b4a047-a20d-4d56-81b0-32b599c4fb41: People # People
     08b5b22b-fb98-46ef-8a90-e392edb2244f: 'Rich Text' # Rich Text
+    8cced595-e06e-42da-b82b-953c0a00fe58: 'Opening Hours' # Opening Hours
     8dddc601-5e96-40bb-b036-520072ba4aa7: Images # Images
     8f58365f-4eeb-4347-9d3d-5c0d3ffd3989: 'Toggle (Default: off)' # Toggle (Default: off)
     8f896808-aacf-4f83-9a35-cd7076a6707b: 'News Type' # News Type
@@ -652,6 +653,10 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
+  store-hours:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.2
   twig-perversion:
     edition: standard
     enabled: true
