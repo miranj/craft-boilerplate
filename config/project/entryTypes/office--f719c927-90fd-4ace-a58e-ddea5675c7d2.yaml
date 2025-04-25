@@ -105,6 +105,22 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
+          -
+            dateAdded: '2025-04-25T03:38:21+00:00'
+            elementCondition: null
+            fieldUid: 8cced595-e06e-42da-b82b-953c0a00fe58 # Opening Hours
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: caa119fe-d3ae-44d1-96a0-6b0e62222942
+            userCondition: null
+            warning: null
+            width: 100
         name: Meta
         uid: 05c10978-faa4-4142-b247-acfac7532c4b
         userCondition: null
