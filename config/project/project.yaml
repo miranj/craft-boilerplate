@@ -1,4 +1,4 @@
-dateModified: 1745553990
+dateModified: 1745555052
 elementSources:
   craft\elements\Category:
     -
@@ -476,6 +476,7 @@ meta:
     1b75b0c0-3003-4fe3-bc8f-478e12906e75: 'Contact: Email' # Contact: Email
     1ba3b532-e3ed-43db-93a6-00c05efcc84f: 'Resource Types' # Resource Types
     1be17f42-da77-4201-b98f-1221dedc25e9: 'Social: WhatsApp' # Social: WhatsApp
+    2b5c7d16-3a52-4e20-9827-a9099204e49c: 'Content Blocks: Programmes' # Content Blocks: Programmes
     2bfee73d-1d4f-480f-9a78-6be8410a6704: 'Social Media' # Social Media
     2fc7574e-8621-4ac0-87f9-1f3b73cc235b: 'Author Type' # Author Type
     3aba8130-5dea-47d5-ad23-a536e8b9760a: 'Resource: Link' # Resource: Link
@@ -572,6 +573,7 @@ meta:
     b6ab5147-5d5b-42af-9984-8d4c1b01f63a: 'Static Assets' # Static Assets
     b41f3521-c73f-45d7-baac-db7ec5a54bd1: Programmes # Programmes
     b64f08d1-e4db-4745-bf21-6e03e16ed93b: '404 Page Not Found' # 404 Page Not Found
+    b98cf6e6-e5b0-4ec2-9b35-57cfa6114ac1: 'Block: People Teasers' # Block: People Teasers
     b99607d1-2cd8-44ef-add2-731bb39d4397: 'Toggle (Default: on)' # Toggle (Default: on)
     bb0a4a47-dcbd-41a8-9bbb-82341295f5ff: 'Date & Time' # Date & Time
     bc20ba64-4979-418f-aa28-244626f315ab: 'Home Page' # Home Page
@@ -580,6 +582,7 @@ meta:
     c4fb7c86-c508-4410-9362-e47f5b604631: Programme # Programme
     c8c8ccd9-ebdc-48dd-bac8-029cb3d04923: Department # Department
     c598a91f-bc3a-49a0-9053-869bf01f2a6c: Testimonial # Testimonial
+    c14871e2-5d6f-434b-823f-597234dc34ef: 'Block: Programme Structure' # Block: Programme Structure
     c5712456-e12b-4cbc-a8cc-b570cf00d66e: 'Publications Index' # Publications Index
     d269e092-7aa1-4a2a-87c3-32843dda2da4: 'Social: LinkedIn' # Social: LinkedIn
     d4720a93-54ad-45de-a939-b668ed8660dc: 'Share/SEO Image' # Share/SEO Image
