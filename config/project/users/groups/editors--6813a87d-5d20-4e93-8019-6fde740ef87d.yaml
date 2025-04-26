@@ -28,6 +28,7 @@ permissions:
   - 'deletecategories:8a5099a8-7b2e-4052-b798-5e7d19f38b15' # Event Types
   - 'deletecategories:9ff437c1-0323-4492-a95e-007c3a05ab8f' # Practices
   - 'deletecategories:a907570e-41b8-4e87-b566-c2abe353e2a6' # Publication Types
+  - 'deletecategories:d91478a9-22c9-4300-83ef-357a691089d6' # Programme Types
   - 'deleteentries:08b4a047-a20d-4d56-81b0-32b599c4fb41' # People
   - 'deleteentries:3efc7d18-2f42-40d1-beee-b05867f36104' # Programmes
   - 'deleteentries:5280da4e-b8fa-4970-9b39-490dd3a96904' # Publications
@@ -50,6 +51,7 @@ permissions:
   - 'deletepeercategorydrafts:8a5099a8-7b2e-4052-b798-5e7d19f38b15' # Event Types
   - 'deletepeercategorydrafts:9ff437c1-0323-4492-a95e-007c3a05ab8f' # Practices
   - 'deletepeercategorydrafts:a907570e-41b8-4e87-b566-c2abe353e2a6' # Publication Types
+  - 'deletepeercategorydrafts:d91478a9-22c9-4300-83ef-357a691089d6' # Programme Types
   - 'deletepeerentries:08b4a047-a20d-4d56-81b0-32b599c4fb41' # People
   - 'deletepeerentries:3efc7d18-2f42-40d1-beee-b05867f36104' # Programmes
   - 'deletepeerentries:5280da4e-b8fa-4970-9b39-490dd3a96904' # Publications
@@ -97,6 +99,7 @@ permissions:
   - 'savecategories:8a5099a8-7b2e-4052-b798-5e7d19f38b15' # Event Types
   - 'savecategories:9ff437c1-0323-4492-a95e-007c3a05ab8f' # Practices
   - 'savecategories:a907570e-41b8-4e87-b566-c2abe353e2a6' # Publication Types
+  - 'savecategories:d91478a9-22c9-4300-83ef-357a691089d6' # Programme Types
   - 'saveentries:08b4a047-a20d-4d56-81b0-32b599c4fb41' # People
   - 'saveentries:15ad504a-20b4-4e89-b94c-e7be7f135774' # People Index
   - 'saveentries:18803174-20d5-4b61-a067-3072b484f857' # Resources Index
@@ -125,6 +128,7 @@ permissions:
   - 'savepeercategorydrafts:8a5099a8-7b2e-4052-b798-5e7d19f38b15' # Event Types
   - 'savepeercategorydrafts:9ff437c1-0323-4492-a95e-007c3a05ab8f' # Practices
   - 'savepeercategorydrafts:a907570e-41b8-4e87-b566-c2abe353e2a6' # Publication Types
+  - 'savepeercategorydrafts:d91478a9-22c9-4300-83ef-357a691089d6' # Programme Types
   - 'savepeerentries:08b4a047-a20d-4d56-81b0-32b599c4fb41' # People
   - 'savepeerentries:3efc7d18-2f42-40d1-beee-b05867f36104' # Programmes
   - 'savepeerentries:5280da4e-b8fa-4970-9b39-490dd3a96904' # Publications
@@ -164,6 +168,7 @@ permissions:
   - 'viewcategories:8a5099a8-7b2e-4052-b798-5e7d19f38b15' # Event Types
   - 'viewcategories:9ff437c1-0323-4492-a95e-007c3a05ab8f' # Practices
   - 'viewcategories:a907570e-41b8-4e87-b566-c2abe353e2a6' # Publication Types
+  - 'viewcategories:d91478a9-22c9-4300-83ef-357a691089d6' # Programme Types
   - 'viewentries:08b4a047-a20d-4d56-81b0-32b599c4fb41' # People
   - 'viewentries:15ad504a-20b4-4e89-b94c-e7be7f135774' # People Index
   - 'viewentries:18803174-20d5-4b61-a067-3072b484f857' # Resources Index
@@ -192,6 +197,7 @@ permissions:
   - 'viewpeercategorydrafts:8a5099a8-7b2e-4052-b798-5e7d19f38b15' # Event Types
   - 'viewpeercategorydrafts:9ff437c1-0323-4492-a95e-007c3a05ab8f' # Practices
   - 'viewpeercategorydrafts:a907570e-41b8-4e87-b566-c2abe353e2a6' # Publication Types
+  - 'viewpeercategorydrafts:d91478a9-22c9-4300-83ef-357a691089d6' # Programme Types
   - 'viewpeerentries:08b4a047-a20d-4d56-81b0-32b599c4fb41' # People
   - 'viewpeerentries:3efc7d18-2f42-40d1-beee-b05867f36104' # Programmes
   - 'viewpeerentries:5280da4e-b8fa-4970-9b39-490dd3a96904' # Publications

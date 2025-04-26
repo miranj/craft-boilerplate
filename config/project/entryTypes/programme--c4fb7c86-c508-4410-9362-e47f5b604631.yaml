@@ -112,6 +112,28 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
+            dateAdded: '2025-04-26T03:11:20+00:00'
+            elementCondition: null
+            fieldUid: 14a95c46-17f2-4890-ad37-a80e9ea6ab3c # Programme Type
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 0f3ce6cd-85fa-4084-ada7-0ff788ab3f02
+            userCondition: null
+            warning: null
+            width: 100
+        name: Meta
+        uid: d9e1e495-6c19-4afd-bad3-636a6e53326c
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
             dateAdded: '2025-04-25T04:06:30+00:00'
             elementCondition: null
             fieldUid: 5b72b712-0218-40c6-9717-0c395a914ad8 # Summary

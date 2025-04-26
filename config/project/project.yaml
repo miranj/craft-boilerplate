@@ -1,4 +1,4 @@
-dateModified: 1745636696
+dateModified: 1745637152
 elementSources:
   craft\elements\Category:
     -
@@ -510,6 +510,7 @@ meta:
     9ff437c1-0323-4492-a95e-007c3a05ab8f: Practices # Practices
     12bc836f-fce2-4315-8a94-22967b0923c8: Testimonials # Testimonials
     12c6ecb1-eb21-40a2-aca1-217b86047c44: Event # Event
+    14a95c46-17f2-4890-ad37-a80e9ea6ab3c: 'Programme Type' # Programme Type
     14f7242a-668c-4d66-a588-17cde4b7e598: 'Social Media' # Social Media
     15a8b3cd-e87e-4daa-aad0-a9f78eabfca7: 'Block: Faculty Programmes' # Block: Faculty Programmes
     15ad504a-20b4-4e89-b94c-e7be7f135774: 'People Index' # People Index
@@ -589,6 +590,7 @@ meta:
     c5712456-e12b-4cbc-a8cc-b570cf00d66e: 'Publications Index' # Publications Index
     d269e092-7aa1-4a2a-87c3-32843dda2da4: 'Social: LinkedIn' # Social: LinkedIn
     d4720a93-54ad-45de-a939-b668ed8660dc: 'Share/SEO Image' # Share/SEO Image
+    d91478a9-22c9-4300-83ef-357a691089d6: 'Programme Types' # Programme Types
     da24c053-b31c-4fa8-b113-217845a4ce83: 'Share/SEO Title' # Share/SEO Title
     dd80a6fe-320a-4fb6-889d-17125d275aac: 'People: Org Member' # People: Org Member
     de677f5b-6642-4086-ac1a-3e95990c19d0: 'Blog Post' # Blog Post
