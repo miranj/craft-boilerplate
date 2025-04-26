@@ -25,6 +25,14 @@ settings:
         -
           - uid
           - 0dcf57f2-a803-4b2e-8235-bc0870989f38 # Media Embed
+    -
+      __assoc__:
+        -
+          - uid
+          - 21177498-20b3-426a-bf81-df7eeec48389 # Block: Button
+        -
+          - name
+          - Buttons
   purifierConfig: null
   purifyHtml: true
   showUnpermittedFiles: false

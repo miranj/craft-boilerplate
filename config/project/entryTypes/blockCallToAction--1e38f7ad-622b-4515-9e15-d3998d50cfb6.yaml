@@ -1,4 +1,4 @@
-color: null
+color: blue
 fieldLayouts:
   5ec4ef67-0987-4321-865a-9c79431b8f96:
     cardView:
@@ -58,7 +58,7 @@ fieldLayouts:
             dateAdded: '2025-04-26T02:34:44+00:00'
             elementCondition: null
             fieldUid: a6b97e16-5236-44b1-ad57-3899644efd40 # Link (Assets, Entries, URL)
-            handle: null
+            handle: hyperlink
             includeInCards: true
             instructions: null
             label: Link
