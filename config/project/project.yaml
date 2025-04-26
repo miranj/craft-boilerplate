@@ -1,4 +1,4 @@
-dateModified: 1745636259
+dateModified: 1745636696
 elementSources:
   craft\elements\Category:
     -
@@ -601,6 +601,7 @@ meta:
     ece488e2-352e-44a2-8a74-1baf13a4f946: 'Social: Instagram' # Social: Instagram
     ed5b1453-5dc4-4e73-8865-dad39383c4cb: 'URL (Entries, URL)' # URL (Entries, URL)
     f719c927-90fd-4ace-a58e-ddea5675c7d2: Office # Office
+    fa35f4cd-b237-4493-8c4e-4e25855164ff: 'Block: Rich Text Collapse' # Block: Rich Text Collapse
     fad3fe56-0b6b-46c4-a97b-b7fb98847f3c: 'Media Embed' # Media Embed
     fd23984e-764a-4004-9834-8efe25601ba5: Simple # Simple
 plugins:

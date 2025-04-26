@@ -33,6 +33,14 @@ settings:
         -
           - name
           - Buttons
+    -
+      __assoc__:
+        -
+          - uid
+          - fa35f4cd-b237-4493-8c4e-4e25855164ff # Block: Rich Text Collapse
+        -
+          - name
+          - Collapse
   purifierConfig: null
   purifyHtml: true
   showUnpermittedFiles: false
