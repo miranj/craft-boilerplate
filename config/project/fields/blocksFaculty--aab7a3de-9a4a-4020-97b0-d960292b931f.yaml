@@ -1,5 +1,5 @@
 columnSuffix: null
-handle: contentBlocksFaculty
+handle: blocksFaculty
 instructions: '_Faculty Programmes_ will automatically shown as the first block. To change the order, add a _Faculty Programmes_ block below and move it around.'
 name: 'Content Blocks: Faculty'
 searchable: true
