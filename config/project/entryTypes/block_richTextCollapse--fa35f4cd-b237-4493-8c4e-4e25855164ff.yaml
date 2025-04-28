@@ -1,6 +1,8 @@
 color: null
 fieldLayouts:
   5f174b84-e4e4-4e8f-94f7-d6385f539b65:
+    cardView:
+      - 'layoutElement:4bf65ff0-a2e6-4afc-b43e-34663c353503'
     tabs:
       -
         elementCondition: null
