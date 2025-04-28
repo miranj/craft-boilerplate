@@ -1,0 +1,122 @@
+color: null
+fieldLayouts:
+  a505b95b-13f9-4b66-a8ec-1e687621fc77:
+    cardView:
+      - 'layoutElement:dd4faceb-8cf4-4baf-805f-e3288ccecd1c'
+      - 'layoutElement:28d6f35e-db83-4ff4-af7c-79c89bb9f4a4'
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: '2025-04-23T03:24:57+00:00'
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            required: true
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 016d0178-c98d-4536-828f-c004f1dfed82
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-04-23T03:33:02+00:00'
+            elementCondition: null
+            fieldUid: 8f58365f-4eeb-4347-9d3d-5c0d3ffd3989 # Toggle (Default: off)
+            handle: null
+            includeInCards: false
+            instructions: 'Useful for highlighting testimonials from an organization''s leadership.'
+            label: 'Is Featured?'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: df7f8478-3d85-4052-8d9e-d0ff9a41c9d0
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-04-23T03:33:02+00:00'
+            elementCondition:
+              class: craft\elements\conditions\entries\EntryCondition
+              conditionRules:
+                -
+                  class: craft\fields\conditions\LightswitchFieldConditionRule
+                  fieldUid: 8f58365f-4eeb-4347-9d3d-5c0d3ffd3989 # Toggle (Default: off)
+                  layoutElementUid: df7f8478-3d85-4052-8d9e-d0ff9a41c9d0
+                  uid: a4f2c549-5c18-44c7-bd26-032fdf46041a
+                  value: true
+              elementType: craft\elements\Entry
+              fieldContext: global
+            fieldUid: c598a91f-bc3a-49a0-9053-869bf01f2a6c # Testimonial
+            handle: null
+            includeInCards: true
+            instructions: null
+            label: 'Featured Testimonial'
+            providesThumbs: false
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: dd4faceb-8cf4-4baf-805f-e3288ccecd1c
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-04-23T03:33:02+00:00'
+            elementCondition:
+              class: craft\elements\conditions\entries\EntryCondition
+              conditionRules:
+                -
+                  class: craft\fields\conditions\LightswitchFieldConditionRule
+                  fieldUid: 8f58365f-4eeb-4347-9d3d-5c0d3ffd3989 # Toggle (Default: off)
+                  layoutElementUid: df7f8478-3d85-4052-8d9e-d0ff9a41c9d0
+                  uid: d85d29e3-e5a5-4209-be92-748c5210c42b
+                  value: false
+              elementType: craft\elements\Entry
+              fieldContext: global
+            fieldUid: 12bc836f-fce2-4315-8a94-22967b0923c8 # Testimonials
+            handle: null
+            includeInCards: true
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 28d6f35e-db83-4ff4-af7c-79c89bb9f4a4
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 428a9c4b-53fc-4d3d-b3fc-a9a48d375898
+        userCondition: null
+handle: blockTestimonials
+hasTitleField: true
+icon: comments
+name: 'Block: Testimonials'
+showSlugField: false
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
