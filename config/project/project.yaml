@@ -1,4 +1,4 @@
-dateModified: 1745847461
+dateModified: 1745847753
 elementSources:
   craft\elements\Category:
     -
@@ -136,6 +136,9 @@ elementSources:
     -
       heading: Channels
       type: heading
+    -
+      key: 'section:77809eb2-6a5b-4988-a869-c707a21e0aa7' # Academic Levels
+      type: native
     -
       defaultSort:
         - postDate
