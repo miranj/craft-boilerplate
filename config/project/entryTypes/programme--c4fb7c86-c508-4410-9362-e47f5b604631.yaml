@@ -95,7 +95,7 @@ fieldLayouts:
             dateAdded: '2025-04-25T04:14:40+00:00'
             elementCondition: null
             fieldUid: 2b5c7d16-3a52-4e20-9827-a9099204e49c # Content Blocks: Programmes
-            handle: null
+            handle: contentBlocks
             includeInCards: false
             instructions: null
             label: 'Content Blocks'
