@@ -34,7 +34,23 @@ fieldLayouts:
             uid: 5fd79acf-3e13-4108-b3e4-d5a0c7a36a30
             userCondition: null
             warning: null
-            width: 100
+            width: 75
+          -
+            dateAdded: '2025-04-28T03:36:46+00:00'
+            elementCondition: null
+            fieldUid: 840acb32-6694-40d0-9384-60a0220c1de0 # Label
+            handle: acronym
+            includeInCards: false
+            instructions: null
+            label: Acronym
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b4f1a3b0-ea88-420c-b9c4-0c9391aa633b
+            userCondition: null
+            warning: null
+            width: 25
           -
             dateAdded: '2025-04-25T04:06:30+00:00'
             elementCondition: null
