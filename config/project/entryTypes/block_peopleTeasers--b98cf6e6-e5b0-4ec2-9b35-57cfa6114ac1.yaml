@@ -9,6 +9,15 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
+            dateAdded: '2025-04-28T13:09:48+00:00'
+            elementCondition: null
+            template: _cp/instructions/blockHeading.twig
+            templateMode: site
+            type: craft\fieldlayoutelements\Template
+            uid: effa61d9-40f8-4814-886b-f2d83f211130
+            userCondition: null
+            width: 100
+          -
             autocapitalize: true
             autocomplete: false
             autocorrect: true

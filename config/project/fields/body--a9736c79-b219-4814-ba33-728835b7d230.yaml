@@ -32,7 +32,7 @@ settings:
           - 21177498-20b3-426a-bf81-df7eeec48389 # Block: Button
         -
           - name
-          - Buttons
+          - Button
     -
       __assoc__:
         -
