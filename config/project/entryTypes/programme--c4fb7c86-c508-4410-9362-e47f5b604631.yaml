@@ -116,7 +116,7 @@ fieldLayouts:
           -
             dateAdded: '2025-04-26T03:11:20+00:00'
             elementCondition: null
-            fieldUid: 14a95c46-17f2-4890-ad37-a80e9ea6ab3c # Programme Type
+            fieldUid: 14a95c46-17f2-4890-ad37-a80e9ea6ab3c # Academic Level
             handle: null
             includeInCards: false
             instructions: null

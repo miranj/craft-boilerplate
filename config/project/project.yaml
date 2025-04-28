@@ -1,4 +1,4 @@
-dateModified: 1745846437
+dateModified: 1745846780
 elementSources:
   craft\elements\Category:
     -
@@ -508,10 +508,11 @@ meta:
     9cbdb5d5-1a67-4b57-820f-7226cef3d0c8: 'External Person Roles' # External Person Roles
     9ce8d4e8-4f27-44a1-8f1c-60187033a3e3: 'Focus Areas' # Focus Areas
     09d5d648-f5ec-41b7-b39e-4d3c1585936a: 'Block: Testimonials' # Block: Testimonials
+    9f12d494-ef8f-4777-8ff0-bebc044b1264: 'Academic Level' # Academic Level
     9ff437c1-0323-4492-a95e-007c3a05ab8f: Practices # Practices
     12bc836f-fce2-4315-8a94-22967b0923c8: Testimonials # Testimonials
     12c6ecb1-eb21-40a2-aca1-217b86047c44: Event # Event
-    14a95c46-17f2-4890-ad37-a80e9ea6ab3c: 'Programme Type' # Programme Type
+    14a95c46-17f2-4890-ad37-a80e9ea6ab3c: 'Academic Level' # Academic Level
     14f7242a-668c-4d66-a588-17cde4b7e598: 'Social Media' # Social Media
     15a8b3cd-e87e-4daa-aad0-a9f78eabfca7: 'Block: Faculty Programmes' # Block: Faculty Programmes
     15ad504a-20b4-4e89-b94c-e7be7f135774: 'People Index' # People Index
@@ -551,6 +552,7 @@ meta:
     23995e04-c457-4eeb-b78d-1c22f16cf4f6: 'URL (Email)' # URL (Email)
     61317d04-b4b5-4b2f-ad77-e1d87029c361: 'Legacy URL' # Legacy URL
     69339afc-d4f1-440b-a7ad-7da2ccb77972: Image # Image
+    77809eb2-6a5b-4988-a869-c707a21e0aa7: 'Academic Levels' # Academic Levels
     386721be-1ee4-4e3b-b22c-7fb3dfded3ff: 'Simple Text' # Simple Text
     856911a9-89f9-4865-bdb1-5665460c6c23: 'Contact & Social Media Information' # Contact & Social Media Information
     8341919b-4097-4c45-8f3b-97ff673d9ab5: $CRAFT_SITE_NAME # $CRAFT_SITE_NAME
@@ -591,7 +593,6 @@ meta:
     c5712456-e12b-4cbc-a8cc-b570cf00d66e: 'Publications Index' # Publications Index
     d269e092-7aa1-4a2a-87c3-32843dda2da4: 'Social: LinkedIn' # Social: LinkedIn
     d4720a93-54ad-45de-a939-b668ed8660dc: 'Share/SEO Image' # Share/SEO Image
-    d91478a9-22c9-4300-83ef-357a691089d6: 'Programme Types' # Programme Types
     da24c053-b31c-4fa8-b113-217845a4ce83: 'Share/SEO Title' # Share/SEO Title
     dd80a6fe-320a-4fb6-889d-17125d275aac: 'People: Org Member' # People: Org Member
     de677f5b-6642-4086-ac1a-3e95990c19d0: 'Blog Post' # Blog Post
