@@ -6,35 +6,21 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
-            autocapitalize: true
-            autocomplete: false
-            autocorrect: true
-            class: null
-            dateAdded: '2025-04-08T10:40:37+00:00'
-            disabled: false
+            dateAdded: '2025-04-28T13:18:20+00:00'
             elementCondition: null
-            id: null
+            fieldUid: 840acb32-6694-40d0-9384-60a0220c1de0 # Label
+            handle: programmeName
             includeInCards: false
-            inputType: null
             instructions: null
-            label: null
-            max: null
-            min: null
-            name: null
-            orientation: null
-            placeholder: null
+            label: Name
             providesThumbs: false
-            readonly: false
             required: true
-            size: null
-            step: null
             tip: null
-            title: null
-            type: craft\fieldlayoutelements\entries\EntryTitleField
-            uid: 5fd79acf-3e13-4108-b3e4-d5a0c7a36a30
+            type: craft\fieldlayoutelements\CustomField
+            uid: f2b31865-9814-4a11-9008-f4ebe510bf7e
             userCondition: null
             warning: null
-            width: 75
+            width: 100
           -
             dateAdded: '2025-04-28T03:36:46+00:00'
             elementCondition: null
@@ -44,13 +30,13 @@ fieldLayouts:
             instructions: null
             label: Acronym
             providesThumbs: false
-            required: false
+            required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: b4f1a3b0-ea88-420c-b9c4-0c9391aa633b
             userCondition: null
             warning: null
-            width: 25
+            width: 50
           -
             dateAdded: '2025-04-25T04:06:30+00:00'
             elementCondition: null
@@ -254,13 +240,13 @@ fieldLayouts:
         uid: 2e59c2ce-12bb-4802-bca1-5d0ecca9a144
         userCondition: null
 handle: programme
-hasTitleField: true
+hasTitleField: false
 icon: graduation-cap
 name: Programme
 showSlugField: true
 showStatusField: true
 slugTranslationKeyFormat: null
 slugTranslationMethod: site
-titleFormat: null
+titleFormat: '{acronym ? acronym ~ '':''} {programmeName}'
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
