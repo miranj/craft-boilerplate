@@ -28,7 +28,7 @@ fieldLayouts:
         userCondition: null
 handle: block_button
 hasTitleField: false
-icon: circle-arrow-right
+icon: link
 name: 'Block: Button'
 showSlugField: false
 showStatusField: true

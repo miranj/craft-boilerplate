@@ -75,7 +75,7 @@ fieldLayouts:
         userCondition: null
 handle: block_callToAction
 hasTitleField: true
-icon: circle-arrow-right
+icon: link
 name: 'Block: Call To Action'
 showSlugField: false
 showStatusField: true

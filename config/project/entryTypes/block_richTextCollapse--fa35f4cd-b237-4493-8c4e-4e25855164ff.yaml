@@ -40,7 +40,7 @@ fieldLayouts:
             elementCondition: null
             fieldUid: f6fd4187-da05-45cb-adfd-7367ca82dc1f # Body (Nested)
             handle: body
-            includeInCards: false
+            includeInCards: true
             instructions: null
             label: Description
             providesThumbs: false
@@ -56,7 +56,7 @@ fieldLayouts:
         userCondition: null
 handle: block_richTextCollapse
 hasTitleField: true
-icon: caret-right
+icon: caret-down
 name: 'Block: Rich Text Collapse'
 showSlugField: false
 showStatusField: true
