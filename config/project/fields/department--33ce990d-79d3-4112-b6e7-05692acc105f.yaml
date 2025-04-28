@@ -1,0 +1,22 @@
+columnSuffix: null
+handle: department
+instructions: null
+name: Department
+searchable: true
+settings:
+  allowSelfRelations: false
+  branchLimit: null
+  maintainHierarchy: false
+  maxRelations: 1
+  minRelations: null
+  selectionLabel: 'Add a department'
+  showCardsInGrid: false
+  showSiteMenu: false
+  sources:
+    - 'section:a71afc7e-315c-4be0-b69b-5c70a7dc85db' # Departments
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: list
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Entries

@@ -1,4 +1,4 @@
-dateModified: 1745847827
+dateModified: 1745848452
 elementSources:
   craft\elements\Category:
     -
@@ -522,6 +522,7 @@ meta:
     16ca56d3-1df0-41ad-9bf1-f0b273739be2: Offices # Offices
     022e09d7-14f6-471f-8dc0-06e6245b1c77: 'Social: X' # Social: X
     32ed2f1a-9024-4ee9-9028-3a5041c0e5e6: Date # Date
+    33ce990d-79d3-4112-b6e7-05692acc105f: Department # Department
     46be6b8a-5b32-42d7-803e-7e7458d3b3dd: BlueSky # BlueSky
     53c65b45-5d94-4867-95c3-6b235eef1853: 'Focus Areas' # Focus Areas
     54bdab3f-b980-46c0-a830-de704b143895: Offices # Offices

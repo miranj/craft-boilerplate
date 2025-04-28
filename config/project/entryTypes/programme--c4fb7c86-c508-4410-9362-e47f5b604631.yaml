@@ -167,6 +167,22 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
+          -
+            dateAdded: '2025-04-28T13:54:12+00:00'
+            elementCondition: null
+            fieldUid: 33ce990d-79d3-4112-b6e7-05692acc105f # Department
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: cc5c9ca4-1d54-4579-865d-e83c4e695e26
+            userCondition: null
+            warning: null
+            width: 100
         name: Meta
         uid: d9e1e495-6c19-4afd-bad3-636a6e53326c
         userCondition: null
