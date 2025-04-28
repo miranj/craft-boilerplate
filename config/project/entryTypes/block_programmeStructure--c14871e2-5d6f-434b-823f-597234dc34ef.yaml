@@ -1,26 +1,26 @@
 color: orange
 fieldLayouts:
-  4d5b743b-fda2-435a-9033-27e958fe190b:
+  1da4fe64-453f-4593-8de7-cb2b9df82de5:
     tabs:
       -
         elementCondition: null
         elements:
           -
-            content: 'List of Faculty Programmes will be inserted here.'
-            dateAdded: '2025-04-24T02:47:54+00:00'
+            content: 'Programme structure will be inserted here.'
+            dateAdded: '2025-04-25T04:19:42+00:00'
             displayInPane: false
             elementCondition: null
             type: craft\fieldlayoutelements\Markdown
-            uid: 5962d7a3-53b8-4813-8fdc-95d9e9472c86
+            uid: e17f6413-35da-4444-8225-0319b5d4ba48
             userCondition: null
             width: 100
         name: Content
-        uid: 0201e9e9-067d-4069-9932-2a580008a352
+        uid: 0581016a-1dd0-4148-9c53-51c2f4de1715
         userCondition: null
-handle: blockFacultyProgrammes
+handle: block_programmeStructure
 hasTitleField: false
 icon: scroll
-name: 'Block: Faculty Programmes'
+name: 'Block: Programme Structure'
 showSlugField: false
 showStatusField: true
 slugTranslationKeyFormat: null

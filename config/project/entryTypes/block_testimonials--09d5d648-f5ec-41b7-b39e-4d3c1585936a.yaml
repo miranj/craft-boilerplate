@@ -109,7 +109,7 @@ fieldLayouts:
         name: Content
         uid: 428a9c4b-53fc-4d3d-b3fc-a9a48d375898
         userCondition: null
-handle: blockTestimonials
+handle: block_testimonials
 hasTitleField: true
 icon: comments
 name: 'Block: Testimonials'

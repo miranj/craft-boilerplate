@@ -1,5 +1,5 @@
 columnSuffix: null
-handle: contentBlocksProgrammes
+handle: blocksProgrammes
 instructions: '_Programmes Structure_ will automatically shown as the first block. To change the order, add a _Programmes Structure_ block below and move it around.'
 name: 'Content Blocks: Programmes'
 searchable: true
