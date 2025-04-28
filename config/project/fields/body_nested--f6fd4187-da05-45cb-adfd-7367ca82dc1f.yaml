@@ -1,0 +1,46 @@
+columnSuffix: null
+handle: body_nested
+instructions: null
+name: 'Body (Nested)'
+searchable: true
+settings:
+  availableTransforms: ''
+  availableVolumes: '*'
+  ckeConfig: 2aa60aa0-5295-4a25-9725-a63672cd8b2f # Builder (Nested)
+  createButtonLabel: 'Insert block'
+  defaultTransform: null
+  entryTypes:
+    -
+      __assoc__:
+        -
+          - uid
+          - 6caf0d7f-9b74-4ae4-b0dd-458633bd94d1 # Image
+    -
+      __assoc__:
+        -
+          - uid
+          - 64ee8bca-fd54-4c78-853c-aaf37e0bb8c0 # Gallery
+    -
+      __assoc__:
+        -
+          - uid
+          - 0dcf57f2-a803-4b2e-8235-bc0870989f38 # Media Embed
+    -
+      __assoc__:
+        -
+          - uid
+          - 21177498-20b3-426a-bf81-df7eeec48389 # Block: Button
+        -
+          - name
+          - Button
+  purifierConfig: null
+  purifyHtml: true
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+  showWordCount: false
+  sourceEditingGroups:
+    - __ADMINS__
+  wordLimit: null
+translationKeyFormat: null
+translationMethod: none
+type: craft\ckeditor\Field

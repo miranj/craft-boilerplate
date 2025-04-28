@@ -1,8 +1,6 @@
 color: null
 fieldLayouts:
   5f174b84-e4e4-4e8f-94f7-d6385f539b65:
-    cardView:
-      - 'layoutElement:70751f73-3d6c-4787-848a-7b85536e3eac'
     tabs:
       -
         elementCondition: null
@@ -19,7 +17,7 @@ fieldLayouts:
             includeInCards: false
             inputType: null
             instructions: null
-            label: 'Toggle title'
+            label: null
             max: null
             min: null
             name: null
@@ -38,18 +36,18 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            dateAdded: '2025-04-26T03:01:26+00:00'
+            dateAdded: '2025-04-28T11:02:05+00:00'
             elementCondition: null
-            fieldUid: 08b5b22b-fb98-46ef-8a90-e392edb2244f # Rich Text
-            handle: toggleContent
-            includeInCards: true
+            fieldUid: f6fd4187-da05-45cb-adfd-7367ca82dc1f # Body (Nested)
+            handle: body
+            includeInCards: false
             instructions: null
-            label: 'Toggle Content'
+            label: Description
             providesThumbs: false
-            required: true
+            required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 70751f73-3d6c-4787-848a-7b85536e3eac
+            uid: 4bf65ff0-a2e6-4afc-b43e-34663c353503
             userCondition: null
             warning: null
             width: 100
