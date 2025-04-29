@@ -11,6 +11,14 @@ settings:
       __assoc__:
         -
           - uid
+          - 0e86ba5b-2f53-4013-b0b1-c6d995bf4a2e # Block: Credits
+        -
+          - name
+          - Credits
+    -
+      __assoc__:
+        -
+          - uid
           - 2ef9601d-d6cc-4fd6-a086-8c17239031ca # Block: Related Content
         -
           - name

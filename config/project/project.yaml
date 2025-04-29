@@ -1,4 +1,4 @@
-dateModified: 1745921252
+dateModified: 1745921620
 elementSources:
   craft\elements\Category:
     -
@@ -503,6 +503,7 @@ meta:
   __names__:
     0bc8375c-5e05-4156-a6c9-5678af911123: 'News Types' # News Types
     0dcf57f2-a803-4b2e-8235-bc0870989f38: 'Media Embed' # Media Embed
+    0e86ba5b-2f53-4013-b0b1-c6d995bf4a2e: 'Block: Credits' # Block: Credits
     0ebe4125-0bbc-4efc-a7d1-055eebd82cb5: Languages # Languages
     1a28c01c-3fa0-4a60-8c73-d7c7707be626: Document # Document
     1aa8a857-2e3d-4a1c-a09c-9c180aa2fc53: Projects # Projects
