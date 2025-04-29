@@ -96,6 +96,22 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
+            dateAdded: '2025-04-29T10:32:58+00:00'
+            elementCondition: null
+            fieldUid: 840acb32-6694-40d0-9384-60a0220c1de0 # Label
+            handle: yearStr
+            includeInCards: false
+            instructions: null
+            label: 'Year Published'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 34aa89a8-32c1-403a-bae4-9df8bf011d91
+            userCondition: null
+            warning: null
+            width: 100
+          -
             dateAdded: '2025-04-29T10:05:21+00:00'
             elementCondition: null
             fieldUid: f9f26c9a-936a-4901-90ca-e8c5c2997475 # Credits
@@ -108,6 +124,102 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: fc26ce4c-37b7-40db-97ad-368c9136952e
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-04-29T10:26:31+00:00'
+            elementCondition: null
+            fieldUid: 86d5863c-5339-40bb-9add-f4872cdfdce5 # Departments
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e75794da-478f-461d-b839-b0c7aab15ed2
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-04-29T10:32:58+00:00'
+            elementCondition: null
+            fieldUid: 16ca56d3-1df0-41ad-9bf1-f0b273739be2 # Offices
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5bbb77e2-bb7f-45c3-ad81-9da2f229ca46
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-04-29T10:32:58+00:00'
+            elementCondition: null
+            fieldUid: a0320c92-dcb7-489b-94e3-bd21fdc647cc # Practices
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d403b794-9764-4c0e-870b-b38cfac361eb
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-04-29T10:26:31+00:00'
+            elementCondition: null
+            fieldUid: b41f3521-c73f-45d7-baac-db7ec5a54bd1 # Programmes
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 66b6e209-4352-41ca-85a5-030cd0a45423
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-04-29T10:29:51+00:00'
+            elementCondition: null
+            fieldUid: 3e4da781-e103-48f1-a607-5396f2be279e # Project Types
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: f0ffe5a4-682f-4ef6-b7b3-96906d195e1d
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-04-29T10:32:58+00:00'
+            elementCondition: null
+            fieldUid: 69dcd3aa-18b8-48bf-a7d3-deb9c6912349 # Topics
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d3c60567-17bd-4406-9726-1eac3d7510fb
             userCondition: null
             warning: null
             width: 100
