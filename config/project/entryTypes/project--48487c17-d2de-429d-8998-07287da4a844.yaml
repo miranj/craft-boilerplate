@@ -74,6 +74,28 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
+            dateAdded: '2025-04-29T07:54:26+00:00'
+            elementCondition: null
+            fieldUid: 358a570b-6122-4744-9b73-575c44b2f9df # Content Blocks: Projects
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: 'Content Blocks'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 67b36041-bb74-498a-b561-1ee85dd6af46
+            userCondition: null
+            warning: null
+            width: 100
+        name: Blocks
+        uid: 66eb5b22-c531-45d6-b05e-2e7ca5077e6f
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
             dateAdded: '2025-04-29T07:23:07+00:00'
             elementCondition: null
             fieldUid: 5b72b712-0218-40c6-9717-0c395a914ad8 # Summary

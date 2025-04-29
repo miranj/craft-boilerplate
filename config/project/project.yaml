@@ -1,4 +1,4 @@
-dateModified: 1745911560
+dateModified: 1745920635
 elementSources:
   craft\elements\Category:
     -
@@ -514,6 +514,7 @@ meta:
     2aa60aa0-5295-4a25-9725-a63672cd8b2f: 'Builder (Nested)' # Builder (Nested)
     2b5c7d16-3a52-4e20-9827-a9099204e49c: 'Content Blocks: Programmes' # Content Blocks: Programmes
     2bfee73d-1d4f-480f-9a78-6be8410a6704: 'Social Media' # Social Media
+    2ef9601d-d6cc-4fd6-a086-8c17239031ca: 'Block: Related Content' # Block: Related Content
     2fc7574e-8621-4ac0-87f9-1f3b73cc235b: 'Author Type' # Author Type
     3aba8130-5dea-47d5-ad23-a536e8b9760a: 'Resource: Link' # Resource: Link
     3efc7d18-2f42-40d1-beee-b05867f36104: Programmes # Programmes
@@ -575,6 +576,7 @@ meta:
     295e5325-afca-4a03-93e9-ed957c574148: Footer # Footer
     317eb1dc-2ab0-4290-a1d3-573e6ead4388: 'News Index' # News Index
     349b5e6f-3a2a-43f1-a9dd-2373bf4a0a67: 'Share/SEO Description' # Share/SEO Description
+    358a570b-6122-4744-9b73-575c44b2f9df: 'Content Blocks: Projects' # Content Blocks: Projects
     653ea464-6b43-4bc9-8138-79615323d877: Blog # Blog
     840acb32-6694-40d0-9384-60a0220c1de0: Label # Label
     960e6704-e653-4bd7-915f-e776db06eed3: 'Social: Mastodon' # Social: Mastodon
@@ -598,6 +600,7 @@ meta:
     21177498-20b3-426a-bf81-df7eeec48389: 'Block: Button' # Block: Button
     25388890-1b39-49c8-8d89-7ef2d82f89a1: Newsletter # Newsletter
     a0320c92-dcb7-489b-94e3-bd21fdc647cc: Practices # Practices
+    a5b6a8d1-7e0b-4093-841d-7fe8366f026f: Entries # Entries
     a6b97e16-5236-44b1-ad57-3899644efd40: 'Link (Assets, Entries, URL)' # Link (Assets, Entries, URL)
     a53f5b40-fb8c-4a9d-8c25-dc8e3dfe58d6: Code # Code
     a71afc7e-315c-4be0-b69b-5c70a7dc85db: Departments # Departments

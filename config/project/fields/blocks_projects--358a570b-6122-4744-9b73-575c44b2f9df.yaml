@@ -1,0 +1,28 @@
+columnSuffix: null
+handle: blocks_projects
+instructions: null
+name: 'Content Blocks: Projects'
+searchable: true
+settings:
+  createButtonLabel: 'Insert block'
+  defaultIndexViewMode: cards
+  entryTypes:
+    -
+      __assoc__:
+        -
+          - uid
+          - 2ef9601d-d6cc-4fd6-a086-8c17239031ca # Block: Related Content
+        -
+          - name
+          - 'Related Content'
+  includeTableView: false
+  maxEntries: null
+  minEntries: null
+  pageSize: 50
+  propagationKeyFormat: null
+  propagationMethod: all
+  showCardsInGrid: false
+  viewMode: cards
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix
