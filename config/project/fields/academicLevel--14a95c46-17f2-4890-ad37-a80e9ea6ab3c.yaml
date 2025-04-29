@@ -1,7 +1,7 @@
 columnSuffix: null
-handle: programmeType
+handle: academicLevel
 instructions: 'Eg.: _Undergraduate_, _Postgraduate_.'
-name: 'Programme Type'
+name: 'Academic Level'
 searchable: true
 settings:
   allowSelfRelations: false
@@ -9,13 +9,14 @@ settings:
   maintainHierarchy: false
   maxRelations: 1
   minRelations: null
-  selectionLabel: 'Add a type'
+  selectionLabel: 'Add a level'
   showCardsInGrid: false
   showSiteMenu: true
-  source: 'group:6d709589-8e2f-4fef-9c6f-48f5644fb922' # Disciplines
+  sources:
+    - 'section:77809eb2-6a5b-4988-a869-c707a21e0aa7' # Academic Levels
   targetSiteId: null
   validateRelatedElements: false
   viewMode: list
 translationKeyFormat: null
 translationMethod: none
-type: craft\fields\Categories
+type: craft\fields\Entries

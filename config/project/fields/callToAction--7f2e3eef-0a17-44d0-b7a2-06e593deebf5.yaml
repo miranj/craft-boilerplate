@@ -1,7 +1,7 @@
 columnSuffix: null
-handle: callToActionBlock
+handle: callToAction
 instructions: null
-name: 'Call To Action Block'
+name: 'Call To Action'
 searchable: true
 settings:
   createButtonLabel: 'Add link'
@@ -12,6 +12,9 @@ settings:
         -
           - uid
           - 1e38f7ad-622b-4515-9e15-d3998d50cfb6 # Block: Call To Action
+        -
+          - name
+          - 'Call To Action'
   includeTableView: false
   maxEntries: 1
   minEntries: null

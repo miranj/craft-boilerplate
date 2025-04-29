@@ -6,6 +6,15 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
+            dateAdded: '2025-04-28T13:10:07+00:00'
+            elementCondition: null
+            template: _cp/instructions/blockHeading.twig
+            templateMode: site
+            type: craft\fieldlayoutelements\Template
+            uid: fce4879e-ec8e-4a8d-873c-bd69eac8165b
+            userCondition: null
+            width: 100
+          -
             content: 'Programme structure will be inserted here.'
             dateAdded: '2025-04-25T04:19:42+00:00'
             displayInPane: false
@@ -17,7 +26,7 @@ fieldLayouts:
         name: Content
         uid: 0581016a-1dd0-4148-9c53-51c2f4de1715
         userCondition: null
-handle: blockProgrammeStructure
+handle: block_programmeStructure
 hasTitleField: false
 icon: scroll
 name: 'Block: Programme Structure'

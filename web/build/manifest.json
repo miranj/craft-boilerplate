@@ -1,5 +1,5 @@
 {
-  "craftcp.css": "f152a508ea25b360486daf148b9ffe703043d995",
+  "craftcp.css": "67a0444c474c8628ffa00c3030107e7764a4997e",
   "deferred.js": "eaabef93e1d4e651a1cb0e659c609ffc6d157e5e",
   "deferred.min.js": "d617bed4ba99988c21bd7b50955d47a248a13734",
   "instant.js": "febaa49fbacf392bb237ab8336f13b9064e729b1",
@@ -10,9 +10,9 @@
   "photoswipe.min.js": "ac29b49c88a864bc149f352c01711329b7bce521",
   "photoswipeinit.js": "9dc26563269c85810bacbe49e30bf6b4da5b76e3",
   "photoswipeinit.min.js": "6fcb16706d124c122fc5c30c693185485fbc5ff8",
-  "style.css": "6ec6af2315065f24491e96a06cc122a39b9cda5d",
-  "style.purged.css": "9775e32b99e3a45d50051155968a18b43569f312",
-  "style.purged.min.css": "5c6d4e7b0dc11a6b18b39ba5eea4c48a029feacd",
+  "style.css": "41253eb35981a43540830c0e3f94b42f092960ac",
+  "style.purged.css": "2209ab759d395a3bbd9c14a11583b2bd2eaee0f1",
+  "style.purged.min.css": "8fc1b757d1b8458aec2b28afccafc24cc486194f",
   "urgent.js": "d59fd29b908f305d483ccc596d8cb5aa3effb1f7",
   "urgent.min.js": "47f9171647c044591cf364aa0b49f1879efdc8df"
 }
