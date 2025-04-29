@@ -1,4 +1,4 @@
-dateModified: 1745900484
+dateModified: 1745911560
 elementSources:
   craft\elements\Category:
     -
@@ -266,6 +266,19 @@ elementSources:
         - desc
       defaultViewMode: ''
       disabled: false
+      key: 'section:1aa8a857-2e3d-4a1c-a09c-9c180aa2fc53' # Projects
+      tableAttributes:
+        - postDate
+        - link
+        - dateUpdated
+        - revisionCreator
+      type: native
+    -
+      defaultSort:
+        - postDate
+        - desc
+      defaultViewMode: ''
+      disabled: false
       key: 'section:5280da4e-b8fa-4970-9b39-490dd3a96904' # Publications
       tableAttributes:
         - link
@@ -492,6 +505,7 @@ meta:
     0dcf57f2-a803-4b2e-8235-bc0870989f38: 'Media Embed' # Media Embed
     0ebe4125-0bbc-4efc-a7d1-055eebd82cb5: Languages # Languages
     1a28c01c-3fa0-4a60-8c73-d7c7707be626: Document # Document
+    1aa8a857-2e3d-4a1c-a09c-9c180aa2fc53: Projects # Projects
     1afae8bb-74c6-43e3-8b44-3e8cac38e2e8: 'Blog Index' # Blog Index
     1b75b0c0-3003-4fe3-bc8f-478e12906e75: 'Contact: Email' # Contact: Email
     1ba3b532-e3ed-43db-93a6-00c05efcc84f: 'Resource Types' # Resource Types
@@ -572,6 +586,7 @@ meta:
     7395f359-de01-4595-b728-81edf64158fc: 'Contact: Phone' # Contact: Phone
     8447c697-1e38-439d-bfcc-beac5bf1ae31: 'Sharing & SEO' # Sharing & SEO
     23995e04-c457-4eeb-b78d-1c22f16cf4f6: 'URL (Email)' # URL (Email)
+    48487c17-d2de-429d-8998-07287da4a844: Project # Project
     61317d04-b4b5-4b2f-ad77-e1d87029c361: 'Legacy URL' # Legacy URL
     69339afc-d4f1-440b-a7ad-7da2ccb77972: Image # Image
     77809eb2-6a5b-4988-a869-c707a21e0aa7: 'Academic Levels' # Academic Levels
