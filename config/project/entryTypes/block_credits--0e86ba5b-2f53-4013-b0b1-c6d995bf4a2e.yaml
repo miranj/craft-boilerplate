@@ -6,6 +6,15 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
+            dateAdded: '2025-04-29T11:32:50+00:00'
+            elementCondition: null
+            template: _cp/instructions/blockHeading.twig
+            templateMode: site
+            type: craft\fieldlayoutelements\Template
+            uid: 4ef953bd-fc28-41c6-8079-0ba8a7fe9360
+            userCondition: null
+            width: 100
+          -
             autocapitalize: true
             autocomplete: false
             autocorrect: true
@@ -36,7 +45,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            content: 'Inserts a table to credit people in a team. Credits can be edited in the _Meta_ tab].'
+            content: 'Inserts a table to credit people in a team. Credits can be edited in the _Meta_ tab.'
             dateAdded: '2025-04-29T10:11:06+00:00'
             displayInPane: false
             elementCondition: null
