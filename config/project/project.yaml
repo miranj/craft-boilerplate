@@ -1,4 +1,4 @@
-dateModified: 1745920763
+dateModified: 1745921252
 elementSources:
   craft\elements\Category:
     -
@@ -565,6 +565,7 @@ meta:
     65fd1257-02e1-40e1-a8a4-0ad89b4e9510: 'Link (Email, Phone, URL)' # Link (Email, Phone, URL)
     066b4ba5-46f1-4abd-bc4f-b5118981f6bf: 'Social: YouTube' # Social: YouTube
     69dcd3aa-18b8-48bf-a7d3-deb9c6912349: Topics # Topics
+    73b5b4a9-1ce2-49ca-8a21-07cf099b48ad: Credit # Credit
     78b65745-d87e-4107-87a7-8ae091e8dcf5: 'Social: Other' # Social: Other
     86d5863c-5339-40bb-9add-f4872cdfdce5: Departments # Departments
     89c58a76-1da8-4581-84f1-caf2222de75a: Documents # Documents
@@ -646,6 +647,7 @@ meta:
     ece488e2-352e-44a2-8a74-1baf13a4f946: 'Social: Instagram' # Social: Instagram
     ed5b1453-5dc4-4e73-8865-dad39383c4cb: 'URL (Entries, URL)' # URL (Entries, URL)
     f6fd4187-da05-45cb-adfd-7367ca82dc1f: 'Body (Nested)' # Body (Nested)
+    f9f26c9a-936a-4901-90ca-e8c5c2997475: Credits # Credits
     f719c927-90fd-4ace-a58e-ddea5675c7d2: Office # Office
     fa35f4cd-b237-4493-8c4e-4e25855164ff: 'Block: Rich Text Collapse' # Block: Rich Text Collapse
     fad3fe56-0b6b-46c4-a97b-b7fb98847f3c: 'Media Embed' # Media Embed
