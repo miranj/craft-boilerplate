@@ -118,7 +118,7 @@ fieldLayouts:
             handle: null
             includeInCards: false
             instructions: null
-            label: null
+            label: 'Office Hours'
             providesThumbs: false
             required: false
             tip: null
