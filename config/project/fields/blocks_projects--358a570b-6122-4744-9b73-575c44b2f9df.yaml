@@ -15,6 +15,14 @@ settings:
         -
           - name
           - 'Related Content'
+    -
+      __assoc__:
+        -
+          - uid
+          - 09d5d648-f5ec-41b7-b39e-4d3c1585936a # Block: Testimonials
+        -
+          - name
+          - Testimonials
   includeTableView: false
   maxEntries: null
   minEntries: null
