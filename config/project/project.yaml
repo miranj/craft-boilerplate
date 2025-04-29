@@ -1,4 +1,4 @@
-dateModified: 1745921620
+dateModified: 1745922242
 elementSources:
   craft\elements\Category:
     -
@@ -546,6 +546,7 @@ meta:
     09d5d648-f5ec-41b7-b39e-4d3c1585936a: 'Block: Testimonials' # Block: Testimonials
     9f12d494-ef8f-4777-8ff0-bebc044b1264: 'Academic Level' # Academic Level
     9ff437c1-0323-4492-a95e-007c3a05ab8f: Practices # Practices
+    10b9629c-16a4-446b-ac1f-1e59483c1a8f: 'Block: Gallery' # Block: Gallery
     12bc836f-fce2-4315-8a94-22967b0923c8: Testimonials # Testimonials
     12c6ecb1-eb21-40a2-aca1-217b86047c44: Event # Event
     14a95c46-17f2-4890-ad37-a80e9ea6ab3c: 'Academic Level' # Academic Level
