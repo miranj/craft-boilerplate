@@ -10,11 +10,34 @@ Release notes for Miranj's Craft Boilerplate starter project.
 
 ### Data Model
 
-- Added _Organizations_, _Academic Levels_, _Programmes_, _Departments_, _Testimonials_, _Events_, _Resources_, _Resources Index_, _Publications_, _Publications Index_, _People_, _People Index_, _News_ and _News Index_ sections.
-- Added _Organization_, _Academic Level_, _Programme_, _Department_, _Testimonial_, _Event_, _Resource_, _Resource Link_, _Publication_, _Org Member_, _External Contributor_ and _News_ entry types.
-- Added _Practices_, _Disciplines_, _Focus Areas_, _Resource Types_, _Event Types_, _Languages_, _Topics_, _Publications Types_ and _News Types_ categories.
-- Added _Academic Level_, _Content Blocks: Faculty_, _Author Options_, _Offices_, _Roles_, _Practices_, _Departments_, _Focus Areas_, _Programmes_, _Hyperlink with Label_, _Date_, _Authors_, _Languages_, _Topics_, _Resource Type_, _Publications Type_, _Contact Information_, _Media Embed_ and _News Type_ fields.
-- Added _Media Embed_ block type to the _Body_ field.
+- The following sections, entry types and corresponding fields have been added:
+  - _Academic Levels_ section, _Academic Level_ entry type, and _Academic Level_ field
+  - _Departments_ section, _Department_ entry type, and _Department_ and _Departments_ field
+  - _Events_ section, _Event_ entry type
+  - _News_ and _News Index_ sections, _News_ entry type
+  - _Organizations_ section, _Organization_ entry type
+  - _Offices_ section, _Office_ entry type, _Offices_ field
+  - _People_ and _People Index_ sections, _Org Member_ and _External Contributor_ entry types, _Authors_ and _People_ fields
+  - _Programmes_ section, _Programme_ entry type and a _Programmes_ field
+  - _Publications_ and _Publications Index_ sections, _Publication_ entry type
+  - _Resources_ and _Resources Index_ sections, _Resource_ and _Resource Link_ entry types
+  - _Testimonials_ section, _Testimonial_ entry type
+- The following categories and corresponding fields have been added:
+  - _Disciplines_ category,
+  - _Event Types_ category and field
+  - _Focus Areas_ and field
+  - _Languages_ category and field
+  - _News Types_ category, _News Type_ field
+  - _Publications Types_ category, _Publications Type_ field
+  - _Practices_ category and field
+  - _Project Types_ and field
+  - _Resource Types_ category, _Resource Type_ field
+  - _Topics_ category and field
+- The following fields have also been added:
+  - _Content Blocks: Faculty_, _Content Blocks: Projects_
+  - _Simple Navigation_, _Contact Information_, _Credits_
+  - _Author Type_, _External Person Roles_, various _Hyperlink_ and _Url_ options, _Date_, _Media Embed_
+  - Added _Collapse_, _Button_, _Media Embed_, block type to the _Body_ field and a _Nested Body_ field was created for nesting content in _Collapse_ blocks.
 
 ### Craft
 
