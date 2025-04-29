@@ -78,7 +78,7 @@ fieldLayouts:
           -
             dateAdded: '2025-04-26T02:35:05+00:00'
             elementCondition: null
-            fieldUid: 7f2e3eef-0a17-44d0-b7a2-06e593deebf5 # Call To Action Block
+            fieldUid: 7f2e3eef-0a17-44d0-b7a2-06e593deebf5 # Call To Action
             handle: null
             includeInCards: false
             instructions: null

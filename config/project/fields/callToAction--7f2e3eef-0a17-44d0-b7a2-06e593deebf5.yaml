@@ -1,7 +1,7 @@
 columnSuffix: null
-handle: callToActionBlock
+handle: callToAction
 instructions: null
-name: 'Call To Action Block'
+name: 'Call To Action'
 searchable: true
 settings:
   createButtonLabel: 'Add link'
