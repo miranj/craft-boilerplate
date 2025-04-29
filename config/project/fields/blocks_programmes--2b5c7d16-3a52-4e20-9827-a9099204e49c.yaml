@@ -1,20 +1,20 @@
 columnSuffix: null
-handle: blocksFaculty
-instructions: '_Faculty Programmes_ will automatically shown as the first block. To change the order, add a _Faculty Programmes_ block below and move it around.'
-name: 'Content Blocks: Faculty'
+handle: blocks_programmes
+instructions: '_Programmes Structure_ will automatically shown as the first block. To change the order, add a _Programmes Structure_ block below and move it around.'
+name: 'Content Blocks: Programmes'
 searchable: true
 settings:
-  createButtonLabel: 'New block'
+  createButtonLabel: null
   defaultIndexViewMode: cards
   entryTypes:
     -
       __assoc__:
         -
           - uid
-          - 15a8b3cd-e87e-4daa-aad0-a9f78eabfca7 # Block: Faculty Programmes
+          - c14871e2-5d6f-434b-823f-597234dc34ef # Block: Programme Structure
         -
           - name
-          - 'Faculty Programmes'
+          - 'Programme Structure'
     -
       __assoc__:
         -
@@ -23,6 +23,14 @@ settings:
         -
           - name
           - Testimonials
+    -
+      __assoc__:
+        -
+          - uid
+          - b98cf6e6-e5b0-4ec2-9b35-57cfa6114ac1 # Block: People Teasers
+        -
+          - name
+          - People
   includeTableView: false
   maxEntries: null
   minEntries: null
