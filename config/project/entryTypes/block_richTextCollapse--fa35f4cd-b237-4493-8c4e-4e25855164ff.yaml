@@ -1,0 +1,78 @@
+color: null
+fieldLayouts:
+  5f174b84-e4e4-4e8f-94f7-d6385f539b65:
+    cardView:
+      - 'layoutElement:4bf65ff0-a2e6-4afc-b43e-34663c353503'
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-04-28T11:21:49+00:00'
+            elementCondition: null
+            template: _cp/instructions/blockHeading.twig
+            templateMode: site
+            type: craft\fieldlayoutelements\Template
+            uid: 7995489e-3765-4a5e-8f47-02f4c8a061b7
+            userCondition: null
+            width: 100
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: '2025-04-26T02:57:48+00:00'
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            required: true
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: ab9ea901-04a9-4957-8071-49b5651b2e60
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-04-28T11:02:05+00:00'
+            elementCondition: null
+            fieldUid: f6fd4187-da05-45cb-adfd-7367ca82dc1f # Body (Nested)
+            handle: body
+            includeInCards: true
+            instructions: null
+            label: Description
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 4bf65ff0-a2e6-4afc-b43e-34663c353503
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 20b5380c-78d8-4570-9469-47e4752cca85
+        userCondition: null
+handle: block_richTextCollapse
+hasTitleField: true
+icon: caret-down
+name: 'Block: Rich Text Collapse'
+showSlugField: false
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

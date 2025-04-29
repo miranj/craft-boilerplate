@@ -585,6 +585,9 @@ h5 {
 .inline {
     display: inline;
 }
+.contents {
+    display: contents;
+}
 .aspect-video {
     aspect-ratio: 16 / 9;
 }
