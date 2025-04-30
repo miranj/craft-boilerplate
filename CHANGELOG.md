@@ -10,7 +10,7 @@ Release notes for Miranj's Craft Boilerplate starter project.
 
 ### Data Model
 
-- Added _Offices_, _Jobs_, _Jobs Index_, _Programmes Index_, _Academic Levels_, _Programmes_, _Departments_, _Testimonials_, _Events_, _Resources_, _Resources Index_, _Publications_, _Publications Index_, _People_, _People Index_, _News_ and _News Index_ sections.
+- Added _Offices Index_, _Offices_, _Jobs_, _Jobs Index_, _Programmes Index_, _Academic Levels_, _Programmes_, _Departments_, _Testimonials_, _Events_, _Resources_, _Resources Index_, _Publications_, _Publications Index_, _People_, _People Index_, _News_ and _News Index_ sections.
 - Added _Office_, _Opportunity_, _Academic Level_, _Programme_, _Department_, _Testimonial_, _Event_, _Resource_, _Resource Link_, _Publication_, _Org Member_, _External Contributor_ and _News_ entry types.
 - Added _Opportunities Types_, _Practices_, _Disciplines_, _Focus Areas_, _Resource Types_, _Event Types_, _Languages_, _Topics_, _Publications Types_ and _News Types_ categories.
 - Added _Simple Navigation_, _Opportunities Types_, _Academic Level_, _Content Blocks: Faculty_, _Author Options_, _Offices_, _Roles_, _Practices_, _Departments_, _Focus Areas_, _Programmes_, _Hyperlink with Label_, _Date_, _Authors_, _Languages_, _Topics_, _Resource Type_, _Publications Type_, _Contact Information_, _Media Embed_ and _News Type_ fields.
