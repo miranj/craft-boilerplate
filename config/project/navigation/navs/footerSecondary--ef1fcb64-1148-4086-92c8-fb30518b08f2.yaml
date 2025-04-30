@@ -1,6 +1,6 @@
 defaultPlacement: end
 fieldLayouts:
-  3fb4146e-7c57-453d-9542-0ca4222548c5:
+  0d28b0c3-f456-411f-9dcc-793ca304f681:
     tabs:
       -
         elementCondition: null
@@ -10,7 +10,7 @@ fieldLayouts:
             autocomplete: false
             autocorrect: true
             class: null
-            dateAdded: '2025-04-30T03:47:43+00:00'
+            dateAdded: '2025-04-30T03:55:36+00:00'
             disabled: false
             elementCondition: null
             id: null
@@ -31,12 +31,12 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\TitleField
-            uid: 4d0bf5a0-574f-4401-9f1f-a5370199d524
+            uid: 31a976ab-c7db-4497-b749-ca556fb577d1
             userCondition: null
             warning: null
             width: 100
           -
-            dateAdded: '2025-04-30T03:47:43+00:00'
+            dateAdded: '2025-04-30T03:55:36+00:00'
             elementCondition: null
             includeInCards: false
             instructions: null
@@ -45,12 +45,12 @@ fieldLayouts:
             required: false
             tip: null
             type: verbb\navigation\fieldlayoutelements\NodeTypeElements
-            uid: 55d290e3-e42f-4ce4-8930-b71f60ee20de
+            uid: a10e9f14-8ab5-4b0b-90a6-8e0013ce72a8
             userCondition: null
             warning: null
           -
             attribute: newWindow
-            dateAdded: '2025-04-30T03:47:43+00:00'
+            dateAdded: '2025-04-30T03:55:36+00:00'
             elementCondition: null
             id: null
             includeInCards: false
@@ -64,17 +64,17 @@ fieldLayouts:
             tip: null
             translatable: false
             type: verbb\navigation\fieldlayoutelements\NewWindowField
-            uid: e9e72fa2-ab5a-487c-81e4-71ae6f969235
+            uid: da56454e-30cf-47c2-b814-48ffb88b7c3c
             userCondition: null
             warning: null
             width: 100
         name: Node
-        uid: 0580d843-eac6-44a5-a663-e2449b86e963
+        uid: c9f5a894-8712-43a5-8195-1bfd6d47d38d
         userCondition: null
-handle: primaryNavigation
+handle: footerSecondary
 instructions: ''
 maxNodes: null
-name: 'Header Primary'
+name: 'Footer Secondary'
 permissions:
   craft\elements\Asset:
     enabled: '1'
@@ -112,7 +112,7 @@ propagationMethod: all
 siteSettings:
   8341919b-4097-4c45-8f3b-97ff673d9ab5: # $CRAFT_SITE_NAME
     enabled: true
-sortOrder: 1
+sortOrder: 3
 structure:
-  maxLevels: 2
-  uid: f0786572-1f14-470f-9155-690836381f77
+  maxLevels: 1
+  uid: 4cf1d9d5-8497-454f-8476-738a8a8ecab2
