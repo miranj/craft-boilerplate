@@ -93,7 +93,7 @@ fieldLayouts:
             dateAdded: '2025-03-13T10:20:28+00:00'
             elementCondition: null
             fieldUid: 32ed2f1a-9024-4ee9-9028-3a5041c0e5e6 # Date
-            handle: null
+            handle: deadline
             includeInCards: false
             instructions: null
             label: 'Application Deadline'
