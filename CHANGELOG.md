@@ -15,6 +15,7 @@ Release notes for Miranj's Craft Boilerplate starter project.
 - Added _Opportunities Types_, _Practices_, _Disciplines_, _Focus Areas_, _Resource Types_, _Event Types_, _Languages_, _Topics_, _Publications Types_ and _News Types_ categories.
 - Added _Opportunities Types_, _Academic Level_, _Content Blocks: Faculty_, _Author Options_, _Offices_, _Roles_, _Practices_, _Departments_, _Focus Areas_, _Programmes_, _Hyperlink with Label_, _Date_, _Authors_, _Languages_, _Topics_, _Resource Type_, _Publications Type_, _Contact Information_, _Media Embed_ and _News Type_ fields.
 - Added _Media Embed_ block type to the _Body_ field.
+- Added _Organization_ global set.
 
 ### Craft
 
