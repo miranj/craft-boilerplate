@@ -1,8 +1,17 @@
-dateModified: 1745898471
+dateModified: 1746008019
 elementSources:
   craft\elements\Category:
     -
+      defaultSort:
+        - structure
+        - asc
+      defaultViewMode: ''
+      disabled: false
       key: 'group:6d709589-8e2f-4fef-9c6f-48f5644fb922' # Disciplines
+      tableAttributes:
+        - _childme_addChild
+        - slug
+        - dateUpdated
       type: native
     -
       key: 'group:8a5099a8-7b2e-4052-b798-5e7d19f38b15' # Event Types
@@ -34,6 +43,18 @@ elementSources:
       type: native
     -
       key: 'group:6ae2a9cc-c9cc-4b89-9c8c-d7a417cbb87e' # Topics
+      type: native
+    -
+      key: 'group:7b76ffa4-3aed-45cd-9087-771dca56704e'
+      type: native
+    -
+      key: 'group:7da8d57d-2f04-4b73-a787-e23c441a48f4' # Employment Types
+      type: native
+    -
+      key: 'group:08d78078-fb0a-4d0a-88b4-d5dc8238886e'
+      type: native
+    -
+      key: 'group:df899104-7d07-489b-954f-20ec40505f31' # Opportunity Types
       type: native
   craft\elements\Entry:
     -
@@ -154,8 +175,18 @@ elementSources:
       type: native
     -
       defaultSort:
-        - 'fieldInstance:e30e5ed4-2a93-4299-927a-7993d8dc68b3'
-        - desc
+        - 'field:32ed2f1a-9024-4ee9-9028-3a5041c0e5e6' # Date
+        - asc
+      defaultViewMode: ''
+      disabled: false
+      key: 'section:febb1068-1cf0-4781-8a41-bf420bb95e2f' # Jobs
+      tableAttributes:
+        - link
+        - 'field:4a6b0f8c-21ac-43ae-8df2-afe365e78304' # Employment Types
+        - postDate
+        - 'field:32ed2f1a-9024-4ee9-9028-3a5041c0e5e6' # Date
+      type: native
+    -
       defaultViewMode: ''
       disabled: false
       key: 'section:a976662e-fc19-4f89-ae6b-a5b4db64752b' # Events
@@ -174,6 +205,20 @@ elementSources:
       disabled: false
       key: 'section:a71afc7e-315c-4be0-b69b-5c70a7dc85db' # Departments
       tableAttributes:
+        - link
+        - dateUpdated
+        - revisionCreator
+      type: native
+    -
+      defaultSort:
+        - structure
+        - asc
+      defaultViewMode: ''
+      disabled: false
+      key: 'section:e6b6d0c4-ef5a-41fd-abdb-547128db1c52' # Locations
+      tableAttributes:
+        - _childme_addChild
+        - postDate
         - link
         - dateUpdated
         - revisionCreator
@@ -487,6 +532,8 @@ meta:
     2fc7574e-8621-4ac0-87f9-1f3b73cc235b: 'Author Type' # Author Type
     3aba8130-5dea-47d5-ad23-a536e8b9760a: 'Resource: Link' # Resource: Link
     3efc7d18-2f42-40d1-beee-b05867f36104: Programmes # Programmes
+    4a6b0f8c-21ac-43ae-8df2-afe365e78304: 'Employment Types' # Employment Types
+    5a1e3562-bcf8-4492-afd5-f8c9cabda572: 'Call to Action' # Call to Action
     5b72b712-0218-40c6-9717-0c395a914ad8: Summary # Summary
     5d68dab3-70f1-4fbc-833e-e504aa7c926d: 'User Photos' # User Photos
     6ae2a9cc-c9cc-4b89-9c8c-d7a417cbb87e: Topics # Topics
@@ -498,6 +545,7 @@ meta:
     7a8f449f-4cfb-49db-8656-d7551c298f4c: Authors # Authors
     7b8b18a2-8e96-4b93-bfaa-34a1d9fa86e1: Rich # Rich
     7bc0d428-9e00-47b5-b928-67896f29ae17: 'Contact: Website' # Contact: Website
+    7da8d57d-2f04-4b73-a787-e23c441a48f4: 'Employment Types' # Employment Types
     7e194f18-cd05-4cd2-bc77-67272aaa31a3: Testimonial # Testimonial
     7f2e3eef-0a17-44d0-b7a2-06e593deebf5: 'Call To Action' # Call To Action
     8a5099a8-7b2e-4052-b798-5e7d19f38b15: 'Event Types' # Event Types
@@ -514,6 +562,7 @@ meta:
     9cbdb5d5-1a67-4b57-820f-7226cef3d0c8: 'External Person Roles' # External Person Roles
     9ce8d4e8-4f27-44a1-8f1c-60187033a3e3: 'Focus Areas' # Focus Areas
     09d5d648-f5ec-41b7-b39e-4d3c1585936a: 'Block: Testimonials' # Block: Testimonials
+    9eb91e5d-0e36-4e64-9422-f92401aa9500: Location # Location
     9f12d494-ef8f-4777-8ff0-bebc044b1264: 'Academic Level' # Academic Level
     9ff437c1-0323-4492-a95e-007c3a05ab8f: Practices # Practices
     12bc836f-fce2-4315-8a94-22967b0923c8: Testimonials # Testimonials
@@ -543,6 +592,7 @@ meta:
     90d23e21-4d7c-444f-89c4-e66aeb92c134: 'Site Configuration' # Site Configuration
     94e56347-cb09-47d3-a930-1fd9bc2cb026: News # News
     96f5233c-d76d-4f31-9f8d-6de2dfc22373: Author # Author
+    193aec6d-3690-493c-861e-18848399ea15: 'Programmes Index' # Programmes Index
     295e5325-afca-4a03-93e9-ed957c574148: Footer # Footer
     317eb1dc-2ab0-4290-a1d3-573e6ead4388: 'News Index' # News Index
     349b5e6f-3a2a-43f1-a9dd-2373bf4a0a67: 'Share/SEO Description' # Share/SEO Description
@@ -559,7 +609,7 @@ meta:
     23995e04-c457-4eeb-b78d-1c22f16cf4f6: 'URL (Email)' # URL (Email)
     61317d04-b4b5-4b2f-ad77-e1d87029c361: 'Legacy URL' # Legacy URL
     69339afc-d4f1-440b-a7ad-7da2ccb77972: Image # Image
-    74946a7f-3d6f-43eb-afb2-f79f614d409a: Link # Link
+    74946a7f-3d6f-43eb-afb2-f79f614d409a: 'Navigation Link' # Navigation Link
     77809eb2-6a5b-4988-a869-c707a21e0aa7: 'Academic Levels' # Academic Levels
     386721be-1ee4-4e3b-b22c-7fb3dfded3ff: 'Simple Text' # Simple Text
     856911a9-89f9-4865-bdb1-5665460c6c23: 'Contact & Social Media Information' # Contact & Social Media Information
@@ -568,9 +618,11 @@ meta:
     18803174-20d5-4b61-a067-3072b484f857: 'Resources Index' # Resources Index
     21177498-20b3-426a-bf81-df7eeec48389: 'Block: Button' # Block: Button
     25388890-1b39-49c8-8d89-7ef2d82f89a1: Newsletter # Newsletter
+    a3f3307a-1056-486e-9ed7-fb4e84632cb0: 'Jobs Index' # Jobs Index
     a0320c92-dcb7-489b-94e3-bd21fdc647cc: Practices # Practices
     a6b97e16-5236-44b1-ad57-3899644efd40: 'Link (Assets, Entries, URL)' # Link (Assets, Entries, URL)
     a53f5b40-fb8c-4a9d-8c25-dc8e3dfe58d6: Code # Code
+    a60b8050-4e83-40d0-9598-4a9572ce027a: Location # Location
     a71afc7e-315c-4be0-b69b-5c70a7dc85db: Departments # Departments
     a385a4fe-5736-44ee-ab48-d869428d380c: News # News
     a404ee2c-1d0d-4da9-a736-cd565a4d2605: Page # Page
@@ -594,6 +646,8 @@ meta:
     bc20ba64-4979-418f-aa28-244626f315ab: 'Home Page' # Home Page
     be130f04-1c51-420d-818e-6d4f5a5960fa: Resources # Resources
     be827b12-3e63-4d2a-b17a-5c60ab99f248: 'Publication Type' # Publication Type
+    c2bd9b72-0968-4b24-aee2-02048ebf7f8c: Opportunity # Opportunity
+    c4c680e9-4168-4267-9e83-2d8e26d5efc8: 'Opportunity Types' # Opportunity Types
     c4fb7c86-c508-4410-9362-e47f5b604631: Programme # Programme
     c8c8ccd9-ebdc-48dd-bac8-029cb3d04923: Department # Department
     c16e920d-e7e5-4510-8dde-4f1b5627b97f: 'Link (Entries, URL)' # Link (Entries, URL)
@@ -606,8 +660,10 @@ meta:
     dd80a6fe-320a-4fb6-889d-17125d275aac: 'People: Org Member' # People: Org Member
     ddf843d6-31c0-4b23-8927-b1fb0fec9efb: 'Simple Navigation' # Simple Navigation
     de677f5b-6642-4086-ac1a-3e95990c19d0: 'Blog Post' # Blog Post
+    df899104-7d07-489b-954f-20ec40505f31: 'Opportunity Types' # Opportunity Types
     e03f52b8-38a8-493c-b27a-3c61c5532f18: Builder # Builder
     e5d70b3c-403b-416d-b670-a93437ce427b: 'User Managers' # User Managers
+    e6b6d0c4-ef5a-41fd-abdb-547128db1c52: Locations # Locations
     e421ceea-a2f2-459f-88b9-2695f86047bd: Images # Images
     e455d48b-03ff-4280-b08f-90e20f74c7b3: Languages # Languages
     e5323eec-2cf3-40d3-b122-7df6192a5bdf: 'Form Submissions' # Form Submissions
@@ -619,6 +675,7 @@ meta:
     fa35f4cd-b237-4493-8c4e-4e25855164ff: 'Block: Rich Text Collapse' # Block: Rich Text Collapse
     fad3fe56-0b6b-46c4-a97b-b7fb98847f3c: 'Media Embed' # Media Embed
     fd23984e-764a-4004-9834-8efe25601ba5: Simple # Simple
+    febb1068-1cf0-4781-8a41-bf420bb95e2f: Jobs # Jobs
 plugins:
   child-me:
     edition: standard

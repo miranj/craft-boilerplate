@@ -11,7 +11,7 @@ settings:
       __assoc__:
         -
           - uid
-          - 74946a7f-3d6f-43eb-afb2-f79f614d409a # Link
+          - 74946a7f-3d6f-43eb-afb2-f79f614d409a # Navigation Link
   includeTableView: false
   maxEntries: null
   minEntries: null

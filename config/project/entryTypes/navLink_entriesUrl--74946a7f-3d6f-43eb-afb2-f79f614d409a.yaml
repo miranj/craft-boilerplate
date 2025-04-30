@@ -24,10 +24,10 @@ fieldLayouts:
         name: Content
         uid: a5036032-55f3-454f-bbbc-d52c5693cef6
         userCondition: null
-handle: link
+handle: navLink_entriesUrl
 hasTitleField: false
 icon: link
-name: Link
+name: 'Navigation Link'
 showSlugField: false
 showStatusField: true
 slugTranslationKeyFormat: null
