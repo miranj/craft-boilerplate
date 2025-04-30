@@ -18,6 +18,7 @@ Release notes for Miranj's Craft Boilerplate starter project.
 
 ### Craft
 
+- Installed Store Hours 4.2.0.
 - Installed oEmbed 3.1.4.
 - Updated Craft CMS to 5.6.17.
 - Updated CKEditor to 4.6.0.
