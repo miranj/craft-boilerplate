@@ -2,7 +2,7 @@ defaultPlacement: end
 enableVersioning: true
 entryTypes:
   -
-    uid: c2bd9b72-0968-4b24-aee2-02048ebf7f8c # Job
+    uid: 2fdb1d61-016d-4220-abbb-27c126f21352 # Tender
 handle: tenders
 maxAuthors: 1
 name: Tenders

@@ -1,4 +1,4 @@
-dateModified: 1746000338
+dateModified: 1746009536
 elementSources:
   craft\elements\Category:
     -
@@ -543,6 +543,7 @@ meta:
     2b5c7d16-3a52-4e20-9827-a9099204e49c: 'Content Blocks: Programmes' # Content Blocks: Programmes
     2bfee73d-1d4f-480f-9a78-6be8410a6704: 'Social Media' # Social Media
     2fc7574e-8621-4ac0-87f9-1f3b73cc235b: 'Author Type' # Author Type
+    2fdb1d61-016d-4220-abbb-27c126f21352: Tender # Tender
     3aba8130-5dea-47d5-ad23-a536e8b9760a: 'Resource: Link' # Resource: Link
     3efc7d18-2f42-40d1-beee-b05867f36104: Programmes # Programmes
     4a6b0f8c-21ac-43ae-8df2-afe365e78304: 'Employment Types' # Employment Types
@@ -656,7 +657,7 @@ meta:
     bc20ba64-4979-418f-aa28-244626f315ab: 'Home Page' # Home Page
     be130f04-1c51-420d-818e-6d4f5a5960fa: Resources # Resources
     be827b12-3e63-4d2a-b17a-5c60ab99f248: 'Publication Type' # Publication Type
-    c2bd9b72-0968-4b24-aee2-02048ebf7f8c: Opportunity # Opportunity
+    c2bd9b72-0968-4b24-aee2-02048ebf7f8c: Job # Job
     c4c680e9-4168-4267-9e83-2d8e26d5efc8: 'Opportunity Types' # Opportunity Types
     c4fb7c86-c508-4410-9362-e47f5b604631: Programme # Programme
     c8c8ccd9-ebdc-48dd-bac8-029cb3d04923: Department # Department
