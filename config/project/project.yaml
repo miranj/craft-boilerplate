@@ -1,4 +1,4 @@
-dateModified: 1745895866
+dateModified: 1745984715
 elementSources:
   craft\elements\Category:
     -
@@ -652,6 +652,11 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
+  navigation:
+    edition: standard
+    enabled: true
+    licenseKey: $CRAFT_LICENSE_NAVIGATION
+    schemaVersion: 2.1.0
   nocache:
     edition: standard
     enabled: true
