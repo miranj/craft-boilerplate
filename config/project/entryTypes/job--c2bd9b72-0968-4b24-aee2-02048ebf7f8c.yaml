@@ -104,6 +104,38 @@ fieldLayouts:
             uid: 6c894757-6cf5-427f-89b8-af67286e00a4
             userCondition: null
             warning: null
+            width: 50
+          -
+            dateAdded: '2025-03-17T03:07:14+00:00'
+            elementCondition: null
+            fieldUid: 840acb32-6694-40d0-9384-60a0220c1de0 # Label
+            handle: employmentStart
+            includeInCards: false
+            instructions: null
+            label: 'Employment Start'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 0ae783b5-b15f-4200-b222-8c5b5015c912
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            dateAdded: '2025-03-17T03:07:14+00:00'
+            elementCondition: null
+            fieldUid: 840acb32-6694-40d0-9384-60a0220c1de0 # Label
+            handle: compensation
+            includeInCards: false
+            instructions: null
+            label: Compensation
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e02cbb50-676b-4032-ab1b-5c5ce776e603
+            userCondition: null
+            warning: null
             width: 100
           -
             dateAdded: '2025-03-17T03:04:28+00:00'
@@ -122,34 +154,18 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            dateAdded: '2025-03-17T03:07:14+00:00'
+            dateAdded: '2025-04-24T04:34:45+00:00'
             elementCondition: null
-            fieldUid: 840acb32-6694-40d0-9384-60a0220c1de0 # Label
-            handle: compensation
+            fieldUid: c4c680e9-4168-4267-9e83-2d8e26d5efc8 # Opportunity Types
+            handle: null
             includeInCards: false
             instructions: null
-            label: Compensation
+            label: null
             providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: e02cbb50-676b-4032-ab1b-5c5ce776e603
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            dateAdded: '2025-03-17T03:07:14+00:00'
-            elementCondition: null
-            fieldUid: 840acb32-6694-40d0-9384-60a0220c1de0 # Label
-            handle: employmentStart
-            includeInCards: false
-            instructions: null
-            label: 'Employment Start'
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 0ae783b5-b15f-4200-b222-8c5b5015c912
+            uid: 8c4e284d-6da9-4d28-b8a3-b7b61f21071e
             userCondition: null
             warning: null
             width: 100
@@ -221,22 +237,6 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: b5736f71-5118-4b75-8d34-562c5ce69ccc
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            dateAdded: '2025-04-24T04:34:45+00:00'
-            elementCondition: null
-            fieldUid: c4c680e9-4168-4267-9e83-2d8e26d5efc8 # Opportunity Types
-            handle: null
-            includeInCards: false
-            instructions: null
-            label: null
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 8c4e284d-6da9-4d28-b8a3-b7b61f21071e
             userCondition: null
             warning: null
             width: 100
