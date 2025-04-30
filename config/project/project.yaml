@@ -1,8 +1,17 @@
-dateModified: 1745895868
+dateModified: 1745998406
 elementSources:
   craft\elements\Category:
     -
+      defaultSort:
+        - structure
+        - asc
+      defaultViewMode: ''
+      disabled: false
       key: 'group:6d709589-8e2f-4fef-9c6f-48f5644fb922' # Disciplines
+      tableAttributes:
+        - _childme_addChild
+        - slug
+        - dateUpdated
       type: native
     -
       key: 'group:8a5099a8-7b2e-4052-b798-5e7d19f38b15' # Event Types
@@ -34,6 +43,18 @@ elementSources:
       type: native
     -
       key: 'group:6ae2a9cc-c9cc-4b89-9c8c-d7a417cbb87e' # Topics
+      type: native
+    -
+      key: 'group:7b76ffa4-3aed-45cd-9087-771dca56704e' # Departments
+      type: native
+    -
+      key: 'group:7da8d57d-2f04-4b73-a787-e23c441a48f4' # Employment Types
+      type: native
+    -
+      key: 'group:08d78078-fb0a-4d0a-88b4-d5dc8238886e' # Locations
+      type: native
+    -
+      key: 'group:df899104-7d07-489b-954f-20ec40505f31' # Opportunity Types
       type: native
   craft\elements\Entry:
     -
@@ -613,7 +634,7 @@ meta:
     bc20ba64-4979-418f-aa28-244626f315ab: 'Home Page' # Home Page
     be130f04-1c51-420d-818e-6d4f5a5960fa: Resources # Resources
     be827b12-3e63-4d2a-b17a-5c60ab99f248: 'Publication Type' # Publication Type
-    c2bd9b72-0968-4b24-aee2-02048ebf7f8c: Opportunity # Opportunity
+    c2bd9b72-0968-4b24-aee2-02048ebf7f8c: Job # Job
     c4c680e9-4168-4267-9e83-2d8e26d5efc8: 'Opportunity Types' # Opportunity Types
     c4fb7c86-c508-4410-9362-e47f5b604631: Programme # Programme
     c8c8ccd9-ebdc-48dd-bac8-029cb3d04923: Department # Department

@@ -55,7 +55,7 @@ fieldLayouts:
             dateAdded: '2025-03-13T10:20:28+00:00'
             elementCondition: null
             fieldUid: a9736c79-b219-4814-ba33-728835b7d230 # Body
-            handle: description
+            handle: null
             includeInCards: false
             instructions: null
             label: Description
@@ -350,10 +350,10 @@ fieldLayouts:
         name: 'Sharing & SEO'
         uid: f806d2ae-6aa3-48f3-a42b-dd2b804978ea
         userCondition: null
-handle: opportunity
+handle: job
 hasTitleField: true
-icon: clover
-name: Opportunity
+icon: suitcase
+name: Job
 showSlugField: true
 showStatusField: true
 slugTranslationKeyFormat: null
