@@ -2,7 +2,7 @@ defaultPlacement: end
 enableVersioning: true
 entryTypes:
   -
-    uid: c2bd9b72-0968-4b24-aee2-02048ebf7f8c # Job
+    uid: c2bd9b72-0968-4b24-aee2-02048ebf7f8c # Opportunity
 handle: jobs
 maxAuthors: 1
 name: Jobs

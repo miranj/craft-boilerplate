@@ -349,10 +349,10 @@ fieldLayouts:
         name: 'Sharing & SEO'
         uid: f806d2ae-6aa3-48f3-a42b-dd2b804978ea
         userCondition: null
-handle: job
+handle: opportunity
 hasTitleField: true
 icon: suitcase
-name: Job
+name: Opportunity
 showSlugField: true
 showStatusField: true
 slugTranslationKeyFormat: null
