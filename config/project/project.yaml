@@ -1,4 +1,4 @@
-dateModified: 1746007808
+dateModified: 1746008017
 elementSources:
   craft\elements\Category:
     -
@@ -558,7 +558,7 @@ meta:
     23995e04-c457-4eeb-b78d-1c22f16cf4f6: 'URL (Email)' # URL (Email)
     61317d04-b4b5-4b2f-ad77-e1d87029c361: 'Legacy URL' # Legacy URL
     69339afc-d4f1-440b-a7ad-7da2ccb77972: Image # Image
-    74946a7f-3d6f-43eb-afb2-f79f614d409a: Link # Link
+    74946a7f-3d6f-43eb-afb2-f79f614d409a: 'Navigation Link' # Navigation Link
     77809eb2-6a5b-4988-a869-c707a21e0aa7: 'Academic Levels' # Academic Levels
     386721be-1ee4-4e3b-b22c-7fb3dfded3ff: 'Simple Text' # Simple Text
     856911a9-89f9-4865-bdb1-5665460c6c23: 'Contact & Social Media Information' # Contact & Social Media Information
