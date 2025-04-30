@@ -16,6 +16,7 @@ permissions:
   - 'createentries:a71afc7e-315c-4be0-b69b-5c70a7dc85db' # Departments
   - 'createentries:a976662e-fc19-4f89-ae6b-a5b4db64752b' # Events
   - 'createentries:be130f04-1c51-420d-818e-6d4f5a5960fa' # Resources
+  - 'createentries:e0240263-c706-4560-ad08-6682ee2135f1' # Organisations
   - 'createentries:e39594b6-01d5-4f33-b105-7b111cb3214a' # Testimonials
   - 'createentries:e6b6d0c4-ef5a-41fd-abdb-547128db1c52' # Locations
   - 'createentries:febb1068-1cf0-4781-8a41-bf420bb95e2f' # Jobs
@@ -48,6 +49,7 @@ permissions:
   - 'deleteentries:a71afc7e-315c-4be0-b69b-5c70a7dc85db' # Departments
   - 'deleteentries:a976662e-fc19-4f89-ae6b-a5b4db64752b' # Events
   - 'deleteentries:be130f04-1c51-420d-818e-6d4f5a5960fa' # Resources
+  - 'deleteentries:e0240263-c706-4560-ad08-6682ee2135f1' # Organisations
   - 'deleteentries:e39594b6-01d5-4f33-b105-7b111cb3214a' # Testimonials
   - 'deleteentries:e6b6d0c4-ef5a-41fd-abdb-547128db1c52' # Locations
   - 'deleteentries:febb1068-1cf0-4781-8a41-bf420bb95e2f' # Jobs
@@ -78,6 +80,7 @@ permissions:
   - 'deletepeerentries:a71afc7e-315c-4be0-b69b-5c70a7dc85db' # Departments
   - 'deletepeerentries:a976662e-fc19-4f89-ae6b-a5b4db64752b' # Events
   - 'deletepeerentries:be130f04-1c51-420d-818e-6d4f5a5960fa' # Resources
+  - 'deletepeerentries:e0240263-c706-4560-ad08-6682ee2135f1' # Organisations
   - 'deletepeerentries:e39594b6-01d5-4f33-b105-7b111cb3214a' # Testimonials
   - 'deletepeerentries:e6b6d0c4-ef5a-41fd-abdb-547128db1c52' # Locations
   - 'deletepeerentries:febb1068-1cf0-4781-8a41-bf420bb95e2f' # Jobs
@@ -103,6 +106,7 @@ permissions:
   - 'deletepeerentrydrafts:bc20ba64-4979-418f-aa28-244626f315ab' # Home Page
   - 'deletepeerentrydrafts:be130f04-1c51-420d-818e-6d4f5a5960fa' # Resources
   - 'deletepeerentrydrafts:c5712456-e12b-4cbc-a8cc-b570cf00d66e' # Publications Index
+  - 'deletepeerentrydrafts:e0240263-c706-4560-ad08-6682ee2135f1' # Organisations
   - 'deletepeerentrydrafts:e39594b6-01d5-4f33-b105-7b111cb3214a' # Testimonials
   - 'deletepeerentrydrafts:e6b6d0c4-ef5a-41fd-abdb-547128db1c52' # Locations
   - 'deletepeerentrydrafts:febb1068-1cf0-4781-8a41-bf420bb95e2f' # Jobs
@@ -151,6 +155,7 @@ permissions:
   - 'saveentries:bc20ba64-4979-418f-aa28-244626f315ab' # Home Page
   - 'saveentries:be130f04-1c51-420d-818e-6d4f5a5960fa' # Resources
   - 'saveentries:c5712456-e12b-4cbc-a8cc-b570cf00d66e' # Publications Index
+  - 'saveentries:e0240263-c706-4560-ad08-6682ee2135f1' # Organisations
   - 'saveentries:e39594b6-01d5-4f33-b105-7b111cb3214a' # Testimonials
   - 'saveentries:e6b6d0c4-ef5a-41fd-abdb-547128db1c52' # Locations
   - 'saveentries:febb1068-1cf0-4781-8a41-bf420bb95e2f' # Jobs
@@ -181,6 +186,7 @@ permissions:
   - 'savepeerentries:a71afc7e-315c-4be0-b69b-5c70a7dc85db' # Departments
   - 'savepeerentries:a976662e-fc19-4f89-ae6b-a5b4db64752b' # Events
   - 'savepeerentries:be130f04-1c51-420d-818e-6d4f5a5960fa' # Resources
+  - 'savepeerentries:e0240263-c706-4560-ad08-6682ee2135f1' # Organisations
   - 'savepeerentries:e39594b6-01d5-4f33-b105-7b111cb3214a' # Testimonials
   - 'savepeerentries:e6b6d0c4-ef5a-41fd-abdb-547128db1c52' # Locations
   - 'savepeerentries:febb1068-1cf0-4781-8a41-bf420bb95e2f' # Jobs
@@ -206,6 +212,7 @@ permissions:
   - 'savepeerentrydrafts:bc20ba64-4979-418f-aa28-244626f315ab' # Home Page
   - 'savepeerentrydrafts:be130f04-1c51-420d-818e-6d4f5a5960fa' # Resources
   - 'savepeerentrydrafts:c5712456-e12b-4cbc-a8cc-b570cf00d66e' # Publications Index
+  - 'savepeerentrydrafts:e0240263-c706-4560-ad08-6682ee2135f1' # Organisations
   - 'savepeerentrydrafts:e39594b6-01d5-4f33-b105-7b111cb3214a' # Testimonials
   - 'savepeerentrydrafts:e6b6d0c4-ef5a-41fd-abdb-547128db1c52' # Locations
   - 'savepeerentrydrafts:febb1068-1cf0-4781-8a41-bf420bb95e2f' # Jobs
@@ -246,6 +253,7 @@ permissions:
   - 'viewentries:bc20ba64-4979-418f-aa28-244626f315ab' # Home Page
   - 'viewentries:be130f04-1c51-420d-818e-6d4f5a5960fa' # Resources
   - 'viewentries:c5712456-e12b-4cbc-a8cc-b570cf00d66e' # Publications Index
+  - 'viewentries:e0240263-c706-4560-ad08-6682ee2135f1' # Organisations
   - 'viewentries:e39594b6-01d5-4f33-b105-7b111cb3214a' # Testimonials
   - 'viewentries:e6b6d0c4-ef5a-41fd-abdb-547128db1c52' # Locations
   - 'viewentries:febb1068-1cf0-4781-8a41-bf420bb95e2f' # Jobs
@@ -276,6 +284,7 @@ permissions:
   - 'viewpeerentries:a71afc7e-315c-4be0-b69b-5c70a7dc85db' # Departments
   - 'viewpeerentries:a976662e-fc19-4f89-ae6b-a5b4db64752b' # Events
   - 'viewpeerentries:be130f04-1c51-420d-818e-6d4f5a5960fa' # Resources
+  - 'viewpeerentries:e0240263-c706-4560-ad08-6682ee2135f1' # Organisations
   - 'viewpeerentries:e39594b6-01d5-4f33-b105-7b111cb3214a' # Testimonials
   - 'viewpeerentries:e6b6d0c4-ef5a-41fd-abdb-547128db1c52' # Locations
   - 'viewpeerentries:febb1068-1cf0-4781-8a41-bf420bb95e2f' # Jobs
@@ -301,6 +310,7 @@ permissions:
   - 'viewpeerentrydrafts:bc20ba64-4979-418f-aa28-244626f315ab' # Home Page
   - 'viewpeerentrydrafts:be130f04-1c51-420d-818e-6d4f5a5960fa' # Resources
   - 'viewpeerentrydrafts:c5712456-e12b-4cbc-a8cc-b570cf00d66e' # Publications Index
+  - 'viewpeerentrydrafts:e0240263-c706-4560-ad08-6682ee2135f1' # Organisations
   - 'viewpeerentrydrafts:e39594b6-01d5-4f33-b105-7b111cb3214a' # Testimonials
   - 'viewpeerentrydrafts:e6b6d0c4-ef5a-41fd-abdb-547128db1c52' # Locations
   - 'viewpeerentrydrafts:febb1068-1cf0-4781-8a41-bf420bb95e2f' # Jobs
