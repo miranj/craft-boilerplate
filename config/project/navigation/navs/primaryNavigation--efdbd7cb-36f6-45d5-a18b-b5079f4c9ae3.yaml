@@ -68,6 +68,32 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
+          -
+            dateAdded: '2025-04-30T04:02:02+00:00'
+            elementCondition:
+              class: verbb\navigation\elements\conditions\NodeCondition
+              conditionRules:
+                -
+                  class: verbb\navigation\elements\conditions\TypeConditionRule
+                  operator: ni
+                  uid: ec648a7a-462d-4735-b3a6-22b1f93e7f02
+                  values:
+                    - verbb\navigation\nodetypes\PassiveType
+              elementType: verbb\navigation\elements\Node
+              fieldContext: global
+            fieldUid: 8f58365f-4eeb-4347-9d3d-5c0d3ffd3989 # Toggle (Default: off)
+            handle: highlight
+            includeInCards: false
+            instructions: null
+            label: 'Highlight Link'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e520d766-ff0e-4648-b6a7-17787b929aed
+            userCondition: null
+            warning: null
+            width: 100
         name: Node
         uid: 0580d843-eac6-44a5-a663-e2449b86e963
         userCondition: null
