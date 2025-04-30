@@ -1,4 +1,4 @@
-dateModified: 1746009536
+dateModified: 1746009537
 elementSources:
   craft\elements\Category:
     -
@@ -566,10 +566,12 @@ meta:
     8a5099a8-7b2e-4052-b798-5e7d19f38b15: 'Event Types' # Event Types
     08b4a047-a20d-4d56-81b0-32b599c4fb41: People # People
     08b5b22b-fb98-46ef-8a90-e392edb2244f: 'Rich Text' # Rich Text
+    8cced595-e06e-42da-b82b-953c0a00fe58: 'Opening Hours' # Opening Hours
     8dddc601-5e96-40bb-b036-520072ba4aa7: Images # Images
     8f58365f-4eeb-4347-9d3d-5c0d3ffd3989: 'Toggle (Default: off)' # Toggle (Default: off)
     8f896808-aacf-4f83-9a35-cd7076a6707b: 'News Type' # News Type
     9b5f9007-3f61-4857-b978-fdfbc4b29dba: 'Event Types' # Event Types
+    9b5486a8-4b80-4391-a464-2e4f34123a03: 'Offices Index' # Offices Index
     9b8054bc-bad1-4e95-b74b-e722465d36b9: Publication # Publication
     9c5f24a6-1969-4197-9fce-ff44e5a18b9b: People # People
     9cbdb5d5-1a67-4b57-820f-7226cef3d0c8: 'External Person Roles' # External Person Roles
@@ -622,6 +624,7 @@ meta:
     23995e04-c457-4eeb-b78d-1c22f16cf4f6: 'URL (Email)' # URL (Email)
     61317d04-b4b5-4b2f-ad77-e1d87029c361: 'Legacy URL' # Legacy URL
     69339afc-d4f1-440b-a7ad-7da2ccb77972: Image # Image
+    74946a7f-3d6f-43eb-afb2-f79f614d409a: 'Navigation Link' # Navigation Link
     77809eb2-6a5b-4988-a869-c707a21e0aa7: 'Academic Levels' # Academic Levels
     386721be-1ee4-4e3b-b22c-7fb3dfded3ff: 'Simple Text' # Simple Text
     856911a9-89f9-4865-bdb1-5665460c6c23: 'Contact & Social Media Information' # Contact & Social Media Information
@@ -630,6 +633,7 @@ meta:
     18803174-20d5-4b61-a067-3072b484f857: 'Resources Index' # Resources Index
     21177498-20b3-426a-bf81-df7eeec48389: 'Block: Button' # Block: Button
     25388890-1b39-49c8-8d89-7ef2d82f89a1: Newsletter # Newsletter
+    a3f3307a-1056-486e-9ed7-fb4e84632cb0: 'Jobs Index' # Jobs Index
     a0320c92-dcb7-489b-94e3-bd21fdc647cc: Practices # Practices
     a6b97e16-5236-44b1-ad57-3899644efd40: 'Link (Assets, Entries, URL)' # Link (Assets, Entries, URL)
     a53f5b40-fb8c-4a9d-8c25-dc8e3dfe58d6: Code # Code
@@ -661,6 +665,7 @@ meta:
     c4c680e9-4168-4267-9e83-2d8e26d5efc8: 'Opportunity Types' # Opportunity Types
     c4fb7c86-c508-4410-9362-e47f5b604631: Programme # Programme
     c8c8ccd9-ebdc-48dd-bac8-029cb3d04923: Department # Department
+    c16e920d-e7e5-4510-8dde-4f1b5627b97f: 'Link (Entries, URL)' # Link (Entries, URL)
     c598a91f-bc3a-49a0-9053-869bf01f2a6c: Testimonial # Testimonial
     c14871e2-5d6f-434b-823f-597234dc34ef: 'Block: Programme Structure' # Block: Programme Structure
     c5712456-e12b-4cbc-a8cc-b570cf00d66e: 'Publications Index' # Publications Index
@@ -668,6 +673,7 @@ meta:
     d4720a93-54ad-45de-a939-b668ed8660dc: 'Share/SEO Image' # Share/SEO Image
     da24c053-b31c-4fa8-b113-217845a4ce83: 'Share/SEO Title' # Share/SEO Title
     dd80a6fe-320a-4fb6-889d-17125d275aac: 'People: Org Member' # People: Org Member
+    ddf843d6-31c0-4b23-8927-b1fb0fec9efb: 'Simple Navigation' # Simple Navigation
     de677f5b-6642-4086-ac1a-3e95990c19d0: 'Blog Post' # Blog Post
     df899104-7d07-489b-954f-20ec40505f31: 'Opportunity Types' # Opportunity Types
     e03f52b8-38a8-493c-b27a-3c61c5532f18: Builder # Builder
@@ -743,6 +749,10 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
+  store-hours:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.2
   twig-perversion:
     edition: standard
     enabled: true
