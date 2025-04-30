@@ -11,6 +11,7 @@ permissions:
   - 'createentries:653ea464-6b43-4bc9-8138-79615323d877' # Blog
   - 'createentries:6b8b6979-d75e-432e-8798-2fc0d53eb8f8' # Pages
   - 'createentries:77809eb2-6a5b-4988-a869-c707a21e0aa7' # Academic Levels
+  - 'createentries:7a544871-c8af-4dc8-83ae-dc5001bc8203' # Tenders
   - 'createentries:94e56347-cb09-47d3-a930-1fd9bc2cb026' # News
   - 'createentries:a71afc7e-315c-4be0-b69b-5c70a7dc85db' # Departments
   - 'createentries:a976662e-fc19-4f89-ae6b-a5b4db64752b' # Events
@@ -34,7 +35,6 @@ permissions:
   - 'deletecategories:9ff437c1-0323-4492-a95e-007c3a05ab8f' # Practices
   - 'deletecategories:a907570e-41b8-4e87-b566-c2abe353e2a6' # Publication Types
   - 'deletecategories:df899104-7d07-489b-954f-20ec40505f31' # Opportunity Types
-  - 'deletecategories:d91478a9-22c9-4300-83ef-357a691089d6'
   - 'deleteentries:08b4a047-a20d-4d56-81b0-32b599c4fb41' # People
   - 'deleteentries:3efc7d18-2f42-40d1-beee-b05867f36104' # Programmes
   - 'deleteentries:5280da4e-b8fa-4970-9b39-490dd3a96904' # Publications
@@ -42,6 +42,7 @@ permissions:
   - 'deleteentries:653ea464-6b43-4bc9-8138-79615323d877' # Blog
   - 'deleteentries:6b8b6979-d75e-432e-8798-2fc0d53eb8f8' # Pages
   - 'deleteentries:77809eb2-6a5b-4988-a869-c707a21e0aa7' # Academic Levels
+  - 'deleteentries:7a544871-c8af-4dc8-83ae-dc5001bc8203' # Tenders
   - 'deleteentries:94e56347-cb09-47d3-a930-1fd9bc2cb026' # News
   - 'deleteentries:a71afc7e-315c-4be0-b69b-5c70a7dc85db' # Departments
   - 'deleteentries:a976662e-fc19-4f89-ae6b-a5b4db64752b' # Events
@@ -63,7 +64,6 @@ permissions:
   - 'deletepeercategorydrafts:9ff437c1-0323-4492-a95e-007c3a05ab8f' # Practices
   - 'deletepeercategorydrafts:a907570e-41b8-4e87-b566-c2abe353e2a6' # Publication Types
   - 'deletepeercategorydrafts:df899104-7d07-489b-954f-20ec40505f31' # Opportunity Types
-  - 'deletepeercategorydrafts:d91478a9-22c9-4300-83ef-357a691089d6'
   - 'deletepeerentries:08b4a047-a20d-4d56-81b0-32b599c4fb41' # People
   - 'deletepeerentries:3efc7d18-2f42-40d1-beee-b05867f36104' # Programmes
   - 'deletepeerentries:5280da4e-b8fa-4970-9b39-490dd3a96904' # Publications
@@ -71,6 +71,7 @@ permissions:
   - 'deletepeerentries:653ea464-6b43-4bc9-8138-79615323d877' # Blog
   - 'deletepeerentries:6b8b6979-d75e-432e-8798-2fc0d53eb8f8' # Pages
   - 'deletepeerentries:77809eb2-6a5b-4988-a869-c707a21e0aa7' # Academic Levels
+  - 'deletepeerentries:7a544871-c8af-4dc8-83ae-dc5001bc8203' # Tenders
   - 'deletepeerentries:94e56347-cb09-47d3-a930-1fd9bc2cb026' # News
   - 'deletepeerentries:a71afc7e-315c-4be0-b69b-5c70a7dc85db' # Departments
   - 'deletepeerentries:a976662e-fc19-4f89-ae6b-a5b4db64752b' # Events
@@ -89,6 +90,7 @@ permissions:
   - 'deletepeerentrydrafts:653ea464-6b43-4bc9-8138-79615323d877' # Blog
   - 'deletepeerentrydrafts:6b8b6979-d75e-432e-8798-2fc0d53eb8f8' # Pages
   - 'deletepeerentrydrafts:77809eb2-6a5b-4988-a869-c707a21e0aa7' # Academic Levels
+  - 'deletepeerentrydrafts:7a544871-c8af-4dc8-83ae-dc5001bc8203' # Tenders
   - 'deletepeerentrydrafts:94e56347-cb09-47d3-a930-1fd9bc2cb026' # News
   - 'deletepeerentrydrafts:a71afc7e-315c-4be0-b69b-5c70a7dc85db' # Departments
   - 'deletepeerentrydrafts:a976662e-fc19-4f89-ae6b-a5b4db64752b' # Events
@@ -120,7 +122,6 @@ permissions:
   - 'savecategories:9ff437c1-0323-4492-a95e-007c3a05ab8f' # Practices
   - 'savecategories:a907570e-41b8-4e87-b566-c2abe353e2a6' # Publication Types
   - 'savecategories:df899104-7d07-489b-954f-20ec40505f31' # Opportunity Types
-  - 'savecategories:d91478a9-22c9-4300-83ef-357a691089d6'
   - 'saveentries:08b4a047-a20d-4d56-81b0-32b599c4fb41' # People
   - 'saveentries:15ad504a-20b4-4e89-b94c-e7be7f135774' # People Index
   - 'saveentries:18803174-20d5-4b61-a067-3072b484f857' # Resources Index
@@ -133,6 +134,7 @@ permissions:
   - 'saveentries:653ea464-6b43-4bc9-8138-79615323d877' # Blog
   - 'saveentries:6b8b6979-d75e-432e-8798-2fc0d53eb8f8' # Pages
   - 'saveentries:77809eb2-6a5b-4988-a869-c707a21e0aa7' # Academic Levels
+  - 'saveentries:7a544871-c8af-4dc8-83ae-dc5001bc8203' # Tenders
   - 'saveentries:94e56347-cb09-47d3-a930-1fd9bc2cb026' # News
   - 'saveentries:a71afc7e-315c-4be0-b69b-5c70a7dc85db' # Departments
   - 'saveentries:a976662e-fc19-4f89-ae6b-a5b4db64752b' # Events
@@ -156,7 +158,6 @@ permissions:
   - 'savepeercategorydrafts:9ff437c1-0323-4492-a95e-007c3a05ab8f' # Practices
   - 'savepeercategorydrafts:a907570e-41b8-4e87-b566-c2abe353e2a6' # Publication Types
   - 'savepeercategorydrafts:df899104-7d07-489b-954f-20ec40505f31' # Opportunity Types
-  - 'savepeercategorydrafts:d91478a9-22c9-4300-83ef-357a691089d6'
   - 'savepeerentries:08b4a047-a20d-4d56-81b0-32b599c4fb41' # People
   - 'savepeerentries:3efc7d18-2f42-40d1-beee-b05867f36104' # Programmes
   - 'savepeerentries:5280da4e-b8fa-4970-9b39-490dd3a96904' # Publications
@@ -164,6 +165,7 @@ permissions:
   - 'savepeerentries:653ea464-6b43-4bc9-8138-79615323d877' # Blog
   - 'savepeerentries:6b8b6979-d75e-432e-8798-2fc0d53eb8f8' # Pages
   - 'savepeerentries:77809eb2-6a5b-4988-a869-c707a21e0aa7' # Academic Levels
+  - 'savepeerentries:7a544871-c8af-4dc8-83ae-dc5001bc8203' # Tenders
   - 'savepeerentries:94e56347-cb09-47d3-a930-1fd9bc2cb026' # News
   - 'savepeerentries:a71afc7e-315c-4be0-b69b-5c70a7dc85db' # Departments
   - 'savepeerentries:a976662e-fc19-4f89-ae6b-a5b4db64752b' # Events
@@ -182,6 +184,7 @@ permissions:
   - 'savepeerentrydrafts:653ea464-6b43-4bc9-8138-79615323d877' # Blog
   - 'savepeerentrydrafts:6b8b6979-d75e-432e-8798-2fc0d53eb8f8' # Pages
   - 'savepeerentrydrafts:77809eb2-6a5b-4988-a869-c707a21e0aa7' # Academic Levels
+  - 'savepeerentrydrafts:7a544871-c8af-4dc8-83ae-dc5001bc8203' # Tenders
   - 'savepeerentrydrafts:94e56347-cb09-47d3-a930-1fd9bc2cb026' # News
   - 'savepeerentrydrafts:a71afc7e-315c-4be0-b69b-5c70a7dc85db' # Departments
   - 'savepeerentrydrafts:a976662e-fc19-4f89-ae6b-a5b4db64752b' # Events
@@ -205,7 +208,6 @@ permissions:
   - 'viewcategories:9ff437c1-0323-4492-a95e-007c3a05ab8f' # Practices
   - 'viewcategories:a907570e-41b8-4e87-b566-c2abe353e2a6' # Publication Types
   - 'viewcategories:df899104-7d07-489b-954f-20ec40505f31' # Opportunity Types
-  - 'viewcategories:d91478a9-22c9-4300-83ef-357a691089d6'
   - 'viewentries:08b4a047-a20d-4d56-81b0-32b599c4fb41' # People
   - 'viewentries:15ad504a-20b4-4e89-b94c-e7be7f135774' # People Index
   - 'viewentries:18803174-20d5-4b61-a067-3072b484f857' # Resources Index
@@ -218,6 +220,7 @@ permissions:
   - 'viewentries:653ea464-6b43-4bc9-8138-79615323d877' # Blog
   - 'viewentries:6b8b6979-d75e-432e-8798-2fc0d53eb8f8' # Pages
   - 'viewentries:77809eb2-6a5b-4988-a869-c707a21e0aa7' # Academic Levels
+  - 'viewentries:7a544871-c8af-4dc8-83ae-dc5001bc8203' # Tenders
   - 'viewentries:94e56347-cb09-47d3-a930-1fd9bc2cb026' # News
   - 'viewentries:a71afc7e-315c-4be0-b69b-5c70a7dc85db' # Departments
   - 'viewentries:a976662e-fc19-4f89-ae6b-a5b4db64752b' # Events
@@ -241,7 +244,6 @@ permissions:
   - 'viewpeercategorydrafts:9ff437c1-0323-4492-a95e-007c3a05ab8f' # Practices
   - 'viewpeercategorydrafts:a907570e-41b8-4e87-b566-c2abe353e2a6' # Publication Types
   - 'viewpeercategorydrafts:df899104-7d07-489b-954f-20ec40505f31' # Opportunity Types
-  - 'viewpeercategorydrafts:d91478a9-22c9-4300-83ef-357a691089d6'
   - 'viewpeerentries:08b4a047-a20d-4d56-81b0-32b599c4fb41' # People
   - 'viewpeerentries:3efc7d18-2f42-40d1-beee-b05867f36104' # Programmes
   - 'viewpeerentries:5280da4e-b8fa-4970-9b39-490dd3a96904' # Publications
@@ -249,6 +251,7 @@ permissions:
   - 'viewpeerentries:653ea464-6b43-4bc9-8138-79615323d877' # Blog
   - 'viewpeerentries:6b8b6979-d75e-432e-8798-2fc0d53eb8f8' # Pages
   - 'viewpeerentries:77809eb2-6a5b-4988-a869-c707a21e0aa7' # Academic Levels
+  - 'viewpeerentries:7a544871-c8af-4dc8-83ae-dc5001bc8203' # Tenders
   - 'viewpeerentries:94e56347-cb09-47d3-a930-1fd9bc2cb026' # News
   - 'viewpeerentries:a71afc7e-315c-4be0-b69b-5c70a7dc85db' # Departments
   - 'viewpeerentries:a976662e-fc19-4f89-ae6b-a5b4db64752b' # Events
@@ -267,6 +270,7 @@ permissions:
   - 'viewpeerentrydrafts:653ea464-6b43-4bc9-8138-79615323d877' # Blog
   - 'viewpeerentrydrafts:6b8b6979-d75e-432e-8798-2fc0d53eb8f8' # Pages
   - 'viewpeerentrydrafts:77809eb2-6a5b-4988-a869-c707a21e0aa7' # Academic Levels
+  - 'viewpeerentrydrafts:7a544871-c8af-4dc8-83ae-dc5001bc8203' # Tenders
   - 'viewpeerentrydrafts:94e56347-cb09-47d3-a930-1fd9bc2cb026' # News
   - 'viewpeerentrydrafts:a71afc7e-315c-4be0-b69b-5c70a7dc85db' # Departments
   - 'viewpeerentrydrafts:a976662e-fc19-4f89-ae6b-a5b4db64752b' # Events

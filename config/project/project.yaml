@@ -1,4 +1,4 @@
-dateModified: 1745998940
+dateModified: 1745999615
 elementSources:
   craft\elements\Category:
     -
@@ -175,20 +175,16 @@ elementSources:
       type: native
     -
       defaultSort:
-        - 'field:32ed2f1a-9024-4ee9-9028-3a5041c0e5e6' # Date
-        - asc
+        - postDate
+        - desc
       defaultViewMode: ''
       disabled: false
       key: 'section:febb1068-1cf0-4781-8a41-bf420bb95e2f' # Jobs
       tableAttributes:
         - link
-        - 'fieldInstance:7f74e83f-d685-4084-ae9f-8bb9396ca1ff'
-        - 'field:15fb4de4-f33b-47b3-aef0-be4a80ad479b' # Department
         - 'field:4a6b0f8c-21ac-43ae-8df2-afe365e78304' # Employment Types
         - postDate
         - 'field:32ed2f1a-9024-4ee9-9028-3a5041c0e5e6' # Date
-        - 'fieldInstance:e30e5ed4-2a93-4299-927a-7993d8dc68b3'
-        - desc
       type: native
     -
       defaultViewMode: ''
@@ -345,6 +341,19 @@ elementSources:
       tableAttributes:
         - link
         - type
+        - dateUpdated
+        - revisionCreator
+      type: native
+    -
+      defaultSort:
+        - postDate
+        - desc
+      defaultViewMode: ''
+      disabled: false
+      key: 'section:7a544871-c8af-4dc8-83ae-dc5001bc8203' # Tenders
+      tableAttributes:
+        - postDate
+        - link
         - dateUpdated
         - revisionCreator
       type: native
@@ -533,6 +542,7 @@ meta:
     6d709589-8e2f-4fef-9c6f-48f5644fb922: Disciplines # Disciplines
     6fd87453-1bda-4bb9-8c8d-4dd36185e75d: 'People: External Contributor' # People: External Contributor
     7a8f449f-4cfb-49db-8656-d7551c298f4c: Authors # Authors
+    7a544871-c8af-4dc8-83ae-dc5001bc8203: Tenders # Tenders
     7b8b18a2-8e96-4b93-bfaa-34a1d9fa86e1: Rich # Rich
     7b76ffa4-3aed-45cd-9087-771dca56704e: Departments # Departments
     7bc0d428-9e00-47b5-b928-67896f29ae17: 'Contact: Website' # Contact: Website
