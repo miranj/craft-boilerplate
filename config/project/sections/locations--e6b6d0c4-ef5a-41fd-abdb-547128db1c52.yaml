@@ -2,10 +2,10 @@ defaultPlacement: end
 enableVersioning: true
 entryTypes:
   -
-    uid: c2bd9b72-0968-4b24-aee2-02048ebf7f8c # Opportunity
-handle: jobs
+    uid: 9eb91e5d-0e36-4e64-9422-f92401aa9500 # Location
+handle: locations
 maxAuthors: 1
-name: Jobs
+name: Locations
 previewTargets:
   -
     __assoc__:
@@ -22,7 +22,10 @@ propagationMethod: all
 siteSettings:
   8341919b-4097-4c45-8f3b-97ff673d9ab5: # $CRAFT_SITE_NAME
     enabledByDefault: true
-    hasUrls: true
-    template: _routers/detail.twig
-    uriFormat: 'jobs/{slug}'
-type: channel
+    hasUrls: false
+    template: null
+    uriFormat: null
+structure:
+  maxLevels: 2
+  uid: f6cf21c5-bd0a-44f5-846d-ecebb189f68e
+type: structure

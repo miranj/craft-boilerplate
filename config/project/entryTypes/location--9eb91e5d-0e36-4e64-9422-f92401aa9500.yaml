@@ -1,6 +1,6 @@
-defaultPlacement: end
+color: null
 fieldLayouts:
-  76cae993-8670-47f7-ab4c-bbbacd3b5315:
+  cbc828b7-a2ad-422c-83d3-b04fbaf28b94:
     tabs:
       -
         elementCondition: null
@@ -10,7 +10,7 @@ fieldLayouts:
             autocomplete: false
             autocorrect: true
             class: null
-            dateAdded: '2025-03-17T03:06:20+00:00'
+            dateAdded: '2025-04-30T07:55:45+00:00'
             disabled: false
             elementCondition: null
             id: null
@@ -25,26 +25,27 @@ fieldLayouts:
             placeholder: null
             providesThumbs: false
             readonly: false
-            requirable: false
+            required: true
             size: null
             step: null
             tip: null
             title: null
-            type: craft\fieldlayoutelements\TitleField
-            uid: e971c3b6-9b90-4044-9789-f6f3765cd6c1
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 2fccd11e-67ac-4885-a328-92bf08d58765
             userCondition: null
             warning: null
             width: 100
         name: Content
-        uid: f74f2b21-6b66-4912-9f25-cc095018a5f9
+        uid: 76578b26-f7b0-469c-97f8-d227a4adf75e
         userCondition: null
-handle: departments
-name: Departments
-siteSettings:
-  8341919b-4097-4c45-8f3b-97ff673d9ab5: # $CRAFT_SITE_NAME
-    hasUrls: false
-    template: null
-    uriFormat: null
-structure:
-  maxLevels: null
-  uid: daa4ed40-2b0d-453c-9186-f6caaf58ca62
+handle: location
+hasTitleField: true
+icon: location-dot
+name: Location
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

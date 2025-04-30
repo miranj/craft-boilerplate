@@ -93,7 +93,7 @@ fieldLayouts:
             dateAdded: '2025-03-13T10:20:28+00:00'
             elementCondition: null
             fieldUid: 32ed2f1a-9024-4ee9-9028-3a5041c0e5e6 # Date
-            handle: null
+            handle: deadline
             includeInCards: false
             instructions: null
             label: 'Application Deadline'
@@ -134,6 +134,22 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: e02cbb50-676b-4032-ab1b-5c5ce776e603
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-04-24T07:52:50+00:00'
+            elementCondition: null
+            fieldUid: a60b8050-4e83-40d0-9598-4a9572ce027a # Location
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5a101ed5-b562-4623-b947-9a04bbdbb64f
             userCondition: null
             warning: null
             width: 100
@@ -188,22 +204,6 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: de6183b0-34d7-4c0b-88bc-a3d591ca693d
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            dateAdded: '2025-04-24T07:52:50+00:00'
-            elementCondition: null
-            fieldUid: a60b8050-4e83-40d0-9598-4a9572ce027a # Location
-            handle: null
-            includeInCards: false
-            instructions: null
-            label: null
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 5a101ed5-b562-4623-b947-9a04bbdbb64f
             userCondition: null
             warning: null
             width: 100
@@ -349,10 +349,10 @@ fieldLayouts:
         name: 'Sharing & SEO'
         uid: f806d2ae-6aa3-48f3-a42b-dd2b804978ea
         userCondition: null
-handle: job
+handle: opportunity
 hasTitleField: true
 icon: suitcase
-name: Job
+name: Opportunity
 showSlugField: true
 showStatusField: true
 slugTranslationKeyFormat: null

@@ -17,19 +17,20 @@ permissions:
   - 'createentries:a976662e-fc19-4f89-ae6b-a5b4db64752b' # Events
   - 'createentries:be130f04-1c51-420d-818e-6d4f5a5960fa' # Resources
   - 'createentries:e39594b6-01d5-4f33-b105-7b111cb3214a' # Testimonials
+  - 'createentries:e6b6d0c4-ef5a-41fd-abdb-547128db1c52' # Locations
   - 'createentries:febb1068-1cf0-4781-8a41-bf420bb95e2f' # Jobs
   - 'createfolders:89c58a76-1da8-4581-84f1-caf2222de75a' # Documents
   - 'createfolders:e421ceea-a2f2-459f-88b9-2695f86047bd' # Images
   - 'deleteassets:89c58a76-1da8-4581-84f1-caf2222de75a' # Documents
   - 'deleteassets:e421ceea-a2f2-459f-88b9-2695f86047bd' # Images
-  - 'deletecategories:08d78078-fb0a-4d0a-88b4-d5dc8238886e' # Locations
+  - 'deletecategories:08d78078-fb0a-4d0a-88b4-d5dc8238886e'
   - 'deletecategories:0bc8375c-5e05-4156-a6c9-5678af911123' # News Types
   - 'deletecategories:0ebe4125-0bbc-4efc-a7d1-055eebd82cb5' # Languages
   - 'deletecategories:53c65b45-5d94-4867-95c3-6b235eef1853' # Focus Areas
   - 'deletecategories:58e76d43-a465-4c1a-b102-2726a9fc13f5' # Resources Types
   - 'deletecategories:6ae2a9cc-c9cc-4b89-9c8c-d7a417cbb87e' # Topics
   - 'deletecategories:6d709589-8e2f-4fef-9c6f-48f5644fb922' # Disciplines
-  - 'deletecategories:7b76ffa4-3aed-45cd-9087-771dca56704e' # Departments
+  - 'deletecategories:7b76ffa4-3aed-45cd-9087-771dca56704e'
   - 'deletecategories:7da8d57d-2f04-4b73-a787-e23c441a48f4' # Employment Types
   - 'deletecategories:8a5099a8-7b2e-4052-b798-5e7d19f38b15' # Event Types
   - 'deletecategories:9ff437c1-0323-4492-a95e-007c3a05ab8f' # Practices
@@ -48,17 +49,18 @@ permissions:
   - 'deleteentries:a976662e-fc19-4f89-ae6b-a5b4db64752b' # Events
   - 'deleteentries:be130f04-1c51-420d-818e-6d4f5a5960fa' # Resources
   - 'deleteentries:e39594b6-01d5-4f33-b105-7b111cb3214a' # Testimonials
+  - 'deleteentries:e6b6d0c4-ef5a-41fd-abdb-547128db1c52' # Locations
   - 'deleteentries:febb1068-1cf0-4781-8a41-bf420bb95e2f' # Jobs
   - 'deletepeerassets:89c58a76-1da8-4581-84f1-caf2222de75a' # Documents
   - 'deletepeerassets:e421ceea-a2f2-459f-88b9-2695f86047bd' # Images
-  - 'deletepeercategorydrafts:08d78078-fb0a-4d0a-88b4-d5dc8238886e' # Locations
+  - 'deletepeercategorydrafts:08d78078-fb0a-4d0a-88b4-d5dc8238886e'
   - 'deletepeercategorydrafts:0bc8375c-5e05-4156-a6c9-5678af911123' # News Types
   - 'deletepeercategorydrafts:0ebe4125-0bbc-4efc-a7d1-055eebd82cb5' # Languages
   - 'deletepeercategorydrafts:53c65b45-5d94-4867-95c3-6b235eef1853' # Focus Areas
   - 'deletepeercategorydrafts:58e76d43-a465-4c1a-b102-2726a9fc13f5' # Resources Types
   - 'deletepeercategorydrafts:6ae2a9cc-c9cc-4b89-9c8c-d7a417cbb87e' # Topics
   - 'deletepeercategorydrafts:6d709589-8e2f-4fef-9c6f-48f5644fb922' # Disciplines
-  - 'deletepeercategorydrafts:7b76ffa4-3aed-45cd-9087-771dca56704e' # Departments
+  - 'deletepeercategorydrafts:7b76ffa4-3aed-45cd-9087-771dca56704e'
   - 'deletepeercategorydrafts:7da8d57d-2f04-4b73-a787-e23c441a48f4' # Employment Types
   - 'deletepeercategorydrafts:8a5099a8-7b2e-4052-b798-5e7d19f38b15' # Event Types
   - 'deletepeercategorydrafts:9ff437c1-0323-4492-a95e-007c3a05ab8f' # Practices
@@ -77,6 +79,7 @@ permissions:
   - 'deletepeerentries:a976662e-fc19-4f89-ae6b-a5b4db64752b' # Events
   - 'deletepeerentries:be130f04-1c51-420d-818e-6d4f5a5960fa' # Resources
   - 'deletepeerentries:e39594b6-01d5-4f33-b105-7b111cb3214a' # Testimonials
+  - 'deletepeerentries:e6b6d0c4-ef5a-41fd-abdb-547128db1c52' # Locations
   - 'deletepeerentries:febb1068-1cf0-4781-8a41-bf420bb95e2f' # Jobs
   - 'deletepeerentrydrafts:08b4a047-a20d-4d56-81b0-32b599c4fb41' # People
   - 'deletepeerentrydrafts:15ad504a-20b4-4e89-b94c-e7be7f135774' # People Index
@@ -98,6 +101,7 @@ permissions:
   - 'deletepeerentrydrafts:be130f04-1c51-420d-818e-6d4f5a5960fa' # Resources
   - 'deletepeerentrydrafts:c5712456-e12b-4cbc-a8cc-b570cf00d66e' # Publications Index
   - 'deletepeerentrydrafts:e39594b6-01d5-4f33-b105-7b111cb3214a' # Testimonials
+  - 'deletepeerentrydrafts:e6b6d0c4-ef5a-41fd-abdb-547128db1c52' # Locations
   - 'deletepeerentrydrafts:febb1068-1cf0-4781-8a41-bf420bb95e2f' # Jobs
   - 'editimages:89c58a76-1da8-4581-84f1-caf2222de75a' # Documents
   - 'editimages:e421ceea-a2f2-459f-88b9-2695f86047bd' # Images
@@ -109,14 +113,14 @@ permissions:
   - 'replacepeerfiles:e421ceea-a2f2-459f-88b9-2695f86047bd' # Images
   - 'saveassets:89c58a76-1da8-4581-84f1-caf2222de75a' # Documents
   - 'saveassets:e421ceea-a2f2-459f-88b9-2695f86047bd' # Images
-  - 'savecategories:08d78078-fb0a-4d0a-88b4-d5dc8238886e' # Locations
+  - 'savecategories:08d78078-fb0a-4d0a-88b4-d5dc8238886e'
   - 'savecategories:0bc8375c-5e05-4156-a6c9-5678af911123' # News Types
   - 'savecategories:0ebe4125-0bbc-4efc-a7d1-055eebd82cb5' # Languages
   - 'savecategories:53c65b45-5d94-4867-95c3-6b235eef1853' # Focus Areas
   - 'savecategories:58e76d43-a465-4c1a-b102-2726a9fc13f5' # Resources Types
   - 'savecategories:6ae2a9cc-c9cc-4b89-9c8c-d7a417cbb87e' # Topics
   - 'savecategories:6d709589-8e2f-4fef-9c6f-48f5644fb922' # Disciplines
-  - 'savecategories:7b76ffa4-3aed-45cd-9087-771dca56704e' # Departments
+  - 'savecategories:7b76ffa4-3aed-45cd-9087-771dca56704e'
   - 'savecategories:7da8d57d-2f04-4b73-a787-e23c441a48f4' # Employment Types
   - 'savecategories:8a5099a8-7b2e-4052-b798-5e7d19f38b15' # Event Types
   - 'savecategories:9ff437c1-0323-4492-a95e-007c3a05ab8f' # Practices
@@ -142,17 +146,18 @@ permissions:
   - 'saveentries:be130f04-1c51-420d-818e-6d4f5a5960fa' # Resources
   - 'saveentries:c5712456-e12b-4cbc-a8cc-b570cf00d66e' # Publications Index
   - 'saveentries:e39594b6-01d5-4f33-b105-7b111cb3214a' # Testimonials
+  - 'saveentries:e6b6d0c4-ef5a-41fd-abdb-547128db1c52' # Locations
   - 'saveentries:febb1068-1cf0-4781-8a41-bf420bb95e2f' # Jobs
   - 'savepeerassets:89c58a76-1da8-4581-84f1-caf2222de75a' # Documents
   - 'savepeerassets:e421ceea-a2f2-459f-88b9-2695f86047bd' # Images
-  - 'savepeercategorydrafts:08d78078-fb0a-4d0a-88b4-d5dc8238886e' # Locations
+  - 'savepeercategorydrafts:08d78078-fb0a-4d0a-88b4-d5dc8238886e'
   - 'savepeercategorydrafts:0bc8375c-5e05-4156-a6c9-5678af911123' # News Types
   - 'savepeercategorydrafts:0ebe4125-0bbc-4efc-a7d1-055eebd82cb5' # Languages
   - 'savepeercategorydrafts:53c65b45-5d94-4867-95c3-6b235eef1853' # Focus Areas
   - 'savepeercategorydrafts:58e76d43-a465-4c1a-b102-2726a9fc13f5' # Resources Types
   - 'savepeercategorydrafts:6ae2a9cc-c9cc-4b89-9c8c-d7a417cbb87e' # Topics
   - 'savepeercategorydrafts:6d709589-8e2f-4fef-9c6f-48f5644fb922' # Disciplines
-  - 'savepeercategorydrafts:7b76ffa4-3aed-45cd-9087-771dca56704e' # Departments
+  - 'savepeercategorydrafts:7b76ffa4-3aed-45cd-9087-771dca56704e'
   - 'savepeercategorydrafts:7da8d57d-2f04-4b73-a787-e23c441a48f4' # Employment Types
   - 'savepeercategorydrafts:8a5099a8-7b2e-4052-b798-5e7d19f38b15' # Event Types
   - 'savepeercategorydrafts:9ff437c1-0323-4492-a95e-007c3a05ab8f' # Practices
@@ -171,6 +176,7 @@ permissions:
   - 'savepeerentries:a976662e-fc19-4f89-ae6b-a5b4db64752b' # Events
   - 'savepeerentries:be130f04-1c51-420d-818e-6d4f5a5960fa' # Resources
   - 'savepeerentries:e39594b6-01d5-4f33-b105-7b111cb3214a' # Testimonials
+  - 'savepeerentries:e6b6d0c4-ef5a-41fd-abdb-547128db1c52' # Locations
   - 'savepeerentries:febb1068-1cf0-4781-8a41-bf420bb95e2f' # Jobs
   - 'savepeerentrydrafts:08b4a047-a20d-4d56-81b0-32b599c4fb41' # People
   - 'savepeerentrydrafts:15ad504a-20b4-4e89-b94c-e7be7f135774' # People Index
@@ -192,17 +198,18 @@ permissions:
   - 'savepeerentrydrafts:be130f04-1c51-420d-818e-6d4f5a5960fa' # Resources
   - 'savepeerentrydrafts:c5712456-e12b-4cbc-a8cc-b570cf00d66e' # Publications Index
   - 'savepeerentrydrafts:e39594b6-01d5-4f33-b105-7b111cb3214a' # Testimonials
+  - 'savepeerentrydrafts:e6b6d0c4-ef5a-41fd-abdb-547128db1c52' # Locations
   - 'savepeerentrydrafts:febb1068-1cf0-4781-8a41-bf420bb95e2f' # Jobs
   - 'viewassets:89c58a76-1da8-4581-84f1-caf2222de75a' # Documents
   - 'viewassets:e421ceea-a2f2-459f-88b9-2695f86047bd' # Images
-  - 'viewcategories:08d78078-fb0a-4d0a-88b4-d5dc8238886e' # Locations
+  - 'viewcategories:08d78078-fb0a-4d0a-88b4-d5dc8238886e'
   - 'viewcategories:0bc8375c-5e05-4156-a6c9-5678af911123' # News Types
   - 'viewcategories:0ebe4125-0bbc-4efc-a7d1-055eebd82cb5' # Languages
   - 'viewcategories:53c65b45-5d94-4867-95c3-6b235eef1853' # Focus Areas
   - 'viewcategories:58e76d43-a465-4c1a-b102-2726a9fc13f5' # Resources Types
   - 'viewcategories:6ae2a9cc-c9cc-4b89-9c8c-d7a417cbb87e' # Topics
   - 'viewcategories:6d709589-8e2f-4fef-9c6f-48f5644fb922' # Disciplines
-  - 'viewcategories:7b76ffa4-3aed-45cd-9087-771dca56704e' # Departments
+  - 'viewcategories:7b76ffa4-3aed-45cd-9087-771dca56704e'
   - 'viewcategories:7da8d57d-2f04-4b73-a787-e23c441a48f4' # Employment Types
   - 'viewcategories:8a5099a8-7b2e-4052-b798-5e7d19f38b15' # Event Types
   - 'viewcategories:9ff437c1-0323-4492-a95e-007c3a05ab8f' # Practices
@@ -228,17 +235,18 @@ permissions:
   - 'viewentries:be130f04-1c51-420d-818e-6d4f5a5960fa' # Resources
   - 'viewentries:c5712456-e12b-4cbc-a8cc-b570cf00d66e' # Publications Index
   - 'viewentries:e39594b6-01d5-4f33-b105-7b111cb3214a' # Testimonials
+  - 'viewentries:e6b6d0c4-ef5a-41fd-abdb-547128db1c52' # Locations
   - 'viewentries:febb1068-1cf0-4781-8a41-bf420bb95e2f' # Jobs
   - 'viewpeerassets:89c58a76-1da8-4581-84f1-caf2222de75a' # Documents
   - 'viewpeerassets:e421ceea-a2f2-459f-88b9-2695f86047bd' # Images
-  - 'viewpeercategorydrafts:08d78078-fb0a-4d0a-88b4-d5dc8238886e' # Locations
+  - 'viewpeercategorydrafts:08d78078-fb0a-4d0a-88b4-d5dc8238886e'
   - 'viewpeercategorydrafts:0bc8375c-5e05-4156-a6c9-5678af911123' # News Types
   - 'viewpeercategorydrafts:0ebe4125-0bbc-4efc-a7d1-055eebd82cb5' # Languages
   - 'viewpeercategorydrafts:53c65b45-5d94-4867-95c3-6b235eef1853' # Focus Areas
   - 'viewpeercategorydrafts:58e76d43-a465-4c1a-b102-2726a9fc13f5' # Resources Types
   - 'viewpeercategorydrafts:6ae2a9cc-c9cc-4b89-9c8c-d7a417cbb87e' # Topics
   - 'viewpeercategorydrafts:6d709589-8e2f-4fef-9c6f-48f5644fb922' # Disciplines
-  - 'viewpeercategorydrafts:7b76ffa4-3aed-45cd-9087-771dca56704e' # Departments
+  - 'viewpeercategorydrafts:7b76ffa4-3aed-45cd-9087-771dca56704e'
   - 'viewpeercategorydrafts:7da8d57d-2f04-4b73-a787-e23c441a48f4' # Employment Types
   - 'viewpeercategorydrafts:8a5099a8-7b2e-4052-b798-5e7d19f38b15' # Event Types
   - 'viewpeercategorydrafts:9ff437c1-0323-4492-a95e-007c3a05ab8f' # Practices
@@ -257,6 +265,7 @@ permissions:
   - 'viewpeerentries:a976662e-fc19-4f89-ae6b-a5b4db64752b' # Events
   - 'viewpeerentries:be130f04-1c51-420d-818e-6d4f5a5960fa' # Resources
   - 'viewpeerentries:e39594b6-01d5-4f33-b105-7b111cb3214a' # Testimonials
+  - 'viewpeerentries:e6b6d0c4-ef5a-41fd-abdb-547128db1c52' # Locations
   - 'viewpeerentries:febb1068-1cf0-4781-8a41-bf420bb95e2f' # Jobs
   - 'viewpeerentrydrafts:08b4a047-a20d-4d56-81b0-32b599c4fb41' # People
   - 'viewpeerentrydrafts:15ad504a-20b4-4e89-b94c-e7be7f135774' # People Index
@@ -278,4 +287,5 @@ permissions:
   - 'viewpeerentrydrafts:be130f04-1c51-420d-818e-6d4f5a5960fa' # Resources
   - 'viewpeerentrydrafts:c5712456-e12b-4cbc-a8cc-b570cf00d66e' # Publications Index
   - 'viewpeerentrydrafts:e39594b6-01d5-4f33-b105-7b111cb3214a' # Testimonials
+  - 'viewpeerentrydrafts:e6b6d0c4-ef5a-41fd-abdb-547128db1c52' # Locations
   - 'viewpeerentrydrafts:febb1068-1cf0-4781-8a41-bf420bb95e2f' # Jobs
