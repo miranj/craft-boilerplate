@@ -1,4 +1,4 @@
-dateModified: 1745895866
+dateModified: 1745983918
 elementSources:
   craft\elements\Category:
     -
@@ -559,6 +559,7 @@ meta:
     69339afc-d4f1-440b-a7ad-7da2ccb77972: Image # Image
     77809eb2-6a5b-4988-a869-c707a21e0aa7: 'Academic Levels' # Academic Levels
     386721be-1ee4-4e3b-b22c-7fb3dfded3ff: 'Simple Text' # Simple Text
+    530100d4-da7c-43c5-bfc1-65cf13988e46: Search # Search
     856911a9-89f9-4865-bdb1-5665460c6c23: 'Contact & Social Media Information' # Contact & Social Media Information
     8341919b-4097-4c45-8f3b-97ff673d9ab5: $CRAFT_SITE_NAME # $CRAFT_SITE_NAME
     11127416-2baf-40e9-bb28-9ea76040af2a: 'Org Person Roles' # Org Person Roles
