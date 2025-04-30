@@ -6,6 +6,7 @@ permissions:
   - accesssitewhensystemisoff
   - 'editglobalset:25388890-1b39-49c8-8d89-7ef2d82f89a1' # Newsletter
   - 'editglobalset:295e5325-afca-4a03-93e9-ed957c574148' # Footer
+  - 'editglobalset:2b2b62be-5ea6-4d06-96a3-39fbff3667bf' # Organisation
   - 'editglobalset:8447c697-1e38-439d-bfcc-beac5bf1ae31' # Sharing & SEO
   - 'editglobalset:b5fe8dff-122f-4559-8bbb-d4049e479d18' # Google Analytics
   - 'navigation-managenav:bef1e8c5-21ad-4d45-99b3-ec94169d0dc4' # Footer
