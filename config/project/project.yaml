@@ -1,4 +1,4 @@
-dateModified: 1745981930
+dateModified: 1745982304
 elementSources:
   craft\elements\Category:
     -
@@ -593,6 +593,7 @@ meta:
     7395f359-de01-4595-b728-81edf64158fc: 'Contact: Phone' # Contact: Phone
     8447c697-1e38-439d-bfcc-beac5bf1ae31: 'Sharing & SEO' # Sharing & SEO
     23995e04-c457-4eeb-b78d-1c22f16cf4f6: 'URL (Email)' # URL (Email)
+    39948e92-227e-4217-a6f1-aa40b8fcf04e: 'Projects Index' # Projects Index
     48487c17-d2de-429d-8998-07287da4a844: Project # Project
     61317d04-b4b5-4b2f-ad77-e1d87029c361: 'Legacy URL' # Legacy URL
     69339afc-d4f1-440b-a7ad-7da2ccb77972: Image # Image
