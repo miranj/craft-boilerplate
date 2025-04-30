@@ -35,10 +35,14 @@ Release notes for Miranj's Craft Boilerplate starter project.
   - _Resource Types_ category, _Resource Type_ field
   - _Topics_ category and field
 - The following fields have also been added:
-  - _Content Blocks: Faculty_, _Content Blocks: Projects_
-  - _Simple Navigation_, _Contact Information_, _Credits_
-  - _Author Type_, _External Person Roles_, various _Hyperlink_ and _Url_ options, _Date_, _Media Embed_
-  - Added _Collapse_, _Button_, _Media Embed_, block type to the _Body_ field and a _Nested Body_ field was created for nesting content in _Collapse_ blocks.
+  - Content Blocks:
+    - _Content Blocks: Faculty_, _Content Blocks: Projects_
+  - Content Builders:
+    - _Simple Navigation_, _Contact Information_, _Credits_
+  - Body Blocks:
+    - Added _Collapse_, _Button_, _Media Embed_, block type to the _Body_ field and a _Nested Body_ field was created for nesting content in _Collapse_ blocks.
+  - Other Fields:
+    - _Author Type_, _External Person Roles_, various _Hyperlink_ and _Url_ options, _Date_, _Media Embed_
 
 ### Craft
 

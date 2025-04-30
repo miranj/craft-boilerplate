@@ -1,7 +1,7 @@
 columnSuffix: null
-handle: credits
+handle: teams
 instructions: null
-name: Credits
+name: Teams
 searchable: true
 settings:
   createButtonLabel: 'Add credit'

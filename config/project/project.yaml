@@ -1,4 +1,4 @@
-dateModified: 1745982304
+dateModified: 1746013477
 elementSources:
   craft\elements\Category:
     -
@@ -652,7 +652,7 @@ meta:
     ece488e2-352e-44a2-8a74-1baf13a4f946: 'Social: Instagram' # Social: Instagram
     ed5b1453-5dc4-4e73-8865-dad39383c4cb: 'URL (Entries, URL)' # URL (Entries, URL)
     f6fd4187-da05-45cb-adfd-7367ca82dc1f: 'Body (Nested)' # Body (Nested)
-    f9f26c9a-936a-4901-90ca-e8c5c2997475: Credits # Credits
+    f9f26c9a-936a-4901-90ca-e8c5c2997475: Teams # Teams
     f719c927-90fd-4ace-a58e-ddea5675c7d2: Office # Office
     fa35f4cd-b237-4493-8c4e-4e25855164ff: 'Block: Rich Text Collapse' # Block: Rich Text Collapse
     fad3fe56-0b6b-46c4-a97b-b7fb98847f3c: 'Media Embed' # Media Embed
