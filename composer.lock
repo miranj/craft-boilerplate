@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5ee91d65a3cf09b136e6ed46078e4c20",
+    "content-hash": "aa7abfdfc88c76e396765837067f3747",
     "packages": [
         {
             "name": "aws/aws-crt-php",
@@ -894,6 +894,70 @@
                 "source": "https://github.com/craftcms/server-check"
             },
             "time": "2025-02-11T20:26:29+00:00"
+        },
+        {
+            "name": "craftcms/store-hours",
+            "version": "4.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/craftcms/store-hours.git",
+                "reference": "6560463178e4890d683e602bbda163e37dea7c12"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/craftcms/store-hours/zipball/6560463178e4890d683e602bbda163e37dea7c12",
+                "reference": "6560463178e4890d683e602bbda163e37dea7c12",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^5.0.0-beta.1",
+                "php": "^8.2"
+            },
+            "require-dev": {
+                "craftcms/ecs": "dev-main",
+                "craftcms/phpstan": "dev-main",
+                "craftcms/rector": "dev-main"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Store Hours",
+                "handle": "store-hours",
+                "schemaVersion": "1.0.2",
+                "documentationUrl": "https://github.com/craftcms/store-hours/blob/v2/README.md"
+            },
+            "autoload": {
+                "psr-4": {
+                    "craft\\storehours\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Pixel & Tonic",
+                    "homepage": "https://pixelandtonic.com/"
+                }
+            ],
+            "description": "This plugin adds a new “Store Hours” field type to Craft, for collecting the opening and closing hours of a business for each day of the week.",
+            "keywords": [
+                "cms",
+                "craftcms",
+                "hours",
+                "html",
+                "json",
+                "store",
+                "yii2"
+            ],
+            "support": {
+                "docs": "https://github.com/craftcms/store-hours/blob/v2/README.md",
+                "email": "support@craftcms.com",
+                "issues": "https://github.com/craftcms/store-hours/issues?state=open",
+                "rss": "https://github.com/craftcms/store-hours/commits/v2.atom",
+                "source": "https://github.com/craftcms/store-hours"
+            },
+            "time": "2024-07-28T17:22:28+00:00"
         },
         {
             "name": "creocoder/yii2-nested-sets",

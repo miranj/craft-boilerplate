@@ -109,7 +109,7 @@ fieldLayouts:
             dateAdded: '2025-03-17T03:07:14+00:00'
             elementCondition: null
             fieldUid: 840acb32-6694-40d0-9384-60a0220c1de0 # Label
-            handle: employmentStart
+            handle: opportunityStart
             includeInCards: false
             instructions: null
             label: 'Employment Start'
@@ -349,10 +349,10 @@ fieldLayouts:
         name: 'Sharing & SEO'
         uid: f806d2ae-6aa3-48f3-a42b-dd2b804978ea
         userCondition: null
-handle: opportunity
+handle: job
 hasTitleField: true
 icon: suitcase
-name: Opportunity
+name: Job
 showSlugField: true
 showStatusField: true
 slugTranslationKeyFormat: null
