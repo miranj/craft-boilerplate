@@ -19,7 +19,7 @@ Release notes for Miranj's Craft Boilerplate starter project.
   - _Offices_ section, _Office_ entry type, _Offices_ field
   - _People_ and _People Index_ sections, _Org Member_ and _External Contributor_ entry types, _Authors_ and _People_ fields
   - _Programmes_ section, _Programme_ entry type and a _Programmes_ field
-  - _Projects_ sections
+  - _Projects_ and _Projects Index_ sections
   - _Publications_ and _Publications Index_ sections, _Publication_ entry type
   - _Resources_ and _Resources Index_ sections, _Resource_ and _Resource Link_ entry types
   - _Testimonials_ section, _Testimonial_ entry type
