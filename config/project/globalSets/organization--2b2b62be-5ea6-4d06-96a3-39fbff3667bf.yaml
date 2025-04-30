@@ -1,0 +1,50 @@
+fieldLayouts:
+  afbdcacb-a764-4303-bf75-a7e2f42e25db:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-04-30T04:15:36+00:00'
+            elementCondition: null
+            fieldUid: afc7f0bc-1b97-4841-a1d2-5b0385a7ca35 # Plain Text
+            handle: address
+            includeInCards: false
+            instructions: null
+            label: Address
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 56e409d6-1fb9-46c1-98ac-3c848c90e9ea
+            userCondition: null
+            warning: null
+            width: 100
+        name: Address
+        uid: ea5f0d59-8e8a-4f5e-887b-2f56727301e4
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-04-30T04:15:36+00:00'
+            elementCondition: null
+            fieldUid: 856911a9-89f9-4865-bdb1-5665460c6c23 # Contact & Social Media Information
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 9dde33fc-07a7-4c03-b445-8f5164d3576e
+            userCondition: null
+            warning: null
+            width: 100
+        name: Contact
+        uid: 8ced62f9-43c3-4e78-8959-b443b83f90c3
+        userCondition: null
+handle: organization
+name: Organization
+sortOrder: 1
