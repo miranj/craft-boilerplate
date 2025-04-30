@@ -71,10 +71,10 @@ fieldLayouts:
         name: Node
         uid: c9f5a894-8712-43a5-8195-1bfd6d47d38d
         userCondition: null
-handle: footerSecondary
+handle: fineprintNavigation
 instructions: ''
 maxNodes: null
-name: 'Footer Secondary'
+name: Fineprint
 permissions:
   craft\elements\Asset:
     enabled: '1'
