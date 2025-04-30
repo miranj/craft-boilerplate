@@ -1,0 +1,102 @@
+defaultPlacement: end
+fieldLayouts:
+  743ddc6d-677b-42f7-a874-2a8f573948ea:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: '2025-04-30T03:51:37+00:00'
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\TitleField
+            uid: 4776c77e-add3-4742-9d2c-857d69bd5d7d
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-04-30T03:51:37+00:00'
+            elementCondition: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: verbb\navigation\fieldlayoutelements\NodeTypeElements
+            uid: fa6cd97e-83e1-47a5-84c5-00da59d408b9
+            userCondition: null
+            warning: null
+        name: Node
+        uid: c3e931a0-3aaa-4d44-9578-abb221a8f223
+        userCondition: null
+handle: footer
+instructions: 'This will render the secondary site navigation in the footer at the bottom of the page. There can be a maximum of 4 items at the top level.'
+maxNodes: null
+maxNodesSettings:
+  -
+    level: '1'
+    max: '4'
+name: Footer
+permissions:
+  craft\elements\Asset:
+    enabled: '1'
+    permissions:
+      - 'volume:89c58a76-1da8-4581-84f1-caf2222de75a' # Documents
+  craft\elements\Category:
+    enabled: ''
+    permissions: '*'
+  craft\elements\Entry:
+    enabled: '1'
+    permissions:
+      - 'custom:7e0fdfb7-2573-4d33-9aa1-9d6f7877de37'
+      - 'custom:8011777f-f2c5-449e-9053-d48b36d995f6'
+      - 'custom:b6b6db60-afda-4442-8e36-6279d2b2387d'
+      - 'section:be130f04-1c51-420d-818e-6d4f5a5960fa' # Resources
+      - 'section:5280da4e-b8fa-4970-9b39-490dd3a96904' # Publications
+      - 'section:3efc7d18-2f42-40d1-beee-b05867f36104' # Programmes
+      - 'custom:74176ca4-24f3-451c-9878-05473385ae3e'
+      - 'section:54bdab3f-b980-46c0-a830-de704b143895' # Offices
+      - 'section:94e56347-cb09-47d3-a930-1fd9bc2cb026' # News
+      - 'section:a71afc7e-315c-4be0-b69b-5c70a7dc85db' # Departments
+      - 'section:a976662e-fc19-4f89-ae6b-a5b4db64752b' # Events
+      - 'section:653ea464-6b43-4bc9-8138-79615323d877' # Blog
+      - 'section:6b8b6979-d75e-432e-8798-2fc0d53eb8f8' # Pages
+      - 'custom:1aa71832-b8e6-4557-b0d7-6fcea7f324b3'
+      - 'custom:bb29a724-9ba6-4bcb-bcaa-928112733af1'
+  craft\elements\Tag:
+    enabled: ''
+    permissions: '*'
+  verbb\navigation\nodetypes\CustomType:
+    enabled: '1'
+  verbb\navigation\nodetypes\PassiveType:
+    enabled: '1'
+propagationMethod: all
+siteSettings:
+  8341919b-4097-4c45-8f3b-97ff673d9ab5: # $CRAFT_SITE_NAME
+    enabled: true
+sortOrder: 2
+structure:
+  maxLevels: 2
+  uid: b9e4c370-69f6-47cf-a49e-e8e729b2c366

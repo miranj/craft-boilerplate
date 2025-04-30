@@ -1,4 +1,4 @@
-dateModified: 1746009538
+dateModified: 1746012162
 elementSources:
   craft\elements\Category:
     -
@@ -634,8 +634,8 @@ meta:
     18803174-20d5-4b61-a067-3072b484f857: 'Resources Index' # Resources Index
     21177498-20b3-426a-bf81-df7eeec48389: 'Block: Button' # Block: Button
     25388890-1b39-49c8-8d89-7ef2d82f89a1: Newsletter # Newsletter
-    a3f3307a-1056-486e-9ed7-fb4e84632cb0: 'Jobs Index' # Jobs Index
     a0320c92-dcb7-489b-94e3-bd21fdc647cc: Practices # Practices
+    a3f3307a-1056-486e-9ed7-fb4e84632cb0: 'Jobs Index' # Jobs Index
     a6b97e16-5236-44b1-ad57-3899644efd40: 'Link (Assets, Entries, URL)' # Link (Assets, Entries, URL)
     a53f5b40-fb8c-4a9d-8c25-dc8e3dfe58d6: Code # Code
     a60b8050-4e83-40d0-9598-4a9572ce027a: Location # Location
@@ -662,6 +662,7 @@ meta:
     bc20ba64-4979-418f-aa28-244626f315ab: 'Home Page' # Home Page
     be130f04-1c51-420d-818e-6d4f5a5960fa: Resources # Resources
     be827b12-3e63-4d2a-b17a-5c60ab99f248: 'Publication Type' # Publication Type
+    bef1e8c5-21ad-4d45-99b3-ec94169d0dc4: Footer # Footer
     c2bd9b72-0968-4b24-aee2-02048ebf7f8c: Job # Job
     c4c680e9-4168-4267-9e83-2d8e26d5efc8: 'Opportunity Types' # Opportunity Types
     c4fb7c86-c508-4410-9362-e47f5b604631: Programme # Programme
@@ -686,6 +687,8 @@ meta:
     e39594b6-01d5-4f33-b105-7b111cb3214a: Testimonials # Testimonials
     ece488e2-352e-44a2-8a74-1baf13a4f946: 'Social: Instagram' # Social: Instagram
     ed5b1453-5dc4-4e73-8865-dad39383c4cb: 'URL (Entries, URL)' # URL (Entries, URL)
+    ef1fcb64-1148-4086-92c8-fb30518b08f2: Fineprint # Fineprint
+    efdbd7cb-36f6-45d5-a18b-b5079f4c9ae3: Header # Header
     f6fd4187-da05-45cb-adfd-7367ca82dc1f: 'Body (Nested)' # Body (Nested)
     f719c927-90fd-4ace-a58e-ddea5675c7d2: Office # Office
     fa35f4cd-b237-4493-8c4e-4e25855164ff: 'Block: Rich Text Collapse' # Block: Rich Text Collapse
@@ -730,6 +733,11 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
+  navigation:
+    edition: standard
+    enabled: true
+    licenseKey: $CRAFT_LICENSE_NAVIGATION
+    schemaVersion: 2.1.0
   nocache:
     edition: standard
     enabled: true
