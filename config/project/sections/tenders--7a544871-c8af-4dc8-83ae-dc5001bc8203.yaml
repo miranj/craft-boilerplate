@@ -1,0 +1,28 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  -
+    uid: 2fdb1d61-016d-4220-abbb-27c126f21352 # Tender
+handle: tenders
+maxAuthors: 1
+name: Tenders
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  8341919b-4097-4c45-8f3b-97ff673d9ab5: # $CRAFT_SITE_NAME
+    enabledByDefault: true
+    hasUrls: true
+    template: _routers/detail.twig
+    uriFormat: 'tenders/{slug}'
+type: channel

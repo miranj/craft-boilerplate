@@ -14,21 +14,25 @@ Release notes for Miranj's Craft Boilerplate starter project.
   - _Academic Levels_ section, _Academic Level_ entry type, and _Academic Level_ field
   - _Departments_ section, _Department_ entry type, and _Department_ and _Departments_ field
   - _Events_ section, _Event_ entry type
+    \_ _Jobs_ and _Jobs Index_ sections, _Job_ entry type
   - _News_ and _News Index_ sections, _News_ entry type
-  - _Organizations_ section, _Organization_ entry type
-  - _Offices_ section, _Office_ entry type, _Offices_ field
+  - _Organisations_ section, _Organisation_ entry type
+  - _Offices_ and _Offices Index_ sections, _Office_ entry type, _Offices_ field
   - _People_ and _People Index_ sections, _Org Member_ and _External Contributor_ entry types, _Authors_ and _People_ fields
-  - _Programmes_ section, _Programme_ entry type and a _Programmes_ field
-  - _Projects_ and _Projects Index_ sections
+  - _Programmes_ and _Programmes Index_ sections, _Programme_ entry type and a _Programmes_ field
+  - _Projects_ and _Projects Index_ sections, _Project_ entry type
   - _Publications_ and _Publications Index_ sections, _Publication_ entry type
   - _Resources_ and _Resources Index_ sections, _Resource_ and _Resource Link_ entry types
   - _Testimonials_ section, _Testimonial_ entry type
+  - _Search_ section
+    \_ _Tenders_ section, _Tender_ entry type
 - The following categories and corresponding fields have been added:
-  - _Disciplines_ category,
+  - _Disciplines_ category
   - _Event Types_ category and field
   - _Focus Areas_ and field
   - _Languages_ category and field
   - _News Types_ category, _News Type_ field
+  - _Oportunities Types_ category and field
   - _Publications Types_ category, _Publications Type_ field
   - _Practices_ category and field
   - _Project Types_ and field
@@ -43,9 +47,13 @@ Release notes for Miranj's Craft Boilerplate starter project.
     - Added _Collapse_, _Button_, _Media Embed_, block type to the _Body_ field and a _Nested Body_ field was created for nesting content in _Collapse_ blocks.
   - Other Fields:
     - _Author Type_, _External Person Roles_, various _Hyperlink_ and _Url_ options, _Date_, _Media Embed_
+- The following navigations have been created: _Header, Footer_ and _Fineprint_
+- Added the _Organisation_ global set
 
 ### Craft
 
+- Installed Navigation 3.0.6.
+- Installed Store Hours 4.2.0.
 - Installed oEmbed 3.1.4.
 - Updated Craft CMS to 5.6.17.
 - Updated CKEditor to 4.6.0.
