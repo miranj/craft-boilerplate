@@ -48,26 +48,6 @@ fieldLayouts:
             uid: a10e9f14-8ab5-4b0b-90a6-8e0013ce72a8
             userCondition: null
             warning: null
-          -
-            attribute: newWindow
-            dateAdded: '2025-04-30T03:55:36+00:00'
-            elementCondition: null
-            id: null
-            includeInCards: false
-            instructions: null
-            label: null
-            mandatory: false
-            orientation: null
-            providesThumbs: false
-            requirable: true
-            required: false
-            tip: null
-            translatable: false
-            type: verbb\navigation\fieldlayoutelements\NewWindowField
-            uid: da56454e-30cf-47c2-b814-48ffb88b7c3c
-            userCondition: null
-            warning: null
-            width: 100
         name: Node
         uid: c9f5a894-8712-43a5-8195-1bfd6d47d38d
         userCondition: null

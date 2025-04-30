@@ -49,26 +49,6 @@ fieldLayouts:
             userCondition: null
             warning: null
           -
-            attribute: newWindow
-            dateAdded: '2025-04-30T03:47:43+00:00'
-            elementCondition: null
-            id: null
-            includeInCards: false
-            instructions: null
-            label: null
-            mandatory: false
-            orientation: null
-            providesThumbs: false
-            requirable: true
-            required: false
-            tip: null
-            translatable: false
-            type: verbb\navigation\fieldlayoutelements\NewWindowField
-            uid: e9e72fa2-ab5a-487c-81e4-71ae6f969235
-            userCondition: null
-            warning: null
-            width: 100
-          -
             dateAdded: '2025-04-30T04:02:02+00:00'
             elementCondition:
               class: verbb\navigation\elements\conditions\NodeCondition
