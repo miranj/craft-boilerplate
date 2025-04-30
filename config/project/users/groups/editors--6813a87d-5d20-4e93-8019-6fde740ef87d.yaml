@@ -29,7 +29,7 @@ permissions:
   - 'deletecategories:58e76d43-a465-4c1a-b102-2726a9fc13f5' # Resources Types
   - 'deletecategories:6ae2a9cc-c9cc-4b89-9c8c-d7a417cbb87e' # Topics
   - 'deletecategories:6d709589-8e2f-4fef-9c6f-48f5644fb922' # Disciplines
-  - 'deletecategories:7b76ffa4-3aed-45cd-9087-771dca56704e' # Departments
+  - 'deletecategories:7b76ffa4-3aed-45cd-9087-771dca56704e'
   - 'deletecategories:7da8d57d-2f04-4b73-a787-e23c441a48f4' # Employment Types
   - 'deletecategories:8a5099a8-7b2e-4052-b798-5e7d19f38b15' # Event Types
   - 'deletecategories:9ff437c1-0323-4492-a95e-007c3a05ab8f' # Practices
@@ -58,7 +58,7 @@ permissions:
   - 'deletepeercategorydrafts:58e76d43-a465-4c1a-b102-2726a9fc13f5' # Resources Types
   - 'deletepeercategorydrafts:6ae2a9cc-c9cc-4b89-9c8c-d7a417cbb87e' # Topics
   - 'deletepeercategorydrafts:6d709589-8e2f-4fef-9c6f-48f5644fb922' # Disciplines
-  - 'deletepeercategorydrafts:7b76ffa4-3aed-45cd-9087-771dca56704e' # Departments
+  - 'deletepeercategorydrafts:7b76ffa4-3aed-45cd-9087-771dca56704e'
   - 'deletepeercategorydrafts:7da8d57d-2f04-4b73-a787-e23c441a48f4' # Employment Types
   - 'deletepeercategorydrafts:8a5099a8-7b2e-4052-b798-5e7d19f38b15' # Event Types
   - 'deletepeercategorydrafts:9ff437c1-0323-4492-a95e-007c3a05ab8f' # Practices
@@ -116,7 +116,7 @@ permissions:
   - 'savecategories:58e76d43-a465-4c1a-b102-2726a9fc13f5' # Resources Types
   - 'savecategories:6ae2a9cc-c9cc-4b89-9c8c-d7a417cbb87e' # Topics
   - 'savecategories:6d709589-8e2f-4fef-9c6f-48f5644fb922' # Disciplines
-  - 'savecategories:7b76ffa4-3aed-45cd-9087-771dca56704e' # Departments
+  - 'savecategories:7b76ffa4-3aed-45cd-9087-771dca56704e'
   - 'savecategories:7da8d57d-2f04-4b73-a787-e23c441a48f4' # Employment Types
   - 'savecategories:8a5099a8-7b2e-4052-b798-5e7d19f38b15' # Event Types
   - 'savecategories:9ff437c1-0323-4492-a95e-007c3a05ab8f' # Practices
@@ -152,7 +152,7 @@ permissions:
   - 'savepeercategorydrafts:58e76d43-a465-4c1a-b102-2726a9fc13f5' # Resources Types
   - 'savepeercategorydrafts:6ae2a9cc-c9cc-4b89-9c8c-d7a417cbb87e' # Topics
   - 'savepeercategorydrafts:6d709589-8e2f-4fef-9c6f-48f5644fb922' # Disciplines
-  - 'savepeercategorydrafts:7b76ffa4-3aed-45cd-9087-771dca56704e' # Departments
+  - 'savepeercategorydrafts:7b76ffa4-3aed-45cd-9087-771dca56704e'
   - 'savepeercategorydrafts:7da8d57d-2f04-4b73-a787-e23c441a48f4' # Employment Types
   - 'savepeercategorydrafts:8a5099a8-7b2e-4052-b798-5e7d19f38b15' # Event Types
   - 'savepeercategorydrafts:9ff437c1-0323-4492-a95e-007c3a05ab8f' # Practices
@@ -202,7 +202,7 @@ permissions:
   - 'viewcategories:58e76d43-a465-4c1a-b102-2726a9fc13f5' # Resources Types
   - 'viewcategories:6ae2a9cc-c9cc-4b89-9c8c-d7a417cbb87e' # Topics
   - 'viewcategories:6d709589-8e2f-4fef-9c6f-48f5644fb922' # Disciplines
-  - 'viewcategories:7b76ffa4-3aed-45cd-9087-771dca56704e' # Departments
+  - 'viewcategories:7b76ffa4-3aed-45cd-9087-771dca56704e'
   - 'viewcategories:7da8d57d-2f04-4b73-a787-e23c441a48f4' # Employment Types
   - 'viewcategories:8a5099a8-7b2e-4052-b798-5e7d19f38b15' # Event Types
   - 'viewcategories:9ff437c1-0323-4492-a95e-007c3a05ab8f' # Practices
@@ -238,7 +238,7 @@ permissions:
   - 'viewpeercategorydrafts:58e76d43-a465-4c1a-b102-2726a9fc13f5' # Resources Types
   - 'viewpeercategorydrafts:6ae2a9cc-c9cc-4b89-9c8c-d7a417cbb87e' # Topics
   - 'viewpeercategorydrafts:6d709589-8e2f-4fef-9c6f-48f5644fb922' # Disciplines
-  - 'viewpeercategorydrafts:7b76ffa4-3aed-45cd-9087-771dca56704e' # Departments
+  - 'viewpeercategorydrafts:7b76ffa4-3aed-45cd-9087-771dca56704e'
   - 'viewpeercategorydrafts:7da8d57d-2f04-4b73-a787-e23c441a48f4' # Employment Types
   - 'viewpeercategorydrafts:8a5099a8-7b2e-4052-b798-5e7d19f38b15' # Event Types
   - 'viewpeercategorydrafts:9ff437c1-0323-4492-a95e-007c3a05ab8f' # Practices
