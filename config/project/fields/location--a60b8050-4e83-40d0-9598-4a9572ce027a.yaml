@@ -5,17 +5,18 @@ name: Location
 searchable: false
 settings:
   allowSelfRelations: false
-  branchLimit: 1
-  maintainHierarchy: true
+  branchLimit: null
+  maintainHierarchy: false
   maxRelations: null
   minRelations: null
-  selectionLabel: 'Add a location'
+  selectionLabel: null
   showCardsInGrid: false
-  showSiteMenu: false
-  source: 'group:08d78078-fb0a-4d0a-88b4-d5dc8238886e' # Locations
+  showSiteMenu: true
+  sources:
+    - 'section:e6b6d0c4-ef5a-41fd-abdb-547128db1c52' # Locations
   targetSiteId: null
   validateRelatedElements: false
   viewMode: list
 translationKeyFormat: null
 translationMethod: none
-type: craft\fields\Categories
+type: craft\fields\Entries
