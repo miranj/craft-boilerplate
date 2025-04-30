@@ -77,7 +77,7 @@ fieldLayouts:
         name: Node
         uid: 0580d843-eac6-44a5-a663-e2449b86e963
         userCondition: null
-handle: headerNavigation
+handle: header
 instructions: ''
 maxNodes: null
 maxNodesSettings:

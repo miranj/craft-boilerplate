@@ -1,6 +1,6 @@
 defaultPlacement: end
 fieldLayouts:
-  743ddc6d-677b-42f7-a874-2a8f573948ea:
+  0d28b0c3-f456-411f-9dcc-793ca304f681:
     tabs:
       -
         elementCondition: null
@@ -10,7 +10,7 @@ fieldLayouts:
             autocomplete: false
             autocorrect: true
             class: null
-            dateAdded: '2025-04-30T03:51:37+00:00'
+            dateAdded: '2025-04-30T03:55:36+00:00'
             disabled: false
             elementCondition: null
             id: null
@@ -31,12 +31,12 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\TitleField
-            uid: 4776c77e-add3-4742-9d2c-857d69bd5d7d
+            uid: 31a976ab-c7db-4497-b749-ca556fb577d1
             userCondition: null
             warning: null
             width: 100
           -
-            dateAdded: '2025-04-30T03:51:37+00:00'
+            dateAdded: '2025-04-30T03:55:36+00:00'
             elementCondition: null
             includeInCards: false
             instructions: null
@@ -45,20 +45,20 @@ fieldLayouts:
             required: false
             tip: null
             type: verbb\navigation\fieldlayoutelements\NodeTypeElements
-            uid: fa6cd97e-83e1-47a5-84c5-00da59d408b9
+            uid: a10e9f14-8ab5-4b0b-90a6-8e0013ce72a8
             userCondition: null
             warning: null
         name: Node
-        uid: c3e931a0-3aaa-4d44-9578-abb221a8f223
+        uid: c9f5a894-8712-43a5-8195-1bfd6d47d38d
         userCondition: null
-handle: footerNavigation
+handle: fineprint
 instructions: ''
 maxNodes: null
 maxNodesSettings:
   -
     level: '1'
-    max: '4'
-name: Footer
+    max: '8'
+name: Fineprint
 permissions:
   craft\elements\Asset:
     enabled: '1'
@@ -96,7 +96,7 @@ propagationMethod: all
 siteSettings:
   8341919b-4097-4c45-8f3b-97ff673d9ab5: # $CRAFT_SITE_NAME
     enabled: true
-sortOrder: 2
+sortOrder: 3
 structure:
-  maxLevels: 2
-  uid: b9e4c370-69f6-47cf-a49e-e8e729b2c366
+  maxLevels: 1
+  uid: 4cf1d9d5-8497-454f-8476-738a8a8ecab2
