@@ -93,7 +93,7 @@ fieldLayouts:
             dateAdded: '2025-04-25T03:43:22+00:00'
             elementCondition: null
             fieldUid: 856911a9-89f9-4865-bdb1-5665460c6c23 # Contact & Social Media Information
-            handle: null
+            handle: contact
             includeInCards: false
             instructions: null
             label: null
@@ -137,7 +137,7 @@ fieldLayouts:
             dateAdded: '2025-04-24T11:03:46+00:00'
             elementCondition: null
             fieldUid: ddf843d6-31c0-4b23-8927-b1fb0fec9efb # Simple Navigation
-            handle: null
+            handle: navigation
             includeInCards: false
             instructions: null
             label: 'Links To Other Pages'
