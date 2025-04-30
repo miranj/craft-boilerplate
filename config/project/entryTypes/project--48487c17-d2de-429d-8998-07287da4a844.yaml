@@ -93,7 +93,7 @@ fieldLayouts:
             dateAdded: '2025-04-29T07:54:26+00:00'
             elementCondition: null
             fieldUid: 358a570b-6122-4744-9b73-575c44b2f9df # Content Blocks: Projects
-            handle: null
+            handle: contentBlocks
             includeInCards: false
             instructions: null
             label: 'Content Blocks'
@@ -115,7 +115,7 @@ fieldLayouts:
             dateAdded: '2025-04-29T10:32:58+00:00'
             elementCondition: null
             fieldUid: 840acb32-6694-40d0-9384-60a0220c1de0 # Label
-            handle: yearStr
+            handle: periodPublishedStr
             includeInCards: false
             instructions: null
             label: 'Year Published'
@@ -130,7 +130,7 @@ fieldLayouts:
           -
             dateAdded: '2025-04-29T10:05:21+00:00'
             elementCondition: null
-            fieldUid: f9f26c9a-936a-4901-90ca-e8c5c2997475 # Credits
+            fieldUid: f9f26c9a-936a-4901-90ca-e8c5c2997475 # Teams
             handle: null
             includeInCards: false
             instructions: null
