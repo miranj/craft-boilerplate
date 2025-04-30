@@ -52,7 +52,7 @@ fieldLayouts:
         uid: c9f5a894-8712-43a5-8195-1bfd6d47d38d
         userCondition: null
 handle: fineprint
-instructions: ''
+instructions: 'This will render the any additional site content near the fineprint at the bottom of the page. There can be a maximum of 8 items.'
 maxNodes: null
 maxNodesSettings:
   -

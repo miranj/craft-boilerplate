@@ -52,7 +52,7 @@ fieldLayouts:
         uid: c3e931a0-3aaa-4d44-9578-abb221a8f223
         userCondition: null
 handle: footer
-instructions: ''
+instructions: 'This will render the secondary site navigation in the footer at the bottom of the page. There can be a maximum of 4 items at the top level.'
 maxNodes: null
 maxNodesSettings:
   -

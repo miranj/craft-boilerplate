@@ -78,7 +78,7 @@ fieldLayouts:
         uid: 0580d843-eac6-44a5-a663-e2449b86e963
         userCondition: null
 handle: header
-instructions: ''
+instructions: 'This will render the main site navigation in the header at the top of the page. There can be a maximum of 6 items at the top level.'
 maxNodes: null
 maxNodesSettings:
   -
