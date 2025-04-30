@@ -8,3 +8,6 @@ permissions:
   - 'editglobalset:295e5325-afca-4a03-93e9-ed957c574148' # Footer
   - 'editglobalset:8447c697-1e38-439d-bfcc-beac5bf1ae31' # Sharing & SEO
   - 'editglobalset:b5fe8dff-122f-4559-8bbb-d4049e479d18' # Google Analytics
+  - 'navigation-managenav:bef1e8c5-21ad-4d45-99b3-ec94169d0dc4' # Footer Primary
+  - 'navigation-managenav:ef1fcb64-1148-4086-92c8-fb30518b08f2' # Footer Secondary
+  - 'navigation-managenav:efdbd7cb-36f6-45d5-a18b-b5079f4c9ae3' # Header Primary

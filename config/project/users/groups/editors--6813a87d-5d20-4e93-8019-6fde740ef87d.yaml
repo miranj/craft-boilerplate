@@ -86,8 +86,6 @@ permissions:
   - 'editimages:e421ceea-a2f2-459f-88b9-2695f86047bd' # Images
   - 'editpeerimages:89c58a76-1da8-4581-84f1-caf2222de75a' # Documents
   - 'editpeerimages:e421ceea-a2f2-459f-88b9-2695f86047bd' # Images
-  - 'navigation-managenav:bef1e8c5-21ad-4d45-99b3-ec94169d0dc4' # Footer Primary
-  - 'navigation-managenav:efdbd7cb-36f6-45d5-a18b-b5079f4c9ae3' # Header Primary
   - 'replacefiles:89c58a76-1da8-4581-84f1-caf2222de75a' # Documents
   - 'replacefiles:e421ceea-a2f2-459f-88b9-2695f86047bd' # Images
   - 'replacepeerfiles:89c58a76-1da8-4581-84f1-caf2222de75a' # Documents
