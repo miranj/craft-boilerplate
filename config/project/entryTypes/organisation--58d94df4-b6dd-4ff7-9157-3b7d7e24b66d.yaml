@@ -98,10 +98,10 @@ fieldLayouts:
         name: Summary
         uid: 0b2d1aa8-cb99-4f22-a657-5580608b8fdd
         userCondition: null
-handle: organization
+handle: organisation
 hasTitleField: true
 icon: building-columns
-name: Organization
+name: Organisation
 showSlugField: true
 showStatusField: true
 slugTranslationKeyFormat: null
