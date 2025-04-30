@@ -54,6 +54,10 @@ fieldLayouts:
 handle: fineprintNavigation
 instructions: ''
 maxNodes: null
+maxNodesSettings:
+  -
+    level: '1'
+    max: '8'
 name: Fineprint
 permissions:
   craft\elements\Asset:

@@ -80,6 +80,10 @@ fieldLayouts:
 handle: headerNavigation
 instructions: ''
 maxNodes: null
+maxNodesSettings:
+  -
+    level: '1'
+    max: '6'
 name: Header
 permissions:
   craft\elements\Asset:
