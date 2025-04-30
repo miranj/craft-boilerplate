@@ -1,4 +1,4 @@
-dateModified: 1746008019
+dateModified: 1746009537
 elementSources:
   craft\elements\Category:
     -
@@ -175,8 +175,8 @@ elementSources:
       type: native
     -
       defaultSort:
-        - 'field:32ed2f1a-9024-4ee9-9028-3a5041c0e5e6' # Date
-        - asc
+        - postDate
+        - desc
       defaultViewMode: ''
       disabled: false
       key: 'section:febb1068-1cf0-4781-8a41-bf420bb95e2f' # Jobs
@@ -364,6 +364,19 @@ elementSources:
         - desc
       defaultViewMode: ''
       disabled: false
+      key: 'section:7a544871-c8af-4dc8-83ae-dc5001bc8203' # Tenders
+      tableAttributes:
+        - postDate
+        - link
+        - dateUpdated
+        - revisionCreator
+      type: native
+    -
+      defaultSort:
+        - postDate
+        - desc
+      defaultViewMode: ''
+      disabled: false
       key: 'section:e39594b6-01d5-4f33-b105-7b111cb3214a' # Testimonials
       tableAttributes:
         - dateUpdated
@@ -530,6 +543,7 @@ meta:
     2b5c7d16-3a52-4e20-9827-a9099204e49c: 'Content Blocks: Programmes' # Content Blocks: Programmes
     2bfee73d-1d4f-480f-9a78-6be8410a6704: 'Social Media' # Social Media
     2fc7574e-8621-4ac0-87f9-1f3b73cc235b: 'Author Type' # Author Type
+    2fdb1d61-016d-4220-abbb-27c126f21352: Tender # Tender
     3aba8130-5dea-47d5-ad23-a536e8b9760a: 'Resource: Link' # Resource: Link
     3efc7d18-2f42-40d1-beee-b05867f36104: Programmes # Programmes
     4a6b0f8c-21ac-43ae-8df2-afe365e78304: 'Employment Types' # Employment Types
@@ -543,6 +557,7 @@ meta:
     6d709589-8e2f-4fef-9c6f-48f5644fb922: Disciplines # Disciplines
     6fd87453-1bda-4bb9-8c8d-4dd36185e75d: 'People: External Contributor' # People: External Contributor
     7a8f449f-4cfb-49db-8656-d7551c298f4c: Authors # Authors
+    7a544871-c8af-4dc8-83ae-dc5001bc8203: Tenders # Tenders
     7b8b18a2-8e96-4b93-bfaa-34a1d9fa86e1: Rich # Rich
     7bc0d428-9e00-47b5-b928-67896f29ae17: 'Contact: Website' # Contact: Website
     7da8d57d-2f04-4b73-a787-e23c441a48f4: 'Employment Types' # Employment Types
@@ -646,7 +661,7 @@ meta:
     bc20ba64-4979-418f-aa28-244626f315ab: 'Home Page' # Home Page
     be130f04-1c51-420d-818e-6d4f5a5960fa: Resources # Resources
     be827b12-3e63-4d2a-b17a-5c60ab99f248: 'Publication Type' # Publication Type
-    c2bd9b72-0968-4b24-aee2-02048ebf7f8c: Opportunity # Opportunity
+    c2bd9b72-0968-4b24-aee2-02048ebf7f8c: Job # Job
     c4c680e9-4168-4267-9e83-2d8e26d5efc8: 'Opportunity Types' # Opportunity Types
     c4fb7c86-c508-4410-9362-e47f5b604631: Programme # Programme
     c8c8ccd9-ebdc-48dd-bac8-029cb3d04923: Department # Department
