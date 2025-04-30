@@ -91,6 +91,7 @@ permissions:
   - 'deletepeerentrydrafts:6b8b6979-d75e-432e-8798-2fc0d53eb8f8' # Pages
   - 'deletepeerentrydrafts:77809eb2-6a5b-4988-a869-c707a21e0aa7' # Academic Levels
   - 'deletepeerentrydrafts:94e56347-cb09-47d3-a930-1fd9bc2cb026' # News
+  - 'deletepeerentrydrafts:a3f3307a-1056-486e-9ed7-fb4e84632cb0' # Jobs Index
   - 'deletepeerentrydrafts:a71afc7e-315c-4be0-b69b-5c70a7dc85db' # Departments
   - 'deletepeerentrydrafts:a976662e-fc19-4f89-ae6b-a5b4db64752b' # Events
   - 'deletepeerentrydrafts:bc20ba64-4979-418f-aa28-244626f315ab' # Home Page
@@ -135,6 +136,7 @@ permissions:
   - 'saveentries:6b8b6979-d75e-432e-8798-2fc0d53eb8f8' # Pages
   - 'saveentries:77809eb2-6a5b-4988-a869-c707a21e0aa7' # Academic Levels
   - 'saveentries:94e56347-cb09-47d3-a930-1fd9bc2cb026' # News
+  - 'saveentries:a3f3307a-1056-486e-9ed7-fb4e84632cb0' # Jobs Index
   - 'saveentries:a71afc7e-315c-4be0-b69b-5c70a7dc85db' # Departments
   - 'saveentries:a976662e-fc19-4f89-ae6b-a5b4db64752b' # Events
   - 'saveentries:bc20ba64-4979-418f-aa28-244626f315ab' # Home Page
@@ -185,6 +187,7 @@ permissions:
   - 'savepeerentrydrafts:6b8b6979-d75e-432e-8798-2fc0d53eb8f8' # Pages
   - 'savepeerentrydrafts:77809eb2-6a5b-4988-a869-c707a21e0aa7' # Academic Levels
   - 'savepeerentrydrafts:94e56347-cb09-47d3-a930-1fd9bc2cb026' # News
+  - 'savepeerentrydrafts:a3f3307a-1056-486e-9ed7-fb4e84632cb0' # Jobs Index
   - 'savepeerentrydrafts:a71afc7e-315c-4be0-b69b-5c70a7dc85db' # Departments
   - 'savepeerentrydrafts:a976662e-fc19-4f89-ae6b-a5b4db64752b' # Events
   - 'savepeerentrydrafts:bc20ba64-4979-418f-aa28-244626f315ab' # Home Page
@@ -221,6 +224,7 @@ permissions:
   - 'viewentries:6b8b6979-d75e-432e-8798-2fc0d53eb8f8' # Pages
   - 'viewentries:77809eb2-6a5b-4988-a869-c707a21e0aa7' # Academic Levels
   - 'viewentries:94e56347-cb09-47d3-a930-1fd9bc2cb026' # News
+  - 'viewentries:a3f3307a-1056-486e-9ed7-fb4e84632cb0' # Jobs Index
   - 'viewentries:a71afc7e-315c-4be0-b69b-5c70a7dc85db' # Departments
   - 'viewentries:a976662e-fc19-4f89-ae6b-a5b4db64752b' # Events
   - 'viewentries:bc20ba64-4979-418f-aa28-244626f315ab' # Home Page
@@ -271,6 +275,7 @@ permissions:
   - 'viewpeerentrydrafts:6b8b6979-d75e-432e-8798-2fc0d53eb8f8' # Pages
   - 'viewpeerentrydrafts:77809eb2-6a5b-4988-a869-c707a21e0aa7' # Academic Levels
   - 'viewpeerentrydrafts:94e56347-cb09-47d3-a930-1fd9bc2cb026' # News
+  - 'viewpeerentrydrafts:a3f3307a-1056-486e-9ed7-fb4e84632cb0' # Jobs Index
   - 'viewpeerentrydrafts:a71afc7e-315c-4be0-b69b-5c70a7dc85db' # Departments
   - 'viewpeerentrydrafts:a976662e-fc19-4f89-ae6b-a5b4db64752b' # Events
   - 'viewpeerentrydrafts:bc20ba64-4979-418f-aa28-244626f315ab' # Home Page
