@@ -1,0 +1,21 @@
+columnSuffix: null
+handle: projectTypes
+instructions: null
+name: 'Project Types'
+searchable: true
+settings:
+  allowSelfRelations: false
+  branchLimit: null
+  maintainHierarchy: false
+  maxRelations: null
+  minRelations: null
+  selectionLabel: 'Add a type'
+  showCardsInGrid: false
+  showSiteMenu: false
+  source: 'group:4f6eb04d-1055-4d3f-bd6c-6ed9a14168ad' # Project Types
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: list
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Categories
