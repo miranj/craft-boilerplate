@@ -4,22 +4,26 @@ Release notes for Miranj's Craft Boilerplate starter project.
 
 ## Unreleased - 3.4.0
 
+### Front-end
+
+- Added _Index_ views router.
+
 ### Data Model
 
-- Added _Jobs_, _Jobs Index_, _Publications_, _People_, _People Index_, _News_ and _News Index_ sections.
-- Added _Opportunity_, _Publication_, _Person_ and _News_ entry type.
-- Added _Departments_, _Job Types_, _Languages_, _Topics_, _Publications Types_ and _News Types_ categories.
-- Added _Department_, _Job Type_, _Authors_, _Languages_, _Topics_, _Publications Type_, _Contact Information_, _Media Embed_ and _News Type_ fields.
+- Added _Jobs_, _Jobs Index_, _Programmes Index_, _Academic Levels_, _Programmes_, _Departments_, _Testimonials_, _Events_, _Resources_, _Resources Index_, _Publications_, _Publications Index_, _People_, _People Index_, _News_ and _News Index_ sections.
+- Added _Opportunity_, _Academic Level_, _Programme_, _Department_, _Testimonial_, _Event_, _Resource_, _Resource Link_, _Publication_, _Org Member_, _External Contributor_ and _News_ entry types.
+- Added _Opportunities Types_, _Practices_, _Disciplines_, _Focus Areas_, _Resource Types_, _Event Types_, _Languages_, _Topics_, _Publications Types_ and _News Types_ categories.
+- Added _Opportunities Types_, _Academic Level_, _Content Blocks: Faculty_, _Author Options_, _Offices_, _Roles_, _Practices_, _Departments_, _Focus Areas_, _Programmes_, _Hyperlink with Label_, _Date_, _Authors_, _Languages_, _Topics_, _Resource Type_, _Publications Type_, _Contact Information_, _Media Embed_ and _News Type_ fields.
 - Added _Media Embed_ block type to the _Body_ field.
 
 ### Craft
 
-- Installed oEmbed 3.1.3.
-- Updated Craft CMS to 5.6.9.1.
+- Installed oEmbed 3.1.4.
+- Updated Craft CMS to 5.6.17.
 - Updated CKEditor to 4.6.0.
 - Updated CP Field Inspect to 2.0.4.
-- Updated Image Resizer to 4.0.2.
-- Updated Imager X to 5.1.1.
+- Updated Image Resizer to 4.0.3.
+- Updated Imager X to 5.1.3.
 
 ## 3.3.0 - 2025-02-24
 

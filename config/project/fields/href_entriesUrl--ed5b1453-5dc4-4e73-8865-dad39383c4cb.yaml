@@ -1,0 +1,34 @@
+columnSuffix: null
+handle: href_entriesUrl
+instructions: null
+name: 'URL (Entries, URL)'
+searchable: true
+settings:
+  fullGraphqlData: false
+  maxLength: 255
+  showLabelField: false
+  typeSettings:
+    __assoc__:
+      -
+        - entry
+        -
+          __assoc__:
+            -
+              - sources
+              - '*'
+      -
+        - url
+        -
+          __assoc__:
+            -
+              - allowRootRelativeUrls
+              - ''
+            -
+              - allowAnchors
+              - ''
+  types:
+    - entry
+    - url
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Link

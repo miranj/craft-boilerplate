@@ -1,0 +1,22 @@
+columnSuffix: null
+handle: academicLevel
+instructions: 'Eg.: _Undergraduate_, _Postgraduate_.'
+name: 'Academic Level'
+searchable: true
+settings:
+  allowSelfRelations: false
+  branchLimit: null
+  maintainHierarchy: false
+  maxRelations: 1
+  minRelations: null
+  selectionLabel: 'Add a level'
+  showCardsInGrid: false
+  showSiteMenu: true
+  sources:
+    - 'section:77809eb2-6a5b-4988-a869-c707a21e0aa7' # Academic Levels
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: list
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Entries

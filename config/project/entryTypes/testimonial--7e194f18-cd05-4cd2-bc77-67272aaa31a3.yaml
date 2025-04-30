@@ -1,0 +1,198 @@
+color: null
+fieldLayouts:
+  6c2b842a-a2ff-4668-9e41-ea3c489351ba:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-04-18T09:19:24+00:00'
+            elementCondition: null
+            fieldUid: fad3fe56-0b6b-46c4-a97b-b7fb98847f3c # Media Embed
+            handle: video
+            includeInCards: false
+            instructions: 'Only video embeds will be displayed.'
+            label: Video
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b13b9949-f548-4266-842a-73eeacaa0d64
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            dateAdded: '2025-03-18T04:00:53+00:00'
+            elementCondition: null
+            fieldUid: afc7f0bc-1b97-4841-a1d2-5b0385a7ca35 # Plain Text
+            handle: quote
+            includeInCards: false
+            instructions: null
+            label: Quote
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 4dce8f44-1b50-46a9-b253-f6cad99f3dd7
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-04-22T02:53:04+00:00'
+            elementCondition: null
+            heading: Author
+            type: craft\fieldlayoutelements\Heading
+            uid: e3bbfbe7-1d3d-4263-b1fb-57b7465d4279
+            userCondition: null
+          -
+            dateAdded: '2025-04-21T10:26:46+00:00'
+            elementCondition: null
+            fieldUid: 2fc7574e-8621-4ac0-87f9-1f3b73cc235b # Author Type
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: Type
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d7a45acf-6fbd-4de0-b392-0043db885c94
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-03-18T04:07:28+00:00'
+            elementCondition:
+              class: craft\elements\conditions\entries\EntryCondition
+              conditionRules:
+                -
+                  class: craft\fields\conditions\OptionsFieldConditionRule
+                  fieldUid: 2fc7574e-8621-4ac0-87f9-1f3b73cc235b # Author Type
+                  layoutElementUid: d7a45acf-6fbd-4de0-b392-0043db885c94
+                  operator: in
+                  uid: 3946a772-47f0-4a33-a4be-42f8e8406cb3
+                  values:
+                    - existingPerson
+              elementType: craft\elements\Entry
+              fieldContext: global
+            fieldUid: 96f5233c-d76d-4f31-9f8d-6de2dfc22373 # Author
+            handle: existingAuthor
+            includeInCards: false
+            instructions: null
+            label: Author
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: f8b44222-f6d4-490b-addb-5d2948a524b9
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-03-18T04:00:53+00:00'
+            elementCondition:
+              class: craft\elements\conditions\entries\EntryCondition
+              conditionRules:
+                -
+                  class: craft\fields\conditions\OptionsFieldConditionRule
+                  fieldUid: 2fc7574e-8621-4ac0-87f9-1f3b73cc235b # Author Type
+                  layoutElementUid: d7a45acf-6fbd-4de0-b392-0043db885c94
+                  operator: in
+                  uid: d351d028-0f19-46b5-9147-6af7893966a5
+                  values:
+                    - customPerson
+              elementType: craft\elements\Entry
+              fieldContext: global
+            fieldUid: 840acb32-6694-40d0-9384-60a0220c1de0 # Label
+            handle: customName
+            includeInCards: false
+            instructions: null
+            label: Name
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 36b64021-f6b3-4968-ac0a-08bef7157ff9
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-04-21T10:30:44+00:00'
+            elementCondition:
+              class: craft\elements\conditions\entries\EntryCondition
+              conditionRules:
+                -
+                  class: craft\fields\conditions\OptionsFieldConditionRule
+                  fieldUid: 2fc7574e-8621-4ac0-87f9-1f3b73cc235b # Author Type
+                  layoutElementUid: d7a45acf-6fbd-4de0-b392-0043db885c94
+                  operator: in
+                  uid: 9bb3a152-f0e2-443b-9f55-9ba132ee8c26
+                  values:
+                    - customPerson
+              elementType: craft\elements\Entry
+              fieldContext: global
+            fieldUid: 69339afc-d4f1-440b-a7ad-7da2ccb77972 # Image
+            handle: customPortrait
+            includeInCards: false
+            instructions: null
+            label: Portrait
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 78527047-369d-44e1-8054-c793b0d263af
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-03-18T04:00:53+00:00'
+            elementCondition: null
+            fieldUid: 840acb32-6694-40d0-9384-60a0220c1de0 # Label
+            handle: customDesignation
+            includeInCards: false
+            instructions: null
+            label: Designation
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: f764279c-eb06-41ef-a694-a0aa1029a95d
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-04-21T10:28:13+00:00'
+            elementCondition: null
+            type: craft\fieldlayoutelements\HorizontalRule
+            uid: e8c6aa26-3543-46a2-b602-be2b9246ed6d
+            userCondition: null
+          -
+            dateAdded: '2025-04-21T10:15:35+00:00'
+            elementCondition: null
+            fieldUid: 840acb32-6694-40d0-9384-60a0220c1de0 # Label
+            handle: null
+            includeInCards: false
+            instructions: 'This title will not appear on the front-end.'
+            label: 'Internal Label'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 8c0688f8-0190-4338-b437-49a977899925
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 4a9705d4-3b74-4c99-8b89-a2e7f2a5d14b
+        userCondition: null
+handle: testimonial
+hasTitleField: false
+icon: comment
+name: Testimonial
+showSlugField: false
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: '{{ label ?: [(existingAuthor.one.title ?? customAuthor), quote]|filter|join('' – '')|truncate(80) }}'
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

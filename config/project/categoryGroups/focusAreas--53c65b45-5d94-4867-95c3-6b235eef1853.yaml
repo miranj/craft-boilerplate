@@ -1,0 +1,50 @@
+defaultPlacement: end
+fieldLayouts:
+  bb11abb2-ee89-4490-be29-5101329a8e27:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: '2025-04-08T10:47:56+00:00'
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\TitleField
+            uid: b5b68f52-4283-4c2b-9382-2925bdf2cc14
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: dac7c762-1e9f-4f65-a0ef-b1af0c54f617
+        userCondition: null
+handle: focusAreas
+name: 'Focus Areas'
+siteSettings:
+  8341919b-4097-4c45-8f3b-97ff673d9ab5: # $CRAFT_SITE_NAME
+    hasUrls: false
+    template: null
+    uriFormat: null
+structure:
+  maxLevels: 1
+  uid: f0834a44-62fb-458f-8dd1-948cb0eb3ea6

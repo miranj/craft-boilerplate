@@ -1,0 +1,37 @@
+color: blue
+fieldLayouts:
+  782438ac-4456-4c35-800e-f3f0790961f3:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-04-21T04:08:35+00:00'
+            elementCondition: null
+            fieldUid: b5e4cb0a-59d9-4e16-bfc3-408104521a11 # URL
+            handle: hyperlink
+            includeInCards: false
+            instructions: null
+            label: __blank__
+            providesThumbs: false
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: de5e527c-67dc-4293-b00e-a123ee80ee24
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: ef077e91-711d-4228-ad07-3f4fd9682802
+        userCondition: null
+handle: socialTiktok
+hasTitleField: false
+icon: tiktok
+name: 'Social: TikTok'
+showSlugField: false
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

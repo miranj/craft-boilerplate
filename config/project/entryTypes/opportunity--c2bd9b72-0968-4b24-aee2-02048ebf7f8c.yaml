@@ -36,25 +36,111 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            dateAdded: '2025-03-17T03:10:40+00:00'
+            dateAdded: '2025-04-24T04:24:56+00:00'
             elementCondition: null
-            fieldUid: 840acb32-6694-40d0-9384-60a0220c1de0 # Label
-            handle: jobReference
+            fieldUid: 386721be-1ee4-4e3b-b22c-7fb3dfded3ff # Simple Text
+            handle: introduction
             includeInCards: false
             instructions: null
-            label: 'Reference Number'
+            label: Introduction
             providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 7f74e83f-d685-4084-ae9f-8bb9396ca1ff
+            uid: 5649d655-ee29-4868-9d33-6ee23389b42c
             userCondition: null
             warning: null
             width: 100
           -
-            dateAdded: '2025-03-17T03:10:40+00:00'
+            dateAdded: '2025-03-13T10:20:28+00:00'
             elementCondition: null
-            fieldUid: 15fb4de4-f33b-47b3-aef0-be4a80ad479b # Department
+            fieldUid: a9736c79-b219-4814-ba33-728835b7d230 # Body
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: Description
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5decdee0-6442-4b95-9fd7-63c85b8648fc
+            userCondition: null
+            warning: null
+            width: 100
+        name: Page
+        uid: 2591bb92-334d-429f-af49-cc1781cb0df4
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-04-24T10:47:36+00:00'
+            elementCondition: null
+            fieldUid: a6b97e16-5236-44b1-ad57-3899644efd40 # Link (Assets, Entries, URL)
+            handle: cta
+            includeInCards: false
+            instructions: null
+            label: 'Application / Call To Action'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 2e31b2a2-6b3e-4618-8257-603ce8ce25fa
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-03-13T10:20:28+00:00'
+            elementCondition: null
+            fieldUid: 32ed2f1a-9024-4ee9-9028-3a5041c0e5e6 # Date
+            handle: deadline
+            includeInCards: false
+            instructions: null
+            label: 'Application Deadline'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 6c894757-6cf5-427f-89b8-af67286e00a4
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            dateAdded: '2025-03-17T03:07:14+00:00'
+            elementCondition: null
+            fieldUid: 840acb32-6694-40d0-9384-60a0220c1de0 # Label
+            handle: employmentStart
+            includeInCards: false
+            instructions: null
+            label: 'Employment Start'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 0ae783b5-b15f-4200-b222-8c5b5015c912
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            dateAdded: '2025-03-17T03:07:14+00:00'
+            elementCondition: null
+            fieldUid: 840acb32-6694-40d0-9384-60a0220c1de0 # Label
+            handle: compensation
+            includeInCards: false
+            instructions: null
+            label: Compensation
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e02cbb50-676b-4032-ab1b-5c5ce776e603
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-04-24T07:52:50+00:00'
+            elementCondition: null
+            fieldUid: a60b8050-4e83-40d0-9598-4a9572ce027a # Location
             handle: null
             includeInCards: false
             instructions: null
@@ -63,14 +149,14 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: b6caa343-37ca-4c88-81d8-85683018b021
+            uid: 5a101ed5-b562-4623-b947-9a04bbdbb64f
             userCondition: null
             warning: null
             width: 100
           -
             dateAdded: '2025-03-17T03:04:28+00:00'
             elementCondition: null
-            fieldUid: 4a6b0f8c-21ac-43ae-8df2-afe365e78304 # Job Type
+            fieldUid: 4a6b0f8c-21ac-43ae-8df2-afe365e78304 # Employment Types
             handle: null
             includeInCards: false
             instructions: null
@@ -84,93 +170,77 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            dateAdded: '2025-03-13T10:20:28+00:00'
+            dateAdded: '2025-04-24T04:34:45+00:00'
             elementCondition: null
-            fieldUid: 32ed2f1a-9024-4ee9-9028-3a5041c0e5e6 # Date
+            fieldUid: c4c680e9-4168-4267-9e83-2d8e26d5efc8 # Opportunity Types
             handle: null
             includeInCards: false
             instructions: null
-            label: 'Application Deadline'
+            label: null
             providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 6c894757-6cf5-427f-89b8-af67286e00a4
+            uid: 8c4e284d-6da9-4d28-b8a3-b7b61f21071e
             userCondition: null
             warning: null
             width: 100
-          -
-            dateAdded: '2025-03-17T03:07:14+00:00'
-            elementCondition: null
-            fieldUid: 840acb32-6694-40d0-9384-60a0220c1de0 # Label
-            handle: duration
-            includeInCards: false
-            instructions: null
-            label: 'Contract Duration'
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 0ae783b5-b15f-4200-b222-8c5b5015c912
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            dateAdded: '2025-03-17T03:07:14+00:00'
-            elementCondition: null
-            fieldUid: 840acb32-6694-40d0-9384-60a0220c1de0 # Label
-            handle: experience
-            includeInCards: false
-            instructions: null
-            label: 'Experience Requirements'
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: e02cbb50-676b-4032-ab1b-5c5ce776e603
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            dateAdded: '2025-03-13T10:20:28+00:00'
-            elementCondition: null
-            fieldUid: d356acc9-4ecf-488d-a89d-2857490bb576 # Hyperlink
-            handle: null
-            includeInCards: false
-            instructions: null
-            label: 'Application Link'
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: bb719154-890b-4ebd-ab1a-c5b4e0859d0a
-            userCondition: null
-            warning: null
-            width: 100
-        name: Content
+        name: Meta
         uid: a3a1bd25-8624-43b8-a5e8-f668f5d1cff6
         userCondition: null
       -
         elementCondition: null
         elements:
           -
-            dateAdded: '2025-03-13T10:20:28+00:00'
+            dateAdded: '2025-04-24T04:29:41+00:00'
             elementCondition: null
-            fieldUid: a9736c79-b219-4814-ba33-728835b7d230 # Body
-            handle: description
+            fieldUid: 86d5863c-5339-40bb-9add-f4872cdfdce5 # Departments
+            handle: null
             includeInCards: false
             instructions: null
-            label: Description
+            label: null
             providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 5decdee0-6442-4b95-9fd7-63c85b8648fc
+            uid: de6183b0-34d7-4c0b-88bc-a3d591ca693d
             userCondition: null
             warning: null
             width: 100
-        name: Description
-        uid: 2591bb92-334d-429f-af49-cc1781cb0df4
+          -
+            dateAdded: '2025-04-24T04:32:15+00:00'
+            elementCondition: null
+            fieldUid: 16ca56d3-1df0-41ad-9bf1-f0b273739be2 # Offices
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b493185e-97d6-4138-90fd-54e6651a5105
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-04-24T04:32:15+00:00'
+            elementCondition: null
+            fieldUid: a0320c92-dcb7-489b-94e3-bd21fdc647cc # Practices
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b5736f71-5118-4b75-8d34-562c5ce69ccc
+            userCondition: null
+            warning: null
+            width: 100
+        name: Related
+        uid: 2d06b3e8-6b59-47cc-82a9-9da9b5d7c100
         userCondition: null
       -
         elementCondition: null
@@ -281,7 +351,7 @@ fieldLayouts:
         userCondition: null
 handle: opportunity
 hasTitleField: true
-icon: clover
+icon: suitcase
 name: Opportunity
 showSlugField: true
 showStatusField: true

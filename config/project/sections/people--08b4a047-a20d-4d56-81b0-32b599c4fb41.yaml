@@ -2,7 +2,11 @@ defaultPlacement: end
 enableVersioning: true
 entryTypes:
   -
-    uid: ad5b3d91-425f-4181-8ded-f9c7c53a6bba # Person
+    name: 'Org Member'
+    uid: dd80a6fe-320a-4fb6-889d-17125d275aac # People: Org Member
+  -
+    name: 'External Contributor'
+    uid: 6fd87453-1bda-4bb9-8c8d-4dd36185e75d # People: External Contributor
 handle: people
 maxAuthors: 1
 name: People
@@ -24,5 +28,5 @@ siteSettings:
     enabledByDefault: true
     hasUrls: true
     template: _routers/detail.twig
-    uriFormat: 'people/{slug}'
+    uriFormat: '{% include(''_cp/urls/people'') %}'
 type: channel
