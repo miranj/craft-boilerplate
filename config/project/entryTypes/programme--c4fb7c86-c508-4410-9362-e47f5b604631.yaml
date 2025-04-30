@@ -6,46 +6,301 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
-            autocapitalize: true
-            autocomplete: false
-            autocorrect: true
-            class: null
-            dateAdded: '2025-04-08T10:40:37+00:00'
-            disabled: false
+            dateAdded: '2025-04-28T13:18:20+00:00'
             elementCondition: null
-            id: null
+            fieldUid: 840acb32-6694-40d0-9384-60a0220c1de0 # Label
+            handle: programmeName
             includeInCards: false
-            inputType: null
             instructions: null
-            label: null
-            max: null
-            min: null
-            name: null
-            orientation: null
-            placeholder: null
+            label: Name
             providesThumbs: false
-            readonly: false
             required: true
-            size: null
-            step: null
             tip: null
-            title: null
-            type: craft\fieldlayoutelements\entries\EntryTitleField
-            uid: 5fd79acf-3e13-4108-b3e4-d5a0c7a36a30
+            type: craft\fieldlayoutelements\CustomField
+            uid: f2b31865-9814-4a11-9008-f4ebe510bf7e
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-04-28T03:36:46+00:00'
+            elementCondition: null
+            fieldUid: 840acb32-6694-40d0-9384-60a0220c1de0 # Label
+            handle: acronym
+            includeInCards: false
+            instructions: null
+            label: Acronym
+            providesThumbs: false
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b4f1a3b0-ea88-420c-b9c4-0c9391aa633b
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            dateAdded: '2025-04-25T04:06:30+00:00'
+            elementCondition: null
+            fieldUid: 386721be-1ee4-4e3b-b22c-7fb3dfded3ff # Simple Text
+            handle: introduction
+            includeInCards: false
+            instructions: null
+            label: Introduction
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 1496274a-190f-4e87-8b41-8d19e9e58670
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-04-25T04:06:30+00:00'
+            elementCondition: null
+            fieldUid: a9736c79-b219-4814-ba33-728835b7d230 # Body
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: Description
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 0a41cfa7-994c-4bc1-a059-bd2eecff0475
             userCondition: null
             warning: null
             width: 100
         name: Page
         uid: 5c90ee96-a7ac-4922-9fa8-df2639aeb188
         userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-04-26T02:35:05+00:00'
+            elementCondition: null
+            fieldUid: 7f2e3eef-0a17-44d0-b7a2-06e593deebf5 # Call To Action
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 41700125-1228-4fa2-ac4b-fb9fc5f2e745
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-04-25T04:14:40+00:00'
+            elementCondition: null
+            fieldUid: 2b5c7d16-3a52-4e20-9827-a9099204e49c # Content Blocks: Programmes
+            handle: contentBlocks
+            includeInCards: false
+            instructions: null
+            label: 'Content Blocks'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: cf69949e-05ba-419c-8962-ebe67fba2f98
+            userCondition: null
+            warning: null
+            width: 100
+        name: Blocks
+        uid: 78043c38-efd8-44ac-a612-561d0f637d81
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-04-28T13:31:58+00:00'
+            elementCondition: null
+            fieldUid: 32ed2f1a-9024-4ee9-9028-3a5041c0e5e6 # Date
+            handle: applicationDeadline
+            includeInCards: false
+            instructions: null
+            label: 'Application Deadline'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 4b436d58-968b-44af-bff4-3e603e89aaab
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-04-28T13:35:11+00:00'
+            elementCondition: null
+            fieldUid: ed5b1453-5dc4-4e73-8865-dad39383c4cb # URL (Entries, URL)
+            handle: applicationUrl
+            includeInCards: false
+            instructions: null
+            label: 'Applications Link'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 611845b4-ac17-4b89-b8bf-008a187cc55c
+            userCondition: null
+            warning: null
+            width: 100
+        name: Admissions
+        uid: 6a5ea6c5-51a5-4342-876e-1780d1613df9
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-04-26T03:11:20+00:00'
+            elementCondition: null
+            fieldUid: 14a95c46-17f2-4890-ad37-a80e9ea6ab3c # Academic Level
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 0f3ce6cd-85fa-4084-ada7-0ff788ab3f02
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-04-28T13:54:12+00:00'
+            elementCondition: null
+            fieldUid: 33ce990d-79d3-4112-b6e7-05692acc105f # Department
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: cc5c9ca4-1d54-4579-865d-e83c4e695e26
+            userCondition: null
+            warning: null
+            width: 100
+        name: Meta
+        uid: d9e1e495-6c19-4afd-bad3-636a6e53326c
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-04-25T04:06:30+00:00'
+            elementCondition: null
+            fieldUid: 5b72b712-0218-40c6-9717-0c395a914ad8 # Summary
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 955842c5-deb8-49a8-b61f-0696ae316408
+            userCondition: null
+            warning: null
+            width: 100
+        name: Summary
+        uid: 2e106f45-1eb7-4fde-8dee-4ef80706a969
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-04-25T04:06:30+00:00'
+            elementCondition: null
+            template: _cp/instructions/seo.twig
+            templateMode: site
+            type: craft\fieldlayoutelements\Template
+            uid: 36f0716a-5dc2-4511-b8a3-9582a9eae32a
+            userCondition: null
+            width: 100
+          -
+            dateAdded: '2025-04-25T04:06:30+00:00'
+            elementCondition: null
+            fieldUid: da24c053-b31c-4fa8-b113-217845a4ce83 # Share/SEO Title
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 04a7300b-74db-4589-8d61-eca883bc1ffc
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-04-25T04:06:30+00:00'
+            elementCondition: null
+            fieldUid: 349b5e6f-3a2a-43f1-a9dd-2373bf4a0a67 # Share/SEO Description
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 4b26e0c5-861c-4196-88d2-23b1ff034b49
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-04-25T04:06:30+00:00'
+            elementCondition: null
+            fieldUid: d4720a93-54ad-45de-a939-b668ed8660dc # Share/SEO Image
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 136c6aaa-8cf7-44f0-9625-9e52439ee18b
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-04-25T04:06:30+00:00'
+            elementCondition: null
+            type: craft\fieldlayoutelements\HorizontalRule
+            uid: 9ede55de-3bc1-464a-af91-00a847d128b2
+            userCondition: null
+          -
+            dateAdded: '2025-04-25T04:06:30+00:00'
+            elementCondition: null
+            fieldUid: 61317d04-b4b5-4b2f-ad77-e1d87029c361 # Legacy URL
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b476af00-aaab-4592-8f05-532428ba357d
+            userCondition: null
+            warning: null
+            width: 100
+        name: 'Sharing & SEO'
+        uid: 2e59c2ce-12bb-4802-bca1-5d0ecca9a144
+        userCondition: null
 handle: programme
-hasTitleField: true
+hasTitleField: false
 icon: graduation-cap
 name: Programme
 showSlugField: true
 showStatusField: true
 slugTranslationKeyFormat: null
 slugTranslationMethod: site
-titleFormat: null
+titleFormat: '{acronym ? acronym ~ '': ''}{programmeName}'
 titleTranslationKeyFormat: null
 titleTranslationMethod: site

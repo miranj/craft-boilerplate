@@ -8,6 +8,15 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
+            dateAdded: '2025-04-28T13:11:46+00:00'
+            elementCondition: null
+            template: _cp/instructions/blockHeading.twig
+            templateMode: site
+            type: craft\fieldlayoutelements\Template
+            uid: 4cbfccec-9e7b-4f35-886f-ff467986c0e8
+            userCondition: null
+            width: 100
+          -
             dateAdded: '2024-12-17T21:53:21+00:00'
             elementCondition: null
             fieldUid: 69339afc-d4f1-440b-a7ad-7da2ccb77972 # Image

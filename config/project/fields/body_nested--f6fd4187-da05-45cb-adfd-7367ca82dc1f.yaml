@@ -1,12 +1,12 @@
 columnSuffix: null
-handle: body
+handle: body_nested
 instructions: null
-name: Body
+name: 'Body (Nested)'
 searchable: true
 settings:
   availableTransforms: ''
   availableVolumes: '*'
-  ckeConfig: e03f52b8-38a8-493c-b27a-3c61c5532f18 # Builder
+  ckeConfig: 2aa60aa0-5295-4a25-9725-a63672cd8b2f # Builder (Nested)
   createButtonLabel: 'Insert block'
   defaultTransform: null
   entryTypes:
@@ -33,14 +33,6 @@ settings:
         -
           - name
           - Button
-    -
-      __assoc__:
-        -
-          - uid
-          - fa35f4cd-b237-4493-8c4e-4e25855164ff # Block: Rich Text Collapse
-        -
-          - name
-          - Collapse
   purifierConfig: null
   purifyHtml: true
   showUnpermittedFiles: false
