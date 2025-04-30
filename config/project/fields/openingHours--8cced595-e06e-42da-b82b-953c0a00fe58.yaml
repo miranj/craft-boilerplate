@@ -1,0 +1,32 @@
+columnSuffix: null
+handle: openingHours
+instructions: null
+name: 'Opening Hours'
+searchable: false
+settings:
+  slots:
+    __assoc__:
+      -
+        - open
+        -
+          __assoc__:
+            -
+              - name
+              - 'Opening Time'
+            -
+              - handle
+              - open
+      -
+        - close
+        -
+          __assoc__:
+            -
+              - name
+              - 'Closing Time'
+            -
+              - handle
+              - close
+  startDay: null
+translationKeyFormat: null
+translationMethod: none
+type: craft\storehours\Field
