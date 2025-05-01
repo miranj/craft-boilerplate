@@ -19,18 +19,26 @@ settings:
       __assoc__:
         -
           - uid
-          - 09d5d648-f5ec-41b7-b39e-4d3c1585936a # Block: Testimonials
+          - 10b9629c-16a4-446b-ac1f-1e59483c1a8f # Block: Gallery
         -
           - name
-          - Testimonials
+          - Gallery
     -
       __assoc__:
         -
           - uid
-          - b98cf6e6-e5b0-4ec2-9b35-57cfa6114ac1 # Block: People Teasers
+          - 2ef9601d-d6cc-4fd6-a086-8c17239031ca # Block: Related Content
         -
           - name
-          - People
+          - 'Related Content'
+    -
+      __assoc__:
+        -
+          - uid
+          - 09d5d648-f5ec-41b7-b39e-4d3c1585936a # Block: Testimonials
+        -
+          - name
+          - Testimonials
   includeTableView: false
   maxEntries: null
   minEntries: null

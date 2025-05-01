@@ -19,6 +19,22 @@ settings:
       __assoc__:
         -
           - uid
+          - 10b9629c-16a4-446b-ac1f-1e59483c1a8f # Block: Gallery
+        -
+          - name
+          - Gallery
+    -
+      __assoc__:
+        -
+          - uid
+          - 2ef9601d-d6cc-4fd6-a086-8c17239031ca # Block: Related Content
+        -
+          - name
+          - 'Related Content'
+    -
+      __assoc__:
+        -
+          - uid
           - 09d5d648-f5ec-41b7-b39e-4d3c1585936a # Block: Testimonials
         -
           - name
