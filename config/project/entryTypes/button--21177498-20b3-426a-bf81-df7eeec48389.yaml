@@ -35,7 +35,7 @@ fieldLayouts:
         name: Content
         uid: 1d469986-5fe3-4de2-bf6b-7c7912a973ca
         userCondition: null
-handle: block_button
+handle: button
 hasTitleField: false
 icon: link
 name: 'Block: Button'

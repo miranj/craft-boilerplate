@@ -1,7 +1,7 @@
 columnSuffix: null
-handle: simpleNavigation
+handle: simpleNav_link_entriesUrl
 instructions: null
-name: 'Simple Navigation'
+name: 'Simple Navigation (Link: Entries, URL)'
 searchable: false
 settings:
   createButtonLabel: null

@@ -136,7 +136,7 @@ fieldLayouts:
           -
             dateAdded: '2025-04-24T11:03:46+00:00'
             elementCondition: null
-            fieldUid: ddf843d6-31c0-4b23-8927-b1fb0fec9efb # Simple Navigation
+            fieldUid: ddf843d6-31c0-4b23-8927-b1fb0fec9efb # Simple Navigation (Link: Entries, URL)
             handle: navigation
             includeInCards: false
             instructions: null

@@ -1,4 +1,4 @@
-dateModified: 1746066922
+dateModified: 1746067154
 elementSources:
   craft\elements\Category:
     -
@@ -576,7 +576,6 @@ meta:
     2aa60aa0-5295-4a25-9725-a63672cd8b2f: 'Builder (Nested)' # Builder (Nested)
     2b2b62be-5ea6-4d06-96a3-39fbff3667bf: Organisation # Organisation
     2b5c7d16-3a52-4e20-9827-a9099204e49c: 'Content Blocks: Programmes' # Content Blocks: Programmes
-    2bfee73d-1d4f-480f-9a78-6be8410a6704: 'Social Media' # Social Media
     2ef9601d-d6cc-4fd6-a086-8c17239031ca: 'Block: Related Content' # Block: Related Content
     2fc7574e-8621-4ac0-87f9-1f3b73cc235b: 'Author Type' # Author Type
     2fdb1d61-016d-4220-abbb-27c126f21352: Tender # Tender
@@ -720,7 +719,7 @@ meta:
     d4720a93-54ad-45de-a939-b668ed8660dc: 'Share/SEO Image' # Share/SEO Image
     da24c053-b31c-4fa8-b113-217845a4ce83: 'Share/SEO Title' # Share/SEO Title
     dd80a6fe-320a-4fb6-889d-17125d275aac: 'People: Org Member' # People: Org Member
-    ddf843d6-31c0-4b23-8927-b1fb0fec9efb: 'Simple Navigation' # Simple Navigation
+    ddf843d6-31c0-4b23-8927-b1fb0fec9efb: 'Simple Navigation (Link: Entries, URL)' # Simple Navigation (Link: Entries, URL)
     de677f5b-6642-4086-ac1a-3e95990c19d0: 'Blog Post' # Blog Post
     df899104-7d07-489b-954f-20ec40505f31: 'Opportunity Types' # Opportunity Types
     e0240263-c706-4560-ad08-6682ee2135f1: Organisations # Organisations

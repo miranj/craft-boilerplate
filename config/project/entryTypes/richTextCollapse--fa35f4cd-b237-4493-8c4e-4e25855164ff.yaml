@@ -65,7 +65,7 @@ fieldLayouts:
         name: Content
         uid: 20b5380c-78d8-4570-9469-47e4752cca85
         userCondition: null
-handle: block_richTextCollapse
+handle: richTextCollapse
 hasTitleField: true
 icon: caret-down
 name: 'Block: Rich Text Collapse'
