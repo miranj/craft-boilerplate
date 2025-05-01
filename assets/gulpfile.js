@@ -21,23 +21,16 @@ Object.entries(paths.tasks.css).forEach(([task_name, task_config]) => {
     return gulp
       .src(task_config.source, { sourcemaps: true })
       .pipe(rename(task_config.destination))
-      .pipe(
-        postcss(
-          [
-            require('postcss-import'),
-            require('postcss-nested')(task_config.nested_config),
-          ].filter((plugin) => !!plugin),
-        ),
-      )
+      .pipe(postcss([require('postcss-import')].filter((plugin) => !!plugin)))
       .pipe(gulp.dest(paths.directories.build))
       .pipe(
         postcss(
           [
-            task_config.tailwind_config
-              ? require('tailwindcss')(task_config.tailwind_config)
-              : false,
-            require('autoprefixer'),
+            task_config.tailwindcss
+              ? require('@tailwindcss/postcss')
+              : require('autoprefixer'),
             require('postcss-inline-svg'),
+            require('postcss-nesting'),
           ].filter((plugin) => !!plugin),
         ),
       )

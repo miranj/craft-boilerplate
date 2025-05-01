@@ -1,0 +1,14 @@
+/* Tailwind Config */
+
+/**
+ * Source Files
+ * https://tailwindcss.com/docs/functions-and-directives#source-directive
+**/
+@source '../../templates';
+@source '../js';
+
+/**
+ * Custom Variants
+ * https://tailwindcss.com/docs/adding-custom-styles#adding-custom-variants
+**/
+@custom-variant no-js (.has-no-js &);

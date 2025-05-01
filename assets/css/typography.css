@@ -15,10 +15,8 @@ h5 {
 }
 
 /* Links */
-@layer base {
-    a:hover {
-        @apply underline;
-    }
+a:hover {
+    @apply underline;
 }
 
 /* Text Styles */

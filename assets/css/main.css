@@ -1,9 +1,20 @@
-@import 'base';
-@import 'tailwindcss/base';
-@import 'typography';
-@import 'layouts';
-@import 'tailwindcss/components';
-@import 'components';
-@import 'tailwindcss/utilities';
-@import 'utilities';
-@import 'photoswipe/dist/photoswipe.css';
+/* main.css */
+
+/* Tailwind */
+@import 'tailwindcss';
+@import 'tailwindconfig.css';
+@import 'theme.css' layer(theme);
+
+/* Base */
+@import 'base.css' layer(base);
+@import 'typography.css' layer(base);
+
+/* Components */
+@import 'components.css' layer(components);
+
+/* Utilities */
+@import 'layouts.css';
+@import 'utilities.css';
+
+/* External Components */
+@import 'photoswipe/dist/photoswipe.css' layer(components);
