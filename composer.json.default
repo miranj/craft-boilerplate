@@ -23,7 +23,7 @@
     "craftcms/ckeditor": "^4.1",
     "craftcms/cms": "~5.6.0",
     "craftcms/store-hours": "^4.2",
-    "marionnewlevant/twig-perversion": "^v5.x-dev",
+    "marionnewlevant/twig-perversion": "v5.x-dev",
     "miranj/craft-obfuscator": "^1.2",
     "mmikkel/child-me": "^2.2",
     "mmikkel/cp-field-inspect": "^2.0",
