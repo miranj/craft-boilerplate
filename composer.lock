@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d1be328b4c83532d3e093fcc7ba4e5d3",
+    "content-hash": "3c1401efb099fd85deebfa87c7ae952c",
     "packages": [
         {
             "name": "aws/aws-crt-php",
@@ -558,21 +558,21 @@
         },
         {
             "name": "craftcms/ckeditor",
-            "version": "4.8.0",
+            "version": "4.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/ckeditor.git",
-                "reference": "f96d936af6922e81e5c5a0a7b0df41a6cceaf88c"
+                "reference": "ff0f03429d51d8237784e5738d478e5868fc88d9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/ckeditor/zipball/f96d936af6922e81e5c5a0a7b0df41a6cceaf88c",
-                "reference": "f96d936af6922e81e5c5a0a7b0df41a6cceaf88c",
+                "url": "https://api.github.com/repos/craftcms/ckeditor/zipball/ff0f03429d51d8237784e5738d478e5868fc88d9",
+                "reference": "ff0f03429d51d8237784e5738d478e5868fc88d9",
                 "shasum": ""
             },
             "require": {
                 "craftcms/cms": "^5.6.0",
-                "craftcms/html-field": "^3.4.0",
+                "craftcms/html-field": "^3.1.0",
                 "nystudio107/craft-code-editor": ">=1.0.8 <=1.0.13 || ^1.0.16",
                 "php": "^8.2"
             },
@@ -618,7 +618,7 @@
                 "rss": "https://github.com/craftcms/ckeditor/commits/master.atom",
                 "source": "https://github.com/craftcms/ckeditor"
             },
-            "time": "2025-04-30T18:24:34+00:00"
+            "time": "2025-04-21T23:09:09+00:00"
         },
         {
             "name": "craftcms/cms",
