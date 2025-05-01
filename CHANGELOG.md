@@ -4,6 +4,11 @@ Release notes for Miranj's Craft Boilerplate starter project.
 
 ## Unreleased - 3.next
 
+### Front-end
+
+- Updated Tailwind CSS to 4.1.4.
+- Updated CSS Nano to 7.0.6.
+
 ### Craft
 
 - Updated Craft CMS to 5.7.4.
