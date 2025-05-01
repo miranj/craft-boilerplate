@@ -68,6 +68,10 @@ Release notes for Miranj's Craft Boilerplate starter project.
 - Fixed a bug where the primary Craft app would not honour extra static file rules for videos, webmanifests, etc.
 - Refactored extra Nginx static file rules config for better re-use.
 
+### System
+
+- Added automated deployment commands (post-install) for the boilerplate project setup.
+
 ## 3.3.0 - 2025-02-24
 
 ### Front-end
