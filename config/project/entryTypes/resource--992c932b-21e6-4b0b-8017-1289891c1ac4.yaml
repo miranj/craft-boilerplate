@@ -132,6 +132,109 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: '2025-05-01T02:27:59+00:00'
+            elementCondition: null
+            heading: Related
+            type: craft\fieldlayoutelements\Heading
+            uid: 9c29ae6a-630c-44dd-a501-aa5924e6e3cd
+            userCondition: null
+          -
+            dateAdded: '2025-05-01T02:27:59+00:00'
+            elementCondition: null
+            fieldUid: 33ce990d-79d3-4112-b6e7-05692acc105f # Department
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 613884a1-4590-4969-98c0-667dea851645
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-05-01T02:27:59+00:00'
+            elementCondition: null
+            fieldUid: 16ca56d3-1df0-41ad-9bf1-f0b273739be2 # Offices
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 05ca7554-e211-4743-98aa-a80377fed76e
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-05-01T02:27:59+00:00'
+            elementCondition: null
+            fieldUid: 9c5f24a6-1969-4197-9fce-ff44e5a18b9b # People
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 6a57adc0-be1a-4f4c-9717-8c1a12c28ad5
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-05-01T02:27:59+00:00'
+            elementCondition: null
+            fieldUid: a60b8050-4e83-40d0-9598-4a9572ce027a # Location
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: f2d733ec-ca63-45c9-9c34-6dab1ca16331
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-05-01T02:27:59+00:00'
+            elementCondition: null
+            fieldUid: b41f3521-c73f-45d7-baac-db7ec5a54bd1 # Programmes
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 4aeaeeca-a237-4bac-bd33-ef7235aa982c
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-05-01T02:27:59+00:00'
+            elementCondition: null
+            fieldUid: a0320c92-dcb7-489b-94e3-bd21fdc647cc # Practices
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 14bd5eaf-67f3-4495-ab5e-1e48520729c6
+            userCondition: null
+            warning: null
+            width: 100
+          -
             dateAdded: '2025-02-28T08:54:00+00:00'
             elementCondition: null
             fieldUid: 69dcd3aa-18b8-48bf-a7d3-deb9c6912349 # Topics
@@ -147,8 +250,8 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-        name: Related
-        uid: 0804600b-7a8c-438a-b877-6a0c13f3435e
+        name: 'Meta & Related'
+        uid: 89a4f56d-d692-4ae7-b855-82ef67a361eb
         userCondition: null
       -
         elementCondition: null

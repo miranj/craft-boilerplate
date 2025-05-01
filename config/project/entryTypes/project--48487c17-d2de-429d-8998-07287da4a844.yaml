@@ -112,6 +112,22 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
+            dateAdded: '2025-04-29T10:29:51+00:00'
+            elementCondition: null
+            fieldUid: 3e4da781-e103-48f1-a607-5396f2be279e # Project Types
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: f0ffe5a4-682f-4ef6-b7b3-96906d195e1d
+            userCondition: null
+            warning: null
+            width: 100
+          -
             dateAdded: '2025-04-29T10:32:58+00:00'
             elementCondition: null
             fieldUid: 840acb32-6694-40d0-9384-60a0220c1de0 # Label
@@ -143,6 +159,12 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
+        name: Meta
+        uid: c2389e79-7f4d-462a-a586-fa0b0a35f06b
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
           -
             dateAdded: '2025-04-29T10:26:31+00:00'
             elementCondition: null
@@ -176,9 +198,9 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            dateAdded: '2025-04-29T10:32:58+00:00'
+            dateAdded: '2025-05-01T02:17:51+00:00'
             elementCondition: null
-            fieldUid: a0320c92-dcb7-489b-94e3-bd21fdc647cc # Practices
+            fieldUid: a60b8050-4e83-40d0-9598-4a9572ce027a # Location
             handle: null
             includeInCards: false
             instructions: null
@@ -187,7 +209,7 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: d403b794-9764-4c0e-870b-b38cfac361eb
+            uid: de438f06-818a-4c9e-bec4-10f02f7954fe
             userCondition: null
             warning: null
             width: 100
@@ -208,9 +230,9 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            dateAdded: '2025-04-29T10:29:51+00:00'
+            dateAdded: '2025-04-29T10:32:58+00:00'
             elementCondition: null
-            fieldUid: 3e4da781-e103-48f1-a607-5396f2be279e # Project Types
+            fieldUid: a0320c92-dcb7-489b-94e3-bd21fdc647cc # Practices
             handle: null
             includeInCards: false
             instructions: null
@@ -219,7 +241,7 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: f0ffe5a4-682f-4ef6-b7b3-96906d195e1d
+            uid: d403b794-9764-4c0e-870b-b38cfac361eb
             userCondition: null
             warning: null
             width: 100
@@ -239,8 +261,8 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-        name: Meta
-        uid: c2389e79-7f4d-462a-a586-fa0b0a35f06b
+        name: Related
+        uid: 117ff8dd-0514-4498-af32-fdfa68726684
         userCondition: null
       -
         elementCondition: null

@@ -74,6 +74,38 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
+            dateAdded: '2025-03-17T03:04:28+00:00'
+            elementCondition: null
+            fieldUid: 4a6b0f8c-21ac-43ae-8df2-afe365e78304 # Employment Types
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 6ca5b99b-0eab-4618-9003-062f06dbf141
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-04-24T04:34:45+00:00'
+            elementCondition: null
+            fieldUid: c4c680e9-4168-4267-9e83-2d8e26d5efc8 # Opportunity Types
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 8c4e284d-6da9-4d28-b8a3-b7b61f21071e
+            userCondition: null
+            warning: null
+            width: 100
+          -
             dateAdded: '2025-04-24T10:47:36+00:00'
             elementCondition: null
             fieldUid: a6b97e16-5236-44b1-ad57-3899644efd40 # Link (Assets, Entries, URL)
@@ -137,54 +169,6 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-          -
-            dateAdded: '2025-04-24T07:52:50+00:00'
-            elementCondition: null
-            fieldUid: a60b8050-4e83-40d0-9598-4a9572ce027a # Location
-            handle: null
-            includeInCards: false
-            instructions: null
-            label: null
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 5a101ed5-b562-4623-b947-9a04bbdbb64f
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            dateAdded: '2025-03-17T03:04:28+00:00'
-            elementCondition: null
-            fieldUid: 4a6b0f8c-21ac-43ae-8df2-afe365e78304 # Employment Types
-            handle: null
-            includeInCards: false
-            instructions: null
-            label: null
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 6ca5b99b-0eab-4618-9003-062f06dbf141
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            dateAdded: '2025-04-24T04:34:45+00:00'
-            elementCondition: null
-            fieldUid: c4c680e9-4168-4267-9e83-2d8e26d5efc8 # Opportunity Types
-            handle: null
-            includeInCards: false
-            instructions: null
-            label: null
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 8c4e284d-6da9-4d28-b8a3-b7b61f21071e
-            userCondition: null
-            warning: null
-            width: 100
         name: Meta
         uid: a3a1bd25-8624-43b8-a5e8-f668f5d1cff6
         userCondition: null
@@ -220,6 +204,22 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: b493185e-97d6-4138-90fd-54e6651a5105
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-04-24T07:52:50+00:00'
+            elementCondition: null
+            fieldUid: a60b8050-4e83-40d0-9598-4a9572ce027a # Location
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5a101ed5-b562-4623-b947-9a04bbdbb64f
             userCondition: null
             warning: null
             width: 100

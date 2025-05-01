@@ -76,6 +76,22 @@ fieldLayouts:
           -
             dateAdded: '2025-04-30T10:36:33+00:00'
             elementCondition: null
+            fieldUid: c4c680e9-4168-4267-9e83-2d8e26d5efc8 # Opportunity Types
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: eecfae5d-60c4-4134-ab22-df21a6b5ef17
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-04-30T10:36:33+00:00'
+            elementCondition: null
             fieldUid: a6b97e16-5236-44b1-ad57-3899644efd40 # Link (Assets, Entries, URL)
             handle: cta
             includeInCards: false
@@ -137,38 +153,6 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-          -
-            dateAdded: '2025-04-30T10:36:33+00:00'
-            elementCondition: null
-            fieldUid: a60b8050-4e83-40d0-9598-4a9572ce027a # Location
-            handle: null
-            includeInCards: false
-            instructions: null
-            label: null
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 7a433d34-9bf3-4fe7-adc7-37b9e5e15eb1
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            dateAdded: '2025-04-30T10:36:33+00:00'
-            elementCondition: null
-            fieldUid: c4c680e9-4168-4267-9e83-2d8e26d5efc8 # Opportunity Types
-            handle: null
-            includeInCards: false
-            instructions: null
-            label: null
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: eecfae5d-60c4-4134-ab22-df21a6b5ef17
-            userCondition: null
-            warning: null
-            width: 100
         name: Meta
         uid: 4777815b-273c-460b-aced-403d1367fa6f
         userCondition: null
@@ -204,6 +188,22 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 3c45a5af-28d8-429d-af0b-2599211a13ec
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-04-30T10:36:33+00:00'
+            elementCondition: null
+            fieldUid: a60b8050-4e83-40d0-9598-4a9572ce027a # Location
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 7a433d34-9bf3-4fe7-adc7-37b9e5e15eb1
             userCondition: null
             warning: null
             width: 100

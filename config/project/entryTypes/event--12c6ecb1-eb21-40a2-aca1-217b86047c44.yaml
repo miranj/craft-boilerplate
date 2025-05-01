@@ -76,6 +76,22 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
+            dateAdded: '2025-02-26T02:53:40+00:00'
+            elementCondition: null
+            fieldUid: 9b5f9007-3f61-4857-b978-fdfbc4b29dba # Event Types
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: Types
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 2cc09c24-ea29-47ac-aa51-21495d792080
+            userCondition: null
+            warning: null
+            width: 50
+          -
             dateAdded: '2025-02-26T02:38:49+00:00'
             elementCondition: null
             fieldUid: bb0a4a47-dcbd-41a8-9bbb-82341295f5ff # Date & Time
@@ -127,7 +143,7 @@ fieldLayouts:
             dateAdded: '2025-02-26T02:40:53+00:00'
             elementCondition: null
             fieldUid: afc7f0bc-1b97-4841-a1d2-5b0385a7ca35 # Plain Text
-            handle: venue
+            handle: address
             includeInCards: false
             instructions: null
             label: 'Venue / Address'
@@ -162,23 +178,71 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
-            dateAdded: '2025-02-26T02:53:40+00:00'
+            dateAdded: '2025-05-01T02:06:45+00:00'
             elementCondition: null
-            fieldUid: 9b5f9007-3f61-4857-b978-fdfbc4b29dba # Event Types
+            fieldUid: 86d5863c-5339-40bb-9add-f4872cdfdce5 # Departments
             handle: null
             includeInCards: false
             instructions: null
-            label: Types
+            label: null
             providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 2cc09c24-ea29-47ac-aa51-21495d792080
+            uid: 8811dd9e-e9dd-421f-83ba-fa95bceb5c55
             userCondition: null
             warning: null
-            width: 50
+            width: 100
+          -
+            dateAdded: '2025-05-01T02:06:45+00:00'
+            elementCondition: null
+            fieldUid: 16ca56d3-1df0-41ad-9bf1-f0b273739be2 # Offices
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 17ec42b7-2942-47db-8f3c-0392df4fb596
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-05-01T02:06:45+00:00'
+            elementCondition: null
+            fieldUid: a60b8050-4e83-40d0-9598-4a9572ce027a # Location
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 30e956db-6c7e-41c6-9e03-363698fd9d80
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-05-01T02:06:45+00:00'
+            elementCondition: null
+            fieldUid: b41f3521-c73f-45d7-baac-db7ec5a54bd1 # Programmes
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5666b1d1-b839-40c5-a298-9cca72d564f2
+            userCondition: null
+            warning: null
+            width: 100
         name: Related
-        uid: 45ae68dc-3020-41c1-aef3-8bc242ff4a45
+        uid: 31874360-e3ed-4ea7-ba80-ce6ae456c9cf
         userCondition: null
       -
         elementCondition: null
