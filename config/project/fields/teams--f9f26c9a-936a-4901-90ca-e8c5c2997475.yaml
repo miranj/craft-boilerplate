@@ -1,0 +1,25 @@
+columnSuffix: null
+handle: teams
+instructions: null
+name: Teams
+searchable: true
+settings:
+  createButtonLabel: 'Add credit'
+  defaultIndexViewMode: cards
+  entryTypes:
+    -
+      __assoc__:
+        -
+          - uid
+          - 73b5b4a9-1ce2-49ca-8a21-07cf099b48ad # Credit
+  includeTableView: false
+  maxEntries: null
+  minEntries: null
+  pageSize: 50
+  propagationKeyFormat: null
+  propagationMethod: all
+  showCardsInGrid: false
+  viewMode: cards
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

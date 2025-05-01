@@ -1,0 +1,48 @@
+color: blue
+fieldLayouts:
+  2a1291c6-22aa-4106-9c89-d03f6d64f13e:
+    cardView:
+      - 'layoutElement:cd21104c-88e0-4d9a-a008-1f6f28f1683d'
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-04-28T11:28:25+00:00'
+            elementCondition: null
+            template: _cp/instructions/blockHeading.twig
+            templateMode: site
+            type: craft\fieldlayoutelements\Template
+            uid: 30a373f7-7003-46f0-a630-fad17bec42c9
+            userCondition: null
+            width: 100
+          -
+            dateAdded: '2025-04-26T02:50:08+00:00'
+            elementCondition: null
+            fieldUid: a6b97e16-5236-44b1-ad57-3899644efd40 # Link (Assets, Entries, URL)
+            handle: hyperlink
+            includeInCards: true
+            instructions: null
+            label: Link
+            providesThumbs: false
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: cd21104c-88e0-4d9a-a008-1f6f28f1683d
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 1d469986-5fe3-4de2-bf6b-7c7912a973ca
+        userCondition: null
+handle: button
+hasTitleField: false
+icon: link
+name: 'Block: Button'
+showSlugField: false
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: '{hyperlink.label}'
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

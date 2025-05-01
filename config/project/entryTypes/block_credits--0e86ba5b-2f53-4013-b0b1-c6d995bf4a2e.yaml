@@ -1,0 +1,69 @@
+color: orange
+fieldLayouts:
+  8d24f1e1-4029-48c4-8527-7733b286c986:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-04-29T11:32:50+00:00'
+            elementCondition: null
+            template: _cp/instructions/blockHeading.twig
+            templateMode: site
+            type: craft\fieldlayoutelements\Template
+            uid: 4ef953bd-fc28-41c6-8079-0ba8a7fe9360
+            userCondition: null
+            width: 100
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: '2025-04-29T10:07:48+00:00'
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            required: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: d89cc31e-f63c-416b-a356-787ad4db4a09
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            content: 'Inserts a table to credit people in a team. Credits can be edited in the _Meta_ tab.'
+            dateAdded: '2025-04-29T10:11:06+00:00'
+            displayInPane: false
+            elementCondition: null
+            type: craft\fieldlayoutelements\Markdown
+            uid: bb034440-4a74-415a-821c-cb730710d460
+            userCondition: null
+            width: 100
+        name: Content
+        uid: 16243f77-ed0e-4b67-8b09-01e23a41d567
+        userCondition: null
+handle: block_credits
+hasTitleField: true
+icon: user-group
+name: 'Block: Credits'
+showSlugField: false
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

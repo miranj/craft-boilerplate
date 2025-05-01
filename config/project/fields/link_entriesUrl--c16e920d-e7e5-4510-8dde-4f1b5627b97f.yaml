@@ -1,12 +1,12 @@
 columnSuffix: null
-handle: cta
+handle: link_entriesUrl
 instructions: null
-name: 'Call to Action'
+name: 'Link (Entries, URL)'
 searchable: true
 settings:
+  fullGraphqlData: false
   maxLength: 255
   showLabelField: true
-  showTargetField: false
   typeSettings:
     __assoc__:
       -
@@ -25,29 +25,10 @@ settings:
               - ''
             -
               - allowAnchors
-              - '1'
-      -
-        - asset
-        -
-          __assoc__:
-            -
-              - sources
-              -
-                - 'volume:e421ceea-a2f2-459f-88b9-2695f86047bd' # Images
-                - 'volume:89c58a76-1da8-4581-84f1-caf2222de75a' # Documents
-            -
-              - allowedKinds
-              - '*'
-            -
-              - showUnpermittedVolumes
-              - ''
-            -
-              - showUnpermittedFiles
               - ''
   types:
     - entry
     - url
-    - asset
 translationKeyFormat: null
 translationMethod: none
 type: craft\fields\Link

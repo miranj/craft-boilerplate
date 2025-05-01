@@ -2,14 +2,65 @@
 
 Release notes for Miranj's Craft Boilerplate starter project.
 
-## Unreleased 3.3.next
+## Unreleased - 3.4.0
 
 ### Front-end
 
 - Remove CSS fallbacks for `calc()`, and CSS variables, both of which are now _Baseline: Widely Available_.
+- Added _Index_ views router.
+
+### Data Model
+
+- The following sections, entry types and corresponding fields have been added:
+  - _Academic Levels_ section, _Academic Level_ entry type, and _Academic Level_ field
+  - _Departments_ section, _Department_ entry type, and _Department_ and _Departments_ field
+  - _Events_ section, _Event_ entry type
+  - _Jobs_ and _Jobs Index_ sections, _Job_ entry type
+  - _News_ and _News Index_ sections, _News_ entry type
+  - _Organisations_ section, _Organisation_ entry type
+  - _Offices_ and _Offices Index_ sections, _Office_ entry type, _Offices_ field
+  - _People_ and _People Index_ sections, _Org Member_ and _External Contributor_ entry types, _Authors_ and _People_ fields
+  - _Programmes_ and _Programmes Index_ sections, _Programme_ entry type and a _Programmes_ field
+  - _Projects_ and _Projects Index_ sections, _Project_ entry type
+  - _Publications_ and _Publications Index_ sections, _Publication_ entry type
+  - _Resources_ and _Resources Index_ sections, _Resource_ and _Resource Link_ entry types
+  - _Testimonials_ section, _Testimonial_ entry type
+  - _Search_ section
+  - _Tenders_ section, _Tender_ entry type
+- The following categories and corresponding fields have been added:
+  - _Disciplines_ category
+  - _Event Types_ category and field
+  - _Focus Areas_ and field
+  - _Languages_ category and field
+  - _News Types_ category, _News Type_ field
+  - _Oportunities Types_ category and field
+  - _Publications Types_ category, _Publications Type_ field
+  - _Practices_ category and field
+  - _Project Types_ and field
+  - _Resource Types_ category, _Resource Type_ field
+  - _Topics_ category and field
+- The following fields have also been added:
+  - Content Blocks:
+    - _Content Blocks: Faculty_, _Content Blocks: Projects_
+  - Content Builders:
+    - _Simple Navigation_, _Contact Information_, _Credits_
+  - Body Blocks:
+    - Added _Collapse_, _Button_, _Media Embed_, block type to the _Body_ field and a _Nested Body_ field was created for nesting content in _Collapse_ blocks.
+  - Other Fields:
+    - _Author Type_, _External Person Roles_, various _Hyperlink_ and _Url_ options, _Date_, _Media Embed_
+- The following navigations have been created: _Header, Footer_ and _Fineprint_
+- Added the _Organisation_ global set
 
 ### Craft
 
+- Installed Navigation 3.0.6.
+- Installed Store Hours 4.2.0.
+- Installed oEmbed 3.1.4.
+- Updated Craft CMS to 5.6.17.
+- Updated CKEditor to 4.6.0.
+- Updated CP Field Inspect to 2.0.4.
+- Updated Image Resizer to 4.0.3.
+- Updated Imager X to 5.1.3.
 - Fixed a bug where changes to an existing asset would not always result in Imager transforms being re-generated.
 
 ### DevOps

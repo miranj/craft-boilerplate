@@ -4,22 +4,119 @@ name: Editors
 permissions:
   - accesscp
   - accesssitewhensystemisoff
+  - 'createentries:08b4a047-a20d-4d56-81b0-32b599c4fb41' # People
+  - 'createentries:1aa8a857-2e3d-4a1c-a09c-9c180aa2fc53' # Projects
+  - 'createentries:3efc7d18-2f42-40d1-beee-b05867f36104' # Programmes
+  - 'createentries:5280da4e-b8fa-4970-9b39-490dd3a96904' # Publications
+  - 'createentries:54bdab3f-b980-46c0-a830-de704b143895' # Offices
   - 'createentries:653ea464-6b43-4bc9-8138-79615323d877' # Blog
   - 'createentries:6b8b6979-d75e-432e-8798-2fc0d53eb8f8' # Pages
+  - 'createentries:77809eb2-6a5b-4988-a869-c707a21e0aa7' # Academic Levels
+  - 'createentries:7a544871-c8af-4dc8-83ae-dc5001bc8203' # Tenders
+  - 'createentries:94e56347-cb09-47d3-a930-1fd9bc2cb026' # News
+  - 'createentries:a71afc7e-315c-4be0-b69b-5c70a7dc85db' # Departments
+  - 'createentries:a976662e-fc19-4f89-ae6b-a5b4db64752b' # Events
+  - 'createentries:be130f04-1c51-420d-818e-6d4f5a5960fa' # Resources
+  - 'createentries:e0240263-c706-4560-ad08-6682ee2135f1' # Organisations
+  - 'createentries:e39594b6-01d5-4f33-b105-7b111cb3214a' # Testimonials
+  - 'createentries:e6b6d0c4-ef5a-41fd-abdb-547128db1c52' # Locations
+  - 'createentries:febb1068-1cf0-4781-8a41-bf420bb95e2f' # Jobs
   - 'createfolders:89c58a76-1da8-4581-84f1-caf2222de75a' # Documents
   - 'createfolders:e421ceea-a2f2-459f-88b9-2695f86047bd' # Images
   - 'deleteassets:89c58a76-1da8-4581-84f1-caf2222de75a' # Documents
   - 'deleteassets:e421ceea-a2f2-459f-88b9-2695f86047bd' # Images
+  - 'deletecategories:08d78078-fb0a-4d0a-88b4-d5dc8238886e'
+  - 'deletecategories:0bc8375c-5e05-4156-a6c9-5678af911123' # News Types
+  - 'deletecategories:0ebe4125-0bbc-4efc-a7d1-055eebd82cb5' # Languages
+  - 'deletecategories:4f6eb04d-1055-4d3f-bd6c-6ed9a14168ad' # Project Types
+  - 'deletecategories:53c65b45-5d94-4867-95c3-6b235eef1853' # Focus Areas
+  - 'deletecategories:58e76d43-a465-4c1a-b102-2726a9fc13f5' # Resources Types
+  - 'deletecategories:6ae2a9cc-c9cc-4b89-9c8c-d7a417cbb87e' # Topics
+  - 'deletecategories:6d709589-8e2f-4fef-9c6f-48f5644fb922' # Disciplines
+  - 'deletecategories:7b76ffa4-3aed-45cd-9087-771dca56704e'
+  - 'deletecategories:7da8d57d-2f04-4b73-a787-e23c441a48f4' # Employment Types
+  - 'deletecategories:8a5099a8-7b2e-4052-b798-5e7d19f38b15' # Event Types
+  - 'deletecategories:9ff437c1-0323-4492-a95e-007c3a05ab8f' # Practices
+  - 'deletecategories:a907570e-41b8-4e87-b566-c2abe353e2a6' # Publication Types
+  - 'deletecategories:df899104-7d07-489b-954f-20ec40505f31' # Opportunity Types
+  - 'deleteentries:08b4a047-a20d-4d56-81b0-32b599c4fb41' # People
+  - 'deleteentries:1aa8a857-2e3d-4a1c-a09c-9c180aa2fc53' # Projects
+  - 'deleteentries:3efc7d18-2f42-40d1-beee-b05867f36104' # Programmes
+  - 'deleteentries:5280da4e-b8fa-4970-9b39-490dd3a96904' # Publications
+  - 'deleteentries:54bdab3f-b980-46c0-a830-de704b143895' # Offices
   - 'deleteentries:653ea464-6b43-4bc9-8138-79615323d877' # Blog
   - 'deleteentries:6b8b6979-d75e-432e-8798-2fc0d53eb8f8' # Pages
+  - 'deleteentries:77809eb2-6a5b-4988-a869-c707a21e0aa7' # Academic Levels
+  - 'deleteentries:7a544871-c8af-4dc8-83ae-dc5001bc8203' # Tenders
+  - 'deleteentries:94e56347-cb09-47d3-a930-1fd9bc2cb026' # News
+  - 'deleteentries:a71afc7e-315c-4be0-b69b-5c70a7dc85db' # Departments
+  - 'deleteentries:a976662e-fc19-4f89-ae6b-a5b4db64752b' # Events
+  - 'deleteentries:be130f04-1c51-420d-818e-6d4f5a5960fa' # Resources
+  - 'deleteentries:e0240263-c706-4560-ad08-6682ee2135f1' # Organisations
+  - 'deleteentries:e39594b6-01d5-4f33-b105-7b111cb3214a' # Testimonials
+  - 'deleteentries:e6b6d0c4-ef5a-41fd-abdb-547128db1c52' # Locations
+  - 'deleteentries:febb1068-1cf0-4781-8a41-bf420bb95e2f' # Jobs
   - 'deletepeerassets:89c58a76-1da8-4581-84f1-caf2222de75a' # Documents
   - 'deletepeerassets:e421ceea-a2f2-459f-88b9-2695f86047bd' # Images
+  - 'deletepeercategorydrafts:08d78078-fb0a-4d0a-88b4-d5dc8238886e'
+  - 'deletepeercategorydrafts:0bc8375c-5e05-4156-a6c9-5678af911123' # News Types
+  - 'deletepeercategorydrafts:0ebe4125-0bbc-4efc-a7d1-055eebd82cb5' # Languages
+  - 'deletepeercategorydrafts:4f6eb04d-1055-4d3f-bd6c-6ed9a14168ad' # Project Types
+  - 'deletepeercategorydrafts:53c65b45-5d94-4867-95c3-6b235eef1853' # Focus Areas
+  - 'deletepeercategorydrafts:58e76d43-a465-4c1a-b102-2726a9fc13f5' # Resources Types
+  - 'deletepeercategorydrafts:6ae2a9cc-c9cc-4b89-9c8c-d7a417cbb87e' # Topics
+  - 'deletepeercategorydrafts:6d709589-8e2f-4fef-9c6f-48f5644fb922' # Disciplines
+  - 'deletepeercategorydrafts:7b76ffa4-3aed-45cd-9087-771dca56704e'
+  - 'deletepeercategorydrafts:7da8d57d-2f04-4b73-a787-e23c441a48f4' # Employment Types
+  - 'deletepeercategorydrafts:8a5099a8-7b2e-4052-b798-5e7d19f38b15' # Event Types
+  - 'deletepeercategorydrafts:9ff437c1-0323-4492-a95e-007c3a05ab8f' # Practices
+  - 'deletepeercategorydrafts:a907570e-41b8-4e87-b566-c2abe353e2a6' # Publication Types
+  - 'deletepeercategorydrafts:df899104-7d07-489b-954f-20ec40505f31' # Opportunity Types
+  - 'deletepeerentries:08b4a047-a20d-4d56-81b0-32b599c4fb41' # People
+  - 'deletepeerentries:1aa8a857-2e3d-4a1c-a09c-9c180aa2fc53' # Projects
+  - 'deletepeerentries:3efc7d18-2f42-40d1-beee-b05867f36104' # Programmes
+  - 'deletepeerentries:5280da4e-b8fa-4970-9b39-490dd3a96904' # Publications
+  - 'deletepeerentries:54bdab3f-b980-46c0-a830-de704b143895' # Offices
   - 'deletepeerentries:653ea464-6b43-4bc9-8138-79615323d877' # Blog
   - 'deletepeerentries:6b8b6979-d75e-432e-8798-2fc0d53eb8f8' # Pages
+  - 'deletepeerentries:77809eb2-6a5b-4988-a869-c707a21e0aa7' # Academic Levels
+  - 'deletepeerentries:7a544871-c8af-4dc8-83ae-dc5001bc8203' # Tenders
+  - 'deletepeerentries:94e56347-cb09-47d3-a930-1fd9bc2cb026' # News
+  - 'deletepeerentries:a71afc7e-315c-4be0-b69b-5c70a7dc85db' # Departments
+  - 'deletepeerentries:a976662e-fc19-4f89-ae6b-a5b4db64752b' # Events
+  - 'deletepeerentries:be130f04-1c51-420d-818e-6d4f5a5960fa' # Resources
+  - 'deletepeerentries:e0240263-c706-4560-ad08-6682ee2135f1' # Organisations
+  - 'deletepeerentries:e39594b6-01d5-4f33-b105-7b111cb3214a' # Testimonials
+  - 'deletepeerentries:e6b6d0c4-ef5a-41fd-abdb-547128db1c52' # Locations
+  - 'deletepeerentries:febb1068-1cf0-4781-8a41-bf420bb95e2f' # Jobs
+  - 'deletepeerentrydrafts:08b4a047-a20d-4d56-81b0-32b599c4fb41' # People
+  - 'deletepeerentrydrafts:15ad504a-20b4-4e89-b94c-e7be7f135774' # People Index
+  - 'deletepeerentrydrafts:18803174-20d5-4b61-a067-3072b484f857' # Resources Index
+  - 'deletepeerentrydrafts:1aa8a857-2e3d-4a1c-a09c-9c180aa2fc53' # Projects
+  - 'deletepeerentrydrafts:193aec6d-3690-493c-861e-18848399ea15' # Programmes Index
   - 'deletepeerentrydrafts:1afae8bb-74c6-43e3-8b44-3e8cac38e2e8' # Blog Index
+  - 'deletepeerentrydrafts:317eb1dc-2ab0-4290-a1d3-573e6ead4388' # News Index
+  - 'deletepeerentrydrafts:39948e92-227e-4217-a6f1-aa40b8fcf04e' # Projects Index
+  - 'deletepeerentrydrafts:3efc7d18-2f42-40d1-beee-b05867f36104' # Programmes
+  - 'deletepeerentrydrafts:5280da4e-b8fa-4970-9b39-490dd3a96904' # Publications
+  - 'deletepeerentrydrafts:530100d4-da7c-43c5-bfc1-65cf13988e46' # Search
+  - 'deletepeerentrydrafts:54bdab3f-b980-46c0-a830-de704b143895' # Offices
   - 'deletepeerentrydrafts:653ea464-6b43-4bc9-8138-79615323d877' # Blog
   - 'deletepeerentrydrafts:6b8b6979-d75e-432e-8798-2fc0d53eb8f8' # Pages
+  - 'deletepeerentrydrafts:77809eb2-6a5b-4988-a869-c707a21e0aa7' # Academic Levels
+  - 'deletepeerentrydrafts:7a544871-c8af-4dc8-83ae-dc5001bc8203' # Tenders
+  - 'deletepeerentrydrafts:94e56347-cb09-47d3-a930-1fd9bc2cb026' # News
+  - 'deletepeerentrydrafts:9b5486a8-4b80-4391-a464-2e4f34123a03' # Offices Index
+  - 'deletepeerentrydrafts:a3f3307a-1056-486e-9ed7-fb4e84632cb0' # Jobs Index
+  - 'deletepeerentrydrafts:a71afc7e-315c-4be0-b69b-5c70a7dc85db' # Departments
+  - 'deletepeerentrydrafts:a976662e-fc19-4f89-ae6b-a5b4db64752b' # Events
   - 'deletepeerentrydrafts:bc20ba64-4979-418f-aa28-244626f315ab' # Home Page
+  - 'deletepeerentrydrafts:be130f04-1c51-420d-818e-6d4f5a5960fa' # Resources
+  - 'deletepeerentrydrafts:c5712456-e12b-4cbc-a8cc-b570cf00d66e' # Publications Index
+  - 'deletepeerentrydrafts:e0240263-c706-4560-ad08-6682ee2135f1' # Organisations
+  - 'deletepeerentrydrafts:e39594b6-01d5-4f33-b105-7b111cb3214a' # Testimonials
+  - 'deletepeerentrydrafts:e6b6d0c4-ef5a-41fd-abdb-547128db1c52' # Locations
+  - 'deletepeerentrydrafts:febb1068-1cf0-4781-8a41-bf420bb95e2f' # Jobs
   - 'editimages:89c58a76-1da8-4581-84f1-caf2222de75a' # Documents
   - 'editimages:e421ceea-a2f2-459f-88b9-2695f86047bd' # Images
   - 'editpeerimages:89c58a76-1da8-4581-84f1-caf2222de75a' # Documents
@@ -30,29 +127,211 @@ permissions:
   - 'replacepeerfiles:e421ceea-a2f2-459f-88b9-2695f86047bd' # Images
   - 'saveassets:89c58a76-1da8-4581-84f1-caf2222de75a' # Documents
   - 'saveassets:e421ceea-a2f2-459f-88b9-2695f86047bd' # Images
+  - 'savecategories:08d78078-fb0a-4d0a-88b4-d5dc8238886e'
+  - 'savecategories:0bc8375c-5e05-4156-a6c9-5678af911123' # News Types
+  - 'savecategories:0ebe4125-0bbc-4efc-a7d1-055eebd82cb5' # Languages
+  - 'savecategories:4f6eb04d-1055-4d3f-bd6c-6ed9a14168ad' # Project Types
+  - 'savecategories:53c65b45-5d94-4867-95c3-6b235eef1853' # Focus Areas
+  - 'savecategories:58e76d43-a465-4c1a-b102-2726a9fc13f5' # Resources Types
+  - 'savecategories:6ae2a9cc-c9cc-4b89-9c8c-d7a417cbb87e' # Topics
+  - 'savecategories:6d709589-8e2f-4fef-9c6f-48f5644fb922' # Disciplines
+  - 'savecategories:7b76ffa4-3aed-45cd-9087-771dca56704e'
+  - 'savecategories:7da8d57d-2f04-4b73-a787-e23c441a48f4' # Employment Types
+  - 'savecategories:8a5099a8-7b2e-4052-b798-5e7d19f38b15' # Event Types
+  - 'savecategories:9ff437c1-0323-4492-a95e-007c3a05ab8f' # Practices
+  - 'savecategories:a907570e-41b8-4e87-b566-c2abe353e2a6' # Publication Types
+  - 'savecategories:df899104-7d07-489b-954f-20ec40505f31' # Opportunity Types
+  - 'saveentries:08b4a047-a20d-4d56-81b0-32b599c4fb41' # People
+  - 'saveentries:15ad504a-20b4-4e89-b94c-e7be7f135774' # People Index
+  - 'saveentries:18803174-20d5-4b61-a067-3072b484f857' # Resources Index
+  - 'saveentries:1aa8a857-2e3d-4a1c-a09c-9c180aa2fc53' # Projects
+  - 'saveentries:193aec6d-3690-493c-861e-18848399ea15' # Programmes Index
   - 'saveentries:1afae8bb-74c6-43e3-8b44-3e8cac38e2e8' # Blog Index
+  - 'saveentries:317eb1dc-2ab0-4290-a1d3-573e6ead4388' # News Index
+  - 'saveentries:39948e92-227e-4217-a6f1-aa40b8fcf04e' # Projects Index
+  - 'saveentries:3efc7d18-2f42-40d1-beee-b05867f36104' # Programmes
+  - 'saveentries:5280da4e-b8fa-4970-9b39-490dd3a96904' # Publications
+  - 'saveentries:530100d4-da7c-43c5-bfc1-65cf13988e46' # Search
+  - 'saveentries:54bdab3f-b980-46c0-a830-de704b143895' # Offices
   - 'saveentries:653ea464-6b43-4bc9-8138-79615323d877' # Blog
   - 'saveentries:6b8b6979-d75e-432e-8798-2fc0d53eb8f8' # Pages
+  - 'saveentries:77809eb2-6a5b-4988-a869-c707a21e0aa7' # Academic Levels
+  - 'saveentries:7a544871-c8af-4dc8-83ae-dc5001bc8203' # Tenders
+  - 'saveentries:94e56347-cb09-47d3-a930-1fd9bc2cb026' # News
+  - 'saveentries:9b5486a8-4b80-4391-a464-2e4f34123a03' # Offices Index
+  - 'saveentries:a3f3307a-1056-486e-9ed7-fb4e84632cb0' # Jobs Index
+  - 'saveentries:a71afc7e-315c-4be0-b69b-5c70a7dc85db' # Departments
+  - 'saveentries:a976662e-fc19-4f89-ae6b-a5b4db64752b' # Events
   - 'saveentries:bc20ba64-4979-418f-aa28-244626f315ab' # Home Page
+  - 'saveentries:be130f04-1c51-420d-818e-6d4f5a5960fa' # Resources
+  - 'saveentries:c5712456-e12b-4cbc-a8cc-b570cf00d66e' # Publications Index
+  - 'saveentries:e0240263-c706-4560-ad08-6682ee2135f1' # Organisations
+  - 'saveentries:e39594b6-01d5-4f33-b105-7b111cb3214a' # Testimonials
+  - 'saveentries:e6b6d0c4-ef5a-41fd-abdb-547128db1c52' # Locations
+  - 'saveentries:febb1068-1cf0-4781-8a41-bf420bb95e2f' # Jobs
   - 'savepeerassets:89c58a76-1da8-4581-84f1-caf2222de75a' # Documents
   - 'savepeerassets:e421ceea-a2f2-459f-88b9-2695f86047bd' # Images
+  - 'savepeercategorydrafts:08d78078-fb0a-4d0a-88b4-d5dc8238886e'
+  - 'savepeercategorydrafts:0bc8375c-5e05-4156-a6c9-5678af911123' # News Types
+  - 'savepeercategorydrafts:0ebe4125-0bbc-4efc-a7d1-055eebd82cb5' # Languages
+  - 'savepeercategorydrafts:4f6eb04d-1055-4d3f-bd6c-6ed9a14168ad' # Project Types
+  - 'savepeercategorydrafts:53c65b45-5d94-4867-95c3-6b235eef1853' # Focus Areas
+  - 'savepeercategorydrafts:58e76d43-a465-4c1a-b102-2726a9fc13f5' # Resources Types
+  - 'savepeercategorydrafts:6ae2a9cc-c9cc-4b89-9c8c-d7a417cbb87e' # Topics
+  - 'savepeercategorydrafts:6d709589-8e2f-4fef-9c6f-48f5644fb922' # Disciplines
+  - 'savepeercategorydrafts:7b76ffa4-3aed-45cd-9087-771dca56704e'
+  - 'savepeercategorydrafts:7da8d57d-2f04-4b73-a787-e23c441a48f4' # Employment Types
+  - 'savepeercategorydrafts:8a5099a8-7b2e-4052-b798-5e7d19f38b15' # Event Types
+  - 'savepeercategorydrafts:9ff437c1-0323-4492-a95e-007c3a05ab8f' # Practices
+  - 'savepeercategorydrafts:a907570e-41b8-4e87-b566-c2abe353e2a6' # Publication Types
+  - 'savepeercategorydrafts:df899104-7d07-489b-954f-20ec40505f31' # Opportunity Types
+  - 'savepeerentries:08b4a047-a20d-4d56-81b0-32b599c4fb41' # People
+  - 'savepeerentries:1aa8a857-2e3d-4a1c-a09c-9c180aa2fc53' # Projects
+  - 'savepeerentries:3efc7d18-2f42-40d1-beee-b05867f36104' # Programmes
+  - 'savepeerentries:5280da4e-b8fa-4970-9b39-490dd3a96904' # Publications
+  - 'savepeerentries:54bdab3f-b980-46c0-a830-de704b143895' # Offices
   - 'savepeerentries:653ea464-6b43-4bc9-8138-79615323d877' # Blog
   - 'savepeerentries:6b8b6979-d75e-432e-8798-2fc0d53eb8f8' # Pages
+  - 'savepeerentries:77809eb2-6a5b-4988-a869-c707a21e0aa7' # Academic Levels
+  - 'savepeerentries:7a544871-c8af-4dc8-83ae-dc5001bc8203' # Tenders
+  - 'savepeerentries:94e56347-cb09-47d3-a930-1fd9bc2cb026' # News
+  - 'savepeerentries:a71afc7e-315c-4be0-b69b-5c70a7dc85db' # Departments
+  - 'savepeerentries:a976662e-fc19-4f89-ae6b-a5b4db64752b' # Events
+  - 'savepeerentries:be130f04-1c51-420d-818e-6d4f5a5960fa' # Resources
+  - 'savepeerentries:e0240263-c706-4560-ad08-6682ee2135f1' # Organisations
+  - 'savepeerentries:e39594b6-01d5-4f33-b105-7b111cb3214a' # Testimonials
+  - 'savepeerentries:e6b6d0c4-ef5a-41fd-abdb-547128db1c52' # Locations
+  - 'savepeerentries:febb1068-1cf0-4781-8a41-bf420bb95e2f' # Jobs
+  - 'savepeerentrydrafts:08b4a047-a20d-4d56-81b0-32b599c4fb41' # People
+  - 'savepeerentrydrafts:15ad504a-20b4-4e89-b94c-e7be7f135774' # People Index
+  - 'savepeerentrydrafts:18803174-20d5-4b61-a067-3072b484f857' # Resources Index
+  - 'savepeerentrydrafts:1aa8a857-2e3d-4a1c-a09c-9c180aa2fc53' # Projects
+  - 'savepeerentrydrafts:193aec6d-3690-493c-861e-18848399ea15' # Programmes Index
   - 'savepeerentrydrafts:1afae8bb-74c6-43e3-8b44-3e8cac38e2e8' # Blog Index
+  - 'savepeerentrydrafts:317eb1dc-2ab0-4290-a1d3-573e6ead4388' # News Index
+  - 'savepeerentrydrafts:39948e92-227e-4217-a6f1-aa40b8fcf04e' # Projects Index
+  - 'savepeerentrydrafts:3efc7d18-2f42-40d1-beee-b05867f36104' # Programmes
+  - 'savepeerentrydrafts:5280da4e-b8fa-4970-9b39-490dd3a96904' # Publications
+  - 'savepeerentrydrafts:530100d4-da7c-43c5-bfc1-65cf13988e46' # Search
+  - 'savepeerentrydrafts:54bdab3f-b980-46c0-a830-de704b143895' # Offices
   - 'savepeerentrydrafts:653ea464-6b43-4bc9-8138-79615323d877' # Blog
   - 'savepeerentrydrafts:6b8b6979-d75e-432e-8798-2fc0d53eb8f8' # Pages
+  - 'savepeerentrydrafts:77809eb2-6a5b-4988-a869-c707a21e0aa7' # Academic Levels
+  - 'savepeerentrydrafts:7a544871-c8af-4dc8-83ae-dc5001bc8203' # Tenders
+  - 'savepeerentrydrafts:94e56347-cb09-47d3-a930-1fd9bc2cb026' # News
+  - 'savepeerentrydrafts:9b5486a8-4b80-4391-a464-2e4f34123a03' # Offices Index
+  - 'savepeerentrydrafts:a3f3307a-1056-486e-9ed7-fb4e84632cb0' # Jobs Index
+  - 'savepeerentrydrafts:a71afc7e-315c-4be0-b69b-5c70a7dc85db' # Departments
+  - 'savepeerentrydrafts:a976662e-fc19-4f89-ae6b-a5b4db64752b' # Events
   - 'savepeerentrydrafts:bc20ba64-4979-418f-aa28-244626f315ab' # Home Page
+  - 'savepeerentrydrafts:be130f04-1c51-420d-818e-6d4f5a5960fa' # Resources
+  - 'savepeerentrydrafts:c5712456-e12b-4cbc-a8cc-b570cf00d66e' # Publications Index
+  - 'savepeerentrydrafts:e0240263-c706-4560-ad08-6682ee2135f1' # Organisations
+  - 'savepeerentrydrafts:e39594b6-01d5-4f33-b105-7b111cb3214a' # Testimonials
+  - 'savepeerentrydrafts:e6b6d0c4-ef5a-41fd-abdb-547128db1c52' # Locations
+  - 'savepeerentrydrafts:febb1068-1cf0-4781-8a41-bf420bb95e2f' # Jobs
   - 'viewassets:89c58a76-1da8-4581-84f1-caf2222de75a' # Documents
   - 'viewassets:e421ceea-a2f2-459f-88b9-2695f86047bd' # Images
+  - 'viewcategories:08d78078-fb0a-4d0a-88b4-d5dc8238886e'
+  - 'viewcategories:0bc8375c-5e05-4156-a6c9-5678af911123' # News Types
+  - 'viewcategories:0ebe4125-0bbc-4efc-a7d1-055eebd82cb5' # Languages
+  - 'viewcategories:4f6eb04d-1055-4d3f-bd6c-6ed9a14168ad' # Project Types
+  - 'viewcategories:53c65b45-5d94-4867-95c3-6b235eef1853' # Focus Areas
+  - 'viewcategories:58e76d43-a465-4c1a-b102-2726a9fc13f5' # Resources Types
+  - 'viewcategories:6ae2a9cc-c9cc-4b89-9c8c-d7a417cbb87e' # Topics
+  - 'viewcategories:6d709589-8e2f-4fef-9c6f-48f5644fb922' # Disciplines
+  - 'viewcategories:7b76ffa4-3aed-45cd-9087-771dca56704e'
+  - 'viewcategories:7da8d57d-2f04-4b73-a787-e23c441a48f4' # Employment Types
+  - 'viewcategories:8a5099a8-7b2e-4052-b798-5e7d19f38b15' # Event Types
+  - 'viewcategories:9ff437c1-0323-4492-a95e-007c3a05ab8f' # Practices
+  - 'viewcategories:a907570e-41b8-4e87-b566-c2abe353e2a6' # Publication Types
+  - 'viewcategories:df899104-7d07-489b-954f-20ec40505f31' # Opportunity Types
+  - 'viewentries:08b4a047-a20d-4d56-81b0-32b599c4fb41' # People
+  - 'viewentries:15ad504a-20b4-4e89-b94c-e7be7f135774' # People Index
+  - 'viewentries:18803174-20d5-4b61-a067-3072b484f857' # Resources Index
+  - 'viewentries:1aa8a857-2e3d-4a1c-a09c-9c180aa2fc53' # Projects
+  - 'viewentries:193aec6d-3690-493c-861e-18848399ea15' # Programmes Index
   - 'viewentries:1afae8bb-74c6-43e3-8b44-3e8cac38e2e8' # Blog Index
+  - 'viewentries:317eb1dc-2ab0-4290-a1d3-573e6ead4388' # News Index
+  - 'viewentries:39948e92-227e-4217-a6f1-aa40b8fcf04e' # Projects Index
+  - 'viewentries:3efc7d18-2f42-40d1-beee-b05867f36104' # Programmes
+  - 'viewentries:5280da4e-b8fa-4970-9b39-490dd3a96904' # Publications
+  - 'viewentries:530100d4-da7c-43c5-bfc1-65cf13988e46' # Search
+  - 'viewentries:54bdab3f-b980-46c0-a830-de704b143895' # Offices
   - 'viewentries:653ea464-6b43-4bc9-8138-79615323d877' # Blog
   - 'viewentries:6b8b6979-d75e-432e-8798-2fc0d53eb8f8' # Pages
+  - 'viewentries:77809eb2-6a5b-4988-a869-c707a21e0aa7' # Academic Levels
+  - 'viewentries:7a544871-c8af-4dc8-83ae-dc5001bc8203' # Tenders
+  - 'viewentries:94e56347-cb09-47d3-a930-1fd9bc2cb026' # News
+  - 'viewentries:9b5486a8-4b80-4391-a464-2e4f34123a03' # Offices Index
+  - 'viewentries:a3f3307a-1056-486e-9ed7-fb4e84632cb0' # Jobs Index
+  - 'viewentries:a71afc7e-315c-4be0-b69b-5c70a7dc85db' # Departments
+  - 'viewentries:a976662e-fc19-4f89-ae6b-a5b4db64752b' # Events
   - 'viewentries:bc20ba64-4979-418f-aa28-244626f315ab' # Home Page
+  - 'viewentries:be130f04-1c51-420d-818e-6d4f5a5960fa' # Resources
+  - 'viewentries:c5712456-e12b-4cbc-a8cc-b570cf00d66e' # Publications Index
+  - 'viewentries:e0240263-c706-4560-ad08-6682ee2135f1' # Organisations
+  - 'viewentries:e39594b6-01d5-4f33-b105-7b111cb3214a' # Testimonials
+  - 'viewentries:e6b6d0c4-ef5a-41fd-abdb-547128db1c52' # Locations
+  - 'viewentries:febb1068-1cf0-4781-8a41-bf420bb95e2f' # Jobs
   - 'viewpeerassets:89c58a76-1da8-4581-84f1-caf2222de75a' # Documents
   - 'viewpeerassets:e421ceea-a2f2-459f-88b9-2695f86047bd' # Images
+  - 'viewpeercategorydrafts:08d78078-fb0a-4d0a-88b4-d5dc8238886e'
+  - 'viewpeercategorydrafts:0bc8375c-5e05-4156-a6c9-5678af911123' # News Types
+  - 'viewpeercategorydrafts:0ebe4125-0bbc-4efc-a7d1-055eebd82cb5' # Languages
+  - 'viewpeercategorydrafts:4f6eb04d-1055-4d3f-bd6c-6ed9a14168ad' # Project Types
+  - 'viewpeercategorydrafts:53c65b45-5d94-4867-95c3-6b235eef1853' # Focus Areas
+  - 'viewpeercategorydrafts:58e76d43-a465-4c1a-b102-2726a9fc13f5' # Resources Types
+  - 'viewpeercategorydrafts:6ae2a9cc-c9cc-4b89-9c8c-d7a417cbb87e' # Topics
+  - 'viewpeercategorydrafts:6d709589-8e2f-4fef-9c6f-48f5644fb922' # Disciplines
+  - 'viewpeercategorydrafts:7b76ffa4-3aed-45cd-9087-771dca56704e'
+  - 'viewpeercategorydrafts:7da8d57d-2f04-4b73-a787-e23c441a48f4' # Employment Types
+  - 'viewpeercategorydrafts:8a5099a8-7b2e-4052-b798-5e7d19f38b15' # Event Types
+  - 'viewpeercategorydrafts:9ff437c1-0323-4492-a95e-007c3a05ab8f' # Practices
+  - 'viewpeercategorydrafts:a907570e-41b8-4e87-b566-c2abe353e2a6' # Publication Types
+  - 'viewpeercategorydrafts:df899104-7d07-489b-954f-20ec40505f31' # Opportunity Types
+  - 'viewpeerentries:08b4a047-a20d-4d56-81b0-32b599c4fb41' # People
+  - 'viewpeerentries:1aa8a857-2e3d-4a1c-a09c-9c180aa2fc53' # Projects
+  - 'viewpeerentries:3efc7d18-2f42-40d1-beee-b05867f36104' # Programmes
+  - 'viewpeerentries:5280da4e-b8fa-4970-9b39-490dd3a96904' # Publications
+  - 'viewpeerentries:54bdab3f-b980-46c0-a830-de704b143895' # Offices
   - 'viewpeerentries:653ea464-6b43-4bc9-8138-79615323d877' # Blog
   - 'viewpeerentries:6b8b6979-d75e-432e-8798-2fc0d53eb8f8' # Pages
+  - 'viewpeerentries:77809eb2-6a5b-4988-a869-c707a21e0aa7' # Academic Levels
+  - 'viewpeerentries:7a544871-c8af-4dc8-83ae-dc5001bc8203' # Tenders
+  - 'viewpeerentries:94e56347-cb09-47d3-a930-1fd9bc2cb026' # News
+  - 'viewpeerentries:a71afc7e-315c-4be0-b69b-5c70a7dc85db' # Departments
+  - 'viewpeerentries:a976662e-fc19-4f89-ae6b-a5b4db64752b' # Events
+  - 'viewpeerentries:be130f04-1c51-420d-818e-6d4f5a5960fa' # Resources
+  - 'viewpeerentries:e0240263-c706-4560-ad08-6682ee2135f1' # Organisations
+  - 'viewpeerentries:e39594b6-01d5-4f33-b105-7b111cb3214a' # Testimonials
+  - 'viewpeerentries:e6b6d0c4-ef5a-41fd-abdb-547128db1c52' # Locations
+  - 'viewpeerentries:febb1068-1cf0-4781-8a41-bf420bb95e2f' # Jobs
+  - 'viewpeerentrydrafts:08b4a047-a20d-4d56-81b0-32b599c4fb41' # People
+  - 'viewpeerentrydrafts:15ad504a-20b4-4e89-b94c-e7be7f135774' # People Index
+  - 'viewpeerentrydrafts:18803174-20d5-4b61-a067-3072b484f857' # Resources Index
+  - 'viewpeerentrydrafts:1aa8a857-2e3d-4a1c-a09c-9c180aa2fc53' # Projects
+  - 'viewpeerentrydrafts:193aec6d-3690-493c-861e-18848399ea15' # Programmes Index
   - 'viewpeerentrydrafts:1afae8bb-74c6-43e3-8b44-3e8cac38e2e8' # Blog Index
+  - 'viewpeerentrydrafts:317eb1dc-2ab0-4290-a1d3-573e6ead4388' # News Index
+  - 'viewpeerentrydrafts:39948e92-227e-4217-a6f1-aa40b8fcf04e' # Projects Index
+  - 'viewpeerentrydrafts:3efc7d18-2f42-40d1-beee-b05867f36104' # Programmes
+  - 'viewpeerentrydrafts:5280da4e-b8fa-4970-9b39-490dd3a96904' # Publications
+  - 'viewpeerentrydrafts:530100d4-da7c-43c5-bfc1-65cf13988e46' # Search
+  - 'viewpeerentrydrafts:54bdab3f-b980-46c0-a830-de704b143895' # Offices
   - 'viewpeerentrydrafts:653ea464-6b43-4bc9-8138-79615323d877' # Blog
   - 'viewpeerentrydrafts:6b8b6979-d75e-432e-8798-2fc0d53eb8f8' # Pages
+  - 'viewpeerentrydrafts:77809eb2-6a5b-4988-a869-c707a21e0aa7' # Academic Levels
+  - 'viewpeerentrydrafts:7a544871-c8af-4dc8-83ae-dc5001bc8203' # Tenders
+  - 'viewpeerentrydrafts:94e56347-cb09-47d3-a930-1fd9bc2cb026' # News
+  - 'viewpeerentrydrafts:9b5486a8-4b80-4391-a464-2e4f34123a03' # Offices Index
+  - 'viewpeerentrydrafts:a3f3307a-1056-486e-9ed7-fb4e84632cb0' # Jobs Index
+  - 'viewpeerentrydrafts:a71afc7e-315c-4be0-b69b-5c70a7dc85db' # Departments
+  - 'viewpeerentrydrafts:a976662e-fc19-4f89-ae6b-a5b4db64752b' # Events
   - 'viewpeerentrydrafts:bc20ba64-4979-418f-aa28-244626f315ab' # Home Page
+  - 'viewpeerentrydrafts:be130f04-1c51-420d-818e-6d4f5a5960fa' # Resources
+  - 'viewpeerentrydrafts:c5712456-e12b-4cbc-a8cc-b570cf00d66e' # Publications Index
+  - 'viewpeerentrydrafts:e0240263-c706-4560-ad08-6682ee2135f1' # Organisations
+  - 'viewpeerentrydrafts:e39594b6-01d5-4f33-b105-7b111cb3214a' # Testimonials
+  - 'viewpeerentrydrafts:e6b6d0c4-ef5a-41fd-abdb-547128db1c52' # Locations
+  - 'viewpeerentrydrafts:febb1068-1cf0-4781-8a41-bf420bb95e2f' # Jobs

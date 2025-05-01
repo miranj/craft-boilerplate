@@ -1,0 +1,21 @@
+columnSuffix: null
+handle: practices
+instructions: null
+name: Practices
+searchable: true
+settings:
+  allowSelfRelations: false
+  branchLimit: null
+  maintainHierarchy: false
+  maxRelations: null
+  minRelations: null
+  selectionLabel: 'Add practices'
+  showCardsInGrid: false
+  showSiteMenu: true
+  source: 'group:9ff437c1-0323-4492-a95e-007c3a05ab8f' # Practices
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: list
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Categories

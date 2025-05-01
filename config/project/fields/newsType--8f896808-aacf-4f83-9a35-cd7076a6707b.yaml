@@ -1,0 +1,21 @@
+columnSuffix: null
+handle: newsType
+instructions: 'Eg: _Press Release_, _Announcement_.'
+name: 'News Type'
+searchable: true
+settings:
+  allowSelfRelations: false
+  branchLimit: null
+  maintainHierarchy: false
+  maxRelations: 1
+  minRelations: null
+  selectionLabel: 'Add type'
+  showCardsInGrid: false
+  showSiteMenu: true
+  source: 'group:0bc8375c-5e05-4156-a6c9-5678af911123' # News Types
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: list
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Categories

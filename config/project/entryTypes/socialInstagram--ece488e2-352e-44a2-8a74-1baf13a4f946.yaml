@@ -1,0 +1,37 @@
+color: blue
+fieldLayouts:
+  5b19a9d2-c00e-4338-816a-e2a31bb5bd3e:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-04-21T04:17:03+00:00'
+            elementCondition: null
+            fieldUid: b5e4cb0a-59d9-4e16-bfc3-408104521a11 # URL
+            handle: hyperlink
+            includeInCards: false
+            instructions: null
+            label: __blank__
+            providesThumbs: false
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 951d96d5-ff59-45d1-a26f-b5bcde6b65c5
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 0f414495-b394-4685-8b0b-3f3921e52b0f
+        userCondition: null
+handle: socialInstagram
+hasTitleField: false
+icon: instagram
+name: 'Social: Instagram'
+showSlugField: false
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

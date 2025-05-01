@@ -16,3 +16,4 @@ permissions:
   - impersonateusers
   - moderateusers
   - registerusers
+  - viewusers

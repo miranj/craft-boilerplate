@@ -1,4 +1,4 @@
-color: null
+color: emerald
 fieldLayouts:
   d57dc989-026e-44e3-90df-3338cb9510c1:
     cardView:
@@ -7,6 +7,15 @@ fieldLayouts:
       -
         elementCondition: null
         elements:
+          -
+            dateAdded: '2025-04-28T13:11:46+00:00'
+            elementCondition: null
+            template: _cp/instructions/blockHeading.twig
+            templateMode: site
+            type: craft\fieldlayoutelements\Template
+            uid: 4cbfccec-9e7b-4f35-886f-ff467986c0e8
+            userCondition: null
+            width: 100
           -
             dateAdded: '2024-12-17T21:53:21+00:00'
             elementCondition: null

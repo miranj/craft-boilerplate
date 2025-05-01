@@ -1,0 +1,28 @@
+columnSuffix: null
+handle: link_emailPhoneUrl
+instructions: null
+name: 'Link (Email, Phone, URL)'
+searchable: true
+settings:
+  fullGraphqlData: false
+  maxLength: 255
+  showLabelField: true
+  typeSettings:
+    __assoc__:
+      -
+        - url
+        -
+          __assoc__:
+            -
+              - allowRootRelativeUrls
+              - ''
+            -
+              - allowAnchors
+              - ''
+  types:
+    - url
+    - email
+    - tel
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Link

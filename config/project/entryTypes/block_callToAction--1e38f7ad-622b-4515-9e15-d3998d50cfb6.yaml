@@ -1,0 +1,95 @@
+color: blue
+fieldLayouts:
+  5ec4ef67-0987-4321-865a-9c79431b8f96:
+    cardView:
+      - 'layoutElement:cc539f19-5ef0-4f2c-844a-3c5c7651091a'
+      - 'layoutElement:886c0c06-9f4b-4b5a-8f9f-e583245b28de'
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-04-28T13:08:54+00:00'
+            elementCondition: null
+            template: _cp/instructions/blockHeading.twig
+            templateMode: site
+            type: craft\fieldlayoutelements\Template
+            uid: bd1f8878-1770-43ce-9bdb-39f7447afd81
+            userCondition: null
+            width: 100
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: '2025-04-26T02:31:49+00:00'
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            required: true
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: a1744075-79f0-478d-9805-71e09e749f9e
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-04-26T02:34:44+00:00'
+            elementCondition: null
+            fieldUid: 386721be-1ee4-4e3b-b22c-7fb3dfded3ff # Simple Text
+            handle: introduction
+            includeInCards: true
+            instructions: null
+            label: Introduction
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: cc539f19-5ef0-4f2c-844a-3c5c7651091a
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-04-26T02:34:44+00:00'
+            elementCondition: null
+            fieldUid: a6b97e16-5236-44b1-ad57-3899644efd40 # Link (Assets, Entries, URL)
+            handle: hyperlink
+            includeInCards: true
+            instructions: null
+            label: Link
+            providesThumbs: false
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 886c0c06-9f4b-4b5a-8f9f-e583245b28de
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: c9a873c0-6a19-4b12-8482-50a6c940044a
+        userCondition: null
+handle: block_callToAction
+hasTitleField: true
+icon: link
+name: 'Block: Call To Action'
+showSlugField: false
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

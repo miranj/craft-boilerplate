@@ -689,6 +689,9 @@ h5 {
 .grid {
     display: grid;
 }
+.contents {
+    display: contents;
+}
 .aspect-square {
     aspect-ratio: 1 / 1;
 }

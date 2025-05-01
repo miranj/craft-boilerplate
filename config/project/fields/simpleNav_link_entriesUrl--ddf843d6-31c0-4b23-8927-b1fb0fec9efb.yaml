@@ -1,0 +1,25 @@
+columnSuffix: null
+handle: simpleNav_link_entriesUrl
+instructions: null
+name: 'Simple Navigation (Link: Entries, URL)'
+searchable: false
+settings:
+  createButtonLabel: null
+  defaultIndexViewMode: cards
+  entryTypes:
+    -
+      __assoc__:
+        -
+          - uid
+          - 74946a7f-3d6f-43eb-afb2-f79f614d409a # Navigation Link
+  includeTableView: false
+  maxEntries: null
+  minEntries: null
+  pageSize: null
+  propagationKeyFormat: null
+  propagationMethod: all
+  showCardsInGrid: false
+  viewMode: blocks
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

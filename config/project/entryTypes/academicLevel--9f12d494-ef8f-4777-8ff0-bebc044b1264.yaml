@@ -1,0 +1,51 @@
+color: null
+fieldLayouts:
+  99683af5-e3b3-4d77-a7b3-2c10bf46ab2e:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: '2025-04-28T13:21:36+00:00'
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            required: true
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 55f16a01-f216-4745-95a4-c9df6f497bdd
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 05ddad96-bf4b-45c6-a810-394964157700
+        userCondition: null
+handle: academicLevel
+hasTitleField: true
+icon: scroll
+name: 'Academic Level'
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

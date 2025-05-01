@@ -1,0 +1,94 @@
+color: null
+fieldLayouts:
+  a62c8817-c584-4e26-acbe-1cb83e6272c7:
+    cardView:
+      - 'layoutElement:7bd5bdc8-25f2-49b5-875f-f2f58a206e89'
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-04-29T10:22:36+00:00'
+            elementCondition: null
+            template: _cp/instructions/blockHeading.twig
+            templateMode: site
+            type: craft\fieldlayoutelements\Template
+            uid: 9b1436c1-d66e-4a82-b62d-640623bc0013
+            userCondition: null
+            width: 100
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: '2025-04-29T10:18:09+00:00'
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            required: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 3aa564fd-f832-4caf-be2d-bd1abbd106f8
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-04-29T10:21:32+00:00'
+            elementCondition: null
+            fieldUid: 386721be-1ee4-4e3b-b22c-7fb3dfded3ff # Simple Text
+            handle: introduction
+            includeInCards: false
+            instructions: null
+            label: Introduction
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 7eee42f5-c81d-4190-9b38-7f383fcc7eb8
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-04-29T10:21:32+00:00'
+            elementCondition: null
+            fieldUid: 8dddc601-5e96-40bb-b036-520072ba4aa7 # Images
+            handle: null
+            includeInCards: true
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 7bd5bdc8-25f2-49b5-875f-f2f58a206e89
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 3d5f1570-7e31-483b-ba81-da2fa805d2f0
+        userCondition: null
+handle: block_gallery
+hasTitleField: true
+icon: images
+name: 'Block: Gallery'
+showSlugField: false
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

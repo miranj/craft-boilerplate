@@ -4,5 +4,22 @@
   Craft CP CSS styles
 */
 
-/*@import 'file';*/
+/* Control Panel Typography */
+
+/*
+    Improve contrast of custom UI headings when added
+    via "Add > UI elments" when editing field layouts.
+*/
+
+.block-heading,
+.flex-fields > h2:not(:nth-child(-n + 1 of :not(.hidden))) {
+    font-size: 1.2rem;
+    color: #9da9b5;
+    padding-block-end: 0.25rem;
+    font-weight: 600;
+}
+
+.flex-fields > h2:not(:nth-child(-n + 1 of :not(.hidden))) {
+    border-block-start: 1px solid #cecece;
+}
 /*# sourceMappingURL=craftcp.css.map */
