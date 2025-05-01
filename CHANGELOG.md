@@ -35,28 +35,27 @@ Release notes for Miranj's Craft Boilerplate starter project.
   - _Search_ section
   - _Tenders_ section, _Tender_ entry type
 - The following categories and corresponding fields have been added:
-  - _Disciplines_ category
-  - _Event Types_ category and field
-  - _Focus Areas_ and field
-  - _Languages_ category and field
-  - _News Types_ category, _News Type_ field
-  - _Oportunities Types_ category and field
-  - _Publications Types_ category, _Publications Type_ field
-  - _Practices_ category and field
-  - _Project Types_ and field
-  - _Resource Types_ category, _Resource Type_ field
-  - _Topics_ category and field
+  - _Disciplines_
+  - _Event Types_
+  - _Focus Areas_
+  - _Languages_
+  - _News Types_
+  - _Oportunities Types_
+  - _Publications Types_
+  - _Practices_
+  - _Project Types_
+  - _Resource Types_
+  - _Topics_
 - The following fields have also been added:
-  - Content Blocks:
-    - _Content Blocks: Faculty_, _Content Blocks: Projects_
-  - Content Builders:
-    - _Simple Navigation_, _Contact Information_, _Credits_
-  - Body Blocks:
-    - Added _Collapse_, _Button_, _Media Embed_, block type to the _Body_ field and a _Nested Body_ field was created for nesting content in _Collapse_ blocks.
-  - Other Fields:
-    - _Author Type_, _External Person Roles_, various _Hyperlink_ and _Url_ options, _Date_, _Media Embed_
-- The following navigations have been created: _Header, Footer_ and _Fineprint_
-- Added the _Organisation_ global set
+  - Content Blocks: _Faculty_, and _Projects_.
+  - Content Builders: _Simple Navigation_, _Contact Information_, and _Credits_.
+  - Body Blocks: _Collapse_, _Button_, and _Media Embed_, alongwith a _Nested Body_ field for nesting content in _Collapse_ blocks.
+  - Other fields: _Author Type_, _External Person Roles_, various _Hyperlink_ and _Url_ options, _Date_, and _Media Embed_.
+- The following navigation menus have been created:
+  - _Header_
+  - _Footer_
+  - _Fineprint_
+- Added the _Organisation_ global set.
 
 ### Craft
 
