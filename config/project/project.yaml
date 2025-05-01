@@ -1,4 +1,4 @@
-dateModified: 1746066625
+dateModified: 1746066922
 elementSources:
   craft\elements\Category:
     -
@@ -155,47 +155,10 @@ elementSources:
         - dateUpdated
       type: native
     -
-      heading: Channels
+      heading: Organisation
       type: heading
     -
       key: 'section:77809eb2-6a5b-4988-a869-c707a21e0aa7' # Academic Levels
-      type: native
-    -
-      defaultSort:
-        - postDate
-        - desc
-      defaultViewMode: ''
-      disabled: false
-      key: 'section:653ea464-6b43-4bc9-8138-79615323d877' # Blog
-      tableAttributes:
-        - postDate
-        - link
-        - dateUpdated
-        - revisionCreator
-      type: native
-    -
-      defaultSort:
-        - postDate
-        - desc
-      defaultViewMode: ''
-      disabled: false
-      key: 'section:febb1068-1cf0-4781-8a41-bf420bb95e2f' # Jobs
-      tableAttributes:
-        - link
-        - 'field:4a6b0f8c-21ac-43ae-8df2-afe365e78304' # Employment Types
-        - postDate
-        - 'field:32ed2f1a-9024-4ee9-9028-3a5041c0e5e6' # Date
-      type: native
-    -
-      defaultViewMode: ''
-      disabled: false
-      key: 'section:a976662e-fc19-4f89-ae6b-a5b4db64752b' # Events
-      tableAttributes:
-        - link
-        - 'fieldInstance:e30e5ed4-2a93-4299-927a-7993d8dc68b3'
-        - 'field:9b5f9007-3f61-4857-b978-fdfbc4b29dba' # Event Types
-        - dateUpdated
-        - revisionCreator
       type: native
     -
       defaultSort:
@@ -220,20 +183,6 @@ elementSources:
         - _childme_addChild
         - postDate
         - link
-        - dateUpdated
-        - revisionCreator
-      type: native
-    -
-      defaultSort:
-        - postDate
-        - desc
-      defaultViewMode: ''
-      disabled: false
-      key: 'section:94e56347-cb09-47d3-a930-1fd9bc2cb026' # News
-      tableAttributes:
-        - link
-        - 'field:8f896808-aacf-4f83-9a35-cd7076a6707b' # News Type
-        - postDate
         - dateUpdated
         - revisionCreator
       type: native
@@ -324,6 +273,58 @@ elementSources:
         - desc
       defaultViewMode: ''
       disabled: false
+      key: 'section:e39594b6-01d5-4f33-b105-7b111cb3214a' # Testimonials
+      tableAttributes:
+        - dateUpdated
+        - revisionCreator
+      type: native
+    -
+      heading: Publishing
+      type: heading
+    -
+      defaultSort:
+        - postDate
+        - desc
+      defaultViewMode: ''
+      disabled: false
+      key: 'section:94e56347-cb09-47d3-a930-1fd9bc2cb026' # News
+      tableAttributes:
+        - link
+        - 'field:8f896808-aacf-4f83-9a35-cd7076a6707b' # News Type
+        - postDate
+        - dateUpdated
+        - revisionCreator
+      type: native
+    -
+      defaultViewMode: ''
+      disabled: false
+      key: 'section:a976662e-fc19-4f89-ae6b-a5b4db64752b' # Events
+      tableAttributes:
+        - link
+        - 'fieldInstance:e30e5ed4-2a93-4299-927a-7993d8dc68b3'
+        - 'field:9b5f9007-3f61-4857-b978-fdfbc4b29dba' # Event Types
+        - dateUpdated
+        - revisionCreator
+      type: native
+    -
+      defaultSort:
+        - postDate
+        - desc
+      defaultViewMode: ''
+      disabled: false
+      key: 'section:653ea464-6b43-4bc9-8138-79615323d877' # Blog
+      tableAttributes:
+        - postDate
+        - link
+        - dateUpdated
+        - revisionCreator
+      type: native
+    -
+      defaultSort:
+        - postDate
+        - desc
+      defaultViewMode: ''
+      disabled: false
       key: 'section:5280da4e-b8fa-4970-9b39-490dd3a96904' # Publications
       tableAttributes:
         - link
@@ -348,6 +349,19 @@ elementSources:
         - desc
       defaultViewMode: ''
       disabled: false
+      key: 'section:febb1068-1cf0-4781-8a41-bf420bb95e2f' # Jobs
+      tableAttributes:
+        - link
+        - 'field:4a6b0f8c-21ac-43ae-8df2-afe365e78304' # Employment Types
+        - postDate
+        - 'field:32ed2f1a-9024-4ee9-9028-3a5041c0e5e6' # Date
+      type: native
+    -
+      defaultSort:
+        - postDate
+        - desc
+      defaultViewMode: ''
+      disabled: false
       key: 'section:7a544871-c8af-4dc8-83ae-dc5001bc8203' # Tenders
       tableAttributes:
         - postDate
@@ -356,18 +370,7 @@ elementSources:
         - revisionCreator
       type: native
     -
-      defaultSort:
-        - postDate
-        - desc
-      defaultViewMode: ''
-      disabled: false
-      key: 'section:e39594b6-01d5-4f33-b105-7b111cb3214a' # Testimonials
-      tableAttributes:
-        - dateUpdated
-        - revisionCreator
-      type: native
-    -
-      heading: ''
+      heading: External
       type: heading
     -
       condition:
