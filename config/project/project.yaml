@@ -1,4 +1,4 @@
-dateModified: 1746082811
+dateModified: 1746082812
 elementSources:
   craft\elements\Category:
     -
@@ -14,9 +14,6 @@ elementSources:
         - dateUpdated
       type: native
     -
-      key: 'group:7da8d57d-2f04-4b73-a787-e23c441a48f4' # Employment Types
-      type: native
-    -
       key: 'group:8a5099a8-7b2e-4052-b798-5e7d19f38b15' # Event Types
       type: native
     -
@@ -29,9 +26,6 @@ elementSources:
       key: 'group:0bc8375c-5e05-4156-a6c9-5678af911123' # News Types
       type: native
     -
-      key: 'group:df899104-7d07-489b-954f-20ec40505f31' # Opportunity Types
-      type: native
-    -
       defaultSort:
         - structure
         - asc
@@ -42,9 +36,6 @@ elementSources:
         - dateUpdated
       type: native
     -
-      key: 'group:4f6eb04d-1055-4d3f-bd6c-6ed9a14168ad' # Project Types
-      type: native
-    -
       key: 'group:a907570e-41b8-4e87-b566-c2abe353e2a6' # Publication Types
       type: native
     -
@@ -52,6 +43,18 @@ elementSources:
       type: native
     -
       key: 'group:6ae2a9cc-c9cc-4b89-9c8c-d7a417cbb87e' # Topics
+      type: native
+    -
+      key: 'group:7b76ffa4-3aed-45cd-9087-771dca56704e'
+      type: native
+    -
+      key: 'group:7da8d57d-2f04-4b73-a787-e23c441a48f4' # Employment Types
+      type: native
+    -
+      key: 'group:08d78078-fb0a-4d0a-88b4-d5dc8238886e'
+      type: native
+    -
+      key: 'group:df899104-7d07-489b-954f-20ec40505f31' # Opportunity Types
       type: native
   craft\elements\Entry:
     -
