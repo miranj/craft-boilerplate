@@ -53,7 +53,7 @@ Release notes for Miranj's Craft Boilerplate starter project.
   - _Topics_ category and field
 - The following fields have also been added:
   - Content Blocks:
-  - _Content Blocks: Faculty_, _Content Blocks: Projects_
+    - _Content Blocks: Faculty_, _Content Blocks: Projects_
   - Content Builders:
     - _Simple Navigation_, _Contact Information_, _Credits_
   - Body Blocks:
