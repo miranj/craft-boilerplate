@@ -6,6 +6,7 @@ Release notes for Miranj's Craft Boilerplate starter project.
 
 ### Front-end
 
+- Remove CSS fallbacks for `calc()`, and CSS variables, both of which are now _Baseline: Widely Available_.
 - Added _Index_ views router.
 
 ### Data Model
@@ -14,7 +15,7 @@ Release notes for Miranj's Craft Boilerplate starter project.
   - _Academic Levels_ section, _Academic Level_ entry type, and _Academic Level_ field
   - _Departments_ section, _Department_ entry type, and _Department_ and _Departments_ field
   - _Events_ section, _Event_ entry type
-    \_ _Jobs_ and _Jobs Index_ sections, _Job_ entry type
+  - _Jobs_ and _Jobs Index_ sections, _Job_ entry type
   - _News_ and _News Index_ sections, _News_ entry type
   - _Organisations_ section, _Organisation_ entry type
   - _Offices_ and _Offices Index_ sections, _Office_ entry type, _Offices_ field
@@ -25,7 +26,7 @@ Release notes for Miranj's Craft Boilerplate starter project.
   - _Resources_ and _Resources Index_ sections, _Resource_ and _Resource Link_ entry types
   - _Testimonials_ section, _Testimonial_ entry type
   - _Search_ section
-    \_ _Tenders_ section, _Tender_ entry type
+  - _Tenders_ section, _Tender_ entry type
 - The following categories and corresponding fields have been added:
   - _Disciplines_ category
   - _Event Types_ category and field
@@ -60,6 +61,13 @@ Release notes for Miranj's Craft Boilerplate starter project.
 - Updated CP Field Inspect to 2.0.4.
 - Updated Image Resizer to 4.0.3.
 - Updated Imager X to 5.1.3.
+- Fixed a bug where changes to an existing asset would not always result in Imager transforms being re-generated.
+
+### DevOps
+
+- PDF files can now be cached by user agents for 1 month.
+- Fixed a bug where the primary Craft app would not honour extra static file rules for videos, webmanifests, etc.
+- Refactored extra Nginx static file rules config for better re-use.
 
 ## 3.3.0 - 2025-02-24
 

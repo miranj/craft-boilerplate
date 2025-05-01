@@ -16,11 +16,13 @@ cd $TARGET_DIR
 ln -s $REPO_DIR/serverconfigs/nginx/cdn/static.conf $CDN_NAME.location.static.include.conf
 ln -s $REPO_DIR/serverconfigs/envs/production/env.conf $CDN_NAME.location.main-before.include.conf
 ln -s $REPO_DIR/serverconfigs/nginx/cdn/main.conf $CDN_NAME.location.main.include.conf
+ln -s $REPO_DIR/serverconfigs/nginx/cdn/main.static-extra.conf $CDN_NAME.location.main.static-extra.conf
 ln -s $REPO_DIR/serverconfigs/nginx/cdn/proxy.conf $CDN_NAME.location.proxy.include.conf
 
 # Craft
 ln -s $REPO_DIR/serverconfigs/nginx/craft/http.conf $APP_NAME.location.http.include.conf
 ln -s $REPO_DIR/serverconfigs/envs/production/env.conf $APP_NAME.location.main-before.include.conf
 ln -s $REPO_DIR/serverconfigs/nginx/craft/main.conf $APP_NAME.location.main.include.conf
+ln -s $REPO_DIR/serverconfigs/nginx/cdn/main.static-extra.conf $APP_NAME.location.main.static-extra.conf
 ln -s $REPO_DIR/serverconfigs/nginx/cdn/static.conf $APP_NAME.location.static.include.conf
 ln -s $REPO_DIR/serverconfigs/nginx/craft/proxy.conf $APP_NAME.location.proxy.include.conf

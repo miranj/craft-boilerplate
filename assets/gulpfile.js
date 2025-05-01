@@ -26,8 +26,6 @@ Object.entries(paths.tasks.css).forEach(([task_name, task_config]) => {
           [
             require('postcss-import'),
             require('postcss-nested')(task_config.nested_config),
-            require('postcss-custom-properties'),
-            require('postcss-calc')({ preserve: true }),
           ].filter((plugin) => !!plugin),
         ),
       )
