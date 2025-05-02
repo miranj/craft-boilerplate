@@ -61,7 +61,12 @@ Release notes for Miranj's Craft Boilerplate starter project.
   - Other Fields:
     - _Author Type_, _External Person Roles_, various _Hyperlink_ and _Url_ options, _Date_, _Media Embed_
 - The following navigations have been created: _Header, Footer_ and _Fineprint_
-- Added the _Organisation_ global set
+  - Added the _Organisation_ global set
+- The following navigation menus have been created:
+  - _Header_
+  - _Footer_
+  - _Fineprint_
+- Added the _Organisation_ global set.
 
 ### Craft
 
@@ -80,6 +85,10 @@ Release notes for Miranj's Craft Boilerplate starter project.
 - PDF files can now be cached by user agents for 1 month.
 - Fixed a bug where the primary Craft app would not honour extra static file rules for videos, webmanifests, etc.
 - Refactored extra Nginx static file rules config for better re-use.
+
+### System
+
+- Added automated deployment commands (post-install) for the boilerplate project setup.
 
 ## 3.3.0 - 2025-02-24
 
