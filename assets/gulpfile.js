@@ -21,11 +21,10 @@ Object.entries(paths.tasks.css).forEach(([task_name, task_config]) => {
     return gulp
       .src(task_config.source, { sourcemaps: true })
       .pipe(rename(task_config.destination))
-      .pipe(postcss([require('postcss-import')].filter((plugin) => !!plugin)))
-      .pipe(gulp.dest(paths.directories.build))
       .pipe(
         postcss(
           [
+            require('postcss-import'),
             task_config.tailwindcss
               ? require('@tailwindcss/postcss')
               : require('autoprefixer'),
