@@ -2,6 +2,12 @@
 
 Release notes for Miranj's Craft Boilerplate starter project.
 
+## Unreleased 3.next
+
+### Front-end
+
+- Cache oEmbed lookups.
+
 ## 3.4.0 - 2025-05-01
 
 ### Front-end
