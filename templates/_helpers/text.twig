@@ -27,14 +27,14 @@
   - parse reference tags
   - markdown (none / md / extra / inline)
   - lazyload iframes
-  - typogrify
+  - typogrify / typogrifyFeed
   - obfuscate emails
   
   eg: normaliseRichtext('## Hello World') => '<h2>Hello World</h2>'
 
   `composer require mmikkel/retcon miranj/craft-obfuscator nystudio107/craft-typogrify`
 #}
-{% macro normaliseRichtext(text, markdown = 'none') %}
+{% macro normaliseRichtext(text, markdown = 'none', isTextForFeed = false) %}
   {% set text = text|parseRefs %}
   {% set markdown = markdown is string
     ? markdown
@@ -47,9 +47,10 @@
   {% elseif markdown in ['inline', 'inlineOnly'] %}
     {% set text = text|md('original', inlineOnly=true) %}
   {% endif %}
-  
+
+  {% set text = isTextForFeed ? text|typogrifyFeed : text|typogrify %}
+
   {% return _self.deferEmbeds(_self.openPDFLinksInNewTab(text))
-    |typogrify
     |enkode_emails
   %}
 {% endmacro %}

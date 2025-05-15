@@ -8,6 +8,7 @@ Release notes for Miranj's Craft Boilerplate starter project.
 
 - Remove CSS fallbacks for `calc()`, and CSS variables, both of which are now _Baseline: Widely Available_.
 - Added _Index_ views router.
+- Improved _RSS_ feed by removing double escaped HTML entities from it.
 
 ### Data Model
 
