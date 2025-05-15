@@ -2,7 +2,14 @@
 
 Release notes for Miranj's Craft Boilerplate starter project.
 
-## Unreleased - 3.4.0
+## Unreleased 3.next
+
+### Front-end
+
+- Added `_layouts/private.twig` as a base template for front-end content restricted to site authors.
+- Cache oEmbed lookups.
+
+## 3.4.0 - 2025-05-01
 
 ### Front-end
 
