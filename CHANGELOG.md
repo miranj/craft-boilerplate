@@ -8,6 +8,7 @@ Release notes for Miranj's Craft Boilerplate starter project.
 
 - Added `_layouts/private.twig` as a base template for front-end content restricted to site authors.
 - Cache oEmbed lookups.
+- Improved _RSS_ feed by removing double escaped HTML entities from it.
 
 ## 3.4.0 - 2025-05-01
 

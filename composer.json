@@ -32,8 +32,8 @@
     }
   ],
   "require": {
-    "craftcms/ckeditor": "^4.1",
-    "craftcms/cms": "~5.6.0",
+    "craftcms/ckeditor": "4.7.0",
+    "craftcms/cms": "~5.7.0",
     "craftcms/store-hours": "^4.2",
     "marionnewlevant/twig-perversion": "v5.x-dev",
     "miranj/craft-obfuscator": "^1.2",
