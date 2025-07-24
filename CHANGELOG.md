@@ -2,6 +2,14 @@
 
 Release notes for Miranj's Craft Boilerplate starter project.
 
+## Unreleased 3.next
+
+### Front-end
+
+- Added `_layouts/private.twig` as a base template for front-end content restricted to site authors.
+- Cache oEmbed lookups.
+- Fixed a bug where `:is`, `:where`, and other colon selectors were always getting purged.
+
 ## 3.4.1 - 2025-07-25
 
 ### Craft
