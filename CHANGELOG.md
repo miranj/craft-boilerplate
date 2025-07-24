@@ -10,6 +10,13 @@ Release notes for Miranj's Craft Boilerplate starter project.
 - Cache oEmbed lookups.
 - Fixed a bug where `:is`, `:where`, and other colon selectors were always getting purged.
 
+## 3.4.1 - 2025-07-25
+
+### Craft
+
+- Updated Craft CMS to 5.7.4.
+- Updated Navigation to 3.0.8.
+
 ## 3.4.0 - 2025-05-01
 
 ### Front-end
