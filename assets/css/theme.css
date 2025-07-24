@@ -5,10 +5,14 @@
 
 /* Screens */
 @theme {
-    --breakpoint-xs: calc(448em / 16);
-    --breakpoint-sm: calc(900em / 16);
-    --breakpoint-md: calc(1188em / 16);
-    --breakpoint-lg: calc(1920em / 16);
+    --breakpoint-xs: 28em; /* 448em/16 */
+    --breakpoint-sm: 56.25em; /* 900em/16 */
+    --breakpoint-md: 74.25em; /* 1188em/16 */
+    --breakpoint-lg: 120em; /* 1920em/16 */
+}
+
+/* Colours */
+@theme {
 }
 
 /* Font Family */
