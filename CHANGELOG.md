@@ -8,7 +8,7 @@ Release notes for Miranj's Craft Boilerplate starter project.
 
 - Added `_layouts/private.twig` as a base template for front-end content restricted to site authors.
 - Cache oEmbed lookups.
-- Improved _RSS_ feed by removing double escaped HTML entities from it.
+- Fixed a bug where RSS Feed content was double escaping HTML entities.
 - Fixed a bug where `:is`, `:where`, and other colon selectors were always getting purged.
 
 ## 3.4.1 - 2025-07-25
@@ -24,7 +24,6 @@ Release notes for Miranj's Craft Boilerplate starter project.
 
 - Remove CSS fallbacks for `calc()`, and CSS variables, both of which are now _Baseline: Widely Available_.
 - Added _Index_ views router.
-- Improved _RSS_ feed by removing double escaped HTML entities from it.
 
 ### Data Model
 
