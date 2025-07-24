@@ -46,17 +46,17 @@ Release notes for Miranj's Craft Boilerplate starter project.
   - _Search_ section
   - _Tenders_ section, _Tender_ entry type
 - The following categories and corresponding fields have been added:
-  - _Disciplines_ category
-  - _Event Types_ category and field
-  - _Focus Areas_ and field
-  - _Languages_ category and field
-  - _News Types_ category, _News Type_ field
-  - _Oportunities Types_ category and field
-  - _Publications Types_ category, _Publications Type_ field
-  - _Practices_ category and field
-  - _Project Types_ and field
-  - _Resource Types_ category, _Resource Type_ field
-  - _Topics_ category and field
+  - _Disciplines_
+  - _Event Types_
+  - _Focus Areas_
+  - _Languages_
+  - _News Types_
+  - _Oportunities Types_
+  - _Publications Types_
+  - _Practices_
+  - _Project Types_
+  - _Resource Types_
+  - _Topics_
 - The following fields have also been added:
   - Content Blocks: _Faculty_, and _Projects_.
   - Content Builders: _Simple Navigation_, _Contact Information_, and _Credits_.
