@@ -1,24 +1,40 @@
 /* Additional Utilities */
 
+/* Text Styles */
+@utility italictext {
+    @apply italic;
+    :where(i, em) {
+        @apply not-italic;
+    }
+}
+
 /* Force an aspect ratio on an element */
-.aspect-box:before {
-    content: '';
-    width: 1px;
-    margin-left: -1px;
-    float: left;
-    height: 0;
+@utility aspect-box {
+    &:before {
+        content: '';
+        width: 1px;
+        margin-left: -1px;
+        float: left;
+        height: 0;
+    }
+    &:after {
+        content: '';
+        display: table;
+        clear: both;
+    }
 }
-.aspect-box:after {
-    content: '';
-    display: table;
-    clear: both;
+@utility aspect-ratio-1-1 {
+    &:before {
+        padding-top: 100%;
+    }
 }
-.aspect-ratio-1-1:before {
-    padding-top: 100%;
+@utility aspect-ratio-16-9 {
+    &:before {
+        padding-top: 56.25%;
+    }
 }
-.aspect-ratio-16-9:before {
-    padding-top: 56.25%;
-}
-.aspect-ratio-3-2:before {
-    padding-top: 66.67%;
+@utility aspect-ratio-3-2 {
+    &:before {
+        padding-top: 66.67%;
+    }
 }
