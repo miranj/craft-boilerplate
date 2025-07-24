@@ -1,5 +1,13 @@
 /* Additional Utilities */
 
+/* Text Styles */
+@utility italictext {
+    @apply italic;
+    :where(i, em) {
+        @apply not-italic;
+    }
+}
+
 /* Force an aspect ratio on an element */
 @utility aspect-box {
     &:before {

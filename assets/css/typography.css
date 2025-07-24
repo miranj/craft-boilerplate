@@ -29,6 +29,9 @@ a:hover {
 .title-h3 {
     @apply text-md leading-tight;
 }
+.title-h4 {
+    @apply text-base leading-tight;
+}
 .prose-body {
     @apply text-base;
 }
@@ -37,7 +40,7 @@ a:hover {
 }
 
 /* Frills */
-/* purgecss start ignore */
+/*! purgecss start ignore */
 .quo {
     margin-left: -0.24em;
 }
@@ -47,22 +50,26 @@ a:hover {
 .tquo {
     margin-left: -0.68em;
 }
-/* purgecss end ignore */
 
 /* Rich Text */
 .richtext {
-    p,
-    ul,
-    ol {
-        @apply mt-0 mb-5;
+    :where(p, ul, ol, blockquote) {
+        @apply mt-0 mb-sm;
+        &:last-child {
+            @apply mb-0;
+        }
     }
-    p:last-child,
-    ul:last-child,
-    ol:last-child {
-        @apply mb-0;
+    :where(figure, pre, table) {
+        @apply my-md;
+        &:first-child {
+            @apply mt-0;
+        }
+        &:last-child {
+            @apply mb-0;
+        }
     }
     & + & {
-        @apply mt-5;
+        @apply mt-sm;
     }
 
     h3 {
@@ -102,14 +109,43 @@ a:hover {
         list-style-type: lower-roman;
     }
 
-    a {
+    a:not(.no-underline) {
         @apply underline;
-    }
-    a.no-underline {
-        text-decoration: none;
+        @apply hover:no-underline;
     }
 
-    strong {
+    :where(blockquote) {
+        @apply italictext leading-normal;
+        @apply ps-sm ms-md;
+        @apply border-s border-black/30;
+    }
+
+    :where(pre) {
+        @apply p-sm bg-black/10;
+        @apply font-mono text-sm;
+        @apply overflow-auto;
+    }
+
+    :where(table) {
+        @apply w-full;
+        tr {
+            @apply border-b border-dotted border-black/10;
+        }
+        thead {
+            @apply border-b-1;
+        }
+        tbody th {
+            text-align: unset;
+        }
+        th,
+        td {
+            @apply py-1 pr-1;
+        }
+    }
+
+    :where(strong) {
         @apply font-bold;
     }
 }
+
+/*! purgecss end ignore */

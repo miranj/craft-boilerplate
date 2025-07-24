@@ -451,6 +451,10 @@
     display: block;
     width: 100%;
   }
+  button:not(:disabled),
+[role='button']:not(:disabled) {
+    cursor: pointer;
+  }
 }
 @layer base {
   body {
@@ -470,15 +474,33 @@ h5 {
   a:hover {
     text-decoration-line: underline;
   }
-  .richtext p,.richtext ul,.richtext ol {
-    margin-top: calc(var(--spacing) * 0);
-    margin-bottom: calc(var(--spacing) * 5);
+  .quo {
+    margin-left: -0.24em;
   }
-  .richtext p:last-child,.richtext ul:last-child,.richtext ol:last-child {
+  .dquo {
+    margin-left: -0.44em;
+  }
+  .tquo {
+    margin-left: -0.68em;
+  }
+  .richtext :where(p,ul,ol,blockquote) {
+    margin-top: calc(var(--spacing) * 0);
+    margin-bottom: clamp(1rem, 0.8913rem + 0.5435vi, 1.3125rem);
+  }
+  :is(.richtext :where(p,ul,ol,blockquote)):last-child {
+    margin-bottom: calc(var(--spacing) * 0);
+  }
+  .richtext :where(figure,pre,table) {
+    margin-block: clamp(1.5rem, 1.3261rem + 0.8696vi, 2rem);
+  }
+  :is(.richtext :where(figure,pre,table)):first-child {
+    margin-top: calc(var(--spacing) * 0);
+  }
+  :is(.richtext :where(figure,pre,table)):last-child {
     margin-bottom: calc(var(--spacing) * 0);
   }
   .richtext + .richtext {
-    margin-top: calc(var(--spacing) * 5);
+    margin-top: clamp(1rem, 0.8913rem + 0.5435vi, 1.3125rem);
   }
   .richtext h3 {
     margin-top: calc(var(--spacing) * 8);
@@ -513,13 +535,71 @@ h5 {
   .richtext ol ol ol {
     list-style-type: lower-roman;
   }
-  .richtext a {
+  .richtext a:not(.no-underline) {
     text-decoration-line: underline;
   }
-  .richtext a.no-underline {
-    text-decoration: none;
+  @media (hover: hover) {
+    :is(.richtext a:not(.no-underline)):hover {
+      text-decoration-line: none;
+    }
   }
-  .richtext strong {
+  .richtext :where(blockquote) {
+    --tw-leading: var(--leading-normal);
+    line-height: var(--leading-normal);
+    font-style: italic;
+    margin-inline-start: clamp(1.5rem, 1.3261rem + 0.8696vi, 2rem);
+    padding-inline-start: clamp(1rem, 0.8913rem + 0.5435vi, 1.3125rem);
+    border-inline-start-style: var(--tw-border-style);
+    border-inline-start-width: 1px;
+    border-color: color-mix(in srgb, #000 30%, transparent);
+  }
+  @supports (color: color-mix(in lab, red, red)) {
+    .richtext :where(blockquote) {
+      border-color: color-mix(in oklab, var(--color-black) 30%, transparent);
+    }
+  }
+  .richtext :where(pre) {
+    background-color: color-mix(in srgb, #000 10%, transparent);
+  }
+  @supports (color: color-mix(in lab, red, red)) {
+    .richtext :where(pre) {
+      background-color: color-mix(in oklab, var(--color-black) 10%, transparent);
+    }
+  }
+  .richtext :where(pre) {
+    padding: clamp(1rem, 0.8913rem + 0.5435vi, 1.3125rem);
+    font-family: var(--font-mono);
+    font-size: var(--text-sm);
+    line-height: var(--tw-leading, var(--text-sm--line-height));
+    overflow: auto;
+  }
+  .richtext :where(table) {
+    width: 100%;
+  }
+  :is(.richtext :where(table)) tr {
+    border-bottom-style: var(--tw-border-style);
+    border-bottom-width: 1px;
+    --tw-border-style: dotted;
+    border-style: dotted;
+    border-color: color-mix(in srgb, #000 10%, transparent);
+  }
+  @supports (color: color-mix(in lab, red, red)) {
+    :is(.richtext :where(table)) tr {
+      border-color: color-mix(in oklab, var(--color-black) 10%, transparent);
+    }
+  }
+  :is(.richtext :where(table)) thead {
+    border-bottom-style: var(--tw-border-style);
+    border-bottom-width: 1px;
+  }
+  :is(.richtext :where(table)) tbody th {
+    text-align: unset;
+  }
+  :is(.richtext :where(table)) th,:is(.richtext :where(table)) td {
+    padding-block: calc(var(--spacing) * 1);
+    padding-right: calc(var(--spacing) * 1);
+  }
+  .richtext :where(strong) {
     --tw-font-weight: var(--font-weight-bold);
     font-weight: var(--font-weight-bold);
   }

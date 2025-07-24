@@ -7,6 +7,7 @@ Release notes for Miranj's Craft Boilerplate starter project.
 ### Front-end
 
 - Updated Tailwind CSS to 4.1.4.
+- Improved `.richtext` typographic styles to handle tables and `pre` content, added `.italictext`.
 - Added `_layouts/private.twig` as a base template for front-end content restricted to site authors.
 - Cache oEmbed lookups.
 - Fixed a bug where RSS Feed content was double escaping HTML entities.
