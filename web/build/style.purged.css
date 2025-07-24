@@ -2,7 +2,7 @@
 @layer properties;
 @layer theme, base, components, utilities;
 @layer theme {
-  :root {
+  :root, :host {
     --font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
@@ -66,7 +66,8 @@
     padding: 0;
     border: 0 solid;
   }
-  html {
+  html,
+  :host {
     line-height: 1.5;
     -webkit-text-size-adjust: 100%;
     tab-size: 4;
@@ -119,6 +120,9 @@
   }
   sup {
     top: -0.5em;
+  }
+  :-moz-focusring {
+    outline: auto;
   }
   progress {
     vertical-align: baseline;
@@ -193,6 +197,9 @@
   ::-webkit-datetime-edit-meridiem-field {
     padding-block: 0;
   }
+  :-moz-ui-invalid {
+    box-shadow: none;
+  }
   button,
   input:where([type="button"], [type="reset"]),
   ::file-selector-button {
@@ -201,6 +208,9 @@
   ::-webkit-inner-spin-button,
   ::-webkit-outer-spin-button {
     height: auto;
+  }
+  [hidden]:where(:not([hidden="until-found"])) {
+    display: none !important;
   }
 }
 @layer utilities {

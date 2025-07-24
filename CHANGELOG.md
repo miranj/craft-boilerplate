@@ -2,19 +2,25 @@
 
 Release notes for Miranj's Craft Boilerplate starter project.
 
-## Unreleased - 3.next
+## Unreleased 3.next
 
 ### Front-end
 
 - Updated Tailwind CSS to 4.1.4.
+- Added `_layouts/private.twig` as a base template for front-end content restricted to site authors.
+- Cache oEmbed lookups.
+- Fixed a bug where RSS Feed content was double escaping HTML entities.
+- Fixed a bug where `:is`, `:where`, and other colon selectors were always getting purged.
 - Updated CSS Nano to 7.0.6.
+
+## 3.4.1 - 2025-07-25
 
 ### Craft
 
 - Updated Craft CMS to 5.7.4.
-- Update Navigation to 3.0.8.
+- Updated Navigation to 3.0.8.
 
-## Unreleased - 3.4.0
+## 3.4.0 - 2025-05-01
 
 ### Front-end
 
@@ -52,16 +58,10 @@ Release notes for Miranj's Craft Boilerplate starter project.
   - _Resource Types_ category, _Resource Type_ field
   - _Topics_ category and field
 - The following fields have also been added:
-  - Content Blocks:
-    - _Content Blocks: Faculty_, _Content Blocks: Projects_
-  - Content Builders:
-    - _Simple Navigation_, _Contact Information_, _Credits_
-  - Body Blocks:
-    - Added _Collapse_, _Button_, _Media Embed_, block type to the _Body_ field and a _Nested Body_ field was created for nesting content in _Collapse_ blocks.
-  - Other Fields:
-    - _Author Type_, _External Person Roles_, various _Hyperlink_ and _Url_ options, _Date_, _Media Embed_
-- The following navigations have been created: _Header, Footer_ and _Fineprint_
-  - Added the _Organisation_ global set
+  - Content Blocks: _Faculty_, and _Projects_.
+  - Content Builders: _Simple Navigation_, _Contact Information_, and _Credits_.
+  - Body Blocks: _Collapse_, _Button_, and _Media Embed_, alongwith a _Nested Body_ field for nesting content in _Collapse_ blocks.
+  - Other fields: _Author Type_, _External Person Roles_, various _Hyperlink_ and _Url_ options, _Date_, and _Media Embed_.
 - The following navigation menus have been created:
   - _Header_
   - _Footer_

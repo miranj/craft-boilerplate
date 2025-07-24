@@ -1,5 +1,6 @@
 {# _views/feeds/_default #}
 {% extends '_layouts/blank' %}
+{% from '_helpers/text' import normaliseRichtext %}
 
 
 
@@ -19,9 +20,7 @@
 {#
   Biz Logic
 #}
-{% set feedItemBody = feedItemBody
-  |typogrify
-  |enkode_emails
+{% set feedItemBody = normaliseRichtext(feedItemBody, isTextForFeed: true)
   |retcon([
     ['remove', 'noscript'],
     ['attr', '*', {
@@ -47,7 +46,7 @@
       <guid>{{ feedItemUrl }}</guid>
     {% endif %}
     
-    <content:encoded><![CDATA[{{ feedItemBody }}]]></content:encoded>
+    <content:encoded><![CDATA[{{ feedItemBody|raw }}]]></content:encoded>
     
     {% if feedItemCredit %}
       <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">{{ feedItemCredit }}</dc:creator>

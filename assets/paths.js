@@ -69,6 +69,10 @@ paths.tasks = {
             'b',
             'sup',
             'sub',
+
+            // colon selectors like :is, :where, etc.
+            // https://github.com/FullHuman/purgecss/issues/978#issuecomment-1595425397
+            /^\:[-a-z]+$/,
           ],
           deep: [/richtext/, /pswp/],
         },
