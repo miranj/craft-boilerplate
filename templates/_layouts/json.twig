@@ -1,0 +1,16 @@
+{%- header('Content-Type: application/json; charset=utf-8') -%}
+{%- extends '_layouts/blank' -%}
+
+
+
+{#
+  Params
+#}
+{% set feed = feed ?? [] %}
+
+
+
+{#
+  Render
+#}
+{% block layout feed|json_encode|raw %}
