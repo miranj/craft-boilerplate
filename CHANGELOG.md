@@ -17,6 +17,7 @@ Release notes for Miranj's Craft Boilerplate starter project.
 - Added `_layouts/private.twig` as a base template for front-end content restricted to site authors.
 - Added `svgIcon()` Twig function to render SVGs from any file path (or alias).
 - Added `cache-svg-shapes` hook to enable caching repeat instances of SVG markup generated via `svgIcon()`.
+- Added default Feed Me plugin config for optional HTTP auth credentials support.
 - Cache oEmbed lookups.
 - Replaced deprecated `|ucfirst` with `|capitalize`.
 - Disabled automatic conversion of exponents, fractions, and marks via `|typogrify`.
