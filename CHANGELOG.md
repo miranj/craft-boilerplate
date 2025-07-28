@@ -12,6 +12,10 @@ Release notes for Miranj's Craft Boilerplate starter project.
 - Fixed a bug where `:is`, `:where`, and other colon selectors were always getting purged.
 - Updated CSS Nano to 7.0.6.
 
+### Data Model
+
+- Added a _Multimedia_ asset volume.
+
 ### Craft
 
 - Added `_layouts/private.twig` as a base template for front-end content restricted to site authors.

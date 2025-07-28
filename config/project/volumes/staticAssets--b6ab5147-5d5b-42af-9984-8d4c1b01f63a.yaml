@@ -43,7 +43,7 @@ fieldLayouts:
 fs: webAssets
 handle: staticAssets
 name: 'Static Assets'
-sortOrder: 5
+sortOrder: 6
 subpath: ''
 titleTranslationKeyFormat: null
 titleTranslationMethod: site

@@ -1,0 +1,79 @@
+altTranslationKeyFormat: null
+altTranslationMethod: none
+fieldLayouts:
+  4483ac95-1c37-47a9-8da4-d016050d98cf:
+    cardThumbAlignment: end
+    cardView:
+      - kind
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: '2025-07-28T19:51:55+00:00'
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\assets\AssetTitleField
+            uid: 947e7160-31a9-4b5d-a100-319b14c224d4
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            attribute: alt
+            class: null
+            cols: null
+            dateAdded: '2025-07-28T19:53:52+00:00'
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            instructions: null
+            label: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            requirable: true
+            required: false
+            rows: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\assets\AltField
+            uid: f578d6f1-4bc0-4d37-a84d-2380996f652b
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 17ffee00-5501-4abb-9f6c-e19f1965ba5f
+        userCondition: null
+fs: webMedia
+handle: multimedia
+name: Multimedia
+sortOrder: 3
+subpath: multimedia
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
+transformFs: webTransforms
+transformSubpath: multimedia

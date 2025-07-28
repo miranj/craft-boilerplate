@@ -43,7 +43,7 @@ fieldLayouts:
 fs: contentMedia
 handle: userPhotos
 name: 'User Photos'
-sortOrder: 4
+sortOrder: 5
 subpath: userphotos
 titleTranslationKeyFormat: null
 titleTranslationMethod: site

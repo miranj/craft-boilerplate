@@ -43,7 +43,7 @@ fieldLayouts:
 fs: contentMedia
 handle: formSubmissions
 name: 'Form Submissions'
-sortOrder: 3
+sortOrder: 4
 subpath: submissions
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
