@@ -24,6 +24,7 @@ Release notes for Miranj's Craft Boilerplate starter project.
 - Updated Navigation to 3.0.10.
 - Updated oEmbed to 3.1.5.
 - Updated SEOMate to 3.2.0.
+- Removed CP Field Inspect plugin.
 
 ## 3.4.1 - 2025-07-25
 

@@ -28,7 +28,6 @@ This starter project includes:
 - A few Craft plugins, along with their config files:
   - [Child Me](https://github.com/mmikkel/ChildMe-Craft)
   - [CKEditor](https://github.com/craftcms/ckeditor)
-  - [CP Field Inspect](https://github.com/mmikkel/CpFieldInspect-Craft)
   - [Element Index Defaults](https://github.com/verbb/element-index-defaults)
   - [Environment Label](https://github.com/TopShelfCraft/Environment-Label)
   - [Field Manager](https://github.com/verbb/field-manager)

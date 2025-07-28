@@ -38,7 +38,6 @@
     "marionnewlevant/twig-perversion": "v5.x-dev",
     "miranj/craft-obfuscator": "^1.2",
     "mmikkel/child-me": "^2.2",
-    "mmikkel/cp-field-inspect": "^2.0",
     "mmikkel/retcon": "^3.1",
     "nystudio107/craft-minify": "^5.0",
     "nystudio107/craft-typogrify": "^5.0",

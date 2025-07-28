@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7c63a989ea397dd02acd4d3f20cf763b",
+    "content-hash": "568c70dd48ff7f80d281c6ee26df192d",
     "packages": [
         {
             "name": "aws/aws-crt-php",
@@ -3833,64 +3833,6 @@
                 "source": "https://github.com/mmikkel/ChildMe-Craft/tree/2.2.3"
             },
             "time": "2024-10-18T22:00:10+00:00"
-        },
-        {
-            "name": "mmikkel/cp-field-inspect",
-            "version": "2.0.4",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/mmikkel/CpFieldInspect-Craft.git",
-                "reference": "ac990c3c3102880649136ddc543781b36b296833"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/mmikkel/CpFieldInspect-Craft/zipball/ac990c3c3102880649136ddc543781b36b296833",
-                "reference": "ac990c3c3102880649136ddc543781b36b296833",
-                "shasum": ""
-            },
-            "require": {
-                "craftcms/cms": "^5.0.0",
-                "php": "^8.2"
-            },
-            "type": "craft-plugin",
-            "extra": {
-                "name": "CP Field Inspect",
-                "class": "mmikkel\\cpfieldinspect\\CpFieldInspect",
-                "handle": "cp-field-inspect",
-                "changelogUrl": "https://raw.githubusercontent.com/mmikkel/CpFieldInspect-Craft/master/CHANGELOG.md",
-                "hasCpSection": false,
-                "hasCpSettings": false,
-                "schemaVersion": "1.0.0"
-            },
-            "autoload": {
-                "psr-4": {
-                    "mmikkel\\cpfieldinspect\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Mats Mikkel Rummelhoff",
-                    "homepage": "https://vaersaagod.no"
-                }
-            ],
-            "description": "Inspect field handles and easily edit field and element source settings",
-            "keywords": [
-                "Craft",
-                "cms",
-                "cp field inspect",
-                "craft-plugin",
-                "craftcms"
-            ],
-            "support": {
-                "docs": "https://github.com/mmikkel/CpFieldInspect-Craft/blob/master/README.md",
-                "issues": "https://github.com/mmikkel/CpFieldInspect-Craft/issues",
-                "source": "https://github.com/mmikkel/CpFieldInspect-Craft/tree/2.0.4"
-            },
-            "time": "2025-01-26T11:01:13+00:00"
         },
         {
             "name": "mmikkel/retcon",
