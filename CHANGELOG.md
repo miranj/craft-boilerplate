@@ -36,6 +36,10 @@ Release notes for Miranj's Craft Boilerplate starter project.
 - Updated SEOMate to 3.2.0.
 - Removed CP Field Inspect plugin.
 
+### DevOps
+
+- Allow Nginx to bypass cache for all responses that contain _any_ cookie.
+
 ## 3.4.1 - 2025-07-25
 
 ### Craft
