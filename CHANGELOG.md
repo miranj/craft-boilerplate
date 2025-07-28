@@ -16,6 +16,7 @@ Release notes for Miranj's Craft Boilerplate starter project.
 
 - Added `_layouts/private.twig` as a base template for front-end content restricted to site authors.
 - Cache oEmbed lookups.
+- Replaced deprecated `|ucfirst` with `|capitalize`.
 - Fixed a bug where RSS Feed content was double escaping HTML entities.
 - Updated Craft CMS to 5.8.11.
 - Updated CKEditor to 4.9.0.

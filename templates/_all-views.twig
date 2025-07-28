@@ -53,7 +53,7 @@
 {% set seomate = (seomate ?? {})|merge({
   meta: {
     title: [activeSection, activeView]
-      |map(l => l|ucfirst)
+      |map(l => l|capitalize)
       |join(' ')
       ~ ' views',
     robots: 'noindex',
@@ -76,7 +76,7 @@
             v == activeView ? 'bg-zinc-900/20 dark:bg-white/20',
           ],
           href: url([basePageUrl, v]|join('/')),
-          text: v|ucfirst,
+          text: v|capitalize,
         }) }}
       {% endfor %}
     </div>
