@@ -19,6 +19,7 @@ Release notes for Miranj's Craft Boilerplate starter project.
 - Added `cache-svg-shapes` hook to enable caching repeat instances of SVG markup generated via `svgIcon()`.
 - Cache oEmbed lookups.
 - Replaced deprecated `|ucfirst` with `|capitalize`.
+- Disabled automatic conversion of exponents, fractions, and marks via `|typogrify`.
 - Fixed a bug where RSS Feed content was double escaping HTML entities.
 - Updated Craft CMS to 5.8.11.
 - Updated CKEditor to 4.9.0.
