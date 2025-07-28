@@ -16,6 +16,14 @@ Release notes for Miranj's Craft Boilerplate starter project.
 - Added `_layouts/private.twig` as a base template for front-end content restricted to site authors.
 - Cache oEmbed lookups.
 - Fixed a bug where RSS Feed content was double escaping HTML entities.
+- Updated Craft CMS to 5.8.11.
+- Updated CKEditor to 4.9.0.
+- Updated Element Index Default to 4.0.1.
+- Updated Image Resizer to 4.0.4.
+- Updated Imager X to 5.1.6.
+- Updated Navigation to 3.0.10.
+- Updated oEmbed to 3.1.5.
+- Updated SEOMate to 3.2.0.
 
 ## 3.4.1 - 2025-07-25
 

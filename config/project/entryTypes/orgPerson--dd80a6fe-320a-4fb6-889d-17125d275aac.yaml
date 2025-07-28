@@ -1,6 +1,8 @@
 color: null
+description: null
 fieldLayouts:
   e7a92393-9608-4ef8-8b61-26cd9344c101:
+    cardThumbAlignment: end
     tabs:
       -
         elementCondition: null
@@ -37,6 +39,7 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-04-16T02:04:45+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: 840acb32-6694-40d0-9384-60a0220c1de0 # Label
             handle: designation
@@ -53,6 +56,7 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-04-13T07:06:54+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: 69339afc-d4f1-440b-a7ad-7da2ccb77972 # Image
             handle: null
@@ -69,6 +73,7 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-04-13T07:55:25+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: 08b5b22b-fb98-46ef-8a90-e392edb2244f # Rich Text
             handle: bio
@@ -91,6 +96,7 @@ fieldLayouts:
         elements:
           -
             dateAdded: '2025-04-17T05:02:53+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: 8f58365f-4eeb-4347-9d3d-5c0d3ffd3989 # Toggle (Default: off)
             handle: isAlumni
@@ -107,6 +113,7 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-04-17T04:38:10+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: 11127416-2baf-40e9-bb28-9ea76040af2a # Org Person Roles
             handle: roles
@@ -123,6 +130,7 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-04-18T04:09:13+00:00'
+            editCondition: null
             elementCondition:
               class: craft\elements\conditions\entries\EntryCondition
               conditionRules:
@@ -152,6 +160,7 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-04-18T04:22:14+00:00'
+            editCondition: null
             elementCondition:
               class: craft\elements\conditions\entries\EntryCondition
               conditionRules:
@@ -180,6 +189,7 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-04-18T04:09:13+00:00'
+            editCondition: null
             elementCondition:
               class: craft\elements\conditions\entries\EntryCondition
               conditionRules:
@@ -209,6 +219,7 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-04-18T04:09:13+00:00'
+            editCondition: null
             elementCondition:
               class: craft\elements\conditions\entries\EntryCondition
               conditionRules:
@@ -239,6 +250,7 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-04-18T04:09:13+00:00'
+            editCondition: null
             elementCondition:
               class: craft\elements\conditions\entries\EntryCondition
               conditionRules:
@@ -275,6 +287,7 @@ fieldLayouts:
         elements:
           -
             dateAdded: '2025-04-13T07:06:54+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: 856911a9-89f9-4865-bdb1-5665460c6c23 # Contact & Social Media Information
             handle: null
@@ -317,6 +330,7 @@ fieldLayouts:
         elements:
           -
             dateAdded: '2025-04-13T07:50:34+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: 5b72b712-0218-40c6-9717-0c395a914ad8 # Summary
             handle: null
@@ -368,6 +382,7 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-04-13T07:50:34+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: da24c053-b31c-4fa8-b113-217845a4ce83 # Share/SEO Title
             handle: null
@@ -384,6 +399,7 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-04-13T07:50:34+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: 349b5e6f-3a2a-43f1-a9dd-2373bf4a0a67 # Share/SEO Description
             handle: null
@@ -400,6 +416,7 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-04-13T07:50:34+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: d4720a93-54ad-45de-a939-b668ed8660dc # Share/SEO Image
             handle: null
@@ -422,6 +439,7 @@ fieldLayouts:
             userCondition: null
           -
             dateAdded: '2025-04-13T07:50:34+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: 61317d04-b4b5-4b2f-ad77-e1d87029c361 # Legacy URL
             handle: null

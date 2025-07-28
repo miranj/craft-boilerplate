@@ -6,6 +6,7 @@ searchable: true
 settings:
   createButtonLabel: 'Add link'
   defaultIndexViewMode: cards
+  enableVersioning: false
   entryTypes:
     -
       __assoc__:

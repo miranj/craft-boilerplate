@@ -6,12 +6,16 @@ searchable: true
 settings:
   allowSelfRelations: false
   branchLimit: null
+  defaultPlacement: end
   maintainHierarchy: false
   maxRelations: null
   minRelations: null
   selectionLabel: null
   showCardsInGrid: false
+  showSearchInput: true
   showSiteMenu: true
+  showUnpermittedEntries: true
+  showUnpermittedSections: true
   sources:
     - 'section:653ea464-6b43-4bc9-8138-79615323d877' # Blog
     - 'custom:7e0fdfb7-2573-4d33-9aa1-9d6f7877de37'

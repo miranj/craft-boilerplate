@@ -1,7 +1,8 @@
 defaultPlacement: end
 enableVersioning: true
 entryTypes:
-  - a404ee2c-1d0d-4da9-a736-cd565a4d2605 # Page
+  -
+    uid: a404ee2c-1d0d-4da9-a736-cd565a4d2605 # Page
 handle: pages
 maxAuthors: 1
 name: Pages

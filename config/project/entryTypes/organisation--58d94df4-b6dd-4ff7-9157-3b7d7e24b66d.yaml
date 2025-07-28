@@ -1,12 +1,15 @@
 color: null
+description: null
 fieldLayouts:
   5266c3a1-ec43-4dd1-954f-57760c55d5fe:
+    cardThumbAlignment: end
     tabs:
       -
         elementCondition: null
         elements:
           -
             dateAdded: '2025-04-29T04:19:59+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: 69339afc-d4f1-440b-a7ad-7da2ccb77972 # Image
             handle: logo
@@ -59,6 +62,7 @@ fieldLayouts:
         elements:
           -
             dateAdded: '2025-04-29T04:19:59+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: 856911a9-89f9-4865-bdb1-5665460c6c23 # Contact & Social Media Information
             handle: null
@@ -81,6 +85,7 @@ fieldLayouts:
         elements:
           -
             dateAdded: '2025-04-29T04:19:59+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: 5b72b712-0218-40c6-9717-0c395a914ad8 # Summary
             handle: null

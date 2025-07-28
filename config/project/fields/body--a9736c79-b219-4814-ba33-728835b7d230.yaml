@@ -6,6 +6,7 @@ searchable: true
 settings:
   availableTransforms: ''
   availableVolumes: '*'
+  characterLimit: null
   ckeConfig: e03f52b8-38a8-493c-b27a-3c61c5532f18 # Builder
   createButtonLabel: 'Insert block'
   defaultTransform: null
@@ -41,6 +42,9 @@ settings:
         -
           - name
           - Collapse
+  expandEntryButtons: false
+  fullGraphqlData: false
+  parseEmbeds: false
   purifierConfig: null
   purifyHtml: true
   showUnpermittedFiles: false

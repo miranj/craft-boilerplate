@@ -6,12 +6,16 @@ searchable: true
 settings:
   allowSelfRelations: false
   branchLimit: null
+  defaultPlacement: end
   maintainHierarchy: false
   maxRelations: 1
   minRelations: null
   selectionLabel: 'Add a level'
   showCardsInGrid: false
+  showSearchInput: true
   showSiteMenu: true
+  showUnpermittedEntries: true
+  showUnpermittedSections: true
   sources:
     - 'section:77809eb2-6a5b-4988-a869-c707a21e0aa7' # Academic Levels
   targetSiteId: null

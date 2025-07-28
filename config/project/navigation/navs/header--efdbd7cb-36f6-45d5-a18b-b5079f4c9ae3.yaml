@@ -1,6 +1,7 @@
 defaultPlacement: end
 fieldLayouts:
   3fb4146e-7c57-453d-9542-0ca4222548c5:
+    cardThumbAlignment: end
     tabs:
       -
         elementCondition: null
@@ -50,6 +51,7 @@ fieldLayouts:
             warning: null
           -
             dateAdded: '2025-04-30T04:02:02+00:00'
+            editCondition: null
             elementCondition:
               class: verbb\navigation\elements\conditions\NodeCondition
               conditionRules:

@@ -6,11 +6,13 @@ searchable: true
 settings:
   allowSelfRelations: false
   branchLimit: null
+  defaultPlacement: end
   maintainHierarchy: false
   maxRelations: null
   minRelations: null
   selectionLabel: 'Add types'
   showCardsInGrid: false
+  showSearchInput: true
   showSiteMenu: true
   source: 'group:8a5099a8-7b2e-4052-b798-5e7d19f38b15' # Event Types
   targetSiteId: null

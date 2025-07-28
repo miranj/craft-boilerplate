@@ -6,6 +6,7 @@ searchable: true
 settings:
   createButtonLabel: 'Add contact info'
   defaultIndexViewMode: cards
+  enableVersioning: false
   entryTypes:
     -
       __assoc__:

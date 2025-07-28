@@ -1,6 +1,8 @@
 color: null
+description: null
 fieldLayouts:
   f8de11a4-731a-41d0-abfe-8480be123b7a:
+    cardThumbAlignment: end
     tabs:
       -
         elementCondition: null
@@ -37,6 +39,7 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-04-30T10:36:33+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: 08b5b22b-fb98-46ef-8a90-e392edb2244f # Rich Text
             handle: introduction
@@ -53,6 +56,7 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-04-30T10:36:33+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: a9736c79-b219-4814-ba33-728835b7d230 # Body
             handle: null
@@ -75,6 +79,7 @@ fieldLayouts:
         elements:
           -
             dateAdded: '2025-04-30T10:36:33+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: c4c680e9-4168-4267-9e83-2d8e26d5efc8 # Opportunity Types
             handle: null
@@ -91,6 +96,7 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-04-30T10:36:33+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: a6b97e16-5236-44b1-ad57-3899644efd40 # Link (Assets, Entries, URL)
             handle: cta
@@ -107,6 +113,7 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-04-30T10:36:33+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: 32ed2f1a-9024-4ee9-9028-3a5041c0e5e6 # Date
             handle: deadline
@@ -123,6 +130,7 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-04-30T10:36:33+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: 840acb32-6694-40d0-9384-60a0220c1de0 # Label
             handle: employmentStart
@@ -139,6 +147,7 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-04-30T10:36:33+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: 840acb32-6694-40d0-9384-60a0220c1de0 # Label
             handle: compensation
@@ -161,6 +170,7 @@ fieldLayouts:
         elements:
           -
             dateAdded: '2025-04-30T10:36:33+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: 86d5863c-5339-40bb-9add-f4872cdfdce5 # Departments
             handle: null
@@ -177,6 +187,7 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-04-30T10:36:33+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: 16ca56d3-1df0-41ad-9bf1-f0b273739be2 # Offices
             handle: null
@@ -193,6 +204,7 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-04-30T10:36:33+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: a60b8050-4e83-40d0-9598-4a9572ce027a # Location
             handle: null
@@ -209,6 +221,7 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-04-30T10:36:33+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: a0320c92-dcb7-489b-94e3-bd21fdc647cc # Practices
             handle: null
@@ -231,6 +244,7 @@ fieldLayouts:
         elements:
           -
             dateAdded: '2025-04-30T10:36:33+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: 5b72b712-0218-40c6-9717-0c395a914ad8 # Summary
             handle: null
@@ -262,6 +276,7 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-04-30T10:36:33+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: da24c053-b31c-4fa8-b113-217845a4ce83 # Share/SEO Title
             handle: null
@@ -278,6 +293,7 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-04-30T10:36:33+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: 349b5e6f-3a2a-43f1-a9dd-2373bf4a0a67 # Share/SEO Description
             handle: null
@@ -294,6 +310,7 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-04-30T10:36:33+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: d4720a93-54ad-45de-a939-b668ed8660dc # Share/SEO Image
             handle: null
@@ -316,6 +333,7 @@ fieldLayouts:
             userCondition: null
           -
             dateAdded: '2025-04-30T10:36:33+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: 61317d04-b4b5-4b2f-ad77-e1d87029c361 # Legacy URL
             handle: null

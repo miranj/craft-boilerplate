@@ -1,6 +1,8 @@
 color: blue
+description: null
 fieldLayouts:
   2a1291c6-22aa-4106-9c89-d03f6d64f13e:
+    cardThumbAlignment: end
     cardView:
       - 'layoutElement:cd21104c-88e0-4d9a-a008-1f6f28f1683d'
     tabs:
@@ -18,6 +20,7 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-04-26T02:50:08+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: a6b97e16-5236-44b1-ad57-3899644efd40 # Link (Assets, Entries, URL)
             handle: hyperlink

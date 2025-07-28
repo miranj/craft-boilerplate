@@ -1,6 +1,8 @@
 color: null
+description: null
 fieldLayouts:
   e6c7ccdc-e915-4e30-8295-0b2314297a6c:
+    cardThumbAlignment: end
     cardView:
       - 'layoutElement:7b9ad90d-7354-43aa-a0a6-280873df6368'
     tabs:
@@ -39,6 +41,7 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-04-29T10:03:22+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: 9c5f24a6-1969-4197-9fce-ff44e5a18b9b # People
             handle: null

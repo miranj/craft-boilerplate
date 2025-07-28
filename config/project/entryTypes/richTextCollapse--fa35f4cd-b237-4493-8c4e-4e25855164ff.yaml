@@ -1,6 +1,8 @@
 color: null
+description: null
 fieldLayouts:
   5f174b84-e4e4-4e8f-94f7-d6385f539b65:
+    cardThumbAlignment: end
     cardView:
       - 'layoutElement:4bf65ff0-a2e6-4afc-b43e-34663c353503'
     tabs:
@@ -48,6 +50,7 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-04-28T11:02:05+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: f6fd4187-da05-45cb-adfd-7367ca82dc1f # Body (Nested)
             handle: body

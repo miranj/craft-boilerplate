@@ -1,11 +1,13 @@
 fieldLayouts:
   8fe4fcdf-41e6-4f3c-82d4-51ca865256e1:
+    cardThumbAlignment: end
     tabs:
       -
         elementCondition: null
         elements:
           -
             dateAdded: '2024-12-16T23:10:59+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: 5661ce90-e09f-4c95-bffe-ffe44c413db3 # Default Share Image
             handle: null

@@ -20,8 +20,9 @@ settings:
     - video
     - word
   branchLimit: null
+  defaultPlacement: end
   defaultUploadLocationSource: 'volume:89c58a76-1da8-4581-84f1-caf2222de75a' # Documents
-  defaultUploadLocationSubpath: '{% include ''_cp/paths/asset'' %}'
+  defaultUploadLocationSubpath: "{% include '_cp/paths/asset' %}"
   maintainHierarchy: false
   maxRelations: 1
   minRelations: null
@@ -33,6 +34,7 @@ settings:
   restrictedLocationSubpath: null
   selectionLabel: null
   showCardsInGrid: false
+  showSearchInput: true
   showSiteMenu: true
   showUnpermittedFiles: false
   showUnpermittedVolumes: false

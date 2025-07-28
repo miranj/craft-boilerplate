@@ -6,12 +6,16 @@ searchable: true
 settings:
   allowSelfRelations: false
   branchLimit: null
+  defaultPlacement: end
   maintainHierarchy: false
   maxRelations: 1
   minRelations: null
   selectionLabel: 'Add testimonial'
   showCardsInGrid: true
+  showSearchInput: true
   showSiteMenu: true
+  showUnpermittedEntries: true
+  showUnpermittedSections: true
   sources:
     - 'section:e39594b6-01d5-4f33-b105-7b111cb3214a' # Testimonials
   targetSiteId: null

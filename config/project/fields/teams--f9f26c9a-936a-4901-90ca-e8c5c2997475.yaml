@@ -6,6 +6,7 @@ searchable: true
 settings:
   createButtonLabel: 'Add credit'
   defaultIndexViewMode: cards
+  enableVersioning: false
   entryTypes:
     -
       __assoc__:

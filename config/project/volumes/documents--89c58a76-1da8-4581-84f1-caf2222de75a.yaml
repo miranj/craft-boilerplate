@@ -2,6 +2,7 @@ altTranslationKeyFormat: null
 altTranslationMethod: none
 fieldLayouts:
   a8b79321-2d2b-44fc-90af-5d02fc48577b:
+    cardThumbAlignment: end
     tabs:
       -
         elementCondition: null

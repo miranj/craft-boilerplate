@@ -1,11 +1,13 @@
 fieldLayouts:
   e60bf3c7-3502-4fec-8b64-27a07ec20883:
+    cardThumbAlignment: end
     tabs:
       -
         elementCondition: null
         elements:
           -
             dateAdded: '2024-12-17T21:29:37+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: 386721be-1ee4-4e3b-b22c-7fb3dfded3ff # Simple Text
             handle: copyright

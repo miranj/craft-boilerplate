@@ -1,4 +1,4 @@
-dateModified: 1746082812
+dateModified: 1753728153
 elementSources:
   craft\elements\Category:
     -
@@ -557,6 +557,10 @@ fs:
       path: '@assetBasePath/images/t'
     type: craft\fs\Local
     url: '@assetBaseUrl/images/t'
+graphql:
+  publicToken:
+    enabled: false
+    expiryDate: null
 meta:
   __names__:
     0bc8375c-5e05-4156-a6c9-5678af911123: 'News Types' # News Types
@@ -581,7 +585,6 @@ meta:
     3efc7d18-2f42-40d1-beee-b05867f36104: Programmes # Programmes
     4a6b0f8c-21ac-43ae-8df2-afe365e78304: 'Employment Types' # Employment Types
     4f6eb04d-1055-4d3f-bd6c-6ed9a14168ad: 'Project Types' # Project Types
-    5a1e3562-bcf8-4492-afd5-f8c9cabda572: 'Call to Action' # Call to Action
     5b72b712-0218-40c6-9717-0c395a914ad8: Summary # Summary
     5d68dab3-70f1-4fbc-833e-e504aa7c926d: 'User Photos' # User Photos
     6ae2a9cc-c9cc-4b89-9c8c-d7a417cbb87e: Topics # Topics
@@ -593,7 +596,6 @@ meta:
     7a8f449f-4cfb-49db-8656-d7551c298f4c: Authors # Authors
     7a544871-c8af-4dc8-83ae-dc5001bc8203: Tenders # Tenders
     7b8b18a2-8e96-4b93-bfaa-34a1d9fa86e1: Rich # Rich
-    7bc0d428-9e00-47b5-b928-67896f29ae17: 'Contact: Website' # Contact: Website
     7da8d57d-2f04-4b73-a787-e23c441a48f4: 'Employment Types' # Employment Types
     7e194f18-cd05-4cd2-bc77-67272aaa31a3: Testimonial # Testimonial
     7f2e3eef-0a17-44d0-b7a2-06e593deebf5: 'Call To Action' # Call To Action
@@ -618,7 +620,6 @@ meta:
     12bc836f-fce2-4315-8a94-22967b0923c8: Testimonials # Testimonials
     12c6ecb1-eb21-40a2-aca1-217b86047c44: Event # Event
     14a95c46-17f2-4890-ad37-a80e9ea6ab3c: 'Academic Level' # Academic Level
-    14f7242a-668c-4d66-a588-17cde4b7e598: 'Social Media' # Social Media
     15a8b3cd-e87e-4daa-aad0-a9f78eabfca7: 'Block: Faculty Programmes' # Block: Faculty Programmes
     15ad504a-20b4-4e89-b94c-e7be7f135774: 'People Index' # People Index
     16ca56d3-1df0-41ad-9bf1-f0b273739be2: Offices # Offices
@@ -818,5 +819,5 @@ system:
   live: true
   name: $CRAFT_SITE_NAME
   retryDuration: null
-  schemaVersion: 5.7.0.3
+  schemaVersion: 5.8.0.3
   timeZone: Asia/Kolkata

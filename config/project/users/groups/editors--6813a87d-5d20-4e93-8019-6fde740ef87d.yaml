@@ -92,8 +92,8 @@ permissions:
   - 'deletepeerentrydrafts:08b4a047-a20d-4d56-81b0-32b599c4fb41' # People
   - 'deletepeerentrydrafts:15ad504a-20b4-4e89-b94c-e7be7f135774' # People Index
   - 'deletepeerentrydrafts:18803174-20d5-4b61-a067-3072b484f857' # Resources Index
-  - 'deletepeerentrydrafts:1aa8a857-2e3d-4a1c-a09c-9c180aa2fc53' # Projects
   - 'deletepeerentrydrafts:193aec6d-3690-493c-861e-18848399ea15' # Programmes Index
+  - 'deletepeerentrydrafts:1aa8a857-2e3d-4a1c-a09c-9c180aa2fc53' # Projects
   - 'deletepeerentrydrafts:1afae8bb-74c6-43e3-8b44-3e8cac38e2e8' # Blog Index
   - 'deletepeerentrydrafts:317eb1dc-2ab0-4290-a1d3-573e6ead4388' # News Index
   - 'deletepeerentrydrafts:39948e92-227e-4217-a6f1-aa40b8fcf04e' # Projects Index
@@ -144,8 +144,8 @@ permissions:
   - 'saveentries:08b4a047-a20d-4d56-81b0-32b599c4fb41' # People
   - 'saveentries:15ad504a-20b4-4e89-b94c-e7be7f135774' # People Index
   - 'saveentries:18803174-20d5-4b61-a067-3072b484f857' # Resources Index
-  - 'saveentries:1aa8a857-2e3d-4a1c-a09c-9c180aa2fc53' # Projects
   - 'saveentries:193aec6d-3690-493c-861e-18848399ea15' # Programmes Index
+  - 'saveentries:1aa8a857-2e3d-4a1c-a09c-9c180aa2fc53' # Projects
   - 'saveentries:1afae8bb-74c6-43e3-8b44-3e8cac38e2e8' # Blog Index
   - 'saveentries:317eb1dc-2ab0-4290-a1d3-573e6ead4388' # News Index
   - 'saveentries:39948e92-227e-4217-a6f1-aa40b8fcf04e' # Projects Index
@@ -205,8 +205,8 @@ permissions:
   - 'savepeerentrydrafts:08b4a047-a20d-4d56-81b0-32b599c4fb41' # People
   - 'savepeerentrydrafts:15ad504a-20b4-4e89-b94c-e7be7f135774' # People Index
   - 'savepeerentrydrafts:18803174-20d5-4b61-a067-3072b484f857' # Resources Index
-  - 'savepeerentrydrafts:1aa8a857-2e3d-4a1c-a09c-9c180aa2fc53' # Projects
   - 'savepeerentrydrafts:193aec6d-3690-493c-861e-18848399ea15' # Programmes Index
+  - 'savepeerentrydrafts:1aa8a857-2e3d-4a1c-a09c-9c180aa2fc53' # Projects
   - 'savepeerentrydrafts:1afae8bb-74c6-43e3-8b44-3e8cac38e2e8' # Blog Index
   - 'savepeerentrydrafts:317eb1dc-2ab0-4290-a1d3-573e6ead4388' # News Index
   - 'savepeerentrydrafts:39948e92-227e-4217-a6f1-aa40b8fcf04e' # Projects Index
@@ -249,8 +249,8 @@ permissions:
   - 'viewentries:08b4a047-a20d-4d56-81b0-32b599c4fb41' # People
   - 'viewentries:15ad504a-20b4-4e89-b94c-e7be7f135774' # People Index
   - 'viewentries:18803174-20d5-4b61-a067-3072b484f857' # Resources Index
-  - 'viewentries:1aa8a857-2e3d-4a1c-a09c-9c180aa2fc53' # Projects
   - 'viewentries:193aec6d-3690-493c-861e-18848399ea15' # Programmes Index
+  - 'viewentries:1aa8a857-2e3d-4a1c-a09c-9c180aa2fc53' # Projects
   - 'viewentries:1afae8bb-74c6-43e3-8b44-3e8cac38e2e8' # Blog Index
   - 'viewentries:317eb1dc-2ab0-4290-a1d3-573e6ead4388' # News Index
   - 'viewentries:39948e92-227e-4217-a6f1-aa40b8fcf04e' # Projects Index
@@ -310,8 +310,8 @@ permissions:
   - 'viewpeerentrydrafts:08b4a047-a20d-4d56-81b0-32b599c4fb41' # People
   - 'viewpeerentrydrafts:15ad504a-20b4-4e89-b94c-e7be7f135774' # People Index
   - 'viewpeerentrydrafts:18803174-20d5-4b61-a067-3072b484f857' # Resources Index
-  - 'viewpeerentrydrafts:1aa8a857-2e3d-4a1c-a09c-9c180aa2fc53' # Projects
   - 'viewpeerentrydrafts:193aec6d-3690-493c-861e-18848399ea15' # Programmes Index
+  - 'viewpeerentrydrafts:1aa8a857-2e3d-4a1c-a09c-9c180aa2fc53' # Projects
   - 'viewpeerentrydrafts:1afae8bb-74c6-43e3-8b44-3e8cac38e2e8' # Blog Index
   - 'viewpeerentrydrafts:317eb1dc-2ab0-4290-a1d3-573e6ead4388' # News Index
   - 'viewpeerentrydrafts:39948e92-227e-4217-a6f1-aa40b8fcf04e' # Projects Index

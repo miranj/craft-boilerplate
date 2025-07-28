@@ -1,6 +1,8 @@
 color: null
+description: null
 fieldLayouts:
   b053ea25-3509-4ed1-aae7-160b562db309:
+    cardThumbAlignment: end
     cardView:
       - 'layoutElement:c7da4520-cc92-4963-a9b0-334dfde46e08'
       - 'layoutElement:0fe09988-005b-4575-8e47-e0b79dc91474'
@@ -49,6 +51,7 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-04-29T07:50:07+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: 386721be-1ee4-4e3b-b22c-7fb3dfded3ff # Simple Text
             handle: introduction
@@ -65,6 +68,7 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-04-29T09:53:50+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: a5b6a8d1-7e0b-4093-841d-7fe8366f026f # Entries
             handle: null

@@ -1,12 +1,15 @@
 color: blue
+description: null
 fieldLayouts:
   8610f69e-3a4c-47be-9f30-2822b74436c1:
+    cardThumbAlignment: end
     tabs:
       -
         elementCondition: null
         elements:
           -
             dateAdded: '2025-04-21T04:25:04+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: b5e4cb0a-59d9-4e16-bfc3-408104521a11 # URL
             handle: hyperlink

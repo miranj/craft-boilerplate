@@ -1,11 +1,13 @@
 fieldLayouts:
   c14c6294-9a5a-4dd1-aab1-d943df3ed0b3:
+    cardThumbAlignment: end
     tabs:
       -
         elementCondition: null
         elements:
           -
             dateAdded: '2024-12-16T23:14:06+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: 840acb32-6694-40d0-9384-60a0220c1de0 # Label
             handle: measurementId

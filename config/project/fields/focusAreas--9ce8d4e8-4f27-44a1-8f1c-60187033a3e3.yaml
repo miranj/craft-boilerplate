@@ -6,11 +6,13 @@ searchable: true
 settings:
   allowSelfRelations: false
   branchLimit: null
+  defaultPlacement: end
   maintainHierarchy: false
   maxRelations: null
   minRelations: null
   selectionLabel: 'Add focus areas'
   showCardsInGrid: false
+  showSearchInput: true
   showSiteMenu: true
   source: 'group:53c65b45-5d94-4867-95c3-6b235eef1853' # Focus Areas
   targetSiteId: null

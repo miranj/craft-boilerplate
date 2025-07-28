@@ -6,12 +6,16 @@ searchable: true
 settings:
   allowSelfRelations: false
   branchLimit: null
+  defaultPlacement: end
   maintainHierarchy: false
   maxRelations: 1
   minRelations: null
   selectionLabel: 'Add an author'
   showCardsInGrid: false
+  showSearchInput: true
   showSiteMenu: true
+  showUnpermittedEntries: true
+  showUnpermittedSections: true
   sources:
     - 'custom:3765d7ff-9a91-48f6-bd36-1008e96248d1'
     - 'custom:74176ca4-24f3-451c-9878-05473385ae3e'

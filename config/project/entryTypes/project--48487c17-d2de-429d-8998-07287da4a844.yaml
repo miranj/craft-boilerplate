@@ -1,6 +1,8 @@
 color: null
+description: null
 fieldLayouts:
   2f57518d-0729-49ef-952b-e5f7274afe6d:
+    cardThumbAlignment: end
     tabs:
       -
         elementCondition: null
@@ -37,6 +39,7 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-04-29T10:37:26+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: 69339afc-d4f1-440b-a7ad-7da2ccb77972 # Image
             handle: cover
@@ -53,6 +56,7 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-04-29T07:26:00+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: 08b5b22b-fb98-46ef-8a90-e392edb2244f # Rich Text
             handle: introduction
@@ -69,6 +73,7 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-04-29T07:26:00+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: a9736c79-b219-4814-ba33-728835b7d230 # Body
             handle: null
@@ -91,6 +96,7 @@ fieldLayouts:
         elements:
           -
             dateAdded: '2025-04-29T07:54:26+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: 358a570b-6122-4744-9b73-575c44b2f9df # Content Blocks: Projects
             handle: contentBlocks
@@ -113,6 +119,7 @@ fieldLayouts:
         elements:
           -
             dateAdded: '2025-04-29T10:29:51+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: 3e4da781-e103-48f1-a607-5396f2be279e # Project Types
             handle: null
@@ -129,6 +136,7 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-04-29T10:32:58+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: 840acb32-6694-40d0-9384-60a0220c1de0 # Label
             handle: periodPublishedStr
@@ -145,6 +153,7 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-04-29T10:05:21+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: f9f26c9a-936a-4901-90ca-e8c5c2997475 # Teams
             handle: null
@@ -167,6 +176,7 @@ fieldLayouts:
         elements:
           -
             dateAdded: '2025-04-29T10:26:31+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: 86d5863c-5339-40bb-9add-f4872cdfdce5 # Departments
             handle: null
@@ -183,6 +193,7 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-04-29T10:32:58+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: 16ca56d3-1df0-41ad-9bf1-f0b273739be2 # Offices
             handle: null
@@ -199,6 +210,7 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-05-01T02:17:51+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: a60b8050-4e83-40d0-9598-4a9572ce027a # Location
             handle: null
@@ -215,6 +227,7 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-04-29T10:26:31+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: b41f3521-c73f-45d7-baac-db7ec5a54bd1 # Programmes
             handle: null
@@ -231,6 +244,7 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-04-29T10:32:58+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: a0320c92-dcb7-489b-94e3-bd21fdc647cc # Practices
             handle: null
@@ -247,6 +261,7 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-04-29T10:32:58+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: 69dcd3aa-18b8-48bf-a7d3-deb9c6912349 # Topics
             handle: null
@@ -269,6 +284,7 @@ fieldLayouts:
         elements:
           -
             dateAdded: '2025-04-29T07:23:07+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: 5b72b712-0218-40c6-9717-0c395a914ad8 # Summary
             handle: null
@@ -300,6 +316,7 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-04-29T07:23:07+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: da24c053-b31c-4fa8-b113-217845a4ce83 # Share/SEO Title
             handle: null
@@ -316,6 +333,7 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-04-29T07:23:07+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: 349b5e6f-3a2a-43f1-a9dd-2373bf4a0a67 # Share/SEO Description
             handle: null
@@ -332,6 +350,7 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-04-29T07:23:07+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: d4720a93-54ad-45de-a939-b668ed8660dc # Share/SEO Image
             handle: null
@@ -354,6 +373,7 @@ fieldLayouts:
             userCondition: null
           -
             dateAdded: '2025-04-29T07:23:07+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: 61317d04-b4b5-4b2f-ad77-e1d87029c361 # Legacy URL
             handle: null

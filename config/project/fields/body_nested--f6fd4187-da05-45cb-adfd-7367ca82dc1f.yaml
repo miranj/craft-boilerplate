@@ -6,6 +6,7 @@ searchable: true
 settings:
   availableTransforms: ''
   availableVolumes: '*'
+  characterLimit: null
   ckeConfig: 2aa60aa0-5295-4a25-9725-a63672cd8b2f # Builder (Nested)
   createButtonLabel: 'Insert block'
   defaultTransform: null
@@ -33,6 +34,9 @@ settings:
         -
           - name
           - Button
+  expandEntryButtons: false
+  fullGraphqlData: false
+  parseEmbeds: false
   purifierConfig: null
   purifyHtml: true
   showUnpermittedFiles: false

@@ -1,12 +1,15 @@
 color: null
+description: null
 fieldLayouts:
   6c2b842a-a2ff-4668-9e41-ea3c489351ba:
+    cardThumbAlignment: end
     tabs:
       -
         elementCondition: null
         elements:
           -
             dateAdded: '2025-04-18T09:19:24+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: fad3fe56-0b6b-46c4-a97b-b7fb98847f3c # Media Embed
             handle: video
@@ -23,6 +26,7 @@ fieldLayouts:
             width: 50
           -
             dateAdded: '2025-03-18T04:00:53+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: afc7f0bc-1b97-4841-a1d2-5b0385a7ca35 # Plain Text
             handle: quote
@@ -46,6 +50,7 @@ fieldLayouts:
             userCondition: null
           -
             dateAdded: '2025-04-21T10:26:46+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: 2fc7574e-8621-4ac0-87f9-1f3b73cc235b # Author Type
             handle: null
@@ -62,6 +67,7 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-03-18T04:07:28+00:00'
+            editCondition: null
             elementCondition:
               class: craft\elements\conditions\entries\EntryCondition
               conditionRules:
@@ -90,6 +96,7 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-03-18T04:00:53+00:00'
+            editCondition: null
             elementCondition:
               class: craft\elements\conditions\entries\EntryCondition
               conditionRules:
@@ -118,6 +125,7 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-04-21T10:30:44+00:00'
+            editCondition: null
             elementCondition:
               class: craft\elements\conditions\entries\EntryCondition
               conditionRules:
@@ -146,6 +154,7 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-03-18T04:00:53+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: 840acb32-6694-40d0-9384-60a0220c1de0 # Label
             handle: customDesignation
@@ -168,6 +177,7 @@ fieldLayouts:
             userCondition: null
           -
             dateAdded: '2025-04-21T10:15:35+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: 840acb32-6694-40d0-9384-60a0220c1de0 # Label
             handle: null
@@ -193,6 +203,6 @@ showSlugField: false
 showStatusField: true
 slugTranslationKeyFormat: null
 slugTranslationMethod: site
-titleFormat: '{{ label ?: [(existingAuthor.one.title ?? customAuthor), quote]|filter|join('' – '')|truncate(80) }}'
+titleFormat: "{{ label ?: [(existingAuthor.one.title ?? customAuthor), quote]|filter|join(' – ')|truncate(80) }}"
 titleTranslationKeyFormat: null
 titleTranslationMethod: site

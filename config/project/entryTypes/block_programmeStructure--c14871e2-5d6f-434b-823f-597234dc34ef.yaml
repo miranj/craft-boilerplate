@@ -1,6 +1,8 @@
 color: orange
+description: null
 fieldLayouts:
   1da4fe64-453f-4593-8de7-cb2b9df82de5:
+    cardThumbAlignment: end
     tabs:
       -
         elementCondition: null
