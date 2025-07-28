@@ -1,0 +1,32 @@
+{#
+  _cp/previews/element-view
+
+  Shows a teaser/snippet/etc view of the given element
+#}
+{% extends '_layouts/private' %}
+
+
+
+{#
+  Params
+#}
+{% block response %}
+  {% set viewType = viewType ?? 'teaser' %}
+  {% set element = element
+    ?? (uri is defined ? craft.entries.uri(uri).one())
+    ?: (uid is defined ? craft.entries.uid(uid).one()) %}
+  
+  {% if not element %}
+    {% exit 404 %}
+  {% endif %}
+  
+  {{ parent() }}
+{% endblock %}
+
+
+
+{# Render #}
+{% block body_class 'container py-layout-margin' %}
+{% block page %}
+  {% include '_routers/' ~ viewType %}
+{% endblock %}

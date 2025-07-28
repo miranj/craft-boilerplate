@@ -17,4 +17,12 @@ return [
     '_views/<viewType:{handle}>/<sectionHandle:{handle}>' => [
         'template' => '_all-views',
     ],
+
+    // logged-in panel paths
+    '_preview/<viewType:{handle}>/<uid:{uid}>' => [
+        'template' => '_cp/previews/element-view',
+    ],
+    '_preview/<viewType:{handle}>/<uri:.+>' => [
+        'template' => '_cp/previews/element-view',
+    ],
 ];
