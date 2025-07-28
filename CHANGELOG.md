@@ -8,6 +8,7 @@ Release notes for Miranj's Craft Boilerplate starter project.
 
 - Upgraded to Tailwind CSS 4.x.
 - Improved `.richtext` typographic styles to handle tables and `pre` content, added `.italictext`.
+- The entry “Edit” button now redirects authors back to the front-end entry page when they save their changes.
 - Fixed a bug where `:is`, `:where`, and other colon selectors were always getting purged.
 - Updated CSS Nano to 7.0.6.
 

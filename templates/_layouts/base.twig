@@ -66,14 +66,15 @@
 {% block page_admin %}
   {% if entry is defined %}
     {% nocache with {
-      editUrl: entry.cpEditUrl ?? false,
+      editUrl: entry.cpEditUrl ?? false ? url(entry.getCpEditUrl(), { returnUrl: '{url}'|hash }),
       sectionUID: entry.section.uid ?? false,
     } %}
       {% if currentUser
         and editUrl
         and not (craft.app.request.isLivePreview or craft.app.request.isPreview)
         and sectionUID
-        and currentUser.can('saveEntries:' ~ sectionUID) %}
+        and currentUser.can('saveEntries:' ~ sectionUID)
+      %}
         <div class="z-50 fixed" style="right:0;bottom:10%">
           {{ tag('a', {
             class: [
