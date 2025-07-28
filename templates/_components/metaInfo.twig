@@ -27,7 +27,9 @@
 {% set metaClass = params.class ?? '' %}
 {% set metaItemClass = params.item_class ?? '' %}
 {% set metaTitleClass = params.title_class ?? 'sr-only' %}
+{% set metaIconClass = params.icon_class ?? 'size-4e opacity-85' %}
 {% set metaBodyClass = params.body_class ?? '' %}
+{% set metaLinkClass = params.link_class ?? '' %}
 {% set metaFilterEmpty = params.filter ?? true %}
 {% set metaItemDefaults = params.defaults ?? {} %}
 
@@ -37,16 +39,22 @@
 {% set metaItemDefaults = {
   class: '',
   title: 'Info',
+  icon: '',
+  link: false,
   html: '',
   text: '',
   entries: [],
   lister: {},
+  autoPluralize: true,
+  generateAnchors: false,
 }|merge(metaItemDefaults) %}
 
 {% set metaClass = metaClass is string ? [metaClass] : metaClass %}
 {% set metaItemClass = metaItemClass is string ? [metaItemClass] : metaItemClass %}
 {% set metaTitleClass = metaTitleClass is string ? [metaTitleClass] : metaTitleClass %}
+{% set metaIconClass = metaIconClass is string ? [metaIconClass] : metaIconClass %}
 {% set metaBodyClass = metaBodyClass is string ? [metaBodyClass] : metaBodyClass %}
+{% set metaLinkClass = metaLinkClass is string ? [metaLinkClass] : metaLinkClass %}
 
 {% set metaItems = metaItems
  |filter(i => not metaFilterEmpty
@@ -66,13 +74,42 @@
       
       {% block meta_item %}
         {% if metaItemClass|filter is not empty %}
-          <div {{ attr({ class: metaItemClass }) }}>
+          <div {{ attr({
+            class: metaItemClass,
+            id: meta.generateAnchors and meta.title
+              ? meta.title|lower|id
+              : false,
+          }) }}>
         {% endif %}
         
         {% block meta_title %}
           {% if meta.title %}
-            <dt {{ metaTitleClass ? attr({ class: metaTitleClass }) }}>
-              {{ meta.title|pluralize(meta.entries|length > 1 ? 2 : 1)|raw }}
+            <dt {{ attr({
+              class: meta.icon ? metaIconClass : (meta.title ? metaTitleClass),
+              id: meta.generateAnchors and meta.title and not metaItemClass
+                ? meta.title|lower|id
+                : false,
+            }) }}>
+              {% set __title = meta.autoPluralize and meta.entries is not empty
+                ? raw(meta.title|pluralize(meta.entries|length > 1 ? 2 : 1))
+                : meta.title %}
+            
+              {% if meta.link %}
+                <a href="{{ meta.link }}">
+              {% endif %}
+                  
+                  {% if meta.icon %}
+                    {% set __id = meta.title|kebab ~ random() %}
+                    {{ svgIcon(meta.icon)
+                      |prepend(tag('title', { text: __title, id: __id }))
+                      |attr({ 'aria-labelledby': __id }) }}
+                  {% else %}
+                    {{ __title }}
+                  {% endif %}
+                  
+              {% if meta.link %}    
+                </a>
+              {% endif %}
             </dt>
           {% endif %}
         {% endblock %}
@@ -81,9 +118,14 @@
           <dd {{ metaBodyClass ? attr({
             class: collect([metaBodyClass, meta.class]).flatten().filter().all(),
           }) }}>
-            {{ meta.text }}
-            
-            {{ meta.html|raw }}
+            {% if meta.link and (meta.text or meta.html) %}
+              <a {{ attr({ class: metaLinkClass, href: meta.link }) }}>
+            {% endif %}
+              {{ meta.text }}
+              {{ meta.html|raw }}
+            {% if meta.link and (meta.text or meta.html) %}
+              </a>
+            {% endif %}
             
             {% include '_components/_lister' with { params: {
               entries: meta.entries,
