@@ -48,7 +48,8 @@ class Module extends \yii\base\Module
 
         // Register Twig extensions
         if (Craft::$app->getRequest()->getIsSiteRequest()) {
-            Craft::$app->getView()->registerTwigExtension(new Extension());
+            $view = Craft::$app->getView();
+            $view->registerTwigExtension(new Extension($view));
         }
     }
 

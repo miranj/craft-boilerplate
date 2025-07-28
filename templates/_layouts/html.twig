@@ -98,6 +98,13 @@
     
     {{ block('body_open') }}
       
+      {#
+        Enable caching for svgIcon() and heroicon()
+        only inside the body tag to avoid SVG rendered
+        for SEO meta to impact the cache.
+      #}
+      {% hook 'cache-svg-shapes' %}
+      
       {% block page %}{% endblock %}
       
       {% block script_inline %}

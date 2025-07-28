@@ -15,6 +15,8 @@ Release notes for Miranj's Craft Boilerplate starter project.
 ### Craft
 
 - Added `_layouts/private.twig` as a base template for front-end content restricted to site authors.
+- Added `svgIcon()` Twig function to render SVGs from any file path (or alias).
+- Added `cache-svg-shapes` hook to enable caching repeat instances of SVG markup generated via `svgIcon()`.
 - Cache oEmbed lookups.
 - Replaced deprecated `|ucfirst` with `|capitalize`.
 - Fixed a bug where RSS Feed content was double escaping HTML entities.
