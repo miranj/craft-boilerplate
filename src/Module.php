@@ -161,7 +161,7 @@ class Module extends \yii\base\Module
                 IndexEntryBehaviors::$sectionHandlePrefix,
             ) === 0
         ) {
-            $event->behaviors[$this->id . 'IndexEntry'] =
+            $event->behaviors[IndexEntryBehaviors::class] =
                 IndexEntryBehaviors::class;
         }
     }
@@ -169,7 +169,7 @@ class Module extends \yii\base\Module
     // define custom index query
     public function onEntryQueryDefineBehaviors(DefineBehaviorsEvent $event)
     {
-        $event->behaviors[$this->id . EntryIndexQueryBehavior::class] =
+        $event->behaviors[EntryIndexQueryBehavior::class] =
             EntryIndexQueryBehavior::class;
     }
 
@@ -177,7 +177,8 @@ class Module extends \yii\base\Module
     public function onSectionDefineBehaviors(DefineBehaviorsEvent $event)
     {
         if ($event->sender instanceof Section && $event->sender->id) {
-            $event->behaviors[$this->id] = SectionIndexBehavior::class;
+            $event->behaviors[SectionIndexBehavior::class] =
+                SectionIndexBehavior::class;
         }
     }
 
