@@ -89,12 +89,6 @@
       "@php -r \"copy('serverconfigs/apache-dev/sample.htaccess', 'web/.htaccess');\"",
       "rm -rf field-library",
       "@composer dump-autoload -o"
-    ],
-    "post-install-cmd": [
-      "@php craft install/check",
-      "@php craft migrate/all --interactive=0 || exit 0",
-      "@php craft project-config/apply || exit 0",
-      "@php craft invalidate-tags/template || exit 0"
     ]
   }
 }
