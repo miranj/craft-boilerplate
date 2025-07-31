@@ -15,6 +15,7 @@
   )
 %}
 {% set cacheKeyPrefix = getenv('APP_ID') ~ ':v1' %}
+{% set cacheKeySuffixes = cacheKeySuffixes ?? [] %}
 
 
 
@@ -75,10 +76,12 @@
 
 {%- block response_buffer -%}
   
-  {% set htmlCacheKey = cacheKeyPrefix
-    ~ '-css:' ~ assetManifest['style.purged.min.css']
-    ~ '-js:' ~ assetManifest['urgent.min.js'] ~ assetManifest['deferred.min.js']
-    ~ '-html:v1' %}
+  {% set htmlCacheKey = [
+      cacheKeyPrefix,
+      'css:' ~ assetManifest['style.purged.min.css'],
+      'js:' ~ assetManifest['urgent.min.js'] ~ assetManifest['deferred.min.js'],
+      'html:v1',
+    ]|merge(cacheKeySuffixes)|filter|join('-') %}
   
   {# Figure out if page should be cached #}
   {%- if cacheableEnv %}

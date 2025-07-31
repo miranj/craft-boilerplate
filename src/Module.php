@@ -7,12 +7,12 @@ use craft\elements\Entry;
 use boilerplate\behaviors\EntryIndexQueryBehavior;
 use boilerplate\behaviors\IndexEntryBehaviors;
 use boilerplate\behaviors\SectionIndexBehavior;
+use boilerplate\twig\Extension;
 use craft\models\Section;
 use craft\base\Element;
 use craft\elements\db\EntryQuery;
 use craft\events\DefineBehaviorsEvent;
 use craft\web\Response;
-use boilerplate\twig\Extension;
 use yii\base\Event;
 use craft\validators\DateCompareValidator;
 

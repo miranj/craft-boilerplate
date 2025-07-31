@@ -21,6 +21,7 @@ Release notes for Miranj's Craft Boilerplate starter project.
 - Added support for previewing partial element views to logged-in site authors.
 - Added `_layouts/private` as a base template for front-end content restricted to site authors.
 - Added `_layouts/json` as a base template for rendering JSON content.
+- Added support for `cacheKeySuffixes` which can be overridden by child templates.
 - Improved `_components/metaInfo` with support for item links and icons.
 - Added `svgIcon()` Twig function to render SVGs from any file path (or alias).
 - Added `cache-svg-shapes` hook to enable caching repeat instances of SVG markup generated via `svgIcon()`.
