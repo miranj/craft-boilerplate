@@ -5,10 +5,6 @@
 {#
   Params
 #}
-{% block response %}
-  {% set doNotCache = doNotCache ?? true %}
-  {% header "X-Accel-Expires: 0" %}
-  {% requireLogin %}
-  
-  {{ parent() }}
-{% endblock %}
+{% set doNotCache = doNotCache ?? true %}
+{% header "X-Accel-Expires: 0" %}
+{% requireLogin %}
