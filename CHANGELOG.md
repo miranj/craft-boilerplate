@@ -10,6 +10,7 @@ Release notes for Miranj's Craft Boilerplate starter project.
 - Improved `.richtext` typographic styles to handle tables and `pre` content, added `.italictext`.
 - The entry “Edit” button now redirects authors back to the front-end entry page when they save their changes.
 - Fixed a bug where `:is`, `:where`, and other colon selectors were always getting purged.
+- Removed outdated favicon meta tags.
 - Updated CSS Nano to 7.0.6.
 
 ### Data Model
