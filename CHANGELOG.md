@@ -43,6 +43,7 @@ Release notes for Miranj's Craft Boilerplate starter project.
 ### DevOps
 
 - Allow Nginx to bypass cache for all responses that contain _any_ cookie.
+- Fixed in infinite redirection loop for URLs that map to directories.
 
 ## 3.4.1 - 2025-07-25
 
