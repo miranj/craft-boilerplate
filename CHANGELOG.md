@@ -32,6 +32,7 @@ Release notes for Miranj's Craft Boilerplate starter project.
 - Replaced deprecated `|ucfirst` with `|capitalize`.
 - Disabled automatic conversion of exponents, fractions, and marks via `|typogrify`.
 - Fixed a bug where RSS Feed content was double escaping HTML entities.
+- The eager load images will now be loaded with priority to improve page load times.
 - Updated Craft CMS to 5.8.11.
 - Updated CKEditor to 4.9.0.
 - Updated Element Index Default to 4.0.1.

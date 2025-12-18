@@ -513,6 +513,7 @@
     alt: imageAlt,
     width: imageDefault.width ? (not imageIsResponsive ? imageDefault.width * imageScaleFactor) : false,
     height: imageDefault.height ? (not imageIsResponsive ? imageDefault.height * imageScaleFactor) : false,
+    fetchpriority: not imageLazyload ? 'high' : false,
 
   } | merge(imageLazyload and imageDefault.width and imageDefault.height ? {
     src: craft.imager.base64Pixel(imageDefault.width, imageDefault.height, imageColour),
