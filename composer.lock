@@ -4,8 +4,64 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "568c70dd48ff7f80d281c6ee26df192d",
+    "content-hash": "dc0724fd8fcc9e54ba46078ac4a5897d",
     "packages": [
+        {
+            "name": "aodihis/video-utils",
+            "version": "3.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/aodihis/craftcms-video-utils.git",
+                "reference": "e7eaa3122975a4fbec0dc1b9b941f97546b81cee"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/aodihis/craftcms-video-utils/zipball/e7eaa3122975a4fbec0dc1b9b941f97546b81cee",
+                "reference": "e7eaa3122975a4fbec0dc1b9b941f97546b81cee",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^5.0.0"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Video Utils",
+                "class": "aodihis\\videoutils\\VideoUtils",
+                "handle": "video-utils",
+                "developer": "aodihis",
+                "documentationUrl": "https://github.com/aodihis/craftcms-video-utils#readme"
+            },
+            "autoload": {
+                "psr-4": {
+                    "aodihis\\videoutils\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "aodihis"
+                }
+            ],
+            "description": "Twig filter to get the video id of youtube or Vimeo URL.",
+            "keywords": [
+                "Craft",
+                "cms",
+                "craft-plugin",
+                "craftcms",
+                "get video id",
+                "video utils",
+                "youtube id"
+            ],
+            "support": {
+                "docs": "https://github.com/aodihis/craftcms-video-utils#readme",
+                "issues": "https://github.com/aodihis/craftcms-video-utils/issues",
+                "source": "https://github.com/aodihis/craftcms-video-utils/tree/3.0.2"
+            },
+            "time": "2024-07-12T22:24:31+00:00"
+        },
         {
             "name": "aws/aws-crt-php",
             "version": "v1.2.7",
@@ -12069,16 +12125,16 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "craftcms/phpstan": 20,
         "marionnewlevant/twig-perversion": 20,
-        "vaersaagod/seomate": 10
+        "vaersaagod/seomate": 10,
+        "craftcms/phpstan": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
-    "platform": {},
-    "platform-dev": {},
+    "platform": [],
+    "platform-dev": [],
     "platform-overrides": {
         "php": "8.2"
     },
-    "plugin-api-version": "2.6.0"
+    "plugin-api-version": "2.2.0"
 }

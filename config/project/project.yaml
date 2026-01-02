@@ -1,4 +1,4 @@
-dateModified: 1753734094
+dateModified: 1767352518
 elementSources:
   craft\elements\Category:
     -
@@ -808,6 +808,10 @@ plugins:
     enabled: true
     schemaVersion: 1.0.0
   typogrify:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  video-utils:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
