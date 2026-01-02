@@ -107,6 +107,11 @@ paths.tasks = {
       destination: 'instant.js',
       watch: ['../node_modules/instant.page/instantpage.js'],
     },
+    liteYoutube: {
+      source: ['../node_modules/@justinribeiro/lite-youtube/lite-youtube.js'],
+      destination: 'lite-youtube.js',
+      watch: ['../node_modules/@justinribeiro/lite-youtube/lite-youtube.js'],
+    },
     photoswipe: {
       es6: true,
       source: ['../node_modules/photoswipe/dist/photoswipe.esm.js'],

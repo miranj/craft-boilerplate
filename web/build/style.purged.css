@@ -282,6 +282,10 @@
   .aspect-video {
     aspect-ratio: var(--aspect-video);
   }
+  .size-4e {
+    width: 1em;
+    height: 1em;
+  }
   .w-4xl {
     width: clamp(6rem, 5.3478rem + 3.2609vi, 7.875rem);
   }
@@ -329,6 +333,9 @@
   .py-2 {
     padding-block: calc(var(--spacing) * 2);
   }
+  .py-layout-margin {
+    padding-block: var(--layout-margin);
+  }
   .pt-10 {
     padding-top: calc(var(--spacing) * 10);
   }
@@ -345,6 +352,9 @@
   }
   .opacity-50 {
     opacity: 50%;
+  }
+  .opacity-85 {
+    opacity: 85%;
   }
   .filter {
     filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
