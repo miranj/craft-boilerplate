@@ -11,6 +11,7 @@ return [
     // Global settings
     '*' => [
         'enableGoogleAnalytics' => !!App::env('GOOGLE_ANALYTICS_ID'),
+        'useYouTubeFacadeLoading' => false,
     ],
 
     // Dev environment
