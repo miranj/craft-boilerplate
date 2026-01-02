@@ -8,11 +8,17 @@ Release notes for Miranj's Craft Boilerplate starter project.
 
 - Upgraded to Tailwind CSS 4.x.
 - Improved `.richtext` typographic styles to handle tables and `pre` content, added `.italictext`.
+- Improved `_components/embed` with support for facade loading _YouTube_ videos.
 - The entry “Edit” button now redirects authors back to the front-end entry page when they save their changes.
 - Eager-loaded images will now be loaded with `fetchpriority: high` to improve pageload speed.
 - Fixed a bug where `:is`, `:where`, and other colon selectors were always getting purged.
 - Removed outdated favicon meta tags.
 - Updated CSS Nano to 7.0.6.
+
+### System
+
+- Added _Video Utils_ plugin.
+- Included _lite-youtube_ package.
 
 ### Data Model
 
