@@ -15,7 +15,6 @@
 {% set embedCaption = params.caption ?? '' %}
 {% set embedClass = params.class ?? '' %}
 {% set embedCaptionClass = params.caption_class ?? '' %}
-{% set embedEnableFacadeLoading = params.enable_facade_loading ?? false %}
 
 
 
@@ -34,7 +33,7 @@
 
 
   {# Biz Logic #}
-  {% set embedIsApplyYouTubeLiteFacade =  craft.app.config.custom.useYouTubeFacadeLoading and embedEnableFacadeLoading 
+  {% set embedIsApplyYouTubeLiteFacade = craft.app.config.custom.useYouTubeFacadeLoading
     ? embedField.url|isYoutube and embedField.url|getYoutubeId
     : false %}
 

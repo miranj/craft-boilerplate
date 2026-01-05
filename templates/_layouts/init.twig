@@ -44,13 +44,16 @@
   'deferred.min.js': 'async',
   'instant.min.js': 'module',
   'photoswipeinit.min.js': 'module',
-  'lite-youtube.js': 'module',
-}|map((type, s) => {
-  src: alias('@assetBaseUrl/build/' ~ s|replace('.js', ".#{assetManifest[s]}.js")),
-  integrity: sriManifest[s],
-  crossorigin: 'anonymous',
-  async: type == 'async',
-  type: type == 'module' ? type : false,
+}
+  |merge(craft.app.config.custom.useYouTubeFacadeLoading
+    ? {'lite-youtube.js': 'module'}
+    : {})
+  |map((type, s) => {
+    src: alias('@assetBaseUrl/build/' ~ s|replace('.js', ".#{assetManifest[s]}.js")),
+    integrity: sriManifest[s],
+    crossorigin: 'anonymous',
+    async: type == 'async',
+    type: type == 'module' ? type : false,
 }) %}
 
 
