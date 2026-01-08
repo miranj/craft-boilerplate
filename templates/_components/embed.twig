@@ -32,13 +32,34 @@
 
 
 
+  {# Biz Logic #}
+  {% set embedIsApplyYouTubeLiteFacade = craft.app.config.custom.useYouTubeFacadeLoading
+    ? embedField.url|isYoutube and embedField.url|getYoutubeId
+    : false %}
+
+
+
 {#
   Render
 #}
 {% if embedField and embedField.valid %}
+  {% set embedContent = deferEmbeds(embedField.render()) %}
   <figure {{ attr({ class: embedClass }) }}>
     <div {{ attr({ class: embedIsVideo ? 'aspect-video responsive-embed' }) }}>
-      {{ deferEmbeds(embedField.render()) }}
+      {% if embedIsApplyYouTubeLiteFacade %}
+        {{ tag('lite-youtube', {
+          class: 'no-js:hidden',
+          posterquality: 'sddefault',
+          videotitle: embedField.media.title ?? '',
+          videoid: embedField.url|getYoutubeId,
+          disablenoscript: true,
+        }) }}
+        {{ tag('noscript', {
+          html: embedContent,
+        }) }}
+      {% else %}
+        {{ embedContent }}
+      {% endif %}
     </div>
     
     {% if embedCaption %}
