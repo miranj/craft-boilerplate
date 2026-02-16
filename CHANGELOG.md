@@ -7,6 +7,7 @@ Release notes for Miranj's Craft Boilerplate starter project.
 ### Front-end
 
 - Upgraded to Tailwind CSS 4.x.
+- Added `<lite-youtube>` web component.
 - Improved `.richtext` typographic styles to handle tables and `pre` content, added `.italictext`.
 - Improved `_components/embed` with support for facade loading _YouTube_ videos.
 - The entry “Edit” button now redirects authors back to the front-end entry page when they save their changes.
@@ -14,11 +15,6 @@ Release notes for Miranj's Craft Boilerplate starter project.
 - Fixed a bug where `:is`, `:where`, and other colon selectors were always getting purged.
 - Removed outdated favicon meta tags.
 - Updated CSS Nano to 7.0.6.
-
-### System
-
-- Added _Video Utils_ plugin.
-- Included _lite-youtube_ package.
 
 ### Data Model
 
@@ -39,6 +35,7 @@ Release notes for Miranj's Craft Boilerplate starter project.
 - Replaced deprecated `|ucfirst` with `|capitalize`.
 - Disabled automatic conversion of exponents, fractions, and marks via `|typogrify`.
 - Fixed a bug where RSS Feed content was double escaping HTML entities.
+- Added _Video Utils_ plugin.
 - Updated Craft CMS to 5.8.11.
 - Updated CKEditor to 4.9.0.
 - Updated Element Index Default to 4.0.1.
