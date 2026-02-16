@@ -23,6 +23,7 @@ Release notes for Miranj's Craft Boilerplate starter project.
 ### Craft
 
 - Added support for previewing partial element views to logged-in site authors.
+- Added support for nested entries in the Detail, Feed, JSON-LD, and Teaser view routers.
 - Added `_layouts/private` as a base template for front-end content restricted to site authors.
 - Added `_layouts/json` as a base template for rendering JSON content.
 - Added support for `cacheKeySuffixes` which can be overridden by child templates.
