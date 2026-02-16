@@ -35,6 +35,7 @@ Release notes for Miranj's Craft Boilerplate starter project.
 - Queue jobs are now allowed to run for 15 minutes.
 - Replaced deprecated `|ucfirst` with `|capitalize`.
 - Disabled automatic conversion of exponents, fractions, and marks via `|typogrify`.
+- Fixed a bug where the _Edit_ button would not be shown for authors on nested entry pages.
 - Fixed a bug where RSS Feed content was double escaping HTML entities.
 - Added _Video Utils_ plugin.
 - Updated Craft CMS to 5.8.11.
