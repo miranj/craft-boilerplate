@@ -32,6 +32,7 @@ Release notes for Miranj's Craft Boilerplate starter project.
 - Added default Feed Me plugin config for optional HTTP auth credentials support.
 - Added default Image Resizer plugin config.
 - Cache oEmbed lookups.
+- Queue jobs are now allowed to run for 15 minutes.
 - Replaced deprecated `|ucfirst` with `|capitalize`.
 - Disabled automatic conversion of exponents, fractions, and marks via `|typogrify`.
 - Fixed a bug where RSS Feed content was double escaping HTML entities.

@@ -31,6 +31,13 @@ return [
             'boilerplate' => \boilerplate\Module::class,
         ],
         'bootstrap' => ['boilerplate'],
+
+        'components' => [
+            // Allow individual jobs to run for 15 minutes
+            'queue' => [
+                'ttr' => 900,
+            ],
+        ],
     ],
 
     // Dev environment
