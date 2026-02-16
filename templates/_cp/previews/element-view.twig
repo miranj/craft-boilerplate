@@ -12,6 +12,29 @@
 #}
 {% block response %}
   {% set viewType = viewType ?? 'teaser' %}
+  
+  {# The view types to show for 'all' views #}
+  {% set defaultViewTypes = {
+    teaser: 'max-w-md',
+  } %}
+  {# Additional view types rendered only when directly invoked #}
+  {% set optionalViewTypes = {
+    partial: 'w-full',
+  } %}
+  {% set allViewTypes = defaultViewTypes|merge(optionalViewTypes) %}
+  
+  
+  
+  {# Biz logic #}
+  {% if not viewType in ['all']|merge(allViewTypes|keys) %}
+    {% exit 404 %}
+  {% endif %}
+  
+  {% set viewTypes = viewType == 'all'
+    ? defaultViewTypes
+    : { (viewType): allViewTypes[viewType] }
+  %}
+  
   {% set element = element
     ?? (uri is defined ? craft.entries.uri(uri).one())
     ?: (uid is defined ? craft.entries.uid(uid).one()) %}
@@ -26,7 +49,23 @@
 
 
 {# Render #}
-{% block body_class 'container py-layout-margin' %}
+{% block body_class 'container py-2' %}
 {% block page %}
-  {% include '_routers/' ~ viewType %}
+  {% for viewType, listerClass in viewTypes %}
+    <div class="bg-white py-20 my-8 {{ loop.length > 1 ? 'shadow-2xl' }}">
+      <div class="container">
+        {% if viewType == 'partial' %}
+          <div class="{{ listerClass }}">
+            {{ element.render() }}
+          </div>
+        {% else %}
+          {% include '_components/_lister' with { params: {
+            entries: [element],
+            kind: viewType,
+            class: listerClass,
+          } } %}
+        {% endif %}
+      </div>
+    </div>
+  {% endfor %}
 {% endblock %}
