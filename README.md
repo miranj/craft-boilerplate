@@ -31,16 +31,19 @@ This starter project includes:
   - [Element Index Defaults](https://github.com/verbb/element-index-defaults)
   - [Environment Label](https://github.com/TopShelfCraft/Environment-Label)
   - [Field Manager](https://github.com/verbb/field-manager)
-  - [Imager](https://github.com/aelvan/Imager-Craft)
   - [Image Resizer](https://github.com/verbb/image-resizer)
+  - [Imager X](https://github.com/spacecatninja/craft-imager-x)
   - [Minify](https://github.com/nystudio107/craft-minify)
+  - [Navigation](https://github.com/verbb/navigation)
   - [No-Cache](https://github.com/ttempleton/craft-nocache)
   - [Obfuscator](https://github.com/miranj/craft-obfuscator)
   - [oEmbed](https://github.com/wrav/oembed)
   - [Retcon](https://github.com/mmikkel/Retcon-Craft)
   - [SEOMate](https://github.com/vaersaagod/seomate)
+  - [Store Hours](https://github.com/craftcms/store-hours)
   - [Twig Perversion](https://github.com/marionnewlevant/craft-twig_perversion)
   - [Typogrify](https://github.com/nystudio107/craft-typogrify)
+  - [Video Utils](https://github.com/aodihis/craftcms-video-utils)
 - [Prettier](https://prettier.io/) for auto-formatting (all non-Twig) code.
 - [Ready to import fields](https://github.com/miranj/craft-boilerplate/tree/dev/field-library) to speed up the project development process.
 
