@@ -2,6 +2,12 @@
 
 Release notes for Miranj's Craft Boilerplate starter project.
 
+## Unreleased 3.next
+
+### System
+
+- Ignore `.sql` files from version control.
+
 ## 3.5.0 - 2026-02-17
 
 ### Front-end

@@ -21,6 +21,7 @@ web/.htaccess
 # User data
 web/media/
 web/images/
+*.sql
 
 # Testing
 templates/test.twig
