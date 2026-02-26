@@ -63,6 +63,9 @@ return [
                 'defaultDuration' =>
                     Craft::$app->config->general->cacheDuration,
                 'redis' => [
+                    'class' => yii\redis\Connection::class,
+                    'hostname' => App::env('REDIS_HOSTNAME') ?: 'localhost',
+                    'password' => App::env('REDIS_PASSWORD') ?: null,
                     'database' => 1,
                 ],
             ]),

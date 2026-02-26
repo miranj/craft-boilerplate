@@ -4,6 +4,11 @@ Release notes for Miranj's Craft Boilerplate starter project.
 
 ## Unreleased 3.next
 
+### Craft
+
+- Updated Redis cache component config for compatibility with Yii 2 Redis 2.1.0.
+- Updated Yii 2 Redis to 2.1.0.
+
 ### System
 
 - Ignore `.sql` files from version control.
