@@ -1,4 +1,4 @@
-dateModified: 1767352518
+dateModified: 1772136838
 elementSources:
   craft\elements\Category:
     -
@@ -557,10 +557,6 @@ fs:
       path: '@assetBasePath/images/t'
     type: craft\fs\Local
     url: '@assetBaseUrl/images/t'
-graphql:
-  publicToken:
-    enabled: false
-    expiryDate: null
 meta:
   __names__:
     0bc8375c-5e05-4156-a6c9-5678af911123: 'News Types' # News Types
@@ -736,6 +732,7 @@ meta:
     f6fd4187-da05-45cb-adfd-7367ca82dc1f: 'Body (Nested)' # Body (Nested)
     f9f26c9a-936a-4901-90ca-e8c5c2997475: Teams # Teams
     f719c927-90fd-4ace-a58e-ddea5675c7d2: Office # Office
+    f3993d0e-4040-4e0b-85bc-b4db5e098143: 'Public Schema' # Public Schema
     fa35f4cd-b237-4493-8c4e-4e25855164ff: 'Block: Rich Text Collapse' # Block: Rich Text Collapse
     fad3fe56-0b6b-46c4-a97b-b7fb98847f3c: 'Media Embed' # Media Embed
     fd23984e-764a-4004-9834-8efe25601ba5: Simple # Simple
