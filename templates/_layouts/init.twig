@@ -29,7 +29,23 @@
   crossorigin: 'anonymous',
   rel: 'stylesheet',
 }) %}
-{# Add external stylesheets.
+{#
+  Add <link> tags
+  
+  Example:
+  ```
+  {% set headLinkTags = [{
+    rel: 'preconnect',
+    href: 'https://fonts.gstatic.com',
+    crossorigin: true,
+  }] %}
+  ```
+#}
+{% set headLinkTags = [{}] %}
+
+{#
+  Add external stylesheets
+  
   Example:
   ```
   {% set externalStyles = [{
@@ -39,6 +55,7 @@
   ```
 #}
 {% set externalStyles = [] %}
+
 {% set scripts = {
   'urgent.min.js': 'async',
   'deferred.min.js': 'async',

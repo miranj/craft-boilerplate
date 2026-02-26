@@ -42,8 +42,20 @@
       {% endfor %}
       
       {% set UrlHelper = create('craft\\helpers\\UrlHelper') %}
+      {% set headLinkTags = headLinkTags
+        | merge(externalStyles|map(sheet => {
+          rel: 'preconnect',
+          href: UrlHelper.hostInfo(sheet.href),
+        }))
+      %}
+      {{ headLinkTags
+        | map(tagAttrs => tag('link', tagAttrs))
+        | unique
+        | join("\n")
+        | raw
+      }}
+        
       {% for sheet in externalStyles %}
-        <link rel="preconnect" href="{{ UrlHelper.hostInfo(sheet.href) }}">
         {% if sheet.async ?? false %}
           <link rel="preload" href="{{ sheet.href }}" as="style">
           <link rel="stylesheet" href="{{ sheet.href }}" media='print' onload="this.media='all';">

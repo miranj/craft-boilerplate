@@ -6,6 +6,7 @@ Release notes for Miranj's Craft Boilerplate starter project.
 
 ### Craft
 
+- Added `headLinkTags` to `_layouts/init` to configure custom `<link>` tags inside `<head>`.
 - Updated Redis cache component config for compatibility with Yii 2 Redis 2.1.0.
 - Updated Yii 2 Redis to 2.1.0.
 
