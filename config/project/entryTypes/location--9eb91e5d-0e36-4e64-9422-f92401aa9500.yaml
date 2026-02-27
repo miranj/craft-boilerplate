@@ -1,3 +1,4 @@
+allowLineBreaksInTitles: false
 color: null
 description: null
 fieldLayouts:
@@ -38,6 +39,7 @@ fieldLayouts:
         name: Content
         uid: 76578b26-f7b0-469c-97f8-d227a4adf75e
         userCondition: null
+    thumbFieldKey: null
 handle: location
 hasTitleField: true
 icon: location-dot
@@ -49,3 +51,4 @@ slugTranslationMethod: site
 titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
+uiLabelFormat: '{title}'

@@ -37,6 +37,7 @@ fieldLayouts:
         name: Content
         uid: 6664599c-549f-4e07-b80d-9623116ef30b
         userCondition: null
+    thumbFieldKey: null
 handle: languages
 name: Languages
 siteSettings:

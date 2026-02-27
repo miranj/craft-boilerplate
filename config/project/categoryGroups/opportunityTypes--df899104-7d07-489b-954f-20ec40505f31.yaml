@@ -37,6 +37,7 @@ fieldLayouts:
         name: Content
         uid: 718a0261-cf08-4407-9b33-d1f209eb15b8
         userCondition: null
+    thumbFieldKey: null
 handle: opportunityTypes
 name: 'Opportunity Types'
 siteSettings:

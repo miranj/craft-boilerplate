@@ -1,3 +1,4 @@
+allowLineBreaksInTitles: false
 color: emerald
 description: null
 fieldLayouts:
@@ -20,6 +21,7 @@ fieldLayouts:
             dateAdded: '2025-02-25T02:50:10+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: fad3fe56-0b6b-46c4-a97b-b7fb98847f3c # Media Embed
             handle: null
             instructions: null
@@ -35,6 +37,7 @@ fieldLayouts:
             dateAdded: '2025-02-25T10:14:19+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 386721be-1ee4-4e3b-b22c-7fb3dfded3ff # Simple Text
             handle: caption
             instructions: null
@@ -49,6 +52,7 @@ fieldLayouts:
         name: Content
         uid: e02d4ece-fcb5-46c6-a4b2-68759c621411
         userCondition: null
+    thumbFieldKey: null
 handle: mediaEmbed
 hasTitleField: false
 icon: photo-film-music
@@ -60,3 +64,4 @@ slugTranslationMethod: site
 titleFormat: "{{ [object.mediaEmbed.media.providerName, object.mediaEmbed.media.title]|filter|join(' – ') }}"
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
+uiLabelFormat: '{title}'

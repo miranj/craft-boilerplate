@@ -1,3 +1,4 @@
+allowLineBreaksInTitles: false
 color: null
 description: null
 fieldLayouts:
@@ -11,6 +12,7 @@ fieldLayouts:
             dateAdded: '2025-04-18T09:19:24+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: fad3fe56-0b6b-46c4-a97b-b7fb98847f3c # Media Embed
             handle: video
             instructions: 'Only video embeds will be displayed.'
@@ -26,6 +28,7 @@ fieldLayouts:
             dateAdded: '2025-03-18T04:00:53+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: afc7f0bc-1b97-4841-a1d2-5b0385a7ca35 # Plain Text
             handle: quote
             instructions: null
@@ -48,6 +51,7 @@ fieldLayouts:
             dateAdded: '2025-04-21T10:26:46+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 2fc7574e-8621-4ac0-87f9-1f3b73cc235b # Author Type
             handle: null
             instructions: null
@@ -75,6 +79,7 @@ fieldLayouts:
                     - existingPerson
               elementType: craft\elements\Entry
               fieldContext: global
+            elementEditCondition: null
             fieldUid: 96f5233c-d76d-4f31-9f8d-6de2dfc22373 # Author
             handle: existingAuthor
             instructions: null
@@ -102,6 +107,7 @@ fieldLayouts:
                     - customPerson
               elementType: craft\elements\Entry
               fieldContext: global
+            elementEditCondition: null
             fieldUid: 840acb32-6694-40d0-9384-60a0220c1de0 # Label
             handle: customName
             instructions: null
@@ -129,6 +135,7 @@ fieldLayouts:
                     - customPerson
               elementType: craft\elements\Entry
               fieldContext: global
+            elementEditCondition: null
             fieldUid: 69339afc-d4f1-440b-a7ad-7da2ccb77972 # Image
             handle: customPortrait
             instructions: null
@@ -144,6 +151,7 @@ fieldLayouts:
             dateAdded: '2025-03-18T04:00:53+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 840acb32-6694-40d0-9384-60a0220c1de0 # Label
             handle: customDesignation
             instructions: null
@@ -165,6 +173,7 @@ fieldLayouts:
             dateAdded: '2025-04-21T10:15:35+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 840acb32-6694-40d0-9384-60a0220c1de0 # Label
             handle: null
             instructions: 'This title will not appear on the front-end.'
@@ -179,6 +188,7 @@ fieldLayouts:
         name: Content
         uid: 4a9705d4-3b74-4c99-8b89-a2e7f2a5d14b
         userCondition: null
+    thumbFieldKey: null
 handle: testimonial
 hasTitleField: false
 icon: comment
@@ -190,3 +200,4 @@ slugTranslationMethod: site
 titleFormat: "{{ label ?: [(existingAuthor.one.title ?? customAuthor), quote]|filter|join(' – ')|truncate(80) }}"
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
+uiLabelFormat: '{title}'

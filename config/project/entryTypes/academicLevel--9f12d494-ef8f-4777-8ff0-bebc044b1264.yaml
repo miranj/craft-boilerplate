@@ -1,3 +1,4 @@
+allowLineBreaksInTitles: false
 color: null
 description: null
 fieldLayouts:
@@ -38,6 +39,7 @@ fieldLayouts:
         name: Content
         uid: 05ddad96-bf4b-45c6-a810-394964157700
         userCondition: null
+    thumbFieldKey: null
 handle: academicLevel
 hasTitleField: true
 icon: scroll
@@ -49,3 +51,4 @@ slugTranslationMethod: site
 titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
+uiLabelFormat: '{title}'

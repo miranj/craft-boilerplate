@@ -9,6 +9,7 @@ fieldLayouts:
             dateAdded: '2024-12-16T23:10:59+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 5661ce90-e09f-4c95-bffe-ffe44c413db3 # Default Share Image
             handle: null
             instructions: null
@@ -23,6 +24,7 @@ fieldLayouts:
         name: Content
         uid: cb56995e-fe58-497c-a15f-1c923488bb3c
         userCondition: null
+    thumbFieldKey: null
 handle: seo
 name: 'Sharing & SEO'
 sortOrder: 2

@@ -1,3 +1,4 @@
+allowLineBreaksInTitles: false
 color: blue
 description: null
 fieldLayouts:
@@ -51,6 +52,7 @@ fieldLayouts:
             dateAdded: '2025-04-26T02:34:44+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 386721be-1ee4-4e3b-b22c-7fb3dfded3ff # Simple Text
             handle: introduction
             instructions: null
@@ -66,6 +68,7 @@ fieldLayouts:
             dateAdded: '2025-04-26T02:34:44+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: a6b97e16-5236-44b1-ad57-3899644efd40 # Link (Assets, Entries, URL)
             handle: hyperlink
             instructions: null
@@ -80,6 +83,7 @@ fieldLayouts:
         name: Content
         uid: c9a873c0-6a19-4b12-8482-50a6c940044a
         userCondition: null
+    thumbFieldKey: null
 handle: block_callToAction
 hasTitleField: true
 icon: link
@@ -91,3 +95,4 @@ slugTranslationMethod: site
 titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
+uiLabelFormat: '{title}'

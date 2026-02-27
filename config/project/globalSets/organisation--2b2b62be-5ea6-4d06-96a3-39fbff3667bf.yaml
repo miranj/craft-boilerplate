@@ -9,6 +9,7 @@ fieldLayouts:
             dateAdded: '2025-04-30T04:15:36+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 856911a9-89f9-4865-bdb1-5665460c6c23 # Contact & Social Media Information
             handle: null
             instructions: 'Contact info and social media will be used as meta data for SEO. Social media links will also appear on the front-end.'
@@ -30,6 +31,7 @@ fieldLayouts:
             dateAdded: '2025-04-30T04:15:36+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: afc7f0bc-1b97-4841-a1d2-5b0385a7ca35 # Plain Text
             handle: address
             instructions: 'Will be used as meta data for SEO.'
@@ -44,6 +46,7 @@ fieldLayouts:
         name: Address
         uid: ea5f0d59-8e8a-4f5e-887b-2f56727301e4
         userCondition: null
+    thumbFieldKey: null
 handle: organisation
 name: Organisation
 sortOrder: 1

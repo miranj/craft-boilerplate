@@ -48,6 +48,7 @@ fieldLayouts:
         name: Node
         uid: c3e931a0-3aaa-4d44-9578-abb221a8f223
         userCondition: null
+    thumbFieldKey: null
 handle: footer
 instructions: 'This will render the secondary site navigation in the footer at the bottom of the page. There can be a maximum of 4 items at the top level.'
 maxNodes: null
@@ -93,6 +94,7 @@ permissions:
   verbb\navigation\nodetypes\PassiveType:
     enabled: '1'
 propagationMethod: all
+showSiteMenu: true
 siteSettings:
   8341919b-4097-4c45-8f3b-97ff673d9ab5: # $CRAFT_SITE_NAME
     enabled: true

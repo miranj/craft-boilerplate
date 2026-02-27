@@ -1,3 +1,4 @@
+allowLineBreaksInTitles: false
 color: blue
 description: null
 fieldLayouts:
@@ -11,6 +12,7 @@ fieldLayouts:
             dateAdded: '2025-04-21T04:06:14+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: b5e4cb0a-59d9-4e16-bfc3-408104521a11 # URL
             handle: hyperlink
             instructions: null
@@ -25,6 +27,7 @@ fieldLayouts:
         name: Content
         uid: 854b41dc-7545-4594-8796-b741d82888bd
         userCondition: null
+    thumbFieldKey: null
 handle: socialYoutube
 hasTitleField: false
 icon: youtube
@@ -36,3 +39,4 @@ slugTranslationMethod: site
 titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
+uiLabelFormat: '{title}'

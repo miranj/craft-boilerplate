@@ -1,3 +1,4 @@
+allowLineBreaksInTitles: false
 color: null
 description: null
 fieldLayouts:
@@ -39,6 +40,7 @@ fieldLayouts:
             dateAdded: '2025-04-16T02:04:45+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 840acb32-6694-40d0-9384-60a0220c1de0 # Label
             handle: designation
             instructions: null
@@ -54,6 +56,7 @@ fieldLayouts:
             dateAdded: '2025-04-13T07:06:54+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 69339afc-d4f1-440b-a7ad-7da2ccb77972 # Image
             handle: null
             instructions: null
@@ -69,6 +72,7 @@ fieldLayouts:
             dateAdded: '2025-04-13T07:55:25+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 08b5b22b-fb98-46ef-8a90-e392edb2244f # Rich Text
             handle: bio
             instructions: null
@@ -90,6 +94,7 @@ fieldLayouts:
             dateAdded: '2025-04-17T05:02:53+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 8f58365f-4eeb-4347-9d3d-5c0d3ffd3989 # Toggle (Default: off)
             handle: isAlumni
             instructions: 'Alumni will not get a public page.'
@@ -105,6 +110,7 @@ fieldLayouts:
             dateAdded: '2025-04-17T04:38:10+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 11127416-2baf-40e9-bb28-9ea76040af2a # Org Person Roles
             handle: roles
             instructions: 'People with only an _Ambassador_ role will not get a public page.'
@@ -133,6 +139,7 @@ fieldLayouts:
                     - student
               elementType: craft\elements\Entry
               fieldContext: global
+            elementEditCondition: null
             fieldUid: 86d5863c-5339-40bb-9add-f4872cdfdce5 # Departments
             handle: null
             instructions: null
@@ -160,6 +167,7 @@ fieldLayouts:
                     - staff
               elementType: craft\elements\Entry
               fieldContext: global
+            elementEditCondition: null
             fieldUid: 16ca56d3-1df0-41ad-9bf1-f0b273739be2 # Offices
             handle: null
             instructions: null
@@ -188,6 +196,7 @@ fieldLayouts:
                     - student
               elementType: craft\elements\Entry
               fieldContext: global
+            elementEditCondition: null
             fieldUid: b41f3521-c73f-45d7-baac-db7ec5a54bd1 # Programmes
             handle: null
             instructions: null
@@ -217,6 +226,7 @@ fieldLayouts:
                     - student
               elementType: craft\elements\Entry
               fieldContext: global
+            elementEditCondition: null
             fieldUid: 9ce8d4e8-4f27-44a1-8f1c-60187033a3e3 # Focus Areas
             handle: null
             instructions: null
@@ -246,6 +256,7 @@ fieldLayouts:
                     - staff
               elementType: craft\elements\Entry
               fieldContext: global
+            elementEditCondition: null
             fieldUid: a0320c92-dcb7-489b-94e3-bd21fdc647cc # Practices
             handle: null
             instructions: null
@@ -267,6 +278,7 @@ fieldLayouts:
             dateAdded: '2025-04-13T07:06:54+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 856911a9-89f9-4865-bdb1-5665460c6c23 # Contact & Social Media Information
             handle: null
             instructions: null
@@ -308,6 +320,7 @@ fieldLayouts:
             dateAdded: '2025-04-13T07:50:34+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 5b72b712-0218-40c6-9717-0c395a914ad8 # Summary
             handle: null
             instructions: null
@@ -358,6 +371,7 @@ fieldLayouts:
             dateAdded: '2025-04-13T07:50:34+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: da24c053-b31c-4fa8-b113-217845a4ce83 # Share/SEO Title
             handle: null
             instructions: null
@@ -373,6 +387,7 @@ fieldLayouts:
             dateAdded: '2025-04-13T07:50:34+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 349b5e6f-3a2a-43f1-a9dd-2373bf4a0a67 # Share/SEO Description
             handle: null
             instructions: null
@@ -388,6 +403,7 @@ fieldLayouts:
             dateAdded: '2025-04-13T07:50:34+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: d4720a93-54ad-45de-a939-b668ed8660dc # Share/SEO Image
             handle: null
             instructions: null
@@ -409,6 +425,7 @@ fieldLayouts:
             dateAdded: '2025-04-13T07:50:34+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 61317d04-b4b5-4b2f-ad77-e1d87029c361 # Legacy URL
             handle: null
             instructions: null
@@ -435,3 +452,4 @@ slugTranslationMethod: site
 titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
+uiLabelFormat: '{title}'

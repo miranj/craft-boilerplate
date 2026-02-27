@@ -1,3 +1,4 @@
+allowLineBreaksInTitles: false
 color: null
 description: null
 fieldLayouts:
@@ -39,6 +40,7 @@ fieldLayouts:
             dateAdded: '2025-04-24T10:57:38+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 69339afc-d4f1-440b-a7ad-7da2ccb77972 # Image
             handle: cover
             instructions: null
@@ -54,6 +56,7 @@ fieldLayouts:
             dateAdded: '2025-04-24T10:55:15+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 386721be-1ee4-4e3b-b22c-7fb3dfded3ff # Simple Text
             handle: introduction
             instructions: null
@@ -69,6 +72,7 @@ fieldLayouts:
             dateAdded: '2025-04-24T10:55:15+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: a9736c79-b219-4814-ba33-728835b7d230 # Body
             handle: null
             instructions: null
@@ -90,6 +94,7 @@ fieldLayouts:
             dateAdded: '2025-04-25T03:43:22+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 856911a9-89f9-4865-bdb1-5665460c6c23 # Contact & Social Media Information
             handle: contact
             instructions: null
@@ -111,6 +116,7 @@ fieldLayouts:
             dateAdded: '2025-04-25T03:38:21+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 8cced595-e06e-42da-b82b-953c0a00fe58 # Opening Hours
             handle: null
             instructions: null
@@ -132,6 +138,7 @@ fieldLayouts:
             dateAdded: '2025-04-24T11:03:46+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: ddf843d6-31c0-4b23-8927-b1fb0fec9efb # Simple Navigation (Link: Entries, URL)
             handle: navigation
             instructions: null
@@ -153,6 +160,7 @@ fieldLayouts:
             dateAdded: '2025-04-24T10:55:15+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 5b72b712-0218-40c6-9717-0c395a914ad8 # Summary
             handle: null
             instructions: null
@@ -183,6 +191,7 @@ fieldLayouts:
             dateAdded: '2025-04-24T10:55:15+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: da24c053-b31c-4fa8-b113-217845a4ce83 # Share/SEO Title
             handle: null
             instructions: null
@@ -198,6 +207,7 @@ fieldLayouts:
             dateAdded: '2025-04-24T10:55:15+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 349b5e6f-3a2a-43f1-a9dd-2373bf4a0a67 # Share/SEO Description
             handle: null
             instructions: null
@@ -213,6 +223,7 @@ fieldLayouts:
             dateAdded: '2025-04-24T10:55:15+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: d4720a93-54ad-45de-a939-b668ed8660dc # Share/SEO Image
             handle: null
             instructions: null
@@ -234,6 +245,7 @@ fieldLayouts:
             dateAdded: '2025-04-24T10:55:15+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 61317d04-b4b5-4b2f-ad77-e1d87029c361 # Legacy URL
             handle: null
             instructions: null
@@ -248,6 +260,7 @@ fieldLayouts:
         name: 'Sharing / SEO'
         uid: 9dd7b3d7-0e15-47cd-8635-c9120a6f26e8
         userCondition: null
+    thumbFieldKey: null
 handle: office
 hasTitleField: true
 icon: chair-office
@@ -259,3 +272,4 @@ slugTranslationMethod: site
 titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
+uiLabelFormat: '{title}'

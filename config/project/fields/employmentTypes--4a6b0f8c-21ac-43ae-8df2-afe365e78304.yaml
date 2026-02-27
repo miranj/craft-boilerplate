@@ -11,7 +11,6 @@ settings:
   maxRelations: null
   minRelations: null
   selectionLabel: 'Add a type'
-  showCardsInGrid: false
   showSearchInput: true
   showSiteMenu: true
   source: 'group:7da8d57d-2f04-4b73-a787-e23c441a48f4' # Employment Types

@@ -1,3 +1,4 @@
+allowLineBreaksInTitles: false
 color: emerald
 description: null
 fieldLayouts:
@@ -22,6 +23,7 @@ fieldLayouts:
             dateAdded: '2024-12-17T21:53:21+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 69339afc-d4f1-440b-a7ad-7da2ccb77972 # Image
             handle: null
             instructions: null
@@ -37,6 +39,7 @@ fieldLayouts:
             dateAdded: '2024-12-17T21:53:21+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 386721be-1ee4-4e3b-b22c-7fb3dfded3ff # Simple Text
             handle: caption
             instructions: null
@@ -63,3 +66,4 @@ slugTranslationMethod: site
 titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
+uiLabelFormat: '{title}'

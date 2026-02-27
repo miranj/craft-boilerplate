@@ -37,6 +37,7 @@ fieldLayouts:
         name: Content
         uid: 80006709-3f2b-42a8-944a-743a57572671
         userCondition: null
+    thumbFieldKey: null
 handle: resourcesTypes
 name: 'Resources Types'
 siteSettings:

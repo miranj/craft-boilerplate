@@ -9,6 +9,7 @@ fieldLayouts:
             dateAdded: '2024-12-16T23:14:06+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 840acb32-6694-40d0-9384-60a0220c1de0 # Label
             handle: measurementId
             instructions: 'Enter a [GA4 Measurement ID](https://support.google.com/analytics/answer/9304153?hl=en) (formatted as `G-XXXXXXXXXX`) to enable [Google Analytics](https://analytics.google.com/) tracking.'
@@ -23,6 +24,7 @@ fieldLayouts:
         name: Content
         uid: bcba3073-654b-4796-9087-5093e2e96aa9
         userCondition: null
+    thumbFieldKey: null
 handle: googleAnalytics
 name: 'Google Analytics'
 sortOrder: 5

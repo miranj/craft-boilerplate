@@ -37,6 +37,7 @@ fieldLayouts:
         name: Content
         uid: 4e4b8047-c996-4f4c-b5e4-15266a4ac3d6
         userCondition: null
+    thumbFieldKey: null
 handle: newsTypes
 name: 'News Types'
 siteSettings:

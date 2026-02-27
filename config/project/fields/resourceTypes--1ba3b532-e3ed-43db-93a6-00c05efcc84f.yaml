@@ -11,7 +11,6 @@ settings:
   maxRelations: null
   minRelations: null
   selectionLabel: 'Add types'
-  showCardsInGrid: false
   showSearchInput: true
   showSiteMenu: true
   source: 'group:58e76d43-a465-4c1a-b102-2726a9fc13f5' # Resources Types

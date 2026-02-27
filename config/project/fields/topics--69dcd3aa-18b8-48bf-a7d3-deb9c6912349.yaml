@@ -11,7 +11,6 @@ settings:
   maxRelations: null
   minRelations: null
   selectionLabel: 'Add topics'
-  showCardsInGrid: false
   showSearchInput: true
   showSiteMenu: false
   source: 'group:6ae2a9cc-c9cc-4b89-9c8c-d7a417cbb87e' # Topics

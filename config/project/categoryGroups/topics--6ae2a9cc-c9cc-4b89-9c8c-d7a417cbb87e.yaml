@@ -37,6 +37,7 @@ fieldLayouts:
         name: Content
         uid: b355fd6a-a507-4960-9ec1-22f0ab97cef4
         userCondition: null
+    thumbFieldKey: null
 handle: topics
 name: Topics
 siteSettings:

@@ -1,3 +1,4 @@
+allowLineBreaksInTitles: false
 color: blue
 description: null
 fieldLayouts:
@@ -11,6 +12,7 @@ fieldLayouts:
             dateAdded: '2025-04-21T04:17:03+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: b5e4cb0a-59d9-4e16-bfc3-408104521a11 # URL
             handle: hyperlink
             instructions: null
@@ -25,6 +27,7 @@ fieldLayouts:
         name: Content
         uid: 0f414495-b394-4685-8b0b-3f3921e52b0f
         userCondition: null
+    thumbFieldKey: null
 handle: socialInstagram
 hasTitleField: false
 icon: instagram
@@ -36,3 +39,4 @@ slugTranslationMethod: site
 titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
+uiLabelFormat: '{title}'

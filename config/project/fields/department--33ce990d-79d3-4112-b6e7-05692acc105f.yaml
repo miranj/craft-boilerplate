@@ -11,7 +11,6 @@ settings:
   maxRelations: 1
   minRelations: null
   selectionLabel: 'Add a department'
-  showCardsInGrid: false
   showSearchInput: true
   showSiteMenu: false
   showUnpermittedEntries: true

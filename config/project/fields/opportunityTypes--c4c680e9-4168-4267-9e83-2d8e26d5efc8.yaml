@@ -11,7 +11,6 @@ settings:
   maxRelations: null
   minRelations: null
   selectionLabel: 'Add a type'
-  showCardsInGrid: false
   showSearchInput: true
   showSiteMenu: true
   source: 'group:df899104-7d07-489b-954f-20ec40505f31' # Opportunity Types

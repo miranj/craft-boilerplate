@@ -38,6 +38,7 @@ fieldLayouts:
         name: Content
         uid: 284a058c-1755-423e-8ffc-85afe56f6043
         userCondition: null
+    thumbFieldKey: null
 fs: webMedia
 handle: documents
 name: Documents

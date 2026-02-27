@@ -1,3 +1,4 @@
+allowLineBreaksInTitles: false
 color: null
 description: null
 fieldLayouts:
@@ -11,6 +12,7 @@ fieldLayouts:
             dateAdded: '2025-04-28T13:18:20+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 840acb32-6694-40d0-9384-60a0220c1de0 # Label
             handle: programmeName
             instructions: null
@@ -26,6 +28,7 @@ fieldLayouts:
             dateAdded: '2025-04-28T03:36:46+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 840acb32-6694-40d0-9384-60a0220c1de0 # Label
             handle: acronym
             instructions: null
@@ -41,6 +44,7 @@ fieldLayouts:
             dateAdded: '2025-04-25T04:06:30+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 386721be-1ee4-4e3b-b22c-7fb3dfded3ff # Simple Text
             handle: introduction
             instructions: null
@@ -56,6 +60,7 @@ fieldLayouts:
             dateAdded: '2025-04-25T04:06:30+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: a9736c79-b219-4814-ba33-728835b7d230 # Body
             handle: null
             instructions: null
@@ -77,6 +82,7 @@ fieldLayouts:
             dateAdded: '2025-04-26T02:35:05+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 7f2e3eef-0a17-44d0-b7a2-06e593deebf5 # Call To Action
             handle: null
             instructions: null
@@ -92,6 +98,7 @@ fieldLayouts:
             dateAdded: '2025-04-25T04:14:40+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 2b5c7d16-3a52-4e20-9827-a9099204e49c # Content Blocks: Programmes
             handle: contentBlocks
             instructions: null
@@ -113,6 +120,7 @@ fieldLayouts:
             dateAdded: '2025-04-28T13:31:58+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 32ed2f1a-9024-4ee9-9028-3a5041c0e5e6 # Date
             handle: applicationDeadline
             instructions: null
@@ -128,6 +136,7 @@ fieldLayouts:
             dateAdded: '2025-04-28T13:35:11+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: ed5b1453-5dc4-4e73-8865-dad39383c4cb # URL (Entries, URL)
             handle: applicationUrl
             instructions: null
@@ -149,6 +158,7 @@ fieldLayouts:
             dateAdded: '2025-04-26T03:11:20+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 14a95c46-17f2-4890-ad37-a80e9ea6ab3c # Academic Level
             handle: null
             instructions: null
@@ -164,6 +174,7 @@ fieldLayouts:
             dateAdded: '2025-04-28T13:54:12+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 33ce990d-79d3-4112-b6e7-05692acc105f # Department
             handle: null
             instructions: null
@@ -185,6 +196,7 @@ fieldLayouts:
             dateAdded: '2025-04-25T04:06:30+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 5b72b712-0218-40c6-9717-0c395a914ad8 # Summary
             handle: null
             instructions: null
@@ -215,6 +227,7 @@ fieldLayouts:
             dateAdded: '2025-04-25T04:06:30+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: da24c053-b31c-4fa8-b113-217845a4ce83 # Share/SEO Title
             handle: null
             instructions: null
@@ -230,6 +243,7 @@ fieldLayouts:
             dateAdded: '2025-04-25T04:06:30+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 349b5e6f-3a2a-43f1-a9dd-2373bf4a0a67 # Share/SEO Description
             handle: null
             instructions: null
@@ -245,6 +259,7 @@ fieldLayouts:
             dateAdded: '2025-04-25T04:06:30+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: d4720a93-54ad-45de-a939-b668ed8660dc # Share/SEO Image
             handle: null
             instructions: null
@@ -266,6 +281,7 @@ fieldLayouts:
             dateAdded: '2025-04-25T04:06:30+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 61317d04-b4b5-4b2f-ad77-e1d87029c361 # Legacy URL
             handle: null
             instructions: null
@@ -280,6 +296,7 @@ fieldLayouts:
         name: 'Sharing & SEO'
         uid: 2e59c2ce-12bb-4802-bca1-5d0ecca9a144
         userCondition: null
+    thumbFieldKey: null
 handle: programme
 hasTitleField: false
 icon: graduation-cap
@@ -291,3 +308,4 @@ slugTranslationMethod: site
 titleFormat: "{acronym ? acronym ~ ': '}{programmeName}"
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
+uiLabelFormat: '{title}'

@@ -59,6 +59,7 @@ fieldLayouts:
                     - verbb\navigation\nodetypes\PassiveType
               elementType: verbb\navigation\elements\Node
               fieldContext: global
+            elementEditCondition: null
             fieldUid: 8f58365f-4eeb-4347-9d3d-5c0d3ffd3989 # Toggle (Default: off)
             handle: highlight
             instructions: null
@@ -73,6 +74,7 @@ fieldLayouts:
         name: Node
         uid: 0580d843-eac6-44a5-a663-e2449b86e963
         userCondition: null
+    thumbFieldKey: null
 handle: header
 instructions: 'This will render the main site navigation in the header at the top of the page. There can be a maximum of 6 items at the top level.'
 maxNodes: null
@@ -118,6 +120,7 @@ permissions:
   verbb\navigation\nodetypes\PassiveType:
     enabled: '1'
 propagationMethod: all
+showSiteMenu: true
 siteSettings:
   8341919b-4097-4c45-8f3b-97ff673d9ab5: # $CRAFT_SITE_NAME
     enabled: true

@@ -37,6 +37,7 @@ fieldLayouts:
         name: Content
         uid: 2f992d2a-1995-47bc-9410-9af9f5477216
         userCondition: null
+    thumbFieldKey: null
 handle: employmentTypes
 name: 'Employment Types'
 siteSettings:

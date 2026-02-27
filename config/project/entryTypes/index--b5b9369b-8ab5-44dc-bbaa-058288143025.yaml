@@ -1,3 +1,4 @@
+allowLineBreaksInTitles: false
 color: null
 description: null
 fieldLayouts:
@@ -39,6 +40,7 @@ fieldLayouts:
             dateAdded: '2024-12-17T21:42:49+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 5b72b712-0218-40c6-9717-0c395a914ad8 # Summary
             handle: null
             instructions: null
@@ -69,6 +71,7 @@ fieldLayouts:
             dateAdded: '2024-12-17T21:42:49+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: da24c053-b31c-4fa8-b113-217845a4ce83 # Share/SEO Title
             handle: null
             instructions: null
@@ -84,6 +87,7 @@ fieldLayouts:
             dateAdded: '2024-12-17T21:42:49+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 349b5e6f-3a2a-43f1-a9dd-2373bf4a0a67 # Share/SEO Description
             handle: null
             instructions: null
@@ -99,6 +103,7 @@ fieldLayouts:
             dateAdded: '2024-12-17T21:42:49+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: d4720a93-54ad-45de-a939-b668ed8660dc # Share/SEO Image
             handle: null
             instructions: null
@@ -120,6 +125,7 @@ fieldLayouts:
             dateAdded: '2024-12-17T21:42:49+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 61317d04-b4b5-4b2f-ad77-e1d87029c361 # Legacy URL
             handle: null
             instructions: null
@@ -134,6 +140,7 @@ fieldLayouts:
         name: 'Sharing & SEO'
         uid: 028bf537-803c-4ad5-8b5a-134e61ecca3f
         userCondition: null
+    thumbFieldKey: null
 handle: index
 hasTitleField: true
 icon: list-tree
@@ -145,3 +152,4 @@ slugTranslationMethod: site
 titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
+uiLabelFormat: '{title}'

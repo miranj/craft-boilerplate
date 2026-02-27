@@ -37,6 +37,7 @@ fieldLayouts:
         name: Content
         uid: 0744404d-7bf5-4d79-be15-c38997ee50af
         userCondition: null
+    thumbFieldKey: null
 handle: publicationTypes
 name: 'Publication Types'
 siteSettings:

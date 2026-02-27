@@ -1,3 +1,4 @@
+allowLineBreaksInTitles: false
 color: null
 description: null
 fieldLayouts:
@@ -39,6 +40,7 @@ fieldLayouts:
             dateAdded: '2025-04-16T02:04:18+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 840acb32-6694-40d0-9384-60a0220c1de0 # Label
             handle: designation
             instructions: null
@@ -54,6 +56,7 @@ fieldLayouts:
             dateAdded: '2025-04-13T07:21:09+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 69339afc-d4f1-440b-a7ad-7da2ccb77972 # Image
             handle: null
             instructions: null
@@ -69,6 +72,7 @@ fieldLayouts:
             dateAdded: '2025-04-16T01:50:00+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 08b5b22b-fb98-46ef-8a90-e392edb2244f # Rich Text
             handle: bio
             instructions: null
@@ -90,6 +94,7 @@ fieldLayouts:
             dateAdded: '2025-04-22T07:47:34+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 9cbdb5d5-1a67-4b57-820f-7226cef3d0c8 # External Person Roles
             handle: roles
             instructions: null
@@ -111,6 +116,7 @@ fieldLayouts:
             dateAdded: '2025-04-13T07:21:09+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 856911a9-89f9-4865-bdb1-5665460c6c23 # Contact & Social Media Information
             handle: null
             instructions: null
@@ -144,6 +150,7 @@ fieldLayouts:
             dateAdded: '2025-04-23T02:56:46+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 5b72b712-0218-40c6-9717-0c395a914ad8 # Summary
             handle: null
             instructions: null
@@ -186,6 +193,7 @@ fieldLayouts:
             dateAdded: '2025-04-23T02:58:24+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: da24c053-b31c-4fa8-b113-217845a4ce83 # Share/SEO Title
             handle: null
             instructions: null
@@ -201,6 +209,7 @@ fieldLayouts:
             dateAdded: '2025-04-23T02:58:24+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 349b5e6f-3a2a-43f1-a9dd-2373bf4a0a67 # Share/SEO Description
             handle: null
             instructions: null
@@ -216,6 +225,7 @@ fieldLayouts:
             dateAdded: '2025-04-23T02:58:24+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: d4720a93-54ad-45de-a939-b668ed8660dc # Share/SEO Image
             handle: null
             instructions: null
@@ -237,6 +247,7 @@ fieldLayouts:
             dateAdded: '2025-04-23T02:58:24+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 61317d04-b4b5-4b2f-ad77-e1d87029c361 # Legacy URL
             handle: null
             instructions: null
@@ -251,6 +262,7 @@ fieldLayouts:
         name: 'Sharing & SEO'
         uid: d72af6ca-5d37-45b1-98de-4cf02d616ce8
         userCondition: null
+    thumbFieldKey: null
 handle: externalPerson
 hasTitleField: true
 icon: handshake
@@ -262,3 +274,4 @@ slugTranslationMethod: site
 titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
+uiLabelFormat: '{title}'

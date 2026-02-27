@@ -38,6 +38,7 @@ fieldLayouts:
         name: Content
         uid: a258a25f-5eb3-4799-af18-51b01d665889
         userCondition: null
+    thumbFieldKey: null
 fs: contentMedia
 handle: formSubmissions
 name: 'Form Submissions'

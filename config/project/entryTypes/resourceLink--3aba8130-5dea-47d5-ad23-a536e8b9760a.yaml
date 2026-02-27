@@ -1,3 +1,4 @@
+allowLineBreaksInTitles: false
 color: null
 description: null
 fieldLayouts:
@@ -48,6 +49,7 @@ fieldLayouts:
             dateAdded: '2025-03-03T09:58:09+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 1ba3b532-e3ed-43db-93a6-00c05efcc84f # Resource Types
             handle: null
             instructions: null
@@ -63,6 +65,7 @@ fieldLayouts:
             dateAdded: '2025-03-05T08:22:19+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: ed5b1453-5dc4-4e73-8865-dad39383c4cb # URL (Entries, URL)
             handle: hyperlink
             instructions: null
@@ -84,6 +87,7 @@ fieldLayouts:
             dateAdded: '2025-05-01T02:25:12+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 86d5863c-5339-40bb-9add-f4872cdfdce5 # Departments
             handle: null
             instructions: null
@@ -99,6 +103,7 @@ fieldLayouts:
             dateAdded: '2025-05-01T02:25:12+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 16ca56d3-1df0-41ad-9bf1-f0b273739be2 # Offices
             handle: null
             instructions: null
@@ -114,6 +119,7 @@ fieldLayouts:
             dateAdded: '2025-05-01T02:25:12+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 9c5f24a6-1969-4197-9fce-ff44e5a18b9b # People
             handle: null
             instructions: null
@@ -129,6 +135,7 @@ fieldLayouts:
             dateAdded: '2025-05-01T02:25:12+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: a60b8050-4e83-40d0-9598-4a9572ce027a # Location
             handle: null
             instructions: null
@@ -144,6 +151,7 @@ fieldLayouts:
             dateAdded: '2025-05-01T02:25:12+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: b41f3521-c73f-45d7-baac-db7ec5a54bd1 # Programmes
             handle: null
             instructions: null
@@ -159,6 +167,7 @@ fieldLayouts:
             dateAdded: '2025-05-01T02:25:12+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: a0320c92-dcb7-489b-94e3-bd21fdc647cc # Practices
             handle: null
             instructions: null
@@ -174,6 +183,7 @@ fieldLayouts:
             dateAdded: '2025-03-03T09:58:09+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 69dcd3aa-18b8-48bf-a7d3-deb9c6912349 # Topics
             handle: null
             instructions: null
@@ -195,6 +205,7 @@ fieldLayouts:
             dateAdded: '2025-04-07T14:50:46+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 5b72b712-0218-40c6-9717-0c395a914ad8 # Summary
             handle: null
             instructions: null
@@ -209,6 +220,7 @@ fieldLayouts:
         name: Summary
         uid: 13576120-b7c1-4a21-9fc3-13672bcb9d02
         userCondition: null
+    thumbFieldKey: null
 handle: resourceLink
 hasTitleField: true
 icon: book
@@ -220,3 +232,4 @@ slugTranslationMethod: site
 titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
+uiLabelFormat: '{title}'

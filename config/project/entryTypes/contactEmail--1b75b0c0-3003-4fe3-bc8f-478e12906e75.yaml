@@ -1,3 +1,4 @@
+allowLineBreaksInTitles: false
 color: blue
 description: null
 fieldLayouts:
@@ -11,6 +12,7 @@ fieldLayouts:
             dateAdded: '2025-04-08T12:09:31+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 23995e04-c457-4eeb-b78d-1c22f16cf4f6 # URL (Email)
             handle: hyperlink
             instructions: null
@@ -25,6 +27,7 @@ fieldLayouts:
         name: Content
         uid: f0becc8f-468f-499c-84eb-ea898b5374f2
         userCondition: null
+    thumbFieldKey: null
 handle: contactEmail
 hasTitleField: false
 icon: envelope
@@ -36,3 +39,4 @@ slugTranslationMethod: site
 titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
+uiLabelFormat: '{title}'

@@ -1,3 +1,4 @@
+allowLineBreaksInTitles: false
 color: orange
 description: null
 fieldLayouts:
@@ -28,6 +29,7 @@ fieldLayouts:
         name: Content
         uid: 0201e9e9-067d-4069-9932-2a580008a352
         userCondition: null
+    thumbFieldKey: null
 handle: block_facultyProgrammes
 hasTitleField: false
 icon: scroll
@@ -39,3 +41,4 @@ slugTranslationMethod: site
 titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
+uiLabelFormat: '{title}'

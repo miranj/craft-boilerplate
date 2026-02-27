@@ -1,3 +1,4 @@
+allowLineBreaksInTitles: false
 color: null
 description: null
 fieldLayouts:
@@ -51,6 +52,7 @@ fieldLayouts:
             dateAdded: '2025-04-23T03:33:02+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 8f58365f-4eeb-4347-9d3d-5c0d3ffd3989 # Toggle (Default: off)
             handle: null
             instructions: "Useful for highlighting testimonials from an organization's leadership."
@@ -76,6 +78,7 @@ fieldLayouts:
                   value: true
               elementType: craft\elements\Entry
               fieldContext: global
+            elementEditCondition: null
             fieldUid: c598a91f-bc3a-49a0-9053-869bf01f2a6c # Testimonial
             handle: null
             instructions: null
@@ -101,6 +104,7 @@ fieldLayouts:
                   value: false
               elementType: craft\elements\Entry
               fieldContext: global
+            elementEditCondition: null
             fieldUid: 12bc836f-fce2-4315-8a94-22967b0923c8 # Testimonials
             handle: null
             instructions: null
@@ -115,6 +119,7 @@ fieldLayouts:
         name: Content
         uid: 428a9c4b-53fc-4d3d-b3fc-a9a48d375898
         userCondition: null
+    thumbFieldKey: null
 handle: block_testimonials
 hasTitleField: true
 icon: comments
@@ -126,3 +131,4 @@ slugTranslationMethod: site
 titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
+uiLabelFormat: '{title}'

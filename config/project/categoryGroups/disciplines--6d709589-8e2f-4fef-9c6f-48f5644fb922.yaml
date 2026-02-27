@@ -37,6 +37,7 @@ fieldLayouts:
         name: Content
         uid: 3f706b39-e651-4d42-aa0b-1dfb28c768e8
         userCondition: null
+    thumbFieldKey: null
 handle: disciplines
 name: Disciplines
 siteSettings:

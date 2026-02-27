@@ -9,6 +9,7 @@ fieldLayouts:
             dateAdded: '2024-12-17T21:31:06+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: a53f5b40-fb8c-4a9d-8c25-dc8e3dfe58d6 # Code
             handle: embedcode
             instructions: null
@@ -23,6 +24,7 @@ fieldLayouts:
         name: Content
         uid: 54091157-9352-491d-b784-9fa51b24e0b5
         userCondition: null
+    thumbFieldKey: null
 handle: newsletter
 name: Newsletter
 sortOrder: 4

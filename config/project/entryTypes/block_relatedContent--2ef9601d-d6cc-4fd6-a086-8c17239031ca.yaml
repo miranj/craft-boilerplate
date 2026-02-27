@@ -1,3 +1,4 @@
+allowLineBreaksInTitles: false
 color: null
 description: null
 fieldLayouts:
@@ -51,6 +52,7 @@ fieldLayouts:
             dateAdded: '2025-04-29T07:50:07+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 386721be-1ee4-4e3b-b22c-7fb3dfded3ff # Simple Text
             handle: introduction
             instructions: null
@@ -66,6 +68,7 @@ fieldLayouts:
             dateAdded: '2025-04-29T09:53:50+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: a5b6a8d1-7e0b-4093-841d-7fe8366f026f # Entries
             handle: null
             instructions: null
@@ -80,6 +83,7 @@ fieldLayouts:
         name: Content
         uid: 7aa62b4e-2d40-4ea7-8eb8-0c2a815da4be
         userCondition: null
+    thumbFieldKey: null
 handle: block_relatedContent
 hasTitleField: true
 icon: rectangle-history
@@ -91,3 +95,4 @@ slugTranslationMethod: site
 titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
+uiLabelFormat: '{title}'

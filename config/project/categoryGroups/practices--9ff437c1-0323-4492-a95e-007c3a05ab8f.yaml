@@ -37,6 +37,7 @@ fieldLayouts:
         name: Content
         uid: e568e597-fbaf-41b0-a8d3-7c90c8af60dc
         userCondition: null
+    thumbFieldKey: null
 handle: practices
 name: Practices
 siteSettings:

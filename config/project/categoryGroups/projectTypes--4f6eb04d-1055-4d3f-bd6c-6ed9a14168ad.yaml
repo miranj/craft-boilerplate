@@ -37,6 +37,7 @@ fieldLayouts:
         name: Content
         uid: 740c207c-0236-41a6-abb9-3936d563e254
         userCondition: null
+    thumbFieldKey: null
 handle: projectTypes
 name: 'Project Types'
 siteSettings:

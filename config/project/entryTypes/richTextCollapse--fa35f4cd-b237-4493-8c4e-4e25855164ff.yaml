@@ -1,3 +1,4 @@
+allowLineBreaksInTitles: false
 color: null
 description: null
 fieldLayouts:
@@ -50,6 +51,7 @@ fieldLayouts:
             dateAdded: '2025-04-28T11:02:05+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: f6fd4187-da05-45cb-adfd-7367ca82dc1f # Body (Nested)
             handle: body
             instructions: null
@@ -64,6 +66,7 @@ fieldLayouts:
         name: Content
         uid: 20b5380c-78d8-4570-9469-47e4752cca85
         userCondition: null
+    thumbFieldKey: null
 handle: richTextCollapse
 hasTitleField: true
 icon: caret-down
@@ -75,3 +78,4 @@ slugTranslationMethod: site
 titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
+uiLabelFormat: '{title}'

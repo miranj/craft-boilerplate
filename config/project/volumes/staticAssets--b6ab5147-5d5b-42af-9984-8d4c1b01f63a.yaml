@@ -38,6 +38,7 @@ fieldLayouts:
         name: Content
         uid: 67ce7dc8-307b-49a6-9859-7adff96e88e7
         userCondition: null
+    thumbFieldKey: null
 fs: webAssets
 handle: staticAssets
 name: 'Static Assets'

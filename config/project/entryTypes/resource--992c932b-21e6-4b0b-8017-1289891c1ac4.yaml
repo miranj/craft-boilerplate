@@ -1,3 +1,4 @@
+allowLineBreaksInTitles: false
 color: null
 description: null
 fieldLayouts:
@@ -39,6 +40,7 @@ fieldLayouts:
             dateAdded: '2025-02-28T08:54:00+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 69339afc-d4f1-440b-a7ad-7da2ccb77972 # Image
             handle: cover
             instructions: null
@@ -54,6 +56,7 @@ fieldLayouts:
             dateAdded: '2025-02-27T07:24:28+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 1a28c01c-3fa0-4a60-8c73-d7c7707be626 # Document
             handle: null
             instructions: 'Optionally make a document available for download.'
@@ -79,6 +82,7 @@ fieldLayouts:
                   uid: c6aa6fc0-7ffe-4d4e-8ea4-672027186323
               elementType: craft\elements\Entry
               fieldContext: global
+            elementEditCondition: null
             fieldUid: 32ed2f1a-9024-4ee9-9028-3a5041c0e5e6 # Date
             handle: null
             instructions: null
@@ -94,6 +98,7 @@ fieldLayouts:
             dateAdded: '2025-02-27T04:41:51+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: a9736c79-b219-4814-ba33-728835b7d230 # Body
             handle: null
             instructions: null
@@ -115,6 +120,7 @@ fieldLayouts:
             dateAdded: '2025-02-27T04:42:27+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 1ba3b532-e3ed-43db-93a6-00c05efcc84f # Resource Types
             handle: null
             instructions: null
@@ -137,6 +143,7 @@ fieldLayouts:
             dateAdded: '2025-05-01T02:27:59+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 33ce990d-79d3-4112-b6e7-05692acc105f # Department
             handle: null
             instructions: null
@@ -152,6 +159,7 @@ fieldLayouts:
             dateAdded: '2025-05-01T02:27:59+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 16ca56d3-1df0-41ad-9bf1-f0b273739be2 # Offices
             handle: null
             instructions: null
@@ -167,6 +175,7 @@ fieldLayouts:
             dateAdded: '2025-05-01T02:27:59+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 9c5f24a6-1969-4197-9fce-ff44e5a18b9b # People
             handle: null
             instructions: null
@@ -182,6 +191,7 @@ fieldLayouts:
             dateAdded: '2025-05-01T02:27:59+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: a60b8050-4e83-40d0-9598-4a9572ce027a # Location
             handle: null
             instructions: null
@@ -197,6 +207,7 @@ fieldLayouts:
             dateAdded: '2025-05-01T02:27:59+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: b41f3521-c73f-45d7-baac-db7ec5a54bd1 # Programmes
             handle: null
             instructions: null
@@ -212,6 +223,7 @@ fieldLayouts:
             dateAdded: '2025-05-01T02:27:59+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: a0320c92-dcb7-489b-94e3-bd21fdc647cc # Practices
             handle: null
             instructions: null
@@ -227,6 +239,7 @@ fieldLayouts:
             dateAdded: '2025-02-28T08:54:00+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 69dcd3aa-18b8-48bf-a7d3-deb9c6912349 # Topics
             handle: null
             instructions: null
@@ -248,6 +261,7 @@ fieldLayouts:
             dateAdded: '2025-02-27T04:41:37+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 5b72b712-0218-40c6-9717-0c395a914ad8 # Summary
             handle: null
             instructions: null
@@ -278,6 +292,7 @@ fieldLayouts:
             dateAdded: '2025-02-27T04:41:37+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: da24c053-b31c-4fa8-b113-217845a4ce83 # Share/SEO Title
             handle: null
             instructions: null
@@ -293,6 +308,7 @@ fieldLayouts:
             dateAdded: '2025-02-27T04:41:37+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 349b5e6f-3a2a-43f1-a9dd-2373bf4a0a67 # Share/SEO Description
             handle: null
             instructions: null
@@ -308,6 +324,7 @@ fieldLayouts:
             dateAdded: '2025-02-27T04:41:37+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: d4720a93-54ad-45de-a939-b668ed8660dc # Share/SEO Image
             handle: null
             instructions: null
@@ -329,6 +346,7 @@ fieldLayouts:
             dateAdded: '2025-02-27T04:41:37+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 61317d04-b4b5-4b2f-ad77-e1d87029c361 # Legacy URL
             handle: null
             instructions: null
@@ -343,6 +361,7 @@ fieldLayouts:
         name: 'Sharing & SEO'
         uid: 532fbb8a-9b44-45b6-b47d-d17f2d7d2d48
         userCondition: null
+    thumbFieldKey: null
 handle: resource
 hasTitleField: true
 icon: book
@@ -354,3 +373,4 @@ slugTranslationMethod: site
 titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
+uiLabelFormat: '{title}'

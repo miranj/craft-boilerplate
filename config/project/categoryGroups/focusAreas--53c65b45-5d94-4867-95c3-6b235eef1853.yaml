@@ -37,6 +37,7 @@ fieldLayouts:
         name: Content
         uid: dac7c762-1e9f-4f65-a0ef-b1af0c54f617
         userCondition: null
+    thumbFieldKey: null
 handle: focusAreas
 name: 'Focus Areas'
 siteSettings:

@@ -64,6 +64,7 @@ fieldLayouts:
         name: Content
         uid: 17ffee00-5501-4abb-9f6c-e19f1965ba5f
         userCondition: null
+    thumbFieldKey: null
 fs: webMedia
 handle: multimedia
 name: Multimedia
