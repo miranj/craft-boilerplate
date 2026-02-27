@@ -26,9 +26,6 @@ paths.tasks = {
         paths.directories.build + '**/*.js',
         '../templates/**/*.{twig,html}',
       ],
-      watch_config: {
-        ignored: '../templates/_manifest*.json',
-      },
     },
     cp: {
       source: 'craft-cp/main.css',
@@ -82,9 +79,6 @@ paths.tasks = {
         paths.directories.build + '**/*.js',
         '../templates/**/*.{twig,html}',
       ],
-      watch_config: {
-        ignored: '../templates/_manifest*.json',
-      },
     },
   },
   js: {

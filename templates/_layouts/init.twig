@@ -19,62 +19,6 @@
 
 
 
-{% set assetManifest = source('_manifest.json')|json_decode %}
-{% set sriManifest = source('_manifest-sri.json')|json_decode %}
-{% set styles = [
-  devMode ? 'style.css' : 'style.purged.min.css',
-]|map(s => {
-  href: alias('@assetBaseUrl/build/' ~ s|replace('.css', ".#{assetManifest[s]}.css")),
-  integrity: sriManifest[s],
-  crossorigin: 'anonymous',
-  rel: 'stylesheet',
-}) %}
-{#
-  Add <link> tags
-  
-  Example:
-  ```
-  {% set headLinkTags = [{
-    rel: 'preconnect',
-    href: 'https://fonts.gstatic.com',
-    crossorigin: true,
-  }] %}
-  ```
-#}
-{% set headLinkTags = [{}] %}
-
-{#
-  Add external stylesheets
-  
-  Example:
-  ```
-  {% set externalStyles = [{
-    href: 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i|IBM+Plex+Sans:400,500,700&amp;display=swap',
-    async: true,
-  }] %}
-  ```
-#}
-{% set externalStyles = [] %}
-
-{% set scripts = {
-  'urgent.min.js': 'async',
-  'deferred.min.js': 'async',
-  'instant.min.js': 'module',
-  'photoswipeinit.min.js': 'module',
-}
-  |merge(craft.app.config.custom.useYouTubeFacadeLoading
-    ? {'lite-youtube.js': 'module'}
-    : {})
-  |map((type, s) => {
-    src: alias('@assetBaseUrl/build/' ~ s|replace('.js', ".#{assetManifest[s]}.js")),
-    integrity: sriManifest[s],
-    crossorigin: 'anonymous',
-    async: type == 'async',
-    type: type == 'module' ? type : false,
-}) %}
-
-
-
 {#
   If the request is for <link rel=prefetch>
   then make sure the response is micro-cacheable
@@ -99,8 +43,11 @@
   
   {% set htmlCacheKey = [
       cacheKeyPrefix,
-      'css:' ~ assetManifest['style.purged.min.css'],
-      'js:' ~ assetManifest['urgent.min.js'] ~ assetManifest['deferred.min.js'],
+      'css:'
+        ~ craft.app.config.custom.getBuildManifest|invoke('style.purged.min.css'),
+      'js:'
+        ~ craft.app.config.custom.getBuildManifest|invoke('urgent.min.js')
+        ~ craft.app.config.custom.getBuildManifest|invoke('deferred.min.js'),
       'html:v1',
     ]|merge(cacheKeySuffixes)|filter|join('-') %}
   

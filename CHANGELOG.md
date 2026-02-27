@@ -6,8 +6,10 @@ Release notes for Miranj's Craft Boilerplate starter project.
 
 ### Craft
 
+- Improved performance of accessing manifest files for cache busting build file URLs.
+- Moved configuration of build stylesheets, build scripts, and external stylesheets to `config/custom`.
+- Added `headLinkTags` to `config/custom` to configure custom `<link>` tags inside `<head>`.
 - Added `createObject()` Twig function as an alias to `Craft::createObject()`.
-- Added `headLinkTags` to `_layouts/init` to configure custom `<link>` tags inside `<head>`.
 - Updated Redis cache component config for compatibility with Yii 2 Redis 2.1.0.
 - Updated Craft CMS to 5.9.14.
 - Updated CKEditor to 4.11.1.

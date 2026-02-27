@@ -37,13 +37,27 @@
     <head>
       <meta charset="utf-8"/>
       
-      {% for sheet in styles %}
-        <link {{ attr(sheet) }}>
-      {% endfor %}
+      {# Build Stylesheets #}
+      {{ craft.app.config.custom.buildStylesheets
+        | map(stylesheet => {
+          alias: '@assetBaseUrl/build/' ~ stylesheet,
+          hash: craft.app.config.custom.getBuildManifest|invoke(stylesheet),
+          hashSri: craft.app.config.custom.getBuildManifestSri|invoke(stylesheet),
+        })
+        | map(s => tag('link', {
+          href: alias(s.alias|replace('.css', ".#{s.hash}.css")),
+          integrity: s.hashSri,
+          crossorigin: 'anonymous',
+          rel: 'stylesheet',
+        }))
+        | join("\n")
+        | raw
+      }}
       
+      {# <link> tags #}
       {% set UrlHelper = create('craft\\helpers\\UrlHelper') %}
-      {% set headLinkTags = headLinkTags
-        | merge(externalStyles|map(sheet => {
+      {% set headLinkTags = craft.app.config.custom.headLinkTags
+        | merge(craft.app.config.custom.externalStylesheets|map(sheet => {
           rel: 'preconnect',
           href: UrlHelper.hostInfo(sheet.href),
         }))
@@ -54,8 +68,9 @@
         | join("\n")
         | raw
       }}
-        
-      {% for sheet in externalStyles %}
+      
+      {# External Stylesheets #}
+      {% for sheet in craft.app.config.custom.externalStylesheets %}
         {% if sheet.async ?? false %}
           <link rel="preload" href="{{ sheet.href }}" as="style">
           <link rel="stylesheet" href="{{ sheet.href }}" media='print' onload="this.media='all';">
@@ -69,6 +84,7 @@
       
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
+      {# Favicons #}
       {# <link rel="apple-touch-icon" sizes="180x180" href="{{ alias('@assetBaseUrl/favicons/apple-touch-icon.png') }}">
       <link rel="icon" type="image/png" sizes="96x96" href="{{ alias('@assetBaseUrl/favicons/favicon-96x96.png') }}">
       <link rel="icon" type="image/svg+xml" href="{{ alias('@assetBaseUrl/favicons/favicon.svg') }}">
@@ -122,17 +138,32 @@
           photoswipe: {
             lightbox: 'photoswipe-lightbox.min.js',
             module: 'photoswipe.min.js',
-          }|map((href, key) => alias('@assetBaseUrl/build/' ~ href|replace('/.(css|js)/', ".#{assetManifest[href]}.$1"))),
+          }|map((href, key) => alias('@assetBaseUrl/build/' ~ href|replace('/.(css|js)/', ".#{craft.app.config.custom.getBuildManifest|invoke(href)}.$1"))),
         }|merge(jsConstants ?? {})|filter %}
         <script>
           window.ProjectEnv = {{ jsConstants|json_encode|raw }};
         </script>
       {% endblock %}
 
-      {% for script in scripts %}
-        <script {{ attr(script) }}></script>
-      {% endfor %}
-      
+      {# Build Scripts #}
+      {{ craft.app.config.custom.buildScripts
+        | map((type, script) => {
+          type,
+          alias: '@assetBaseUrl/build/' ~ script,
+          hash: craft.app.config.custom.getBuildManifest|invoke(script),
+          hashSri: craft.app.config.custom.getBuildManifestSri|invoke(script),
+        })
+        | map((s) => tag('script', {
+          src: alias(s.alias|replace('.js', ".#{s.hash}.js")),
+          integrity: s.hashSri,
+          async: s.type == 'async',
+          type: s.type == 'module' ? s.type : false,
+          crossorigin: 'anonymous',
+        }))
+        | join("\n")
+        | raw
+      }}
+            
       {% block body_end %}
         {% block jsonld %}{% endblock %}
       {% endblock %}
