@@ -24,10 +24,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: 69339afc-d4f1-440b-a7ad-7da2ccb77972 # Image
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: true
             required: false
             tip: 'Double-click the image to add “alt” text for visually impaired users.'
             type: craft\fieldlayoutelements\CustomField
@@ -41,10 +39,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: 386721be-1ee4-4e3b-b22c-7fb3dfded3ff # Simple Text
             handle: caption
-            includeInCards: true
             instructions: null
             label: Caption
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -55,6 +51,7 @@ fieldLayouts:
         name: Content
         uid: 423b9365-d39f-4522-9b01-20fd9726fbc3
         userCondition: null
+    thumbFieldKey: 'layoutElement:2ca1af80-1f48-4a75-a5f0-3f982c05c447'
 handle: image
 hasTitleField: false
 icon: image

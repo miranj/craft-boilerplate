@@ -18,7 +18,6 @@ fieldLayouts:
             disabled: false
             elementCondition: null
             id: null
-            includeInCards: false
             inputType: null
             instructions: null
             label: Role
@@ -27,7 +26,6 @@ fieldLayouts:
             name: null
             orientation: null
             placeholder: null
-            providesThumbs: false
             readonly: false
             required: true
             size: null
@@ -45,10 +43,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: 9c5f24a6-1969-4197-9fce-ff44e5a18b9b # People
             handle: null
-            includeInCards: true
             instructions: null
             label: null
-            providesThumbs: false
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField

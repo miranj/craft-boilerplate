@@ -16,7 +16,6 @@ fieldLayouts:
             disabled: false
             elementCondition: null
             id: null
-            includeInCards: false
             inputType: null
             instructions: null
             label: Name
@@ -25,7 +24,6 @@ fieldLayouts:
             name: null
             orientation: null
             placeholder: null
-            providesThumbs: false
             readonly: false
             required: true
             size: null
@@ -43,10 +41,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: 840acb32-6694-40d0-9384-60a0220c1de0 # Label
             handle: designation
-            includeInCards: false
             instructions: null
             label: Designation
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -60,10 +56,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: 69339afc-d4f1-440b-a7ad-7da2ccb77972 # Image
             handle: null
-            includeInCards: false
             instructions: null
             label: Portrait
-            providesThumbs: true
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -77,10 +71,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: 08b5b22b-fb98-46ef-8a90-e392edb2244f # Rich Text
             handle: bio
-            includeInCards: false
             instructions: null
             label: Bio
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -100,10 +92,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: 8f58365f-4eeb-4347-9d3d-5c0d3ffd3989 # Toggle (Default: off)
             handle: isAlumni
-            includeInCards: false
             instructions: 'Alumni will not get a public page.'
             label: 'Is Alumni?'
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -117,10 +107,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: 11127416-2baf-40e9-bb28-9ea76040af2a # Org Person Roles
             handle: roles
-            includeInCards: false
             instructions: 'People with only an _Ambassador_ role will not get a public page.'
             label: 'Current Roles'
-            providesThumbs: false
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -147,10 +135,8 @@ fieldLayouts:
               fieldContext: global
             fieldUid: 86d5863c-5339-40bb-9add-f4872cdfdce5 # Departments
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -176,10 +162,8 @@ fieldLayouts:
               fieldContext: global
             fieldUid: 16ca56d3-1df0-41ad-9bf1-f0b273739be2 # Offices
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -206,10 +190,8 @@ fieldLayouts:
               fieldContext: global
             fieldUid: b41f3521-c73f-45d7-baac-db7ec5a54bd1 # Programmes
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -237,10 +219,8 @@ fieldLayouts:
               fieldContext: global
             fieldUid: 9ce8d4e8-4f27-44a1-8f1c-60187033a3e3 # Focus Areas
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -268,10 +248,8 @@ fieldLayouts:
               fieldContext: global
             fieldUid: a0320c92-dcb7-489b-94e3-bd21fdc647cc # Practices
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -291,10 +269,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: 856911a9-89f9-4865-bdb1-5665460c6c23 # Contact & Social Media Information
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -334,10 +310,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: 5b72b712-0218-40c6-9717-0c395a914ad8 # Summary
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -386,10 +360,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: da24c053-b31c-4fa8-b113-217845a4ce83 # Share/SEO Title
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -403,10 +375,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: 349b5e6f-3a2a-43f1-a9dd-2373bf4a0a67 # Share/SEO Description
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -420,10 +390,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: d4720a93-54ad-45de-a939-b668ed8660dc # Share/SEO Image
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -443,10 +411,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: 61317d04-b4b5-4b2f-ad77-e1d87029c361 # Legacy URL
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -457,6 +423,7 @@ fieldLayouts:
         name: 'Sharing & SEO'
         uid: b311276a-8b36-479e-a3f6-58f18ce32398
         userCondition: null
+    thumbFieldKey: 'layoutElement:dc1be8c8-5998-4107-a7cc-5dfa91a2e834'
 handle: orgPerson
 hasTitleField: true
 icon: user

@@ -22,10 +22,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: fad3fe56-0b6b-46c4-a97b-b7fb98847f3c # Media Embed
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -39,10 +37,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: 386721be-1ee4-4e3b-b22c-7fb3dfded3ff # Simple Text
             handle: caption
-            includeInCards: false
             instructions: null
             label: Caption
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField

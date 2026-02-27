@@ -13,10 +13,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: 90d8deb5-3a82-411b-b04f-8eed4c8890c9 # URL (Phone)
             handle: hyperlink
-            includeInCards: false
             instructions: null
             label: __blank__
-            providesThumbs: false
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField

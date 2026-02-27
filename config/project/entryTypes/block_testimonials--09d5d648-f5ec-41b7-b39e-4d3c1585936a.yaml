@@ -28,7 +28,6 @@ fieldLayouts:
             disabled: false
             elementCondition: null
             id: null
-            includeInCards: false
             inputType: null
             instructions: null
             label: null
@@ -37,7 +36,6 @@ fieldLayouts:
             name: null
             orientation: null
             placeholder: null
-            providesThumbs: false
             readonly: false
             required: true
             size: null
@@ -55,10 +53,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: 8f58365f-4eeb-4347-9d3d-5c0d3ffd3989 # Toggle (Default: off)
             handle: null
-            includeInCards: false
             instructions: "Useful for highlighting testimonials from an organization's leadership."
             label: 'Is Featured?'
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -82,10 +78,8 @@ fieldLayouts:
               fieldContext: global
             fieldUid: c598a91f-bc3a-49a0-9053-869bf01f2a6c # Testimonial
             handle: null
-            includeInCards: true
             instructions: null
             label: 'Featured Testimonial'
-            providesThumbs: false
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -109,10 +103,8 @@ fieldLayouts:
               fieldContext: global
             fieldUid: 12bc836f-fce2-4315-8a94-22967b0923c8 # Testimonials
             handle: null
-            includeInCards: true
             instructions: null
             label: null
-            providesThumbs: false
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField

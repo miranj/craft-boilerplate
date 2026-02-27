@@ -11,10 +11,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: 856911a9-89f9-4865-bdb1-5665460c6c23 # Contact & Social Media Information
             handle: null
-            includeInCards: false
             instructions: 'Contact info and social media will be used as meta data for SEO. Social media links will also appear on the front-end.'
             label: null
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -34,10 +32,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: afc7f0bc-1b97-4841-a1d2-5b0385a7ca35 # Plain Text
             handle: address
-            includeInCards: false
             instructions: 'Will be used as meta data for SEO.'
             label: Address
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField

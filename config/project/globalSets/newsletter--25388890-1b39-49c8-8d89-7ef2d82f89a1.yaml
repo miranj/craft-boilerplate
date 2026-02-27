@@ -11,10 +11,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: a53f5b40-fb8c-4a9d-8c25-dc8e3dfe58d6 # Code
             handle: embedcode
-            includeInCards: false
             instructions: null
             label: 'Newsletter Form Embed Code'
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField

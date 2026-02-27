@@ -15,7 +15,6 @@ fieldLayouts:
             disabled: false
             elementCondition: null
             id: null
-            includeInCards: false
             inputType: null
             instructions: null
             label: null
@@ -24,7 +23,6 @@ fieldLayouts:
             name: null
             orientation: null
             placeholder: null
-            providesThumbs: false
             readonly: false
             requirable: false
             size: null
@@ -39,10 +37,8 @@ fieldLayouts:
           -
             dateAdded: '2025-04-30T03:47:43+00:00'
             elementCondition: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: false
             required: false
             tip: null
             type: verbb\navigation\fieldlayoutelements\NodeTypeElements
@@ -65,10 +61,8 @@ fieldLayouts:
               fieldContext: global
             fieldUid: 8f58365f-4eeb-4347-9d3d-5c0d3ffd3989 # Toggle (Default: off)
             handle: highlight
-            includeInCards: false
             instructions: null
             label: 'Highlight Link'
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField

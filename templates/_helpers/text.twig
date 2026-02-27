@@ -13,7 +13,7 @@
       markdownExtra('# Foo') => '<h1>Foo</h1>'
 #}
 {% macro markdownExtra(text) %}
-  {% return create('Michelf\\MarkdownExtra')
+  {% return createObject('Michelf\\MarkdownExtra')
     .defaultTransform(text)
   %}
 {% endmacro %}

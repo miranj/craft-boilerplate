@@ -34,7 +34,7 @@
   "require": {
     "aodihis/video-utils": "^3.0",
     "craftcms/ckeditor": "^4.1",
-    "craftcms/cms": "~5.8.0",
+    "craftcms/cms": "~5.9.0",
     "craftcms/store-hours": "^4.2",
     "marionnewlevant/twig-perversion": "v5.x-dev",
     "miranj/craft-obfuscator": "^1.2",

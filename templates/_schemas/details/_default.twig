@@ -2,7 +2,7 @@
 
 
 
-{% set graph = create('Spatie\\SchemaOrg\\Graph') %}
+{% set graph = createObject('Spatie\\SchemaOrg\\Graph') %}
 {% set entrySeomateMeta = craft.seomate.getMeta({
   config: { includeSitenameInTitle: false },
 }|merge(seomate ?? {}, true)) %}

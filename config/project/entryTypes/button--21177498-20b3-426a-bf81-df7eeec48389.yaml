@@ -24,10 +24,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: a6b97e16-5236-44b1-ad57-3899644efd40 # Link (Assets, Entries, URL)
             handle: hyperlink
-            includeInCards: true
             instructions: null
             label: Link
-            providesThumbs: false
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField

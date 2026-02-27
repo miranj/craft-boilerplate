@@ -11,10 +11,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: 386721be-1ee4-4e3b-b22c-7fb3dfded3ff # Simple Text
             handle: copyright
-            includeInCards: false
             instructions: null
             label: 'Copyright Notice'
-            providesThumbs: false
             required: false
             tip: 'Will show the site name if left blank.'
             type: craft\fieldlayoutelements\CustomField

@@ -11,10 +11,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: 840acb32-6694-40d0-9384-60a0220c1de0 # Label
             handle: measurementId
-            includeInCards: false
             instructions: 'Enter a [GA4 Measurement ID](https://support.google.com/analytics/answer/9304153?hl=en) (formatted as `G-XXXXXXXXXX`) to enable [Google Analytics](https://analytics.google.com/) tracking.'
             label: 'Google Analytics 4 Measurement ID'
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
