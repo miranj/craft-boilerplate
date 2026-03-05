@@ -448,7 +448,6 @@
     display: none;
   }
 }
-@layer theme;
 @layer base {
   html {
     scroll-behavior: smooth;

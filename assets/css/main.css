@@ -3,7 +3,7 @@
 /* Tailwind */
 @import 'tailwindcss';
 @import 'tailwindconfig.css';
-@import 'theme.css' layer(theme);
+@import 'theme.css';
 
 /* Base */
 @import 'base.css' layer(base);

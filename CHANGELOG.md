@@ -4,6 +4,10 @@ Release notes for Miranj's Craft Boilerplate starter project.
 
 ## Unreleased 3.next
 
+### Front-end
+
+- Removed redundant `@layer` declaration for `theme.css`.
+
 ### Craft
 
 - Improved performance of accessing manifest files for cache busting build file URLs.
