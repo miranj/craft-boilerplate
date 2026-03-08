@@ -53,6 +53,7 @@
     --spacing-sm-lg: clamp(1rem, 0.4348rem + 2.8261vi, 2.625rem);
     --spacing-lg-3xl: clamp(2rem, 0.413rem + 7.9348vi, 6.5625rem);
     --spacing-xl-4xl: clamp(3rem, 1.3043rem + 8.4783vi, 7.875rem);
+    --z-floating: 1000;
   }
 }
 @layer base {
@@ -259,8 +260,8 @@
   .fixed {
     position: fixed;
   }
-  .z-50 {
-    z-index: 50;
+  .z-floating {
+    z-index: var(--z-floating);
   }
   .order-first {
     order: -9999;

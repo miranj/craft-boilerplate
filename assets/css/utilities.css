@@ -38,3 +38,8 @@
         padding-top: 66.67%;
     }
 }
+
+/* prettier-ignore */
+@utility z-* {
+    z-index: --value(--z-*);
+}
