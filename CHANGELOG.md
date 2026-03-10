@@ -6,6 +6,7 @@ Release notes for Miranj's Craft Boilerplate starter project.
 
 ### Front-end
 
+- Added a utility class to generate `z-index` values based on theme variables.
 - Removed redundant `@layer` declaration for `theme.css`.
 
 ### Craft
