@@ -77,3 +77,14 @@
     --spacing-7e: 1.75em;
     --spacing-8e: 2em;
 }
+
+@theme {
+    --z-base: 0;
+    --z-content: 200;
+    --z-content-overlay: 210;
+    --z-content-action: 220;
+    --z-header: 400;
+    --z-modal: 800;
+    --z-floating: 1000;
+    --z-tooltip: 1200;
+}
