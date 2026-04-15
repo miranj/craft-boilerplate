@@ -131,6 +131,12 @@ paths.tasks = {
     sri: 'manifest-sri.json',
     watch: paths.directories.build + '**/*.{js,css}',
   },
+  svgo: {
+    default: {
+      source: '../web/img/**/*.svg',
+      watch: '../web/img/**/*.svg',
+    },
+  },
 };
 
 module.exports = paths;

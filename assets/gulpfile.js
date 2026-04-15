@@ -6,6 +6,7 @@ const postcss = require('gulp-postcss');
 var css_tasks = [];
 var purge_tasks = [];
 var js_tasks = [];
+var svgo_tasks = [];
 var watch_files = [];
 
 // CSS Tasks
@@ -84,6 +85,43 @@ Object.entries(paths.tasks.js).forEach(([task_name, task_config]) => {
   };
 });
 
+// SVGO Tasks
+Object.entries(paths.tasks.svgo).forEach(([task_name, task_config]) => {
+  const { optimize } = require('svgo');
+  const { Transform } = require('stream');
+  const svgomgConfig = require('./js/svgo.config');
+
+  task_name = 'svg-' + task_name;
+  svgo_tasks.push(task_name);
+  watch_files.push([
+    task_name,
+    task_config.watch,
+    task_config.watch_config || {},
+  ]);
+  exports[task_name] = () => {
+    return gulp
+      .src(task_config.source, { allowEmpty: true })
+      .pipe(
+        new Transform({
+          objectMode: true,
+          transform(file, _, callback) {
+            try {
+              const optimized = optimize(file.contents.toString('utf8'), {
+                path: file.path,
+                ...svgomgConfig,
+              });
+              file.contents = Buffer.from(optimized.data);
+              callback(null, file);
+            } catch (error) {
+              callback(error);
+            }
+          },
+        }),
+      )
+      .pipe(gulp.dest((file) => file.base));
+  };
+});
+
 // Hash Task
 function generateHash() {
   const hashsum = require('gulp-hashsum');
@@ -151,6 +189,7 @@ exports['build'] = gulp.series(
       js_tasks.map((task) => exports[task]),
     ),
     purge_tasks.map((task) => exports[task]),
+    svgo_tasks.map((task) => exports[task]),
   ),
   exports.hash,
 );
