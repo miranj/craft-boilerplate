@@ -41,7 +41,8 @@
     "alpinejs": "^3.14.1",
     "instant.page": "^5.1.1",
     "lazysizes": "^5.2.2",
-    "photoswipe": "^5.2.7"
+    "photoswipe": "^5.2.7",
+    "svgo": "^4.0.1"
   },
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^7.0.2",
