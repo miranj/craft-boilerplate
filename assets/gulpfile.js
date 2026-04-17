@@ -89,15 +89,9 @@ Object.entries(paths.tasks.js).forEach(([task_name, task_config]) => {
 Object.entries(paths.tasks.svgo).forEach(([task_name, task_config]) => {
   const { optimize } = require('svgo');
   const { Transform } = require('stream');
-  const svgomgConfig = require('./js/svgo.config');
 
-  task_name = 'svg-' + task_name;
+  task_name = 'svgo-' + task_name;
   svgo_tasks.push(task_name);
-  watch_files.push([
-    task_name,
-    task_config.watch,
-    task_config.watch_config || {},
-  ]);
   exports[task_name] = () => {
     return gulp
       .src(task_config.source, { allowEmpty: true })
@@ -108,7 +102,7 @@ Object.entries(paths.tasks.svgo).forEach(([task_name, task_config]) => {
             try {
               const optimized = optimize(file.contents.toString('utf8'), {
                 path: file.path,
-                ...svgomgConfig,
+                ...task_config.config,
               });
               file.contents = Buffer.from(optimized.data);
               callback(null, file);

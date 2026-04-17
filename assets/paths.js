@@ -134,7 +134,30 @@ paths.tasks = {
   svgo: {
     default: {
       source: '../web/img/**/*.svg',
-      watch: '../web/img/**/*.svg',
+      config: {
+        js2svg: {
+          pretty: true,
+          indent: 2,
+        },
+        plugins: [
+          {
+            name: 'preset-default',
+            params: {
+              overrides: {
+                removeDesc: false,
+              },
+            },
+          },
+          'convertStyleToAttrs',
+          'cleanupIds',
+          'removeRasterImages',
+          'removeViewBox',
+          'removeTitle',
+          'removeDimensions',
+          'removeStyleElement',
+          'removeDeprecatedAttrs',
+        ],
+      },
     },
   },
 };
