@@ -88,31 +88,22 @@ Object.entries(paths.tasks.js).forEach(([task_name, task_config]) => {
 // SVGO Tasks
 Object.entries(paths.tasks.svgo).forEach(([task_name, task_config]) => {
   const { optimize } = require('svgo');
-  const { Transform } = require('stream');
+  const fs = require('fs');
 
   task_name = 'svgo-' + task_name;
   svgo_tasks.push(task_name);
-  exports[task_name] = () => {
-    return gulp
+  exports[task_name] = (callback) => {
+    gulp
       .src(task_config.source, { allowEmpty: true })
-      .pipe(
-        new Transform({
-          objectMode: true,
-          transform(file, _, callback) {
-            try {
-              const optimized = optimize(file.contents.toString('utf8'), {
-                path: file.path,
-                ...task_config.config,
-              });
-              file.contents = Buffer.from(optimized.data);
-              callback(null, file);
-            } catch (error) {
-              callback(error);
-            }
-          },
-        }),
-      )
-      .pipe(gulp.dest((file) => file.base));
+      .on('data', (file) => {
+        const optimized = optimize(file.contents.toString('utf8'), {
+          path: file.path,
+          ...task_config.config,
+        });
+        fs.writeFileSync(file.path, optimized.data);
+      })
+      .on('end', callback)
+      .on('error', callback);
   };
 });
 

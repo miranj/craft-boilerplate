@@ -9,6 +9,10 @@ Release notes for Miranj's Craft Boilerplate starter project.
 - Added theme variables and utility classes for `z-index`, enabling a standardised stacking order across the pages.
 - Removed redundant `@layer` declaration for `theme.css`.
 
+### System
+
+- Added SVGO to the Gulp pipeline to optimise SVGs in-place under `/web/img/`.
+
 ### Craft
 
 - Improved performance of accessing manifest files for cache busting build file URLs.
