@@ -7,6 +7,7 @@ Release notes for Miranj's Craft Boilerplate starter project.
 ### Front-end
 
 - Added theme variables and utility classes for `z-index`, enabling a standardised stacking order across the pages.
+- Fixed an issue where focal points on images were not applied correctly.
 - Removed redundant `@layer` declaration for `theme.css`.
 
 ### Craft

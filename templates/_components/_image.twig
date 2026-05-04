@@ -293,6 +293,7 @@
 {% set imageBreakpointAssets = params.breakpoint_assets ?? {} %}
 {% set imagePreset = params.preset ?? false %}
 {% set imageClass = params.class ?? '' %}
+{% set imageFocalPoint = params.focal_point ?? imageAsset.focalPoint ?? null %}
 {% set imageAlt = params.alt ?? false %}
 {% set imageLazyload = params.lazyload ?? true %}
 {% set imageIsCss = not not (params.background ?? false) %}
@@ -350,6 +351,10 @@
   {% set imageIsSvg = imageAsset.mimeType in ['image/svg+xml'] or imageAsset.extension in ['svg'] %}
   {% set imageIsAnimatedGif = imageAsset.extension in ['gif'] and craft.imager.isAnimated(imageAsset) %}
   {% set imageScaleFactor = imageIsSvg ? 100 : 1 %}
+  {% set imageFocalStyle = imageFocalPoint
+    ? (imageFocalPoint.x * 100) ~ '% ' ~ (imageFocalPoint.y * 100) ~ '%'
+    : '50% 50%'
+  %}
 
   {# Assign an empty preset, and a single breakpoint if one isn't defined #}
   {# (assume preset points to a transform in `config/imager-x-transforms.php`) #}
@@ -473,6 +478,7 @@
     <noscript>
       {{ tag('img', {
         class: imageClass,
+        style: 'object-position: ' ~ imageFocalStyle,
         src: imageDefault.url,
         alt: imageAlt,
         width: imageDefault.width * imageScaleFactor,
@@ -509,6 +515,7 @@
       imageLazyload ? 'lazyload no-js:hidden' : 'lazyloaded',
       imageHasZoom ? 'group-hover:scale-104 sm:group-hover:scale-102 group-hover:shadow-lg transition duration-300',
     ]).flatten().all(),
+    style: 'object-position: ' ~ imageFocalStyle,
     src: imageDefault.url,
     alt: imageAlt,
     width: imageDefault.width ? (not imageIsResponsive ? imageDefault.width * imageScaleFactor) : false,
@@ -538,6 +545,7 @@
     <style>
       .{{ imageCssClass }} {
         background-image: url('{{ imageDefault.url }}');
+        background-position: {{ imageFocalStyle }};
       }
       {% for source in imageSources|reverse %}
         @media {{ source.media }} {
