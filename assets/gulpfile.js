@@ -87,23 +87,34 @@ Object.entries(paths.tasks.js).forEach(([task_name, task_config]) => {
 
 // SVGO Tasks
 Object.entries(paths.tasks.svg).forEach(([task_name, task_config]) => {
-  const { optimize } = require('svgo');
-  const fs = require('fs');
+  const svgo = require('svgo');
+  const through2 = require('through2');
+  const sourcePath = [
+    task_config.source.endsWith('/')
+      ? task_config.source.slice(0, -1)
+      : task_config.source,
+    task_config.glob,
+  ].join('/');
 
   task_name = 'svg-' + task_name;
   svg_tasks.push(task_name);
-  exports[task_name] = (callback) => {
-    gulp
-      .src(task_config.source, { allowEmpty: true })
-      .on('data', (file) => {
-        const optimized = optimize(file.contents.toString('utf8'), {
-          path: file.path,
-          ...task_config.config,
-        });
-        fs.writeFileSync(file.path, optimized.data);
-      })
-      .on('end', callback)
-      .on('error', callback);
+  exports[task_name] = () => {
+    return gulp
+      .src(sourcePath, { allowEmpty: true, base: task_config.source })
+      .pipe(
+        through2.obj(function (file, _, cb) {
+          // based on https://gulpjs.com/docs/en/getting-started/using-plugins#inline-plugins
+          if (file.isBuffer()) {
+            const svgOptimized = svgo.optimize(
+              file.contents.toString(),
+              task_config.config,
+            );
+            file.contents = Buffer.from(svgOptimized.data);
+          }
+          cb(null, file);
+        }),
+      )
+      .pipe(gulp.dest(task_config.destination || task_config.source));
   };
 });
 

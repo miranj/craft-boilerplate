@@ -133,7 +133,9 @@ paths.tasks = {
   },
   svg: {
     default: {
-      source: '../web/img/**/*.svg',
+      glob: '**/*.svg',
+      source: '../web/img/',
+      destination: '../web/img/',
       config: {
         js2svg: {
           pretty: true,
