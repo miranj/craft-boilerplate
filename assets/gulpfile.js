@@ -6,7 +6,7 @@ const postcss = require('gulp-postcss');
 var css_tasks = [];
 var purge_tasks = [];
 var js_tasks = [];
-var svgo_tasks = [];
+var svg_tasks = [];
 var watch_files = [];
 
 // CSS Tasks
@@ -86,12 +86,12 @@ Object.entries(paths.tasks.js).forEach(([task_name, task_config]) => {
 });
 
 // SVGO Tasks
-Object.entries(paths.tasks.svgo).forEach(([task_name, task_config]) => {
+Object.entries(paths.tasks.svg).forEach(([task_name, task_config]) => {
   const { optimize } = require('svgo');
   const fs = require('fs');
 
-  task_name = 'svgo-' + task_name;
-  svgo_tasks.push(task_name);
+  task_name = 'svg-' + task_name;
+  svg_tasks.push(task_name);
   exports[task_name] = (callback) => {
     gulp
       .src(task_config.source, { allowEmpty: true })
@@ -174,7 +174,7 @@ exports['build'] = gulp.series(
       js_tasks.map((task) => exports[task]),
     ),
     purge_tasks.map((task) => exports[task]),
-    svgo_tasks.map((task) => exports[task]),
+    svg_tasks.map((task) => exports[task]),
   ),
   exports.hash,
 );
