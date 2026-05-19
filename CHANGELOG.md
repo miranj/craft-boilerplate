@@ -15,6 +15,7 @@ Release notes for Miranj's Craft Boilerplate starter project.
 - Moved configuration of build stylesheets, build scripts, and external stylesheets to `config/custom`.
 - Added `headLinkTags` to `config/custom` to configure custom `<link>` tags inside `<head>`.
 - Added `createObject()` Twig function as an alias to `Craft::createObject()`.
+- Increased default cache duration for application and template caches to 1 year.
 - Switched to `craft up` instead of `craft migrate/all` and `craft pc/apply` for the `composer install` script.
 - Updated Redis cache component config for compatibility with Yii 2 Redis 2.1.0.
 - Updated Craft CMS to 5.9.14.

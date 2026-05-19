@@ -51,6 +51,9 @@ return [
         'maxRevisions' => 50,
         'maxUploadFileSize' => '100M',
 
+        // performance
+        'cacheDuration' => 'P1Y', // 1 year
+
         'aliases' => [
             '@web' => App::env('PRIMARY_SITE_URL'),
             '@webroot' => dirname(__DIR__) . '/web',
@@ -65,6 +68,7 @@ return [
     // Dev environment
     'dev' => [
         'devMode' => true,
+        'cacheDuration' => 'P5M', // 5 minutes
         'enableTemplateCaching' => false,
         'allowAdminChanges' => true,
         'allowUpdates' => true,
