@@ -131,6 +131,37 @@ paths.tasks = {
     sri: 'manifest-sri.json',
     watch: paths.directories.build + '**/*.{js,css}',
   },
+  svg: {
+    default: {
+      glob: '**/*.svg',
+      source: '../web/img/',
+      destination: '../web/img/',
+      config: {
+        js2svg: {
+          pretty: true,
+          indent: 2,
+        },
+        plugins: [
+          {
+            name: 'preset-default',
+            params: {
+              overrides: {
+                removeDesc: false,
+              },
+            },
+          },
+          'convertStyleToAttrs',
+          'cleanupIds',
+          'removeRasterImages',
+          'removeViewBox',
+          'removeTitle',
+          'removeDimensions',
+          'removeStyleElement',
+          'removeDeprecatedAttrs',
+        ],
+      },
+    },
+  },
 };
 
 module.exports = paths;

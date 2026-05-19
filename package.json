@@ -66,6 +66,8 @@
     "postcss-inline-svg": "^4.1.0",
     "postcss-nesting": "^13.0.1",
     "prettier": "^3.3.2",
-    "tailwindcss": "^4.1.5"
+    "svgo": "^4.0.1",
+    "tailwindcss": "^4.1.5",
+    "through2": "^4.0.2"
   }
 }
