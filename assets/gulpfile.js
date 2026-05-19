@@ -6,6 +6,7 @@ const postcss = require('gulp-postcss');
 var css_tasks = [];
 var purge_tasks = [];
 var js_tasks = [];
+var svg_tasks = [];
 var watch_files = [];
 
 // CSS Tasks
@@ -84,6 +85,52 @@ Object.entries(paths.tasks.js).forEach(([task_name, task_config]) => {
   };
 });
 
+// SVGO Tasks
+Object.entries(paths.tasks.svg).forEach(([task_name, task_config]) => {
+  const svgo = require('svgo');
+  const through2 = require('through2');
+  const sourcePath = [
+    task_config.source.endsWith('/')
+      ? task_config.source.slice(0, -1)
+      : task_config.source,
+    task_config.glob,
+  ].join('/');
+
+  task_name = 'svg-' + task_name;
+  svg_tasks.push(task_name);
+  watch_files.push([
+    task_name,
+    task_config.watch || sourcePath,
+    task_config.watch_config || {},
+  ]);
+  exports[task_name] = () => {
+    return gulp
+      .src(sourcePath, {
+        allowEmpty: true,
+        base: task_config.source,
+        since: gulp.lastRun(task_name),
+      })
+      .pipe(
+        through2.obj(function (file, _, cb) {
+          // based on https://gulpjs.com/docs/en/getting-started/using-plugins#inline-plugins
+          if (file.isBuffer()) {
+            const svgInput = file.contents.toString();
+            const svgOptimized = svgo.optimize(svgInput, task_config.config);
+
+            // only proceed if the contents have changed
+            if (svgInput !== svgOptimized.data) {
+              file.contents = Buffer.from(svgOptimized.data);
+              cb(null, file);
+            } else {
+              cb();
+            }
+          }
+        }),
+      )
+      .pipe(gulp.dest(task_config.destination || task_config.source));
+  };
+});
+
 // Hash Task
 function generateHash() {
   const hashsum = require('gulp-hashsum');
@@ -151,6 +198,7 @@ exports['build'] = gulp.series(
       js_tasks.map((task) => exports[task]),
     ),
     purge_tasks.map((task) => exports[task]),
+    svg_tasks.map((task) => exports[task]),
   ),
   exports.hash,
 );
