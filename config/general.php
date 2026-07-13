@@ -42,7 +42,7 @@ return [
         'disallowRobots' => true,
         'sendPoweredByHeader' => false,
         'convertFilenamesToAscii' => true,
-        'defaultImageQuality' => 85,
+        'defaultImageQuality' => 80,
         'defaultTemplateExtensions' => ['twig'],
         'errorTemplatePrefix' => '_errors/',
         'pageTrigger' => 'page/',
