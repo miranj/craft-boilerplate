@@ -41,6 +41,9 @@ return [
         'cacheDuration' => 60 * 60 * 24 * 365 * 10, // 10 years
         'removeTransformsOnAssetFileops' => true,
 
+        // responsive transforms filling settings
+        'autoFillCount' => 'auto',
+
         // optimisers
         'optimizerConfig' => [
             'jpegoptim' => [
