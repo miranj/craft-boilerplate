@@ -15,6 +15,20 @@ return [
         'defaultMeta' => [
             'image' => ['seo.seoImageDefault'],
         ],
+        'imageTransformMap' => [
+            'image' => [
+                'filenamePattern' =>
+                    '{basename}_{transformString|hash}_{timestamp}.{extension}',
+            ],
+            'og:image' => [
+                'filenamePattern' =>
+                    '{basename}_{transformString|hash}_{timestamp}.{extension}',
+            ],
+            'twitter:image' => [
+                'filenamePattern' =>
+                    '{basename}_{transformString|hash}_{timestamp}.{extension}',
+            ],
+        ],
         'additionalMeta' => [
             'twitter:card' => 'summary_large_image',
             'og:site_name' => '{{ siteName }}',
