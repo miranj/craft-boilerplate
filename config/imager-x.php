@@ -13,8 +13,8 @@ $defaultCustomEncoders = [
     'webp' => [
         'path' => '/usr/bin/cwebp',
         'options' => [
-            'quality' => 80,
-            'effort' => 4,
+            'quality' => 75,
+            'effort' => 6,
         ],
         'paramsString' => '-q {quality} -m {effort} {src} -o {dest}',
     ],
@@ -33,17 +33,21 @@ return [
         ]),
 
         // image handling
-        'jpegQuality' => 85,
+        'jpegQuality' => 80,
+        'webpQuality' => 75,
         'allowUpscale' => false,
         'interlace' => 'plane',
         'removeMetadata' => true,
         'cacheDuration' => 60 * 60 * 24 * 365 * 10, // 10 years
         'removeTransformsOnAssetFileops' => true,
 
+        // responsive transforms filling settings
+        'autoFillCount' => 'auto',
+
         // optimisers
         'optimizerConfig' => [
             'jpegoptim' => [
-                'optionString' => '-s -m85 -T1',
+                'optionString' => '-s -m80 -T1',
                 'extensions' => ['jpg'],
                 'path' => '/usr/bin/jpegoptim',
             ],
