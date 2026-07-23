@@ -9,7 +9,8 @@ Release notes for Miranj's Craft Boilerplate starter project.
 - SVGs are now automatically optimised in-place as part of the Gulp build process.
 - Added theme variables and utility classes for `z-index`, enabling a standardised stacking order across the pages.
 - Removed redundant `@layer` declaration for `theme.css`.
-- Optmised image sizes and compression to improve the page loading time.
+- Reduced the default image compression quality for jpeg and webp images to decrease image file sizes in _Imager_.
+- Enabled automatic responsive image variant generation in _Imager_.
 - Fixed a bug where SEO images would not be updated if the original asset was modified without renaming the file.
 
 ### Craft
