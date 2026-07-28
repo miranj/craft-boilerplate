@@ -12,6 +12,7 @@ Release notes for Miranj's Craft Boilerplate starter project.
 
 ### Craft
 
+- Added a Matrix field entry type filter, so a single Matrix field can offer different blocks in different sections or global sets.
 - Improved performance of accessing manifest files for cache busting build file URLs.
 - Moved configuration of build stylesheets, build scripts, and external stylesheets to `config/custom`.
 - Added `headLinkTags` to `config/custom` to configure custom `<link>` tags inside `<head>`.
