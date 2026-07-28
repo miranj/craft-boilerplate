@@ -5,7 +5,13 @@ namespace boilerplate\filters;
 use craft\elements\Entry;
 use craft\elements\GlobalSet;
 
-// Filter for available matrix field blocks for entries and globals
+/**
+ * Class EntryTypeFilter
+ *
+ * Only works on Matrix fields set to View Mode as `Blocks`.
+ * `Cards`, `Card grid`, and `Index` views bypass `EVENT_DEFINE_ENTRY_TYPES`
+ * while building their `Add New` menu items.
+ */
 class EntryTypeFilter
 {
     /**
