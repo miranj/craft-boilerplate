@@ -6,6 +6,7 @@ Release notes for Miranj's Craft Boilerplate starter project.
 
 ### Front-end
 
+- SVGs are now automatically optimised in-place as part of the Gulp build process.
 - Added theme variables and utility classes for `z-index`, enabling a standardised stacking order across the pages.
 - Fixed an issue where focal points on images were not applied correctly.
 - Removed redundant `@layer` declaration for `theme.css`.
@@ -16,6 +17,7 @@ Release notes for Miranj's Craft Boilerplate starter project.
 - Moved configuration of build stylesheets, build scripts, and external stylesheets to `config/custom`.
 - Added `headLinkTags` to `config/custom` to configure custom `<link>` tags inside `<head>`.
 - Added `createObject()` Twig function as an alias to `Craft::createObject()`.
+- Increased default cache duration for application and template caches to 1 year.
 - Switched to `craft up` instead of `craft migrate/all` and `craft pc/apply` for the `composer install` script.
 - Updated Redis cache component config for compatibility with Yii 2 Redis 2.1.0.
 - Updated Craft CMS to 5.9.14.
