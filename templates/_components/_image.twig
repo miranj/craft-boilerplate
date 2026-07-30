@@ -295,6 +295,7 @@
 {% set imageClass = params.class ?? '' %}
 {% set imageAlt = params.alt ?? false %}
 {% set imageLazyload = params.lazyload ?? true %}
+{% set imageFocalPoint = params.focal_point ?? imageAsset.focalPoint ?? null %}
 {% set imageIsCss = not not (params.background ?? false) %}
 {% set imageCssClass = params.background ?? '' %}
 {% set imageGenerateWebp = (params.webp ?? true) and craft.imager.serverSupportsWebp %}
@@ -350,6 +351,12 @@
   {% set imageIsSvg = imageAsset.mimeType in ['image/svg+xml'] or imageAsset.extension in ['svg'] %}
   {% set imageIsAnimatedGif = imageAsset.extension in ['gif'] and craft.imager.isAnimated(imageAsset) %}
   {% set imageScaleFactor = imageIsSvg ? 100 : 1 %}
+  {% set imageFocalX = imageFocalPoint.x ?? null %}
+  {% set imageFocalY = imageFocalPoint.y ?? null %}
+  {% set imageFocalStyle = imageFocalX is numeric and imageFocalY is numeric
+    ? (imageFocalX * 100) ~ '% ' ~ (imageFocalY * 100) ~ '%'
+    : null
+  %}
 
   {# Assign an empty preset, and a single breakpoint if one isn't defined #}
   {# (assume preset points to a transform in `config/imager-x-transforms.php`) #}
@@ -473,6 +480,7 @@
     <noscript>
       {{ tag('img', {
         class: imageClass,
+        style: imageFocalStyle ? 'object-position: ' ~ imageFocalStyle : '',
         src: imageDefault.url,
         alt: imageAlt,
         width: imageDefault.width * imageScaleFactor,
@@ -509,6 +517,7 @@
       imageLazyload ? 'lazyload no-js:hidden' : 'lazyloaded',
       imageHasZoom ? 'group-hover:scale-104 sm:group-hover:scale-102 group-hover:shadow-lg transition duration-300',
     ]).flatten().all(),
+    style: imageFocalStyle ? 'object-position: ' ~ imageFocalStyle : '',
     src: imageDefault.url,
     alt: imageAlt,
     width: imageDefault.width ? (not imageIsResponsive ? imageDefault.width * imageScaleFactor) : false,
@@ -538,6 +547,7 @@
     <style>
       .{{ imageCssClass }} {
         background-image: url('{{ imageDefault.url }}');
+        background-position: {{ imageFocalStyle ?? '0% 0%' }};
       }
       {% for source in imageSources|reverse %}
         @media {{ source.media }} {
