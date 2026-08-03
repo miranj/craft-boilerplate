@@ -177,7 +177,8 @@ class Module extends \yii\base\Module
             EntryIndexQueryBehavior::class;
     }
 
-    // Register custom entry types filter for matrix fields.
+    // Register custom entry types filter for matrix fields retunred by
+    // `src/filters/EntryTypeFilter.php` - `getHiddenBlocksConfig()`.
     public function onRegisterMatrixFilterEntryTypes(
         DefineEntryTypesForFieldEvent $event,
     ) {

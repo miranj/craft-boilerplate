@@ -8,9 +8,13 @@ use craft\elements\GlobalSet;
 /**
  * Class EntryTypeFilter
  *
- * Only works on Matrix fields set to View Mode as `Blocks`.
+ * ⚠️ Only works on Matrix fields set to View Mode as `Blocks`.
  * `Cards`, `Card grid`, and `Index` views bypass `EVENT_DEFINE_ENTRY_TYPES`
  * while building their `Add New` menu items.
+ *
+ * This exists for legacy projects that previously relied on MatrixMate for
+ * per-context block restrictions. New projects don't need it - these
+ * [changes](https://github.com/miranj/craft-boilerplate/pull/154/changes) should be deleted.
  */
 class EntryTypeFilter
 {
@@ -19,6 +23,20 @@ class EntryTypeFilter
      *
      *intended output:
      * Array (hidden blocks)
+     * ```
+     *     [
+     *         'fieldHandle' => [
+     *             'sectionHandle' => [
+     *                 'blockHandle1',
+     *                 'blockHandle2',
+     *             ],
+     *             'globalSetHandle' => [
+     *                 'blockHandle1',
+     *                 'blockHandle2',
+     *             ],
+     *         ],
+     *     ]
+     * ```
      */
     public static function getHiddenBlocksConfig(): array
     {
