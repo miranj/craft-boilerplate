@@ -4,12 +4,13 @@
   Lister
   Generate a list of entry views
   
-  @param  class            {string}   Class names for list wrapper element
-  @param  entries          {array}    List of Elements
-  @param  item_class       {string}   Class names for <li> tag element
-  @param  kind             {string}   Name of view type that you want to use for each list item eg: 'teaser' | 'title' etc.
-  @param  list_class       {string}   Class names for <ul> tag element
-  @param  list_attributes  {array}    Attributes for <ul> tag element
+  @param  class                {string}   Class names for list wrapper element
+  @param  entries              {array}    List of Elements
+  @param  item_class           {string}   Class names for <li> tag element
+  @param  kind                 {string}   Name of view type that you want to use for each list item eg: 'teaser' | 'title' etc.
+  @param  list_class           {string}   Class names for <ul> tag element
+  @param  list_attributes      {array}    Attributes for <ul> tag element
+  @param  eagerload_first_img  {boolean}  Used on lister views where the first image is the LCP element.
 
 
 
@@ -68,6 +69,7 @@
 {% set listerListClass = params.list_class ?? '' %}
 {% set listerListAttr = params.list_attributes ?? {} %}
 {% set listerItemClass = params.item_class ?? '' %}
+{% set listEagerloadFirstImg = params.eagerload_first_img ?? false %}
 
 
 
@@ -102,7 +104,10 @@
         {% endif %}
         
         {% block lister_item_router %}
-          {% include '_routers/' ~ listerConfig.view with { element: listEntry } %}
+          {% include '_routers/' ~ listerConfig.view with {
+            element: listEntry,
+            eagerloadFirstImg: listEagerloadFirstImg and loop.first,
+          } %}
         {% endblock %}
         
         {% if listerConfig.itemWrap is defined %}

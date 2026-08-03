@@ -8,6 +8,8 @@ Release notes for Miranj's Craft Boilerplate starter project.
 
 - SVGs are now automatically optimised in-place as part of the Gulp build process.
 - Added theme variables and utility classes for `z-index`, enabling a standardised stacking order across the pages.
+- Added an `eagerload_first_img` parameter to the lister component, enabling list views to eager load the first image where it's the LCP element.
+- Fixed an issue where focal points on images were not applied correctly.
 - Removed redundant `@layer` declaration for `theme.css`.
 - Reduced the default image compression quality for jpeg and webp images to decrease image file sizes in _Imager_.
 - Enabled automatic responsive image variant generation in _Imager_.
@@ -15,6 +17,7 @@ Release notes for Miranj's Craft Boilerplate starter project.
 
 ### Craft
 
+- Added a Matrix field entry type filter, so a single Matrix field can offer different blocks in different sections or global sets.
 - Improved performance of accessing manifest files for cache busting build file URLs.
 - Moved configuration of build stylesheets, build scripts, and external stylesheets to `config/custom`.
 - Added `headLinkTags` to `config/custom` to configure custom `<link>` tags inside `<head>`.

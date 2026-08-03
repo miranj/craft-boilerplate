@@ -295,6 +295,7 @@
 {% set imageClass = params.class ?? '' %}
 {% set imageAlt = params.alt ?? false %}
 {% set imageLazyload = params.lazyload ?? true %}
+{% set imageFocalPoint = params.focal_point ?? (imageAsset.hasFocalPoint ? imageAsset.getFocalPoint(true) : null) %}
 {% set imageIsCss = not not (params.background ?? false) %}
 {% set imageCssClass = params.background ?? '' %}
 {% set imageGenerateWebp = (params.webp ?? true) and craft.imager.serverSupportsWebp %}
@@ -473,6 +474,7 @@
     <noscript>
       {{ tag('img', {
         class: imageClass,
+        style: imageFocalPoint ? 'object-position: ' ~ imageFocalPoint : '',
         src: imageDefault.url,
         alt: imageAlt,
         width: imageDefault.width * imageScaleFactor,
@@ -509,6 +511,7 @@
       imageLazyload ? 'lazyload no-js:hidden' : 'lazyloaded',
       imageHasZoom ? 'group-hover:scale-104 sm:group-hover:scale-102 group-hover:shadow-lg transition duration-300',
     ]).flatten().all(),
+    style: imageFocalPoint ? 'object-position: ' ~ imageFocalPoint : '',
     src: imageDefault.url,
     alt: imageAlt,
     width: imageDefault.width ? (not imageIsResponsive ? imageDefault.width * imageScaleFactor) : false,
@@ -538,6 +541,9 @@
     <style>
       .{{ imageCssClass }} {
         background-image: url('{{ imageDefault.url }}');
+        {% if imageFocalPoint %}
+          background-position: {{ imageFocalPoint }};
+        {% endif %}
       }
       {% for source in imageSources|reverse %}
         @media {{ source.media }} {
