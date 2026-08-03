@@ -4,14 +4,18 @@ namespace boilerplate;
 
 use Craft;
 use craft\elements\Entry;
+use craft\elements\GlobalSet;
 use boilerplate\behaviors\EntryIndexQueryBehavior;
 use boilerplate\behaviors\IndexEntryBehaviors;
 use boilerplate\behaviors\SectionIndexBehavior;
+use boilerplate\filters\EntryTypeFilter;
 use boilerplate\twig\Extension;
 use craft\models\Section;
 use craft\base\Element;
 use craft\elements\db\EntryQuery;
 use craft\events\DefineBehaviorsEvent;
+use craft\events\DefineEntryTypesForFieldEvent;
+use craft\fields\Matrix;
 use craft\web\Response;
 use yii\base\Event;
 use craft\validators\DateCompareValidator;
@@ -173,6 +177,40 @@ class Module extends \yii\base\Module
             EntryIndexQueryBehavior::class;
     }
 
+    // Register custom entry types filter for matrix fields retunred by
+    // `src/filters/EntryTypeFilter.php` - `getHiddenBlocksConfig()`.
+    public function onRegisterMatrixFilterEntryTypes(
+        DefineEntryTypesForFieldEvent $event,
+    ) {
+        $field = $event->sender;
+        $element = $event->element;
+
+        if (!($element instanceof Entry or $element instanceof GlobalSet)) {
+            return;
+        }
+
+        $elementHandle =
+            $element instanceof Entry
+                ? $element->section?->handle ?? ''
+                : ($element instanceof GlobalSet
+                    ? $element->handle
+                    : '');
+
+        $filterBlocks = EntryTypeFilter::shouldFilterBlocks(
+            $field->handle,
+            $elementHandle,
+            $element,
+        );
+
+        if ($filterBlocks) {
+            $event->entryTypes = EntryTypeFilter::getAllowedBlocks(
+                $event->entryTypes,
+                $elementHandle,
+                $field->handle,
+            );
+        }
+    }
+
     // define custom Section properties
     public function onSectionDefineBehaviors(DefineBehaviorsEvent $event)
     {
@@ -215,6 +253,11 @@ class Module extends \yii\base\Module
         Event::on(Section::class, Section::EVENT_DEFINE_BEHAVIORS, [
             $this,
             'onSectionDefineBehaviors',
+        ]);
+
+        Event::on(Matrix::class, Matrix::EVENT_DEFINE_ENTRY_TYPES, [
+            $this,
+            'onRegisterMatrixFilterEntryTypes',
         ]);
     }
 }
