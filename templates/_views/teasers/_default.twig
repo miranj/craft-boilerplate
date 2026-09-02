@@ -1,2 +1,79 @@
-{# _views/teasers/_deafult #}
+{# _views/teasers/_default #}
 {% extends '_layouts/blank' %}
+
+
+
+{#
+  Params
+#}
+{% set teaserTitle = teaserTitle ?? element.title %}
+{% set teaserUrl = teaserUrl ?? element.url ?? '' %}
+{% set teaserBreadcrumbs = teaserBreadcrumbs ?? element['types'].eagerly().all() ?? [] %}
+{% set teaserImage = teaserImage ?? element.cover.eagerly().one() ?? null %}
+{% set teaserImagePreset = teaserImagePreset ?? '' %}
+{% set teaserDate = teaserDate ?? element.postDate %}
+{% set teaserMeta = teaserMeta ?? '' %}
+
+
+
+{#
+  Render
+#}
+{% block block_teaser_class 'flex justify-between' %}
+{% block teaser_meta_class '
+  my-1
+  wrap-break-word
+' %}
+
+{% block teaser_image_asset_class teaserUrl ? 'scale-104 group-hover:scale-100 transition' %}
+
+{% block layout %}
+  {% block teaser %}
+    <article>
+      {% tag (teaserUrl ? 'a' : 'div') with {
+        href: teaserUrl ?: null,
+        class: [
+          teaserUrl ? 'group hover:bg-slate-100',
+          block('block_teaser_class'),
+        ],
+      } %}
+        {% block teaser_body %}
+          {% block teaser_image %}
+            {% if teaserImage %}
+              <figure class="{% block teaser_image_class 'max-w-80 overflow-hidden mb-2' %}">
+                {% include '_components/_image' with { params: {
+                  asset: teaserImage,
+                  preset: teaserImagePreset,
+                  class: block('teaser_image_asset_class'),
+                } } %}
+              </figure>
+            {% endif %}
+          {% endblock %}
+
+          {% block teaser_title %}
+            <h3 class="{% block teaser_title_class '
+              text-sm wrap-break-word
+              md:text-base
+            ' %}">
+            {% if teaserUrl %}
+              <span class="is-animate-border">
+                {{ teaserTitle }}
+              </span>
+            {% else %}
+              {{ teaserTitle }}
+            {% endif %}
+            </h3>
+          {% endblock %}
+
+          {% block teaser_meta %}
+            <div class="{{ block('teaser_meta_class') }}">
+              {% block teaser_meta_inner %}
+                {{ teaserMeta }}
+              {% endblock %}
+            </div>
+          {% endblock %}
+        {% endblock %}
+      {% endtag %}
+    </article>
+  {% endblock %}
+{% endblock %}

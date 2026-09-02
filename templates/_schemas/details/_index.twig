@@ -1,5 +1,6 @@
 {% extends '_schemas/details/_default' %}
 
+{% set indexPaginate = indexPaginate ?? false %}
 {% if indexPaginate %}
   {% set numberOfItems = indexPaginate ? indexPaginateInfo.total : indexEntries|length %}
 {% endif %}
