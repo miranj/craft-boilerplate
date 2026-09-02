@@ -3,7 +3,7 @@ enableVersioning: true
 entryTypes:
   -
     uid: b5b9369b-8ab5-44dc-bbaa-058288143025 # Index Page
-handle: resourcesIndex
+handle: index_resources
 maxAuthors: 1
 name: 'Resources Index'
 previewTargets:
