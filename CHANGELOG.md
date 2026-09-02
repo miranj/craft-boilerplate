@@ -6,6 +6,12 @@ Release notes for Miranj's Craft Boilerplate starter project.
 
 ### Front-end
 
+- Added index page views with pagination.
+
+## Unreleased 3.next
+
+### Front-end
+
 - SVGs are now automatically optimised in-place as part of the Gulp build process.
 - Added theme variables and utility classes for `z-index`, enabling a standardised stacking order across the pages.
 - Added an `eagerload_first_img` parameter to the lister component, enabling list views to eager load the first image where it's the LCP element.
