@@ -8,6 +8,10 @@ Release notes for Miranj's Craft Boilerplate starter project.
 
 - Added index page views with pagination.
 
+### Craft
+
+- Added _Router_ plugin.
+
 ## Unreleased 3.next
 
 ### Front-end

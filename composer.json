@@ -38,6 +38,7 @@
     "craftcms/store-hours": "^4.2",
     "marionnewlevant/twig-perversion": "v5.x-dev",
     "miranj/craft-obfuscator": "^1.2",
+    "miranj/craft-router": "^1.7",
     "mmikkel/child-me": "^2.2",
     "mmikkel/retcon": "^3.1",
     "nystudio107/craft-minify": "^5.0",
