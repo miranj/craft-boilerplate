@@ -359,6 +359,9 @@
   .cursor-zoom-in {
     cursor: zoom-in;
   }
+  .flex-col {
+    flex-direction: column;
+  }
   .flex-wrap {
     flex-wrap: wrap;
   }
@@ -422,6 +425,9 @@
   }
   .bg-white {
     background-color: var(--color-white);
+  }
+  .p-4 {
+    padding: calc(var(--spacing) * 4);
   }
   .px-3\.5 {
     padding-inline: calc(var(--spacing) * 3.5);
@@ -562,6 +568,11 @@
     .md\:size-6 {
       width: calc(var(--spacing) * 6);
       height: calc(var(--spacing) * 6);
+    }
+  }
+  @media (width >= 74.25em) {
+    .md\:flex-row {
+      flex-direction: row;
     }
   }
   @media (width >= 74.25em) {

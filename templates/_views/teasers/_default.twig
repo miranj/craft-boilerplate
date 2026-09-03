@@ -19,7 +19,7 @@
 {#
   Render
 #}
-{% block block_teaser_class 'flex justify-between' %}
+{% block block_teaser_class 'flex flex-col w-full md:flex-row justify-between' %}
 {% block teaser_meta_class '
   my-1
   wrap-break-word
@@ -33,7 +33,7 @@
       {% tag (teaserUrl ? 'a' : 'div') with {
         href: teaserUrl ?: null,
         class: [
-          teaserUrl ? 'group hover:bg-slate-100',
+          teaserUrl ? 'p-4 group hover:bg-slate-100',
           block('block_teaser_class'),
         ],
       } %}
@@ -66,11 +66,13 @@
           {% endblock %}
 
           {% block teaser_meta %}
-            <div class="{{ block('teaser_meta_class') }}">
-              {% block teaser_meta_inner %}
-                {{ teaserMeta }}
-              {% endblock %}
-            </div>
+            {% if teaserMeta %}
+              <div class="{{ block('teaser_meta_class') }}">
+                {% block teaser_meta_inner %}
+                  {{ teaserMeta }}
+                {% endblock %}
+              </div>
+            {% endif %}
           {% endblock %}
         {% endblock %}
       {% endtag %}

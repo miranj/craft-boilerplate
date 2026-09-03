@@ -867,6 +867,11 @@
     }
   }
   @media (width >= 74.25em) {
+    .md\:flex-row {
+      flex-direction: row;
+    }
+  }
+  @media (width >= 74.25em) {
     .md\:gap-10 {
       gap: calc(var(--spacing) * 10);
     }
