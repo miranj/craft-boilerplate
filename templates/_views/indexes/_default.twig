@@ -11,7 +11,6 @@
 {% set indexSeoTitleSuffix = indexSeoTitleSuffix ?? '' %}
 {% set indexView = indexView ?? 'teaser' %}
 {% set indexGroupedView = indexGroupedView ?? 'title' %}
-{% set indexBreadcrumb = indexBreadcrumb ?? null %}
 
 {% block main %}
   {% set detailTitle = indexTitle %}
@@ -33,7 +32,6 @@
       description: entry.seoSummary
         ?: ('All '
           ~ [
-            indexBreadcrumb ?? '',
             indexTitle|striptags|lcfirst,
             indexSeoTitleSuffix
           ]
@@ -41,12 +39,6 @@
             |join(' ')
         ),
       robots: indexActiveFilters|length > 1 ? 'noindex',
-      links: [{
-        rel: 'alternate',
-        type: 'application/rss+xml',
-        title: "#{siteName} #{indexTitle} Feed",
-        href: entry.url ~ '/feed.xml',
-      }],
     }|filter,
     config: {
       cacheEnabled: false,
@@ -76,22 +68,6 @@
 #}
 {% block index_header block('detail_header') %}
 
-{% block detail_breadcrumbs %}
-  {% if indexBreadcrumb %}
-    <div class="flex items-baseline gap-1 mb-2 text-md">
-      {{ indexBreadcrumb }}
-    </div>
-  {% else %}
-    {{ parent() }}
-  {% endif %}
-{% endblock %}
-
-{% block detail_title %}
-  <div class="flex gap-x-1 md:gap-x-2">
-    {{ parent() }}
-  </div>
-{% endblock %}
-
 
 
 {# Body #}
@@ -99,7 +75,7 @@
 {% endblock %}
 
 {% block index_body %}
-  <div class="{% block index_body_class 'pt-10 pb-14 md:pt-14 md:pb-28' %}">
+  <div class="{% block index_body_class 'py-10 md:py-14' %}">
     {% if indexGroupedEntries is not empty %}
       {{ block('index_list_grouped') }}
     {% elseif indexEntries is not empty %}
