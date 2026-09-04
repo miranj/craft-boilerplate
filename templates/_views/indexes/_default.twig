@@ -10,8 +10,7 @@
 {% set indexSeoTitle = indexSeoTitle ?? indexTitle %}
 {% set indexSeoTitleSuffix = indexSeoTitleSuffix ?? '' %}
 {% set indexView = indexView ?? 'teaser' %}
-{% set indexGroupedView = indexGroupedView ?? 'title' %}
-{% set indexBreadcrumb = indexBreadcrumb ?? null %}
+{% set indexGroupedView = indexGroupedView ?? 'teaser' %}
 
 {% block main %}
   {% set detailTitle = indexTitle %}
@@ -33,7 +32,6 @@
       description: entry.seoSummary
         ?: ('All '
           ~ [
-            indexBreadcrumb ?? '',
             indexTitle|striptags|lcfirst,
             indexSeoTitleSuffix
           ]
@@ -41,12 +39,6 @@
             |join(' ')
         ),
       robots: indexActiveFilters|length > 1 ? 'noindex',
-      links: [{
-        rel: 'alternate',
-        type: 'application/rss+xml',
-        title: "#{siteName} #{indexTitle} Feed",
-        href: entry.url ~ '/feed.xml',
-      }],
     }|filter,
     config: {
       cacheEnabled: false,
@@ -76,22 +68,6 @@
 #}
 {% block index_header block('detail_header') %}
 
-{% block detail_breadcrumbs %}
-  {% if indexBreadcrumb %}
-    <div class="flex items-baseline gap-1 mb-2 text-md">
-      {{ indexBreadcrumb }}
-    </div>
-  {% else %}
-    {{ parent() }}
-  {% endif %}
-{% endblock %}
-
-{% block detail_title %}
-  <div class="flex gap-x-1 md:gap-x-2">
-    {{ parent() }}
-  </div>
-{% endblock %}
-
 
 
 {# Body #}
@@ -99,13 +75,13 @@
 {% endblock %}
 
 {% block index_body %}
-  <div class="{% block index_body_class 'pt-10 pb-14 md:pt-14 md:pb-28' %}">
+  <div class="{% block index_body_class 'py-10' %}">
     {% if indexGroupedEntries is not empty %}
       {{ block('index_list_grouped') }}
     {% elseif indexEntries is not empty %}
       {{ block('index_list_flat') }}
     {% elseif block('index_body_empty')|trim %}
-      <div class="{% block index_body_empty_class 'container' %}">
+      <div class="{% block index_body_empty_class '' %}">
         {% apply md|typogrify %}
           {%- block index_body_empty -%}
             No {{ section.name|pluralize }} at the moment.
@@ -117,13 +93,13 @@
 {% endblock %}
 
 {# Grouped index #}
-{% block index_list_grouped_class 'space-y-7 md:space-y-10' %}
+{% block index_list_grouped_class 'container space-y-7' %}
 {% block index_list_grouped %}
   {% include '_components/metaInfo' with { params: {
     items: indexGroupedEntries,
     class: block('index_list_grouped_class'),
     item_class: '',
-    title_class: 'container font-title',
+    title_class: '',
     link_class: '',
     defaults: {
       lister: { kind: indexGroupedView },
@@ -131,6 +107,8 @@
       generateAnchors: true,
     },
   } } %}
+
+  {{ block('index_pagination') }}
 {% endblock %}
 
 {# Non-grouped, regular index #}
@@ -150,44 +128,38 @@
 {% block index_pagination %}
   {% if indexPaginateInfo.totalPages ?? false > 1 %}
     <div {{ attr({ class: [
-      'container mt-10 md:mt-14 flex justify-between',
-      'text-2xs md:text-base',
+      'container py-10 flex justify-between items-center',
     ] }) }}>
-      <span class="flex-item">
-        {{ "%02d"|format(craft.app.request.getPageNum()) }}—{{ "%02d"|format(indexPaginateInfo.totalPages) }}
-      </span>
 
       {% if indexPaginateInfo.getPrevUrl() or indexPaginateInfo.getNextUrl() %}
-        <div class="flex gap-x-7 md:gap-x-8">
-          {% set _paginationNav = [{
-            label: 'Previous',
-            url: indexPaginateInfo.getPrevUrl(),
-            icon: '@icons/arrow-left.svg',
-          },{
-            label: 'Next',
-            url: indexPaginateInfo.getNextUrl(),
-            icon: '@icons/arrow-right.svg',
-          }] %}
+        {% set _paginationNav = [{
+          label: 'Previous',
+          url: indexPaginateInfo.getPrevUrl(),
+        },{
+          label: "%02d"|format(craft.app.request.getPageNum()) ~ '—' ~ "%02d"
+          |format(indexPaginateInfo.totalPages),
+          url: null,
+        },{
+          label: 'Next',
+          url: indexPaginateInfo.getNextUrl(),
+        }] %}
 
-          {% for item in _paginationNav %}
-            {{ tag(item.url ? 'a' : 'span', {
-              html: svgIcon(alias(item.icon))
-                |attr({ class: 'size-5.5 md:size-6' })
-                ~ ' ' ~
-                tag('span', {
-                  text: item.label ~ ' page',
-                  class: 'sr-only'
-                }
-              ),
-              href: item.url ?: null,
-              title: item.url ? item.label ~ ' page' : null,
-              class: [
-                'inline-block py-2',
-                not item.url ? 'text-slate-500',
-              ],
-            }) }}
-          {% endfor %}
-        </div>
+        {% for item in _paginationNav %}
+          {{ tag(item.url ? 'a' : 'span', {
+            html: tag('span', {
+                text: item.label ~ (item.url ? ' page'),
+                class: 'p-2'
+              }
+            ),
+            href: item.url ?: null,
+            title: item.url ? item.label ~ ' page' : null,
+            class: [
+              not item.url
+                ? (loop.index is odd ? 'text-slate-500')
+                : 'text-blue-700 hover:text-blue-500',
+            ],
+          }) }}
+        {% endfor %}
       {% endif %}
     </div>
   {% endif %}

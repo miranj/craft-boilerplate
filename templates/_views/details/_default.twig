@@ -16,37 +16,10 @@
 
 {% block main %}
   {#
-    Params
-  #}
-  {% set detailParent = detailParent ?? entry.section.getIndex_() ?? entry.owner %}
-  {% set detailBreadcrumbCount = detailBreadcrumbCount ?? 2 %}
-  {% set detailBreadcrumbs = (
-      detailBreadcrumbs ?? [ detailParent ]|merge(entry.ancestors().all())
-    )
-    |filter
-    |where('url')
-    |where('title')
-    |slice(0,detailBreadcrumbCount)
-  %}
-  {% set detailBreadcrumbsSeparator = detailBreadcrumbsSeparator ?? '/' %}
-  {% set detailTitle = detailTitle ?? entry.title %}
-
-  {# Meta #}
-  {% set detailMetaTags = detailMetaTags ?? [] %}
-
-
-
-  {#
     Layout
   #}
   {% block detail_layout %}
     <article class="{% block detail_layout_class '' %}">
-      <div class="pb-14 md:pb-28">
-        {{ block('detail_header') }}
-        {{ block('detail_body') }}
-        {{ block('detail_body_end') }}
-      </div>
-      {{ block('detail_footer') }}
     </article>
   {% endblock %}
 {% endblock %}
@@ -54,69 +27,17 @@
 
 
 {% block detail_header %}
-  <header class="{% block detail_header_class 'pt-8 md:pt-20 gap-y-4 md:gap-y-7' %}">
+  <header class="{% block detail_header_class 'py-8' %}">
     <div class="container">
-      {% block detail_breadcrumbs %}
-        {% if detailBreadcrumbs is not empty %}
-          <div class="flex flex-wrap items-baseline gap-1 mb-2 {% block detail_breadcrumbs_class '' %}">
-            {% if detailBreadcrumbs is not empty %}
-              <ul class="flex flex-wrap gap-1 items-center">
-                {% for crumb in detailBreadcrumbs %}
-                  <li class="flex items-center gap-0.5">
-                    <a href="{{ crumb.url }}">
-                      {{ crumb.title }}
-                    </a>
-                    {{ not loop.last ? (detailBreadcrumbsSeparator ? tag('span', {
-                      text: detailBreadcrumbsSeparator,
-                      class: 'text-xs',
-                    })) }}
-                  </li>
-                {% endfor %}
-              </ul>
-            {% endif %}
-          </div>
-        {% endif %}
-      {% endblock %}
-
       {% block detail_title %}
         {% if detailTitle %}
-          <h1 class="{% block detail_title_class 'title-h1 text-balance' %}">
+          <h1 class="{% block detail_title_class 'title-h1' %}">
             {{ detailTitle|typogrify(true) }}
           </h1>
         {% endif %}
       {% endblock %}
-
-      {% block detail_title_post %}
-      {% endblock %}
     </div>
-    
   </header>
-{% endblock %}
-
-
-
-{% block detail_body %}
-  {% set _block_detail_body_main = raw(block('detail_body_main')) %}
-
-  <div class="{% block detail_body_class 'pt-10 md:pt-14' %}">
-    {% if _block_detail_body_main|trim is not empty %}
-      <div class="layout-base">
-        {{ _block_detail_body_main }}
-      </div>
-    {% endif %}
-  </div>
-{% endblock %}
-
-{% block detail_body_main %}
-{% endblock %}
-
-
-
-{% block detail_body_end '' %}
-
-
-
-{% block detail_footer %}
 {% endblock %}
 
 
