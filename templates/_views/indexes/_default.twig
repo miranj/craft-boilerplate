@@ -10,7 +10,7 @@
 {% set indexSeoTitle = indexSeoTitle ?? indexTitle %}
 {% set indexSeoTitleSuffix = indexSeoTitleSuffix ?? '' %}
 {% set indexView = indexView ?? 'teaser' %}
-{% set indexGroupedView = indexGroupedView ?? 'title' %}
+{% set indexGroupedView = indexGroupedView ?? 'teaser' %}
 
 {% block main %}
   {% set detailTitle = indexTitle %}
@@ -93,7 +93,7 @@
 {% endblock %}
 
 {# Grouped index #}
-{% block index_list_grouped_class 'space-y-7' %}
+{% block index_list_grouped_class 'container space-y-7' %}
 {% block index_list_grouped %}
   {% include '_components/metaInfo' with { params: {
     items: indexGroupedEntries,
@@ -107,6 +107,8 @@
       generateAnchors: true,
     },
   } } %}
+
+  {{ block('index_pagination') }}
 {% endblock %}
 
 {# Non-grouped, regular index #}

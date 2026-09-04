@@ -1,0 +1,9 @@
+{# indexes/news #}
+
+{% extends '_views/indexes/_default' %}
+
+
+
+{# Params #}
+{% set indexGroupBy = 'postDate|date("M Y")' %}
+{% set indexGroupByIsRelationField = false %}
