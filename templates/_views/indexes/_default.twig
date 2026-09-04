@@ -98,7 +98,8 @@
   {% include '_components/metaInfo' with { params: {
     items: indexGroupedEntries,
     class: block('index_list_grouped_class'),
-    item_class: '',
+    item_class: 'p-4',
+    body_class: 'p-4',
     title_class: '',
     link_class: '',
     defaults: {
@@ -131,17 +132,24 @@
       'container py-10 flex justify-between items-center',
     ] }) }}>
 
-      {% if indexPaginateInfo.getPrevUrl() or indexPaginateInfo.getNextUrl() %}
+      {% set previousUrl = indexPaginateInfo.getPrevUrl() %}
+      {% set nextUrl = indexPaginateInfo.getNextUrl() %}
+      {% if previousUrl or nextUrl %}
         {% set _paginationNav = [{
           label: 'Previous',
-          url: indexPaginateInfo.getPrevUrl(),
+          url: previousUrl,
+          class: not previousUrl ? 'text-slate-500',
         },{
-          label: "%02d"|format(craft.app.request.getPageNum()) ~ '—' ~ "%02d"
-          |format(indexPaginateInfo.totalPages),
+          label: 'Page ' ~ [
+            "%02d"|format(craft.app.request.getPageNum()),
+            "%02d"|format(indexPaginateInfo.totalPages),
+          ]
+            |join(' of '),
           url: null,
         },{
           label: 'Next',
-          url: indexPaginateInfo.getNextUrl(),
+          url: nextUrl,
+          class: not nextUrl ? 'text-slate-500',
         }] %}
 
         {% for item in _paginationNav %}
@@ -153,11 +161,7 @@
             ),
             href: item.url ?: null,
             title: item.url ? item.label ~ ' page' : null,
-            class: [
-              not item.url
-                ? (loop.index is odd ? 'text-slate-500')
-                : 'text-blue-700 hover:text-blue-500',
-            ],
+            class: item.class ?? null,
           }) }}
         {% endfor %}
       {% endif %}
