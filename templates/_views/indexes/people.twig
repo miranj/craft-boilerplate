@@ -4,5 +4,5 @@
 
 
 {# Params #}
-{% set indexGroupBy = indexGroupBy ?? ((e) => e.departments.one().title ?? 'Other Departments') %}
+{% set indexGroupBy = ((e) => e.departments.one().title ?? 'Other Departments') %}
 {% set indexGroupByIsRelationField = false %}
