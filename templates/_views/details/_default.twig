@@ -27,11 +27,11 @@
 
 
 {% block detail_header %}
-  <header class="{% block detail_header_class 'pt-8 md:pt-20 gap-y-4 md:gap-y-7' %}">
+  <header class="{% block detail_header_class 'py-8' %}">
     <div class="container">
       {% block detail_title %}
         {% if detailTitle %}
-          <h1 class="{% block detail_title_class 'title-h1 text-balance' %}">
+          <h1 class="{% block detail_title_class 'title-h1' %}">
             {{ detailTitle|typogrify(true) }}
           </h1>
         {% endif %}
