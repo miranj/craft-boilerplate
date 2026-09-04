@@ -1,0 +1,8 @@
+{# indexes/people #}
+{% extends '_views/indexes/_default' %}
+
+
+
+{# Params #}
+{% set indexGroupBy = indexGroupBy ?? ((e) => e.departments.one().title ?? 'Other Departments') %}
+{% set indexGroupByIsRelationField = false %}
