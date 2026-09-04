@@ -2,13 +2,13 @@
 
 Release notes for Miranj's Craft Boilerplate starter project.
 
-## 3.6.0 - 2026-09-04
+## Unreleased 3.next
 
 ### Front-end
 
 - Added index page views with pagination.
 
-## Unreleased 3.next
+## 3.6.0 - 2026-09-04
 
 ### Front-end
 
