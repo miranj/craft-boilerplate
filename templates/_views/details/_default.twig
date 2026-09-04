@@ -2,6 +2,11 @@
 
 
 
+{# Params #}
+{% set detailTitle = detailTitle ?? entry.title %}
+
+
+
 {# Biz Logic #}
 {% block response %}
   {# If non-paginated detail view has a page number, 404 #}
@@ -20,6 +25,7 @@
   #}
   {% block detail_layout %}
     <article class="{% block detail_layout_class '' %}">
+      {{ block('detail_header') }}
     </article>
   {% endblock %}
 {% endblock %}
@@ -27,16 +33,14 @@
 
 
 {% block detail_header %}
-  <header class="{% block detail_header_class 'py-8' %}">
-    <div class="container">
-      {% block detail_title %}
-        {% if detailTitle %}
-          <h1 class="{% block detail_title_class 'title-h1' %}">
-            {{ detailTitle|typogrify(true) }}
-          </h1>
-        {% endif %}
-      {% endblock %}
-    </div>
+  <header class="{% block detail_header_class 'container py-8' %}">
+    {% block detail_title %}
+      {% if detailTitle %}
+        <h1 class="{% block detail_title_class 'title-h1' %}">
+          {{ detailTitle|typogrify(true) }}
+        </h1>
+      {% endif %}
+    {% endblock %}
   </header>
 {% endblock %}
 

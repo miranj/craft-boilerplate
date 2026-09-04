@@ -22,15 +22,13 @@
       {% tag (teaserUrl ? 'a' : 'div') with {
         href: teaserUrl ?: null,
         class: [
-          teaserUrl ? 'p-4 hover:bg-slate-100',
           block('block_teaser_class'),
         ],
       } %}
         {% block teaser_body %}
 
           {% block teaser_title %}
-            <h3 class="{% block teaser_title_class 'break-word
-            ' %}">
+            <h3 class="{% block teaser_title_class '' %}">
             {% if teaserUrl %}
               <span>
                 {{ teaserTitle }}
