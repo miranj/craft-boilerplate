@@ -7,6 +7,7 @@ Release notes for Miranj's Craft Boilerplate starter project.
 ### Front-end
 
 - Added index page views with pagination.
+- Added filters for index page views.
 
 ### Craft
 
