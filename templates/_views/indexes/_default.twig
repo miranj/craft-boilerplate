@@ -1,1 +1,170 @@
-{% extends '_views/details/_default' %}
+{# _views/indexes/_default #}
+{% extends '_views/indexes/_preflight' %}
+
+
+
+{#
+  Params
+#}
+{% set indexTitle = indexTitle ?? entry.title %}
+{% set indexSeoTitle = indexSeoTitle ?? indexTitle %}
+{% set indexSeoTitleSuffix = indexSeoTitleSuffix ?? '' %}
+{% set indexView = indexView ?? 'teaser' %}
+{% set indexGroupedView = indexGroupedView ?? 'teaser' %}
+
+{% block main %}
+  {% set detailTitle = indexTitle %}
+
+  {{ parent() }}
+{% endblock %}
+
+{# SEO #}
+{% block seo %}
+  {% set seomate = {
+    element: entry,
+    canonicalUrl: entry.url,
+    meta: {
+      title: [
+        (entry.seoTitle ?? indexSeoTitle ?? indexTitle)|striptags,
+        indexSeoTitleSuffix,
+        ((indexPaginateInfo.currentPage ?? 0) > 1 ? "(page #{indexPaginateInfo.currentPage})")
+      ]|filter|join(' '),
+      description: entry.seoSummary
+        ?: ('All '
+          ~ [
+            indexTitle|striptags|lcfirst,
+            indexSeoTitleSuffix
+          ]
+            |filter
+            |join(' ')
+        ),
+      robots: indexActiveFilters|length > 1 ? 'noindex',
+    }|filter,
+    config: {
+      cacheEnabled: false,
+    },
+  }|merge(seomate ?? {}, true) %}
+
+  {{ parent() }}
+{% endblock %}
+
+
+
+{#
+  Layout
+#}
+{% block detail_layout %}
+  <article class="{{ block('detail_layout_class') }}">
+    {{ block('index_header') }}
+    {{ block('index_meta') }}
+    {{ block('index_body') }}
+  </article>
+{% endblock %}
+
+
+
+{#
+  Render
+#}
+{% block index_header block('detail_header') %}
+
+
+
+{# Body #}
+{% block index_meta %}
+{% endblock %}
+
+{% block index_body %}
+  <div class="{% block index_body_class 'py-10' %}">
+    {% if indexGroupedEntries is not empty %}
+      {{ block('index_list_grouped') }}
+    {% elseif indexEntries is not empty %}
+      {{ block('index_list_flat') }}
+    {% elseif block('index_body_empty')|trim %}
+      <div class="{% block index_body_empty_class '' %}">
+        {% apply md|typogrify %}
+          {%- block index_body_empty -%}
+            No {{ section.name|pluralize }} at the moment.
+          {% endblock %}
+        {% endapply %}
+      </div>
+    {% endif %}
+  </div>
+{% endblock %}
+
+{# Grouped index #}
+{% block index_list_grouped_class 'container space-y-7' %}
+{% block index_list_grouped %}
+  {% include '_components/metaInfo' with { params: {
+    items: indexGroupedEntries,
+    class: block('index_list_grouped_class'),
+    item_class: 'p-4',
+    body_class: 'p-4',
+    title_class: '',
+    link_class: '',
+    defaults: {
+      lister: { kind: indexGroupedView },
+      autoPluralize: false,
+      generateAnchors: true,
+    },
+  } } %}
+
+  {{ block('index_pagination') }}
+{% endblock %}
+
+{# Non-grouped, regular index #}
+{% block index_list_flat_class 'container' %}
+{% block index_list_flat %}
+  {% include '_components/_lister' with { params: {
+    class: block('index_list_flat_class'),
+    entries: indexEntries,
+    kind: indexView,
+  } } %}
+
+  {{ block('index_pagination') }}
+{% endblock %}
+
+
+{# Pagination #}
+{% block index_pagination %}
+  {% if indexPaginateInfo.totalPages ?? false > 1 %}
+    <div {{ attr({ class: [
+      'container py-10 flex justify-between items-center',
+    ] }) }}>
+
+      {% set previousUrl = indexPaginateInfo.getPrevUrl() %}
+      {% set nextUrl = indexPaginateInfo.getNextUrl() %}
+      {% if previousUrl or nextUrl %}
+        {% set _paginationNav = [{
+          label: 'Previous',
+          url: previousUrl,
+          class: not previousUrl ? 'text-slate-500',
+        },{
+          label: 'Page ' ~ [
+            "%02d"|format(craft.app.request.getPageNum()),
+            "%02d"|format(indexPaginateInfo.totalPages),
+          ]
+            |join(' of '),
+          url: null,
+        },{
+          label: 'Next',
+          url: nextUrl,
+          class: not nextUrl ? 'text-slate-500',
+        }] %}
+
+        {% for item in _paginationNav %}
+          {{ tag(item.url ? 'a' : 'span', {
+            html: tag('span', {
+                text: item.label ~ (item.url ? ' page'),
+                class: 'p-2'
+              }
+            ),
+            href: item.url ?: null,
+            title: item.url ? item.label ~ ' page' : null,
+            class: item.class ?? null,
+          }) }}
+        {% endfor %}
+      {% endif %}
+    </div>
+  {% endif %}
+{% endblock %}

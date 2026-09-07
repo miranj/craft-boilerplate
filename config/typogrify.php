@@ -5,6 +5,7 @@
 
 return [
     'set_hyphenation' => false,
+    'set_space_collapse' => false,
 
     // establishes maximum length of a widows that will be protected
     'set_max_dewidow_length' => 15,
