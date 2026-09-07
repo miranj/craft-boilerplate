@@ -5,6 +5,7 @@ entryTypes:
     uid: f719c927-90fd-4ace-a58e-ddea5675c7d2 # Office
 handle: offices
 maxAuthors: 1
+minAuthors: 1
 name: Offices
 previewTargets:
   -

@@ -5,6 +5,7 @@ entryTypes:
     uid: 48487c17-d2de-429d-8998-07287da4a844 # Project
 handle: projects
 maxAuthors: 1
+minAuthors: 1
 name: Projects
 previewTargets:
   -

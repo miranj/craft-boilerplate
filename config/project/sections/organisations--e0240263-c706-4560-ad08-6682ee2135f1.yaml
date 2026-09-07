@@ -5,6 +5,7 @@ entryTypes:
     uid: 58d94df4-b6dd-4ff7-9157-3b7d7e24b66d # Organisation
 handle: organisations
 maxAuthors: 1
+minAuthors: 1
 name: Organisations
 previewTargets:
   -

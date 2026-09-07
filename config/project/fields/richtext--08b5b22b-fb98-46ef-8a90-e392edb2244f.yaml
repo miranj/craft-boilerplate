@@ -7,11 +7,43 @@ settings:
   availableTransforms: ''
   availableVolumes: ''
   characterLimit: null
-  ckeConfig: 7b8b18a2-8e96-4b93-bfaa-34a1d9fa86e1 # Rich
-  createButtonLabel: null
+  css: ".ck.ck-content h3 { font-size: x-large; }\r\n.ck.ck-content h4 { font-size: large; }"
+  cssFile: null
   defaultTransform: null
-  expandEntryButtons: false
   fullGraphqlData: false
+  headingLevels: false
+  js: null
+  jsFile: null
+  options:
+    heading:
+      options:
+        -
+          class: ck-heading_paragraph
+          model: paragraph
+          title: Paragraph
+        -
+          class: ck-heading_heading1
+          model: heading1
+          title: Heading
+          view: h3
+        -
+          class: ck-heading_heading2
+          model: heading2
+          title: 'Heading (Level 2)'
+          view: h4
+    link:
+      decorators:
+        openInNewTab:
+          attributes:
+            target: _blank
+          label: 'Open in a new tab'
+          mode: manual
+      defaultProtocol: 'http://'
+    list:
+      properties:
+        reversed: false
+        startIndex: true
+        styles: false
   parseEmbeds: false
   purifierConfig: null
   purifyHtml: true
@@ -20,6 +52,15 @@ settings:
   showWordCount: true
   sourceEditingGroups:
     - __ADMINS__
+  toolbar:
+    - heading
+    - blockQuote
+    - '|'
+    - bold
+    - italic
+    - link
+    - bulletedList
+    - numberedList
   wordLimit: null
 translationKeyFormat: null
 translationMethod: none

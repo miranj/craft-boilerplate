@@ -5,6 +5,7 @@ entryTypes:
     uid: 9eb91e5d-0e36-4e64-9422-f92401aa9500 # Location
 handle: locations
 maxAuthors: 1
+minAuthors: 1
 name: Locations
 previewTargets:
   -

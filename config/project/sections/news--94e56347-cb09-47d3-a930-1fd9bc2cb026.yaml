@@ -5,6 +5,7 @@ entryTypes:
     uid: a385a4fe-5736-44ee-ab48-d869428d380c # News
 handle: news
 maxAuthors: 1
+minAuthors: 1
 name: News
 previewTargets:
   -

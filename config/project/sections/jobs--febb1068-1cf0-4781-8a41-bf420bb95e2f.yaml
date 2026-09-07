@@ -5,6 +5,7 @@ entryTypes:
     uid: c2bd9b72-0968-4b24-aee2-02048ebf7f8c # Job
 handle: jobs
 maxAuthors: 1
+minAuthors: 1
 name: Jobs
 previewTargets:
   -

@@ -5,6 +5,7 @@ entryTypes:
     uid: 2fdb1d61-016d-4220-abbb-27c126f21352 # Tender
 handle: tenders
 maxAuthors: 1
+minAuthors: 1
 name: Tenders
 previewTargets:
   -

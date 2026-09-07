@@ -7,43 +7,56 @@ settings:
   availableTransforms: ''
   availableVolumes: '*'
   characterLimit: null
-  ckeConfig: e03f52b8-38a8-493c-b27a-3c61c5532f18 # Builder
-  createButtonLabel: 'Insert block'
+  css: ".ck.ck-content h3 { font-size: x-large; }\r\n.ck.ck-content h4 { font-size: large; }"
+  cssFile: null
   defaultTransform: null
   entryTypes:
     -
-      __assoc__:
-        -
-          - uid
-          - 6caf0d7f-9b74-4ae4-b0dd-458633bd94d1 # Image
+      uid: 6caf0d7f-9b74-4ae4-b0dd-458633bd94d1 # Image
     -
-      __assoc__:
-        -
-          - uid
-          - 64ee8bca-fd54-4c78-853c-aaf37e0bb8c0 # Gallery
+      uid: 64ee8bca-fd54-4c78-853c-aaf37e0bb8c0 # Gallery
     -
-      __assoc__:
-        -
-          - uid
-          - 0dcf57f2-a803-4b2e-8235-bc0870989f38 # Media Embed
+      uid: 0dcf57f2-a803-4b2e-8235-bc0870989f38 # Media Embed
     -
-      __assoc__:
-        -
-          - uid
-          - 21177498-20b3-426a-bf81-df7eeec48389 # Block: Button
-        -
-          - name
-          - Button
+      name: Button
+      uid: 21177498-20b3-426a-bf81-df7eeec48389 # Block: Button
     -
-      __assoc__:
-        -
-          - uid
-          - fa35f4cd-b237-4493-8c4e-4e25855164ff # Block: Rich Text Collapse
-        -
-          - name
-          - Collapse
-  expandEntryButtons: false
+      name: Collapse
+      uid: fa35f4cd-b237-4493-8c4e-4e25855164ff # Block: Rich Text Collapse
   fullGraphqlData: false
+  headingLevels: false
+  js: null
+  jsFile: null
+  options:
+    heading:
+      options:
+        -
+          class: ck-heading_paragraph
+          model: paragraph
+          title: Paragraph
+        -
+          class: ck-heading_heading1
+          model: heading1
+          title: Heading
+          view: h3
+        -
+          class: ck-heading_heading2
+          model: heading2
+          title: 'Heading (Level 2)'
+          view: h4
+    link:
+      decorators:
+        openInNewTab:
+          attributes:
+            target: _blank
+          label: 'Open in a new tab'
+          mode: manual
+      defaultProtocol: 'http://'
+    list:
+      properties:
+        reversed: false
+        startIndex: true
+        styles: false
   parseEmbeds: false
   purifierConfig: null
   purifyHtml: true
@@ -52,6 +65,16 @@ settings:
   showWordCount: false
   sourceEditingGroups:
     - __ADMINS__
+  toolbar:
+    - createEntry
+    - heading
+    - blockQuote
+    - '|'
+    - bold
+    - italic
+    - link
+    - bulletedList
+    - numberedList
   wordLimit: null
 translationKeyFormat: null
 translationMethod: none

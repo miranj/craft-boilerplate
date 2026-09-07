@@ -5,6 +5,7 @@ entryTypes:
     uid: 7e194f18-cd05-4cd2-bc77-67272aaa31a3 # Testimonial
 handle: testimonials
 maxAuthors: 1
+minAuthors: 1
 name: Testimonials
 propagationMethod: all
 siteSettings:
