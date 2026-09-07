@@ -1,0 +1,15 @@
+{# _views/indexes/news #}
+{% extends '_views/indexes/_default-filtered' %}
+{% from '_helpers/filters' import elementsFilter, yearsFilter, getAllActiveEntriesIds %}
+
+
+
+{# Filters #}
+{% block response %}
+  {% set indexFilters = indexFilters ?? [
+    yearsFilter('year', 'Year', craft.entries({
+      section: section,
+    })),
+  ] %}
+  {{ parent() }}
+{% endblock %}

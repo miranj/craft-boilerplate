@@ -1,8 +1,30 @@
-{# indexes/news #}
-{% extends '_views/indexes/_default' %}
+{# _views/indexes/news #}
+{% extends '_views/indexes/_default-filtered' %}
+{% from '_helpers/filters' import elementsFilter, yearsFilter, getAllActiveEntriesIds %}
 
 
 
 {# Params #}
 {% set indexGroupBy = 'postDate|date("M Y")' %}
 {% set indexGroupByIsRelationField = false %}
+
+
+
+{# Filters #}
+{% block response %}
+  {% set indexFilters = indexFilters ?? [
+    elementsFilter('newsType', 'News Type', craft.categories({
+      group: 'newsTypes',
+      relatedTo: getAllActiveEntriesIds(section),
+    })),
+    elementsFilter('department', 'Department', craft.entries({
+      section: 'departments',
+      relatedTo: getAllActiveEntriesIds(section),
+      orderBy: 'title asc',
+    })),
+    yearsFilter('year', 'Timeframe', craft.entries({
+      section: section,
+    })),
+  ] %}
+  {{ parent() }}
+{% endblock %}
