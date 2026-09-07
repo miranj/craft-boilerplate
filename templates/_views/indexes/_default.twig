@@ -72,6 +72,14 @@
 
 {# Body #}
 {% block index_meta %}
+  {% set _block_index_meta_inner = block('index_meta_inner') %}
+  {% if _block_index_meta_inner|trim is not empty %}
+    <div class="container mt-10">
+      {{ _block_index_meta_inner|raw }}
+    </div>
+  {% endif %}
+{% endblock %}
+{% block index_meta_inner %}
 {% endblock %}
 
 {% block index_body %}
@@ -81,7 +89,7 @@
     {% elseif indexEntries is not empty %}
       {{ block('index_list_flat') }}
     {% elseif block('index_body_empty')|trim %}
-      <div class="{% block index_body_empty_class '' %}">
+      <div class="{% block index_body_empty_class 'container' %}">
         {% apply md|typogrify %}
           {%- block index_body_empty -%}
             No {{ section.name|pluralize }} at the moment.
@@ -118,6 +126,7 @@
   {% include '_components/_lister' with { params: {
     class: block('index_list_flat_class'),
     entries: indexEntries,
+    item_class: 'p-4',
     kind: indexView,
   } } %}
 
@@ -155,7 +164,7 @@
         {% for item in _paginationNav %}
           {{ tag(item.url ? 'a' : 'span', {
             html: tag('span', {
-                text: item.label ~ (item.url ? ' page'),
+                text: item.label ~ ' page',
                 class: 'p-2'
               }
             ),

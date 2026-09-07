@@ -1,0 +1,127 @@
+{# _views/indexes/_default-filtered #}
+{% extends '_views/indexes/_default' %}
+
+
+
+{#
+  If current page was routed not via Router, but by the Index page entry's URI
+  we manually set the active route in the Router plugin
+  guessing the route name to be the section's handle
+#}
+{% if craft.router.routeName is empty and section is instance of('craft\\models\\Section') %}
+  {% do craft.router.setRouteName("<section:#{section.handle}>") %}
+  {% do craft.router.setParam('section', section.getIndex_().uri, section) %}
+{% endif %}
+
+
+
+{# Params #}
+{% block response %}
+  {% set indexFilters = indexFilters ?? [] %}
+  {% set indexActiveFilters = craft.router.params
+      |filter(f => f is not instance of('craft\\models\\Section') or f.id != (section.id ?? false))
+      |filter((_, k) => k != 'entry')
+  %}
+  {% set indexActiveHiddenFilters = indexActiveFilters
+      |withoutKey(indexFilters|column('param'))
+  %}
+  {% set _months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'June', 'July', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'] %}
+  {% set indexSeoTitleSuffix = indexActiveFilters
+    |map(filter => filter['title']
+      ?? filter['name']
+      ?? filter.label
+      ?? ((filter.month is defined ? _months[filter.month - 1] ~ ' ') ~ filter.year ?? '')
+      ?: filter|capitalize
+    )
+    |join(', ')
+  %}
+  {% set indexSeoTitleSuffix = indexSeoTitleSuffix ? "(#{indexSeoTitleSuffix})" %}
+  
+  {% if indexActiveHiddenFilters is not empty %}
+    {% set indexTitle = indexActiveHiddenFilters|column('title')|join(', ') %}
+  {% endif %}
+  
+  {{ parent() }}
+{% endblock %}
+
+
+
+{# Render #}
+{% block index_meta_inner %}
+  {{ block('index_filters') }}
+  {{ parent() }}
+{% endblock %}
+
+
+
+{% block index_filters %}
+  {% if indexFilters is not empty %}
+    <nav {{ attr({
+      class: 'md:grid md:grid-cols-12 md:gap-6 relative last:mb-0',
+      'x-data': { isExpanded: false, isDesktop: false },
+      'x-init': [
+        "const mq = window.matchMedia('(min-width: 48em)')",
+        "isDesktop = mq.matches",
+        "mq.addEventListener('change', mq => isDesktop = mq.matches)",
+      ]|join(';'),
+    }) }}>
+      
+      <button {{ attr({
+        class: [
+          'w-full',
+          'md:hidden',
+          'flex justify-between items-center',
+        ],
+        'x-on:click': 'isExpanded = !isExpanded',
+      }) }}>
+        Filter by
+        <span class="px-2" x-show="!isExpanded">
+          +
+        </span>
+        <span class="px-2" x-show="isExpanded">
+          -
+        </span>
+      </button>
+      
+      <div {{ attr({
+        class: 'md:contents',
+        'x-cloak': true,
+        'x-collapse': true,
+        'x-show': "isDesktop || isExpanded",
+      }) }}>
+        {% for filterConfig in indexFilters %}
+          {% include '_components/dropdown' with { params: {
+            class: 'col-span-3',
+            label: filterConfig.title,
+            options: filterConfig.options,
+            isActive: filterConfig.isActive,
+          } } %}
+        {% endfor %}
+      
+        {% if indexFilters|contains('isActive', true) %}
+          <div class="mt-4 col-span-3">
+            {{ tag('a', {
+              class: 'underline',
+              href: url(
+                craft.router.urlMerge(indexActiveFilters
+                  | without(indexActiveHiddenFilters)
+                  | map(f => '')
+                ),
+                craft.app.request.queryParamsWithoutPath
+              ),
+              text: 'Clear all'
+            }) }}
+          </div>
+        {% endif %}
+      </div>
+    </nav>
+  {% endif %}
+{% endblock %}
+
+{% block index_body_empty -%}
+  {%- if indexFilters|contains('isActive', true) -%}
+    No matching {{ section.name|pluralize }} found.
+  {%- else -%}
+    {{ parent() }}
+  {%- endif %}
+{%- endblock %}
