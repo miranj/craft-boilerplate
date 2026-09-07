@@ -21,7 +21,7 @@
   ? dropdownOptions | firstWhere('isActive')
   : false
 %}
-{% set hasSearch = dropdownOptions|length > 2 %}
+{% set hasSearch = dropdownOptions|length > 10 %}
 
 
 {# Render #}
@@ -33,12 +33,13 @@
       'flex items-center justify-between gap-1',
       option.isActive ? 'text-blue-600 hover:no-underline',
     ],
+    'aria-current': option.isActive ? 'true' : null,
   }) }}>
     <span class="line-clamp-2 grow">
       {{ option.title }}
     </span>
     {% if option.isActive %}
-      <span class="text-sm px-2"> X </span>
+      <span class="text-sm px-2" aria-hidden="true"> X </span>
     {% endif %}
   </a>
 {% endmacro %}
@@ -107,6 +108,7 @@
           dropdownIconClass,
           'motion-safe:transition-transform',
         ],
+        'aria-hidden': 'true',
         'x-bind:class': "open && '-scale-y-100'",
       }) }}>
         {{ svgIcon('@icons/chevron-down.svg') }}
@@ -128,6 +130,7 @@
       'x-transition': true,
       'x-on:click.outside': "! $refs.button.contains($event.target) && close()",
       'x-bind:id': "$id('dropdown-button')",
+      'aria-label': dropdownLabel ~ ' options',
     }) }}>
       {% if hasSearch %}
         <div class="sticky top-0 p-2 bg-white border-b border-gray-200 z-10">
@@ -136,6 +139,7 @@
             x-ref="searchInput"
             x-model="search"
             placeholder="Search..."
+            aria-label="Search {{ dropdownLabel|e('html_attr') }} options"
             class="w-full px-2 py-1 text-sm border border-gray-300 rounded focus:outline-none focus:border-blue-500"
             x-on:keydown.escape.prevent.stop="close($refs.button)"
           />

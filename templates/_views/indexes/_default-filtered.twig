@@ -56,7 +56,7 @@
 
 {% block index_filters %}
   {% if indexFilters is not empty %}
-    <nav {{ attr({
+    <nav aria-label="Filter options" {{ attr({
       class: 'md:grid md:grid-cols-12 md:gap-6 relative last:mb-0',
       'x-data': { isExpanded: false, isDesktop: false },
       'x-init': [
@@ -73,17 +73,20 @@
           'flex justify-between items-center',
         ],
         'x-on:click': 'isExpanded = !isExpanded',
+        'x-bind:aria-expanded': 'isExpanded',
+        'aria-controls': 'filter-menu-panel',
       }) }}>
         Filter by
-        <span class="px-2" x-show="!isExpanded">
+        <span class="px-2" aria-hidden="true" x-show="!isExpanded">
           +
         </span>
-        <span class="px-2" x-show="isExpanded">
+        <span class="px-2" aria-hidden="true" x-show="isExpanded">
           -
         </span>
       </button>
       
       <div {{ attr({
+        id: 'filter-menu-panel',
         class: 'md:contents',
         'x-cloak': true,
         'x-collapse': true,
@@ -109,7 +112,8 @@
                 ),
                 craft.app.request.queryParamsWithoutPath
               ),
-              text: 'Clear all'
+              text: 'Clear all',
+              'aria-label': 'Clear all active filters'
             }) }}
           </div>
         {% endif %}

@@ -39,6 +39,16 @@
             |join(' ')
         ),
       robots: indexActiveFilters|length > 1 ? 'noindex',
+      links: [
+        {
+          rel: 'alternate',
+          type: 'application/rss+xml',
+          title: "#{siteName} #{indexTitle} Feed",
+          href: entry.url ~ '/feed.xml',
+        },
+        (indexPaginateInfo.getPrevUrl() ?? false) ? { rel: 'prev', href: indexPaginateInfo.getPrevUrl() } : null,
+        (indexPaginateInfo.getNextUrl() ?? false) ? { rel: 'next', href: indexPaginateInfo.getNextUrl() } : null,
+      ]|filter,
     }|filter,
     config: {
       cacheEnabled: false,
@@ -137,7 +147,7 @@
 {# Pagination #}
 {% block index_pagination %}
   {% if indexPaginateInfo.totalPages ?? false > 1 %}
-    <div {{ attr({ class: [
+    <nav aria-label="Pagination" {{ attr({ class: [
       'container py-10 flex justify-between items-center',
     ] }) }}>
 
@@ -145,7 +155,7 @@
       {% set nextUrl = indexPaginateInfo.getNextUrl() %}
       {% if previousUrl or nextUrl %}
         {% set _paginationNav = [{
-          label: 'Previous',
+          label: 'Previous page',
           url: previousUrl,
           class: not previousUrl ? 'text-slate-500',
         },{
@@ -155,25 +165,27 @@
           ]
             |join(' of '),
           url: null,
+          isCurrent: true,
         },{
-          label: 'Next',
+          label: 'Next page',
           url: nextUrl,
           class: not nextUrl ? 'text-slate-500',
         }] %}
 
         {% for item in _paginationNav %}
           {{ tag(item.url ? 'a' : 'span', {
-            html: tag('span', {
-                text: item.label ~ ' page',
-                class: 'p-2'
-              }
-            ),
+            text: item.label,
             href: item.url ?: null,
-            title: item.url ? item.label ~ ' page' : null,
-            class: item.class ?? null,
+            title: item.url ? item.label : null,
+            class: [
+              'p-2',
+              item.class ?? null,
+            ],
+            'aria-current': (item.isCurrent ?? false) ? 'page' : null,
+            'aria-disabled': not item.url and not (item.isCurrent ?? false) ? 'true' : null,
           }) }}
         {% endfor %}
       {% endif %}
-    </div>
+    </nav>
   {% endif %}
 {% endblock %}
