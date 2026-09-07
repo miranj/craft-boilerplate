@@ -4,6 +4,10 @@ Release notes for Miranj's Craft Boilerplate starter project.
 
 ## Unreleased 3.next
 
+### Front-end
+
+- Added index page views with pagination.
+
 ### Craft
 
 - Renamed _Heading (Level 2)_ to _Subheading_.

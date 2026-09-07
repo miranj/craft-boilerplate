@@ -3,10 +3,10 @@ enableVersioning: true
 entryTypes:
   -
     uid: b5b9369b-8ab5-44dc-bbaa-058288143025 # Index Page
-handle: resourcesIndex
+handle: index_jobs
 maxAuthors: 1
 minAuthors: 1
-name: 'Resources Index'
+name: 'Jobs Index'
 previewTargets:
   -
     label: 'Primary entry page'
@@ -18,5 +18,5 @@ siteSettings:
     enabledByDefault: true
     hasUrls: true
     template: _routers/index.twig
-    uriFormat: resources
+    uriFormat: jobs
 type: single

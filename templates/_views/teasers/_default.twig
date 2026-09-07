@@ -1,2 +1,46 @@
-{# _views/teasers/_deafult #}
+{# _views/teasers/_default #}
 {% extends '_layouts/blank' %}
+
+
+
+{#
+  Params
+#}
+{% set teaserTitle = teaserTitle ?? element.title %}
+{% set teaserUrl = teaserUrl ?? element.url ?? '' %}
+
+
+
+{#
+  Render
+#}
+{% block block_teaser_class 'flex' %}
+
+{% block layout %}
+  {% block teaser %}
+    <article>
+      {% tag (teaserUrl ? 'a' : 'div') with {
+        href: teaserUrl ?: null,
+        class: [
+          block('block_teaser_class'),
+        ],
+      } %}
+        {% block teaser_body %}
+
+          {% block teaser_title %}
+            <h3 class="{% block teaser_title_class '' %}">
+            {% if teaserUrl %}
+              <span>
+                {{ teaserTitle }}
+              </span>
+            {% else %}
+              {{ teaserTitle }}
+            {% endif %}
+            </h3>
+          {% endblock %}
+
+        {% endblock %}
+      {% endtag %}
+    </article>
+  {% endblock %}
+{% endblock %}
