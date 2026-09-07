@@ -8,6 +8,11 @@ Release notes for Miranj's Craft Boilerplate starter project.
 
 - Added index page views with pagination.
 
+### Data Model
+
+- Index pages automatically strip out the _Index_ suffix from their titles.
+- Index pages can now customise their headline independent of the page title.
+
 ### Craft
 
 - Added a base template for [generated fields](https://craftcms.com/docs/5.x/system/elements.html#generated-fields).

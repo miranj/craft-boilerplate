@@ -9,52 +9,64 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
-            autocapitalize: true
-            autocomplete: false
-            autocorrect: true
-            class: null
-            dateAdded: '2024-12-17T21:38:35+00:00'
-            disabled: false
-            elementCondition: null
-            id: null
-            inputType: null
-            instructions: null
-            label: null
-            max: null
-            min: null
-            name: null
-            orientation: null
-            placeholder: null
-            readonly: false
-            required: true
-            size: null
-            step: null
-            tip: null
-            title: null
-            type: craft\fieldlayoutelements\entries\EntryTitleField
-            uid: fbe7c045-7c30-43b6-9ef5-01b7c6de76f7
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            dateAdded: '2024-12-17T21:42:49+00:00'
+            dateAdded: '2026-09-07T23:01:57+00:00'
             editCondition: null
             elementCondition: null
             elementEditCondition: null
-            fieldUid: 5b72b712-0218-40c6-9717-0c395a914ad8 # Summary
-            handle: null
+            fieldUid: 840acb32-6694-40d0-9384-60a0220c1de0 # Label
+            handle: headline
             instructions: null
-            label: null
+            label: Headline
             oldFieldUid: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 2f8c39b0-131b-4c2c-8f5a-72310b4e6055
+            uid: 60727df4-4e97-4929-b920-8fb343402f9e
             userCondition: null
             warning: null
             width: 100
-        name: Content
+          -
+            dateAdded: '2026-09-07T23:01:57+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 386721be-1ee4-4e3b-b22c-7fb3dfded3ff # Simple Text
+            handle: introduction
+            instructions: null
+            label: Introduction
+            oldFieldUid: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 98cce6ea-9657-4941-b892-f064ad435103
+            userCondition: null
+            warning: null
+            width: 100
+        name: Page
         uid: 4c017ef0-a804-4f0f-aa5f-8f8ba028442a
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2026-09-07T23:03:26+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 840acb32-6694-40d0-9384-60a0220c1de0 # Label
+            handle: null
+            instructions: null
+            label: Title
+            oldFieldUid: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 85d2e2b2-ee47-4b67-b601-836a464aa190
+            userCondition: null
+            warning: null
+            width: 100
+        name: Meta
+        uid: 6d037a17-526f-4ee0-be3b-46128fef5874
         userCondition: null
       -
         elementCondition: null
@@ -147,14 +159,14 @@ fieldLayouts:
         userCondition: null
     thumbFieldKey: null
 handle: index
-hasTitleField: true
+hasTitleField: false
 icon: list-tree
 name: 'Index Page'
 showSlugField: false
 showStatusField: true
 slugTranslationKeyFormat: null
 slugTranslationMethod: site
-titleFormat: null
+titleFormat: "{% include '_generated/index/title' %}"
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
-uiLabelFormat: '{title}'
+uiLabelFormat: '{section.name}'
