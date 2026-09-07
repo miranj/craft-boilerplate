@@ -1,0 +1,154 @@
+{#
+  _components/dropdown
+  
+  Based on the Alpine.js UI Component
+  https://alpinejs.dev/component/dropdown
+#}
+
+{# Params #}
+{% set dropdownClass = params.class ?? '' %}
+{% set dropdownOptions = params.options ?? [] %}
+{% set dropdownLabel = params.label ?? 'Options' %}
+{% set dropdownIsActive = params.isActive ?? false %}
+{% set dropdownButtonClass = params.button_class ?? 'button-dropdown' %}
+{% set dropdownButtonActiveClass = params.button_active_class ?? 'button-dropdown-active' %}
+{% set dropdownIconClass = params.icon_class ?? 'button-internal-icon' %}
+
+
+
+{# Biz Logic #}
+{% set dropdownActiveOption = dropdownIsActive
+  ? dropdownOptions | firstWhere('isActive')
+  : false
+%}
+{% set hasSearch = dropdownOptions|length > 2 %}
+
+
+{# Render #}
+{% macro renderOption(option, class) %}
+  <a {{ attr({
+    href: option.url,
+    class: [
+      class,
+      'flex items-center justify-between gap-1',
+      option.isActive ? 'text-blue-600 hover:no-underline',
+    ],
+  }) }}>
+    <span class="line-clamp-2 grow">
+      {{ option.title }}
+    </span>
+    {% if option.isActive %}
+      <span class="text-sm px-2"> X </span>
+    {% endif %}
+  </a>
+{% endmacro %}
+
+
+
+{% if dropdownOptions is not empty %}
+  <div {{ attr({
+    class: [
+      'relative',
+      dropdownClass,
+    ],
+    'x-data': "{
+      open: false,
+      search: '',
+      toggle() {
+        if (this.open) {
+          return this.close();
+        }
+        this.open = true;
+        this.$nextTick(() => {
+          if (this.$refs.searchInput) {
+            this.$refs.searchInput.focus();
+          }
+        });
+      },
+      close(focusAfter) {
+        if (!this.open) { return; }
+        this.open = false;
+        this.search = '';
+        focusAfter && focusAfter.focus();
+      }
+    }",
+    'x-on:keydown.escape.prevent.stop': "close($refs.button)",
+    'x-on:focusin.window': "! $refs.panel.contains($event.target) && ! $refs.button.contains($event.target) && close()",
+    'x-id': "['dropdown-button']",
+  }) }}>
+    
+    <!-- Button -->
+    <button {{ attr({
+      class: [
+        'w-full relative',
+        dropdownIsActive ? dropdownButtonActiveClass : dropdownButtonClass,
+      ],
+      'type': 'button',
+      'x-ref': 'button',
+      'x-on:click': 'toggle()',
+      'x-bind:class': "open && 'z-content-action'",
+      'x-bind:aria-expanded': 'open',
+      'x-bind:aria-controls': '$id("dropdown-button")',
+    }) }}>
+      <span class="truncate">
+        {% if dropdownIsActive and dropdownActiveOption %}
+          <span x-show="open">
+            {{ dropdownLabel }}
+          </span>
+          <span class="text-blue-600 flex items-center gap-1" x-show="!open">
+            {{ dropdownActiveOption.title }}
+          </span>
+        {% else %}
+          {{ dropdownLabel }}
+        {% endif %}
+      </span>
+      <span {{ attr({
+        class: [
+          dropdownIconClass,
+          'motion-safe:transition-transform',
+        ],
+        'x-bind:class': "open && '-scale-y-100'",
+      }) }}>
+        {{ svgIcon('@icons/chevron-down.svg') }}
+      </span>
+    </button>
+
+    <!-- Panel -->
+    <div {{ attr({
+      class: [
+        'absolute inset-x-0 z-content-overlay bg-white',
+        'max-h-70 overflow-auto',
+        'border',
+        '[scrollbar-width:thin] [scrollbar-color:black_#f4f4f4]',
+        'focus:outline-none',
+      ],
+      'x-ref': "panel",
+      'x-show': "open",
+      'x-cloak': true,
+      'x-transition': true,
+      'x-on:click.outside': "! $refs.button.contains($event.target) && close()",
+      'x-bind:id': "$id('dropdown-button')",
+    }) }}>
+      {% if hasSearch %}
+        <div class="sticky top-0 p-2 bg-white border-b border-gray-200 z-10">
+          <input
+            type="text"
+            x-ref="searchInput"
+            x-model="search"
+            placeholder="Search..."
+            class="w-full px-2 py-1 text-sm border border-gray-300 rounded focus:outline-none focus:border-blue-500"
+            x-on:keydown.escape.prevent.stop="close($refs.button)"
+          />
+        </div>
+      {% endif %}
+
+      <ul class="px-5 divide-y divide-gray-500">
+        {% for option in dropdownOptions %}
+          <li {% if hasSearch %}x-show="!search || {{ option.title|json_encode }}.toLowerCase().includes(search.toLowerCase())"{% endif %}>
+            {{ _self.renderOption(option, 'py-1.5') }}
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+{% endif %}
