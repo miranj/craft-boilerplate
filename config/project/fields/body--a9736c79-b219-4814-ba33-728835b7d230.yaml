@@ -4,6 +4,7 @@ instructions: null
 name: Body
 searchable: true
 settings:
+  advancedLinkFields: null
   availableTransforms: ''
   availableVolumes: '*'
   characterLimit: null
@@ -59,10 +60,12 @@ settings:
         -
           - expanded
           - false
-  fullGraphqlData: false
-  headingLevels: false
-  imageEntryTypeUid: null
-  imageFieldUid: null
+  fullGraphqlData: true
+  headingLevels:
+    - '1'
+    - '2'
+  imageEntryTypeUid: 64ee8bca-fd54-4c78-853c-aaf37e0bb8c0 # Gallery
+  imageFieldUid: a193356a-af38-4076-b3ad-bdde75709e4a
   imageMode: img
   js: null
   jsFile: null
@@ -110,7 +113,7 @@ settings:
                       - heading2
                     -
                       - title
-                      - 'Heading (Level 2)'
+                      - Subheading
                     -
                       - view
                       - h4

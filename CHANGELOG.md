@@ -4,6 +4,11 @@ Release notes for Miranj's Craft Boilerplate starter project.
 
 ## Unreleased 3.next
 
+### Craft
+
+- Renamed _Heading (Level 2)_ to _Subheading_.
+- Fixed incorrect heading label for _Body (Nested)_ field.
+
 ### System
 
 - Update Craft CMS to 5.11.1.

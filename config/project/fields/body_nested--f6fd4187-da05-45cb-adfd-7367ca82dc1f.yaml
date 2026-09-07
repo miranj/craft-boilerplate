@@ -4,10 +4,11 @@ instructions: null
 name: 'Body (Nested)'
 searchable: true
 settings:
+  advancedLinkFields: null
   availableTransforms: ''
   availableVolumes: '*'
   characterLimit: null
-  css: ".ck.ck-content h3 { font-size: x-large; }\r\n.ck.ck-content h4 { font-size: large; }"
+  css: '.ck.ck-content h4 { font-size: large; }'
   cssFile: null
   defaultTransform: null
   defaultUploadLocationSubpath: null
@@ -48,10 +49,11 @@ settings:
         -
           - expanded
           - false
-  fullGraphqlData: false
-  headingLevels: false
-  imageEntryTypeUid: null
-  imageFieldUid: null
+  fullGraphqlData: true
+  headingLevels:
+    - '2'
+  imageEntryTypeUid: 64ee8bca-fd54-4c78-853c-aaf37e0bb8c0 # Gallery
+  imageFieldUid: a193356a-af38-4076-b3ad-bdde75709e4a
   imageMode: img
   js: null
   jsFile: null
@@ -79,13 +81,13 @@ settings:
                   __assoc__:
                     -
                       - class
-                      - ck-heading_heading3
+                      - ck-heading_heading2
                     -
                       - model
-                      - heading3
+                      - heading2
                     -
                       - title
-                      - Heading
+                      - Subheading
                     -
                       - view
                       - h4

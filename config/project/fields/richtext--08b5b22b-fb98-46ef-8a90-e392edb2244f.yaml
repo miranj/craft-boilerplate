@@ -4,6 +4,7 @@ instructions: null
 name: 'Rich Text'
 searchable: true
 settings:
+  advancedLinkFields: null
   availableTransforms: ''
   availableVolumes: ''
   characterLimit: null
@@ -12,8 +13,10 @@ settings:
   defaultTransform: null
   defaultUploadLocationSubpath: null
   defaultUploadLocationVolume: null
-  fullGraphqlData: false
-  headingLevels: false
+  fullGraphqlData: true
+  headingLevels:
+    - '1'
+    - '2'
   imageEntryTypeUid: null
   imageFieldUid: null
   imageMode: img
@@ -63,7 +66,7 @@ settings:
                       - heading2
                     -
                       - title
-                      - 'Heading (Level 2)'
+                      - Subheading
                     -
                       - view
                       - h4
