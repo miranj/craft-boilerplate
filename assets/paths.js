@@ -90,6 +90,9 @@ paths.tasks = {
     deferred: {
       source: [
         '../node_modules/@alpinejs/collapse/dist/cdn.js',
+        '../node_modules/@alpinejs/focus/dist/cdn.js',
+        '../node_modules/@alpinejs/intersect/dist/cdn.js',
+        '../node_modules/@alpinejs/resize/dist/cdn.js',
         '../node_modules/alpinejs/dist/cdn.js',
       ],
       destination: 'deferred.js',
