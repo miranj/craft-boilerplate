@@ -28,6 +28,7 @@ fieldLayouts:
             handle: hyperlink
             instructions: null
             label: Link
+            oldFieldUid: null
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField

@@ -56,6 +56,7 @@ fieldLayouts:
             handle: body
             instructions: null
             label: Description
+            oldFieldUid: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField

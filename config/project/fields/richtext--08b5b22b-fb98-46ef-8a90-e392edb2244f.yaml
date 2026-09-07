@@ -10,40 +10,108 @@ settings:
   css: ".ck.ck-content h3 { font-size: x-large; }\r\n.ck.ck-content h4 { font-size: large; }"
   cssFile: null
   defaultTransform: null
+  defaultUploadLocationSubpath: null
+  defaultUploadLocationVolume: null
   fullGraphqlData: false
   headingLevels: false
+  imageEntryTypeUid: null
+  imageFieldUid: null
+  imageMode: img
   js: null
   jsFile: null
   options:
-    heading:
-      options:
+    __assoc__:
+      -
+        - heading
         -
-          class: ck-heading_paragraph
-          model: paragraph
-          title: Paragraph
+          __assoc__:
+            -
+              - options
+              -
+                -
+                  __assoc__:
+                    -
+                      - class
+                      - ck-heading_paragraph
+                    -
+                      - model
+                      - paragraph
+                    -
+                      - title
+                      - Paragraph
+                -
+                  __assoc__:
+                    -
+                      - class
+                      - ck-heading_heading1
+                    -
+                      - model
+                      - heading1
+                    -
+                      - title
+                      - Heading
+                    -
+                      - view
+                      - h3
+                -
+                  __assoc__:
+                    -
+                      - class
+                      - ck-heading_heading2
+                    -
+                      - model
+                      - heading2
+                    -
+                      - title
+                      - 'Heading (Level 2)'
+                    -
+                      - view
+                      - h4
+      -
+        - link
         -
-          class: ck-heading_heading1
-          model: heading1
-          title: Heading
-          view: h3
+          __assoc__:
+            -
+              - decorators
+              -
+                __assoc__:
+                  -
+                    - openInNewTab
+                    -
+                      __assoc__:
+                        -
+                          - attributes
+                          -
+                            __assoc__:
+                              -
+                                - target
+                                - _blank
+                        -
+                          - label
+                          - 'Open in a new tab'
+                        -
+                          - mode
+                          - manual
+            -
+              - defaultProtocol
+              - 'http://'
+      -
+        - list
         -
-          class: ck-heading_heading2
-          model: heading2
-          title: 'Heading (Level 2)'
-          view: h4
-    link:
-      decorators:
-        openInNewTab:
-          attributes:
-            target: _blank
-          label: 'Open in a new tab'
-          mode: manual
-      defaultProtocol: 'http://'
-    list:
-      properties:
-        reversed: false
-        startIndex: true
-        styles: false
+          __assoc__:
+            -
+              - properties
+              -
+                __assoc__:
+                  -
+                    - reversed
+                    - false
+                  -
+                    - startIndex
+                    - true
+                  -
+                    - styles
+                    - false
   parseEmbeds: false
   purifierConfig: null
   purifyHtml: true
