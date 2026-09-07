@@ -37,6 +37,9 @@
   },
   "dependencies": {
     "@alpinejs/collapse": "^3.14.1",
+    "@alpinejs/focus": "^3.14.9",
+    "@alpinejs/intersect": "^3.15.2",
+    "@alpinejs/resize": "^3.14.9",
     "@justinribeiro/lite-youtube": "^1.9.0",
     "alpinejs": "^3.14.1",
     "instant.page": "^5.1.1",
