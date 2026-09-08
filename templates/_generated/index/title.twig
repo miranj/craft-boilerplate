@@ -1,0 +1,11 @@
+{# generated/index/title #}
+
+{% extends '_generated/_base' %}
+
+{% set generator = (element) => [
+    element.label,
+    element.section.name | replace('/ Index$/', ''),
+  ]
+  | filter
+  | first
+%}

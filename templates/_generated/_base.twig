@@ -1,0 +1,40 @@
+{#
+  Base template for generated fields.
+  https://craftcms.com/docs/5.x/system/elements.html#generated-fields
+
+  - Takes an arrow function as the `generator`
+  - Passes in the element as a param to the arrow function
+  - Normalises the returned array / non-array values to a string
+  - Strips out surrounding whitespace
+#}
+{%- minify -%}
+
+{#
+  Params
+#}
+{% set element = element ?? object %}
+{% set generator = generator ?? (el => el) %}
+{% set connector = connector ?? ' ' %}
+{% set normalizeToString = value => value is array
+  ? value | filter | join(connector)
+  : value | string
+%}
+
+
+
+{#
+  Biz logic
+#}
+{% set value = generator | invoke(element) %}
+
+
+
+{#
+  Render
+#}
+{% block render normalizeToString
+  | invoke(value)
+  | trim
+%}
+
+{%- endminify -%}

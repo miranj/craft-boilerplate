@@ -14,9 +14,15 @@ Release notes for Miranj's Craft Boilerplate starter project.
 
 - Added a _Events_ index page.
 
+### Data Model
+
+- Index pages automatically strip out the _Index_ suffix from their titles.
+- Index pages can now customise their headline independent of the page title.
+
 ### Craft
 
 - Added _Router_ plugin.
+- Added a base template for [generated fields](https://craftcms.com/docs/5.x/system/elements.html#generated-fields).
 - Renamed _Heading (Level 2)_ to _Subheading_.
 - Fixed incorrect heading label for _Body (Nested)_ field.
 
