@@ -73,7 +73,7 @@
         {{ tag('a', {
           class: [
             'p-4',
-            v == activeView ? 'bg-zinc-900/20 dark:bg-white/20',
+            v == activeView ? 'bg-zinc-900/20',
           ],
           href: url([basePageUrl, v]|join('/')),
           text: v|capitalize,
@@ -99,7 +99,7 @@
         </h2>
         
         {% if activeSection %}
-          <a class="order-first flex items-center text-xs bg-zinc-900/20 dark:bg-white/20 py-0.5 px-1.5" href="{{ url([basePageUrl, activeView]|join('/')) }}">
+          <a class="order-first flex items-center text-xs bg-zinc-900/20 py-0.5 px-1.5" href="{{ url([basePageUrl, activeView]|join('/')) }}">
             {{ heroicon('arrow-left')|attr({ class: 'w-4 h-4' }) }}
             All Sections
           </a>
