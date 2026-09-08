@@ -7,6 +7,7 @@ Release notes for Miranj's Craft Boilerplate starter project.
 ### Front-end
 
 - Added index page views with pagination.
+- Added [Alpine.js](https://alpinejs.dev/) plugins - [Focus](https://alpinejs.dev/plugins/focus) and [Intersect](https://alpinejs.dev/plugins/intersect).
 
 ### Craft
 

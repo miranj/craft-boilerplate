@@ -1,7 +1,7 @@
 {
   "craftcp.css": "sha256-WZt/O8upCOUUDISI+GNthlSbOqB1V+xMIkO/eftXSsQ=",
-  "deferred.js": "sha256-g6jwe1ApjC6YWvRAbAbzSHHtItIdkx8b0v1XbaBuSJo=",
-  "deferred.min.js": "sha256-qQahqH9tuRhw12rMICq71wCrrqiNIERnCsheTW4fzNI=",
+  "deferred.js": "sha256-fw1NVysl9gXjF38+cV5cPbcWDVRtdFI054mOycBla4U=",
+  "deferred.min.js": "sha256-jbbxqz7W+Jw/geJRDz+iDK9ldkU+MsbonkRyjNWFKmA=",
   "instant.js": "sha256-B2iaWvgA0cj+jFBa+1MTqbfv7BfWt4qWj51wO1GBBIM=",
   "instant.min.js": "sha256-Rxz+wtupSyL2GAclaOn39pZyUIoV9EjoWE3HcNl0/y8=",
   "lite-youtube.js": "sha256-AeKWXZZ2xQvWIR0d81LUzBAmHkcJtmbd6g6lb5cfkak=",
@@ -12,9 +12,9 @@
   "photoswipe.min.js": "sha256-2BmKr+JYn5q6+NwUOtE421JG1AvyBxq0KGzHJqRt+xE=",
   "photoswipeinit.js": "sha256-U3KzCEAuplnVIs1muFOE5foJrJvscmXQnfhsGGzsnlE=",
   "photoswipeinit.min.js": "sha256-3u+G77yjt3Uep6gIQJa0B3+pNmrWZaTpQ8r1Ber2dU4=",
-  "style.css": "sha256-nZQ8vUt5bXYMaO3To8yB0E9jRixcgKSNfvdgD+Rotdo=",
-  "style.purged.css": "sha256-P1zyaGi7ljYgpmJ7OKJ9kzzrv8urQWNuGOH80x56X60=",
-  "style.purged.min.css": "sha256-H+qSldaU23U0K3GBLA7GKJ/DdwnEljj9ALNpSMsd9C0=",
+  "style.css": "sha256-rpAoHW6Bv6BZDknHidYuAUBxq7Mb2VsmIgLFIvvReMo=",
+  "style.purged.css": "sha256-r+O3LDKoLT9y5dQeobX+WKQvUIg1OfQUnYotIPajIVo=",
+  "style.purged.min.css": "sha256-+yzI3Hcn+6WOF4FOL9u8/7jwASO3aprxNkEeBaQEEYA=",
   "urgent.js": "sha256-CdHwhucjsWxf3KAMIJ6GUpOItAw6kjXsHKKas6N/z8Q=",
   "urgent.min.js": "sha256-7QV74xoBGpZ8s60GCPqgL9HehwETp0lNdBzoTGfXQLM="
 }
