@@ -18,7 +18,17 @@
 
 {# Biz Logic #}
 {% set dropdownActiveOption = dropdownIsActive
-  ? dropdownOptions | firstWhere('isActive')
+  ? dropdownOptions
+    |map(option => [
+      option,
+        ...(option.subOptions ?? []) | map(subOpt => {
+          ...subOpt,
+          title: subOpt.title ~ ' ' ~ option.title,
+      })
+    ])
+    |flatten(1)
+    |filter
+    |firstWhere('isActive')
   : false
 %}
 {% set hasSearch = dropdownOptions|length > 10 %}
@@ -150,7 +160,20 @@
       <ul class="px-5 divide-y divide-gray-500">
         {% for option in dropdownOptions %}
           <li {% if hasSearch %}x-show="!search || {{ option.title|json_encode }}.toLowerCase().includes(search.toLowerCase())"{% endif %}>
-            {{ _self.renderOption(option, 'py-1.5') }}
+            {% if option.subOptions ?? false %}
+              <div class="py-2">
+                {{ _self.renderOption(option, 'text-gray-900') }}
+                <ul class="mt-2">
+                  {% for subOption in option.subOptions %}
+                    <li class="contents">
+                      {{ _self.renderOption(subOption, 'ml-2', inline: true) }}
+                    </li>
+                  {% endfor %}
+                </ul>
+              </div>
+            {% else %}
+              {{ _self.renderOption(option, 'py-1.5') }}
+            {% endif %}
           </li>
         {% endfor %}
       </ul>

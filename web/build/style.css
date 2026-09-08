@@ -16,6 +16,7 @@
     --color-gray-200: oklch(92.8% 0.006 264.531);
     --color-gray-300: oklch(87.2% 0.01 258.338);
     --color-gray-500: oklch(55.1% 0.027 264.364);
+    --color-gray-900: oklch(21% 0.034 264.665);
     --color-zinc-100: oklch(96.7% 0.001 286.375);
     --color-zinc-900: oklch(21% 0.006 285.885);
     --color-black: #000;
@@ -360,6 +361,9 @@
   }
   .mb-sm {
     margin-bottom: clamp(1rem, 0.8913rem + 0.5435vi, 1.3125rem);
+  }
+  .ml-2 {
+    margin-left: calc(var(--spacing) * 2);
   }
   .ml-6 {
     margin-left: calc(var(--spacing) * 6);
@@ -770,6 +774,9 @@
   }
   .text-blue-600 {
     color: var(--color-blue-600);
+  }
+  .text-gray-900 {
+    color: var(--color-gray-900);
   }
   .text-slate-500 {
     color: var(--color-slate-500);
