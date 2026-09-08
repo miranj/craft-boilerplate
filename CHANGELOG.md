@@ -7,6 +7,7 @@ Release notes for Miranj's Craft Boilerplate starter project.
 ### Front-end
 
 - Added index page views with pagination.
+- The footer now renders both the _Footer_ and _Fineprint_ navigation, as well as the _Site Caption_ and the _Copyright Notice_ fields.
 - Disabled front-end login and logout URLs.
 
 ### Data Model

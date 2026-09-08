@@ -1,4 +1,5 @@
 {% extends '_layouts/html' %}
+{% from '_helpers/text' import normaliseRichtext %}
 
 
 
@@ -54,9 +55,45 @@
 
 {% block page_footer %}
   <footer class="container">
-    <hr>
-    <div>
-      &copy; {{ now|date('Y') }} {{ siteName }}
+    <div {{ attr({
+      class: [
+        'py-12 flex flex-col sm:flex-row gap-8',
+        'items-start justify-between',
+        'border-t',
+      ],
+    }) }}>
+      {% if footer.caption %}
+        <div class="sm:max-w-1/4 w-full">
+          {{ normaliseRichtext(footer.caption) }}
+        </div>
+      {% endif %}
+      {% include '_components/footerNav' with { params: {
+        class: '',
+        handle: 'footer',
+        ariaLabel: 'Footer site navigation',
+        profile: 'footer',
+      } } %}
+    </div>
+    
+    <div {{ attr({
+      class: [
+        'flex flex-col sm:flex-row justify-between gap-y-6',
+        'py-4 prose-meta',
+        'border-t',
+      ],
+    }) }}>
+      {% if footer.copyright %}
+        {{ normaliseRichtext(footer.copyright) }}
+      {% else %}
+        <p>
+          &copy; {{ now|date('Y') }} {{ siteName }}
+        </p>
+      {% endif %}
+      {% include '_components/footerNav' with { params: {
+        handle: 'finePrint',
+        profile: 'finePrint',
+        ariaLabel: 'Footer fine print navigation',
+      } } %}
     </div>
   </footer>
 {% endblock %}

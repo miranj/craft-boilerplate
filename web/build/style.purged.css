@@ -272,6 +272,9 @@
   .my-8 {
     margin-block: calc(var(--spacing) * 8);
   }
+  .mt-2 {
+    margin-top: calc(var(--spacing) * 2);
+  }
   .mt-10 {
     margin-top: calc(var(--spacing) * 10);
   }
@@ -306,22 +309,49 @@
   .max-w-md {
     max-width: clamp(1.5rem, 1.3261rem + 0.8696vi, 2rem);
   }
+  .min-w-40 {
+    min-width: calc(var(--spacing) * 40);
+  }
   .transform {
     transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
   }
   .cursor-zoom-in {
     cursor: zoom-in;
   }
+  .flex-col {
+    flex-direction: column;
+  }
+  .flex-wrap {
+    flex-wrap: wrap;
+  }
   .items-center {
     align-items: center;
   }
+  .items-start {
+    align-items: flex-start;
+  }
   .justify-between {
     justify-content: space-between;
+  }
+  .justify-start {
+    justify-content: flex-start;
+  }
+  .gap-2 {
+    gap: calc(var(--spacing) * 2);
+  }
+  .gap-6 {
+    gap: calc(var(--spacing) * 6);
+  }
+  .gap-8 {
+    gap: calc(var(--spacing) * 8);
   }
   :where(.space-y-7 > :not(:last-child)) {
     --tw-space-y-reverse: 0;
     margin-block-start: calc(calc(var(--spacing) * 7) * var(--tw-space-y-reverse));
     margin-block-end: calc(calc(var(--spacing) * 7) * calc(1 - var(--tw-space-y-reverse)));
+  }
+  .gap-y-6 {
+    row-gap: calc(var(--spacing) * 6);
   }
   .truncate {
     overflow: hidden;
@@ -367,11 +397,17 @@
   .py-2 {
     padding-block: calc(var(--spacing) * 2);
   }
+  .py-4 {
+    padding-block: calc(var(--spacing) * 4);
+  }
   .py-8 {
     padding-block: calc(var(--spacing) * 8);
   }
   .py-10 {
     padding-block: calc(var(--spacing) * 10);
+  }
+  .py-12 {
+    padding-block: calc(var(--spacing) * 12);
   }
   .py-20 {
     padding-block: calc(var(--spacing) * 20);
@@ -382,6 +418,10 @@
   .text-sm {
     font-size: var(--text-sm);
     line-height: var(--tw-leading, var(--text-sm--line-height));
+  }
+  .font-bold {
+    --tw-font-weight: var(--font-weight-bold);
+    font-weight: var(--font-weight-bold);
   }
   .font-normal {
     --tw-font-weight: var(--font-weight-normal);
@@ -442,6 +482,21 @@
   @media (width >= 56.25em) {
     .sm\:w-5xl {
       width: clamp(7rem, 6.2391rem + 3.8043vi, 9.1875rem);
+    }
+  }
+  @media (width >= 56.25em) {
+    .sm\:max-w-1\/4 {
+      max-width: calc(1/4 * 100%);
+    }
+  }
+  @media (width >= 56.25em) {
+    .sm\:flex-row {
+      flex-direction: row;
+    }
+  }
+  @media (width >= 56.25em) {
+    .sm\:justify-center {
+      justify-content: center;
     }
   }
   @media (width >= 56.25em) {
@@ -535,6 +590,10 @@ h5 {
     line-height: var(--tw-leading, var(--text-xl--line-height));
     --tw-leading: var(--leading-tight);
     line-height: var(--leading-tight);
+  }
+  .prose-meta {
+    font-size: var(--text-sm);
+    line-height: var(--tw-leading, var(--text-sm--line-height));
   }
   .quo {
     margin-left: -0.24em;

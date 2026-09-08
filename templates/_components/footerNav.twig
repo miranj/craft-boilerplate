@@ -1,0 +1,59 @@
+{# _components/footerNav #}
+
+{# Params #}
+{% set navHandle = params.handle ?? '' %}
+{% set navClass = params.class ?? '' %}
+{% set navAriaLabel = params.ariaLabel ?? 'Navigation' %}
+{% set navParamProfile = params.profile ?? 'footer' %}
+
+
+
+{# Variables #}
+{% set navNodes = craft.navigation.nodes(navHandle).all() ?? [] %}
+{% set navProfiles = {
+  footer: {
+    listClass: 'flex flex-wrap justify-start sm:justify-center items-start gap-6',
+    itemClass: 'min-w-40',
+    topLevelClass: 'font-bold',
+  },
+  finePrint: {
+    listClass: 'flex justify-start sm:justify-center items-center gap-6',
+    itemClass: '',
+  },
+} %}
+{% set navProfile = navProfiles[navParamProfile] ?? {} %}
+
+
+
+{# Render #}
+{% if navNodes is not empty %}
+  <nav
+    class="{{ navClass }}"
+    aria-label="{{ navAriaLabel }}"
+  >
+    <ul class="{{ navProfile.listClass }}">
+      {% nav node in navNodes %}
+        {% set _isTopLevel = node.level == 1 %}
+        <li class="{{ navProfile.itemClass }}">
+          {% if node.url %}
+            <a
+              href="{{ node.url }}"
+              class="{{ _isTopLevel ? (navProfile.topLevelClass ?? '') : '' }}"
+            >
+              {{ node.title }}
+            </a>
+          {% else %}
+            <span class="{{ _isTopLevel ? (navProfile.topLevelClass ?? '') : '' }}">
+              {{ node.title }}
+            </span>
+          {% endif %}
+          {% ifchildren %}
+            <ul class="flex flex-col gap-2 mt-2">
+              {% children %}
+            </ul>
+          {% endifchildren %}
+        </li>
+      {% endnav %}
+    </ul>
+  </nav>
+{% endif %}
