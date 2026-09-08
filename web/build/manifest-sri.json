@@ -1,7 +1,7 @@
 {
   "craftcp.css": "sha256-WZt/O8upCOUUDISI+GNthlSbOqB1V+xMIkO/eftXSsQ=",
-  "deferred.js": "sha256-g6jwe1ApjC6YWvRAbAbzSHHtItIdkx8b0v1XbaBuSJo=",
-  "deferred.min.js": "sha256-qQahqH9tuRhw12rMICq71wCrrqiNIERnCsheTW4fzNI=",
+  "deferred.js": "sha256-fw1NVysl9gXjF38+cV5cPbcWDVRtdFI054mOycBla4U=",
+  "deferred.min.js": "sha256-jbbxqz7W+Jw/geJRDz+iDK9ldkU+MsbonkRyjNWFKmA=",
   "instant.js": "sha256-B2iaWvgA0cj+jFBa+1MTqbfv7BfWt4qWj51wO1GBBIM=",
   "instant.min.js": "sha256-Rxz+wtupSyL2GAclaOn39pZyUIoV9EjoWE3HcNl0/y8=",
   "lite-youtube.js": "sha256-AeKWXZZ2xQvWIR0d81LUzBAmHkcJtmbd6g6lb5cfkak=",
@@ -13,8 +13,8 @@
   "photoswipeinit.js": "sha256-U3KzCEAuplnVIs1muFOE5foJrJvscmXQnfhsGGzsnlE=",
   "photoswipeinit.min.js": "sha256-3u+G77yjt3Uep6gIQJa0B3+pNmrWZaTpQ8r1Ber2dU4=",
   "style.css": "sha256-uyTpEzj3TlDk0VxaljgFvpw9QANzMPdy36J7YxUKYxw=",
-  "style.purged.css": "sha256-0mYlJUNzT6IlnVfSvrUt0kUmtJJXksXURcKsavw8iHk=",
-  "style.purged.min.css": "sha256-TMBOCw3gpTVWyOSzfY5e/0DUJMZReRHVqX75j69lyUI=",
+  "style.purged.css": "sha256-O/8MZf16ApQszVgK7dy9CQ3doorqBvaoqJhshPdt240=",
+  "style.purged.min.css": "sha256-MuLY80W0Z1SDH/egpY/pvIvPkshRtbSrNPPdMJ2Cjyo=",
   "urgent.js": "sha256-CdHwhucjsWxf3KAMIJ6GUpOItAw6kjXsHKKas6N/z8Q=",
   "urgent.min.js": "sha256-7QV74xoBGpZ8s60GCPqgL9HehwETp0lNdBzoTGfXQLM="
 }
