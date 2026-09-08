@@ -214,7 +214,7 @@
     box-shadow: none;
   }
   button,
-  input:where([type="button"], [type="reset"]),
+  input:where([type="button"], [type="reset"], [type="submit"]),
   ::file-selector-button {
     appearance: button;
   }

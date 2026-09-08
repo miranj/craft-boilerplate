@@ -9,8 +9,11 @@ Release notes for Miranj's Craft Boilerplate starter project.
 - Added index page views with pagination.
 - Added filters for index page views.
 - The footer now renders both the _Footer_ and _Fineprint_ navigation, as well as the _Site Caption_ and the _Copyright Notice_ fields.
-- Added [Focus](https://alpinejs.dev/plugins/focus) and [Intersect](https://alpinejs.dev/plugins/intersect) Alpine.js plugins.
 - Disabled front-end login and logout URLs.
+- Added Alpine.js Focus plugin.
+- Added Alpine.js Intersect plugin.
+- Updated Alpine.js to 3.17.2.
+- Updated Alpine.js Collapse plugin to 3.17.2.
 
 ### Data Model
 
@@ -39,6 +42,9 @@ Release notes for Miranj's Craft Boilerplate starter project.
 
 ### System
 
+- Upgraded Node version to 24 LTS “Krypton”.
+- Updated lint-staged to 17.5.0.
+- Updated postcss-inline-svg to 6.0.0.
 - Removed the Field Library.
 
 ## 3.6.0 - 2026-09-04
@@ -76,10 +82,7 @@ Release notes for Miranj's Craft Boilerplate starter project.
 
 ### System
 
-- Upgraded Node version to 24 LTS “Krypton”.
 - Ignore `.sql` files from version control.
-- Updated lint-staged to 17.5.0.
-- Updated postcss-inline-svg to 6.0.0.
 
 ## 3.5.0 - 2026-02-17
 
