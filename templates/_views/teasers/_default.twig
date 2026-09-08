@@ -28,15 +28,15 @@
         {% block teaser_body %}
 
           {% block teaser_title %}
-            <h3 class="{% block teaser_title_class '' %}">
-            {% if teaserUrl %}
-              <span>
+            <h2 class="{% block teaser_title_class '' %}">
+              {% if teaserUrl %}
+                <span>
+                  {{ teaserTitle }}
+                </span>
+              {% else %}
                 {{ teaserTitle }}
-              </span>
-            {% else %}
-              {{ teaserTitle }}
-            {% endif %}
-            </h3>
+              {% endif %}
+            </h2>
           {% endblock %}
 
         {% endblock %}

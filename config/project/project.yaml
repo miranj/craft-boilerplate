@@ -1,4 +1,4 @@
-dateModified: 1788879136
+dateModified: 1788879137
 elementSources:
   craft\elements\Category:
     -
@@ -627,6 +627,7 @@ meta:
     56b9dc41-a930-42d9-ba33-9925b4fe9954: 'System Administration' # System Administration
     58d94df4-b6dd-4ff7-9157-3b7d7e24b66d: Organisation # Organisation
     58e76d43-a465-4c1a-b102-2726a9fc13f5: 'Resources Types' # Resources Types
+    60a16e8c-4f58-46d3-90cb-e9232007e5ef: 'Events Index' # Events Index
     64ee8bca-fd54-4c78-853c-aaf37e0bb8c0: Gallery # Gallery
     65fd1257-02e1-40e1-a8a4-0ad89b4e9510: 'Link (Email, Phone, URL)' # Link (Email, Phone, URL)
     066b4ba5-46f1-4abd-bc4f-b5118981f6bf: 'Social: YouTube' # Social: YouTube
@@ -785,6 +786,10 @@ plugins:
     enabled: true
     schemaVersion: 1.0.1
   retcon:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  router:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0

@@ -1,0 +1,52 @@
+{# _views/indexes/events #}
+{% extends '_views/indexes/_default-filtered' %}
+{% from '_helpers/filters' import elementsFilter, yearsFilter, monthsFilterByYear, getAllActiveEntriesIds %}
+
+
+
+{# Params #}
+{% set indexOrderedBy = indexOrderedBy ?? 'startDateTime desc' %}
+
+
+
+{# Filters #}
+{% block response %}
+  {% set filterUrlParam = 'yearMonthStartDate' %}
+  {% set filterTitle = 'Timeframe' %}
+  {% set yearsFilter = yearsFilter(
+    filterUrlParam,
+    filterTitle,
+    craft.entries({ section: section }),
+    'startDateTime',
+  ) %}
+  {% set currentYear = now|date('Y') * 1 %}
+  {% set monthsFilter = monthsFilterByYear(
+    filterUrlParam,
+    filterTitle,
+    craft.entries({ section: section }),
+    'startDateTime',
+  ) %}
+
+  {% set indexFilters = indexFilters ?? [
+    elementsFilter('eventType', 'Event Type', craft.categories({
+      group: 'eventTypes',
+      relatedTo: getAllActiveEntriesIds(section),
+    })),
+    elementsFilter('department', 'Department', craft.entries({
+      section: 'departments',
+      relatedTo: getAllActiveEntriesIds(section),
+      orderBy: 'title asc',
+    })),
+    {
+      title: filterTitle,
+      param: filterUrlParam,
+      isActive: monthsFilter.isActive or yearsFilter.isActive or false,
+      activeItem: monthsFilter.activeItem ?? yearsFilter.activeItem ?? null,
+      options: yearsFilter.options|map(option => {
+        ...option,
+        subOptions: option.title == currentYear ? monthsFilter.options : [],
+      })
+    },
+  ] %}
+  {{ parent() }}
+{% endblock %}

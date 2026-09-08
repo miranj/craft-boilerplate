@@ -1,0 +1,287 @@
+{# Common filter helpers for index pages #}
+
+
+
+{# Build a list of our global set of entries #}
+{% macro getAllActiveEntriesIds(section, query = {}) %}
+  {% return craft
+    .entries(query)
+    .section(section)
+    .cache()
+    .ids() %}
+{% endmacro %}
+
+{#
+  Build a filter config that is consumed by the default-filtered index page template
+  @return {
+    title: UI label
+    param: filter key used in the URL by the Router plugin
+    options: list of links to be displayed in a _components/dropdown
+    isActive: bool indicating if the filter is currently active
+    activeItem: active filter item
+  }
+#}
+{% macro elementsFilter(filterUrlParam, filterTitle, elementsQuery, elementTransformer = null) %}
+  {% set elementTransformer = elementTransformer ?: _ => _ %}
+  {% return {
+    title: filterTitle,
+    param: filterUrlParam,
+    isActive: filterUrlParam in craft.router.rawParams|keys,
+    activeItem: craft.router.params[filterUrlParam] ?? null,
+    options: _self.getFilterLinks(
+      collect(elementsQuery
+        .select(['title', 'slug'])
+        .cache()
+        .asArray()
+      ).map(elementTransformer).all(),
+      filterUrlParam,
+    ),
+  } %}
+{% endmacro %}
+
+{% macro getFieldColumnSql(elementsQuery, fieldHandle) %}
+  {#
+    Craft does not auto map custom field columns inside SQL functions,
+    so we try to manually extract the SELECT portion from a dummy query
+    see: https://github.com/craftcms/cms/discussions/17748
+  #}
+  {% return clone(elementsQuery)
+    .select(fieldHandle)
+    .getRawSql()
+    |split('FROM ')
+    |first
+    |split('SELECT ')
+    |last
+    |trim
+  %}
+{% endmacro %}
+
+{% macro yearsFilter(filterUrlParam = 'year', filterTitle = 'Year', elementsQuery = null, fieldHandle = 'postDate') %}
+  {% if elementsQuery is empty %}
+    {% set yearRange = range(0, -11)
+      |map(year => now|date_modify('-' ~ (now|date('d')-1) ~ " days +#{year} years"))
+      |map(year => year|date('Y'))
+    %}
+  {% else %}
+    {% set fieldColumnSql = _self.getFieldColumnSql(elementsQuery, fieldHandle) %}
+    {% set yearRange = elementsQuery.(fieldHandle)(':notempty:')
+      .select(expression('YEAR(' ~ fieldColumnSql ~ ')'))
+      .orderBy(fieldHandle ~ ' desc')
+      .column()
+      |unique
+    %}
+  {% endif %}
+  
+  {% set yearToFilterOption = (year) => {
+    id: year,
+    slug: year,
+    title: year,
+  } %}
+
+  {% return {
+    title: filterTitle,
+    param: filterUrlParam,
+    isActive: filterUrlParam in craft.router.rawParams|keys,
+    activeItem: [
+        craft.router.params[filterUrlParam].year ?? null,
+      ]
+      |filter
+      |map(yearToFilterOption)
+      |first,
+    options: _self.getFilterLinks(
+      yearRange
+        |map(yearToFilterOption),
+      filterUrlParam,
+    ),
+  } %}
+{% endmacro %}
+
+{% macro monthToFilterOption(item, isActive) %}
+  {% set month = item.month ?? null %}
+  {% set year = item.year ?? null %}
+
+  {% from '_helpers/date' import getMonthName %}
+  {% set title = [
+    getMonthName(month, 'full'),
+    isActive ? year : null,
+  ]|filter|join(' ') %}
+  {% set id = year ~ '-' ~ month %}
+  {% set slug = year ~ '/' ~ '%02d'|format(month) %}
+  {% return { title, id, slug, year } %}
+{% endmacro %}
+
+{% macro monthsFilterByYear(
+  filterUrlParam = 'month',
+  filterTitle = 'Month',
+  elementsQuery = null,
+  fieldHandle = 'postDate',
+  year
+) %}
+  {% set year = year ?? now|date('Y') * 1 %}
+  {% if elementsQuery is empty %}
+    {% set currentMonth = now|date('n') * 1 %}
+    {% set monthRange = range(1, currentMonth)
+      |map(month => { year, month })
+    %}
+  {% else %}
+    {% set fieldColumnSql = _self.getFieldColumnSql(elementsQuery, fieldHandle) %}
+    {% set monthRange = elementsQuery
+      .andWhere([
+        'between',
+        expression('YEAR(' ~ fieldColumnSql ~ ')'),
+        year,
+        year
+      ])
+      .select(expression('MONTH(' ~ fieldColumnSql ~ ')'))
+      .orderBy(fieldHandle ~ ' asc')
+      .column()
+      |unique
+      |map(month => {
+        year,
+        month,
+      })
+    %}
+  {% endif %}
+
+  {% set filterParams = craft.router.params[filterUrlParam] ?? {} %}
+  {% set isActive = 'month' in filterParams|keys %}
+  {% return {
+    title: filterTitle,
+    param: filterUrlParam,
+    isActive,
+    activeItem: isActive
+      ? [filterParams]
+        |filter
+        |map(item => _self.monthToFilterOption(item, true))
+        |first
+      : null,
+    options: _self.getFilterLinks(
+      monthRange
+        |map(item => _self.monthToFilterOption(item)),
+      filterUrlParam,
+    ),
+  } %}
+{% endmacro %}
+
+{% macro optionsFieldFilter(filterUrlParam, filterTitle = '', field) %}
+  {% set fieldOptionToFilterOption = (fieldOption) => {
+    id: fieldOption.value,
+    slug: fieldOption.value,
+    title: fieldOption.label,
+  } %}
+
+  {% return {
+    title: filterTitle ?: field.name,
+    param: filterUrlParam,
+    isActive: filterUrlParam in craft.router.rawParams|keys,
+    activeItem: [
+        craft.router.params[filterUrlParam] ?? null,
+      ]
+      |filter
+      |map(fieldOptionToFilterOption)
+      |first,
+    options: _self.getFilterLinks(
+      field.options|map(fieldOptionToFilterOption),
+      filterUrlParam,
+    ),
+  } %}
+{% endmacro %}
+
+{% macro sectionsFilter(filterUrlParam, filterTitle, sectionIds) %}
+  {% set sectionToFilterOption = (section) => {
+    id: section.handle,
+    slug: section.handle,
+    title: section.name,
+  } %}
+
+  {% return {
+    title: filterTitle,
+    param: filterUrlParam,
+    isActive: filterUrlParam in craft.router.rawParams|keys,
+    activeItem: [
+        craft.router.params[filterUrlParam] ?? null,
+      ]
+      |filter
+      |map(sectionToFilterOption)
+      |first,
+    options: _self.getFilterLinks(
+      sectionIds
+        |map(id => craft.app.entries.getSectionById(id))
+        |filter
+        |multisort(['name'])
+        |map(sectionToFilterOption),
+      filterUrlParam,
+    ),
+  } %}
+{% endmacro %}
+
+
+{#
+  Filter Link Utilities 
+#}
+
+{# Generate URL to a filtered index page #}
+{% macro getFilterUrl(option, param, route = true, removeOption = false) %}
+  {% set isCurrentRoute = route is same as(true) %}
+  {% set activeRawParam = craft.router.rawParams[param] ?? '' %}
+  {% set isMultiFilter = activeRawParam is array %}
+  
+  {% return isCurrentRoute
+    ? url(
+      craft.router.urlMerge(isMultiFilter
+        ? {
+          (param): removeOption
+            ? activeRawParam|without(option.slug)
+            : activeRawParam|push(option.slug),
+        }
+        : {
+          (param): removeOption
+            ? null
+            : option.slug,
+        }
+      ),
+      craft.app.request.queryParamsWithoutPath
+    )
+    : craft.router.url("<section:#{route}>", {
+      section: route,
+      (param): option.slug,
+    })
+  %}
+{% endmacro %}
+
+{#
+  Transform a filter option/element into a link object
+  @return {
+    title: Option title,
+    url: URL to filtered index page,
+    link: HTML anchor tag for this option,
+    isActive: bool indicating if the filter is currently active,
+    option: reference to the source option/element object,
+  }
+#}
+{% macro getFilterLink(option, param, route = true) %}
+  {% set isCurrentRoute = route is same as(true) %}
+  {% set activeRawParam = craft.router.rawParams[param] ?? '' %}
+  {% set isMultiFilter = activeRawParam is array %}
+  {% set isActive = isCurrentRoute and (
+    isMultiFilter
+      ? option.slug in activeRawParam
+      : option.slug == activeRawParam
+  ) %}
+  
+  {% set optionAsLink = {
+    url: _self.getFilterUrl(option, param, route, removeOption: isActive),
+    title: option.title,
+    isActive,
+    option,
+  } %}
+  
+  {% return {
+    ...optionAsLink,
+    link: tag('a', { href: optionAsLink.url, text: optionAsLink.title }),
+  } %}
+{% endmacro %}
+
+{% macro getFilterLinks(optionsList, param, route = true) %}
+  {% return optionsList | map(option => _self.getFilterLink(option, param, route)) %}
+{% endmacro %}

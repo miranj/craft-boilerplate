@@ -7,17 +7,21 @@ Release notes for Miranj's Craft Boilerplate starter project.
 ### Front-end
 
 - Added index page views with pagination.
+- Added filters for index page views.
 - The footer now renders both the _Footer_ and _Fineprint_ navigation, as well as the _Site Caption_ and the _Copyright Notice_ fields.
+- Added [Focus](https://alpinejs.dev/plugins/focus) and [Intersect](https://alpinejs.dev/plugins/intersect) Alpine.js plugins.
 - Disabled front-end login and logout URLs.
 
 ### Data Model
 
+- Added a _Events_ index page.
+- Added a _Site Caption_ field for the _Footer_ globalset.
 - Index pages automatically strip out the _Index_ suffix from their titles.
 - Index pages can now customise their headline independent of the page title.
-- Added a _Site Caption_ field for the _Footer_ globalset.
 
 ### Craft
 
+- Added _Router_ plugin.
 - Added a base template for [generated fields](https://craftcms.com/docs/5.x/system/elements.html#generated-fields).
 - Renamed _Heading (Level 2)_ to _Subheading_.
 - Fixed incorrect heading label for _Body (Nested)_ field.

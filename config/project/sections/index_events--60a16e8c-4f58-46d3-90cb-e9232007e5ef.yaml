@@ -1,0 +1,22 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  -
+    uid: b5b9369b-8ab5-44dc-bbaa-058288143025 # Index Page
+handle: index_events
+maxAuthors: 1
+minAuthors: 1
+name: 'Events Index'
+previewTargets:
+  -
+    label: 'Primary entry page'
+    refresh: '1'
+    urlFormat: '{url}'
+propagationMethod: all
+siteSettings:
+  8341919b-4097-4c45-8f3b-97ff673d9ab5: # $CRAFT_SITE_NAME
+    enabledByDefault: true
+    hasUrls: true
+    template: _routers/index.twig
+    uriFormat: events
+type: single

@@ -39,6 +39,10 @@
             |join(' ')
         ),
       robots: indexActiveFilters|length > 1 ? 'noindex',
+      links: [
+        (indexPaginateInfo.getPrevUrl() ?? false) ? { rel: 'prev', href: indexPaginateInfo.getPrevUrl() } : null,
+        (indexPaginateInfo.getNextUrl() ?? false) ? { rel: 'next', href: indexPaginateInfo.getNextUrl() } : null,
+      ]|filter,
     }|filter,
     config: {
       cacheEnabled: false,
@@ -72,6 +76,14 @@
 
 {# Body #}
 {% block index_meta %}
+  {% set _block_index_meta_inner = block('index_meta_inner') %}
+  {% if _block_index_meta_inner|trim is not empty %}
+    <div class="container mt-10">
+      {{ _block_index_meta_inner|raw }}
+    </div>
+  {% endif %}
+{% endblock %}
+{% block index_meta_inner %}
 {% endblock %}
 
 {% block index_body %}
@@ -81,7 +93,7 @@
     {% elseif indexEntries is not empty %}
       {{ block('index_list_flat') }}
     {% elseif block('index_body_empty')|trim %}
-      <div class="{% block index_body_empty_class '' %}">
+      <div class="{% block index_body_empty_class 'container' %}">
         {% apply md|typogrify %}
           {%- block index_body_empty -%}
             No {{ section.name|pluralize }} at the moment.
@@ -118,6 +130,7 @@
   {% include '_components/_lister' with { params: {
     class: block('index_list_flat_class'),
     entries: indexEntries,
+    item_class: 'p-4',
     kind: indexView,
   } } %}
 
@@ -128,7 +141,7 @@
 {# Pagination #}
 {% block index_pagination %}
   {% if indexPaginateInfo.totalPages ?? false > 1 %}
-    <div {{ attr({ class: [
+    <nav aria-label="Pagination" {{ attr({ class: [
       'container py-10 flex justify-between items-center',
     ] }) }}>
 
@@ -136,7 +149,7 @@
       {% set nextUrl = indexPaginateInfo.getNextUrl() %}
       {% if previousUrl or nextUrl %}
         {% set _paginationNav = [{
-          label: 'Previous',
+          label: 'Previous page',
           url: previousUrl,
           class: not previousUrl ? 'text-slate-500',
         },{
@@ -146,25 +159,27 @@
           ]
             |join(' of '),
           url: null,
+          isCurrent: true,
         },{
-          label: 'Next',
+          label: 'Next page',
           url: nextUrl,
           class: not nextUrl ? 'text-slate-500',
         }] %}
 
         {% for item in _paginationNav %}
           {{ tag(item.url ? 'a' : 'span', {
-            html: tag('span', {
-                text: item.label ~ (item.url ? ' page'),
-                class: 'p-2'
-              }
-            ),
+            text: item.label,
             href: item.url ?: null,
-            title: item.url ? item.label ~ ' page' : null,
-            class: item.class ?? null,
+            title: item.url ? item.label : null,
+            class: [
+              'p-2',
+              item.class ?? null,
+            ],
+            'aria-current': (item.isCurrent ?? false) ? 'page' : null,
+            'aria-disabled': not item.url and not (item.isCurrent ?? false) ? 'true' : null,
           }) }}
         {% endfor %}
       {% endif %}
-    </div>
+    </nav>
   {% endif %}
 {% endblock %}

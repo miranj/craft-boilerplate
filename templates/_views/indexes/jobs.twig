@@ -1,19 +1,16 @@
-{# _views/indexes/people #}
+{# _views/indexes/jobs #}
 {% extends '_views/indexes/_default-filtered' %}
-{% from '_helpers/filters' import elementsFilter, optionsFieldFilter, getAllActiveEntriesIds %}
-
-
-
-{# Params #}
-{% set indexGroupBy = ((e) => e.departments.one().title ?? 'Other Departments') %}
-{% set indexGroupByIsRelationField = false %}
+{% from '_helpers/filters' import elementsFilter, getAllActiveEntriesIds %}
 
 
 
 {# Filters #}
 {% block response %}
   {% set indexFilters = indexFilters ?? [
-    optionsFieldFilter('orgPersonRole', 'Role', craft.app.fields.getFieldByHandle('orgPersonRoles')),
+    elementsFilter('opportunityType', 'Role', craft.categories({
+      group: 'opportunityTypes',
+      relatedTo: getAllActiveEntriesIds(section),
+    })),
     elementsFilter('department', 'Department', craft.entries({
       section: 'departments',
       relatedTo: getAllActiveEntriesIds(section),
