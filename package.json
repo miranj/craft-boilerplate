@@ -63,13 +63,16 @@
     "gulp-terser-js": "^5.2.2",
     "gulp-uglify": "^3.0.1",
     "husky": "^8.0.1",
-    "lint-staged": "^13.0.3",
+    "lint-staged": "^17.0.0",
     "postcss": "^8.4.31",
     "postcss-import": "^14.0.2",
-    "postcss-inline-svg": "^4.1.0",
+    "postcss-inline-svg": "^6.0.0",
     "postcss-nesting": "^13.0.1",
     "prettier": "^3.3.2",
     "svgo": "^4.0.1",
     "through2": "^4.0.2"
+  },
+  "allowScripts": {
+    "fsevents@2.3.3": true
   }
 }

@@ -78,6 +78,8 @@ Release notes for Miranj's Craft Boilerplate starter project.
 
 - Upgraded Node version to 24 LTS “Krypton”.
 - Ignore `.sql` files from version control.
+- Updated lint-staged to 17.5.0.
+- Updated postcss-inline-svg to 6.0.0.
 
 ## 3.5.0 - 2026-02-17
 
