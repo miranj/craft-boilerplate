@@ -21,13 +21,10 @@ Release notes for Miranj's Craft Boilerplate starter project.
 
 ### Craft
 
-- Added _Router_ plugin.
 - Added a base template for [generated fields](https://craftcms.com/docs/5.x/system/elements.html#generated-fields).
 - Renamed _Heading (Level 2)_ to _Subheading_.
 - Fixed incorrect heading label for _Body (Nested)_ field.
-
-### System
-
+- Added _Router_ plugin.
 - Update Craft CMS to 5.11.1.
 - Upgraded CKEditor to 5.7.0.
 - Updated Field Manager to 4.0.4.

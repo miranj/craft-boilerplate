@@ -39,6 +39,7 @@ This starter project includes:
   - [Obfuscator](https://github.com/miranj/craft-obfuscator)
   - [oEmbed](https://github.com/wrav/oembed)
   - [Retcon](https://github.com/mmikkel/Retcon-Craft)
+  - [Router](https://github.com/miranj/craft-router)
   - [SEOMate](https://github.com/vaersaagod/seomate)
   - [Store Hours](https://github.com/craftcms/store-hours)
   - [Twig Perversion](https://github.com/marionnewlevant/craft-twig_perversion)
