@@ -12,9 +12,7 @@ Release notes for Miranj's Craft Boilerplate starter project.
 ### Craft
 
 - Added _Router_ plugin.
-
-### Craft
-
+- Added [Alpine.js](https://alpinejs.dev/) plugins - [Focus](https://alpinejs.dev/plugins/focus) and [Intersect](https://alpinejs.dev/plugins/intersect).
 - Renamed _Heading (Level 2)_ to _Subheading_.
 - Fixed incorrect heading label for _Body (Nested)_ field.
 

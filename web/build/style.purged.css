@@ -137,6 +137,9 @@
   progress {
     vertical-align: baseline;
   }
+  summary {
+    display: list-item;
+  }
   ol,
   ul {
     list-style: none;
