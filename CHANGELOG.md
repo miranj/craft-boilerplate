@@ -12,12 +12,9 @@ Release notes for Miranj's Craft Boilerplate starter project.
 
 ### Data Model
 
-- Added a _Events_ index page.
-
-### Data Model
-
 - Index pages automatically strip out the _Index_ suffix from their titles.
 - Index pages can now customise their headline independent of the page title.
+- Added a _Events_ index page.
 
 ### Craft
 
