@@ -76,6 +76,7 @@ Release notes for Miranj's Craft Boilerplate starter project.
 
 ### System
 
+- Upgraded Node version to 24 LTS “Krypton”.
 - Ignore `.sql` files from version control.
 
 ## 3.5.0 - 2026-02-17

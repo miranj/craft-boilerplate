@@ -1,11 +1,11 @@
 {
   "craftcp.css": "sha256-WZt/O8upCOUUDISI+GNthlSbOqB1V+xMIkO/eftXSsQ=",
   "deferred.js": "sha256-fw1NVysl9gXjF38+cV5cPbcWDVRtdFI054mOycBla4U=",
-  "deferred.min.js": "sha256-jbbxqz7W+Jw/geJRDz+iDK9ldkU+MsbonkRyjNWFKmA=",
+  "deferred.min.js": "sha256-KRCVU726NfQ0burYio8s2oiWyoI9ocmaMMje/3ZH+N0=",
   "instant.js": "sha256-B2iaWvgA0cj+jFBa+1MTqbfv7BfWt4qWj51wO1GBBIM=",
   "instant.min.js": "sha256-Rxz+wtupSyL2GAclaOn39pZyUIoV9EjoWE3HcNl0/y8=",
   "lite-youtube.js": "sha256-AeKWXZZ2xQvWIR0d81LUzBAmHkcJtmbd6g6lb5cfkak=",
-  "lite-youtube.min.js": "sha256-GRSxJS7ZNeSF7liGc6dyL98yy8xFpgXMQGmRU13d8Uw=",
+  "lite-youtube.min.js": "sha256-X8aM+DU1uT6qp/V2yyefHa/NzHrQY/AjfPmCEnT4G2U=",
   "photoswipe-lightbox.js": "sha256-t1/oObfbfBMlXUGrunED1CkIIqrPDU/p6oYypx0RVj8=",
   "photoswipe-lightbox.min.js": "sha256-ym7CTOfYB+D2ePxXuL8C7F+j+4viidm1QI4cjS/06mg=",
   "photoswipe.js": "sha256-JDKwWLDTvSWukzyoxB5nE4jt1r8BaUMEkXrMilAso6Q=",
@@ -16,5 +16,5 @@
   "style.purged.css": "sha256-GDa/Js811ULXwUhjWcvy3laW7O+GlZeoW5kn5ZNgkMk=",
   "style.purged.min.css": "sha256-OQRKCjl1bokzcJfGwZA9y5YMXvP9NqsUd280rt0fFZo=",
   "urgent.js": "sha256-CdHwhucjsWxf3KAMIJ6GUpOItAw6kjXsHKKas6N/z8Q=",
-  "urgent.min.js": "sha256-7QV74xoBGpZ8s60GCPqgL9HehwETp0lNdBzoTGfXQLM="
+  "urgent.min.js": "sha256-ffmpRqJ1L+GeVFBDwWF7AMKv1upknx6eZTkJVJbIxVk="
 }
