@@ -64,6 +64,7 @@ fieldLayouts:
             handle: highlight
             instructions: null
             label: 'Highlight Link'
+            oldFieldUid: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField

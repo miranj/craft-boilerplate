@@ -8,6 +8,7 @@ entryTypes:
     uid: 3aba8130-5dea-47d5-ad23-a536e8b9760a # Resource: Link
 handle: resources
 maxAuthors: 1
+minAuthors: 1
 name: Resources
 previewTargets:
   -

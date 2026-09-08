@@ -5,6 +5,7 @@ entryTypes:
     uid: a404ee2c-1d0d-4da9-a736-cd565a4d2605 # Page
 handle: pageNotFound
 maxAuthors: 1
+minAuthors: 1
 name: '404 Page Not Found'
 previewTargets:
   -

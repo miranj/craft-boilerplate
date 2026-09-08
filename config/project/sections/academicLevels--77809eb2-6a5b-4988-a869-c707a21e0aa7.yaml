@@ -5,6 +5,7 @@ entryTypes:
     uid: 9f12d494-ef8f-4777-8ff0-bebc044b1264 # Academic Level
 handle: academicLevels
 maxAuthors: 1
+minAuthors: 1
 name: 'Academic Levels'
 previewTargets:
   -

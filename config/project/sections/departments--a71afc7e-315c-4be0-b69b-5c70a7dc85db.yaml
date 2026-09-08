@@ -5,6 +5,7 @@ entryTypes:
     uid: c8c8ccd9-ebdc-48dd-bac8-029cb3d04923 # Department
 handle: departments
 maxAuthors: 1
+minAuthors: 1
 name: Departments
 previewTargets:
   -

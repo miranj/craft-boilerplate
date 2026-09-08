@@ -7,6 +7,7 @@ entryTypes:
     uid: b5b9369b-8ab5-44dc-bbaa-058288143025 # Index Page
 handle: homepage
 maxAuthors: 1
+minAuthors: 1
 name: 'Home Page'
 previewTargets:
   -

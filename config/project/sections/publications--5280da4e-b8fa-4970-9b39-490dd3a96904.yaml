@@ -5,6 +5,7 @@ entryTypes:
     uid: 9b8054bc-bad1-4e95-b74b-e722465d36b9 # Publication
 handle: publications
 maxAuthors: 1
+minAuthors: 1
 name: Publications
 previewTargets:
   -

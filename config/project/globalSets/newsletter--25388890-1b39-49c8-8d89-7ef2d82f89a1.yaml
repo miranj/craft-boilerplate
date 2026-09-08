@@ -14,6 +14,7 @@ fieldLayouts:
             handle: embedcode
             instructions: null
             label: 'Newsletter Form Embed Code'
+            oldFieldUid: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField

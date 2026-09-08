@@ -1,4 +1,4 @@
-dateModified: 1788417283
+dateModified: 1788815552
 elementSources:
   craft\elements\Category:
     -
@@ -570,7 +570,6 @@ meta:
     1ba3b532-e3ed-43db-93a6-00c05efcc84f: 'Resource Types' # Resource Types
     1be17f42-da77-4201-b98f-1221dedc25e9: 'Social: WhatsApp' # Social: WhatsApp
     1e38f7ad-622b-4515-9e15-d3998d50cfb6: 'Block: Call To Action' # Block: Call To Action
-    2aa60aa0-5295-4a25-9725-a63672cd8b2f: 'Builder (Nested)' # Builder (Nested)
     2b2b62be-5ea6-4d06-96a3-39fbff3667bf: Organisation # Organisation
     2b5c7d16-3a52-4e20-9827-a9099204e49c: 'Content Blocks: Programmes' # Content Blocks: Programmes
     2dba88e9-c749-410f-adf2-c56fc9ee28a8: Multimedia # Multimedia
@@ -592,7 +591,6 @@ meta:
     6fd87453-1bda-4bb9-8c8d-4dd36185e75d: 'People: External Contributor' # People: External Contributor
     7a8f449f-4cfb-49db-8656-d7551c298f4c: Authors # Authors
     7a544871-c8af-4dc8-83ae-dc5001bc8203: Tenders # Tenders
-    7b8b18a2-8e96-4b93-bfaa-34a1d9fa86e1: Rich # Rich
     7da8d57d-2f04-4b73-a787-e23c441a48f4: 'Employment Types' # Employment Types
     7e194f18-cd05-4cd2-bc77-67272aaa31a3: Testimonial # Testimonial
     7f2e3eef-0a17-44d0-b7a2-06e593deebf5: 'Call To Action' # Call To Action
@@ -718,7 +716,6 @@ meta:
     de677f5b-6642-4086-ac1a-3e95990c19d0: 'Blog Post' # Blog Post
     df899104-7d07-489b-954f-20ec40505f31: 'Opportunity Types' # Opportunity Types
     e0240263-c706-4560-ad08-6682ee2135f1: Organisations # Organisations
-    e03f52b8-38a8-493c-b27a-3c61c5532f18: Builder # Builder
     e5d70b3c-403b-416d-b670-a93437ce427b: 'User Managers' # User Managers
     e6b6d0c4-ef5a-41fd-abdb-547128db1c52: Locations # Locations
     e421ceea-a2f2-459f-88b9-2695f86047bd: Images # Images
@@ -735,7 +732,6 @@ meta:
     f3993d0e-4040-4e0b-85bc-b4db5e098143: 'Public Schema' # Public Schema
     fa35f4cd-b237-4493-8c4e-4e25855164ff: 'Block: Rich Text Collapse' # Block: Rich Text Collapse
     fad3fe56-0b6b-46c4-a97b-b7fb98847f3c: 'Media Embed' # Media Embed
-    fd23984e-764a-4004-9834-8efe25601ba5: Simple # Simple
     febb1068-1cf0-4781-8a41-bf420bb95e2f: Jobs # Jobs
 plugins:
   child-me:
@@ -745,7 +741,7 @@ plugins:
   ckeditor:
     edition: standard
     enabled: true
-    schemaVersion: 3.0.0.0
+    schemaVersion: 5.6.0.0
   element-index-defaults:
     edition: standard
     enabled: true
@@ -821,5 +817,5 @@ system:
   live: true
   name: $CRAFT_SITE_NAME
   retryDuration: null
-  schemaVersion: 5.9.0.8
+  schemaVersion: 5.11.0.2
   timeZone: Asia/Kolkata

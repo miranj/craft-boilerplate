@@ -13,6 +13,24 @@ Release notes for Miranj's Craft Boilerplate starter project.
 
 - Added _Router_ plugin.
 
+### Craft
+
+- Renamed _Heading (Level 2)_ to _Subheading_.
+- Fixed incorrect heading label for _Body (Nested)_ field.
+
+### System
+
+- Update Craft CMS to 5.11.1.
+- Upgraded CKEditor to 5.7.0.
+- Updated Field Manager to 4.0.4.
+- Updated Image Resizer to 4.0.8.
+- Upgraded Imager X to 6.1.0.
+- Updated Navigation to 3.0.22.
+- Updated oEmbed to 3.2.2.
+- Updated Retcon to 3.2.3.
+- Updated SEOMate to 3.3.1.
+- Updated Typogrify to 5.0.3.
+
 ## 3.6.0 - 2026-09-04
 
 ### Front-end

@@ -17,6 +17,7 @@ fieldLayouts:
             handle: video
             instructions: 'Only video embeds will be displayed.'
             label: Video
+            oldFieldUid: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -33,6 +34,7 @@ fieldLayouts:
             handle: quote
             instructions: null
             label: Quote
+            oldFieldUid: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -56,6 +58,7 @@ fieldLayouts:
             handle: null
             instructions: null
             label: Type
+            oldFieldUid: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -84,6 +87,7 @@ fieldLayouts:
             handle: existingAuthor
             instructions: null
             label: Author
+            oldFieldUid: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -112,6 +116,7 @@ fieldLayouts:
             handle: customName
             instructions: null
             label: Name
+            oldFieldUid: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -140,6 +145,7 @@ fieldLayouts:
             handle: customPortrait
             instructions: null
             label: Portrait
+            oldFieldUid: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -156,6 +162,7 @@ fieldLayouts:
             handle: customDesignation
             instructions: null
             label: Designation
+            oldFieldUid: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -178,6 +185,7 @@ fieldLayouts:
             handle: null
             instructions: 'This title will not appear on the front-end.'
             label: 'Internal Label'
+            oldFieldUid: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField

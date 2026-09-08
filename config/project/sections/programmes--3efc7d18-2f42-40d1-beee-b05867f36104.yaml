@@ -5,6 +5,7 @@ entryTypes:
     uid: c4fb7c86-c508-4410-9362-e47f5b604631 # Programme
 handle: programmes
 maxAuthors: 1
+minAuthors: 1
 name: Programmes
 previewTargets:
   -
