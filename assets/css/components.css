@@ -26,3 +26,17 @@
     opacity: 1;
     background-image: none;
 }
+
+/* Buttons */
+/* button styles */
+.button-dropdown,
+.button-dropdown-active {
+    @apply p-2 border;
+    @apply inline-flex gap-6 items-center justify-between;
+    @apply motion-safe:transition;
+}
+
+/* button internals */
+.button-internal-icon {
+    @apply size-5 relative overflow-hidden;
+}

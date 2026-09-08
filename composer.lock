@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "56ea32a13bd4d397d47376ab7d6ca734",
+    "content-hash": "6e65c027956860de68106ee9e841242b",
     "packages": [
         {
             "name": "aodihis/video-utils",
@@ -3453,6 +3453,66 @@
                 "source": "https://github.com/miranj/craft-obfuscator"
             },
             "time": "2024-04-13T06:38:41+00:00"
+        },
+        {
+            "name": "miranj/craft-router",
+            "version": "1.7.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/miranj/craft-router.git",
+                "reference": "5ae2ffb321653964775271fc1d9e22cafefced55"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/miranj/craft-router/zipball/5ae2ffb321653964775271fc1d9e22cafefced55",
+                "reference": "5ae2ffb321653964775271fc1d9e22cafefced55",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^3.7.0 || ^4.0 || ^5.0",
+                "illuminate/collections": "^9.1.0 || ^10.42",
+                "php": "^7.2.5 || ^8.0"
+            },
+            "require-dev": {
+                "craftcms/phpstan": "dev-main",
+                "craftcms/rector": "dev-main"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Router",
+                "class": "miranj\\router\\Plugin",
+                "handle": "router",
+                "changelogUrl": "https://raw.githubusercontent.com/miranj/craft-router/v1/CHANGELOG.md"
+            },
+            "autoload": {
+                "psr-4": {
+                    "miranj\\router\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Miranj",
+                    "homepage": "https://miranj.in"
+                }
+            ],
+            "description": "Use URL segments as filtering criteria on an entry query.",
+            "keywords": [
+                "Craft",
+                "craftcms",
+                "filters",
+                "router",
+                "url"
+            ],
+            "support": {
+                "docs": "https://github.com/miranj/craft-router/blob/v1/README.md",
+                "issues": "https://github.com/miranj/craft-router/issues",
+                "source": "https://github.com/miranj/craft-router"
+            },
+            "time": "2025-11-27T19:16:46+00:00"
         },
         {
             "name": "ml/iri",
@@ -12064,5 +12124,5 @@
     "platform-overrides": {
         "php": "8.2"
     },
-    "plugin-api-version": "2.6.0"
+    "plugin-api-version": "2.9.0"
 }

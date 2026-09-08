@@ -9,7 +9,7 @@
 
 {% set defaultSchemaProps = {
   title: entrySeomateMeta.meta.title ?? entry.title,
-  description: entrySeomateMeta.meta.description,
+  description: entrySeomateMeta.meta.description ?? '',
   url: entry.url,
   mainEntityOfPage: mainEntityOfPage ?? null,
   dateModified: entry.dateUpdated ?? null,

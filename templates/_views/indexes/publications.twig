@@ -1,21 +1,13 @@
-{# indexes/programmes #}
+{# _views/indexes/publications #}
 {% extends '_views/indexes/_default-filtered' %}
 {% from '_helpers/filters' import elementsFilter, getAllActiveEntriesIds %}
 
 
 
-{# Params #}
-{% set indexGroupBy = 'academicLevel' %}
-{% set indexGroupByIsRelationField = true %}
-
 {# Filters #}
 {% block response %}
   {% set indexFilters = indexFilters ?? [
-    elementsFilter('academicLevel', 'Level', craft.entries({
-      section: 'academicLevels',
-      relatedTo: getAllActiveEntriesIds(section),
-    })),
-    elementsFilter('department', 'Department', craft.entries({
+    elementsFilter('department', 'Departments', craft.entries({
       section: 'departments',
       relatedTo: getAllActiveEntriesIds(section),
       orderBy: 'title asc',
