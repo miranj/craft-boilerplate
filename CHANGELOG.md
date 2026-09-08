@@ -7,6 +7,7 @@ Release notes for Miranj's Craft Boilerplate starter project.
 ### Front-end
 
 - Added index page views with pagination.
+- Disabled front-end login and logout URLs.
 
 ### Data Model
 

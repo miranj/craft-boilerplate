@@ -41,6 +41,8 @@ return [
         'omitScriptNameInUrls' => true,
         'disallowRobots' => true,
         'sendPoweredByHeader' => false,
+        'loginPath' => false,
+        'logoutPath' => false,
         'convertFilenamesToAscii' => true,
         'defaultImageQuality' => 80,
         'defaultTemplateExtensions' => ['twig'],
