@@ -97,7 +97,7 @@
 {% endif %}
 
 {% if not periodIsValid and craft.app.request.isPreview %}
-  <span class="bg-theme-dark text-brand-white">
+  <span class="border:2px solid red;color:red;padding:0 0.4em;text-transform:uppercase">
     Error: The end date must be after the start date.
   </span>
 {% endif %}
