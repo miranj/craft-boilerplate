@@ -1,4 +1,4 @@
-# Miranj Craft Boilerplate Changelog
+    # Miranj Craft Boilerplate Changelog
 
 Release notes for Miranj's Craft Boilerplate starter project.
 
@@ -6,7 +6,7 @@ Release notes for Miranj's Craft Boilerplate starter project.
 
 ### Front-end
 
-- Added [Alpine.js](https://alpinejs.dev/) plugins - [Focus](https://alpinejs.dev/plugins/focus), [Intersect](https://alpinejs.dev/plugins/intersect) and [Resize](https://alpinejs.dev/plugins/resize).
+- Added [Alpine.js](https://alpinejs.dev/) plugins - [Focus](https://alpinejs.dev/plugins/focus) and [Intersect](https://alpinejs.dev/plugins/intersect).
 
 ## 3.6.0 - 2026-09-04
 
