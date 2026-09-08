@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "56ea32a13bd4d397d47376ab7d6ca734",
+    "content-hash": "6e65c027956860de68106ee9e841242b",
     "packages": [
         {
             "name": "aodihis/video-utils",
