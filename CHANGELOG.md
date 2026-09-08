@@ -8,11 +8,15 @@ Release notes for Miranj's Craft Boilerplate starter project.
 
 - Added index page views with pagination.
 - Added filters for index page views.
+- Added [Alpine.js](https://alpinejs.dev/) plugins - [Focus](https://alpinejs.dev/plugins/focus) and [Intersect](https://alpinejs.dev/plugins/intersect).
+
+### Data Model
+
+- Added a _Events_ index page.
 
 ### Craft
 
 - Added _Router_ plugin.
-- Added [Alpine.js](https://alpinejs.dev/) plugins - [Focus](https://alpinejs.dev/plugins/focus) and [Intersect](https://alpinejs.dev/plugins/intersect).
 - Renamed _Heading (Level 2)_ to _Subheading_.
 - Fixed incorrect heading label for _Body (Nested)_ field.
 
