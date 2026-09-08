@@ -14,6 +14,7 @@ Release notes for Miranj's Craft Boilerplate starter project.
 - Added Alpine.js Intersect plugin.
 - Updated Alpine.js to 3.17.2.
 - Updated Alpine.js Collapse plugin to 3.17.2.
+- Updated Tailwind CSS to 4.3.3.
 
 ### Data Model
 
