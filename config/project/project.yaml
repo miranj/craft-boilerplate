@@ -1,4 +1,4 @@
-dateModified: 1788879137
+dateModified: 1788901073
 elementSources:
   craft\elements\Category:
     -
@@ -748,10 +748,6 @@ plugins:
     enabled: true
     schemaVersion: 1.0.0
   environment-label:
-    edition: standard
-    enabled: true
-    schemaVersion: 1.0.0
-  field-manager:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0

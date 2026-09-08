@@ -35,6 +35,11 @@ Release notes for Miranj's Craft Boilerplate starter project.
 - Updated Retcon to 3.2.3.
 - Updated SEOMate to 3.3.1.
 - Updated Typogrify to 5.0.3.
+- Removed Field Manager plugin.
+
+### System
+
+- Removed the Field Library.
 
 ## 3.6.0 - 2026-09-04
 

@@ -37,7 +37,6 @@
     "ttempleton/craft-nocache": "^3.0",
     "vaersaagod/seomate": "^3.0@beta",
     "verbb/element-index-defaults": "^4.0",
-    "verbb/field-manager": "^4.0",
     "verbb/image-resizer": "^4.0",
     "verbb/navigation": "^3.0",
     "vlucas/phpdotenv": "^5.6",

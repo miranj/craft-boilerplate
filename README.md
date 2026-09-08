@@ -30,7 +30,6 @@ This starter project includes:
   - [CKEditor](https://github.com/craftcms/ckeditor)
   - [Element Index Defaults](https://github.com/verbb/element-index-defaults)
   - [Environment Label](https://github.com/TopShelfCraft/Environment-Label)
-  - [Field Manager](https://github.com/verbb/field-manager)
   - [Image Resizer](https://github.com/verbb/image-resizer)
   - [Imager X](https://github.com/spacecatninja/craft-imager-x)
   - [Minify](https://github.com/nystudio107/craft-minify)
@@ -46,7 +45,6 @@ This starter project includes:
   - [Typogrify](https://github.com/nystudio107/craft-typogrify)
   - [Video Utils](https://github.com/aodihis/craftcms-video-utils)
 - [Prettier](https://prettier.io/) for auto-formatting (all non-Twig) code.
-- [Ready to import fields](https://github.com/miranj/craft-boilerplate/tree/dev/field-library) to speed up the project development process.
 
 ## Usage
 

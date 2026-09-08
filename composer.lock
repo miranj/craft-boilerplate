@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6e65c027956860de68106ee9e841242b",
+    "content-hash": "f97c3d59b3d622aa912a88459ffd390c",
     "packages": [
         {
             "name": "aodihis/video-utils",
@@ -9780,70 +9780,6 @@
             "time": "2025-07-18T14:04:14+00:00"
         },
         {
-            "name": "verbb/field-manager",
-            "version": "4.0.4",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/verbb/field-manager.git",
-                "reference": "592b96f904df8e31c9e0d197a2d7fbddd64528a4"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/verbb/field-manager/zipball/592b96f904df8e31c9e0d197a2d7fbddd64528a4",
-                "reference": "592b96f904df8e31c9e0d197a2d7fbddd64528a4",
-                "shasum": ""
-            },
-            "require": {
-                "craftcms/cms": "^5.0.0",
-                "php": "^8.2",
-                "verbb/base": "^3.0.0"
-            },
-            "type": "craft-plugin",
-            "extra": {
-                "name": "Field Manager",
-                "class": "verbb\\fieldmanager\\FieldManager",
-                "handle": "field-manager",
-                "changelogUrl": "https://raw.githubusercontent.com/verbb/field-manager/craft-5/CHANGELOG.md"
-            },
-            "autoload": {
-                "psr-4": {
-                    "verbb\\fieldmanager\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Verbb",
-                    "homepage": "https://verbb.io"
-                }
-            ],
-            "description": "Manage your fields and field groups with ease.",
-            "keywords": [
-                "Craft",
-                "cms",
-                "craft-plugin",
-                "craftcms",
-                "field manager"
-            ],
-            "support": {
-                "docs": "https://github.com/verbb/field-manager",
-                "email": "support@verbb.io",
-                "issues": "https://github.com/verbb/field-manager/issues?state=open",
-                "rss": "https://github.com/verbb/field-manager/commits/v2.atom",
-                "source": "https://github.com/verbb/field-manager"
-            },
-            "funding": [
-                {
-                    "url": "https://github.com/verbb",
-                    "type": "github"
-                }
-            ],
-            "time": "2026-05-14T00:59:57+00:00"
-        },
-        {
             "name": "verbb/image-resizer",
             "version": "4.0.8",
             "source": {
@@ -12124,5 +12060,5 @@
     "platform-overrides": {
         "php": "8.2"
     },
-    "plugin-api-version": "2.9.0"
+    "plugin-api-version": "2.6.0"
 }
