@@ -6,6 +6,23 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
+            dateAdded: '2026-09-08T14:50:18+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 386721be-1ee4-4e3b-b22c-7fb3dfded3ff # Simple Text
+            handle: caption
+            instructions: null
+            label: 'Site Caption'
+            oldFieldUid: 386721be-1ee4-4e3b-b22c-7fb3dfded3ff # Simple Text
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: f5e0c6b4-dfe4-490e-bdd7-ac5c55c06cf1
+            userCondition: null
+            warning: null
+            width: 100
+          -
             dateAdded: '2024-12-17T21:29:37+00:00'
             editCondition: null
             elementCondition: null

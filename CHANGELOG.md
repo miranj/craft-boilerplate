@@ -13,6 +13,7 @@ Release notes for Miranj's Craft Boilerplate starter project.
 
 - Index pages automatically strip out the _Index_ suffix from their titles.
 - Index pages can now customise their headline independent of the page title.
+- Added a _Site Caption_ field for the _Footer_ globalset.
 
 ### Craft
 
