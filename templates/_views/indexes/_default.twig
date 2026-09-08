@@ -40,12 +40,6 @@
         ),
       robots: indexActiveFilters|length > 1 ? 'noindex',
       links: [
-        {
-          rel: 'alternate',
-          type: 'application/rss+xml',
-          title: "#{siteName} #{indexTitle} Feed",
-          href: entry.url ~ '/feed.xml',
-        },
         (indexPaginateInfo.getPrevUrl() ?? false) ? { rel: 'prev', href: indexPaginateInfo.getPrevUrl() } : null,
         (indexPaginateInfo.getNextUrl() ?? false) ? { rel: 'next', href: indexPaginateInfo.getNextUrl() } : null,
       ]|filter,
