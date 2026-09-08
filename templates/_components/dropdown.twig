@@ -38,9 +38,10 @@
     <span class="line-clamp-2 grow">
       {{ option.title }}
     </span>
-    {% if option.isActive %}
-      <span class="text-sm px-2" aria-hidden="true"> X </span>
-    {% endif %}
+    {{ option.isActive ? svgIcon('@icons/x-mark.svg')
+      |attr({
+        class: ['w-4'],
+    }) }}
   </a>
 {% endmacro %}
 
