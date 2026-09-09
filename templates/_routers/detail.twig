@@ -3,10 +3,7 @@
     Detail Router
   #}
   
-  {%- include [
-    entry.section ? '_views/details/' ~ entry.section.handle ~ '-' ~ entry.type.handle,
-    entry.section ? '_views/details/' ~ entry.section.handle,
-    '_views/details/_' ~ entry.type.handle,
-    '_views/details/_default',
-  ]|filter -%}
+  {% set view = 'details' %}
+  {% set element = entry ?? category %}
+  {%- extends '_routers/_base' -%}
 {% endminify %}

@@ -29,6 +29,7 @@ Release notes for Miranj's Craft Boilerplate starter project.
 ### Craft
 
 - Added a base template for [generated fields](https://craftcms.com/docs/5.x/system/elements.html#generated-fields).
+- Refactored view routers to extend a common base template.
 - Renamed _Heading (Level 2)_ to _Subheading_.
 - Fixed incorrect heading label for _Body (Nested)_ field.
 - Added _Router_ plugin.

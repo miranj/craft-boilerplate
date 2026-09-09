@@ -1,0 +1,27 @@
+{#
+  Base Router
+#}
+
+{% set view = view ?? '' %}
+{% set templatePaths = ['layouts/blank'] %}
+
+{% if view %}
+  {%- set templatePaths = [
+      element is instance of ('craft\\elements\\Category') ? element.group.handle,
+      ...(
+        element is instance of ('craft\\elements\\Entry')
+        ? [
+          element.section ? element.section.handle ~ '-' ~ element.type.handle,
+          element.section ? element.section.handle,
+          element.type.handle,
+        ]
+        : []
+      ),
+      '_default',
+    ]
+    | filter
+    | map(path => '_views/' ~ view ~ '/' ~ path)
+  %}
+{% endif %}
+
+{%- extends templatePaths -%}
