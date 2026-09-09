@@ -16,6 +16,7 @@ Release notes for Miranj's Craft Boilerplate starter project.
 - Updated Alpine.js Collapse plugin to 3.17.2.
 - Updated Tailwind CSS to 4.3.3.
 - Removed dark mode styling.
+- Removed legacy `.aspect-box` CSS utilities.
 
 ### Data Model
 
