@@ -63,7 +63,7 @@
       ],
     }) }}>
       {% if footer.caption %}
-        <div class="sm:max-w-1/4 w-full">
+        <div class="sm:max-w-1/4 w-full richtext">
           {{ normaliseRichtext(footer.caption) }}
         </div>
       {% endif %}
@@ -82,13 +82,15 @@
         'border-t',
       ],
     }) }}>
-      {% if footer.copyright %}
-        {{ normaliseRichtext(footer.copyright) }}
-      {% else %}
-        <p>
-          &copy; {{ now|date('Y') }} {{ siteName }}
-        </p>
-      {% endif %}
+      <div class="richtext">
+        {% if footer.copyright %}
+          {{ normaliseRichtext(footer.copyright) }}
+        {% else %}
+          <p>
+            &copy; {{ now|date('Y') }} {{ siteName }}
+          </p>
+        {% endif %}
+      </div>
       {% include '_components/footerNav' with { params: {
         handle: 'finePrint',
         profile: 'finePrint',
