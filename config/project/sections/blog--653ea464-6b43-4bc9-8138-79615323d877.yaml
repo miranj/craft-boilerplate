@@ -13,9 +13,9 @@ previewTargets:
     refresh: '1'
     urlFormat: '{url}'
   -
-    label: 'Teaser view'
+    label: 'Link previews'
     refresh: '1'
-    urlFormat: '_preview/teaser/{uid}'
+    urlFormat: '_preview/all/{canonicalUid}'
 propagationMethod: all
 siteSettings:
   8341919b-4097-4c45-8f3b-97ff673d9ab5: # $CRAFT_SITE_NAME

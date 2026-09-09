@@ -22,6 +22,7 @@ Release notes for Miranj's Craft Boilerplate starter project.
 
 - Added a _Events_ index page.
 - Added a _Site Caption_ field for the _Footer_ globalset.
+- Added Link previews for all Channel and Structure sections with URLs.
 - Index pages automatically strip out the _Index_ suffix from their titles.
 - Index pages can now customise their headline independent of the page title.
 
