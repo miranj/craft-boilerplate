@@ -15,7 +15,7 @@
   
   {# The view types to show for 'all' views #}
   {% set defaultViewTypes = {
-    teaser: 'max-w-md',
+    teaser: 'max-w-168 mx-auto',
   } %}
   {# Additional view types rendered only when directly invoked #}
   {% set optionalViewTypes = {
@@ -49,10 +49,10 @@
 
 
 {# Render #}
-{% block body_class 'container py-2' %}
+{% block body_class 'py-2' %}
 {% block page %}
   {% for viewType, listerClass in viewTypes %}
-    <div class="bg-white py-20 my-8 {{ loop.length > 1 ? 'shadow-2xl' }}">
+    <div class="py-20 my-8 {{ loop.length > 1 ? 'shadow-2xl' }}">
       <div class="container">
         {% if viewType == 'partial' %}
           <div class="{{ listerClass }}">
