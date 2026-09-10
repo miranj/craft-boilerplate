@@ -6,7 +6,7 @@ Release notes for Miranj's Craft Boilerplate starter project.
 
 ### Front-end
 
-- Detail pages now render their body field.
+- Detail pages now render their body field (including nested Image blocks).
 
 ## 3.7.0 - 2026-09-09
 

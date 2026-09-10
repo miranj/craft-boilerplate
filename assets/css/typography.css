@@ -35,6 +35,9 @@ a:hover {
 .prose-body {
     @apply text-base;
 }
+.prose-sm {
+    @apply text-sm;
+}
 .prose-meta {
     @apply text-sm;
 }

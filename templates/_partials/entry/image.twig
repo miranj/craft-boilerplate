@@ -1,0 +1,41 @@
+{# Image entrytype #}
+
+
+
+{#
+  Params
+#}
+{% set imageAsset = params.asset ?? collect(entry.image ?? []).one() %}
+{% set imagePreset = params.preset ?? 'content' %}
+{% set imageWrapperClass = params.wrapper_class ?? 'my-7' %}
+{% set imageClass = params.class ?? '' %}
+{% set imageCaption = params.caption ?? entry.caption ?? '' %}
+{% set imageCaptionClass = params.caption_class ?? 'prose-sm mt-2 text-gray-500' %}
+{% set imageZoom = params.zoom ?? true %}
+
+
+
+{#
+  Render
+#}
+{% if imageAsset %}
+  <figure {{ attr({
+    class: [
+      imageWrapperClass,
+    ],
+  }) }}>
+
+    {% include '_components/_image' with { params: {
+      asset: imageAsset,
+      preset: imagePreset,
+      zoom: imageZoom,
+      class: imageClass,
+    } } %}
+
+    {% if imageCaption %}
+      <figcaption {{ attr({ class: imageCaptionClass }) }}>
+        {{ imageCaption }}
+      </figcaption>
+    {% endif %}
+  </figure>
+{% endif %}

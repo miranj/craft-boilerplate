@@ -509,7 +509,7 @@
     class: collect([
       imageClass,
       imageLazyload ? 'lazyload no-js:hidden' : 'lazyloaded',
-      imageHasZoom ? 'group-hover:scale-104 sm:group-hover:scale-102 group-hover:shadow-lg transition duration-300',
+      imageHasZoom ? 'group-hover:scale-104 sm:group-hover:scale-102 md:group-hover:scale-101 group-hover:shadow-lg md:group-hover:shadow-md transition duration-200',
     ]).flatten().all(),
     style: imageFocalPoint ? 'object-position: ' ~ imageFocalPoint : '',
     src: imageDefault.url,
