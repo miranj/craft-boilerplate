@@ -32,10 +32,10 @@
 
 
 
-  {# Biz Logic #}
-  {% set embedIsApplyYouTubeLiteFacade = craft.app.config.custom.useYouTubeFacadeLoading
-    ? embedField.url|isYoutube and embedField.url|getYoutubeId
-    : false %}
+{# Biz Logic #}
+{% set embedIsApplyYouTubeLiteFacade = craft.app.config.custom.useYouTubeFacadeLoading
+  ? embedField.url|isYoutube and embedField.url|getYoutubeId
+  : false %}
 
 
 

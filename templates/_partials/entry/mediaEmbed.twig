@@ -1,0 +1,20 @@
+{# Media entrytype #}
+
+
+
+{# Params #}
+{% set mediaEmbed = params.embed ?? entry.mediaEmbed %}
+{% set mediaCaption = params.caption ?? entry.caption ?? '' %}
+{% set mediaClass = params.class ?? 'my-7' %}
+{% set mediaCaptionClass = params.caption_class ?? 'prose-sm mt-2 text-gray-500 inline-links' %}
+
+
+
+
+{# Render #}
+{% include '_components/embed' with { params: {
+  embed: mediaEmbed,
+  class: mediaClass,
+  caption: mediaCaption,
+  caption_class: mediaCaptionClass,
+} } %}

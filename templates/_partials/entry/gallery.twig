@@ -7,7 +7,7 @@
 {% set galleryZoom = params.zoom ?? true %}
 {% set galleryClass = params.class ?? 'my-7' %}
 {% set galleryCaption = params.caption ??  entry.caption ?? '' %}
-{% set imageCaptionClass = params.caption_class ?? 'prose-sm mt-2 text-gray-500 inline-links' %}
+{% set galleryCaptionClass = params.caption_class ?? 'prose-sm mt-2 text-gray-500 inline-links' %}
 
 
 
@@ -43,7 +43,7 @@
     </div>
     
     {% if galleryCaption %}
-      <figcaption class="{{ imageCaptionClass }}">
+      <figcaption class="{{ galleryCaptionClass }}">
         {{ galleryCaption }}
       </figcaption>
     {% endif %}
