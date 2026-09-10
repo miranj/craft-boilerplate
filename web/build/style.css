@@ -432,6 +432,9 @@
   .grid {
     display: grid;
   }
+  .hidden {
+    display: none;
+  }
   .inline {
     display: inline;
   }
@@ -457,6 +460,9 @@
   .max-h-70 {
     max-height: calc(var(--spacing) * 70);
   }
+  .max-h-full {
+    max-height: 100%;
+  }
   .w-4 {
     width: calc(var(--spacing) * 4);
   }
@@ -474,6 +480,12 @@
   }
   .min-w-40 {
     min-width: calc(var(--spacing) * 40);
+  }
+  .min-w-full {
+    min-width: 100%;
+  }
+  .flex-grow {
+    flex-grow: 1;
   }
   .grow {
     flex-grow: 1;
@@ -563,6 +575,12 @@
     margin-block-start: calc(calc(var(--spacing) * 20) * var(--tw-space-y-reverse));
     margin-block-end: calc(calc(var(--spacing) * 20) * calc(1 - var(--tw-space-y-reverse)));
   }
+  .gap-x-2 {
+    column-gap: calc(var(--spacing) * 2);
+  }
+  .gap-y-1 {
+    row-gap: var(--spacing);
+  }
   .gap-y-2 {
     row-gap: calc(var(--spacing) * 2);
   }
@@ -598,6 +616,9 @@
   }
   .overflow-auto {
     overflow: auto;
+  }
+  .overflow-hidden {
+    overflow: hidden;
   }
   .rounded {
     border-radius: 0.25rem;
@@ -682,6 +703,9 @@
     --tw-gradient-to: var(--color-white);
     --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
   }
+  .object-cover {
+    object-fit: cover;
+  }
   .p-2 {
     padding: calc(var(--spacing) * 2);
   }
@@ -735,6 +759,9 @@
   }
   .pt-10 {
     padding-top: calc(var(--spacing) * 10);
+  }
+  .pt-px {
+    padding-top: 1px;
   }
   .font-prose {
     font-family: var(--font-prose);
@@ -935,8 +962,14 @@
     }
   }
   @media (width >= 56.25em) {
+    .sm\:block {
+      display: block;
+    }
     .sm\:flex {
       display: flex;
+    }
+    .sm\:hidden {
+      display: none;
     }
     .sm\:w-1\/4 {
       width: calc(1 / 4 * 100%);
@@ -958,6 +991,12 @@
     }
     .sm\:gap-8 {
       gap: calc(var(--spacing) * 8);
+    }
+    .sm\:gap-x-3 {
+      column-gap: calc(var(--spacing) * 3);
+    }
+    .sm\:gap-y-1\.5 {
+      row-gap: calc(var(--spacing) * 1.5);
     }
     @media (hover: hover) {
       .sm\:group-hover\:scale-102:is(:where(.group):hover *) {

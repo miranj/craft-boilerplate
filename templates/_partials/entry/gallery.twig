@@ -1,0 +1,51 @@
+{# Gallery entrytype #}
+
+
+
+{# Params #}
+{% set galleryAssets = params.assets ?? collect(entry.images ?? []).all() %}
+{% set galleryZoom = params.zoom ?? true %}
+{% set galleryClass = params.class ?? 'my-7' %}
+{% set galleryCaption = params.caption ??  entry.caption ?? '' %}
+{% set imageCaptionClass = params.caption_class ?? 'prose-sm mt-2 text-gray-500 inline-links' %}
+
+
+
+{# Biz Logic #}
+{% set galleryItemsPerRow = galleryAssets|length == 4 ? 2 : 3 %}
+
+
+
+{# Render #}
+{% if galleryAssets is not empty %}
+  <figure {{ attr({ class: galleryClass }) }}>
+    <div class="flex flex-wrap gap-x-2 gap-y-1 sm:gap-x-3 sm:gap-y-1.5">
+      {% for photo in galleryAssets %}
+        <div class="flex-grow flex flex-col overflow-hidden" style="flex: {{ photo.width / photo.height }}">
+          {% apply retconAttr('picture', { class: 'contents' }, false) %}
+            {% include '_components/_image' with { params: {
+              asset: photo,
+              class: 'min-w-full max-h-full object-cover',
+              preset: 'content',
+              zoom: galleryZoom,
+            } } %}
+          {% endapply %}
+        </div>
+        
+        {% if loop.index is even %}
+          <span class="sm:hidden w-full pt-px"></span>
+        {% endif %}
+        {% if loop.index % galleryItemsPerRow == 0 %}
+          <span class="hidden sm:block w-full pt-px"></span>
+        {% endif %}
+        
+      {% endfor %}
+    </div>
+    
+    {% if galleryCaption %}
+      <figcaption class="{{ imageCaptionClass }}">
+        {{ galleryCaption }}
+      </figcaption>
+    {% endif %}
+  </figure>
+{% endif %}

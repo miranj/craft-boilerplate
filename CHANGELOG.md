@@ -6,7 +6,7 @@ Release notes for Miranj's Craft Boilerplate starter project.
 
 ### Front-end
 
-- Detail pages now render their body field (including nested Image blocks).
+- Detail pages now render their body field (including nested Image, and Gallery blocks).
 - Added `.inline-links` utility class.
 - Disabled auto-insertion of thin spaces around en- and em-dashes.
 
