@@ -537,6 +537,9 @@
   .pt-10 {
     padding-top: calc(var(--spacing) * 10);
   }
+  .font-title {
+    font-family: var(--font-title);
+  }
   .text-sm {
     font-size: var(--text-sm);
     line-height: var(--tw-leading, var(--text-sm--line-height));
@@ -563,6 +566,35 @@
   }
   .text-white {
     color: var(--color-white);
+  }
+  .inline-links :where(a) {
+    text-decoration-line: underline;
+    text-decoration-thickness: 7.5%;
+    text-underline-offset: 2px;
+    text-decoration-color: color-mix(in srgb, #000 25%, transparent);
+  }
+  @supports (color: color-mix(in lab, red, red)) {
+    .inline-links :where(a) {
+      text-decoration-color: color-mix(in oklab, var(--color-black) 25%, transparent);
+    }
+  }
+  .inline-links :where(a) {
+    transition-property: text-decoration;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+    transition-duration: var(--tw-duration, var(--default-transition-duration));
+    --tw-duration: 150ms;
+    transition-duration: 150ms;
+  }
+  :is(.inline-links :where(a)):hover {
+    text-decoration-color: color-mix(in srgb, #000 50%, transparent);
+  }
+  @supports (color: color-mix(in lab, red, red)) {
+    :is(.inline-links :where(a)):hover {
+      text-decoration-color: color-mix(in oklab, var(--color-black) 50%, transparent);
+    }
+  }
+  :is(.inline-links :where(a)):hover {
+    text-decoration-thickness: 15%;
   }
   .underline {
     text-decoration-line: underline;
@@ -746,6 +778,35 @@ h5 {
   .tquo {
     margin-left: -0.68em;
   }
+  .richtext :where(a) {
+    text-decoration-line: underline;
+    text-decoration-thickness: 7.5%;
+    text-underline-offset: 2px;
+    text-decoration-color: color-mix(in srgb, #000 25%, transparent);
+  }
+  @supports (color: color-mix(in lab, red, red)) {
+    .richtext :where(a) {
+      text-decoration-color: color-mix(in oklab, var(--color-black) 25%, transparent);
+    }
+  }
+  .richtext :where(a) {
+    transition-property: text-decoration;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+    transition-duration: var(--tw-duration, var(--default-transition-duration));
+    --tw-duration: 150ms;
+    transition-duration: 150ms;
+  }
+  :is(.richtext :where(a)):hover {
+    text-decoration-color: color-mix(in srgb, #000 50%, transparent);
+  }
+  @supports (color: color-mix(in lab, red, red)) {
+    :is(.richtext :where(a)):hover {
+      text-decoration-color: color-mix(in oklab, var(--color-black) 50%, transparent);
+    }
+  }
+  :is(.richtext :where(a)):hover {
+    text-decoration-thickness: 15%;
+  }
   .richtext :where(p, ul, ol, blockquote) {
     margin-top: 0px;
     margin-bottom: clamp(1rem, 0.8913rem + 0.5435vi, 1.3125rem);
@@ -799,14 +860,6 @@ h5 {
   }
   .richtext ol ol ol {
     list-style-type: lower-roman;
-  }
-  .richtext a:not(.no-underline) {
-    text-decoration-line: underline;
-  }
-  @media (hover: hover) {
-    :is(.richtext a:not(.no-underline)):hover {
-      text-decoration-line: none;
-    }
   }
   .richtext :where(blockquote) {
     --tw-leading: var(--leading-normal);
@@ -1342,6 +1395,10 @@ h5 {
   syntax: "*";
   inherits: false;
 }
+@property --tw-duration {
+  syntax: "*";
+  inherits: false;
+}
 @property --tw-shadow {
   syntax: "*";
   inherits: false;
@@ -1460,10 +1517,6 @@ h5 {
   syntax: "*";
   inherits: false;
 }
-@property --tw-duration {
-  syntax: "*";
-  inherits: false;
-}
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
@@ -1490,6 +1543,7 @@ h5 {
       --tw-gradient-to-position: 100%;
       --tw-leading: initial;
       --tw-font-weight: initial;
+      --tw-duration: initial;
       --tw-shadow: 0 0 #0000;
       --tw-shadow-color: initial;
       --tw-shadow-alpha: 100%;
@@ -1517,7 +1571,6 @@ h5 {
       --tw-drop-shadow-color: initial;
       --tw-drop-shadow-alpha: 100%;
       --tw-drop-shadow-size: initial;
-      --tw-duration: initial;
     }
   }
 }

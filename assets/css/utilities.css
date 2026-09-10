@@ -1,6 +1,17 @@
 /* Additional Utilities */
 
 /* Text Styles */
+@utility inline-links {
+    :where(a) {
+        @apply underline underline-offset-2 decoration-[7.5%];
+        @apply decoration-black/25;
+        @apply transition-[text-decoration] duration-150;
+        &:hover {
+            @apply decoration-[15%] decoration-black/50;
+        }
+    }
+}
+
 @utility italictext {
     @apply italic;
     :where(i, em) {

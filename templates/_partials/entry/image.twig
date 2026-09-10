@@ -7,10 +7,10 @@
 #}
 {% set imageAsset = params.asset ?? collect(entry.image ?? []).one() %}
 {% set imagePreset = params.preset ?? 'content' %}
-{% set imageWrapperClass = params.wrapper_class ?? 'my-7' %}
-{% set imageClass = params.class ?? '' %}
+{% set imageWrapperClass = params.class ?? 'my-7' %}
+{% set imageTagClass = params.image_class ?? '' %}
 {% set imageCaption = params.caption ?? entry.caption ?? '' %}
-{% set imageCaptionClass = params.caption_class ?? 'prose-sm mt-2 text-gray-500' %}
+{% set imageCaptionClass = params.caption_class ?? 'prose-sm mt-2 text-gray-500 inline-links' %}
 {% set imageZoom = params.zoom ?? true %}
 
 
@@ -29,7 +29,7 @@
       asset: imageAsset,
       preset: imagePreset,
       zoom: imageZoom,
-      class: imageClass,
+      class: imageTagClass,
     } } %}
 
     {% if imageCaption %}

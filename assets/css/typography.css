@@ -56,6 +56,8 @@ a:hover {
 
 /* Rich Text */
 .richtext {
+    @apply inline-links;
+
     :where(p, ul, ol, blockquote) {
         @apply mt-0 mb-sm;
         &:last-child {
@@ -110,11 +112,6 @@ a:hover {
     }
     ol ol ol {
         list-style-type: lower-roman;
-    }
-
-    a:not(.no-underline) {
-        @apply underline;
-        @apply hover:no-underline;
     }
 
     :where(blockquote) {
