@@ -34,7 +34,7 @@
 
 
 {% block page_header %}
-  <header class="container">
+  <header class="container my-8">
     <h2 class="{{ siteLogo ? 'w-4xl sm:w-5xl' }}">
       <a href="{{ url() }}" title="Visit the {{ siteName }} home page">
         {% if siteLogo %}
@@ -54,7 +54,7 @@
 
 
 {% block page_footer %}
-  <footer class="container">
+  <footer class="container mb-4">
     <div {{ attr({
       class: [
         'py-12 flex flex-col sm:flex-row gap-8',
