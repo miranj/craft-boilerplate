@@ -1,0 +1,47 @@
+{# _components/body #}
+
+
+
+{# Params #}
+{% set bodyChunks = params.chunks ?? [] %}
+{% set bodyClass = params.class ?? [] %}
+{% set bodyProfileKey = params.profile ?? 'default' %}
+
+
+
+{# Biz logic #}
+{% set bodyProfiles = {
+  default: {
+    markupClass: 'richtext',
+  },
+} %}
+{% set bodyProfile = bodyProfiles[bodyProfileKey] ?? bodyProfiles|first %}
+
+
+
+{# Render #}
+{% if bodyChunks is not empty %}
+  <section {{ attr({ class: bodyClass }) }}>
+    {% for chunk in bodyChunks %}
+      {% switch chunk.type %}
+        {% case 'markup' %}
+          {% include '_partials/chunks/markup' with {
+            params: {
+              html: chunk.html,
+              class: bodyProfile.markupClass,
+            },
+          } %}
+        
+        {% case 'component' %}
+          {% include chunk.path with {
+            params: chunk.params,
+          } %}
+
+        {% default %}
+          {{ chunk.entry.render({ params: {
+            bodyProfile,
+          } }) }}
+      {% endswitch %}
+    {% endfor %}
+  </section>
+{% endif %}

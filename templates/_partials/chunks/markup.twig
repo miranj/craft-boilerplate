@@ -1,0 +1,17 @@
+{# _partials/chunks/markup #}
+{% from '_helpers/text' import normaliseRichtext %}
+
+
+
+{# Params #}
+{% set markupHTML = params.html ?? '' %}
+{% set markupClass = params.class ?? [] %}
+
+
+
+{# Render #}
+{% if markupHTML|trim is not empty %}
+  <div {{ attr({ class: markupClass }) }}>
+    {{ normaliseRichtext(markupHTML) }}
+  </div>
+{% endif %}

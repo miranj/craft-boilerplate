@@ -359,6 +359,9 @@
   .mt-10 {
     margin-top: calc(var(--spacing) * 10);
   }
+  .mt-16 {
+    margin-top: calc(var(--spacing) * 16);
+  }
   .mb-2 {
     margin-bottom: calc(var(--spacing) * 2);
   }
@@ -367,6 +370,9 @@
   }
   .mb-8 {
     margin-bottom: calc(var(--spacing) * 8);
+  }
+  .mb-32 {
+    margin-bottom: calc(var(--spacing) * 32);
   }
   .mb-sm {
     margin-bottom: clamp(1rem, 0.8913rem + 0.5435vi, 1.3125rem);
@@ -708,9 +714,6 @@
   }
   .py-4 {
     padding-block: calc(var(--spacing) * 4);
-  }
-  .py-8 {
-    padding-block: calc(var(--spacing) * 8);
   }
   .py-10 {
     padding-block: calc(var(--spacing) * 10);

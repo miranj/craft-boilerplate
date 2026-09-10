@@ -2,12 +2,18 @@
 
 
 
-{# Params #}
+{#
+  Params
+#}
 {% set detailTitle = detailTitle ?? entry.title %}
+{% set detailBody = detailBody ?? entry.body ?? null %}
+{% set detailBodyChunks = detailBodyChunks ?? detailBody.getChunks() ?? [] %}
 
 
 
-{# Biz Logic #}
+{#
+  Biz Logic
+#}
 {% block response %}
   {# If non-paginated detail view has a page number, 404 #}
   {% if craft.app.request.getPageNum() > 1 and not (indexPaginate ?? false) %}
@@ -19,21 +25,25 @@
 
 
 
+{#
+  Layout
+#}
 {% block main %}
-  {#
-    Layout
-  #}
   {% block detail_layout %}
-    <article class="{% block detail_layout_class '' %}">
+    <article class="{% block detail_layout_class 'my-8' %}">
       {{ block('detail_header') }}
+      {{ block('detail_body') }}
     </article>
   {% endblock %}
 {% endblock %}
 
 
 
+{#
+  Render
+#}
 {% block detail_header %}
-  <header class="{% block detail_header_class 'container py-8' %}">
+  <header class="{% block detail_header_class 'container mt-16 mb-8' %}">
     {% block detail_title %}
       {% if detailTitle %}
         <h1 class="{% block detail_title_class 'title-h1' %}">
@@ -42,6 +52,14 @@
       {% endif %}
     {% endblock %}
   </header>
+{% endblock %}
+
+{% block detail_body_class 'container mt-4 mb-32' %}
+{% block detail_body %}
+  {% include '_components/body' with { params: {
+    chunks: detailBodyChunks,
+    class: block('detail_body_class'),
+  } } %}
 {% endblock %}
 
 
