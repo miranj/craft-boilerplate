@@ -9,7 +9,7 @@
 
 
 {# Variables #}
-{% set navNodes = craft.navigation.nodes(navHandle).all() ?? [] %}
+{% set navNodes = craft.navigation.nodes(navHandle).cache().all() ?? [] %}
 {% set navProfiles = {
   footer: {
     listClass: 'flex flex-wrap justify-start sm:justify-center items-start gap-6',
