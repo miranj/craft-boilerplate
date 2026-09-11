@@ -30,7 +30,7 @@ return [
     // Global settings
     '*' => [
         'enableGoogleAnalytics' => !!App::env('GOOGLE_ANALYTICS_ID'),
-        'useYouTubeFacadeLoading' => false, // add 'lite-youtube.js' to `buildScripts` if `true`
+        'useYouTubeFacadeLoading' => true, // add 'lite-youtube.js' to `buildScripts` if `true`
 
         // Build stylesheets & scripts
         'buildStylesheets' => [$isDev ? 'style.css' : 'style.purged.min.css'],
@@ -39,7 +39,7 @@ return [
             'deferred.min.js' => 'async',
             'instant.min.js' => 'module',
             'photoswipeinit.min.js' => 'module',
-            // 'lite-youtube.js' => 'module', // enable if `useYouTubeFacadeLoading` is `true`
+            'lite-youtube.js' => 'module', // enable if `useYouTubeFacadeLoading` is `true`
         ],
 
         // Build manifest helpers

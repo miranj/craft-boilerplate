@@ -8,6 +8,7 @@ Release notes for Miranj's Craft Boilerplate starter project.
 
 - Detail pages now render their body field (including nested Image, Gallery, and Media Embed blocks).
 - Added `.inline-links` utility class.
+- Enabled YouTube facade loading (via [`<lite-youtube>`](https://github.com/justinribeiro/lite-youtube)).
 - Disabled auto-insertion of thin spaces around en- and em-dashes.
 
 ## 3.7.0 - 2026-09-09

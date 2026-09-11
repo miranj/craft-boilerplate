@@ -49,7 +49,7 @@
       {% if embedIsApplyYouTubeLiteFacade %}
         {{ tag('lite-youtube', {
           class: 'no-js:hidden',
-          posterquality: 'sddefault',
+          posterquality: 'maxresdefault',
           videotitle: embedField.media.title ?? '',
           videoid: embedField.url|getYoutubeId,
           disablenoscript: true,
