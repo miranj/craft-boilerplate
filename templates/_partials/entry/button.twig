@@ -1,0 +1,24 @@
+{#
+  Button entrytype
+  Used in the Body field
+#}
+
+
+
+{#
+  Params
+#}
+{% set buttonLinkField = params.link ?? entry['hyperlink'] ?? null %}
+{% set buttonWrapperClass = params.class ?? 'my-10 first:mt-0 last:mb-0' %}
+{% set buttonTagClass = params.button_class ?? '' %}
+
+
+
+{#
+  Render
+#}
+{% include '_components/button' with { params: {
+  link: buttonLinkField,
+  wrapper_class: buttonWrapperClass,
+  class: buttonTagClass,
+} } %}

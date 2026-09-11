@@ -6,8 +6,9 @@ Release notes for Miranj's Craft Boilerplate starter project.
 
 ### Front-end
 
-- Detail pages now render their body field (including nested Image, Gallery, and Media Embed blocks).
+- Detail pages now render their body field (including nested Button, Image, Gallery, and Media Embed blocks).
 - Added `.inline-links` utility class.
+- Added `_components/button` for rendering buttons.
 - Enabled YouTube facade loading (via [`<lite-youtube>`](https://github.com/justinribeiro/lite-youtube)).
 - Disabled auto-insertion of thin spaces around en- and em-dashes.
 

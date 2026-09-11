@@ -1,0 +1,59 @@
+{# _components/button #}
+{% from '_helpers/url' import prettyurl %}
+
+
+
+{#
+  Params
+#}
+{% set buttonLinkField = params.link ?? null %}
+{% set buttonUrl = params.url ?? buttonLinkField.value ?? '' %}
+{% set buttonLabel = params.label ?? buttonLinkField.label ?? '' %}
+{% set buttonClass = params.class ?? '' %}
+{% set buttonWrapperClass = params.wrapper_class ?? '' %}
+{% set buttonIcon = params.icon ?? '' %}
+{% set buttonKind = params.kind ?? 'default' %}
+
+
+
+{# Biz logic #}
+{% set buttonProfiles = {
+  default: 'button-default group',
+} %}
+{% set buttonStyle = buttonProfiles[buttonKind] ?? buttonProfiles|first %}
+{% set buttonTypeIsAsset = buttonLinkField.type is defined and buttonLinkField.type == 'asset' %}
+{% set buttonIcon = buttonIcon ?: (buttonTypeIsAsset
+  ? 'heroicon:arrow-down-tray'
+  : 'heroicon:arrow-right'
+) %}
+
+
+
+{#
+  Render
+#}
+{% if buttonUrl %}
+  {% if buttonWrapperClass %}
+    <div {{ attr({ class: buttonWrapperClass }) }}>
+  {% endif %}
+
+    {# Button #}
+    {% tag buttonUrl ? 'a' : 'button' with {
+      class: [
+        buttonStyle,
+        buttonClass,
+      ],
+      href: buttonUrl ?: null,
+    } %}
+      <span class="min-w-0 break-words">
+        {{ buttonLabel ?: prettyurl(buttonUrl) }}
+      </span>
+      <span class="button-internal-icon" data-position="end">
+        {{ svgIcon(buttonIcon)|attr({ class: 'button-internal-icon' }) }}
+      </span>
+    {% endtag %}
+    
+  {% if buttonWrapperClass %}
+    </div>
+  {% endif %}
+{% endif %}

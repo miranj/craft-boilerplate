@@ -29,14 +29,36 @@
 
 /* Buttons */
 /* button styles */
+.button-default {
+    @apply px-5 py-2.5 rounded-lg;
+    @apply inline-flex gap-1.5 items-center justify-between;
+    @apply font-title text-base;
+    line-height: 150%;
+    @apply hover:no-underline active:no-underline;
+    @apply motion-safe:transition origin-center duration-150;
+}
+.button-default {
+    @apply text-gray-700 bg-gray-200 shadow-2xs;
+    @apply hover:text-gray-800 hover:bg-gray-300;
+    @apply active:scale-85 active:opacity-50;
+}
+
 .button-dropdown,
 .button-dropdown-active {
-    @apply p-2 border;
+    @apply px-4 py-2 border;
     @apply inline-flex gap-6 items-center justify-between;
     @apply motion-safe:transition;
 }
 
 /* button internals */
 .button-internal-icon {
-    @apply size-5 relative overflow-hidden;
+    @apply size-4e shrink-0 relative overflow-hidden;
+    @apply motion-safe:transition;
+
+    &[data-position='start'] {
+        @apply order-first -ml-1 group-hover:-translate-x-0.5e;
+    }
+    &[data-position='end'] {
+        @apply order-last -mr-1 group-hover:translate-x-0.5e;
+    }
 }

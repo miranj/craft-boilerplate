@@ -17,6 +17,8 @@
     --color-gray-200: oklch(92.8% 0.006 264.531);
     --color-gray-300: oklch(87.2% 0.01 258.338);
     --color-gray-500: oklch(55.1% 0.027 264.364);
+    --color-gray-700: oklch(37.3% 0.034 259.733);
+    --color-gray-800: oklch(27.8% 0.033 256.848);
     --color-gray-900: oklch(21% 0.034 264.665);
     --color-zinc-900: oklch(21% 0.006 285.885);
     --color-black: #000;
@@ -48,6 +50,7 @@
     --leading-normal: 1.5;
     --leading-relaxed: 1.625;
     --leading-loose: 2;
+    --radius-lg: 0.5rem;
     --radius-2xl: 1rem;
     --aspect-video: 16 / 9;
     --default-transition-duration: 150ms;
@@ -353,6 +356,9 @@
   .my-8 {
     margin-block: calc(var(--spacing) * 8);
   }
+  .my-10 {
+    margin-block: calc(var(--spacing) * 10);
+  }
   .mt-2 {
     margin-top: calc(var(--spacing) * 2);
   }
@@ -477,6 +483,9 @@
   }
   .max-w-168 {
     max-width: calc(var(--spacing) * 168);
+  }
+  .min-w-0 {
+    min-width: 0px;
   }
   .min-w-40 {
     min-width: calc(var(--spacing) * 40);
@@ -844,6 +853,9 @@
     --tw-font-weight: var(--font-weight-normal);
     font-weight: var(--font-weight-normal);
   }
+  .break-words {
+    overflow-wrap: break-word;
+  }
   .text-blue-600 {
     color: var(--color-blue-600);
   }
@@ -930,6 +942,9 @@
       --tw-shadow: 0 10px 15px -3px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 4px 6px -4px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
       box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
     }
+  }
+  .first\:mt-0:first-child {
+    margin-top: 0px;
   }
   .last\:mb-0:last-child {
     margin-bottom: 0px;
@@ -1318,11 +1333,70 @@ h5 {
     opacity: 1;
     background-image: none;
   }
+  .button-default {
+    border-radius: var(--radius-lg);
+    padding-inline: calc(var(--spacing) * 5);
+    padding-block: calc(var(--spacing) * 2.5);
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: calc(var(--spacing) * 1.5);
+    font-family: var(--font-title);
+    font-size: var(--text-base);
+    line-height: var(--tw-leading, var(--text-base--line-height));
+    line-height: 150%;
+  }
+  @media (hover: hover) {
+    .button-default:hover {
+      text-decoration-line: none;
+    }
+  }
+  .button-default:active {
+    text-decoration-line: none;
+  }
+  .button-default {
+    transform-origin: center;
+    --tw-duration: 150ms;
+    transition-duration: 150ms;
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    .button-default {
+      transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, content-visibility, overlay, pointer-events;
+      transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+      transition-duration: var(--tw-duration, var(--default-transition-duration));
+    }
+  }
+  .button-default {
+    background-color: var(--color-gray-200);
+    color: var(--color-gray-700);
+    --tw-shadow: 0 1px var(--tw-shadow-color, rgb(0 0 0 / 0.05));
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+  @media (hover: hover) {
+    .button-default:hover {
+      background-color: var(--color-gray-300);
+    }
+  }
+  @media (hover: hover) {
+    .button-default:hover {
+      color: var(--color-gray-800);
+    }
+  }
+  .button-default:active {
+    --tw-scale-x: 85%;
+    --tw-scale-y: 85%;
+    --tw-scale-z: 85%;
+    scale: var(--tw-scale-x) var(--tw-scale-y);
+  }
+  .button-default:active {
+    opacity: 50%;
+  }
   .button-dropdown,
 .button-dropdown-active {
     border-style: var(--tw-border-style);
     border-width: 1px;
-    padding: calc(var(--spacing) * 2);
+    padding-inline: calc(var(--spacing) * 4);
+    padding-block: calc(var(--spacing) * 2);
     display: inline-flex;
     align-items: center;
     justify-content: space-between;
@@ -1338,9 +1412,37 @@ h5 {
   }
   .button-internal-icon {
     position: relative;
-    width: calc(var(--spacing) * 5);
-    height: calc(var(--spacing) * 5);
+    width: 1em;
+    height: 1em;
+    flex-shrink: 0;
     overflow: hidden;
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    .button-internal-icon {
+      transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, content-visibility, overlay, pointer-events;
+      transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+      transition-duration: var(--tw-duration, var(--default-transition-duration));
+    }
+  }
+  .button-internal-icon[data-position='start'] {
+    order: -9999;
+    margin-left: calc(var(--spacing) * -1);
+  }
+  @media (hover: hover) {
+    .button-internal-icon[data-position='start']:is(:where(.group):hover *) {
+      --tw-translate-x: calc(0.125em * -1);
+      translate: var(--tw-translate-x) var(--tw-translate-y);
+    }
+  }
+  .button-internal-icon[data-position='end'] {
+    order: 9999;
+    margin-right: calc(var(--spacing) * -1);
+  }
+  @media (hover: hover) {
+    .button-internal-icon[data-position='end']:is(:where(.group):hover *) {
+      --tw-translate-x: 0.125em;
+      translate: var(--tw-translate-x) var(--tw-translate-y);
+    }
   }
 }
 @layer base {
@@ -1884,6 +1986,21 @@ h5 {
   syntax: "*";
   inherits: false;
 }
+@property --tw-translate-x {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+@property --tw-translate-y {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+@property --tw-translate-z {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
@@ -1938,6 +2055,9 @@ h5 {
       --tw-drop-shadow-color: initial;
       --tw-drop-shadow-alpha: 100%;
       --tw-drop-shadow-size: initial;
+      --tw-translate-x: 0;
+      --tw-translate-y: 0;
+      --tw-translate-z: 0;
     }
   }
 }
