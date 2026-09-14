@@ -68,10 +68,10 @@ fieldLayouts:
         uid: 20b5380c-78d8-4570-9469-47e4752cca85
         userCondition: null
     thumbFieldKey: null
-handle: richTextCollapse
+handle: collapse
 hasTitleField: true
 icon: caret-down
-name: 'Block: Rich Text Collapse'
+name: 'Block: Collapse'
 showSlugField: false
 showStatusField: true
 slugTranslationKeyFormat: null

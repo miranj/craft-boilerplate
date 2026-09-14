@@ -1,4 +1,4 @@
-dateModified: 1788914569
+dateModified: 1789429137
 elementSources:
   craft\elements\Category:
     -
@@ -731,7 +731,7 @@ meta:
     f9f26c9a-936a-4901-90ca-e8c5c2997475: Teams # Teams
     f719c927-90fd-4ace-a58e-ddea5675c7d2: Office # Office
     f3993d0e-4040-4e0b-85bc-b4db5e098143: 'Public Schema' # Public Schema
-    fa35f4cd-b237-4493-8c4e-4e25855164ff: 'Block: Rich Text Collapse' # Block: Rich Text Collapse
+    fa35f4cd-b237-4493-8c4e-4e25855164ff: 'Block: Collapse' # Block: Collapse
     fad3fe56-0b6b-46c4-a97b-b7fb98847f3c: 'Media Embed' # Media Embed
     febb1068-1cf0-4781-8a41-bf420bb95e2f: Jobs # Jobs
 plugins:
