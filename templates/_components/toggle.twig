@@ -1,0 +1,29 @@
+{# _components/toggle #}
+
+
+
+{#
+  Params
+#}
+{% set toggleClass = params.class ?? '' %}
+{% set toggleTitle = params.title ?? '' %}
+{% set toggleBody = params.body ?? null %}
+{% set toggleBodyClass = params.body_class ?? 'richtext pt-3 md:pt-6' %}
+
+
+
+{#
+  Render
+#}
+{% if toggleTitle or toggleBody %}
+  <details {{ attr({ class: toggleClass }) }}>
+    {% if toggleTitle %}
+      <summary class="text-sm md:text-base font-title font-bold">
+        {{ toggleTitle }}
+      </summary>
+    {% endif %}
+    <div {{ attr({ class: toggleBodyClass }) }}>
+      {{ toggleBody }}
+    </div>
+  </details>
+{% endif %}

@@ -30,6 +30,39 @@ button:not(:disabled),
     cursor: pointer;
 }
 
+/*
+ Animate <details> elements
+ https://austingil.com/animating-details-element-with-only-css/
+*/
+details {
+    summary {
+        cursor: pointer;
+        @apply flex items-center;
+        &:before {
+            content: '';
+            @apply size-4e bg-contain -translate-x-1e;
+            @apply transition ease-in-out;
+            /* heroicon:chevron-right:mini */
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='currentColor' stroke='currentColor' stroke-width='1' viewBox='0 0 20 20'%3E%3Cpath fill-rule='evenodd' d='M8.22 5.22a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06-1.06L11.94 10 8.22 6.28a.75.75 0 0 1 0-1.06Z' clip-rule='evenodd'/%3E%3C/svg%3E");
+        }
+    }
+    &[open] summary:before {
+        @apply rotate-90;
+    }
+    &::details-content {
+        block-size: 0;
+        opacity: 0;
+        overflow: hidden;
+        transition-property: block-size, content-visibility, opacity;
+        @apply transition-discrete ease-in-out duration-450;
+    }
+    &[open]::details-content {
+        opacity: 1;
+        block-size: auto;
+        block-size: calc-size(auto, size);
+    }
+}
+
 /* Hide AlpineJS components until Alpine is ready */
 html:not(.has-no-js) [x-cloak] {
     display: none;

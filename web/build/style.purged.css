@@ -52,6 +52,7 @@
     --leading-loose: 2;
     --radius-lg: 0.5rem;
     --radius-2xl: 1rem;
+    --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
     --aspect-video: 16 / 9;
     --default-transition-duration: 150ms;
     --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -317,6 +318,9 @@
   .my-2 {
     margin-block: calc(var(--spacing) * 2);
   }
+  .my-6 {
+    margin-block: calc(var(--spacing) * 6);
+  }
   .my-7 {
     margin-block: calc(var(--spacing) * 7);
   }
@@ -568,6 +572,9 @@
   .py-20 {
     padding-block: calc(var(--spacing) * 20);
   }
+  .pt-3 {
+    padding-top: calc(var(--spacing) * 3);
+  }
   .pt-10 {
     padding-top: calc(var(--spacing) * 10);
   }
@@ -751,6 +758,13 @@
     .md\:gap-6 {
       gap: calc(var(--spacing) * 6);
     }
+    .md\:pt-6 {
+      padding-top: calc(var(--spacing) * 6);
+    }
+    .md\:text-base {
+      font-size: var(--text-base);
+      line-height: var(--tw-leading, var(--text-base--line-height));
+    }
     @media (hover: hover) {
       .md\:group-hover\:scale-101:is(:where(.group):hover *) {
         --tw-scale-x: 101%;
@@ -789,6 +803,44 @@
   button:not(:disabled),
 [role='button']:not(:disabled) {
     cursor: pointer;
+  }
+  details summary {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+  :is(details summary):before {
+    content: '';
+    width: 1em;
+    height: 1em;
+    --tw-translate-x: calc(0.25em * -1);
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+    background-size: contain;
+    transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, content-visibility, overlay, pointer-events;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+    transition-duration: var(--tw-duration, var(--default-transition-duration));
+    --tw-ease: var(--ease-in-out);
+    transition-timing-function: var(--ease-in-out);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='currentColor' stroke='currentColor' stroke-width='1' viewBox='0 0 20 20'%3E%3Cpath fill-rule='evenodd' d='M8.22 5.22a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06-1.06L11.94 10 8.22 6.28a.75.75 0 0 1 0-1.06Z' clip-rule='evenodd'/%3E%3C/svg%3E");
+  }
+  details[open] summary:before {
+    rotate: 90deg;
+  }
+  details::details-content {
+    block-size: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition-property: block-size, content-visibility, opacity;
+    transition-behavior: allow-discrete;
+    --tw-duration: 450ms;
+    transition-duration: 450ms;
+    --tw-ease: var(--ease-in-out);
+    transition-timing-function: var(--ease-in-out);
+  }
+  details[open]::details-content {
+    opacity: 1;
+    block-size: auto;
+    block-size: calc-size(auto, size);
   }
   html:not(.has-no-js) [x-cloak] {
     display: none;
@@ -1674,6 +1726,10 @@ h5 {
   inherits: false;
   initial-value: 0;
 }
+@property --tw-ease {
+  syntax: "*";
+  inherits: false;
+}
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
@@ -1731,6 +1787,7 @@ h5 {
       --tw-translate-x: 0;
       --tw-translate-y: 0;
       --tw-translate-z: 0;
+      --tw-ease: initial;
     }
   }
 }

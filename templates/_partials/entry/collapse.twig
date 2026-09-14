@@ -1,0 +1,21 @@
+{# _partials/entry/collapse #}
+
+
+
+{#
+  Params
+#}
+{% set collapseClass = params.class ?? 'my-6 first:mt-0 last:mb-0' %}
+{% set collapseTitle = params.title ?? entry.title %}
+{% set collapseBody = params.body ?? entry.body ?? null %}
+
+
+
+{#
+  Render
+#}
+{% include '_components/toggle' with { params: {
+  class: collapseClass,
+  title: collapseTitle,
+  body: collapseBody,
+} } %}
