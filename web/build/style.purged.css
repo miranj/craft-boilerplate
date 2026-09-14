@@ -507,6 +507,10 @@
     border-style: var(--tw-border-style);
     border-width: 1px;
   }
+  .border-y {
+    border-block-style: var(--tw-border-style);
+    border-block-width: 1px;
+  }
   .border-t {
     border-top-style: var(--tw-border-style);
     border-top-width: 1px;
@@ -514,6 +518,14 @@
   .border-b {
     border-bottom-style: var(--tw-border-style);
     border-bottom-width: 1px;
+  }
+  .border-black\/25 {
+    border-color: color-mix(in srgb, #000 25%, transparent);
+  }
+  @supports (color: color-mix(in lab, red, red)) {
+    .border-black\/25 {
+      border-color: color-mix(in oklab, var(--color-black) 25%, transparent);
+    }
   }
   .border-gray-100 {
     border-color: var(--color-gray-100);
@@ -563,6 +575,9 @@
   .py-4 {
     padding-block: calc(var(--spacing) * 4);
   }
+  .py-6 {
+    padding-block: calc(var(--spacing) * 6);
+  }
   .py-10 {
     padding-block: calc(var(--spacing) * 10);
   }
@@ -580,6 +595,9 @@
   }
   .pt-px {
     padding-top: 1px;
+  }
+  .pb-2 {
+    padding-bottom: calc(var(--spacing) * 2);
   }
   .font-title {
     font-family: var(--font-title);
@@ -761,10 +779,6 @@
     .md\:pt-6 {
       padding-top: calc(var(--spacing) * 6);
     }
-    .md\:text-base {
-      font-size: var(--text-base);
-      line-height: var(--tw-leading, var(--text-base--line-height));
-    }
     @media (hover: hover) {
       .md\:group-hover\:scale-101:is(:where(.group):hover *) {
         --tw-scale-x: 101%;
@@ -865,6 +879,11 @@ h5 {
   .title-h1 {
     font-size: var(--text-xl);
     line-height: var(--tw-leading, var(--text-xl--line-height));
+    --tw-leading: var(--leading-tight);
+    line-height: var(--leading-tight);
+  }
+  .title-h3 {
+    font-size: var(--text-md);
     --tw-leading: var(--leading-tight);
     line-height: var(--leading-tight);
   }

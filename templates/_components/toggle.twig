@@ -8,6 +8,7 @@
 {% set toggleClass = params.class ?? '' %}
 {% set toggleTitle = params.title ?? '' %}
 {% set toggleBody = params.body ?? null %}
+{% set toggleTitleClass = params.title_class ?? 'title-h3 font-title font-bold' %}
 {% set toggleBodyClass = params.body_class ?? 'richtext pt-3 md:pt-6' %}
 
 
@@ -18,7 +19,7 @@
 {% if toggleTitle or toggleBody %}
   <details {{ attr({ class: toggleClass }) }}>
     {% if toggleTitle %}
-      <summary class="text-sm md:text-base font-title font-bold">
+      <summary {{ attr({ class: toggleTitleClass }) }}>
         {{ toggleTitle }}
       </summary>
     {% endif %}
