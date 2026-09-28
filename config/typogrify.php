@@ -24,4 +24,7 @@ return [
 
     // replaces (r) (c) (tm) (sm) (p) (R) (C) (TM) (SM) (P) with ® © ™ ℠ ℗
     'set_smart_marks' => false,
+
+    // replaces "creme brulee" with "crème brûlée"
+    'set_smart_diacritics' => false,
 ];
