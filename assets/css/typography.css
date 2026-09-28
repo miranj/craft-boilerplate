@@ -2,153 +2,157 @@
  * Base
  */
 
-/* Typefaces */
-body {
-    @apply font-prose text-base;
-}
-h1,
-h2,
-h3,
-h4,
-h5 {
-    @apply font-title font-bold;
-}
+@layer base {
+    /* Typefaces */
+    body {
+        @apply font-prose text-base;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+        @apply font-title font-bold;
+    }
 
-/* Links */
-a:hover {
-    @apply underline;
+    /* Links */
+    a:hover {
+        @apply underline;
+    }
 }
 
 /* Text Styles */
-.title-h1 {
+@utility title-h1 {
     @apply text-xl leading-tight;
 }
-.title-h2 {
+@utility title-h2 {
     @apply text-lg leading-tight;
 }
-.title-h3 {
+@utility title-h3 {
     @apply text-md leading-tight;
 }
-.title-h4 {
+@utility title-h4 {
     @apply text-base leading-tight;
 }
-.title-h5 {
+@utility title-h5 {
     @apply text-sm leading-tight;
 }
-.prose-body {
+@utility prose-body {
     @apply text-base;
 }
-.prose-sm {
+@utility prose-sm {
     @apply text-sm;
 }
-.prose-meta {
+@utility prose-meta {
     @apply text-sm;
 }
 
-/* Frills */
-/*! purgecss start ignore */
-.quo {
-    margin-left: -0.24em;
-}
-.dquo {
-    margin-left: -0.44em;
-}
-.tquo {
-    margin-left: -0.68em;
-}
-
-/* Rich Text */
-.richtext {
-    @apply inline-links;
-
-    :where(p, ul, ol, blockquote) {
-        @apply mt-0 mb-sm;
-        &:last-child {
-            @apply mb-0;
-        }
+@layer base {
+    /* Frills */
+    /*! purgecss start ignore */
+    .quo {
+        margin-left: -0.24em;
     }
-    :where(figure, pre, table) {
-        @apply my-md;
-        &:first-child {
+    .dquo {
+        margin-left: -0.44em;
+    }
+    .tquo {
+        margin-left: -0.68em;
+    }
+
+    /* Rich Text */
+    .richtext {
+        @apply inline-links;
+
+        :where(p, ul, ol, blockquote) {
+            @apply mt-0 mb-sm;
+            &:last-child {
+                @apply mb-0;
+            }
+        }
+        :where(figure, pre, table) {
+            @apply my-md;
+            &:first-child {
+                @apply mt-0;
+            }
+            &:last-child {
+                @apply mb-0;
+            }
+        }
+        & + & {
+            @apply mt-sm;
+        }
+
+        h3 {
+            @apply mt-8;
+        }
+        h4 {
+            @apply mt-8;
+        }
+        h3:first-child,
+        h4:first-child {
             @apply mt-0;
         }
-        &:last-child {
-            @apply mb-0;
+
+        ol,
+        ul {
+            @apply pl-4;
         }
-    }
-    & + & {
-        @apply mt-sm;
-    }
-
-    h3 {
-        @apply mt-8;
-    }
-    h4 {
-        @apply mt-8;
-    }
-    h3:first-child,
-    h4:first-child {
-        @apply mt-0;
-    }
-
-    ol,
-    ul {
-        @apply pl-4;
-    }
-    li {
-        @apply mb-2;
-    }
-    li li {
-        @apply ml-2;
-    }
-    ol {
-        list-style-type: decimal;
-    }
-    ul {
-        list-style-type: disc;
-    }
-    li ul {
-        list-style-type: circle;
-    }
-    ol ol {
-        list-style-type: lower-alpha;
-    }
-    ol ol ol {
-        list-style-type: lower-roman;
-    }
-
-    :where(blockquote) {
-        @apply italictext leading-normal;
-        @apply ps-sm ms-md;
-        @apply border-s border-black/30;
-    }
-
-    :where(pre) {
-        @apply p-sm bg-black/10;
-        @apply font-mono text-sm;
-        @apply overflow-auto;
-    }
-
-    :where(table) {
-        @apply w-full;
-        tr {
-            @apply border-b border-dotted border-black/10;
+        li {
+            @apply mb-2;
         }
-        thead {
-            @apply border-b-1;
+        li li {
+            @apply ml-2;
         }
-        tbody th {
-            text-align: unset;
+        ol {
+            list-style-type: decimal;
         }
-        th,
-        td {
-            @apply py-1 pr-1;
+        ul {
+            list-style-type: disc;
+        }
+        li ul {
+            list-style-type: circle;
+        }
+        ol ol {
+            list-style-type: lower-alpha;
+        }
+        ol ol ol {
+            list-style-type: lower-roman;
+        }
+
+        :where(blockquote) {
+            @apply italictext leading-normal;
+            @apply ps-sm ms-md;
+            @apply border-s border-black/30;
+        }
+
+        :where(pre) {
+            @apply p-sm bg-black/10;
+            @apply font-mono text-sm;
+            @apply overflow-auto;
+        }
+
+        :where(table) {
+            @apply w-full;
+            tr {
+                @apply border-b border-dotted border-black/10;
+            }
+            thead {
+                @apply border-b-1;
+            }
+            tbody th {
+                text-align: unset;
+            }
+            th,
+            td {
+                @apply py-1 pr-1;
+            }
+        }
+
+        :where(strong) {
+            @apply font-bold;
         }
     }
 
-    :where(strong) {
-        @apply font-bold;
-    }
+    /*! purgecss end ignore */
 }
-
-/*! purgecss end ignore */

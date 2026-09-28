@@ -13,8 +13,8 @@ Release notes for Miranj's Craft Boilerplate starter project.
 - Added `_components/toggle` for rendering accordions using animated `<details>` elements.
 - Added `_partials/entry` for routing entry partials by their aliased and original entry type handles, with `_` in handles mapping to sub-folders.
 - Enabled YouTube facade loading (via [`<lite-youtube>`](https://github.com/justinribeiro/lite-youtube)).
-- Disabled auto-insertion of thin spaces around en- and em-dashes.
-- Disabled diacritics for page content. (https://github.com/nystudio107/craft-typogrify/blob/776b853c1b580e6e9461d4001776e21c7ec9fcbb/src/config.php#L116)
+- Text style classes such as `.title-h1` are now Tailwind utilities.
+- Disabled auto-insertion of thin spaces around en- and em-dashes, and auto-insertion of diacritics via `|typogrify`.
 
 ### Data Model
 

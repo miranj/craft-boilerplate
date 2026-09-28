@@ -7,7 +7,7 @@
 
 /* Base */
 @import 'base.css' layer(base);
-@import 'typography.css' layer(base);
+@import 'typography.css';
 
 /* Components */
 @import 'components.css' layer(components);
