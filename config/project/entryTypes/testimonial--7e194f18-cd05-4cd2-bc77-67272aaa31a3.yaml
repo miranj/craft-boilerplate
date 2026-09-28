@@ -30,11 +30,11 @@ fieldLayouts:
             editCondition: null
             elementCondition: null
             elementEditCondition: null
-            fieldUid: afc7f0bc-1b97-4841-a1d2-5b0385a7ca35 # Plain Text
+            fieldUid: 386721be-1ee4-4e3b-b22c-7fb3dfded3ff # Simple Text
             handle: quote
             instructions: null
             label: Quote
-            oldFieldUid: null
+            oldFieldUid: afc7f0bc-1b97-4841-a1d2-5b0385a7ca35 # Plain Text
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
