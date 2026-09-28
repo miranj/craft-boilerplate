@@ -1,0 +1,35 @@
+{#
+  Route element partial according to the following:
+  - aliased handles (instead of original handles)
+  - sub-folders based on `_` in handles
+  
+  So, an entry type with handle `image` aliased in two places
+  as `block_image` and `grid_image` can be defined in
+  `_partials/block/image` and `_partials/grid/image`. The default
+  path `_partials/entry/image` will also work (and get precedence)
+  if it exists.
+#}
+
+{#
+  1. Build paths inside the partials folder
+#}
+{% set partialTemplatesPath = [
+  craft.app.config.general.partialTemplatesPath | trim('/', 'right'),
+  entry.refHandle(),
+] %}
+{% set entryTypePartialPaths = [
+    entry.type.handle,
+    entry.type.original.handle ?? '',
+  ]
+  | filter
+  | unique
+  | reduce((paths, handle) => ('_' in handle
+      ? paths|push(handle|split('_'))
+      : paths
+    ) | push([handle]),
+    []
+  )
+  | map(segments => partialTemplatesPath|merge(segments)|join('/'))
+%}
+
+{% include entryTypePartialPaths with { entry } %}
