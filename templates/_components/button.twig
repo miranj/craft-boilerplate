@@ -19,6 +19,7 @@
 {# Biz logic #}
 {% set buttonProfiles = {
   default: 'button-default group',
+  primary: 'button-primary group',
 } %}
 {% set buttonStyle = buttonProfiles[buttonKind] ?? buttonProfiles|first %}
 {% set buttonTypeIsAsset = buttonLinkField.type is defined and buttonLinkField.type == 'asset' %}

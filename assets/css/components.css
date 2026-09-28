@@ -29,6 +29,7 @@
 
 /* Buttons */
 /* button styles */
+.button-primary,
 .button-default {
     @apply px-5 py-2.5 rounded-lg;
     @apply inline-flex gap-1.5 items-center justify-between;
@@ -40,6 +41,11 @@
 .button-default {
     @apply text-gray-700 bg-gray-200 shadow-2xs;
     @apply hover:text-gray-800 hover:bg-gray-300;
+    @apply active:scale-85 active:opacity-50;
+}
+.button-primary {
+    @apply text-gray-200 bg-gray-800 shadow-2xs;
+    @apply hover:text-gray-100 hover:bg-gray-950;
     @apply active:scale-85 active:opacity-50;
 }
 
