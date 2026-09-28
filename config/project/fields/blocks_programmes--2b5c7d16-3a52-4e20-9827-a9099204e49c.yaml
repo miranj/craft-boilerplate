@@ -16,6 +16,9 @@ settings:
         -
           - name
           - 'Programme Structure'
+        -
+          - group
+          - General
     -
       __assoc__:
         -
@@ -24,6 +27,9 @@ settings:
         -
           - name
           - Gallery
+        -
+          - group
+          - General
     -
       __assoc__:
         -
@@ -32,6 +38,9 @@ settings:
         -
           - name
           - 'Related Content'
+        -
+          - group
+          - General
     -
       __assoc__:
         -
@@ -40,6 +49,9 @@ settings:
         -
           - name
           - Testimonials
+        -
+          - group
+          - General
   includeTableView: false
   maxEntries: null
   minEntries: null
