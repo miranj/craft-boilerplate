@@ -7,6 +7,7 @@ Release notes for Miranj's Craft Boilerplate starter project.
 ### Front-end
 
 - Detail pages now render their body field (including nested Button, Collapse, Image, Gallery, and Media Embed blocks).
+- Detail pages now render their content blocks field (including Text, Call to Action, Gallery, and Related Content blocks).
 - Added `.inline-links` utility class.
 - Added `_components/button` for rendering buttons.
 - Added `_components/toggle` for rendering accordions using animated `<details>` elements.
@@ -14,6 +15,10 @@ Release notes for Miranj's Craft Boilerplate starter project.
 - Enabled YouTube facade loading (via [`<lite-youtube>`](https://github.com/justinribeiro/lite-youtube)).
 - Disabled auto-insertion of thin spaces around en- and em-dashes.
 - Disabled diacritics for page content. (https://github.com/nystudio107/craft-typogrify/blob/776b853c1b580e6e9461d4001776e21c7ec9fcbb/src/config.php#L116)
+
+### Data Model
+
+- Added a _Landing Page_ entry type to _Pages_ with a _Content Blocks_ page builder field.
 
 ## 3.7.0 - 2026-09-09
 

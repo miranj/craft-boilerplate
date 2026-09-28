@@ -32,6 +32,9 @@ a:hover {
 .title-h4 {
     @apply text-base leading-tight;
 }
+.title-h5 {
+    @apply text-sm leading-tight;
+}
 .prose-body {
     @apply text-base;
 }

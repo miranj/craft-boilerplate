@@ -1,0 +1,79 @@
+allowLineBreaksInTitles: false
+color: null
+description: null
+fieldLayouts:
+  ec27bdd0-69d6-484e-8c29-0198692099ad:
+    cardThumbAlignment: end
+    cardView:
+      - 'layoutElement:a9cc5f56-8c68-4c20-87d7-87f313ac1e80'
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2026-09-15T22:47:11+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 840acb32-6694-40d0-9384-60a0220c1de0 # Label
+            handle: breadcrumb
+            instructions: null
+            label: 'Breadcrumb (optional)'
+            oldFieldUid: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5ce687f8-d4ea-49e9-b139-08d37c3d524b
+            userCondition: null
+            warning: null
+            width: 50
+          -
+            dateAdded: '2026-09-15T22:47:11+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 840acb32-6694-40d0-9384-60a0220c1de0 # Label
+            handle: headline
+            instructions: null
+            label: Headline
+            oldFieldUid: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ea62ecca-62a5-4f64-86e5-223c06366f98
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-09-15T22:08:58+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: a9736c79-b219-4814-ba33-728835b7d230 # Body
+            handle: null
+            instructions: null
+            label: null
+            oldFieldUid: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a9cc5f56-8c68-4c20-87d7-87f313ac1e80
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 8b5feca7-b101-4d0e-bf94-1833ad2c9a8a
+        userCondition: null
+    thumbFieldKey: null
+handle: block_text
+hasTitleField: false
+icon: text
+name: 'Block: Text'
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: '{breadcrumb?:headline}'
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
+uiLabelFormat: '{title}'

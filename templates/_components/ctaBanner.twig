@@ -1,0 +1,87 @@
+{# _components/ctaBanner #}
+{% from '_helpers/text' import normaliseRichtext %}
+
+
+
+{#
+  Params
+#}
+{% set ctaBannerClass = params.class ?? '' %}
+{% set ctaBannerCaption = params.caption ?? null %}
+{% set ctaBannerLink = params.hyperlink ?? null %}
+{% set ctaBannerImage = params.image ?? null %}
+{% set ctaBannerImageBg = params.imageBackground ?? false %}
+
+
+
+{#
+  Variables
+#}
+{% set ctaBannerProfiles = {
+  default: {
+    wrapperClass: 'mt-3 md:mt-4',
+    imageClass: '',
+    bodyClass: 'space-y-4 md:space-y-7',
+    imagePreset: 'ctaBlock',
+    buttonKind: 'primary',
+    captionClass: '',
+  },
+  imageBg: {
+    wrapperClass: 'relative aspect-video bg-gray-950',
+    imageClass: '',
+    bodyClass: [
+      'absolute inset-0 p-4 md:p-7',
+      'flex flex-col justify-end space-y-4',
+      'bg-linear-to-t from-black/60 from-[20.38%] to-transparent to-[46.32%]',
+    ],
+    imagePreset: 'ctaBlockFull',
+    buttonKind: 'default',
+    captionClass: 'text-white max-w-xl',
+  }
+} %}
+
+{% set ctaBannerProfile = ctaBannerProfiles[ctaBannerImageBg ? 'imageBg' : 'default'] %}
+
+
+
+{#
+  Render
+#}
+{% if ctaBannerClass %}
+  <div {{ attr({ class: ctaBannerClass }) }}>
+{% endif %}
+
+  <div {{ attr({ class: ctaBannerProfile.wrapperClass }) }}>
+    {% if ctaBannerImage %}
+      <div {{ attr({ class: ctaBannerProfile.imageClass }) }}>
+        {% include '_components/_image' with { params: {
+          asset: ctaBannerImage,
+          preset: ctaBannerProfile.imagePreset,
+        } } %}
+      </div>
+    {% endif %}
+
+    {% if ctaBannerCaption or ctaBannerLink %}
+      <div {{ attr({ class: ctaBannerProfile.bodyClass }) }}>
+        {{ ctaBannerCaption ? tag('div', {
+          class: [
+            'richtext text-balance',
+            'font-title tracking-tight',
+            'text-base leading-snug md:text-xl',
+            ctaBannerProfile.captionClass,
+          ],
+          html: normaliseRichtext(ctaBannerCaption),
+        }) }}
+        {% include '_components/button' with { params: {
+          link: ctaBannerLink,
+          class: 'w-full md:w-80',
+          kind: ctaBannerProfile.buttonKind,
+        } } %}
+      </div>
+    {% endif %}
+  </div>
+
+{% if ctaBannerClass %}
+  </div>
+{% endif %}
+

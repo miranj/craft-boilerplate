@@ -3,6 +3,8 @@ enableVersioning: true
 entryTypes:
   -
     uid: a404ee2c-1d0d-4da9-a736-cd565a4d2605 # Page
+  -
+    uid: 4e6edcee-9498-41f6-8e01-e441361ffb9b # Landing Page
 handle: pages
 maxAuthors: 1
 minAuthors: 1

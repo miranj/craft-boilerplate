@@ -53,9 +53,9 @@ fieldLayouts:
             elementCondition: null
             elementEditCondition: null
             fieldUid: 386721be-1ee4-4e3b-b22c-7fb3dfded3ff # Simple Text
-            handle: introduction
+            handle: caption
             instructions: null
-            label: Introduction
+            label: Caption
             oldFieldUid: null
             required: false
             tip: null
@@ -93,7 +93,7 @@ showSlugField: false
 showStatusField: true
 slugTranslationKeyFormat: null
 slugTranslationMethod: site
-titleFormat: null
+titleFormat: "{title?:'Gallery'}"
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
 uiLabelFormat: '{title}'

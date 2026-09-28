@@ -1,0 +1,29 @@
+{# _partials/entry/block/gallery #}
+{% extends '_layouts/block' %}
+
+
+
+{#
+  Params
+#}
+{% set blockCaption = blockCaption ?? params.caption ?? entry.caption %}
+{% set blockImages = blockImages ?? params.images ?? entry.images.all() %}
+
+
+
+{#
+  Render
+#}
+{% block block_body %}
+  {% set blockBodyChunks = collect(blockBodyChunks).push({
+    type: 'component',
+    path: '_partials/entry/gallery',
+    params: {
+      assets: blockImages,
+      caption: blockCaption,
+      class: '',
+    },
+  }) %}  
+  {{ parent() }}
+{% endblock %}
+

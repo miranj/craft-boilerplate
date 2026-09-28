@@ -1,0 +1,27 @@
+{# _partials/entry/block/callToAction #}
+{% extends '_layouts/block' %}
+{% from '_helpers/text' import normaliseRichtext %}
+
+
+
+{#
+  Params
+#}
+{% set blockCtaCaption = blockCtaCaption ?? entry.caption ?? null %}
+{% set blockCtaLink = blockCtaLink ?? entry.hyperlink ?? null %}
+{% set blockCtaImage = blockCtaImage ?? entry.image.eagerly().one() ?? null %}
+
+
+
+{#
+  Render
+#}
+{% block block_body %}
+  {% include '_components/ctaBanner' with { params: {
+    class: 'container',
+    caption: blockCtaCaption,
+    hyperlink: blockCtaLink,
+    image: blockCtaImage,
+    imageBackground: false,
+  } } %}
+{% endblock %}

@@ -1,0 +1,51 @@
+{# _partials/entry/block/relatedContent #}
+{% extends '_layouts/block' %}
+
+
+
+{#
+  Params
+#}
+{% set blockBody = blockBody ?? params.caption ?? entry.caption %}
+{% set blockEntries = blockEntries ?? params.entries ?? entry.entries.all() %}
+{% set blockListerAttr = blockListerAttr ?? {} %}
+
+
+
+{#
+  Variables
+#}
+{# eg: 
+  teaserCompact: ['people'],
+  teaserJobs: ['jobs'],
+  teaserPartners: ['partners'],
+  strip: ['resources', 'page', 'office', 'program'],
+ #}
+{% set blockListerLayoutMap = {
+} %}
+{% set blockEntriesSections = blockEntries|column('section.handle')|unique %}
+{% set blockEntriesListerLayout = blockEntriesListerLayout ?? blockListerLayoutMap
+  |filter(sections => blockEntriesSections|diff(sections) is empty)
+  |keys
+  |first
+  ?: 'teaser'
+%}
+
+
+{#
+  Render
+#}
+{% block block_body_class parent() ~ ' space-y-4' %}
+{% block block_body %}
+  {% set blockBodyChunks = collect(blockBodyChunks).push({
+    type: 'component',
+    path: '_components/_lister',
+    params: {
+      entries: blockEntries,
+      kind: blockEntriesListerLayout,
+      list_attributes: blockListerAttr,
+    },
+  }) %}  
+  {{ parent() }}
+{% endblock %}
+

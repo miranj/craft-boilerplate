@@ -1,0 +1,60 @@
+{# _layouts/block #}
+{% extends '_layouts/blank' %}
+{% from '_helpers/text' import normaliseRichtext %}
+
+{#
+  Params
+#}
+{% set blockTitle = blockTitle ?? params.title ?? entry.title ?? '' %}
+{% set blockHeadline = blockHeadline ?? params.headline ?? entry.headline ?? '' %}
+{% set blockClass = blockClass ?? params.class ?? 'pb-16 md:pb-20' %}
+{% set blockBody = blockBody ?? entry.body ?? null %}
+{% set blockBodyChunks = blockBodyChunks ?? blockBody.getChunks() ?? [] %}
+
+
+{#
+  Render
+#}
+{% block block_class blockClass %}
+
+{% block layout %}
+  {% set _block_body = block('block_body') %}
+  {% if _block_body|trim is not empty %}
+    <section {{ attr({ class: block('block_class') ?: null }) }}>
+      {% block block_header %}
+        {% if blockTitle or blockHeadline %}
+          <header class="container">
+            {% if blockTitle %}
+              <h2 {{ attr({ class: [
+                'pt-1 md:pt-2 mb-8 md:mb-12',
+                'title-h4 md:title-h5',
+                'text-gray-500 border-t',
+              ], }) }}>
+                {{ blockTitle }}
+              </h2>
+            {% endif %}
+            {% block block_header_headline %}
+              {{ blockHeadline ? tag('div', {
+                html: normaliseRichtext(blockHeadline),
+                class: [
+                  'mt-4 mb-7 first:mt-0 md:mt-7 md:mb-10',
+                  'richtext title-h2 font-title',
+                ],
+              }) }}
+            {% endblock %}
+          </header>
+        {% endif %}
+      {% endblock %}
+
+      {{ _block_body|raw }}
+    </section>
+  {% endif %}
+{% endblock %}
+
+{% block block_body_class 'container' %}
+{% block block_body %}
+  {% include '_components/body' with { params: {
+    chunks: blockBodyChunks,
+    class: block('block_body_class'),
+  } } %}
+{% endblock %}

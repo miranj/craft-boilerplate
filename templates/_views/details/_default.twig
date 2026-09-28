@@ -5,9 +5,14 @@
 {#
   Params
 #}
-{% set detailTitle = detailTitle ?? entry.title %}
-{% set detailBody = detailBody ?? entry.body ?? null %}
-{% set detailBodyChunks = detailBodyChunks ?? detailBody.getChunks() ?? [] %}
+{% block main %}
+  {% set detailTitle = detailTitle ?? entry.title %}
+  {% set detailBody = detailBody ?? entry.body ?? null %}
+  {% set detailBodyChunks = detailBodyChunks ?? detailBody.getChunks() ?? [] %}
+  {% set detailContentBlocks = detailContentBlocks ?? entry.contentBlocks ?? null %}
+  
+  {{ block('detail_layout') }}
+{% endblock %}
 
 
 
@@ -28,13 +33,11 @@
 {#
   Layout
 #}
-{% block main %}
-  {% block detail_layout %}
-    <article class="{% block detail_layout_class 'my-8' %}">
-      {{ block('detail_header') }}
-      {{ block('detail_body') }}
-    </article>
-  {% endblock %}
+{% block detail_layout %}
+  <article class="{% block detail_layout_class 'my-8' %}">
+    {{ block('detail_header') }}
+    {{ block('detail_body') }}
+  </article>
 {% endblock %}
 
 
@@ -56,10 +59,19 @@
 
 {% block detail_body_class 'container mt-4 mb-32' %}
 {% block detail_body %}
-  {% include '_components/body' with { params: {
-    chunks: detailBodyChunks,
-    class: block('detail_body_class'),
-  } } %}
+  {% block detail_body_text %}
+    {% include '_components/body' with { params: {
+      chunks: detailBodyChunks,
+      class: block('detail_body_class'),
+    } } %}
+  {% endblock %}
+  {% block detail_body_blocks %}
+    {% if detailContentBlocks is not empty %}
+      <section class="mt-8 md:mt-12 first:mt-0 md:first:mt-0 flex flex-col">
+        {{ detailContentBlocks.render() ?? null }}
+      </section>
+    {% endif %}
+  {% endblock %}
 {% endblock %}
 
 

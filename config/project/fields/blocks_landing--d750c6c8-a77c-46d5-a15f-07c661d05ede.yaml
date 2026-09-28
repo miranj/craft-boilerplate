@@ -1,0 +1,65 @@
+columnSuffix: null
+handle: blocks_landing
+instructions: null
+name: 'Content Blocks: Landing'
+searchable: true
+settings:
+  createButtonLabel: null
+  defaultIndexViewMode: cards
+  enableVersioning: false
+  entryTypes:
+    -
+      __assoc__:
+        -
+          - uid
+          - 5442a523-8ac4-40ce-ae9e-8603057fee73 # Block: Text
+        -
+          - name
+          - Text
+        -
+          - group
+          - General
+    -
+      __assoc__:
+        -
+          - uid
+          - 1e38f7ad-622b-4515-9e15-d3998d50cfb6 # Block: Call To Action
+        -
+          - name
+          - 'Call to Action'
+        -
+          - group
+          - General
+    -
+      __assoc__:
+        -
+          - uid
+          - 2ef9601d-d6cc-4fd6-a086-8c17239031ca # Block: Related Content
+        -
+          - name
+          - 'Related Content'
+        -
+          - group
+          - General
+    -
+      __assoc__:
+        -
+          - uid
+          - 10b9629c-16a4-446b-ac1f-1e59483c1a8f # Block: Gallery
+        -
+          - name
+          - Gallery
+        -
+          - group
+          - Media
+  includeTableView: false
+  maxEntries: null
+  minEntries: null
+  pageSize: 50
+  propagationKeyFormat: null
+  propagationMethod: all
+  showCardsInGrid: false
+  viewMode: cards
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix
