@@ -27,6 +27,7 @@ return [
         'userSessionDuration' => 'P1M',
 
         // control panel
+        'cpTrigger' => 'edit',
         'timezone' => 'Asia/Kolkata',
         'defaultWeekStartDay' => '1',
         'defaultCpLanguage' => 'en-GB',

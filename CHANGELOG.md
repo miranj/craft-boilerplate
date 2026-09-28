@@ -16,6 +16,10 @@ Release notes for Miranj's Craft Boilerplate starter project.
 - Text style classes such as `.title-h1` are now Tailwind utilities.
 - Disabled auto-insertion of thin spaces around en- and em-dashes, and auto-insertion of diacritics via `|typogrify`.
 
+### Craft
+
+- The control panel is now accessible at `/edit` instead of `/admin`.
+
 ### Data Model
 
 - Added a _Landing Page_ entry type to _Pages_ with a _Content Blocks_ page builder field.
