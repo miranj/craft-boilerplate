@@ -27,6 +27,7 @@ Release notes for Miranj's Craft Boilerplate starter project.
 ### System
 
 - Removed post-install commands from the starter project's composer script to avoid failures when creating a new composer project.
+- Fixed a bug where control panel rebranding assets would be ignored by git.
 
 ## 3.7.0 - 2026-09-09
 
