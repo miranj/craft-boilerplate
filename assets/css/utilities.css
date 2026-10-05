@@ -4,10 +4,10 @@
 @utility inline-links {
     :where(a) {
         @apply underline underline-offset-2 decoration-[7.5%];
-        @apply decoration-black/25;
+        @apply decoration-current/25;
         @apply transition-[text-decoration] duration-150;
         &:hover {
-            @apply decoration-[15%] decoration-black/50;
+            @apply decoration-[15%] decoration-current/50;
         }
     }
 }

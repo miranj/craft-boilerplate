@@ -748,11 +748,11 @@
     text-decoration-line: underline;
     text-decoration-thickness: 7.5%;
     text-underline-offset: 2px;
-    text-decoration-color: color-mix(in srgb, #000 25%, transparent);
+    text-decoration-color: currentcolor;
   }
   @supports (color: color-mix(in lab, red, red)) {
     .inline-links :where(a) {
-      text-decoration-color: color-mix(in oklab, var(--color-black) 25%, transparent);
+      text-decoration-color: color-mix(in oklab, currentcolor 25%, transparent);
     }
   }
   .inline-links :where(a) {
@@ -763,11 +763,11 @@
     transition-duration: 150ms;
   }
   :is(.inline-links :where(a)):hover {
-    text-decoration-color: color-mix(in srgb, #000 50%, transparent);
+    text-decoration-color: currentcolor;
   }
   @supports (color: color-mix(in lab, red, red)) {
     :is(.inline-links :where(a)):hover {
-      text-decoration-color: color-mix(in oklab, var(--color-black) 50%, transparent);
+      text-decoration-color: color-mix(in oklab, currentcolor 50%, transparent);
     }
   }
   :is(.inline-links :where(a)):hover {
@@ -1046,11 +1046,11 @@
     text-decoration-line: underline;
     text-decoration-thickness: 7.5%;
     text-underline-offset: 2px;
-    text-decoration-color: color-mix(in srgb, #000 25%, transparent);
+    text-decoration-color: currentcolor;
   }
   @supports (color: color-mix(in lab, red, red)) {
     .richtext :where(a) {
-      text-decoration-color: color-mix(in oklab, var(--color-black) 25%, transparent);
+      text-decoration-color: color-mix(in oklab, currentcolor 25%, transparent);
     }
   }
   .richtext :where(a) {
@@ -1061,11 +1061,11 @@
     transition-duration: 150ms;
   }
   :is(.richtext :where(a)):hover {
-    text-decoration-color: color-mix(in srgb, #000 50%, transparent);
+    text-decoration-color: currentcolor;
   }
   @supports (color: color-mix(in lab, red, red)) {
     :is(.richtext :where(a)):hover {
-      text-decoration-color: color-mix(in oklab, var(--color-black) 50%, transparent);
+      text-decoration-color: color-mix(in oklab, currentcolor 50%, transparent);
     }
   }
   :is(.richtext :where(a)):hover {
