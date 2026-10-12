@@ -6,13 +6,13 @@
 - composer
 - MySQL / MariaDB
 - [Production] Redis
-- [Dev] DDEV
 - [Dev] Node.js (version in ./.nvmrc)
 - [Dev] Gulp
+- [Dev] DDEV (optional)
 
 ## Install
 
-1.  Create a .env file by duplicating `.env.example` and
+1.  Create a `.env` file by duplicating `.env.example` and
     filling in the appropriate environment specific values
 
 2.  Run `composer install`
@@ -29,18 +29,28 @@
 
 1.  Install dev tools:
 
-    - DDEV https://ddev.readthedocs.io/
     - Node.js http://nodejs.org
     - Gulp http://gulpjs.com/
+    - (Optional) DDEV https://ddev.readthedocs.io/
 
 2.  Install
 
+        # [local version]
+        $ composer install --no-scripts
+        $ ./craft db/restore path/to/backup.sql
+        $ nvm use
+        $ npm ci
+        $ npm run dev
+
+        # [ddev version]
         $ ddev start
         $ ddev composer install --no-scripts
         $ ddev craft db/restore path/to/backup.sql
         $ nvm use
         $ npm ci
         $ npm run dev
+
+    Note: Use `npm install` if `package-lock.json` does not exist.
 
 3.  Duplicate `serverconfigs/apache-dev/sample.htaccess` into
     `web/.htaccess`.
