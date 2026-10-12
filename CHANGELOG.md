@@ -26,6 +26,7 @@ Release notes for Miranj's Craft Boilerplate starter project.
 
 ### System
 
+- Added AGENTS.md for guiding LLM agents like Claude.
 - Removed post-install commands from the starter project's composer script to avoid failures when creating a new composer project.
 - Fixed a bug where control panel rebranding assets would be ignored by git.
 
