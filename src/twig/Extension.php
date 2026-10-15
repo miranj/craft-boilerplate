@@ -33,7 +33,6 @@ class Extension extends AbstractExtension
     public function getFunctions(): array
     {
         return [
-            new TwigFunction('createObject', [Craft::class, 'createObject']),
             new TwigFunction(
                 'heroicon',
                 [$this, 'getHeroicon'],

@@ -23,6 +23,7 @@ Release notes for Miranj's Craft Boilerplate starter project.
 ### Craft
 
 - The control panel is now accessible at `/edit` instead of `/admin`.
+- Removed custom `createObject()` Twig function in favour of Craft's native `create()` function [re-instated in Craft 5.9.19](https://github.com/craftcms/cms/discussions/18376#discussioncomment-16349125).
 
 ### System
 

@@ -12,7 +12,7 @@
       getMonthName(3, 'full') => 'March'
 #}
 {% macro getMonthName(monthNumber, format='short') %}
-  {% return createObject('DateTime')
+  {% return create('DateTime')
     .createFromFormat('!m', monthNumber * 1)
     .format(format == 'short' ? 'M' : 'F')
   %}
