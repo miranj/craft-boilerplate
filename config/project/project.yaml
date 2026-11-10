@@ -1,4 +1,4 @@
-dateModified: 1790633440
+dateModified: 1794341168
 elementSources:
   craft\elements\Category:
     -
@@ -784,6 +784,10 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 1.0.1
+  queue-monitor:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
   retcon:
     edition: standard
     enabled: true

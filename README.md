@@ -37,6 +37,7 @@ This starter project includes:
   - [No-Cache](https://github.com/ttempleton/craft-nocache)
   - [Obfuscator](https://github.com/miranj/craft-obfuscator)
   - [oEmbed](https://github.com/wrav/oembed)
+  - [Queue Monitor](https://github.com/verbb/queue-monitor)
   - [Retcon](https://github.com/mmikkel/Retcon-Craft)
   - [Router](https://github.com/miranj/craft-router)
   - [SEOMate](https://github.com/vaersaagod/seomate)

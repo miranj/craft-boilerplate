@@ -4,6 +4,11 @@ Release notes for Miranj's Craft Boilerplate starter project.
 
 ## Unreleased 3.next
 
+### Craft
+
+- The queue is now monitored for stalled and failed jobs (on staging and production).
+- Added Queue Monitor plugin 2.0.10.
+
 ### System
 
 - Expanded AGENTS.md with guidance for writing Twig templates, testing URLs, and seeding content on multi-site projects.
