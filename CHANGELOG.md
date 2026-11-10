@@ -2,6 +2,12 @@
 
 Release notes for Miranj's Craft Boilerplate starter project.
 
+## Unreleased 3.next
+
+### System
+
+- Expanded AGENTS.md with guidance for writing Twig templates, testing URLs, and seeding content on multi-site projects.
+
 ## 3.8.0 - 2026-10-15
 
 ### Front-end
