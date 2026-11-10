@@ -25,6 +25,9 @@
     - Supervisor `/usr/bin/nice -n 10 </path/to/php> </path/to/craft> queue/listen --verbose`
     - Or, via CRON `/1 * * * * </path/to/php> </path/to/craft> queue/run`
 
+2.  Check for a stalled queue via CRON
+    `*/5 * * * * </path/to/php> </path/to/craft> queue-monitor/stalled/check`
+
 ## Development
 
 1.  Install dev tools:

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f97c3d59b3d622aa912a88459ffd390c",
+    "content-hash": "e5a034fa6ee2b552cd2f42daebdcc438",
     "packages": [
         {
             "name": "aodihis/video-utils",
@@ -9668,16 +9668,16 @@
         },
         {
             "name": "verbb/base",
-            "version": "3.0.14",
+            "version": "3.0.21",
             "source": {
                 "type": "git",
                 "url": "https://github.com/verbb/verbb-base.git",
-                "reference": "c847f893fa7278413b6554324447137b815e7d3e"
+                "reference": "53320faafc3cb9590513c857cea9f68efa6043f7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/verbb/verbb-base/zipball/c847f893fa7278413b6554324447137b815e7d3e",
-                "reference": "c847f893fa7278413b6554324447137b815e7d3e",
+                "url": "https://api.github.com/repos/verbb/verbb-base/zipball/53320faafc3cb9590513c857cea9f68efa6043f7",
+                "reference": "53320faafc3cb9590513c857cea9f68efa6043f7",
                 "shasum": ""
             },
             "require": {
@@ -9714,7 +9714,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-08-14T11:53:23+00:00"
+            "time": "2026-11-01T10:54:30+00:00"
         },
         {
             "name": "verbb/element-index-defaults",
@@ -9909,6 +9909,71 @@
                 }
             ],
             "time": "2026-05-14T01:00:03+00:00"
+        },
+        {
+            "name": "verbb/queue-monitor",
+            "version": "2.0.10",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/verbb/queue-monitor.git",
+                "reference": "3d58aab87887e07ccf1975c397d5bcd6a09beaec"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/verbb/queue-monitor/zipball/3d58aab87887e07ccf1975c397d5bcd6a09beaec",
+                "reference": "3d58aab87887e07ccf1975c397d5bcd6a09beaec",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^5.0.0",
+                "craftcms/url-validator": "^1.1",
+                "php": "^8.2",
+                "verbb/base": "^3.0.20"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Queue Monitor",
+                "class": "verbb\\queuemonitor\\QueueMonitor",
+                "handle": "queue-monitor",
+                "changelogUrl": "https://raw.githubusercontent.com/verbb/queue-monitor/craft-5/CHANGELOG.md"
+            },
+            "autoload": {
+                "psr-4": {
+                    "verbb\\queuemonitor\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Verbb",
+                    "homepage": "https://verbb.io"
+                }
+            ],
+            "description": "A Craft CMS plugin for monitoring queue failures and sending notifications.",
+            "keywords": [
+                "Craft",
+                "cms",
+                "craft-plugin",
+                "craftcms",
+                "queue-monitor"
+            ],
+            "support": {
+                "docs": "https://github.com/verbb/queue-monitor",
+                "email": "support@verbb.io",
+                "issues": "https://github.com/verbb/queue-monitor/issues?state=open",
+                "rss": "https://github.com/verbb/queue-monitor/commits/v2.atom",
+                "source": "https://github.com/verbb/queue-monitor"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/verbb",
+                    "type": "github"
+                }
+            ],
+            "time": "2026-10-07T09:05:37+00:00"
         },
         {
             "name": "vlucas/phpdotenv",
