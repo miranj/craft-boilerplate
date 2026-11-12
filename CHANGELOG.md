@@ -4,6 +4,11 @@ Release notes for Miranj's Craft Boilerplate starter project.
 
 ## Unreleased 3.next
 
+### Front-end
+
+- Smooth scrolling and page view transitions are now disabled for visitors who prefer reduced motion.
+- Removed IE9 conditional comments from `_components/_image`.
+
 ### Craft
 
 - The queue is now monitored for stalled and failed jobs (on staging and production).

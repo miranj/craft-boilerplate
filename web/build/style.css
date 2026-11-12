@@ -1250,13 +1250,16 @@
     display: none;
   }
 }
-@layer base {
+@layer base;
+@media (prefers-reduced-motion: no-preference) {
   html {
     scroll-behavior: smooth;
   }
   @view-transition {
     navigation: auto;
   }
+}
+@layer base {
   body {
     background-color: var(--color-white);
     color: var(--color-black);

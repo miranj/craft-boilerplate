@@ -1,11 +1,13 @@
 /* Base */
-html {
-    scroll-behavior: smooth;
-}
+@media (prefers-reduced-motion: no-preference) {
+    html {
+        scroll-behavior: smooth;
+    }
 
-/* Enable default view transitions */
-@view-transition {
-    navigation: auto;
+    /* Enable default view transitions */
+    @view-transition {
+        navigation: auto;
+    }
 }
 
 /* Defaults */

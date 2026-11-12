@@ -485,7 +485,6 @@
 
   {% for source in imageSources %}
     {% set lastTransform = source.transforms|last %}
-    <!--[if IE 9]><audio><![endif]-->
     {{ tag('source', {
       media: source.media,
       type: source.type ?? false,
@@ -502,7 +501,6 @@
       }),
       'data-srcset': source.transforms|length > 1 ? craft.imager.srcset(source.transforms)  : lastTransform.url,
     }:{})) }}
-    <!--[if IE 9]></audio><![endif]-->
   {% endfor %}
 
   {{ tag('img', {
