@@ -2,23 +2,24 @@
 
 namespace boilerplate;
 
-use Craft;
-use craft\elements\Entry;
-use craft\elements\GlobalSet;
 use boilerplate\behaviors\EntryIndexQueryBehavior;
 use boilerplate\behaviors\IndexEntryBehaviors;
 use boilerplate\behaviors\SectionIndexBehavior;
 use boilerplate\filters\EntryTypeFilter;
 use boilerplate\twig\Extension;
-use craft\models\Section;
+
+use Craft;
 use craft\base\Element;
 use craft\elements\db\EntryQuery;
+use craft\elements\Entry;
+use craft\elements\GlobalSet;
 use craft\events\DefineBehaviorsEvent;
 use craft\events\DefineEntryTypesForFieldEvent;
 use craft\fields\Matrix;
+use craft\models\Section;
+use craft\validators\DateCompareValidator;
 use craft\web\Response;
 use yii\base\Event;
-use craft\validators\DateCompareValidator;
 
 /**
  * Custom module class.
