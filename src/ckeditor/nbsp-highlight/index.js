@@ -1,11 +1,15 @@
+/**
+ * nbsp-highlight
+ * CKEditor plugin
+ *
+ * Highlights non-breaking spaces in the editing view.
+ * Markers don't affect the editor's data or undo history.
+ */
+
 import { Plugin } from 'ckeditor5';
 
 const NBSP = String.fromCharCode(0xa0);
 
-/**
- * Highlights non-breaking spaces in the editing view.
- * Markers don't affect the editor's data or undo history.
- */
 export class NbspHighlight extends Plugin {
   static get pluginName() {
     return 'NbspHighlight';
