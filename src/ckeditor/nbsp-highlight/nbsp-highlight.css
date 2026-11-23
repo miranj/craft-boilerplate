@@ -1,0 +1,9 @@
+/**
+ * nbsp-highlight
+ * CKEditor plugin
+ */
+
+.ck-content .ck-nbsp {
+    background-color: color-mix(in srgb, orange 40%, transparent);
+    border-radius: 2px;
+}
