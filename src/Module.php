@@ -5,11 +5,13 @@ namespace boilerplate;
 use boilerplate\behaviors\EntryIndexQueryBehavior;
 use boilerplate\behaviors\IndexEntryBehaviors;
 use boilerplate\behaviors\SectionIndexBehavior;
+use boilerplate\ckeditor\NbspHighlightAsset;
 use boilerplate\filters\EntryTypeFilter;
 use boilerplate\twig\Extension;
 
 use Craft;
 use craft\base\Element;
+use craft\ckeditor\Plugin as CkeditorPlugin;
 use craft\elements\db\EntryQuery;
 use craft\elements\Entry;
 use craft\elements\GlobalSet;
@@ -50,6 +52,9 @@ class Module extends \yii\base\Module
         parent::init();
 
         $this->addEventListeners();
+
+        // Highlight non-breaking spaces in all CKEditor fields
+        CkeditorPlugin::registerCkeditorPackage(NbspHighlightAsset::class);
 
         // Register Twig extensions
         if (Craft::$app->getRequest()->getIsSiteRequest()) {

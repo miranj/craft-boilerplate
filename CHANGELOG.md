@@ -12,6 +12,7 @@ Release notes for Miranj's Craft Boilerplate starter project.
 ### Craft
 
 - The queue is now monitored for stalled and failed jobs (on staging and production).
+- Non-breaking spaces are now highlighted in CKEditor fields, so they're easy to spot while editing.
 - Added Queue Monitor plugin 2.0.10.
 
 ### System
